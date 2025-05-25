@@ -5,16 +5,16 @@ on:
     paths:
       - 'openapi/**/*.yaml'
       - 'openapi/**/*.yml'
-      - '.github/workflows/openapi-lint-fallback.yml'
   pull_request:
     paths:
       - 'openapi/**/*.yaml'
       - 'openapi/**/*.yml'
+  workflow_dispatch:
 
 jobs:
   lint-openapi:
     runs-on: ubuntu-latest
-    name: Normalize, Validate, Auto-Commit
+    name: Normalize, Validate, Auto-Commit & PR
 
     steps:
       - name: Checkout
@@ -31,6 +31,12 @@ jobs:
       - name: Install dependencies
         run: pip install pyyaml
 
+      - name: Install GitHub CLI
+        run: sudo apt-get install gh -y
+
+      - name: Authenticate GitHub CLI
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+
       - name: Run all spec processing scripts
         run: |
           python prepend_copilot_prompt.py
@@ -40,7 +46,7 @@ jobs:
           python validate_refs_extended.py
           python lint_openapi.py
 
-      - name: Commit and push, with fallback
+      - name: Commit and push with fallback + auto PR
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -51,11 +57,11 @@ jobs:
 
             BRANCH=$(git rev-parse --abbrev-ref HEAD)
             echo "Attempting to push to $BRANCH..."
-
             git push origin $BRANCH || (
               echo "⚠️ Push to $BRANCH failed. Using fallback branch 'openapi-auto-fix'."
               git checkout -B openapi-auto-fix
               git push origin openapi-auto-fix
+              gh pr create --base $BRANCH --head openapi-auto-fix --title "Auto: Normalize OpenAPI" --body "Automated PR to normalize and fix OpenAPI specs."
             )
           else
             echo "No changes to commit."
