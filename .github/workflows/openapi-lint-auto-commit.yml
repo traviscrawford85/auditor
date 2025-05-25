@@ -23,10 +23,10 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
-      - name: Set up python scripts
-        uses: actions/setup-python scripts@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          python scripts-version: '3.11'
+          python-version: '3.11'
 
       - name: Install dependencies
         run: pip install pyyaml
