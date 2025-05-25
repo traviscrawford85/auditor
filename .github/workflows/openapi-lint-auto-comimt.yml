@@ -1,0 +1,62 @@
+name: Normalize & Auto-Commit OpenAPI Spec with Fallback
+
+on:
+  push:
+    paths:
+      - 'openapi/**/*.yaml'
+      - 'openapi/**/*.yml'
+      - '.github/workflows/openapi-lint-fallback.yml'
+  pull_request:
+    paths:
+      - 'openapi/**/*.yaml'
+      - 'openapi/**/*.yml'
+
+jobs:
+  lint-openapi:
+    runs-on: ubuntu-latest
+    name: Normalize, Validate, Auto-Commit
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Run all spec processing scripts
+        run: |
+          python prepend_copilot_prompt.py
+          python normalize_openapi.py
+          python rename_request_bodies_by_description.py
+          python patch_refs_with_anchors.py
+          python validate_refs_extended.py
+          python lint_openapi.py
+
+      - name: Commit and push, with fallback
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          if [ -n "$(git status --porcelain)" ]; then
+            git add openapi/**/*.yaml openapi/**/*.yml
+            git commit -m "chore: normalize and fix OpenAPI specs via GitHub Action"
+
+            BRANCH=$(git rev-parse --abbrev-ref HEAD)
+            echo "Attempting to push to $BRANCH..."
+
+            git push origin $BRANCH || (
+              echo "⚠️ Push to $BRANCH failed. Using fallback branch 'openapi-auto-fix'."
+              git checkout -B openapi-auto-fix
+              git push origin openapi-auto-fix
+            )
+          else
+            echo "No changes to commit."
+          fi
