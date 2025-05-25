@@ -1,0 +1,158 @@
+# copilot-audit: true
+# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
+# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
+# Tasks:
+# 1. Verify valid OpenAPI syntax (YAML structure, keys).
+# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
+# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
+# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
+# 5. Validate that all schemas and components are named clearly and represent their intent.
+# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
+# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
+# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
+# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
+# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
+# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
+# Output:
+# - A checklist of errors or improvements, preferably with line references.
+# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
+#
+# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
+# which expects well-formed operationIds and `$ref`s to derive method names and models.
+
+$defs:
+  TaskTemplateCreateRequestDataCascadingSource:
+    description: TaskTemplateCreateRequestDataCascadingSource
+    properties:
+      id:
+        anyOf:
+        - type: integer
+        - type: 'null'
+        default: null
+        description: The unique identifier for a single TaskTemplate associated with
+          the TaskTemplate. The keyword `null` is not valid for this field.
+        title: Id
+    title: TaskTemplateCreateRequestDataCascadingSource
+    type: object
+  TaskTemplateUpdateRequestDataReminderTemplatesInner:
+    description: TaskTemplateUpdateRequestDataReminderTemplatesInner
+    properties:
+      duration_value:
+        anyOf:
+        - type: integer
+        - type: 'null'
+        default: null
+        description: Time measured in `duration_unit` to remind user before the subject.
+        title: Duration Value
+      duration_unit:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: Unit to measure the duration value in.
+        title: Duration Unit
+      notification_type:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: Notification method.
+        title: Notification Type
+      id:
+        anyOf:
+        - type: integer
+        - type: 'null'
+        default: null
+        description: The unique identifier for a single ReminderTemplate associated
+          with the TaskTemplate. The keyword `null` is not valid for this field.
+        title: Id
+      _destroy:
+        anyOf:
+        - type: boolean
+        - type: 'null'
+        default: null
+        description: The destroy flag. If the flag is set to `true` and the unique
+          identifier of the associated ReminderTemplate is present, the ReminderTemplate
+          is deleted from the TaskTemplate.
+        title: Destroy
+    title: TaskTemplateUpdateRequestDataReminderTemplatesInner
+    type: object
+description: TaskTemplateUpdateRequestData
+properties:
+  cascading:
+    anyOf:
+    - type: boolean
+    - type: 'null'
+    default: null
+    description: Determines if the TaskTemplate has a due date that is derived from
+      another TaskTemplate. (Note that if false, no other cascading information will
+      be checked)
+    title: Cascading
+  cascading_offset:
+    anyOf:
+    - type: integer
+    - type: 'null'
+    default: null
+    description: The amount of time that will differentiate the cascaded TaskTemplate
+      from its parent.
+    title: Cascading Offset
+  cascading_offset_polarity:
+    anyOf:
+    - type: string
+    - type: 'null'
+    default: null
+    description: Determines whether or not the cascading_offset occurs before or after
+      its parent.
+    title: Cascading Offset Polarity
+  cascading_offset_type:
+    anyOf:
+    - type: string
+    - type: 'null'
+    default: null
+    description: Determines the quantity of the cascading offset (e.g. CalendarDays,
+      CalendarWeeks etc.)
+    title: Cascading Offset Type
+  cascading_source:
+    anyOf:
+    - $ref: '#/$defs/TaskTemplateCreateRequestDataCascadingSource'
+    - type: 'null'
+    default: null
+  description:
+    anyOf:
+    - type: string
+    - type: 'null'
+    default: null
+    description: Longer description for the TaskTemplate.
+    title: Description
+  name:
+    anyOf:
+    - type: string
+    - type: 'null'
+    default: null
+    description: Short name for the TaskTemplate.
+    title: Name
+  priority:
+    anyOf:
+    - type: string
+    - type: 'null'
+    default: Normal
+    description: Priority of the task.
+    title: Priority
+  private:
+    anyOf:
+    - type: boolean
+    - type: 'null'
+    default: null
+    description: Whether or not this TaskTemplate should be private.
+    title: Private
+  reminder_templates:
+    anyOf:
+    - items:
+        $ref: '#/$defs/TaskTemplateUpdateRequestDataReminderTemplatesInner'
+      type: array
+    - type: 'null'
+    default: null
+    title: Reminder Templates
+title: TaskTemplateUpdateRequestData
+type: object

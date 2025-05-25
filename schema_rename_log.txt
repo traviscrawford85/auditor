@@ -1,0 +1,2 @@
+Renamed Schemas:
+SKIPPED RESERVED KEY: properties | ./openapi/components/schemas/Type.yaml

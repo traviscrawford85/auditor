@@ -1,0 +1,36 @@
+from pydantic import BaseModel
+from typing import Optional, Any, List
+from datetime import datetime
+
+class PicklistoptionIn(BaseModel):
+    id: Optional[str] = None
+    etag: Optional[str] = None
+    created_at: Optional[str] = None
+    updated_at: Optional[str] = None
+    option: Optional[str] = None
+    deleted_at: Optional[str] = None
+
+class PicklistoptionOut(BaseModel):
+    id: Optional[str] = None
+    etag: Optional[str] = None
+    created_at: Optional[str] = None
+    updated_at: Optional[str] = None
+    option: Optional[str] = None
+    deleted_at: Optional[str] = None
+
+class PicklistoptionUpdate(BaseModel):
+    id: Optional[str] = None
+    etag: Optional[str] = None
+    created_at: Optional[str] = None
+    updated_at: Optional[str] = None
+    option: Optional[str] = None
+    deleted_at: Optional[str] = None
+
+class PicklistoptionDb(BaseModel):
+    id: Optional[str] = None
+    etag: Optional[str] = None
+    created_at: Optional[str] = None
+    updated_at: Optional[str] = None
+    option: Optional[str] = None
+    deleted_at: Optional[str] = None
+

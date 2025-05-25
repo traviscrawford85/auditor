@@ -16,13 +16,17 @@ COPILOT_PROMPT = """\
 # 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
 # 9. Validate pagination, filtering, and sorting patterns for list endpoints.
 # 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
+# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
 # Output:
 # - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, and reuse.
+# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
 #
 # NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
 # which expects well-formed operationIds and `$ref`s to derive method names and models.
 """
+
+
 
 def prepend_prompt_to_yaml_files():
     for subdir, _, files in os.walk(OPENAPI_ROOT):
@@ -34,6 +38,7 @@ def prepend_prompt_to_yaml_files():
                     if COPILOT_PROMPT.strip().splitlines()[0] not in content:
                         with open(path, "w") as fw:
                             fw.write(COPILOT_PROMPT + "\n" + content)
+
 
 if __name__ == "__main__":
     prepend_prompt_to_yaml_files()

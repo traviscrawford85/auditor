@@ -12,9 +12,11 @@
 # 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
 # 9. Validate pagination, filtering, and sorting patterns for list endpoints.
 # 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
+# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
 # Output:
 # - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, and reuse.
+# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
 #
 # NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
 # which expects well-formed operationIds and `$ref`s to derive method names and models.
@@ -24,58 +26,78 @@ get:
     - Conversation Messages
   summary: Return the data for all ConversationMessages
   operationId: listConversation_messages
-  description: >-
-    Outlines the parameters, optional and required, used when requesting the
-    data for all ConversationMessages
+  description: |-
+    Outlines the parameters, optional and required, used when requesting the data for all ConversationMessages
   parameters:
-    - $ref: ./components/parameters.yaml#/components/parameters/X-API-VERSION|header
-    - $ref: >-
-        ./components/parameters.yaml#/components/parameters/conversation_id|query
-    - $ref: ./components/parameters.yaml#/components/parameters/created_since|query
-    - $ref: ./components/parameters.yaml#/components/parameters/fields|query
-    - $ref: ./components/parameters.yaml#/components/parameters/ids[]|query
-    - $ref: ./components/parameters.yaml#/components/parameters/limit|query
-    - $ref: ./components/parameters.yaml#/components/parameters/order|query
-    - $ref: ./components/parameters.yaml#/components/parameters/page_token|query
-    - $ref: ./components/parameters.yaml#/components/parameters/query|query
-    - $ref: ./components/parameters.yaml#/components/parameters/updated_since|query
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/X-API-VERSION|header
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/conversation_id|query
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/created_since|query
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/fields|query
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/ids[]|query
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/limit|query
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/order|query
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/page_token|query
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/query|query
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/updated_since|query
   responses:
     '200':
-      $ref: ./components/responses.yaml#/components/responses/200_Ok
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/200_Ok
     '400':
-      $ref: ./components/responses.yaml#/components/responses/400_Bad_Request
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/400_Bad_Request
     '401':
-      $ref: ./components/responses.yaml#/components/responses/401_Unauthorized
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/401_Unauthorized
     '403':
-      $ref: ./components/responses.yaml#/components/responses/403_Forbidden
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/403_Forbidden
     '429':
-      $ref: ./components/responses.yaml#/components/responses/429_Too_Many_Requests
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/429_Too_Many_Requests
 post:
   tags:
     - Conversation Messages
   summary: Create a new ConversationMessage
   operationId: createConversation_message
-  description: >-
-    Outlines the parameters and data fields used when creating a new
-    ConversationMessage
+  description: Outlines the parameters and data fields used when creating a new ConversationMessage
   parameters:
-    - $ref: ./components/parameters.yaml#/components/parameters/X-API-VERSION|header
-    - $ref: ./components/parameters.yaml#/components/parameters/fields|query
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/X-API-VERSION|header
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/fields|query
   responses:
     '201':
-      $ref: ./components/responses.yaml#/components/responses/201_Created
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/201_Created
     '400':
-      $ref: ./components/responses.yaml#/components/responses/400_Bad_Request
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/400_Bad_Request
     '401':
-      $ref: ./components/responses.yaml#/components/responses/401_Unauthorized
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/401_Unauthorized
     '403':
-      $ref: ./components/responses.yaml#/components/responses/403_Forbidden
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/403_Forbidden
     '404':
-      $ref: ./components/responses.yaml#/components/responses/404_Not_Found
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/404_Not_Found
     '422':
-      $ref: >-
-        ./components/responses.yaml#/components/responses/422_Unprocessable_Entity
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/422_Unprocessable_Entity
     '429':
-      $ref: ./components/responses.yaml#/components/responses/429_Too_Many_Requests
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/429_Too_Many_Requests
   requestBody:
-    $ref: ./components/requestBodies.yaml#/components/requestBodies/ReqBody_2f15b598
+    $ref: 
+      ./../../components/../components/requestBodies.yaml#/../../components/../components/requestBodies/ReqBody_2f15b598

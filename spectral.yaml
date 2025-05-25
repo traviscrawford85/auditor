@@ -1,0 +1,28 @@
+extends: spectral:oas
+
+rules:
+  named-schema-required:
+    description: Schema file must define a named top-level key, not just OpenAPI keywords
+    message: Top-level schemas must have a non-reserved named key
+    severity: error
+    given: $
+    then:
+      function: named-key-check
+
+functions:
+  named-key-check:
+    schema:
+      type: object
+    implementation: |
+      (targetVal) => {
+        const reserved = ['type','properties','required','description','title','allOf','anyOf','oneOf','items','enum'];
+        const keys = Object.keys(targetVal || {});
+        const isInvalid = keys.every(k => reserved.includes(k));
+        return isInvalid
+          ? [
+              {
+                message: `Schema must define a named object key — only keywords found: ${keys.join(", ")}`
+              }
+            ]
+          : [];
+      }

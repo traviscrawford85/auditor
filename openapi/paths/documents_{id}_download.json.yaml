@@ -12,9 +12,11 @@
 # 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
 # 9. Validate pagination, filtering, and sorting patterns for list endpoints.
 # 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
+# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
 # Output:
 # - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, and reuse.
+# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
 #
 # NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
 # which expects well-formed operationIds and `$ref`s to derive method names and models.
@@ -26,13 +28,17 @@ get:
   operationId: getDownload
   description: Download the Document
   parameters:
-    - $ref: >-
-        ./components/parameters.yaml#/components/parameters/document_version_id|query
-    - $ref: ./components/parameters.yaml#/components/parameters/id|path
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/document_version_id|query
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/id|path
   responses:
     '303':
-      $ref: ./components/responses.yaml#/components/responses/303_See_Other
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/303_See_Other
     '400':
-      $ref: ./components/responses.yaml#/components/responses/400_Bad_Request
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/400_Bad_Request
     '404':
-      $ref: ./components/responses.yaml#/components/responses/404_Not_Found
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/404_Not_Found

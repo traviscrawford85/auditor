@@ -12,19 +12,154 @@
 # 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
 # 9. Validate pagination, filtering, and sorting patterns for list endpoints.
 # 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
+# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
 # Output:
 # - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, and reuse.
+# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
 #
 # NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
 # which expects well-formed operationIds and `$ref`s to derive method names and models.
 
-allOf:
-  - $ref: ./Jurisdiction_base.yaml
-  - type: object
+$defs:
+  ServiceTypeBase:
+    description: ServiceTypeBase
     properties:
-      service_types:
-        type: array
-        items:
-          $ref: ./ServiceType_base.yaml
-        description: ServiceType
+      id:
+        anyOf:
+        - type: integer
+        - type: 'null'
+        default: null
+        description: Unique identifier for the *ServiceType*
+        title: Id
+      etag:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: ETag for the *ServiceType*
+        title: Etag
+      created_at:
+        anyOf:
+        - format: date-time
+          type: string
+        - type: 'null'
+        default: null
+        description: The time the *ServiceType* was created (as a ISO-8601 timestamp)
+        title: Created At
+      updated_at:
+        anyOf:
+        - format: date-time
+          type: string
+        - type: 'null'
+        default: null
+        description: The time the *ServiceType* was last updated (as a ISO-8601 timestamp)
+        title: Updated At
+      system_id:
+        anyOf:
+        - type: integer
+        - type: 'null'
+        default: null
+        description: Server ID
+        title: System Id
+      description:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: A detailed description of the *ServiceType*
+        title: Description
+      default:
+        anyOf:
+        - type: boolean
+        - type: 'null'
+        default: null
+        description: Whether *ServiceType* is default for the current user
+        title: Default
+    title: ServiceTypeBase
+    type: object
+description: Jurisdiction
+properties:
+  id:
+    anyOf:
+    - type: integer
+    - type: 'null'
+    default: null
+    description: Unique identifier for the *Jurisdiction*
+    title: Id
+  etag:
+    anyOf:
+    - type: string
+    - type: 'null'
+    default: null
+    description: ETag for the *Jurisdiction*
+    title: Etag
+  created_at:
+    anyOf:
+    - format: date-time
+      type: string
+    - type: 'null'
+    default: null
+    description: The time the *Jurisdiction* was created (as a ISO-8601 timestamp)
+    title: Created At
+  updated_at:
+    anyOf:
+    - format: date-time
+      type: string
+    - type: 'null'
+    default: null
+    description: The time the *Jurisdiction* was last updated (as a ISO-8601 timestamp)
+    title: Updated At
+  system_id:
+    anyOf:
+    - type: integer
+    - type: 'null'
+    default: null
+    description: Server ID
+    title: System Id
+  description:
+    anyOf:
+    - type: string
+    - type: 'null'
+    default: null
+    description: Description
+    title: Description
+  default:
+    anyOf:
+    - type: boolean
+    - type: 'null'
+    default: null
+    description: Whether the *Jurisdiction* is default for the current user
+    title: Default
+  display_timezone:
+    anyOf:
+    - type: string
+    - type: 'null'
+    default: null
+    description: Formatted IANA timezone with UTC offset
+    title: Display Timezone
+  valid_subscription:
+    anyOf:
+    - type: boolean
+    - type: 'null'
+    default: null
+    description: Boolean value for whether the user has the jurisdictions
+    title: Valid Subscription
+  is_local_timezone:
+    anyOf:
+    - type: boolean
+    - type: 'null'
+    default: null
+    description: Boolean value for when the timezone is in the local users timezone
+    title: Is Local Timezone
+  service_types:
+    anyOf:
+    - items:
+        $ref: '#/$defs/ServiceTypeBase'
+      type: array
+    - type: 'null'
+    default: null
+    description: ServiceType
+    title: Service Types
+title: Jurisdiction
+type: object

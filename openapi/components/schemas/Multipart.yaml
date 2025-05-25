@@ -12,19 +12,60 @@
 # 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
 # 9. Validate pagination, filtering, and sorting patterns for list endpoints.
 # 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
+# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
 # Output:
 # - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, and reuse.
+# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
 #
 # NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
 # which expects well-formed operationIds and `$ref`s to derive method names and models.
 
-allOf:
-  - $ref: ./Multipart_base.yaml
-  - type: object
+$defs:
+  MultipartHeaderBase:
+    description: MultipartHeaderBase
     properties:
-      put_headers:
-        type: array
-        items:
-          $ref: ./MultipartHeader_base.yaml
-        description: MultipartHeader
+      name:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: Required HTTP header field name for uploading.
+        title: Name
+      value:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: Required HTTP header field value for uploading.
+        title: Value
+    title: MultipartHeaderBase
+    type: object
+description: Multipart
+properties:
+  part_number:
+    anyOf:
+    - type: integer
+    - type: 'null'
+    default: null
+    description: Unique identifier of a part which defines its position within the
+      document being uploaded.
+    title: Part Number
+  put_url:
+    anyOf:
+    - type: string
+    - type: 'null'
+    default: null
+    description: A signed URL for uploading the file part. It expires in 10 minutes.
+    title: Put Url
+  put_headers:
+    anyOf:
+    - items:
+        $ref: '#/$defs/MultipartHeaderBase'
+      type: array
+    - type: 'null'
+    default: null
+    description: MultipartHeader
+    title: Put Headers
+title: Multipart
+type: object

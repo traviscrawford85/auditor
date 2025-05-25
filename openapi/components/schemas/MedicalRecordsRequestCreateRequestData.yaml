@@ -1,0 +1,247 @@
+# copilot-audit: true
+# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
+# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
+# Tasks:
+# 1. Verify valid OpenAPI syntax (YAML structure, keys).
+# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
+# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
+# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
+# 5. Validate that all schemas and components are named clearly and represent their intent.
+# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
+# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
+# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
+# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
+# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
+# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
+# Output:
+# - A checklist of errors or improvements, preferably with line references.
+# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
+#
+# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
+# which expects well-formed operationIds and `$ref`s to derive method names and models.
+
+$defs:
+  MedicalRecordsRequestCreateRequestDataMedicalBillsInner:
+    description: MedicalRecordsRequestCreateRequestDataMedicalBillsInner
+    properties:
+      adjustment:
+        anyOf:
+        - type: number
+        - type: integer
+        description: Adjustment for Medical Bill.
+        title: Adjustment
+      amount:
+        anyOf:
+        - type: number
+        - type: integer
+        description: Amount for Medical Bill.
+        title: Amount
+      balance:
+        anyOf:
+        - type: number
+        - type: integer
+        description: Balance for Medical Bill.
+        title: Balance
+      bill_date:
+        anyOf:
+        - format: date
+          type: string
+        - type: 'null'
+        default: null
+        description: Bill date for Medical Bill. (Expects an ISO-8601 date).
+        title: Bill Date
+      bill_received_date:
+        anyOf:
+        - format: date
+          type: string
+        - type: 'null'
+        default: null
+        description: Bill received date for Medical Bill. (Expects an ISO-8601 date).
+        title: Bill Received Date
+      document_id:
+        anyOf:
+        - type: integer
+        - type: 'null'
+        default: null
+        description: The unique identifier for a single Damage associated with the
+          MedicalRecordsRequest. The keyword `null` is not valid for this field.
+        title: Document Id
+      name:
+        description: Name for Medical Bill.
+        title: Name
+        type: string
+      mark_balance_as_lien:
+        description: Setting the balance of the Medical Bill as a lien.
+        title: Mark Balance As Lien
+        type: boolean
+      payers:
+        anyOf:
+        - items:
+            $ref: '#/$defs/MedicalRecordsRequestCreateRequestDataMedicalBillsInnerPayersInner'
+          type: array
+        - type: 'null'
+        default: null
+        title: Payers
+    required:
+    - adjustment
+    - amount
+    - balance
+    - name
+    - mark_balance_as_lien
+    title: MedicalRecordsRequestCreateRequestDataMedicalBillsInner
+    type: object
+  MedicalRecordsRequestCreateRequestDataMedicalBillsInnerPayersInner:
+    description: MedicalRecordsRequestCreateRequestDataMedicalBillsInnerPayersInner
+    properties:
+      amount:
+        anyOf:
+        - type: number
+        - type: integer
+        description: Lien amount.
+        title: Amount
+      holder_id:
+        description: The unique identifier for a single Damage associated with the
+          MedicalRecordsRequest. The keyword `null` is not valid for this field.
+        title: Holder Id
+        type: integer
+      mark_as_lien:
+        description: Mark record as Lien.
+        title: Mark As Lien
+        type: boolean
+    required:
+    - amount
+    - holder_id
+    - mark_as_lien
+    title: MedicalRecordsRequestCreateRequestDataMedicalBillsInnerPayersInner
+    type: object
+  MedicalRecordsRequestCreateRequestDataMedicalRecordsInner:
+    description: MedicalRecordsRequestCreateRequestDataMedicalRecordsInner
+    properties:
+      document_id:
+        description: The unique identifier for a single MedicalRecord associated with
+          the MedicalRecordsRequest. The keyword `null` is not valid for this field.
+        title: Document Id
+        type: integer
+      end_date:
+        anyOf:
+        - format: date-time
+          type: string
+        - type: 'null'
+        default: null
+        description: End date for Medical Record.
+        title: End Date
+      start_date:
+        anyOf:
+        - format: date-time
+          type: string
+        - type: 'null'
+        default: null
+        description: Start date for Medical Record.
+        title: Start Date
+    required:
+    - document_id
+    title: MedicalRecordsRequestCreateRequestDataMedicalRecordsInner
+    type: object
+description: MedicalRecordsRequestCreateRequestData
+properties:
+  bills_follow_up_date:
+    anyOf:
+    - format: date-time
+      type: string
+    - type: 'null'
+    default: null
+    description: Follow up date for Medical Bills. (Expects an ISO-8601 date).
+    title: Bills Follow Up Date
+  bills_request_date:
+    anyOf:
+    - format: date-time
+      type: string
+    - type: 'null'
+    default: null
+    description: Requested date for Medical Bills. (Expects an ISO-8601 date).
+    title: Bills Request Date
+  bills_status:
+    description: Current status for the Medical Bills.
+    title: Bills Status
+    type: string
+  description:
+    anyOf:
+    - type: string
+    - type: 'null'
+    default: null
+    description: Detailed description of the Medical Records Detail.
+    title: Description
+  in_treatment:
+    description: True or false value to record if the treatment has been completed.
+    title: In Treatment
+    type: boolean
+  matter_id:
+    description: The ID of the matter that the Medical Records Detail belongs to.
+    title: Matter Id
+    type: integer
+  medical_bills:
+    anyOf:
+    - items:
+        $ref: '#/$defs/MedicalRecordsRequestCreateRequestDataMedicalBillsInner'
+      type: array
+    - type: 'null'
+    default: null
+    title: Medical Bills
+  medical_provider_id:
+    description: The unique identifier for a single Medical Provider associated with
+      this Medical Records Detail.
+    title: Medical Provider Id
+    type: integer
+  medical_records:
+    anyOf:
+    - items:
+        $ref: '#/$defs/MedicalRecordsRequestCreateRequestDataMedicalRecordsInner'
+      type: array
+    - type: 'null'
+    default: null
+    title: Medical Records
+  records_follow_up_date:
+    anyOf:
+    - format: date-time
+      type: string
+    - type: 'null'
+    default: null
+    description: Follow up date for Medical Records. (Expects an ISO-8601 date).
+    title: Records Follow Up Date
+  records_request_date:
+    anyOf:
+    - format: date-time
+      type: string
+    - type: 'null'
+    default: null
+    description: Requested date for Medical Records. (Expects an ISO-8601 date).
+    title: Records Request Date
+  records_status:
+    description: Current status for the Medical Records.
+    title: Records Status
+    type: string
+  treatment_end_date:
+    anyOf:
+    - format: date-time
+      type: string
+    - type: 'null'
+    default: null
+    description: End date for the treatment. (Expects an ISO-8601 date).
+    title: Treatment End Date
+  treatment_start_date:
+    anyOf:
+    - format: date-time
+      type: string
+    - type: 'null'
+    default: null
+    description: Start date for the treatment. (Expects an ISO-8601 date).
+    title: Treatment Start Date
+required:
+- bills_status
+- in_treatment
+- matter_id
+- medical_provider_id
+- records_status
+title: MedicalRecordsRequestCreateRequestData
+type: object

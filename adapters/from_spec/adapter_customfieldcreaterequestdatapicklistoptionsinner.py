@@ -1,0 +1,10 @@
+# Adapter stubs for Customfieldcreaterequestdatapicklistoptionsinner
+from schemas.from_spec.customfieldcreaterequestdatapicklistoptionsinner import CustomfieldcreaterequestdatapicklistoptionsinnerIn, CustomfieldcreaterequestdatapicklistoptionsinnerOut, CustomfieldcreaterequestdatapicklistoptionsinnerUpdate, CustomfieldcreaterequestdatapicklistoptionsinnerDb
+
+def convert_sdk_to_customfieldcreaterequestdatapicklistoptionsinnerout(sdk_obj):
+    # TODO
+    return CustomfieldcreaterequestdatapicklistoptionsinnerOut()
+
+def convert_customfieldcreaterequestdatapicklistoptionsinnerin_to_sdk(model):
+    # TODO
+    return None

@@ -1,0 +1,22 @@
+from pydantic import BaseModel
+from typing import Optional, List
+
+
+class ConversationshowIn(BaseModel):
+    """Incoming model for creating a Conversationshow"""
+    # TODO: Add fields
+
+
+class ConversationshowOut(BaseModel):
+    """Outgoing model for returning a Conversationshow"""
+    # TODO: Add fields
+
+
+class ConversationshowUpdate(BaseModel):
+    """Update model for patching a Conversationshow"""
+    # TODO: Add fields
+
+
+class ConversationshowDb(BaseModel):
+    """Internal DB representation for Conversationshow"""
+    # TODO: Add fields

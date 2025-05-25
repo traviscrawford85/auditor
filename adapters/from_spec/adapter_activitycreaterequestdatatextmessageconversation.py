@@ -1,0 +1,10 @@
+# Adapter stubs for Activitycreaterequestdatatextmessageconversation
+from schemas.from_spec.activitycreaterequestdatatextmessageconversation import ActivitycreaterequestdatatextmessageconversationIn, ActivitycreaterequestdatatextmessageconversationOut, ActivitycreaterequestdatatextmessageconversationUpdate, ActivitycreaterequestdatatextmessageconversationDb
+
+def convert_sdk_to_activitycreaterequestdatatextmessageconversationout(sdk_obj):
+    # TODO
+    return ActivitycreaterequestdatatextmessageconversationOut()
+
+def convert_activitycreaterequestdatatextmessageconversationin_to_sdk(model):
+    # TODO
+    return None

@@ -1,0 +1,624 @@
+# copilot-audit: true
+# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
+# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
+# Tasks:
+# 1. Verify valid OpenAPI syntax (YAML structure, keys).
+# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
+# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
+# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
+# 5. Validate that all schemas and components are named clearly and represent their intent.
+# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
+# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
+# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
+# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
+# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
+# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
+# Output:
+# - A checklist of errors or improvements, preferably with line references.
+# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
+#
+# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
+# which expects well-formed operationIds and `$ref`s to derive method names and models.
+
+ActivitiesRequest:
+  description: Request Body for Activities
+  content:
+    application/json:
+      schema:
+        type: object
+        required:
+          - data
+        properties:
+          data:
+            type: object
+            properties:
+              activity_description:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single ActivityDescription associated with the Activity. The keyword `null` is not valid for this field.
+                  utbms_task_id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single UtbmsTask associated with the Activity. The keyword `null` is not valid for this field.
+                  utbms_activity_id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single UtbmsActivity associated with the Activity. The keyword `null` is not valid for this field.
+              calendar_entry:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single CalendarEntry associated with the Activity. The keyword `null` is not valid for this field.
+              client_portal:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single ClientPortal associated with the Activity. The keyword `null` is not valid for this field.
+              communication:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single Communication associated with the Activity. The keyword `null` is not valid for this field.
+              contact_note:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single Note associated with the Activity. The keyword `null` is not valid for this field.
+              date:
+                type: string
+                format: date
+                description: The date the Activity was performed. (Expects an ISO-8601
+                  date).
+              expense_category:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |
+                      The unique identifier for a single ExpenseCategory associated with an Activity.
+                      Use the keyword `null` to specify no association.
+              matter:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single Matter associated with the Activity. The keyword `null` is not valid for this field.
+              matter_note:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single Note associated with the Activity. The keyword `null` is not valid for this field.
+              no_charge:
+                type: boolean
+                description: Whether the non-billable *Activity* will be shown on
+                  the bill.
+              non_billable:
+                type: boolean
+                description: |
+                  Whether or not this Activity is prevented from appearing as a line item in a bill.
+                  Only valid for non-billed TimeEntries, and with the exception of the Activity having no_charge set to true.
+              note:
+                type: string
+                description: A custom note to describe what the Activity is for.
+              price:
+                type: number
+                format: double
+                description: |
+                  For an ExpenseEntry, HardCostEntry, and SoftCostEntry, it is the expense amount.
+
+                  [Support Link for ExpenseEntry](https://help.clio.com/hc/en-us/articles/9289745356571-Expenses)
+
+                  [Support Link for HardCostEntry and SoftCostEntry](https://help.clio.com/hc/en-us/articles/9289745356571-Expenses#enable-hard-and-soft-cost-expenses-0-0)
+
+                  For a TimeEntry, it is the hourly or flat amount. When updating a TimeEntry,
+                  if the price is not given or the user does not have the permission to view the rate,
+                  and its activity description, matter and/or user is changed,
+                  the price is reset according to the rate defined for the activity description, matter, client or user.
+
+                  [Support Link for Rates Hierarchy](https://help.clio.com/hc/en-us/articles/9289801180187-Rates-and-Rate-Hierarchies-)
+
+                  [Support Link for Billing Rate Visibility](https://help.clio.com/hc/en-us/articles/9285360193819-Permissions-and-Billing-Rates#billing-rate-visibility-0-3)
+              quantity:
+                type: number
+                format: double
+                description: |
+                  The field is applicable to TimeEntry, ExpenseEntry, and SoftCostEntry.
+
+                  **Version <= 4.0.3:**
+                  The number of hours the TimeEntry took.
+
+                  **Latest version:**
+                  The number of seconds the TimeEntry took.
+              reference:
+                type: string
+                description: A check reference for a HardCostEntry.
+              start_timer:
+                type: boolean
+                description: |-
+                  Whether or not a timer should be started for this Activity. Only valid for non-FlatRate, non-billed TimeEntries.
+              task:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single Task associated with the Activity. The keyword `null` is not valid for this field.
+              tax_setting:
+                type: string
+                enum:
+                  - no_tax
+                  - tax_1_only
+                  - tax_2_only
+                  - tax_1_and_tax_2
+                description: The option denoting whether primary tax, secondary tax,
+                  or both is applied to an expense entry.
+              text_message_conversation:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single TextMessageConversation associated with the Activity. The keyword `null` is not valid for this field.
+              type:
+                type: string
+                enum:
+                  - TimeEntry
+                  - ExpenseEntry
+                  - HardCostEntry
+                  - SoftCostEntry
+                description: The type of the Activity.
+              user:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |
+                      The unique identifier for a single User associated with the Activity.
+                      Use the keyword `null` to specify no association.
+                      On creation, if no user is specified, it will default to the current user.
+
+                      If a TimeEntry is created by a Clio Connect user, the field is not editable.
+              utbms_expense:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single UtbmsExpense associated with the Activity. The keyword `null` is not valid for this field.
+              vendor:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |
+                      The unique identifier for a single Contact associated with a HardCostEntry.
+                      Use the keyword `null` to specify no association.
+    application/x-www-form-urlencoded:
+      schema:
+        type: object
+        required:
+          - data
+        properties:
+          data:
+            type: object
+            properties:
+              activity_description:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single ActivityDescription associated with the Activity. The keyword `null` is not valid for this field.
+                  utbms_task_id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single UtbmsTask associated with the Activity. The keyword `null` is not valid for this field.
+                  utbms_activity_id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single UtbmsActivity associated with the Activity. The keyword `null` is not valid for this field.
+              calendar_entry:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single CalendarEntry associated with the Activity. The keyword `null` is not valid for this field.
+              client_portal:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single ClientPortal associated with the Activity. The keyword `null` is not valid for this field.
+              communication:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single Communication associated with the Activity. The keyword `null` is not valid for this field.
+              contact_note:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single Note associated with the Activity. The keyword `null` is not valid for this field.
+              date:
+                type: string
+                format: date
+                description: The date the Activity was performed. (Expects an ISO-8601
+                  date).
+              expense_category:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |
+                      The unique identifier for a single ExpenseCategory associated with an Activity.
+                      Use the keyword `null` to specify no association.
+              matter:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single Matter associated with the Activity. The keyword `null` is not valid for this field.
+              matter_note:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single Note associated with the Activity. The keyword `null` is not valid for this field.
+              no_charge:
+                type: boolean
+                description: Whether the non-billable *Activity* will be shown on
+                  the bill.
+              non_billable:
+                type: boolean
+                description: |
+                  Whether or not this Activity is prevented from appearing as a line item in a bill.
+                  Only valid for non-billed TimeEntries, and with the exception of the Activity having no_charge set to true.
+              note:
+                type: string
+                description: A custom note to describe what the Activity is for.
+              price:
+                type: number
+                format: double
+                description: |
+                  For an ExpenseEntry, HardCostEntry, and SoftCostEntry, it is the expense amount.
+
+                  [Support Link for ExpenseEntry](https://help.clio.com/hc/en-us/articles/9289745356571-Expenses)
+
+                  [Support Link for HardCostEntry and SoftCostEntry](https://help.clio.com/hc/en-us/articles/9289745356571-Expenses#enable-hard-and-soft-cost-expenses-0-0)
+
+                  For a TimeEntry, it is the hourly or flat amount. When updating a TimeEntry,
+                  if the price is not given or the user does not have the permission to view the rate,
+                  and its activity description, matter and/or user is changed,
+                  the price is reset according to the rate defined for the activity description, matter, client or user.
+
+                  [Support Link for Rates Hierarchy](https://help.clio.com/hc/en-us/articles/9289801180187-Rates-and-Rate-Hierarchies-)
+
+                  [Support Link for Billing Rate Visibility](https://help.clio.com/hc/en-us/articles/9285360193819-Permissions-and-Billing-Rates#billing-rate-visibility-0-3)
+              quantity:
+                type: number
+                format: double
+                description: |
+                  The field is applicable to TimeEntry, ExpenseEntry, and SoftCostEntry.
+
+                  **Version <= 4.0.3:**
+                  The number of hours the TimeEntry took.
+
+                  **Latest version:**
+                  The number of seconds the TimeEntry took.
+              reference:
+                type: string
+                description: A check reference for a HardCostEntry.
+              start_timer:
+                type: boolean
+                description: |-
+                  Whether or not a timer should be started for this Activity. Only valid for non-FlatRate, non-billed TimeEntries.
+              task:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single Task associated with the Activity. The keyword `null` is not valid for this field.
+              tax_setting:
+                type: string
+                enum:
+                  - no_tax
+                  - tax_1_only
+                  - tax_2_only
+                  - tax_1_and_tax_2
+                description: The option denoting whether primary tax, secondary tax,
+                  or both is applied to an expense entry.
+              text_message_conversation:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single TextMessageConversation associated with the Activity. The keyword `null` is not valid for this field.
+              type:
+                type: string
+                enum:
+                  - TimeEntry
+                  - ExpenseEntry
+                  - HardCostEntry
+                  - SoftCostEntry
+                description: The type of the Activity.
+              user:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |
+                      The unique identifier for a single User associated with the Activity.
+                      Use the keyword `null` to specify no association.
+                      On creation, if no user is specified, it will default to the current user.
+
+                      If a TimeEntry is created by a Clio Connect user, the field is not editable.
+              utbms_expense:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single UtbmsExpense associated with the Activity. The keyword `null` is not valid for this field.
+              vendor:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |
+                      The unique identifier for a single Contact associated with a HardCostEntry.
+                      Use the keyword `null` to specify no association.
+    multipart/form-data:
+      schema:
+        type: object
+        required:
+          - data
+        properties:
+          data:
+            type: object
+            properties:
+              activity_description:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single ActivityDescription associated with the Activity. The keyword `null` is not valid for this field.
+                  utbms_task_id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single UtbmsTask associated with the Activity. The keyword `null` is not valid for this field.
+                  utbms_activity_id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single UtbmsActivity associated with the Activity. The keyword `null` is not valid for this field.
+              calendar_entry:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single CalendarEntry associated with the Activity. The keyword `null` is not valid for this field.
+              client_portal:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single ClientPortal associated with the Activity. The keyword `null` is not valid for this field.
+              communication:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single Communication associated with the Activity. The keyword `null` is not valid for this field.
+              contact_note:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single Note associated with the Activity. The keyword `null` is not valid for this field.
+              date:
+                type: string
+                format: date
+                description: The date the Activity was performed. (Expects an ISO-8601
+                  date).
+              expense_category:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |
+                      The unique identifier for a single ExpenseCategory associated with an Activity.
+                      Use the keyword `null` to specify no association.
+              matter:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single Matter associated with the Activity. The keyword `null` is not valid for this field.
+              matter_note:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single Note associated with the Activity. The keyword `null` is not valid for this field.
+              no_charge:
+                type: boolean
+                description: Whether the non-billable *Activity* will be shown on
+                  the bill.
+              non_billable:
+                type: boolean
+                description: |
+                  Whether or not this Activity is prevented from appearing as a line item in a bill.
+                  Only valid for non-billed TimeEntries, and with the exception of the Activity having no_charge set to true.
+              note:
+                type: string
+                description: A custom note to describe what the Activity is for.
+              price:
+                type: number
+                format: double
+                description: |
+                  For an ExpenseEntry, HardCostEntry, and SoftCostEntry, it is the expense amount.
+
+                  [Support Link for ExpenseEntry](https://help.clio.com/hc/en-us/articles/9289745356571-Expenses)
+
+                  [Support Link for HardCostEntry and SoftCostEntry](https://help.clio.com/hc/en-us/articles/9289745356571-Expenses#enable-hard-and-soft-cost-expenses-0-0)
+
+                  For a TimeEntry, it is the hourly or flat amount. When updating a TimeEntry,
+                  if the price is not given or the user does not have the permission to view the rate,
+                  and its activity description, matter and/or user is changed,
+                  the price is reset according to the rate defined for the activity description, matter, client or user.
+
+                  [Support Link for Rates Hierarchy](https://help.clio.com/hc/en-us/articles/9289801180187-Rates-and-Rate-Hierarchies-)
+
+                  [Support Link for Billing Rate Visibility](https://help.clio.com/hc/en-us/articles/9285360193819-Permissions-and-Billing-Rates#billing-rate-visibility-0-3)
+              quantity:
+                type: number
+                format: double
+                description: |
+                  The field is applicable to TimeEntry, ExpenseEntry, and SoftCostEntry.
+
+                  **Version <= 4.0.3:**
+                  The number of hours the TimeEntry took.
+
+                  **Latest version:**
+                  The number of seconds the TimeEntry took.
+              reference:
+                type: string
+                description: A check reference for a HardCostEntry.
+              start_timer:
+                type: boolean
+                description: |-
+                  Whether or not a timer should be started for this Activity. Only valid for non-FlatRate, non-billed TimeEntries.
+              task:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single Task associated with the Activity. The keyword `null` is not valid for this field.
+              tax_setting:
+                type: string
+                enum:
+                  - no_tax
+                  - tax_1_only
+                  - tax_2_only
+                  - tax_1_and_tax_2
+                description: The option denoting whether primary tax, secondary tax,
+                  or both is applied to an expense entry.
+              text_message_conversation:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single TextMessageConversation associated with the Activity. The keyword `null` is not valid for this field.
+              type:
+                type: string
+                enum:
+                  - TimeEntry
+                  - ExpenseEntry
+                  - HardCostEntry
+                  - SoftCostEntry
+                description: The type of the Activity.
+              user:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |
+                      The unique identifier for a single User associated with the Activity.
+                      Use the keyword `null` to specify no association.
+                      On creation, if no user is specified, it will default to the current user.
+
+                      If a TimeEntry is created by a Clio Connect user, the field is not editable.
+              utbms_expense:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |-
+                      The unique identifier for a single UtbmsExpense associated with the Activity. The keyword `null` is not valid for this field.
+              vendor:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: |
+                      The unique identifier for a single Contact associated with a HardCostEntry.
+                      Use the keyword `null` to specify no association.
+  required: false

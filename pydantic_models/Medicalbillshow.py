@@ -1,0 +1,22 @@
+from pydantic import BaseModel
+from typing import Optional, List
+
+
+class MedicalbillshowIn(BaseModel):
+    """Incoming model for creating a Medicalbillshow"""
+    # TODO: Add fields
+
+
+class MedicalbillshowOut(BaseModel):
+    """Outgoing model for returning a Medicalbillshow"""
+    # TODO: Add fields
+
+
+class MedicalbillshowUpdate(BaseModel):
+    """Update model for patching a Medicalbillshow"""
+    # TODO: Add fields
+
+
+class MedicalbillshowDb(BaseModel):
+    """Internal DB representation for Medicalbillshow"""
+    # TODO: Add fields

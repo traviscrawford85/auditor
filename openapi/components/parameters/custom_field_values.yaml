@@ -12,55 +12,39 @@
 # 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
 # 9. Validate pagination, filtering, and sorting patterns for list endpoints.
 # 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
+# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
 # Output:
 # - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, and reuse.
+# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
 #
 # NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
 # which expects well-formed operationIds and `$ref`s to derive method names and models.
 
 name: custom_field_values
 in: query
-description: >
-  Filter records to only those with the given custom field(s) set. The value is
-  compared using the operator provided, or,
-
-  if the value type only supports one operator, the supported operator is used.
-  In the latter case, no check for operator is performed on the input string.
-
-  The key for the custom field value filter is the custom_field.id. e.g.
-  `custom_field_values[12345]`
-
-  If an operator is used for a type that does not support it, an `400 Bad
-  Request` is returned.
-
+description: |
+  Filter records to only those with the given custom field(s) set. The value is compared using the operator provided, or,
+  if the value type only supports one operator, the supported operator is used. In the latter case, no check for operator is performed on the input string.
+  The key for the custom field value filter is the custom_field.id. e.g. `custom_field_values[12345]`
+  If an operator is used for a type that does not support it, an `400 Bad Request` is returned.
 
   *Supported operators:*
-
   * `checkbox`, `contact`, `matter`, `picklist` : `=`
-
 
   e.g. `?custom_field_values[1]=42`
 
-
   * `currency`, `date`, `time`, `numeric` : `=`, `<`, `>`, `<=`, `>=`
-
 
   e.g. `?custom_field_values[1]=>=105.4`
 
-
   * `email`, `text_area`, `text_line`, `url` : `=`
-
 
   e.g. `?custom_field_values[1]=url_encoded`
 
-
   *Multiple conditions for the same custom field:*
 
-
-  If you want to use more than one operator to filter a custom field, you can do
-  so by passing in an array of values.
-
+  If you want to use more than one operator to filter a custom field, you can do so by passing in an array of values.
   e.g. `?custom_field_values[1]=[<=50, >=45]`
 required: false
 schema:

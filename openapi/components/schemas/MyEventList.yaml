@@ -1,0 +1,173 @@
+# copilot-audit: true
+# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
+# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
+# Tasks:
+# 1. Verify valid OpenAPI syntax (YAML structure, keys).
+# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
+# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
+# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
+# 5. Validate that all schemas and components are named clearly and represent their intent.
+# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
+# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
+# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
+# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
+# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
+# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
+# Output:
+# - A checklist of errors or improvements, preferably with line references.
+# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
+#
+# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
+# which expects well-formed operationIds and `$ref`s to derive method names and models.
+
+$defs:
+  EventBase:
+    description: EventBase
+    properties:
+      id:
+        anyOf:
+        - type: integer
+        - type: 'null'
+        default: null
+        description: Unique identifier for the *Event*
+        title: Id
+      etag:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: ETag for the *Event*
+        title: Etag
+      message:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: Concise headline message describing the event
+        title: Message
+      icon:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: Font Awesome icon to display (without the fa- prefix)
+        title: Icon
+      title:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: The title or subject of the event (e.g. Matter Number, Document
+          Title)
+        title: Title
+      title_url:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: Target URL that will be opened if the user clicks on the event
+          title
+        title: Title Url
+      description:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: Description or additional information about the event (e.g. Matter
+          Description)
+        title: Description
+      description_url:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: Target URL that will be opened if the user clicks on the event
+          description
+        title: Description Url
+      primary_detail:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: Optional additional information about the event (e.g. Matter
+          Client, Document Author)
+        title: Primary Detail
+      primary_detail_url:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: Target URL that will be opened if the user clicks on the primary
+          detail
+        title: Primary Detail Url
+      secondary_detail:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: Optional additional information about the event (e.g. Matter
+          Status, Document Size)
+        title: Secondary Detail
+      secondary_detail_url:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: Target URL that will be opened if the user clicks on the secondary
+          detail
+        title: Secondary Detail Url
+      occurred_at:
+        anyOf:
+        - format: date-time
+          type: string
+        - type: 'null'
+        default: null
+        description: When the event occurred
+        title: Occurred At
+      mobile_icon:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: Icon to be displayed in the mobile app
+        title: Mobile Icon
+      subject_type:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: The type of subject that triggered the notification (e.g. Matter,
+          Document)
+        title: Subject Type
+      subject_id:
+        anyOf:
+        - type: integer
+        - type: 'null'
+        default: null
+        description: Id of the subject that triggered the notification
+        title: Subject Id
+    title: EventBase
+    type: object
+  MyEvent:
+    description: MyEvent
+    properties:
+      event:
+        anyOf:
+        - $ref: '#/$defs/EventBase'
+        - type: 'null'
+        default: null
+    title: MyEvent
+    type: object
+description: MyEventList
+properties:
+  data:
+    description: MyEvent List Response
+    items:
+      $ref: '#/$defs/MyEvent'
+    title: Data
+    type: array
+required:
+- data
+title: MyEventList
+type: object

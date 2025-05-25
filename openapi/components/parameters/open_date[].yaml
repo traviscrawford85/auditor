@@ -12,39 +12,33 @@
 # 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
 # 9. Validate pagination, filtering, and sorting patterns for list endpoints.
 # 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
+# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
 # Output:
 # - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, and reuse.
+# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
 #
 # NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
 # which expects well-formed operationIds and `$ref`s to derive method names and models.
 
 name: open_date[]
 in: query
-description: >
-  Filter Matter records by the open date. The date should be provided in the
-  format YYYY-MM-DD.
-
+description: |
+  Filter Matter records by the open date. The date should be provided in the format YYYY-MM-DD.
 
   e.g. `?open_date==2020-01-01`, `?open_date=<=2021-12-31`
 
-
-  You can provide more than one value to narrow the results of this filter. You
-  can do so by passing several individual values and appending `[]` to the
-  parameter name.
-
+  You can provide more than one value to narrow the results of this filter. You can do so by passing several individual values and appending `[]` to the parameter name.
 
   e.g. `?open_date[]=>=2020-01-01&open_date[]=<=2021-12-31`
 
-
-  Note that, when providing multiple values for this filter, only Matter records
-  that meet *all* filter conditions will be returned.
+  Note that, when providing multiple values for this filter, only Matter records that meet *all* filter conditions will be returned.
 required: false
 schema:
   type: string
   enum:
     - '>DATE'
     - '>=DATE'
-    - '=DATE'
+    - =DATE
     - <=DATE
     - <DATE

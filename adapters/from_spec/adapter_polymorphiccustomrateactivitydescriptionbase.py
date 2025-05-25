@@ -1,0 +1,10 @@
+# Adapter stubs for Polymorphiccustomrateactivitydescriptionbase
+from schemas.from_spec.polymorphiccustomrateactivitydescriptionbase import PolymorphiccustomrateactivitydescriptionbaseIn, PolymorphiccustomrateactivitydescriptionbaseOut, PolymorphiccustomrateactivitydescriptionbaseUpdate, PolymorphiccustomrateactivitydescriptionbaseDb
+
+def convert_sdk_to_polymorphiccustomrateactivitydescriptionbaseout(sdk_obj):
+    # TODO
+    return PolymorphiccustomrateactivitydescriptionbaseOut()
+
+def convert_polymorphiccustomrateactivitydescriptionbasein_to_sdk(model):
+    # TODO
+    return None

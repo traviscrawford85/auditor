@@ -12,14 +12,96 @@
 # 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
 # 9. Validate pagination, filtering, and sorting patterns for list endpoints.
 # 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
+# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
 # Output:
 # - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, and reuse.
+# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
 #
 # NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
 # which expects well-formed operationIds and `$ref`s to derive method names and models.
 
-allOf:
-  - $ref: ./Report_base.yaml
-  - type: object
-    properties: {}
+UnnamedSchema:
+  description: Report
+  properties:
+    id:
+      anyOf:
+      - type: integer
+      - type: 'null'
+      default: null
+      description: Unique identifier for the *Report*
+      title: Id
+    etag:
+      anyOf:
+      - type: string
+      - type: 'null'
+      default: null
+      description: ETag for the *Report*
+      title: Etag
+    name:
+      anyOf:
+      - type: string
+      - type: 'null'
+      default: null
+      description: A specified name for the report
+      title: Name
+    state:
+      anyOf:
+      - type: string
+      - type: 'null'
+      default: null
+      description: The current state of the report
+      title: State
+    kind:
+      anyOf:
+      - type: string
+      - type: 'null'
+      default: null
+      description: The kind of report to generate
+      title: Kind
+    format:
+      anyOf:
+      - type: string
+      - type: 'null'
+      default: null
+      description: The requested format of the report
+      title: Format
+    progress:
+      anyOf:
+      - type: integer
+      - type: 'null'
+      default: null
+      description: The integer percentage of how complete the report is.
+      title: Progress
+    created_at:
+      anyOf:
+      - format: date-time
+        type: string
+      - type: 'null'
+      default: null
+      description: The time the *Report* was created (as a ISO-8601 timestamp)
+      title: Created At
+    updated_at:
+      anyOf:
+      - format: date-time
+        type: string
+      - type: 'null'
+      default: null
+      description: The time the *Report* was last updated (as a ISO-8601 timestamp)
+      title: Updated At
+    category:
+      anyOf:
+      - type: string
+      - type: 'null'
+      default: null
+      description: The category of the report
+      title: Category
+    source:
+      anyOf:
+      - type: string
+      - type: 'null'
+      default: null
+      description: The source of the report
+      title: Source
+  title: Report
+  type: object

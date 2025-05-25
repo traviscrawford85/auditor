@@ -12,9 +12,11 @@
 # 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
 # 9. Validate pagination, filtering, and sorting patterns for list endpoints.
 # 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
+# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
 # Output:
 # - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, and reuse.
+# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
 #
 # NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
 # which expects well-formed operationIds and `$ref`s to derive method names and models.
@@ -24,78 +26,101 @@ get:
     - Calendar Entry Event Types
   summary: Return the data for a single calendar entry event type
   operationId: get
-  description: >-
-    Outlines the parameters, optional and required, used when requesting the
-    data for a single CalendarEntryEventType
+  description: |-
+    Outlines the parameters, optional and required, used when requesting the data for a single CalendarEntryEventType
   parameters:
-    - $ref: >-
-        ./components/parameters.yaml#/components/parameters/IF-MODIFIED-SINCE|header
-    - $ref: ./components/parameters.yaml#/components/parameters/IF-NONE-MATCH|header
-    - $ref: ./components/parameters.yaml#/components/parameters/X-API-VERSION|header
-    - $ref: ./components/parameters.yaml#/components/parameters/fields|query
-    - $ref: ./components/parameters.yaml#/components/parameters/id|path
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/IF-MODIFIED-SINCE|header
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/IF-NONE-MATCH|header
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/X-API-VERSION|header
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/fields|query
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/id|path
   responses:
     '200':
-      $ref: ./components/responses.yaml#/components/responses/200_Ok
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/200_Ok
     '304':
-      $ref: ./components/responses.yaml#/components/responses/304_Not_Modified
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/304_Not_Modified
     '400':
-      $ref: ./components/responses.yaml#/components/responses/400_Bad_Request
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/400_Bad_Request
     '401':
-      $ref: ./components/responses.yaml#/components/responses/401_Unauthorized
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/401_Unauthorized
     '403':
-      $ref: ./components/responses.yaml#/components/responses/403_Forbidden
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/403_Forbidden
     '404':
-      $ref: ./components/responses.yaml#/components/responses/404_Not_Found
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/404_Not_Found
     '429':
-      $ref: ./components/responses.yaml#/components/responses/429_Too_Many_Requests
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/429_Too_Many_Requests
 patch:
   tags:
     - Calendar Entry Event Types
   summary: Update a single calendar entry event type
   operationId: update
-  description: >-
-    Outlines the parameters and data fields used when updating a single
+  description: Outlines the parameters and data fields used when updating a single
     CalendarEntryEventType
   parameters:
-    - $ref: ./components/parameters.yaml#/components/parameters/IF-MATCH|header
-    - $ref: ./components/parameters.yaml#/components/parameters/X-API-VERSION|header
-    - $ref: ./components/parameters.yaml#/components/parameters/fields|query
-    - $ref: ./components/parameters.yaml#/components/parameters/id|path
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/IF-MATCH|header
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/X-API-VERSION|header
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/fields|query
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/id|path
   responses:
     '200':
-      $ref: ./components/responses.yaml#/components/responses/200_Ok
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/200_Ok
     '400':
-      $ref: ./components/responses.yaml#/components/responses/400_Bad_Request
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/400_Bad_Request
     '401':
-      $ref: ./components/responses.yaml#/components/responses/401_Unauthorized
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/401_Unauthorized
     '403':
-      $ref: ./components/responses.yaml#/components/responses/403_Forbidden
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/403_Forbidden
     '404':
-      $ref: ./components/responses.yaml#/components/responses/404_Not_Found
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/404_Not_Found
     '412':
-      $ref: >-
-        ./components/responses.yaml#/components/responses/412_Precondition_Failed
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/412_Precondition_Failed
     '422':
-      $ref: >-
-        ./components/responses.yaml#/components/responses/422_Unprocessable_Entity
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/422_Unprocessable_Entity
     '429':
-      $ref: ./components/responses.yaml#/components/responses/429_Too_Many_Requests
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/429_Too_Many_Requests
   requestBody:
-    $ref: ./components/requestBodies.yaml#/components/requestBodies/ReqBody_3273acb4
+    $ref: 
+      ./../../components/../components/requestBodies.yaml#/../../components/../components/requestBodies/ReqBody_3273acb4
 delete:
   tags:
     - Calendar Entry Event Types
   summary: Delete a single calendar entry event type
   operationId: delete
-  description: >-
-    Outlines the parameters, optional and required, used when deleting the
-    record for a single CalendarEntryEventType
+  description: |-
+    Outlines the parameters, optional and required, used when deleting the record for a single CalendarEntryEventType
   parameters:
-    - $ref: ./components/parameters.yaml#/components/parameters/X-API-VERSION|header
-    - $ref: ./components/parameters.yaml#/components/parameters/id|path
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/X-API-VERSION|header
+    - $ref: 
+        ./../../components/../components/parameters.yaml#/../../components/../components/parameters/id|path
   responses:
     '204':
-      $ref: ./components/responses.yaml#/components/responses/204_No_Content
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/204_No_Content
     '403':
-      $ref: ./components/responses.yaml#/components/responses/403_Forbidden
+      $ref: 
+        ./../../components/../components/responses.yaml#/../../components/../components/responses/403_Forbidden

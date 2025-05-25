@@ -1,0 +1,182 @@
+# copilot-audit: true
+# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
+# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
+# Tasks:
+# 1. Verify valid OpenAPI syntax (YAML structure, keys).
+# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
+# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
+# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
+# 5. Validate that all schemas and components are named clearly and represent their intent.
+# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
+# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
+# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
+# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
+# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
+# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
+# Output:
+# - A checklist of errors or improvements, preferably with line references.
+# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
+#
+# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
+# which expects well-formed operationIds and `$ref`s to derive method names and models.
+
+$defs:
+  BillingSetting:
+    description: BillingSetting
+    properties:
+      id:
+        anyOf:
+        - type: integer
+        - type: 'null'
+        default: null
+        description: Unique identifier for the *BillingSetting*
+        title: Id
+      etag:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: ETag for the *BillingSetting*
+        title: Etag
+      rounded_duration:
+        anyOf:
+        - type: number
+        - type: integer
+        - type: 'null'
+        default: null
+        description: Rounded equivalent of duration submitted
+        title: Rounded Duration
+      rounding:
+        anyOf:
+        - type: integer
+        - type: 'null'
+        default: null
+        description: Minute increment for time rounding
+        title: Rounding
+      use_decimal_rounding:
+        anyOf:
+        - type: boolean
+        - type: 'null'
+        default: null
+        description: Round time to two decimal places
+        title: Use Decimal Rounding
+      currency:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: Current user setting of currency
+        title: Currency
+      currency_sign:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: The sign of the current currency
+        title: Currency Sign
+      tax_rate:
+        anyOf:
+        - type: number
+        - type: integer
+        - type: 'null'
+        default: null
+        description: Rate applied for primary tax on invoices using this BillingSetting
+        title: Tax Rate
+      tax_name:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: Name shown for primary tax on invoices using this BillingSetting
+        title: Tax Name
+      apply_tax_by_default:
+        anyOf:
+        - type: boolean
+        - type: 'null'
+        default: null
+        description: Used to determine if primary tax should be applied to invoices
+          by default
+        title: Apply Tax By Default
+      time_on_flat_rate_contingency_matters_is_non_billable:
+        anyOf:
+        - type: boolean
+        - type: 'null'
+        default: null
+        description: Used to determine if hourly time entries on flat rate or contingency
+          fee matters should be non-billable by default
+        title: Time On Flat Rate Contingency Matters Is Non Billable
+      use_secondary_tax:
+        anyOf:
+        - type: boolean
+        - type: 'null'
+        default: null
+        description: Used to determine if secondary tax applies to invoices using
+          this BillingSetting
+        title: Use Secondary Tax
+      secondary_tax_rate:
+        anyOf:
+        - type: number
+        - type: integer
+        - type: 'null'
+        default: null
+        description: Rate applied for secondary tax on invoices using this BillingSetting
+        title: Secondary Tax Rate
+      secondary_tax_rule:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: Used to determine if secondary tax should be applied separately
+          or additionally to primary tax
+        title: Secondary Tax Rule
+      secondary_tax_name:
+        anyOf:
+        - type: string
+        - type: 'null'
+        default: null
+        description: Name shown for secondary tax on invoices using this BillingSetting
+        title: Secondary Tax Name
+      notify_after_bill_created:
+        anyOf:
+        - type: boolean
+        - type: 'null'
+        default: null
+        description: Flag to indicate if users should have the option to notify other
+          users when generating a bill
+        title: Notify After Bill Created
+      use_utbms_codes:
+        anyOf:
+        - type: boolean
+        - type: 'null'
+        default: null
+        description: Controls usage of UTBMS codes, allowing creation of coded time
+          entries and expenses
+        title: Use Utbms Codes
+      created_at:
+        anyOf:
+        - format: date-time
+          type: string
+        - type: 'null'
+        default: null
+        description: The time the *BillingSetting* was created (as a ISO-8601 timestamp)
+        title: Created At
+      updated_at:
+        anyOf:
+        - format: date-time
+          type: string
+        - type: 'null'
+        default: null
+        description: The time the *BillingSetting* was last updated (as a ISO-8601
+          timestamp)
+        title: Updated At
+    title: BillingSetting
+    type: object
+description: BillingSettingShow
+properties:
+  data:
+    $ref: '#/$defs/BillingSetting'
+required:
+- data
+title: BillingSettingShow
+type: object

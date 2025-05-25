@@ -1,0 +1,22 @@
+from pydantic import BaseModel
+from typing import Optional, List
+
+
+class DocumenttemplatelistIn(BaseModel):
+    """Incoming model for creating a Documenttemplatelist"""
+    # TODO: Add fields
+
+
+class DocumenttemplatelistOut(BaseModel):
+    """Outgoing model for returning a Documenttemplatelist"""
+    # TODO: Add fields
+
+
+class DocumenttemplatelistUpdate(BaseModel):
+    """Update model for patching a Documenttemplatelist"""
+    # TODO: Add fields
+
+
+class DocumenttemplatelistDb(BaseModel):
+    """Internal DB representation for Documenttemplatelist"""
+    # TODO: Add fields

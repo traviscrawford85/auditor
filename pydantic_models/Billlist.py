@@ -1,0 +1,22 @@
+from pydantic import BaseModel
+from typing import Optional, List
+
+
+class BilllistIn(BaseModel):
+    """Incoming model for creating a Billlist"""
+    # TODO: Add fields
+
+
+class BilllistOut(BaseModel):
+    """Outgoing model for returning a Billlist"""
+    # TODO: Add fields
+
+
+class BilllistUpdate(BaseModel):
+    """Update model for patching a Billlist"""
+    # TODO: Add fields
+
+
+class BilllistDb(BaseModel):
+    """Internal DB representation for Billlist"""
+    # TODO: Add fields
