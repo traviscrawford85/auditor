@@ -1,0 +1,12 @@
+extends: spectral:oas
+
+functionsDir: ./spectral-rules
+
+rules:
+  named-schema-required:
+    description: Schema must define a named object key
+    message: Top-level object contains only reserved keys
+    severity: error
+    given: $
+    then:
+      function: named-schema-required

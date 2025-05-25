@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 openapi: 3.1.0
 info:
   title: Clio API
@@ -41,17 +18,25 @@ tags:
     firm. Activities are recorded in Clio and then posted on bills to clients.
 
 
+
     Time Entries can be either be hourly-billable or flat-rate. An hourly-billable
+
     Time Entry is valued at the billing rate multiplied by the time entered. Examples
+
     could be a phone call, or a research session. A flat-rate Time Entry has a set
+
     value. Examples could be a visa application, or a contract review.
 
 
+
     Expenses are reimbursable costs the firm pays on behalf of a client (for example,
+
     postage, copy fees, etc.).
 
 
+
     [Support Link](https://help.clio.com/hc/en-us/sections/9036198517915-Activities)
+
 
 
     [Activities in Clio](http://app.clio.com/activities)
@@ -61,11 +46,15 @@ tags:
   description: ''
 - name: Activity Descriptions
   description: 'Activity Descriptions are custom Time Entry templates. Activity Descriptions
+
     help firms expedite their process for recording Time Entries, and ensure that
+
     their Time Entry descriptions are consistent.
 
 
+
     [Support Link](https://help.clio.com/hc/en-us/articles/9289744400667-Activity-Categories)
+
 
 
     [Activity Descriptions in Clio](https://app.clio.com/nc/#/activity_categories)
@@ -73,13 +62,19 @@ tags:
     '
 - name: Allocations
   description: 'Once a [Payment](https://help.clio.com/hc/articles/9285641955355-Record-Edit-and-Delete-Payments)
+
     or [Credit Note](https://help.clio.com/hc/en-us/articles/9285299888539-Credit-Notes)
+
     has been recorded, an Allocation links it to a Bill.
 
 
-    It''s possible for interest Allocations ("interest" = "true") to not be linked
+
+    It''''s possible for interest Allocations ("interest" = "true") to not be linked
+
     to a Bill. This can happen if the linked interest Bill is deleted (something the
+
     system allows.)
+
 
 
     [Support Link](https://help.clio.com/hc/articles/9285641955355-Record-Edit-and-Delete-Payments)
@@ -99,48 +94,79 @@ tags:
   description: ''
 - name: Billable Clients
   description: 'Users can view all Billable Clients, or clients with outstanding [Bills](https://help.clio.com/hc/en-us/articles/9285169278747-Generate-Bills),
+
     on the Billable Clients page, located under the Bills tab.
 
     '
 - name: Billable Matters
   description: 'Users can see all [Matters with outstanding bills](https://help.clio.com/hc/en-us/articles/9286116462747#filter-matters-clio-manage-0-0)
+
     attached to them by filtering out all non-billable Matters under the Matters tab.
 
 
+
     Users can [disable billing](https://help.clio.com/hc/en-us/articles/9285959663131-Create-Matters#h_01GEK791XBF1JJ0VYC8BQTG9MW)
+
     for certain Matters. They can still enter Activities on these Matters, but those
+
     Activities will not appear in the [Bills page](https://help.clio.com/hc/en-us/articles/9285169278747-Generate-Bills).
 
     '
 - name: Bills
-  description: "Bills are statements of what a user\u2019s client owes for their services\
+  description: 'Bills are statements of what a user\u2019s client owes for their services\
+
     \ over a particular billing period, including legal fees, expenses, and taxes.\n\
+
     \nUsers customize, preview, edit, and approve bills before sending them to a client.\n\
+
     \n[Support Link](https://help.clio.com/hc/en-us/articles/9285169278747-Generate-Bills)\n"
+
+    '
 - name: Calendar Entries
-  description: "Calendar Entries are used to track appointments or deadlines. Users\
+  description: 'Calendar Entries are used to track appointments or deadlines. Users\
+
     \ can view Calendar Entries on any Calendar that they have \u201CViewer\u201D\
+
     \ or \u201CEditor\u201D permission for. Users can create Calendar Entries on any\
+
     \ Calendar that they have \u201CEditor\u201D permission for.\n### Only supports\
+
     \ dates on or after January 01 1900 00:00 UTC\n* If you attempt to create a date\
-    \ before 1900, the year of that date will be pulled forward to 1900 before it's\
+
+    \ before 1900, the year of that date will be pulled forward to 1900 before it''s\
+
     \ persisted.\n\n### Calendar Update/Deletion Best Practices\n* Prior to updating\
+
     \ or deleting a calendar entry, check for recurrence.\n* If the recurrence_rule\
+
     \ parameter is not equal to `null`, offer the following 3 options for the update/deletion,\
+
     \ as well as the note:\n    1. Only this instance: Update/Delete this event, but\
+
     \ leave all future events unchanged.\n    2. All following: Updates/Deletes this\
+
     \ event and all the future events.\n    3. All events in the series: Updates/Deletes\
-    \ all events in the series.\n    * Note: If you've modified any future events\
+
+    \ all events in the series.\n    * Note: If you''ve modified any future events\
+
     \ in this series, those edits will be lost once you make this change.\n\n[Support\
+
     \ Link](https://help.clio.com/hc/en-us/articles/9289905071387-Calendar-Events)\n"
+
+    '
 - name: Calendar Entry Event Types
   description: ''
 - name: Calendars
   description: 'Calendars contain Calendar Entries. All Clio accounts contain one
+
     firm Calendar ("AccountCalendar"), personal Calendars for each user ("UserCalendar"),
+
     and any number of manually created Calendars ("AdhocCalendar"). [Calendar sharing](https://help.clio.com/hc/en-us/articles/9289973325467-Calendar-Sharing-and-Permissions)
+
     settings determine if a Calendar is visible to a User, and if that User is able
+
     to create or edit Calendar Entries on that Calendar.
+
 
 
     [Support Link](https://help.clio.com/hc/en-us/articles/9290016489883-Calendar-Set-Up-and-Settings)
@@ -150,8 +176,11 @@ tags:
   description: ''
 - name: Clio Payments Payments
   description: 'Payments allow users to record that funds (from checks, cash, credit
+
     cards, etc.) have been transferred from a client to the firm. In order to pay
+
     Bills, Payments must be [allocated](https://help.clio.com/hc/articles/9285641955355-Record-Edit-and-Delete-Payments).
+
 
 
     [Support Link](https://help.clio.com/hc/articles/9285641955355-Record-Edit-and-Delete-Payments)
@@ -159,11 +188,15 @@ tags:
     '
 - name: Communications
   description: 'Users can view all logged phone calls and emails under the Communications
+
     tab in Clio. This is also where they can use [Clio internal messages](https://help.clio.com/hc/en-us/articles/9125264015259-Internal-Messages).
 
 
+
     Communications can be filtered to show those attached to certain Matters or dates,
+
     or to show those with or without time entries.
+
 
 
     [Support Link](https://help.clio.com/hc/en-us/sections/9036030931739-Communication)
@@ -171,85 +204,158 @@ tags:
     '
 - name: Email Addresses
   description: 'Email Addresses are email addresses associated with a Contact. This
+
     endpoint returns all email addresses associated with a Contact.
 
     '
 - name: Phone Numbers
   description: 'Phone Numbers are phone numbers associated with a Contact. This endpoint
+
     returns all phone numbers associated with a Contact.
 
     '
 - name: Contacts
-  description: "All clients, prospective clients, companies, and external co-counsels\
+  description: 'All clients, prospective clients, companies, and external co-counsels\
+
     \ can be viewed as Contacts under the Contacts tab in Clio Manage.\n\n[Support\
+
     \ Link](https://help.clio.com/hc/en-us/articles/9290486281627-Clio-Manage-Contacts-Overview)\n\
+
     \n## Contact Name\nWhen creating a contact of type \"Person\" you must provide\
+
     \ at least a first name or a last name. This can be done in one of two ways:\n\
+
     \n1. Providing the name components explicitly (preferred): Using the `first_name`\
+
     \ and `last_name` parameters.\n2. Providing the full name (discouraged): Using\
-    \ the `name` parameter, you can provide the person's full name (e.g. \"John Smith\"\
+
+    \ the `name` parameter, you can provide the person''s full name (e.g. \"John Smith\"\
+
     ) and Clio will attempt to infer the individual components of the name. If it\
+
     \ is unable to do so, you will receive a \"422 Unprocessable Entity: At least\
+
     \ one of first name or last name must be provided\" Error.\n\n**We recommend using\
+
     \ the individual name fields when possible to avoid any ambiguities.**\n\n## Associations\n\
+
     A Contact can be persisted with its associations in a single request. The followings\
+
     \ detail the nested attributes to persist the associations.\n\n### Addresses\n\
+
     Checkout the sample request to update the Addresses of a Contact:\n```json\nRequest\n\
+
     \  PATCH /api/v4/contacts/1.json\n  {\n    data: {\n      addresses: [\n     \
+
     \   // update\n        { id: 1, name: \"Work\", country: \"Canada\" },\n     \
+
     \   // create\n        { name: \"Home\", street: \"1234 Main Street\", city: \"\
+
     Burnaby\", province: \"BC\", country: \"Canada\", postal_code: \"V1A 1A1\" },\n\
+
     \        // destroy\n        { id: 2, _destroy: true }\n      ]\n    }\n```\n\n\
+
     ### Custom Field Values\nA CustomFieldValue contains the value of a CustomField\
+
     \ for a Contact.\nBelow are some examples of how to create, read, update, and\
+
     \ destroy the CustomFieldValues of a Contact:\n#### Create\nNote: The value of\
+
     \ `id` used here is the value of the `id` parameter in the response received when\
+
     \ [creating a new CustomField](https://docs.developers.clio.com/api-reference/#operation/CustomField#create)\
+
     \ or one returned in a [query of an existing CustomField](https://docs.developers.clio.com/api-reference/#operation/CustomField#show).\n\
+
     ```json\nRequest\n  PATCH /api/v4/contacts/1.json\n  {\n    data: {\n      custom_field_values:\
+
     \ [\n        { custom_field: { id: 2 }, value: \"Initial value\" }\n      ]\n\
+
     \    }\n  }\n```\n#### Read\nNote: The `id` of the CustomFieldValue is a composite\
+
     \ value including the custom field type. Use this `id` to update and destroy the\
+
     \ CustomFieldValue.\nThe `id` of the associated Custom Field can be found by querying\
+
     \ the `custom_field` for all CustomFieldValues related to the Contact, e.g.: `/api/v4/contacts/1?fields=id,display_number,custom_field_values{id,value,custom_field}`\n\
+
     \nNote: The `id` may be `NULL` when the CustomField is displayed by default but\
+
     \ has not yet been given a value.\n```json\nRequest\n  GET /api/v4/contacts/1.json?fields=custom_field_values{id,value,custom_field}\n\
+
     \  {\n    data: {\n      custom_field_values: [\n        {\n          id: \"text_line-1\"\
+
     ,\n          value: \"Current value\",\n          custom_field: { id: 2 }\n  \
+
     \      }\n      ]\n    }\n  }\n```\n#### Update\nNote: The value of the CustomFieldValue\
+
     \ `id` used here is a composite value and can be found by querying for all CustomFieldValues\
+
     \ related to the Contact, e.g.: `/api/v4/contacts/1?fields=id,name,custom_field_values{id,value,custom_field}`\n\
+
     \nNote: If the `id` is `NULL`, you must provide `custom_field{id}` to create the\
+
     \ CustomFieldValue and assign a value (see **Create**).\n```json\nRequest\n  PATCH\
+
     \ /api/v4/contacts/1.json\n  {\n    data: {\n      custom_field_values: [\n  \
+
     \      { id: \"text_line-1\", value: \"Updated value\" }\n      ]\n    }\n  }\n\
+
     ```\n#### Destroy\nNote: The value of the CustomFieldValue `id` used here is a\
+
     \ composite value and can be found by querying for all CustomFieldValues related\
+
     \ to the Contact, e.g.: `/api/v4/contacts/1?fields=id,name,custom_field_values{id,value}`\n\
+
     ```json\nRequest\n  PATCH /api/v4/contacts/1.json\n  {\n    data: {\n      custom_field_values:\
+
     \ [\n        { id: \"picklist-2\", _destroy: true }\n      ]\n    }\n  }\n```\n\
+
     \n### Email Addresses\nCheckout the sample request to update the Email Addresses\
+
     \ of a Contact:\n```json\nRequest\n  PATCH /api/v4/contacts/1.json\n  {\n    data:\
+
     \ {\n      email_addresses: [\n        // update\n        { id: 1, name: \"Work\"\
+
     , address: \"demo@clio.com\" },\n        // create\n        { name: \"Home\",\
+
     \ address: \"home@clio.com\" },\n        // destroy\n        { id: 2, _destroy:\
+
     \ true }\n      ]\n    }\n```\n\n### Instant Messengers\nCheckout the sample request\
+
     \ to update the Instant Messengers of a Contact:\n```json\nRequest\n  PATCH /api/v4/contacts/1.json\n\
+
     \  {\n    data: {\n      instant_messengers: [\n        // update\n        { id:\
+
     \ 1, name: \"Work\", address: \"https://twitter.com/goclio\" },\n        // create\n\
+
     \        { name: \"Other\", address: \"https://www.facebook.com/GoClio/\" },\n\
+
     \        // destroy\n        { id: 2, _destroy: true }\n      ]\n    }\n```\n\n\
+
     ### Phone Numbers\nCheckout the sample request to update the Phone Numbers of\
+
     \ a Contact:\n```json\nRequest\n  PATCH /api/v4/contacts/1.json\n  {\n    data:\
+
     \ {\n      phone_numbers: [\n        // update\n        { id: 1, name: \"Work\"\
+
     , number: \"123-456-7890\" },\n        // create\n        { name: \"Other\", number:\
+
     \ \"000-000-0000\" },\n        // destroy\n        { id: 2, _destroy: true }\n\
+
     \      ]\n    }\n```\n\n### Web Site\nCheckout the sample request to update the\
+
     \ Web Site of a Contact:\n```json\nRequest\n  PATCH /api/v4/contacts/1.json\n\
+
     \  {\n    data: {\n      web_sites: [\n        // update\n        { id: 1, name:\
+
     \ \"Work\", address: \"https://help.clio.com/\" },\n        // create\n      \
+
     \  { name: \"Other\", address: \"https://www.clio.com/about/careers/\" },\n  \
+
     \      // destroy\n        { id: 2, _destroy: true }\n      ]\n    }\n```\n"
+
+    '
 x-tagGroups:
 - name: Activities
   tags:

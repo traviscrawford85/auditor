@@ -40,6 +40,14 @@ def prepend_prompt_to_yaml_files():
                             fw.write(COPILOT_PROMPT + "\n" + content)
 
 
+"""
+    Add a chek to see if the file already has the prompt and avoid adding it again
+    """
+def check_prompt_in_file(filepath):
+    with open(filepath, "r") as f:
+        content = f.read()
+        return COPILOT_PROMPT.strip().splitlines()[0] in content
+    
 if __name__ == "__main__":
     prepend_prompt_to_yaml_files()
     print("Copilot prompt prepended to all YAML files.")

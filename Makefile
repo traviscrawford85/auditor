@@ -17,6 +17,7 @@ help:
 	@echo "  audit-lint   Lint YAML files using Spectral and custom ruleset"
 	@echo "  audit-fix    Attempt minor Spectral auto-fixes (if applicable)"
 	@echo "  audit        Full audit: audit-prep + audit-lint"
+	@echo "  clean        Remove generated files
 
 # Paths
 ROOT_YAML=openapi/root.yaml
@@ -44,7 +45,7 @@ audit: audit-prep audit-lint
 
 patch:
 	@echo "🔧 Patching root.yaml with full components..."
-	python3 scripts/patch_root.py --input $(ROOT_YAML) --original openapi.json --output $(PATCHED_YAML)
+	python3 scripts/patch_root.py --input $(ROOT_YAML) --original openapi/expanded_full.yaml --output $(PATCHED_YAML)
 
 expand:
 	@echo "🔄 Expanding component refs into root..."
@@ -56,4 +57,11 @@ deref:
 
 generate:
 	@echo "🧬 Generating Pydantic models..."
-	python3 generate_models_from_expanded.py
+	python3 scripts/generate_models_from_expanded.py
+
+clean:
+	@echo "🧹 Cleaning generated schemas and adapters..."
+	rm -rf schemas/from_expanded/*
+	rm -rf adapters/from_expanded/*
+	rm -f openapi/root.patched.yaml openapi/expanded.yaml openapi/expanded_full.yaml
+

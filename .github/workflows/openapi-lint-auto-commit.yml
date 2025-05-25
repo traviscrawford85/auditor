@@ -23,10 +23,10 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Set up python scripts
+        uses: actions/setup-python scripts@v4
         with:
-          python-version: '3.11'
+          python scripts-version: '3.11'
 
       - name: Install dependencies
         run: pip install pyyaml
@@ -39,12 +39,11 @@ jobs:
 
       - name: Run all spec processing scripts
         run: |
-          python prepend_copilot_prompt.py
-          python normalize_openapi.py
-          python rename_request_bodies_by_description.py
-          python patch_refs_with_anchors.py
-          python validate_refs_extended.py
-          python lint_openapi.py
+          python scripts/prepend_copilot_prompt.py
+          python scripts/rename_request_bodies_by_description.py
+          python scripts/patch_refs_with_anchors.py
+          python scripts/validate_refs_extended.py
+          python scripts/lint_openapi.py
 
       - name: Commit and push with fallback + auto PR
         run: |
