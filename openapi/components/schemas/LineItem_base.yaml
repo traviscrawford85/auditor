@@ -1,0 +1,96 @@
+# copilot-audit: true
+# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
+# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
+# Tasks:
+# 1. Verify valid OpenAPI syntax (YAML structure, keys).
+# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
+# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
+# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
+# 5. Validate that all schemas and components are named clearly and represent their intent.
+# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
+# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
+# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
+# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
+# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# Output:
+# - A checklist of errors or improvements, preferably with line references.
+# - Suggestions for how to fix or improve structure, naming, and reuse.
+#
+# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
+# which expects well-formed operationIds and `$ref`s to derive method names and models.
+
+type: object
+properties:
+  id:
+    type: integer
+    format: int64
+    description: Unique identifier for the *LineItem*
+  etag:
+    type: string
+    description: ETag for the *LineItem*
+  type:
+    type: string
+    enum:
+      - ActivityLineItem
+      - LineItem
+      - NoChargeLineItem
+      - SummaryLineItem
+    description: The type of the *LineItem*
+  description:
+    type: string
+    description: The description for the *LineItem*
+  date:
+    type: string
+    format: date
+    description: The *LineItem* date (as a ISO-8601 date)
+  price:
+    type: number
+    format: double
+    description: The price of the *LineItem*
+  taxable:
+    type: boolean
+    description: Whether the *LineItem* is taxable
+  kind:
+    type: string
+    enum:
+      - Service
+      - Expense
+    description: The kind of *LineItem*
+  note:
+    type: string
+    description: The note attached to the *LineItem*
+  secondary_taxable:
+    type: boolean
+    description: Whether the *LineItem* is secondary taxable
+  total:
+    type: number
+    format: double
+    description: The total amount for the *LineItem*
+  tax:
+    type: number
+    format: double
+    description: The tax amount for the *LineItem*
+  secondary_tax:
+    type: number
+    format: double
+    description: The secondary tax amount for the *LineItem*
+  sub_total:
+    type: number
+    format: double
+    description: The subtotal amount for the *LineItem*
+  quantity:
+    type: number
+    format: double
+    description: The amount of hours for the *LineItem*
+  group_ordering:
+    type: integer
+    format: int32
+    description: The value to specify the ordering of the *LineItem* on a bill
+  created_at:
+    type: string
+    format: date-time
+    description: The time the *LineItem* was created (as a ISO-8601 timestamp)
+  updated_at:
+    type: string
+    format: date-time
+    description: The time the *LineItem* was last updated (as a ISO-8601 timestamp)

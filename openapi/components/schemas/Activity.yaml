@@ -1,0 +1,82 @@
+# copilot-audit: true
+# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
+# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
+# Tasks:
+# 1. Verify valid OpenAPI syntax (YAML structure, keys).
+# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
+# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
+# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
+# 5. Validate that all schemas and components are named clearly and represent their intent.
+# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
+# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
+# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
+# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
+# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# Output:
+# - A checklist of errors or improvements, preferably with line references.
+# - Suggestions for how to fix or improve structure, naming, and reuse.
+#
+# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
+# which expects well-formed operationIds and `$ref`s to derive method names and models.
+
+allOf:
+  - $ref: ./Activity_base.yaml
+  - type: object
+    properties:
+      activity_description:
+        $ref: ./ActivityDescription_base.yaml
+        description: ActivityDescription
+      expense_category:
+        $ref: ./ExpenseCategory_base.yaml
+        description: ExpenseCategory
+      bill:
+        $ref: ./Bill_base.yaml
+        description: Bill
+      communication:
+        $ref: ./Communication_base.yaml
+        description: Communication
+      client_portal:
+        $ref: ./ClientPortal_base.yaml
+        description: ClientPortal
+      matter:
+        $ref: ./Matter_base.yaml
+        description: Matter
+      matter_note:
+        $ref: ./Note_base.yaml
+        description: Note
+      contact_note:
+        $ref: ./Note_base.yaml
+        description: Note
+      subject:
+        $ref: ./PolymorphicObject_base.yaml
+        description: PolymorphicObject
+      timer:
+        $ref: ./Timer_base.yaml
+        description: Timer
+      user:
+        $ref: ./User_base.yaml
+        description: User
+      utbms_expense:
+        $ref: ./UtbmsCode_base.yaml
+        description: UtbmsCode
+      vendor:
+        $ref: ./Contact_base.yaml
+        description: Contact
+      calendar_entry:
+        $ref: ./Activity_CalendarEntry_base.yaml
+        description: CalendarEntry
+      task:
+        $ref: ./Activity_Task_base.yaml
+        description: Task
+      text_message_conversation:
+        $ref: ./Activity_TextMessageConversation_base.yaml
+        description: TextMessageConversation
+      document_version:
+        $ref: ./DocumentVersion_base.yaml
+        description: DocumentVersion
+      legal_aid_uk_activity:
+        $ref: ./LegalAidUkActivity_base.yaml
+        description: LegalAidUkActivity
+      currency:
+        $ref: ./Currency_base.yaml
+        description: Currency

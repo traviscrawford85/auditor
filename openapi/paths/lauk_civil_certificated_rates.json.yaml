@@ -1,0 +1,70 @@
+# copilot-audit: true
+# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
+# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
+# Tasks:
+# 1. Verify valid OpenAPI syntax (YAML structure, keys).
+# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
+# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
+# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
+# 5. Validate that all schemas and components are named clearly and represent their intent.
+# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
+# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
+# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
+# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
+# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# Output:
+# - A checklist of errors or improvements, preferably with line references.
+# - Suggestions for how to fix or improve structure, naming, and reuse.
+#
+# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
+# which expects well-formed operationIds and `$ref`s to derive method names and models.
+
+get:
+  tags:
+    - Civil Certificated Rates
+  summary: List Civil Certificated Rates
+  operationId: listLauk_civil_certificated_rates
+  description: >-
+    Outlines the parameters, optional and required, used when requesting the
+    data for all LaukCivilCertificatedRates
+  parameters:
+    - $ref: ./components/parameters.yaml#/components/parameters/X-API-VERSION|header
+    - $ref: ./components/parameters.yaml#/components/parameters/activity|query
+    - $ref: >-
+        ./components/parameters.yaml#/components/parameters/activity_sub_category|query
+    - $ref: >-
+        ./components/parameters.yaml#/components/parameters/attended_several_hearings_for_multiple_clients|query
+    - $ref: >-
+        ./components/parameters.yaml#/components/parameters/category_of_law|query
+    - $ref: >-
+        ./components/parameters.yaml#/components/parameters/change_of_solicitor|query
+    - $ref: ./components/parameters.yaml#/components/parameters/court|query
+    - $ref: >-
+        ./components/parameters.yaml#/components/parameters/eligible_for_sqm|query
+    - $ref: ./components/parameters.yaml#/components/parameters/fee_scheme|query
+    - $ref: ./components/parameters.yaml#/components/parameters/fields|query
+    - $ref: >-
+        ./components/parameters.yaml#/components/parameters/first_conducting_solicitor|query
+    - $ref: ./components/parameters.yaml#/components/parameters/key|query
+    - $ref: ./components/parameters.yaml#/components/parameters/limit|query
+    - $ref: >-
+        ./components/parameters.yaml#/components/parameters/number_of_clients|query
+    - $ref: ./components/parameters.yaml#/components/parameters/page_token|query
+    - $ref: ./components/parameters.yaml#/components/parameters/party|query
+    - $ref: >-
+        ./components/parameters.yaml#/components/parameters/post_transfer_clients_represented|query
+    - $ref: ./components/parameters.yaml#/components/parameters/rate_type|query
+    - $ref: ./components/parameters.yaml#/components/parameters/region|query
+    - $ref: ./components/parameters.yaml#/components/parameters/session_type|query
+    - $ref: ./components/parameters.yaml#/components/parameters/user_type|query
+  responses:
+    '200':
+      $ref: ./components/responses.yaml#/components/responses/200_Ok
+    '400':
+      $ref: ./components/responses.yaml#/components/responses/400_Bad_Request
+    '401':
+      $ref: ./components/responses.yaml#/components/responses/401_Unauthorized
+    '403':
+      $ref: ./components/responses.yaml#/components/responses/403_Forbidden
+    '429':
+      $ref: ./components/responses.yaml#/components/responses/429_Too_Many_Requests

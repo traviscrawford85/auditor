@@ -1,0 +1,456 @@
+# copilot-audit: true
+# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
+# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
+# Tasks:
+# 1. Verify valid OpenAPI syntax (YAML structure, keys).
+# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
+# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
+# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
+# 5. Validate that all schemas and components are named clearly and represent their intent.
+# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
+# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
+# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
+# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
+# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# Output:
+# - A checklist of errors or improvements, preferably with line references.
+# - Suggestions for how to fix or improve structure, naming, and reuse.
+#
+# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
+# which expects well-formed operationIds and `$ref`s to derive method names and models.
+
+description: Request Body for Documents
+content:
+  application/json:
+    schema:
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          type: object
+          properties:
+            communication_id:
+              type: integer
+              format: int64
+              description: Related communication record.
+            content_type:
+              type: string
+              description: >-
+                A standard MIME type describing the format of the object data.
+                If the field is not specified, it is determined by the file
+                extension.
+            document_category:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                  description: >-
+                    The unique identifier for a single DocumentCategory
+                    associated with the Document. Use the keyword `null` to
+                    specify no association.
+            external_properties:
+              type: array
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: >-
+                      The ExternalProperty name. Note: **there is a limit of 5
+                      external_properties per Document**
+                  value:
+                    type: string
+                    description: The ExternalProperty value.
+            filename:
+              type: string
+              default: name
+              description: Name of the original file.
+            multiparts:
+              type: array
+              items:
+                type: object
+                properties:
+                  part_number:
+                    type: integer
+                    format: int32
+                    description: >
+                      The part number of multipart upload. It must be an integer
+                      between 1 to 10,000, inclusive.
+
+
+                      Multipart upload supports upload a single file as a set of
+                      parts.
+
+                      Each part is a contiguous portion of the data.
+
+                      A `part_number` uniquely identifies a part and also
+                      defines its position within the document being uploaded.
+
+                      Each part must be at least 5 MB in size, except the last
+                      part.
+
+                      There is no minimum size limit on the last part.
+
+
+                      The URLs of multipart upload are returned in the field,
+                      `put_url`, with the corresponding `multipart`
+
+
+                      The API handles maximum 50 `multiparts` in one request. If
+                      the upload is split to more than 50 parts,
+
+                      make a PUT request with `fully_uploaded` equal to `false`,
+                      and another set of part numbers.
+                  content_length:
+                    type: string
+                    description: The size of the part of the upload file in bytes.
+                  content_md5:
+                    type: string
+                    description: >-
+                      The base64-encoded 128-bit MD5 digest of the part data.
+                      This header can be used as a message integrity check to
+                      verify that the part data is the same data that was
+                      originally sent. Although it is optional, we recommend
+                      using the Content-MD5 mechanism as an end-to-end integrity
+                      check.
+                required:
+                  - part_number
+                  - content_length
+            name:
+              type: string
+              description: Document name.
+            parent:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                  description: The unique identifier of the parent object.
+                type:
+                  type: string
+                  enum:
+                    - Document
+                    - Folder
+                    - Contact
+                    - Matter
+                  description: >
+                    Type of parent object:
+
+                    * "Document" represents an existing Clio document. It is
+                    specified when you provide a new revision (or document
+                    version) to an existing document.
+
+                    * "Folder" represents a specified folder on Clio by folder
+                    id. It if specified when you add / move an item to a folder.
+
+                    * "Contact" represents a contact folder on Clio identified
+                    by contact id. It is specified when you add / move an item
+                    to a contact folder. A contact folder will be created for
+                    the specified contact if none exists already.
+
+                    * "Matter" represents a matter folder on Clio identified by
+                    matter id. It is specified when you add / move an item to a
+                    matter folder.
+              required:
+                - id
+                - type
+            received_at:
+              type: string
+              format: date-time
+              description: >-
+                Date and time the document was received (Expects an ISO-8601
+                timestamp).
+          required:
+            - name
+            - parent
+  application/x-www-form-urlencoded:
+    schema:
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          type: object
+          properties:
+            communication_id:
+              type: integer
+              format: int64
+              description: Related communication record.
+            content_type:
+              type: string
+              description: >-
+                A standard MIME type describing the format of the object data.
+                If the field is not specified, it is determined by the file
+                extension.
+            document_category:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                  description: >-
+                    The unique identifier for a single DocumentCategory
+                    associated with the Document. Use the keyword `null` to
+                    specify no association.
+            external_properties:
+              type: array
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: >-
+                      The ExternalProperty name. Note: **there is a limit of 5
+                      external_properties per Document**
+                  value:
+                    type: string
+                    description: The ExternalProperty value.
+            filename:
+              type: string
+              default: name
+              description: Name of the original file.
+            multiparts:
+              type: array
+              items:
+                type: object
+                properties:
+                  part_number:
+                    type: integer
+                    format: int32
+                    description: >
+                      The part number of multipart upload. It must be an integer
+                      between 1 to 10,000, inclusive.
+
+
+                      Multipart upload supports upload a single file as a set of
+                      parts.
+
+                      Each part is a contiguous portion of the data.
+
+                      A `part_number` uniquely identifies a part and also
+                      defines its position within the document being uploaded.
+
+                      Each part must be at least 5 MB in size, except the last
+                      part.
+
+                      There is no minimum size limit on the last part.
+
+
+                      The URLs of multipart upload are returned in the field,
+                      `put_url`, with the corresponding `multipart`
+
+
+                      The API handles maximum 50 `multiparts` in one request. If
+                      the upload is split to more than 50 parts,
+
+                      make a PUT request with `fully_uploaded` equal to `false`,
+                      and another set of part numbers.
+                  content_length:
+                    type: string
+                    description: The size of the part of the upload file in bytes.
+                  content_md5:
+                    type: string
+                    description: >-
+                      The base64-encoded 128-bit MD5 digest of the part data.
+                      This header can be used as a message integrity check to
+                      verify that the part data is the same data that was
+                      originally sent. Although it is optional, we recommend
+                      using the Content-MD5 mechanism as an end-to-end integrity
+                      check.
+                required:
+                  - part_number
+                  - content_length
+            name:
+              type: string
+              description: Document name.
+            parent:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                  description: The unique identifier of the parent object.
+                type:
+                  type: string
+                  enum:
+                    - Document
+                    - Folder
+                    - Contact
+                    - Matter
+                  description: >
+                    Type of parent object:
+
+                    * "Document" represents an existing Clio document. It is
+                    specified when you provide a new revision (or document
+                    version) to an existing document.
+
+                    * "Folder" represents a specified folder on Clio by folder
+                    id. It if specified when you add / move an item to a folder.
+
+                    * "Contact" represents a contact folder on Clio identified
+                    by contact id. It is specified when you add / move an item
+                    to a contact folder. A contact folder will be created for
+                    the specified contact if none exists already.
+
+                    * "Matter" represents a matter folder on Clio identified by
+                    matter id. It is specified when you add / move an item to a
+                    matter folder.
+              required:
+                - id
+                - type
+            received_at:
+              type: string
+              format: date-time
+              description: >-
+                Date and time the document was received (Expects an ISO-8601
+                timestamp).
+          required:
+            - name
+            - parent
+  multipart/form-data:
+    schema:
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          type: object
+          properties:
+            communication_id:
+              type: integer
+              format: int64
+              description: Related communication record.
+            content_type:
+              type: string
+              description: >-
+                A standard MIME type describing the format of the object data.
+                If the field is not specified, it is determined by the file
+                extension.
+            document_category:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                  description: >-
+                    The unique identifier for a single DocumentCategory
+                    associated with the Document. Use the keyword `null` to
+                    specify no association.
+            external_properties:
+              type: array
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: >-
+                      The ExternalProperty name. Note: **there is a limit of 5
+                      external_properties per Document**
+                  value:
+                    type: string
+                    description: The ExternalProperty value.
+            filename:
+              type: string
+              default: name
+              description: Name of the original file.
+            multiparts:
+              type: array
+              items:
+                type: object
+                properties:
+                  part_number:
+                    type: integer
+                    format: int32
+                    description: >
+                      The part number of multipart upload. It must be an integer
+                      between 1 to 10,000, inclusive.
+
+
+                      Multipart upload supports upload a single file as a set of
+                      parts.
+
+                      Each part is a contiguous portion of the data.
+
+                      A `part_number` uniquely identifies a part and also
+                      defines its position within the document being uploaded.
+
+                      Each part must be at least 5 MB in size, except the last
+                      part.
+
+                      There is no minimum size limit on the last part.
+
+
+                      The URLs of multipart upload are returned in the field,
+                      `put_url`, with the corresponding `multipart`
+
+
+                      The API handles maximum 50 `multiparts` in one request. If
+                      the upload is split to more than 50 parts,
+
+                      make a PUT request with `fully_uploaded` equal to `false`,
+                      and another set of part numbers.
+                  content_length:
+                    type: string
+                    description: The size of the part of the upload file in bytes.
+                  content_md5:
+                    type: string
+                    description: >-
+                      The base64-encoded 128-bit MD5 digest of the part data.
+                      This header can be used as a message integrity check to
+                      verify that the part data is the same data that was
+                      originally sent. Although it is optional, we recommend
+                      using the Content-MD5 mechanism as an end-to-end integrity
+                      check.
+                required:
+                  - part_number
+                  - content_length
+            name:
+              type: string
+              description: Document name.
+            parent:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                  description: The unique identifier of the parent object.
+                type:
+                  type: string
+                  enum:
+                    - Document
+                    - Folder
+                    - Contact
+                    - Matter
+                  description: >
+                    Type of parent object:
+
+                    * "Document" represents an existing Clio document. It is
+                    specified when you provide a new revision (or document
+                    version) to an existing document.
+
+                    * "Folder" represents a specified folder on Clio by folder
+                    id. It if specified when you add / move an item to a folder.
+
+                    * "Contact" represents a contact folder on Clio identified
+                    by contact id. It is specified when you add / move an item
+                    to a contact folder. A contact folder will be created for
+                    the specified contact if none exists already.
+
+                    * "Matter" represents a matter folder on Clio identified by
+                    matter id. It is specified when you add / move an item to a
+                    matter folder.
+              required:
+                - id
+                - type
+            received_at:
+              type: string
+              format: date-time
+              description: >-
+                Date and time the document was received (Expects an ISO-8601
+                timestamp).
+          required:
+            - name
+            - parent
+required: false

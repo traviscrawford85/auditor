@@ -1,0 +1,408 @@
+# copilot-audit: true
+# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
+# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
+# Tasks:
+# 1. Verify valid OpenAPI syntax (YAML structure, keys).
+# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
+# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
+# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
+# 5. Validate that all schemas and components are named clearly and represent their intent.
+# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
+# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
+# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
+# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
+# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# Output:
+# - A checklist of errors or improvements, preferably with line references.
+# - Suggestions for how to fix or improve structure, naming, and reuse.
+#
+# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
+# which expects well-formed operationIds and `$ref`s to derive method names and models.
+
+description: Request Body for Calendar Entries
+content:
+  application/json:
+    schema:
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          type: object
+          properties:
+            _deleted:
+              type: string
+              enum:
+                - single
+                - future
+              description: Flag to delete a specific instance of a recurring event.
+            all_day:
+              type: boolean
+              description: Whether or not the CalendarEntry is for all day.
+            attendees:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: >-
+                      The unique identifier for a single Attendee associated
+                      with the CalendarEntry. The keyword `null` is not valid
+                      for this field. Not required for creating new Attendee,
+                      but required for updating or deleting existing ones.
+                  type:
+                    type: string
+                    description: The type of attendee (Calendar, Contact)
+                  _destroy:
+                    type: boolean
+                    description: Flag to delete a specific attendee.
+            calendar_entry_event_type:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                  description: >-
+                    The unique identifier for a single CalendarEntryEventType
+                    associated with the CalendarEntry. Use the keyword `null` to
+                    specify no association.
+            calendar_owner:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                  description: >-
+                    The unique identifier for a single Calendar associated with
+                    the CalendarEntry. The keyword `null` is not valid for this
+                    field.
+              required:
+                - id
+            conference_meeting:
+              type: object
+              properties:
+                type:
+                  type: string
+                  enum:
+                    - zoom
+                  description: >-
+                    The type of conference meeting. If no conference meeting is
+                    present or the user is in an ineligible pricing tier for
+                    this feature, it will be null.
+            description:
+              type: string
+              description: A detailed description of the CalendarEntry.
+            end_at:
+              type: string
+              format: date-time
+              description: The time the CalendarEntry ends (Expects an ISO-8601 timestamp).
+            external_properties:
+              type: array
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: >-
+                      The ExternalProperty name. Note: **there is a limit of 5
+                      external_properties per CalendarEntry**
+                  value:
+                    type: string
+                    description: The ExternalProperty value.
+            location:
+              type: string
+              description: The geographic location of the CalendarEntry.
+            matter:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                  description: >-
+                    The unique identifier for a single Matter associated with
+                    the CalendarEntry. Use the keyword `null` to specify no
+                    association.
+            recurrence_rule:
+              type: string
+              description: >-
+                Recurrence rule for expanding recurring CalendarEntry. To
+                convert an existing recurring event to a non-recurring event,
+                `''` or `null` are valid values.
+            send_email_notification:
+              type: boolean
+              description: >-
+                Whether the calendar Entry should send email notifications to
+                attendees
+            start_at:
+              type: string
+              format: date-time
+              description: >-
+                The time the CalendarEntry starts (Expects an ISO-8601
+                timestamp).
+            summary:
+              type: string
+              description: A short summary of the CalendarEntry.
+          required:
+            - summary
+            - start_at
+            - end_at
+            - calendar_owner
+  application/x-www-form-urlencoded:
+    schema:
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          type: object
+          properties:
+            _deleted:
+              type: string
+              enum:
+                - single
+                - future
+              description: Flag to delete a specific instance of a recurring event.
+            all_day:
+              type: boolean
+              description: Whether or not the CalendarEntry is for all day.
+            attendees:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: >-
+                      The unique identifier for a single Attendee associated
+                      with the CalendarEntry. The keyword `null` is not valid
+                      for this field. Not required for creating new Attendee,
+                      but required for updating or deleting existing ones.
+                  type:
+                    type: string
+                    description: The type of attendee (Calendar, Contact)
+                  _destroy:
+                    type: boolean
+                    description: Flag to delete a specific attendee.
+            calendar_entry_event_type:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                  description: >-
+                    The unique identifier for a single CalendarEntryEventType
+                    associated with the CalendarEntry. Use the keyword `null` to
+                    specify no association.
+            calendar_owner:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                  description: >-
+                    The unique identifier for a single Calendar associated with
+                    the CalendarEntry. The keyword `null` is not valid for this
+                    field.
+              required:
+                - id
+            conference_meeting:
+              type: object
+              properties:
+                type:
+                  type: string
+                  enum:
+                    - zoom
+                  description: >-
+                    The type of conference meeting. If no conference meeting is
+                    present or the user is in an ineligible pricing tier for
+                    this feature, it will be null.
+            description:
+              type: string
+              description: A detailed description of the CalendarEntry.
+            end_at:
+              type: string
+              format: date-time
+              description: The time the CalendarEntry ends (Expects an ISO-8601 timestamp).
+            external_properties:
+              type: array
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: >-
+                      The ExternalProperty name. Note: **there is a limit of 5
+                      external_properties per CalendarEntry**
+                  value:
+                    type: string
+                    description: The ExternalProperty value.
+            location:
+              type: string
+              description: The geographic location of the CalendarEntry.
+            matter:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                  description: >-
+                    The unique identifier for a single Matter associated with
+                    the CalendarEntry. Use the keyword `null` to specify no
+                    association.
+            recurrence_rule:
+              type: string
+              description: >-
+                Recurrence rule for expanding recurring CalendarEntry. To
+                convert an existing recurring event to a non-recurring event,
+                `''` or `null` are valid values.
+            send_email_notification:
+              type: boolean
+              description: >-
+                Whether the calendar Entry should send email notifications to
+                attendees
+            start_at:
+              type: string
+              format: date-time
+              description: >-
+                The time the CalendarEntry starts (Expects an ISO-8601
+                timestamp).
+            summary:
+              type: string
+              description: A short summary of the CalendarEntry.
+          required:
+            - summary
+            - start_at
+            - end_at
+            - calendar_owner
+  multipart/form-data:
+    schema:
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          type: object
+          properties:
+            _deleted:
+              type: string
+              enum:
+                - single
+                - future
+              description: Flag to delete a specific instance of a recurring event.
+            all_day:
+              type: boolean
+              description: Whether or not the CalendarEntry is for all day.
+            attendees:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                    description: >-
+                      The unique identifier for a single Attendee associated
+                      with the CalendarEntry. The keyword `null` is not valid
+                      for this field. Not required for creating new Attendee,
+                      but required for updating or deleting existing ones.
+                  type:
+                    type: string
+                    description: The type of attendee (Calendar, Contact)
+                  _destroy:
+                    type: boolean
+                    description: Flag to delete a specific attendee.
+            calendar_entry_event_type:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                  description: >-
+                    The unique identifier for a single CalendarEntryEventType
+                    associated with the CalendarEntry. Use the keyword `null` to
+                    specify no association.
+            calendar_owner:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                  description: >-
+                    The unique identifier for a single Calendar associated with
+                    the CalendarEntry. The keyword `null` is not valid for this
+                    field.
+              required:
+                - id
+            conference_meeting:
+              type: object
+              properties:
+                type:
+                  type: string
+                  enum:
+                    - zoom
+                  description: >-
+                    The type of conference meeting. If no conference meeting is
+                    present or the user is in an ineligible pricing tier for
+                    this feature, it will be null.
+            description:
+              type: string
+              description: A detailed description of the CalendarEntry.
+            end_at:
+              type: string
+              format: date-time
+              description: The time the CalendarEntry ends (Expects an ISO-8601 timestamp).
+            external_properties:
+              type: array
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: >-
+                      The ExternalProperty name. Note: **there is a limit of 5
+                      external_properties per CalendarEntry**
+                  value:
+                    type: string
+                    description: The ExternalProperty value.
+            location:
+              type: string
+              description: The geographic location of the CalendarEntry.
+            matter:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                  description: >-
+                    The unique identifier for a single Matter associated with
+                    the CalendarEntry. Use the keyword `null` to specify no
+                    association.
+            recurrence_rule:
+              type: string
+              description: >-
+                Recurrence rule for expanding recurring CalendarEntry. To
+                convert an existing recurring event to a non-recurring event,
+                `''` or `null` are valid values.
+            send_email_notification:
+              type: boolean
+              description: >-
+                Whether the calendar Entry should send email notifications to
+                attendees
+            start_at:
+              type: string
+              format: date-time
+              description: >-
+                The time the CalendarEntry starts (Expects an ISO-8601
+                timestamp).
+            summary:
+              type: string
+              description: A short summary of the CalendarEntry.
+          required:
+            - summary
+            - start_at
+            - end_at
+            - calendar_owner
+required: false

@@ -1,0 +1,49 @@
+{
+  "version": 2,
+  "tools": {
+    "spectral": {
+      "ruleset": "https://raw.githubusercontent.com/stoplightio/spectral/main/docs/reference/openapi-ruleset.md",
+      "rules": {
+        "operation-operationId": {
+          "description": "Ensure each operationId is unique and descriptive.",
+          "message": "Avoid generic operationId names like 'getData'. Use format like 'updateMatterNote'.",
+          "recommended": true
+        },
+        "operation-tag-defined": true,
+        "no-unused-components": true,
+        "valid-paths": {
+          "description": "Ensure paths use kebab-case and meaningful nouns.",
+          "recommended": true,
+          "type": "style"
+        },
+        "operation-summary": {
+          "description": "Each operation should have a summary for clarity in generated code.",
+          "recommended": true
+        },
+        "typed-request-responses": {
+          "description": "Request bodies and responses should reference valid schemas.",
+          "recommended": true
+        },
+        "refs-absolute": false,
+        "components-duplicates": true,
+        "no-invalid-media-type-examples": true
+      }
+    },
+    "custom-script": {
+      "path": "./scripts/lint_openapi.py",
+      "watch": ["openapi/**/*.yaml", "openapi/**/*.json"],
+      "description": "Custom Python script to remove unused components, correct $ref anchors, and remap request bodies."
+    }
+  },
+  "schema-validation": {
+    "enabled": true,
+    "schema": "https://spec.openapis.org/oas/3.1/schema/2022-10-07"
+  },
+  "recommendations": {
+    "deduplicate-components": true,
+    "map-paths-to-methods": true,
+    "enforce-consistent-tag-groups": true,
+    "type-hints-alignment": "pydantic",
+    "generate-only-refs": true
+  }
+}

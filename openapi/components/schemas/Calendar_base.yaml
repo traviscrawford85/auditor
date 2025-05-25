@@ -1,0 +1,121 @@
+# copilot-audit: true
+# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
+# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
+# Tasks:
+# 1. Verify valid OpenAPI syntax (YAML structure, keys).
+# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
+# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
+# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
+# 5. Validate that all schemas and components are named clearly and represent their intent.
+# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
+# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
+# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
+# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
+# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# Output:
+# - A checklist of errors or improvements, preferably with line references.
+# - Suggestions for how to fix or improve structure, naming, and reuse.
+#
+# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
+# which expects well-formed operationIds and `$ref`s to derive method names and models.
+
+type: object
+properties:
+  id:
+    type: integer
+    format: int64
+    description: Unique identifier for the *Calendar*
+  etag:
+    type: string
+    description: ETag for the *Calendar*
+  color:
+    type: string
+    enum:
+      - '#367B9C'
+      - '#FFA5A4'
+      - '#83D17F'
+      - '#FFAC7B'
+      - '#8E3F64'
+      - '#C75300'
+      - '#009CEC'
+      - '#62D6B1'
+      - '#9EEDCB'
+      - '#F9A2C4'
+      - '#616161'
+      - '#BBDA81'
+      - '#DFD3F8'
+      - '#D6C4A5'
+      - '#FFD478'
+      - '#6AC9DE'
+      - '#EABBB0'
+      - '#BFC2E1'
+      - '#DADADA'
+      - '#CDE2F5'
+    description: Color
+  light_color:
+    type: string
+    enum:
+      - '#5DA5C7'
+      - '#F95957'
+      - '#209412'
+      - '#FF7715'
+      - '#DE649D'
+      - '#FF6B02'
+      - '#56C4FC'
+      - '#00B177'
+      - '#50D19B'
+      - '#F14A8C'
+      - '#A3A2A2'
+      - '#84AB3B'
+      - '#B091EE'
+      - '#BD9E69'
+      - '#F2A000'
+      - '#00A5CA'
+      - '#CB5A3D'
+      - '#959CD0'
+      - '#B0B0B0'
+      - '#7BA6CD'
+    description: Accent color to complement the main calendar color.
+  court_rules_default_calendar:
+    type: boolean
+    description: Whether the calendar is default court rules calendar for current user
+  name:
+    type: string
+    description: The name of the *Calendar*
+  permission:
+    type: string
+    enum:
+      - owner
+      - editor
+      - viewer
+      - limited_viewer
+      - none
+    description: The user's permission to the *Calendar*
+  type:
+    type: string
+    enum:
+      - AccountCalendar
+      - AdhocCalendar
+      - UserCalendar
+    description: The type of the *Calendar*
+  visible:
+    type: boolean
+    description: >-
+      Whether the *Calendar* will be shown by default in the Clio Web UI
+      (assuming no source is provided).
+  created_at:
+    type: string
+    format: date-time
+    description: The time the *Calendar* was created (as a ISO-8601 timestamp)
+  updated_at:
+    type: string
+    format: date-time
+    description: The time the *Calendar* was last updated (as a ISO-8601 timestamp)
+  source:
+    type: string
+    enum:
+      - web
+      - mobile
+    description: >-
+      The source that visible applies to, by default the Clio Web UI (Expects
+      'mobile' or 'web').

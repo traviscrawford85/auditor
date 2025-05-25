@@ -1,0 +1,345 @@
+# copilot-audit: true
+# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
+# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
+# Tasks:
+# 1. Verify valid OpenAPI syntax (YAML structure, keys).
+# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
+# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
+# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
+# 5. Validate that all schemas and components are named clearly and represent their intent.
+# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
+# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
+# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
+# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
+# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# Output:
+# - A checklist of errors or improvements, preferably with line references.
+# - Suggestions for how to fix or improve structure, naming, and reuse.
+#
+# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
+# which expects well-formed operationIds and `$ref`s to derive method names and models.
+
+description: Request Body for Bills
+content:
+  application/json:
+    schema:
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          type: object
+          properties:
+            bill_theme:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                  description: The unique identifier of the bill theme applied to the Bill.
+            currency_id:
+              type: integer
+              format: int64
+              description: ID of the currency applied to the Bill.
+            discount:
+              type: object
+              properties:
+                rate:
+                  type: number
+                  format: double
+                  description: >-
+                    Discount amount for the Bill. This can either be a
+                    percentage or monetary value, this is determined by the
+                    `discount[type]`.
+                type:
+                  type: string
+                  enum:
+                    - percentage
+                    - money
+                  description: >-
+                    The type of discount you are applying to your Bill with the
+                    `discount[rate]`.
+                note:
+                  type: string
+                  description: A note for your Bill's discount.
+            due_at:
+              type: string
+              format: date
+              description: >-
+                Date the Bill is due. If `use_grace_period` is true, this field
+                is ignored.
+            interest:
+              type: object
+              properties:
+                rate:
+                  type: number
+                  format: double
+                  description: Interest amount for the Bill as percentage.
+                type:
+                  type: string
+                  enum:
+                    - simple
+                    - compound
+                  description: >-
+                    The type of interest you are applying to your Bill with the
+                    `interest[rate]`.
+                period:
+                  type: integer
+                  format: int32
+                  description: >-
+                    The interest period for how frequently your Bill will charge
+                    interest.
+            issued_at:
+              type: string
+              format: date
+              description: Date the Bill was issued.
+            memo:
+              type: string
+              description: Memo for the Bill.
+            number:
+              type: string
+              description: Bill's number.
+            purchase_order:
+              type: string
+              description: Purchase order information for the Bill.
+            secondary_tax_rate:
+              type: number
+              format: double
+              description: Secondary tax rate as percentage for the Bill.
+            state:
+              type: string
+              enum:
+                - draft
+                - awaiting_approval
+                - awaiting_payment
+                - paid
+                - void
+                - deleted
+              description: Bill's state.
+            subject:
+              type: string
+              description: Subject details for the Bill.
+            tax_rate:
+              type: number
+              format: double
+              description: Tax rate as percentage for the Bill
+            use_grace_period:
+              type: boolean
+              description: >-
+                When true, sets the bill's due date based on the client's grace
+                period. This setting overrides the `due_at` parameter.
+  application/x-www-form-urlencoded:
+    schema:
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          type: object
+          properties:
+            bill_theme:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                  description: The unique identifier of the bill theme applied to the Bill.
+            currency_id:
+              type: integer
+              format: int64
+              description: ID of the currency applied to the Bill.
+            discount:
+              type: object
+              properties:
+                rate:
+                  type: number
+                  format: double
+                  description: >-
+                    Discount amount for the Bill. This can either be a
+                    percentage or monetary value, this is determined by the
+                    `discount[type]`.
+                type:
+                  type: string
+                  enum:
+                    - percentage
+                    - money
+                  description: >-
+                    The type of discount you are applying to your Bill with the
+                    `discount[rate]`.
+                note:
+                  type: string
+                  description: A note for your Bill's discount.
+            due_at:
+              type: string
+              format: date
+              description: >-
+                Date the Bill is due. If `use_grace_period` is true, this field
+                is ignored.
+            interest:
+              type: object
+              properties:
+                rate:
+                  type: number
+                  format: double
+                  description: Interest amount for the Bill as percentage.
+                type:
+                  type: string
+                  enum:
+                    - simple
+                    - compound
+                  description: >-
+                    The type of interest you are applying to your Bill with the
+                    `interest[rate]`.
+                period:
+                  type: integer
+                  format: int32
+                  description: >-
+                    The interest period for how frequently your Bill will charge
+                    interest.
+            issued_at:
+              type: string
+              format: date
+              description: Date the Bill was issued.
+            memo:
+              type: string
+              description: Memo for the Bill.
+            number:
+              type: string
+              description: Bill's number.
+            purchase_order:
+              type: string
+              description: Purchase order information for the Bill.
+            secondary_tax_rate:
+              type: number
+              format: double
+              description: Secondary tax rate as percentage for the Bill.
+            state:
+              type: string
+              enum:
+                - draft
+                - awaiting_approval
+                - awaiting_payment
+                - paid
+                - void
+                - deleted
+              description: Bill's state.
+            subject:
+              type: string
+              description: Subject details for the Bill.
+            tax_rate:
+              type: number
+              format: double
+              description: Tax rate as percentage for the Bill
+            use_grace_period:
+              type: boolean
+              description: >-
+                When true, sets the bill's due date based on the client's grace
+                period. This setting overrides the `due_at` parameter.
+  multipart/form-data:
+    schema:
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          type: object
+          properties:
+            bill_theme:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                  description: The unique identifier of the bill theme applied to the Bill.
+            currency_id:
+              type: integer
+              format: int64
+              description: ID of the currency applied to the Bill.
+            discount:
+              type: object
+              properties:
+                rate:
+                  type: number
+                  format: double
+                  description: >-
+                    Discount amount for the Bill. This can either be a
+                    percentage or monetary value, this is determined by the
+                    `discount[type]`.
+                type:
+                  type: string
+                  enum:
+                    - percentage
+                    - money
+                  description: >-
+                    The type of discount you are applying to your Bill with the
+                    `discount[rate]`.
+                note:
+                  type: string
+                  description: A note for your Bill's discount.
+            due_at:
+              type: string
+              format: date
+              description: >-
+                Date the Bill is due. If `use_grace_period` is true, this field
+                is ignored.
+            interest:
+              type: object
+              properties:
+                rate:
+                  type: number
+                  format: double
+                  description: Interest amount for the Bill as percentage.
+                type:
+                  type: string
+                  enum:
+                    - simple
+                    - compound
+                  description: >-
+                    The type of interest you are applying to your Bill with the
+                    `interest[rate]`.
+                period:
+                  type: integer
+                  format: int32
+                  description: >-
+                    The interest period for how frequently your Bill will charge
+                    interest.
+            issued_at:
+              type: string
+              format: date
+              description: Date the Bill was issued.
+            memo:
+              type: string
+              description: Memo for the Bill.
+            number:
+              type: string
+              description: Bill's number.
+            purchase_order:
+              type: string
+              description: Purchase order information for the Bill.
+            secondary_tax_rate:
+              type: number
+              format: double
+              description: Secondary tax rate as percentage for the Bill.
+            state:
+              type: string
+              enum:
+                - draft
+                - awaiting_approval
+                - awaiting_payment
+                - paid
+                - void
+                - deleted
+              description: Bill's state.
+            subject:
+              type: string
+              description: Subject details for the Bill.
+            tax_rate:
+              type: number
+              format: double
+              description: Tax rate as percentage for the Bill
+            use_grace_period:
+              type: boolean
+              description: >-
+                When true, sets the bill's due date based on the client's grace
+                period. This setting overrides the `due_at` parameter.
+required: false

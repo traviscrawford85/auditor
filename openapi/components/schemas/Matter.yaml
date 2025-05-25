@@ -1,0 +1,108 @@
+# copilot-audit: true
+# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
+# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
+# Tasks:
+# 1. Verify valid OpenAPI syntax (YAML structure, keys).
+# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
+# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
+# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
+# 5. Validate that all schemas and components are named clearly and represent their intent.
+# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
+# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
+# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
+# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
+# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# Output:
+# - A checklist of errors or improvements, preferably with line references.
+# - Suggestions for how to fix or improve structure, naming, and reuse.
+#
+# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
+# which expects well-formed operationIds and `$ref`s to derive method names and models.
+
+allOf:
+  - $ref: ./Matter_base.yaml
+  - type: object
+    properties:
+      client:
+        $ref: ./Contact_base.yaml
+        description: Contact
+      contingency_fee:
+        $ref: ./ContingencyFee_base.yaml
+        description: ContingencyFee
+      custom_rate:
+        $ref: ./MatterCustomRate.yaml
+        description: MatterCustomRate
+      evergreen_retainer:
+        $ref: ./EvergreenRetainer_base.yaml
+        description: EvergreenRetainer
+      folder:
+        $ref: ./Folder_base.yaml
+        description: Folder
+      group:
+        $ref: ./Group_base.yaml
+        description: Group
+      matter_budget:
+        $ref: ./MatterBudget_base.yaml
+        description: MatterBudget
+      matter_stage:
+        $ref: ./MatterStage_base.yaml
+        description: MatterStage
+      originating_attorney:
+        $ref: ./User_base.yaml
+        description: User
+      practice_area:
+        $ref: ./PracticeArea_base.yaml
+        description: PracticeArea
+      responsible_attorney:
+        $ref: ./User_base.yaml
+        description: User
+      responsible_staff:
+        $ref: ./User_base.yaml
+        description: User
+      statute_of_limitations:
+        $ref: ./Task_base.yaml
+        description: Task
+      user:
+        $ref: ./User_base.yaml
+        description: User
+      legal_aid_uk_matter:
+        $ref: ./LegalAidUkMatter_base.yaml
+        description: LegalAidUkMatter
+      currency:
+        $ref: ./Currency_base.yaml
+        description: Currency
+      account_balances:
+        type: array
+        items:
+          $ref: ./AccountBalance_base.yaml
+        description: AccountBalance
+      custom_field_values:
+        type: array
+        items:
+          $ref: ./CustomFieldValue.yaml
+        description: CustomFieldValue
+      custom_field_set_associations:
+        type: array
+        items:
+          $ref: ./CustomFieldSetAssociation_base.yaml
+        description: CustomFieldSetAssociation
+      matter_bill_recipients:
+        type: array
+        items:
+          $ref: ./MatterBillRecipient.yaml
+        description: MatterBillRecipient
+      relationships:
+        type: array
+        items:
+          $ref: ./Relationship_base.yaml
+        description: Relationship
+      task_template_list_instances:
+        type: array
+        items:
+          $ref: ./TaskTemplateListInstace_base.yaml
+        description: TaskTemplateListInstace
+      split_invoice_payers:
+        type: array
+        items:
+          $ref: ./SplitInvoicePayer_base.yaml
+        description: SplitInvoicePayer

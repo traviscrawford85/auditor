@@ -1,0 +1,316 @@
+# copilot-audit: true
+# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
+# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
+# Tasks:
+# 1. Verify valid OpenAPI syntax (YAML structure, keys).
+# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
+# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
+# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
+# 5. Validate that all schemas and components are named clearly and represent their intent.
+# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
+# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
+# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
+# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
+# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
+# Output:
+# - A checklist of errors or improvements, preferably with line references.
+# - Suggestions for how to fix or improve structure, naming, and reuse.
+#
+# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
+# which expects well-formed operationIds and `$ref`s to derive method names and models.
+
+type: object
+properties:
+  access_point:
+    type: string
+    description: Access point
+  laa_office_number:
+    type: string
+    description: LAA office number
+  ait_hearing_centre:
+    type: integer
+    format: int32
+    description: AIT hearing centre
+  attended_several_hearings_acting_for_multiple_clients:
+    type: boolean
+    description: Attended several hearings acting for multiple clients
+  bill_ho_ucn:
+    type: string
+    description: Bill HO UCN
+  bill_number_of_attendances:
+    type: integer
+    format: int32
+    description: Bill number of attendances
+  bill_outcome_for_the_client_code:
+    type: integer
+    format: int32
+    description: Bill outcome for the client code
+  bill_stage_reached_code:
+    type: integer
+    format: int32
+    description: Bill stage reached code
+  case_reference:
+    type: string
+    description: Case reference
+  case_start_date:
+    type: string
+    format: date
+    description: Case start date
+  category:
+    type: integer
+    format: int32
+    description: Category
+  category_as_string:
+    type: string
+    description: Category as string
+  certificate_effective_date:
+    type: string
+    format: date
+    description: Certificate effective date
+  certificate_expiration_date:
+    type: string
+    format: date
+    description: Certificate expiration date
+  certificate_number:
+    type: string
+    description: Certificate number
+  certificate_scope:
+    type: string
+    description: Certificate scope
+  certification_type:
+    type: integer
+    format: int32
+    description: Certification type
+  change_of_solicitor:
+    type: boolean
+    description: Change of solicitor
+  client_equal_opportunity_monitoring:
+    type: string
+    description: Client equal opportunity monitoring
+  client_type:
+    type: integer
+    format: int32
+    description: Client type
+  clr_start_date:
+    type: string
+    format: date
+    description: CLR start date
+  clr_total_profit_costs:
+    type: string
+    description: CLR total profit costs
+  cost_limit:
+    type: string
+    description: Cost limit
+  counsel:
+    type: integer
+    format: int32
+    description: Counsel
+  court:
+    type: integer
+    format: int32
+    description: Court
+  court_id:
+    type: integer
+    format: int32
+    description: Court ID
+  court_id_code:
+    type: string
+    description: Court ID code
+  created_at:
+    type: string
+    format: date-time
+    description: The time the *LegalAidUkMatter* was created (as a ISO-8601 timestamp)
+  delivery_location:
+    type: string
+    description: Delivery location
+  dscc_number:
+    type: string
+    description: DSCC number
+  duty_solicitor:
+    type: boolean
+    description: Duty solicitor
+  etag:
+    type: string
+    description: ETag for the *LegalAidUkMatter*
+  exceptional_case_funding_reference:
+    type: string
+    description: Exceptional case funding reference
+  expense_limit:
+    type: string
+    description: Expense limit
+  fee_scheme:
+    type: integer
+    format: int32
+    description: Fee scheme
+  first_conducting_solicitor:
+    type: boolean
+    description: First conducting solicitor
+  id:
+    type: integer
+    format: int64
+    description: Unique identifier for the *LegalAidUkMatter*
+  irc_surgery:
+    type: string
+    description: Irc surgery
+  legacy_case:
+    type: string
+    description: Legacy case
+  legal_representation_number:
+    type: string
+    description: Legal representation number
+  lh_total_disbursements:
+    type: string
+    description: LH total disbursements
+  lh_start_date:
+    type: string
+    description: LH start date
+  lh_total_profit_costs:
+    type: string
+    description: LH total profit costs
+  linked_matter_id:
+    type: integer
+    format: int64
+    description: Linked matter ID
+  local_authority_number:
+    type: string
+    description: Local authority number
+  maat_id:
+    type: string
+    description: MAAT ID
+  matter_type:
+    type: integer
+    format: int32
+    description: Matter type
+  matter_type_code:
+    type: string
+    description: Matter type code
+  matter_type_1:
+    type: integer
+    format: int32
+    description: Matter type 1
+  matter_type_1_code:
+    type: string
+    description: Matter type 1 code
+  matter_type_1_title:
+    type: string
+    description: Matter type 1 title
+  matter_type_2:
+    type: integer
+    format: int32
+    description: Matter type 2
+  matter_type_2_code:
+    type: string
+    description: Matter type 2 code
+  matter_type_2_title:
+    type: string
+    description: Matter type 2 title
+  matter_types_combined:
+    type: string
+    description: Matter types combined
+  number_of_clients_seen_at_surgery:
+    type: integer
+    format: int32
+    description: Number of clients seen at surgery
+  number_of_clients:
+    type: integer
+    format: int32
+    description: Number of clients
+  party:
+    type: integer
+    format: int32
+    description: Party
+  police_station:
+    type: string
+    description: Police station
+  post_transfer_clients_represented:
+    type: integer
+    format: int32
+    description: Post transfer clients represented
+  postal_application_accepted:
+    type: string
+    description: Postal application accepted
+  prior_authority_reference:
+    type: string
+    description: Priory authority reference
+  prison_id:
+    type: integer
+    format: int32
+    description: Prison ID
+  prison_law_prior_approval_number:
+    type: string
+    description: Prison law prior approval number
+  procurement_area:
+    type: string
+    description: Procurement area
+  region:
+    type: integer
+    format: int32
+    description: Region
+  related_claims_number:
+    type: string
+    description: Related claims number
+  representation_order_date:
+    type: string
+    format: date
+    description: Representation order date
+  schedule_reference_number:
+    type: string
+    description: Schedule reference number
+  scheme_id:
+    type: string
+    description: Scheme ID
+  session_type:
+    type: integer
+    format: int32
+    description: Session type
+  solicitor_type:
+    type: integer
+    format: int32
+    description: Solicitor type
+  standard_fee_category:
+    type: integer
+    format: int32
+    description: Standard fee category
+  surgery_clients_resulting_in_a_legal_help_matter_opened:
+    type: integer
+    format: int32
+    description: Surgery clients resulting in a legal help matter opened
+  surgery_clients:
+    type: integer
+    format: int32
+    description: Surgery clients
+  surgery_date:
+    type: string
+    format: date
+    description: Surgery date
+  transfer_date:
+    type: string
+    format: date
+    description: Transfer date
+  type_of_advice:
+    type: integer
+    format: int32
+    description: Type of advice
+  type_of_service:
+    type: string
+    description: Type of service
+  ucn:
+    type: string
+    description: UCN
+  ufn:
+    type: string
+    description: UFN
+  undesignated_area_court:
+    type: boolean
+    description: Undesignated area court
+  updated_at:
+    type: string
+    format: date-time
+    description: The time the *LegalAidUkMatter* was last updated (as a ISO-8601 timestamp)
+  user_type:
+    type: integer
+    format: int32
+    description: User type
+  youth_court:
+    type: boolean
+    description: Youth court
