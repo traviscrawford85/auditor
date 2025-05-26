@@ -1,0 +1,9 @@
+# Adapter for statuteoflimitationscomputerequest
+from clio_sdk.models.statuteoflimitationscomputerequest import StatuteoflimitationscomputerequestIn, StatuteoflimitationscomputerequestOut, StatuteoflimitationscomputerequestUpdate, StatuteoflimitationscomputerequestDb
+from clio_client.models import statute_of_limitations_compute_request
+
+def convert_sdk_to_statuteoflimitationscomputerequestout(src: statute_of_limitations_compute_request) -> StatuteoflimitationscomputerequestOut:
+    return StatuteoflimitationscomputerequestOut(**src.dict())
+
+def convert_statuteoflimitationscomputerequestin_to_sdk(src: StatuteoflimitationscomputerequestIn) -> statute_of_limitations_compute_request:
+    return statute_of_limitations_compute_request(**src.dict())

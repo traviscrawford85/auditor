@@ -1,0 +1,112 @@
+from pydantic import BaseModel
+from typing import Optional, Any, List
+from datetime import datetime
+
+class LaukcivilcertificatedrateBaseIn(BaseModel):
+    id: Optional[int] = None
+    activity: Optional[str] = None
+    activity_sub_category: Optional[str] = None
+    activity_type: Optional[str] = None
+    attended_several_hearings_for_multiple_clients: Optional[bool] = None
+    category_of_law: Optional[str] = None
+    created_at: Optional[datetime] = None
+    change_of_solicitor: Optional[bool] = None
+    court: Optional[str] = None
+    eligible_for_sqm: Optional[bool] = None
+    exceptional: Optional[float] = None
+    exceptional_warning: Optional[str] = None
+    etag: Optional[str] = None
+    fee: Optional[float] = None
+    fee_scheme: Optional[str] = None
+    first_conducting_solicitor: Optional[bool] = None
+    key: Optional[str] = None
+    number_of_clients: Optional[str] = None
+    party: Optional[str] = None
+    post_transfer_clients_represented: Optional[str] = None
+    rate_type: Optional[str] = None
+    region: Optional[str] = None
+    session_type: Optional[str] = None
+    user_type: Optional[str] = None
+    updated_at: Optional[datetime] = None
+
+class LaukcivilcertificatedrateBaseOut(BaseModel):
+    id: Optional[int] = None
+    activity: Optional[str] = None
+    activity_sub_category: Optional[str] = None
+    activity_type: Optional[str] = None
+    attended_several_hearings_for_multiple_clients: Optional[bool] = None
+    category_of_law: Optional[str] = None
+    created_at: Optional[datetime] = None
+    change_of_solicitor: Optional[bool] = None
+    court: Optional[str] = None
+    eligible_for_sqm: Optional[bool] = None
+    exceptional: Optional[float] = None
+    exceptional_warning: Optional[str] = None
+    etag: Optional[str] = None
+    fee: Optional[float] = None
+    fee_scheme: Optional[str] = None
+    first_conducting_solicitor: Optional[bool] = None
+    key: Optional[str] = None
+    number_of_clients: Optional[str] = None
+    party: Optional[str] = None
+    post_transfer_clients_represented: Optional[str] = None
+    rate_type: Optional[str] = None
+    region: Optional[str] = None
+    session_type: Optional[str] = None
+    user_type: Optional[str] = None
+    updated_at: Optional[datetime] = None
+
+class LaukcivilcertificatedrateBaseUpdate(BaseModel):
+    id: Optional[int] = None
+    activity: Optional[str] = None
+    activity_sub_category: Optional[str] = None
+    activity_type: Optional[str] = None
+    attended_several_hearings_for_multiple_clients: Optional[bool] = None
+    category_of_law: Optional[str] = None
+    created_at: Optional[datetime] = None
+    change_of_solicitor: Optional[bool] = None
+    court: Optional[str] = None
+    eligible_for_sqm: Optional[bool] = None
+    exceptional: Optional[float] = None
+    exceptional_warning: Optional[str] = None
+    etag: Optional[str] = None
+    fee: Optional[float] = None
+    fee_scheme: Optional[str] = None
+    first_conducting_solicitor: Optional[bool] = None
+    key: Optional[str] = None
+    number_of_clients: Optional[str] = None
+    party: Optional[str] = None
+    post_transfer_clients_represented: Optional[str] = None
+    rate_type: Optional[str] = None
+    region: Optional[str] = None
+    session_type: Optional[str] = None
+    user_type: Optional[str] = None
+    updated_at: Optional[datetime] = None
+
+class LaukcivilcertificatedrateBaseDb(BaseModel):
+    id: Optional[int] = None
+    activity: Optional[str] = None
+    activity_sub_category: Optional[str] = None
+    activity_type: Optional[str] = None
+    attended_several_hearings_for_multiple_clients: Optional[bool] = None
+    category_of_law: Optional[str] = None
+    created_at: Optional[datetime] = None
+    change_of_solicitor: Optional[bool] = None
+    court: Optional[str] = None
+    eligible_for_sqm: Optional[bool] = None
+    exceptional: Optional[float] = None
+    exceptional_warning: Optional[str] = None
+    etag: Optional[str] = None
+    fee: Optional[float] = None
+    fee_scheme: Optional[str] = None
+    first_conducting_solicitor: Optional[bool] = None
+    key: Optional[str] = None
+    number_of_clients: Optional[str] = None
+    party: Optional[str] = None
+    post_transfer_clients_represented: Optional[str] = None
+    rate_type: Optional[str] = None
+    region: Optional[str] = None
+    session_type: Optional[str] = None
+    user_type: Optional[str] = None
+    updated_at: Optional[datetime] = None
+

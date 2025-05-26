@@ -4,3 +4,7 @@ __pycache__/
 *.py[cod]
 .env
 *.env
+# Ignore auto-generated and expanded OpenAPI output
+
+schemas/from_expanded/
+adapters/from_expanded/

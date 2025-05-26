@@ -1,0 +1,9 @@
+# Adapter for statuteoflimitationscomputeresponse
+from clio_sdk.models.statuteoflimitationscomputeresponse import StatuteoflimitationscomputeresponseIn, StatuteoflimitationscomputeresponseOut, StatuteoflimitationscomputeresponseUpdate, StatuteoflimitationscomputeresponseDb
+from clio_client.models import statute_of_limitations_compute_response
+
+def convert_sdk_to_statuteoflimitationscomputeresponseout(src: statute_of_limitations_compute_response) -> StatuteoflimitationscomputeresponseOut:
+    return StatuteoflimitationscomputeresponseOut(**src.dict())
+
+def convert_statuteoflimitationscomputeresponsein_to_sdk(src: StatuteoflimitationscomputeresponseIn) -> statute_of_limitations_compute_response:
+    return statute_of_limitations_compute_response(**src.dict())

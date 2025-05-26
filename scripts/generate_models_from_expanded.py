@@ -1,10 +1,9 @@
 import os
 import yaml
 
-INPUT_FILE = "openapi/expanded_full.yaml"
-OUTPUT_DIR = "./schemas/from_expanded"
-ADAPTER_DIR = "./adapters/from_expanded"
-os.makedirs(OUTPUT_DIR, exist_ok=True)
+INPUT_FILE = "openapi_final_cleaned.yaml"
+OUTPUT_DIR = "clio_sdk/models"
+ADAPTER_DIR = "clio_sdk/adapters/"
 os.makedirs(ADAPTER_DIR, exist_ok=True)
 
 def pascal_case(name: str) -> str:
