@@ -1,9 +1,11 @@
 # Adapter for activitytextmessageconversationbase
-from clio_sdk.models.activitytextmessageconversationbase import ActivitytextmessageconversationbaseIn, ActivitytextmessageconversationbaseOut, ActivitytextmessageconversationbaseUpdate, ActivitytextmessageconversationbaseDb
-from clio_client.models import activity_text_message_conversation
+from clio_sdk.models.activitytextmessageconversationbase import ActivitytextmessageconversationBaseIn, ActivitytextmessageconversationbaseOut, ActivitytextmessageconversationbaseUpdate, ActivitytextmessageconversationbaseDb
+from clio_client.models.activity_text_message_conversation import ActivityTextMessageConversation
 
-def convert_sdk_to_activitytextmessageconversationbaseout(src: activity_text_message_conversation) -> ActivitytextmessageconversationbaseOut:
-    return ActivitytextmessageconversationbaseOut(**src.dict())
+def convert_sdk_to_activitytextmessageconversationbaseout(src: ActivityTextMessageConversation) -> ActivitytextmessageconversationbaseOut:
+    """Converts a clio_client model to clio_sdk model."""
+    return ActivitytextmessageconversationbaseOut(**src.model_dump())
 
-def convert_activitytextmessageconversationbasein_to_sdk(src: ActivitytextmessageconversationbaseIn) -> activity_text_message_conversation:
-    return activity_text_message_conversation(**src.dict())
+def convert_activitytextmessageconversationbasein_to_sdk(src: ActivitytextmessageconversationBaseIn) -> ActivityTextMessageConversation:
+    """Converts a clio_sdk model to clio_client model."""
+    return ActivityTextMessageConversation(**src.model_dump())

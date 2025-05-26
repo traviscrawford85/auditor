@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class FoldershowIn(BaseModel):
+class FolderShowIn(BaseModel):
     """Incoming model for creating a Foldershow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class FoldershowOut(BaseModel):
     # TODO: Add fields
 
 
-class FoldershowUpdate(BaseModel):
+class FolderShowUpdate(BaseModel):
     """Update model for patching a Foldershow"""
     # TODO: Add fields
 

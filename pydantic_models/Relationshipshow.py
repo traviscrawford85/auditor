@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class RelationshipshowIn(BaseModel):
+class RelationshipShowIn(BaseModel):
     """Incoming model for creating a Relationshipshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class RelationshipshowOut(BaseModel):
     # TODO: Add fields
 
 
-class RelationshipshowUpdate(BaseModel):
+class RelationshipShowUpdate(BaseModel):
     """Update model for patching a Relationshipshow"""
     # TODO: Add fields
 

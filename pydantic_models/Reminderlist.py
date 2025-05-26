@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class ReminderlistIn(BaseModel):
+class ReminderListIn(BaseModel):
     """Incoming model for creating a Reminderlist"""
     # TODO: Add fields
 

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class OutstandingclientbalancebaseIn(BaseModel):
+class OutstandingclientbalanceBaseIn(BaseModel):
     associated_matter_ids: Optional[str] = None
     etag: Optional[str] = None
     id: Optional[str] = None
@@ -15,7 +15,7 @@ class OutstandingclientbalancebaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class OutstandingclientbalancebaseOut(BaseModel):
+class OutstandingclientbalanceBaseOut(BaseModel):
     associated_matter_ids: Optional[str] = None
     etag: Optional[str] = None
     id: Optional[str] = None
@@ -28,7 +28,7 @@ class OutstandingclientbalancebaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class OutstandingclientbalancebaseUpdate(BaseModel):
+class OutstandingclientbalanceBaseUpdate(BaseModel):
     associated_matter_ids: Optional[str] = None
     etag: Optional[str] = None
     id: Optional[str] = None
@@ -41,7 +41,7 @@ class OutstandingclientbalancebaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class OutstandingclientbalancebaseDb(BaseModel):
+class OutstandingclientbalanceBaseDb(BaseModel):
     associated_matter_ids: Optional[str] = None
     etag: Optional[str] = None
     id: Optional[str] = None

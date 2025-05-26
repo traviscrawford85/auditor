@@ -1,10 +1,10 @@
 # Adapter stubs for Outstandingclientbalancebase
-from schemas.from_spec.outstandingclientbalancebase import OutstandingclientbalancebaseIn, OutstandingclientbalancebaseOut, OutstandingclientbalancebaseUpdate, OutstandingclientbalancebaseDb
+from schemas.from_spec.outstandingclientbalancebase import OutstandingclientbalanceBaseIn, OutstandingclientbalanceBaseOut, OutstandingclientbalanceBaseUpdate, OutstandingclientbalanceBaseDb
 
-def convert_sdk_to_outstandingclientbalancebaseout(sdk_obj):
+def convert_sdk_to_outstandingclientbalanceBaseOut(sdk_obj):
     # TODO
-    return OutstandingclientbalancebaseOut()
+    return OutstandingclientbalanceBaseOut()
 
-def convert_outstandingclientbalancebasein_to_sdk(model):
+def convert_outstandingclientbalanceBaseIn_to_sdk(model):
     # TODO
     return None

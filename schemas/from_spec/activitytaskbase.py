@@ -2,19 +2,19 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class ActivitytaskbaseIn(BaseModel):
+class ActivitytaskBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
 
-class ActivitytaskbaseOut(BaseModel):
+class ActivitytaskBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
 
-class ActivitytaskbaseUpdate(BaseModel):
+class ActivitytaskBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
 
-class ActivitytaskbaseDb(BaseModel):
+class ActivitytaskBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
 

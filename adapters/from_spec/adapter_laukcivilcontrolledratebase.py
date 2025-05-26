@@ -1,10 +1,10 @@
 # Adapter stubs for Laukcivilcontrolledratebase
-from schemas.from_spec.laukcivilcontrolledratebase import LaukcivilcontrolledratebaseIn, LaukcivilcontrolledratebaseOut, LaukcivilcontrolledratebaseUpdate, LaukcivilcontrolledratebaseDb
+from schemas.from_spec.laukcivilcontrolledratebase import LaukcivilcontrolledrateBaseIn, LaukcivilcontrolledrateBaseOut, LaukcivilcontrolledrateBaseUpdate, LaukcivilcontrolledrateBaseDb
 
-def convert_sdk_to_laukcivilcontrolledratebaseout(sdk_obj):
+def convert_sdk_to_laukcivilcontrolledrateBaseOut(sdk_obj):
     # TODO
-    return LaukcivilcontrolledratebaseOut()
+    return LaukcivilcontrolledrateBaseOut()
 
-def convert_laukcivilcontrolledratebasein_to_sdk(model):
+def convert_laukcivilcontrolledrateBaseIn_to_sdk(model):
     # TODO
     return None

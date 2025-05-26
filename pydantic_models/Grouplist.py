@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class GrouplistIn(BaseModel):
+class GroupListIn(BaseModel):
     """Incoming model for creating a Grouplist"""
     # TODO: Add fields
 

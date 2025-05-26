@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class ConversationmessagebaseIn(BaseModel):
+class ConversationmessageBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     date: Optional[str] = None
@@ -10,7 +10,7 @@ class ConversationmessagebaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class ConversationmessagebaseOut(BaseModel):
+class ConversationmessageBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     date: Optional[str] = None
@@ -18,7 +18,7 @@ class ConversationmessagebaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class ConversationmessagebaseUpdate(BaseModel):
+class ConversationmessageBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     date: Optional[str] = None
@@ -26,7 +26,7 @@ class ConversationmessagebaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class ConversationmessagebaseDb(BaseModel):
+class ConversationmessageBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     date: Optional[str] = None

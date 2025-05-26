@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class ServicetypelistIn(BaseModel):
+class ServicetypeListIn(BaseModel):
     """Incoming model for creating a Servicetypelist"""
     # TODO: Add fields
 

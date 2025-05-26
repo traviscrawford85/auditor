@@ -2,28 +2,28 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class BillrecipientbaseIn(BaseModel):
+class BillrecipientBaseIn(BaseModel):
     created_at: Optional[str] = None
     etag: Optional[str] = None
     id: Optional[str] = None
     on_all_matters: Optional[str] = None
     updated_at: Optional[str] = None
 
-class BillrecipientbaseOut(BaseModel):
+class BillrecipientBaseOut(BaseModel):
     created_at: Optional[str] = None
     etag: Optional[str] = None
     id: Optional[str] = None
     on_all_matters: Optional[str] = None
     updated_at: Optional[str] = None
 
-class BillrecipientbaseUpdate(BaseModel):
+class BillrecipientBaseUpdate(BaseModel):
     created_at: Optional[str] = None
     etag: Optional[str] = None
     id: Optional[str] = None
     on_all_matters: Optional[str] = None
     updated_at: Optional[str] = None
 
-class BillrecipientbaseDb(BaseModel):
+class BillrecipientBaseDb(BaseModel):
     created_at: Optional[str] = None
     etag: Optional[str] = None
     id: Optional[str] = None

@@ -1,10 +1,10 @@
 # Adapter stubs for Paymentbase
-from schemas.from_spec.paymentbase import PaymentbaseIn, PaymentbaseOut, PaymentbaseUpdate, PaymentbaseDb
+from schemas.from_spec.paymentbase import PaymentBaseIn, PaymentBaseOut, PaymentBaseUpdate, PaymentBaseDb
 
-def convert_sdk_to_paymentbaseout(sdk_obj):
+def convert_sdk_to_paymentBaseOut(sdk_obj):
     # TODO
-    return PaymentbaseOut()
+    return PaymentBaseOut()
 
-def convert_paymentbasein_to_sdk(model):
+def convert_paymentBaseIn_to_sdk(model):
     # TODO
     return None

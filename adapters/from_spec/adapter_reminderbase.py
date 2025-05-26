@@ -1,10 +1,10 @@
 # Adapter stubs for Reminderbase
-from schemas.from_spec.reminderbase import ReminderbaseIn, ReminderbaseOut, ReminderbaseUpdate, ReminderbaseDb
+from schemas.from_spec.reminderbase import ReminderBaseIn, ReminderBaseOut, ReminderBaseUpdate, ReminderBaseDb
 
-def convert_sdk_to_reminderbaseout(sdk_obj):
+def convert_sdk_to_reminderBaseOut(sdk_obj):
     # TODO
-    return ReminderbaseOut()
+    return ReminderBaseOut()
 
-def convert_reminderbasein_to_sdk(model):
+def convert_reminderBaseIn_to_sdk(model):
     # TODO
     return None

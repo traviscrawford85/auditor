@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class CurrencylistIn(BaseModel):
+class CurrencyListIn(BaseModel):
     """Incoming model for creating a Currencylist"""
     # TODO: Add fields
 

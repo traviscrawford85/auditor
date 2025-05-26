@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class BankaccountshowIn(BaseModel):
+class BankaccountShowIn(BaseModel):
     """Incoming model for creating a Bankaccountshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class BankaccountshowOut(BaseModel):
     # TODO: Add fields
 
 
-class BankaccountshowUpdate(BaseModel):
+class BankaccountShowUpdate(BaseModel):
     """Update model for patching a Bankaccountshow"""
     # TODO: Add fields
 

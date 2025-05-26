@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class LogentrybaseIn(BaseModel):
+class LogentryBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     type: Optional[str] = None
@@ -10,7 +10,7 @@ class LogentrybaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class LogentrybaseOut(BaseModel):
+class LogentryBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     type: Optional[str] = None
@@ -18,7 +18,7 @@ class LogentrybaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class LogentrybaseUpdate(BaseModel):
+class LogentryBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     type: Optional[str] = None
@@ -26,7 +26,7 @@ class LogentrybaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class LogentrybaseDb(BaseModel):
+class LogentryBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     type: Optional[str] = None

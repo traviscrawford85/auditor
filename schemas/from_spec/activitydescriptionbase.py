@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class ActivitydescriptionbaseIn(BaseModel):
+class ActivitydescriptionBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -19,7 +19,7 @@ class ActivitydescriptionbaseIn(BaseModel):
     category_type: Optional[str] = None
     currency: Optional[str] = None
 
-class ActivitydescriptionbaseOut(BaseModel):
+class ActivitydescriptionBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -36,7 +36,7 @@ class ActivitydescriptionbaseOut(BaseModel):
     category_type: Optional[str] = None
     currency: Optional[str] = None
 
-class ActivitydescriptionbaseUpdate(BaseModel):
+class ActivitydescriptionBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -53,7 +53,7 @@ class ActivitydescriptionbaseUpdate(BaseModel):
     category_type: Optional[str] = None
     currency: Optional[str] = None
 
-class ActivitydescriptionbaseDb(BaseModel):
+class ActivitydescriptionBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None

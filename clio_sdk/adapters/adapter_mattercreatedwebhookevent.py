@@ -1,9 +1,11 @@
 # Adapter for mattercreatedwebhookevent
 from clio_sdk.models.mattercreatedwebhookevent import MattercreatedwebhookeventIn, MattercreatedwebhookeventOut, MattercreatedwebhookeventUpdate, MattercreatedwebhookeventDb
-from clio_client.models import matter_created_webhook_event
+from clio_client.models.matter_created_webhook_event import MatterCreatedWebhookEvent
 
-def convert_sdk_to_mattercreatedwebhookeventout(src: matter_created_webhook_event) -> MattercreatedwebhookeventOut:
-    return MattercreatedwebhookeventOut(**src.dict())
+def convert_sdk_to_mattercreatedwebhookeventout(src: MatterCreatedWebhookEvent) -> MattercreatedwebhookeventOut:
+    """Converts a clio_client model to clio_sdk model."""
+    return MattercreatedwebhookeventOut(**src.model_dump())
 
-def convert_mattercreatedwebhookeventin_to_sdk(src: MattercreatedwebhookeventIn) -> matter_created_webhook_event:
-    return matter_created_webhook_event(**src.dict())
+def convert_mattercreatedwebhookeventin_to_sdk(src: MattercreatedwebhookeventIn) -> MatterCreatedWebhookEvent:
+    """Converts a clio_sdk model to clio_client model."""
+    return MatterCreatedWebhookEvent(**src.model_dump())

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class ExpensecategorybaseIn(BaseModel):
+class ExpensecategoryBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -15,7 +15,7 @@ class ExpensecategorybaseIn(BaseModel):
     tax_setting: Optional[str] = None
     currency: Optional[str] = None
 
-class ExpensecategorybaseOut(BaseModel):
+class ExpensecategoryBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -28,7 +28,7 @@ class ExpensecategorybaseOut(BaseModel):
     tax_setting: Optional[str] = None
     currency: Optional[str] = None
 
-class ExpensecategorybaseUpdate(BaseModel):
+class ExpensecategoryBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -41,7 +41,7 @@ class ExpensecategorybaseUpdate(BaseModel):
     tax_setting: Optional[str] = None
     currency: Optional[str] = None
 
-class ExpensecategorybaseDb(BaseModel):
+class ExpensecategoryBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None

@@ -1,10 +1,10 @@
 # Adapter stubs for Avatarbase
-from schemas.from_spec.avatarbase import AvatarbaseIn, AvatarbaseOut, AvatarbaseUpdate, AvatarbaseDb
+from schemas.from_spec.avatarbase import AvatarBaseIn, AvatarBaseOut, AvatarBaseUpdate, AvatarBaseDb
 
-def convert_sdk_to_avatarbaseout(sdk_obj):
+def convert_sdk_to_avatarBaseOut(sdk_obj):
     # TODO
-    return AvatarbaseOut()
+    return AvatarBaseOut()
 
-def convert_avatarbasein_to_sdk(model):
+def convert_avatarBaseIn_to_sdk(model):
     # TODO
     return None

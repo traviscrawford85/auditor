@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class MattercontactsbaseIn(BaseModel):
+class MattercontactsBaseIn(BaseModel):
     contact_created_at: Optional[str] = None
     contact_updated_at: Optional[str] = None
     created_at: Optional[str] = None
@@ -28,7 +28,7 @@ class MattercontactsbaseIn(BaseModel):
     updated_at: Optional[str] = None
     client_connect_user_id: Optional[str] = None
 
-class MattercontactsbaseOut(BaseModel):
+class MattercontactsBaseOut(BaseModel):
     contact_created_at: Optional[str] = None
     contact_updated_at: Optional[str] = None
     created_at: Optional[str] = None
@@ -54,7 +54,7 @@ class MattercontactsbaseOut(BaseModel):
     updated_at: Optional[str] = None
     client_connect_user_id: Optional[str] = None
 
-class MattercontactsbaseUpdate(BaseModel):
+class MattercontactsBaseUpdate(BaseModel):
     contact_created_at: Optional[str] = None
     contact_updated_at: Optional[str] = None
     created_at: Optional[str] = None
@@ -80,7 +80,7 @@ class MattercontactsbaseUpdate(BaseModel):
     updated_at: Optional[str] = None
     client_connect_user_id: Optional[str] = None
 
-class MattercontactsbaseDb(BaseModel):
+class MattercontactsBaseDb(BaseModel):
     contact_created_at: Optional[str] = None
     contact_updated_at: Optional[str] = None
     created_at: Optional[str] = None

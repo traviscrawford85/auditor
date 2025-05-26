@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class LegalaidukactivitybaseIn(BaseModel):
+class LegalaidukactivityBaseIn(BaseModel):
     activity_sub_category: Optional[str] = None
     advocacy: Optional[str] = None
     base_rate: Optional[str] = None
@@ -20,7 +20,7 @@ class LegalaidukactivitybaseIn(BaseModel):
     uplift: Optional[str] = None
     user_type: Optional[str] = None
 
-class LegalaidukactivitybaseOut(BaseModel):
+class LegalaidukactivityBaseOut(BaseModel):
     activity_sub_category: Optional[str] = None
     advocacy: Optional[str] = None
     base_rate: Optional[str] = None
@@ -38,7 +38,7 @@ class LegalaidukactivitybaseOut(BaseModel):
     uplift: Optional[str] = None
     user_type: Optional[str] = None
 
-class LegalaidukactivitybaseUpdate(BaseModel):
+class LegalaidukactivityBaseUpdate(BaseModel):
     activity_sub_category: Optional[str] = None
     advocacy: Optional[str] = None
     base_rate: Optional[str] = None
@@ -56,7 +56,7 @@ class LegalaidukactivitybaseUpdate(BaseModel):
     uplift: Optional[str] = None
     user_type: Optional[str] = None
 
-class LegalaidukactivitybaseDb(BaseModel):
+class LegalaidukactivityBaseDb(BaseModel):
     activity_sub_category: Optional[str] = None
     advocacy: Optional[str] = None
     base_rate: Optional[str] = None

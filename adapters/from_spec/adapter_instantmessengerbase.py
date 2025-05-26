@@ -1,10 +1,10 @@
 # Adapter stubs for Instantmessengerbase
-from schemas.from_spec.instantmessengerbase import InstantmessengerbaseIn, InstantmessengerbaseOut, InstantmessengerbaseUpdate, InstantmessengerbaseDb
+from schemas.from_spec.instantmessengerbase import InstantmessengerBaseIn, InstantmessengerBaseOut, InstantmessengerBaseUpdate, InstantmessengerBaseDb
 
-def convert_sdk_to_instantmessengerbaseout(sdk_obj):
+def convert_sdk_to_instantmessengerBaseOut(sdk_obj):
     # TODO
-    return InstantmessengerbaseOut()
+    return InstantmessengerBaseOut()
 
-def convert_instantmessengerbasein_to_sdk(model):
+def convert_instantmessengerBaseIn_to_sdk(model):
     # TODO
     return None

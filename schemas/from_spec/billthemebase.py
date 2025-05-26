@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class BillthemebaseIn(BaseModel):
+class BillthemeBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -12,7 +12,7 @@ class BillthemebaseIn(BaseModel):
     name: Optional[str] = None
     config: Optional[str] = None
 
-class BillthemebaseOut(BaseModel):
+class BillthemeBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -22,7 +22,7 @@ class BillthemebaseOut(BaseModel):
     name: Optional[str] = None
     config: Optional[str] = None
 
-class BillthemebaseUpdate(BaseModel):
+class BillthemeBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -32,7 +32,7 @@ class BillthemebaseUpdate(BaseModel):
     name: Optional[str] = None
     config: Optional[str] = None
 
-class BillthemebaseDb(BaseModel):
+class BillthemeBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None

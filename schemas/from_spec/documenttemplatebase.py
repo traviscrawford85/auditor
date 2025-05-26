@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class DocumenttemplatebaseIn(BaseModel):
+class DocumenttemplateBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     size: Optional[str] = None
@@ -11,7 +11,7 @@ class DocumenttemplatebaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class DocumenttemplatebaseOut(BaseModel):
+class DocumenttemplateBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     size: Optional[str] = None
@@ -20,7 +20,7 @@ class DocumenttemplatebaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class DocumenttemplatebaseUpdate(BaseModel):
+class DocumenttemplateBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     size: Optional[str] = None
@@ -29,7 +29,7 @@ class DocumenttemplatebaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class DocumenttemplatebaseDb(BaseModel):
+class DocumenttemplateBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     size: Optional[str] = None

@@ -2,19 +2,19 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class MatterbalancebaseIn(BaseModel):
+class MatterbalanceBaseIn(BaseModel):
     id: Optional[str] = None
     amount: Optional[str] = None
 
-class MatterbalancebaseOut(BaseModel):
+class MatterbalanceBaseOut(BaseModel):
     id: Optional[str] = None
     amount: Optional[str] = None
 
-class MatterbalancebaseUpdate(BaseModel):
+class MatterbalanceBaseUpdate(BaseModel):
     id: Optional[str] = None
     amount: Optional[str] = None
 
-class MatterbalancebaseDb(BaseModel):
+class MatterbalanceBaseDb(BaseModel):
     id: Optional[str] = None
     amount: Optional[str] = None
 

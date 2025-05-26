@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class WebhookshowIn(BaseModel):
+class WebhookShowIn(BaseModel):
     """Incoming model for creating a Webhookshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class WebhookshowOut(BaseModel):
     # TODO: Add fields
 
 
-class WebhookshowUpdate(BaseModel):
+class WebhookShowUpdate(BaseModel):
     """Update model for patching a Webhookshow"""
     # TODO: Add fields
 

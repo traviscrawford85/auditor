@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class TrustrequestshowIn(BaseModel):
+class TrustrequestShowIn(BaseModel):
     """Incoming model for creating a Trustrequestshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class TrustrequestshowOut(BaseModel):
     # TODO: Add fields
 
 
-class TrustrequestshowUpdate(BaseModel):
+class TrustrequestShowUpdate(BaseModel):
     """Update model for patching a Trustrequestshow"""
     # TODO: Add fields
 

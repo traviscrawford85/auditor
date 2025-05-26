@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class RelatedcontactsbaseIn(BaseModel):
+class RelatedcontactsBaseIn(BaseModel):
     id: Optional[str] = None
     contact_id: Optional[str] = None
     name: Optional[str] = None
@@ -20,7 +20,7 @@ class RelatedcontactsbaseIn(BaseModel):
     primary_phone_number: Optional[str] = None
     client_connect_user_id: Optional[str] = None
 
-class RelatedcontactsbaseOut(BaseModel):
+class RelatedcontactsBaseOut(BaseModel):
     id: Optional[str] = None
     contact_id: Optional[str] = None
     name: Optional[str] = None
@@ -38,7 +38,7 @@ class RelatedcontactsbaseOut(BaseModel):
     primary_phone_number: Optional[str] = None
     client_connect_user_id: Optional[str] = None
 
-class RelatedcontactsbaseUpdate(BaseModel):
+class RelatedcontactsBaseUpdate(BaseModel):
     id: Optional[str] = None
     contact_id: Optional[str] = None
     name: Optional[str] = None
@@ -56,7 +56,7 @@ class RelatedcontactsbaseUpdate(BaseModel):
     primary_phone_number: Optional[str] = None
     client_connect_user_id: Optional[str] = None
 
-class RelatedcontactsbaseDb(BaseModel):
+class RelatedcontactsBaseDb(BaseModel):
     id: Optional[str] = None
     contact_id: Optional[str] = None
     name: Optional[str] = None

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class CalendarbaseIn(BaseModel):
+class CalendarBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     color: Optional[str] = None
@@ -16,7 +16,7 @@ class CalendarbaseIn(BaseModel):
     updated_at: Optional[str] = None
     source: Optional[str] = None
 
-class CalendarbaseOut(BaseModel):
+class CalendarBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     color: Optional[str] = None
@@ -30,7 +30,7 @@ class CalendarbaseOut(BaseModel):
     updated_at: Optional[str] = None
     source: Optional[str] = None
 
-class CalendarbaseUpdate(BaseModel):
+class CalendarBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     color: Optional[str] = None
@@ -44,7 +44,7 @@ class CalendarbaseUpdate(BaseModel):
     updated_at: Optional[str] = None
     source: Optional[str] = None
 
-class CalendarbaseDb(BaseModel):
+class CalendarBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     color: Optional[str] = None

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class BillrecipientcontactbaseIn(BaseModel):
+class BillrecipientcontactBaseIn(BaseModel):
     id: Optional[str] = None
     name: Optional[str] = None
     first_name: Optional[str] = None
@@ -11,7 +11,7 @@ class BillrecipientcontactbaseIn(BaseModel):
     type: Optional[str] = None
     primary_email_address: Optional[str] = None
 
-class BillrecipientcontactbaseOut(BaseModel):
+class BillrecipientcontactBaseOut(BaseModel):
     id: Optional[str] = None
     name: Optional[str] = None
     first_name: Optional[str] = None
@@ -20,7 +20,7 @@ class BillrecipientcontactbaseOut(BaseModel):
     type: Optional[str] = None
     primary_email_address: Optional[str] = None
 
-class BillrecipientcontactbaseUpdate(BaseModel):
+class BillrecipientcontactBaseUpdate(BaseModel):
     id: Optional[str] = None
     name: Optional[str] = None
     first_name: Optional[str] = None
@@ -29,7 +29,7 @@ class BillrecipientcontactbaseUpdate(BaseModel):
     type: Optional[str] = None
     primary_email_address: Optional[str] = None
 
-class BillrecipientcontactbaseDb(BaseModel):
+class BillrecipientcontactBaseDb(BaseModel):
     id: Optional[str] = None
     name: Optional[str] = None
     first_name: Optional[str] = None

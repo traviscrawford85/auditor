@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class DocumentversionlistIn(BaseModel):
+class DocumentversionListIn(BaseModel):
     """Incoming model for creating a Documentversionlist"""
     # TODO: Add fields
 

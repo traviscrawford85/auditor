@@ -2,28 +2,28 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class CommentbaseIn(BaseModel):
+class CommentBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     message: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class CommentbaseOut(BaseModel):
+class CommentBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     message: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class CommentbaseUpdate(BaseModel):
+class CommentBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     message: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class CommentbaseDb(BaseModel):
+class CommentBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     message: Optional[str] = None

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class NotificationeventsubscriberbaseIn(BaseModel):
+class NotificationeventsubscriberBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     user_id: Optional[str] = None
@@ -10,7 +10,7 @@ class NotificationeventsubscriberbaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class NotificationeventsubscriberbaseOut(BaseModel):
+class NotificationeventsubscriberBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     user_id: Optional[str] = None
@@ -18,7 +18,7 @@ class NotificationeventsubscriberbaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class NotificationeventsubscriberbaseUpdate(BaseModel):
+class NotificationeventsubscriberBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     user_id: Optional[str] = None
@@ -26,7 +26,7 @@ class NotificationeventsubscriberbaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class NotificationeventsubscriberbaseDb(BaseModel):
+class NotificationeventsubscriberBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     user_id: Optional[str] = None

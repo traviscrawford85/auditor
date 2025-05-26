@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class LogentrylistIn(BaseModel):
+class LogentryListIn(BaseModel):
     """Incoming model for creating a Logentrylist"""
     # TODO: Add fields
 

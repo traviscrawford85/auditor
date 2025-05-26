@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class PaymentbaseIn(BaseModel):
+class PaymentBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     description: Optional[str] = None
@@ -14,7 +14,7 @@ class PaymentbaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class PaymentbaseOut(BaseModel):
+class PaymentBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     description: Optional[str] = None
@@ -26,7 +26,7 @@ class PaymentbaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class PaymentbaseUpdate(BaseModel):
+class PaymentBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     description: Optional[str] = None
@@ -38,7 +38,7 @@ class PaymentbaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class PaymentbaseDb(BaseModel):
+class PaymentBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     description: Optional[str] = None

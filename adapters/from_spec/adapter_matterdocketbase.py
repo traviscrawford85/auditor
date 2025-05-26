@@ -1,10 +1,10 @@
 # Adapter stubs for Matterdocketbase
-from schemas.from_spec.matterdocketbase import MatterdocketbaseIn, MatterdocketbaseOut, MatterdocketbaseUpdate, MatterdocketbaseDb
+from schemas.from_spec.matterdocketbase import MatterdocketBaseIn, MatterdocketBaseOut, MatterdocketBaseUpdate, MatterdocketBaseDb
 
-def convert_sdk_to_matterdocketbaseout(sdk_obj):
+def convert_sdk_to_matterdocketBaseOut(sdk_obj):
     # TODO
-    return MatterdocketbaseOut()
+    return MatterdocketBaseOut()
 
-def convert_matterdocketbasein_to_sdk(model):
+def convert_matterdocketBaseIn_to_sdk(model):
     # TODO
     return None

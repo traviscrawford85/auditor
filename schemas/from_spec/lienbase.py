@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class LienbaseIn(BaseModel):
+class LienBaseIn(BaseModel):
     id: Optional[str] = None
     amount: Optional[str] = None
     description: Optional[str] = None
@@ -12,7 +12,7 @@ class LienbaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class LienbaseOut(BaseModel):
+class LienBaseOut(BaseModel):
     id: Optional[str] = None
     amount: Optional[str] = None
     description: Optional[str] = None
@@ -22,7 +22,7 @@ class LienbaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class LienbaseUpdate(BaseModel):
+class LienBaseUpdate(BaseModel):
     id: Optional[str] = None
     amount: Optional[str] = None
     description: Optional[str] = None
@@ -32,7 +32,7 @@ class LienbaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class LienbaseDb(BaseModel):
+class LienBaseDb(BaseModel):
     id: Optional[str] = None
     amount: Optional[str] = None
     description: Optional[str] = None

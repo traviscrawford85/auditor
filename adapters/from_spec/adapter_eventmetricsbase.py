@@ -1,10 +1,10 @@
 # Adapter stubs for Eventmetricsbase
-from schemas.from_spec.eventmetricsbase import EventmetricsbaseIn, EventmetricsbaseOut, EventmetricsbaseUpdate, EventmetricsbaseDb
+from schemas.from_spec.eventmetricsbase import EventmetricsBaseIn, EventmetricsBaseOut, EventmetricsBaseUpdate, EventmetricsBaseDb
 
-def convert_sdk_to_eventmetricsbaseout(sdk_obj):
+def convert_sdk_to_eventmetricsBaseOut(sdk_obj):
     # TODO
-    return EventmetricsbaseOut()
+    return EventmetricsBaseOut()
 
-def convert_eventmetricsbasein_to_sdk(model):
+def convert_eventmetricsBaseIn_to_sdk(model):
     # TODO
     return None

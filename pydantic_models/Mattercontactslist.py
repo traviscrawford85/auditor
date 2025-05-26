@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class MattercontactslistIn(BaseModel):
+class MattercontactsListIn(BaseModel):
     """Incoming model for creating a Mattercontactslist"""
     # TODO: Add fields
 

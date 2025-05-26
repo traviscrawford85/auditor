@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class MatterdocketshowIn(BaseModel):
+class MatterdocketShowIn(BaseModel):
     """Incoming model for creating a Matterdocketshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class MatterdocketshowOut(BaseModel):
     # TODO: Add fields
 
 
-class MatterdocketshowUpdate(BaseModel):
+class MatterdocketShowUpdate(BaseModel):
     """Update model for patching a Matterdocketshow"""
     # TODO: Add fields
 

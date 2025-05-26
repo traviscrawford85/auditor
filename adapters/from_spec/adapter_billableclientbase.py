@@ -1,10 +1,10 @@
 # Adapter stubs for Billableclientbase
-from schemas.from_spec.billableclientbase import BillableclientbaseIn, BillableclientbaseOut, BillableclientbaseUpdate, BillableclientbaseDb
+from schemas.from_spec.billableclientbase import BillableclientBaseIn, BillableclientBaseOut, BillableclientBaseUpdate, BillableclientBaseDb
 
-def convert_sdk_to_billableclientbaseout(sdk_obj):
+def convert_sdk_to_billableclientBaseOut(sdk_obj):
     # TODO
-    return BillableclientbaseOut()
+    return BillableclientBaseOut()
 
-def convert_billableclientbasein_to_sdk(model):
+def convert_billableclientBaseIn_to_sdk(model):
     # TODO
     return None

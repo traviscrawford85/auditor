@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class CalendarentrylistIn(BaseModel):
+class CalendarentryListIn(BaseModel):
     """Incoming model for creating a Calendarentrylist"""
     # TODO: Add fields
 

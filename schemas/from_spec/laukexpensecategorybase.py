@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class LaukexpensecategorybaseIn(BaseModel):
+class LaukexpensecategoryBaseIn(BaseModel):
     certificated: Optional[str] = None
     civil: Optional[str] = None
     created_at: Optional[str] = None
@@ -14,7 +14,7 @@ class LaukexpensecategorybaseIn(BaseModel):
     rate: Optional[str] = None
     updated_at: Optional[str] = None
 
-class LaukexpensecategorybaseOut(BaseModel):
+class LaukexpensecategoryBaseOut(BaseModel):
     certificated: Optional[str] = None
     civil: Optional[str] = None
     created_at: Optional[str] = None
@@ -26,7 +26,7 @@ class LaukexpensecategorybaseOut(BaseModel):
     rate: Optional[str] = None
     updated_at: Optional[str] = None
 
-class LaukexpensecategorybaseUpdate(BaseModel):
+class LaukexpensecategoryBaseUpdate(BaseModel):
     certificated: Optional[str] = None
     civil: Optional[str] = None
     created_at: Optional[str] = None
@@ -38,7 +38,7 @@ class LaukexpensecategorybaseUpdate(BaseModel):
     rate: Optional[str] = None
     updated_at: Optional[str] = None
 
-class LaukexpensecategorybaseDb(BaseModel):
+class LaukexpensecategoryBaseDb(BaseModel):
     certificated: Optional[str] = None
     civil: Optional[str] = None
     created_at: Optional[str] = None

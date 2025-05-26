@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class ReportpresetbaseIn(BaseModel):
+class ReportpresetBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -14,7 +14,7 @@ class ReportpresetbaseIn(BaseModel):
     category: Optional[str] = None
     options: Optional[str] = None
 
-class ReportpresetbaseOut(BaseModel):
+class ReportpresetBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -26,7 +26,7 @@ class ReportpresetbaseOut(BaseModel):
     category: Optional[str] = None
     options: Optional[str] = None
 
-class ReportpresetbaseUpdate(BaseModel):
+class ReportpresetBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -38,7 +38,7 @@ class ReportpresetbaseUpdate(BaseModel):
     category: Optional[str] = None
     options: Optional[str] = None
 
-class ReportpresetbaseDb(BaseModel):
+class ReportpresetBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None

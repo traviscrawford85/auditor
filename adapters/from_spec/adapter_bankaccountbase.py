@@ -1,10 +1,10 @@
 # Adapter stubs for Bankaccountbase
-from schemas.from_spec.bankaccountbase import BankaccountbaseIn, BankaccountbaseOut, BankaccountbaseUpdate, BankaccountbaseDb
+from schemas.from_spec.bankaccountbase import BankaccountBaseIn, BankaccountBaseOut, BankaccountBaseUpdate, BankaccountBaseDb
 
-def convert_sdk_to_bankaccountbaseout(sdk_obj):
+def convert_sdk_to_bankaccountBaseOut(sdk_obj):
     # TODO
-    return BankaccountbaseOut()
+    return BankaccountBaseOut()
 
-def convert_bankaccountbasein_to_sdk(model):
+def convert_bankaccountBaseIn_to_sdk(model):
     # TODO
     return None

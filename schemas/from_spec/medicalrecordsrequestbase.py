@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class MedicalrecordsrequestbaseIn(BaseModel):
+class MedicalrecordsrequestBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     bills_follow_up_date: Optional[str] = None
@@ -18,7 +18,7 @@ class MedicalrecordsrequestbaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class MedicalrecordsrequestbaseOut(BaseModel):
+class MedicalrecordsrequestBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     bills_follow_up_date: Optional[str] = None
@@ -34,7 +34,7 @@ class MedicalrecordsrequestbaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class MedicalrecordsrequestbaseUpdate(BaseModel):
+class MedicalrecordsrequestBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     bills_follow_up_date: Optional[str] = None
@@ -50,7 +50,7 @@ class MedicalrecordsrequestbaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class MedicalrecordsrequestbaseDb(BaseModel):
+class MedicalrecordsrequestBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     bills_follow_up_date: Optional[str] = None

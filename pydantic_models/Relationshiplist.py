@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class RelationshiplistIn(BaseModel):
+class RelationshipListIn(BaseModel):
     """Incoming model for creating a Relationshiplist"""
     # TODO: Add fields
 

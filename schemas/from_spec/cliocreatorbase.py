@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class CliocreatorbaseIn(BaseModel):
+class CliocreatorBaseIn(BaseModel):
     account_owner: Optional[str] = None
     clio_connect: Optional[str] = None
     court_rules_default_attendee: Optional[str] = None
@@ -24,7 +24,7 @@ class CliocreatorbaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class CliocreatorbaseOut(BaseModel):
+class CliocreatorBaseOut(BaseModel):
     account_owner: Optional[str] = None
     clio_connect: Optional[str] = None
     court_rules_default_attendee: Optional[str] = None
@@ -46,7 +46,7 @@ class CliocreatorbaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class CliocreatorbaseUpdate(BaseModel):
+class CliocreatorBaseUpdate(BaseModel):
     account_owner: Optional[str] = None
     clio_connect: Optional[str] = None
     court_rules_default_attendee: Optional[str] = None
@@ -68,7 +68,7 @@ class CliocreatorbaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class CliocreatorbaseDb(BaseModel):
+class CliocreatorBaseDb(BaseModel):
     account_owner: Optional[str] = None
     clio_connect: Optional[str] = None
     court_rules_default_attendee: Optional[str] = None

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class FolderbaseIn(BaseModel):
+class FolderBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -13,7 +13,7 @@ class FolderbaseIn(BaseModel):
     name: Optional[str] = None
     root: Optional[str] = None
 
-class FolderbaseOut(BaseModel):
+class FolderBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -24,7 +24,7 @@ class FolderbaseOut(BaseModel):
     name: Optional[str] = None
     root: Optional[str] = None
 
-class FolderbaseUpdate(BaseModel):
+class FolderBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -35,7 +35,7 @@ class FolderbaseUpdate(BaseModel):
     name: Optional[str] = None
     root: Optional[str] = None
 
-class FolderbaseDb(BaseModel):
+class FolderBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None

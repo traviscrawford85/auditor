@@ -1,10 +1,10 @@
 # Adapter stubs for Calendarvisibilitybase
-from schemas.from_spec.calendarvisibilitybase import CalendarvisibilitybaseIn, CalendarvisibilitybaseOut, CalendarvisibilitybaseUpdate, CalendarvisibilitybaseDb
+from schemas.from_spec.calendarvisibilitybase import CalendarvisibilityBaseIn, CalendarvisibilityBaseOut, CalendarvisibilityBaseUpdate, CalendarvisibilityBaseDb
 
-def convert_sdk_to_calendarvisibilitybaseout(sdk_obj):
+def convert_sdk_to_calendarvisibilityBaseOut(sdk_obj):
     # TODO
-    return CalendarvisibilitybaseOut()
+    return CalendarvisibilityBaseOut()
 
-def convert_calendarvisibilitybasein_to_sdk(model):
+def convert_calendarvisibilityBaseIn_to_sdk(model):
     # TODO
     return None

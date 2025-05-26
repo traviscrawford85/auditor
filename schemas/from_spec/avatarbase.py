@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class AvatarbaseIn(BaseModel):
+class AvatarBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -10,7 +10,7 @@ class AvatarbaseIn(BaseModel):
     url: Optional[str] = None
     _destroy: Optional[str] = None
 
-class AvatarbaseOut(BaseModel):
+class AvatarBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -18,7 +18,7 @@ class AvatarbaseOut(BaseModel):
     url: Optional[str] = None
     _destroy: Optional[str] = None
 
-class AvatarbaseUpdate(BaseModel):
+class AvatarBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -26,7 +26,7 @@ class AvatarbaseUpdate(BaseModel):
     url: Optional[str] = None
     _destroy: Optional[str] = None
 
-class AvatarbaseDb(BaseModel):
+class AvatarBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None

@@ -1,10 +1,10 @@
 # Adapter stubs for Interestbase
-from schemas.from_spec.interestbase import InterestbaseIn, InterestbaseOut, InterestbaseUpdate, InterestbaseDb
+from schemas.from_spec.interestbase import InterestBaseIn, InterestBaseOut, InterestBaseUpdate, InterestBaseDb
 
-def convert_sdk_to_interestbaseout(sdk_obj):
+def convert_sdk_to_interestBaseOut(sdk_obj):
     # TODO
-    return InterestbaseOut()
+    return InterestBaseOut()
 
-def convert_interestbasein_to_sdk(model):
+def convert_interestBaseIn_to_sdk(model):
     # TODO
     return None

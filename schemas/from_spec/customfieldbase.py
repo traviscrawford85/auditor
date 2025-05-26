@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class CustomfieldbaseIn(BaseModel):
+class CustomfieldBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -15,7 +15,7 @@ class CustomfieldbaseIn(BaseModel):
     required: Optional[str] = None
     display_order: Optional[str] = None
 
-class CustomfieldbaseOut(BaseModel):
+class CustomfieldBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -28,7 +28,7 @@ class CustomfieldbaseOut(BaseModel):
     required: Optional[str] = None
     display_order: Optional[str] = None
 
-class CustomfieldbaseUpdate(BaseModel):
+class CustomfieldBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -41,7 +41,7 @@ class CustomfieldbaseUpdate(BaseModel):
     required: Optional[str] = None
     display_order: Optional[str] = None
 
-class CustomfieldbaseDb(BaseModel):
+class CustomfieldBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None

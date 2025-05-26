@@ -1,10 +1,10 @@
 # Adapter stubs for Documenttemplatebase
-from schemas.from_spec.documenttemplatebase import DocumenttemplatebaseIn, DocumenttemplatebaseOut, DocumenttemplatebaseUpdate, DocumenttemplatebaseDb
+from schemas.from_spec.documenttemplatebase import DocumenttemplateBaseIn, DocumenttemplateBaseOut, DocumenttemplateBaseUpdate, DocumenttemplateBaseDb
 
-def convert_sdk_to_documenttemplatebaseout(sdk_obj):
+def convert_sdk_to_documenttemplateBaseOut(sdk_obj):
     # TODO
-    return DocumenttemplatebaseOut()
+    return DocumenttemplateBaseOut()
 
-def convert_documenttemplatebasein_to_sdk(model):
+def convert_documenttemplateBaseIn_to_sdk(model):
     # TODO
     return None

@@ -1,10 +1,10 @@
 # Adapter stubs for Matterbudgetbase
-from schemas.from_spec.matterbudgetbase import MatterbudgetbaseIn, MatterbudgetbaseOut, MatterbudgetbaseUpdate, MatterbudgetbaseDb
+from schemas.from_spec.matterbudgetbase import MatterbudgetBaseIn, MatterbudgetBaseOut, MatterbudgetBaseUpdate, MatterbudgetBaseDb
 
-def convert_sdk_to_matterbudgetbaseout(sdk_obj):
+def convert_sdk_to_matterbudgetBaseOut(sdk_obj):
     # TODO
-    return MatterbudgetbaseOut()
+    return MatterbudgetBaseOut()
 
-def convert_matterbudgetbasein_to_sdk(model):
+def convert_matterbudgetBaseIn_to_sdk(model):
     # TODO
     return None

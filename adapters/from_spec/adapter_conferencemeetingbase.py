@@ -1,10 +1,10 @@
 # Adapter stubs for Conferencemeetingbase
-from schemas.from_spec.conferencemeetingbase import ConferencemeetingbaseIn, ConferencemeetingbaseOut, ConferencemeetingbaseUpdate, ConferencemeetingbaseDb
+from schemas.from_spec.conferencemeetingbase import ConferencemeetingBaseIn, ConferencemeetingBaseOut, ConferencemeetingBaseUpdate, ConferencemeetingBaseDb
 
-def convert_sdk_to_conferencemeetingbaseout(sdk_obj):
+def convert_sdk_to_conferencemeetingBaseOut(sdk_obj):
     # TODO
-    return ConferencemeetingbaseOut()
+    return ConferencemeetingBaseOut()
 
-def convert_conferencemeetingbasein_to_sdk(model):
+def convert_conferencemeetingBaseIn_to_sdk(model):
     # TODO
     return None

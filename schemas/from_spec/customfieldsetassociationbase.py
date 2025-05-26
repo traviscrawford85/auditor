@@ -2,28 +2,28 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class CustomfieldsetassociationbaseIn(BaseModel):
+class CustomfieldsetassociationBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     display_order: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class CustomfieldsetassociationbaseOut(BaseModel):
+class CustomfieldsetassociationBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     display_order: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class CustomfieldsetassociationbaseUpdate(BaseModel):
+class CustomfieldsetassociationBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     display_order: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class CustomfieldsetassociationbaseDb(BaseModel):
+class CustomfieldsetassociationBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     display_order: Optional[str] = None

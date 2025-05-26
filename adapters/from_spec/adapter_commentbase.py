@@ -1,10 +1,10 @@
 # Adapter stubs for Commentbase
-from schemas.from_spec.commentbase import CommentbaseIn, CommentbaseOut, CommentbaseUpdate, CommentbaseDb
+from schemas.from_spec.commentbase import CommentBaseIn, CommentBaseOut, CommentBaseUpdate, CommentBaseDb
 
-def convert_sdk_to_commentbaseout(sdk_obj):
+def convert_sdk_to_commentBaseOut(sdk_obj):
     # TODO
-    return CommentbaseOut()
+    return CommentBaseOut()
 
-def convert_commentbasein_to_sdk(model):
+def convert_commentBaseIn_to_sdk(model):
     # TODO
     return None

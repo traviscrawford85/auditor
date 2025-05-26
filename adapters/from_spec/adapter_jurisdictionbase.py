@@ -1,10 +1,10 @@
 # Adapter stubs for Jurisdictionbase
-from schemas.from_spec.jurisdictionbase import JurisdictionbaseIn, JurisdictionbaseOut, JurisdictionbaseUpdate, JurisdictionbaseDb
+from schemas.from_spec.jurisdictionbase import JurisdictionBaseIn, JurisdictionBaseOut, JurisdictionBaseUpdate, JurisdictionBaseDb
 
-def convert_sdk_to_jurisdictionbaseout(sdk_obj):
+def convert_sdk_to_jurisdictionBaseOut(sdk_obj):
     # TODO
-    return JurisdictionbaseOut()
+    return JurisdictionBaseOut()
 
-def convert_jurisdictionbasein_to_sdk(model):
+def convert_jurisdictionBaseIn_to_sdk(model):
     # TODO
     return None

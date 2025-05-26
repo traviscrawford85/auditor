@@ -1,10 +1,10 @@
 # Adapter stubs for Banktransactionbase
-from schemas.from_spec.banktransactionbase import BanktransactionbaseIn, BanktransactionbaseOut, BanktransactionbaseUpdate, BanktransactionbaseDb
+from schemas.from_spec.banktransactionbase import BanktransactionBaseIn, BanktransactionBaseOut, BanktransactionBaseUpdate, BanktransactionBaseDb
 
-def convert_sdk_to_banktransactionbaseout(sdk_obj):
+def convert_sdk_to_banktransactionBaseOut(sdk_obj):
     # TODO
-    return BanktransactionbaseOut()
+    return BanktransactionBaseOut()
 
-def convert_banktransactionbasein_to_sdk(model):
+def convert_banktransactionBaseIn_to_sdk(model):
     # TODO
     return None

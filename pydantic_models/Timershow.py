@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class TimershowIn(BaseModel):
+class TimerShowIn(BaseModel):
     """Incoming model for creating a Timershow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class TimershowOut(BaseModel):
     # TODO: Add fields
 
 
-class TimershowUpdate(BaseModel):
+class TimerShowUpdate(BaseModel):
     """Update model for patching a Timershow"""
     # TODO: Add fields
 

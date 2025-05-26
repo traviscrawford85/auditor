@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class DocumentautomationbaseIn(BaseModel):
+class DocumentautomationBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     state: Optional[str] = None
@@ -11,7 +11,7 @@ class DocumentautomationbaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class DocumentautomationbaseOut(BaseModel):
+class DocumentautomationBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     state: Optional[str] = None
@@ -20,7 +20,7 @@ class DocumentautomationbaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class DocumentautomationbaseUpdate(BaseModel):
+class DocumentautomationBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     state: Optional[str] = None
@@ -29,7 +29,7 @@ class DocumentautomationbaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class DocumentautomationbaseDb(BaseModel):
+class DocumentautomationBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     state: Optional[str] = None

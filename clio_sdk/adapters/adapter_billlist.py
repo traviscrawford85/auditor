@@ -1,9 +1,11 @@
 # Adapter for billlist
 from clio_sdk.models.billlist import BilllistIn, BilllistOut, BilllistUpdate, BilllistDb
-from clio_client.models import bill_list
+from clio_client.models.bill_list import BillList
 
-def convert_sdk_to_billlistout(src: bill_list) -> BilllistOut:
-    return BilllistOut(**src.dict())
+def convert_sdk_to_billlistout(src: BillList) -> BilllistOut:
+    """Converts a clio_client model to clio_sdk model."""
+    return BilllistOut(**src.model_dump())
 
-def convert_billlistin_to_sdk(src: BilllistIn) -> bill_list:
-    return bill_list(**src.dict())
+def convert_billlistin_to_sdk(src: BilllistIn) -> BillList:
+    """Converts a clio_sdk model to clio_client model."""
+    return BillList(**src.model_dump())

@@ -1,9 +1,11 @@
 # Adapter for legalaidukcontactbase
-from clio_sdk.models.legalaidukcontactbase import LegalaidukcontactbaseIn, LegalaidukcontactbaseOut, LegalaidukcontactbaseUpdate, LegalaidukcontactbaseDb
-from clio_client.models import legal_aid_uk_contact_base
+from clio_sdk.models.legalaidukcontactbase import LegalaidukcontactBaseIn, LegalaidukcontactbaseOut, LegalaidukcontactbaseUpdate, LegalaidukcontactbaseDb
+from clio_client.models.legal_aid_uk_contact_base import LegalAidUkContactBase
 
-def convert_sdk_to_legalaidukcontactbaseout(src: legal_aid_uk_contact_base) -> LegalaidukcontactbaseOut:
-    return LegalaidukcontactbaseOut(**src.dict())
+def convert_sdk_to_legalaidukcontactbaseout(src: LegalAidUkContactBase) -> LegalaidukcontactbaseOut:
+    """Converts a clio_client model to clio_sdk model."""
+    return LegalaidukcontactbaseOut(**src.model_dump())
 
-def convert_legalaidukcontactbasein_to_sdk(src: LegalaidukcontactbaseIn) -> legal_aid_uk_contact_base:
-    return legal_aid_uk_contact_base(**src.dict())
+def convert_legalaidukcontactbasein_to_sdk(src: LegalaidukcontactBaseIn) -> LegalAidUkContactBase:
+    """Converts a clio_sdk model to clio_client model."""
+    return LegalAidUkContactBase(**src.model_dump())

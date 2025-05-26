@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class TasktemplatelistbaseIn(BaseModel):
+class TasktemplatelistBaseIn(BaseModel):
     created_at: Optional[str] = None
     description: Optional[str] = None
     id: Optional[str] = None
@@ -11,7 +11,7 @@ class TasktemplatelistbaseIn(BaseModel):
     templates_count: Optional[str] = None
     updated_at: Optional[str] = None
 
-class TasktemplatelistbaseOut(BaseModel):
+class TasktemplatelistBaseOut(BaseModel):
     created_at: Optional[str] = None
     description: Optional[str] = None
     id: Optional[str] = None
@@ -20,7 +20,7 @@ class TasktemplatelistbaseOut(BaseModel):
     templates_count: Optional[str] = None
     updated_at: Optional[str] = None
 
-class TasktemplatelistbaseUpdate(BaseModel):
+class TasktemplatelistBaseUpdate(BaseModel):
     created_at: Optional[str] = None
     description: Optional[str] = None
     id: Optional[str] = None
@@ -29,7 +29,7 @@ class TasktemplatelistbaseUpdate(BaseModel):
     templates_count: Optional[str] = None
     updated_at: Optional[str] = None
 
-class TasktemplatelistbaseDb(BaseModel):
+class TasktemplatelistBaseDb(BaseModel):
     created_at: Optional[str] = None
     description: Optional[str] = None
     id: Optional[str] = None

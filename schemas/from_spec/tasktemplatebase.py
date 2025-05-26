@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class TasktemplatebaseIn(BaseModel):
+class TasktemplateBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -12,7 +12,7 @@ class TasktemplatebaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class TasktemplatebaseOut(BaseModel):
+class TasktemplateBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -22,7 +22,7 @@ class TasktemplatebaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class TasktemplatebaseUpdate(BaseModel):
+class TasktemplateBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -32,7 +32,7 @@ class TasktemplatebaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class TasktemplatebaseDb(BaseModel):
+class TasktemplateBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None

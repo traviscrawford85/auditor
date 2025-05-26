@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class AllocationlistIn(BaseModel):
+class AllocationListIn(BaseModel):
     """Incoming model for creating a Allocationlist"""
     # TODO: Add fields
 

@@ -2,19 +2,19 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class ActivitytextmessageconversationbaseIn(BaseModel):
+class ActivitytextmessageconversationBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
 
-class ActivitytextmessageconversationbaseOut(BaseModel):
+class ActivitytextmessageconversationBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
 
-class ActivitytextmessageconversationbaseUpdate(BaseModel):
+class ActivitytextmessageconversationBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
 
-class ActivitytextmessageconversationbaseDb(BaseModel):
+class ActivitytextmessageconversationBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
 

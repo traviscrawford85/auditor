@@ -1,10 +1,10 @@
 # Adapter stubs for Balancebase
-from schemas.from_spec.balancebase import BalancebaseIn, BalancebaseOut, BalancebaseUpdate, BalancebaseDb
+from schemas.from_spec.balancebase import BalanceBaseIn, BalanceBaseOut, BalanceBaseUpdate, BalanceBaseDb
 
-def convert_sdk_to_balancebaseout(sdk_obj):
+def convert_sdk_to_balanceBaseOut(sdk_obj):
     # TODO
-    return BalancebaseOut()
+    return BalanceBaseOut()
 
-def convert_balancebasein_to_sdk(model):
+def convert_balanceBaseIn_to_sdk(model):
     # TODO
     return None

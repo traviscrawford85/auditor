@@ -1,10 +1,10 @@
 # Adapter stubs for Documentarchivebase
-from schemas.from_spec.documentarchivebase import DocumentarchivebaseIn, DocumentarchivebaseOut, DocumentarchivebaseUpdate, DocumentarchivebaseDb
+from schemas.from_spec.documentarchivebase import DocumentarchiveBaseIn, DocumentarchiveBaseOut, DocumentarchiveBaseUpdate, DocumentarchiveBaseDb
 
-def convert_sdk_to_documentarchivebaseout(sdk_obj):
+def convert_sdk_to_documentarchiveBaseOut(sdk_obj):
     # TODO
-    return DocumentarchivebaseOut()
+    return DocumentarchiveBaseOut()
 
-def convert_documentarchivebasein_to_sdk(model):
+def convert_documentarchiveBaseIn_to_sdk(model):
     # TODO
     return None

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class TextsnippetbaseIn(BaseModel):
+class TextsnippetBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -11,7 +11,7 @@ class TextsnippetbaseIn(BaseModel):
     phrase: Optional[str] = None
     whole_word: Optional[str] = None
 
-class TextsnippetbaseOut(BaseModel):
+class TextsnippetBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -20,7 +20,7 @@ class TextsnippetbaseOut(BaseModel):
     phrase: Optional[str] = None
     whole_word: Optional[str] = None
 
-class TextsnippetbaseUpdate(BaseModel):
+class TextsnippetBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -29,7 +29,7 @@ class TextsnippetbaseUpdate(BaseModel):
     phrase: Optional[str] = None
     whole_word: Optional[str] = None
 
-class TextsnippetbaseDb(BaseModel):
+class TextsnippetBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None

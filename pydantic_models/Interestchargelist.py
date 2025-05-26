@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class InterestchargelistIn(BaseModel):
+class InterestchargeListIn(BaseModel):
     """Incoming model for creating a Interestchargelist"""
     # TODO: Add fields
 

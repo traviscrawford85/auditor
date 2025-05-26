@@ -2,19 +2,19 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class MultipartbaseIn(BaseModel):
+class MultipartBaseIn(BaseModel):
     part_number: Optional[str] = None
     put_url: Optional[str] = None
 
-class MultipartbaseOut(BaseModel):
+class MultipartBaseOut(BaseModel):
     part_number: Optional[str] = None
     put_url: Optional[str] = None
 
-class MultipartbaseUpdate(BaseModel):
+class MultipartBaseUpdate(BaseModel):
     part_number: Optional[str] = None
     put_url: Optional[str] = None
 
-class MultipartbaseDb(BaseModel):
+class MultipartBaseDb(BaseModel):
     part_number: Optional[str] = None
     put_url: Optional[str] = None
 

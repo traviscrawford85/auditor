@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class TasktypelistIn(BaseModel):
+class TasktypeListIn(BaseModel):
     """Incoming model for creating a Tasktypelist"""
     # TODO: Add fields
 

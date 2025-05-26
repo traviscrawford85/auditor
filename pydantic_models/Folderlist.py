@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class FolderlistIn(BaseModel):
+class FolderListIn(BaseModel):
     """Incoming model for creating a Folderlist"""
     # TODO: Add fields
 

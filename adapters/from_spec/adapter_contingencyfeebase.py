@@ -1,10 +1,10 @@
 # Adapter stubs for Contingencyfeebase
-from schemas.from_spec.contingencyfeebase import ContingencyfeebaseIn, ContingencyfeebaseOut, ContingencyfeebaseUpdate, ContingencyfeebaseDb
+from schemas.from_spec.contingencyfeebase import ContingencyfeeBaseIn, ContingencyfeeBaseOut, ContingencyfeeBaseUpdate, ContingencyfeeBaseDb
 
-def convert_sdk_to_contingencyfeebaseout(sdk_obj):
+def convert_sdk_to_contingencyfeeBaseOut(sdk_obj):
     # TODO
-    return ContingencyfeebaseOut()
+    return ContingencyfeeBaseOut()
 
-def convert_contingencyfeebasein_to_sdk(model):
+def convert_contingencyfeeBaseIn_to_sdk(model):
     # TODO
     return None

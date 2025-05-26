@@ -1,9 +1,11 @@
 # Adapter for matterbillrecipientbase
-from clio_sdk.models.matterbillrecipientbase import MatterbillrecipientbaseIn, MatterbillrecipientbaseOut, MatterbillrecipientbaseUpdate, MatterbillrecipientbaseDb
-from clio_client.models import matter_bill_recipient
+from clio_sdk.models.matterbillrecipientbase import MatterbillrecipientBaseIn, MatterbillrecipientbaseOut, MatterbillrecipientbaseUpdate, MatterbillrecipientbaseDb
+from clio_client.models.matter_bill_recipient import MatterBillRecipient
 
-def convert_sdk_to_matterbillrecipientbaseout(src: matter_bill_recipient) -> MatterbillrecipientbaseOut:
-    return MatterbillrecipientbaseOut(**src.dict())
+def convert_sdk_to_matterbillrecipientbaseout(src: MatterBillRecipient) -> MatterbillrecipientbaseOut:
+    """Converts a clio_client model to clio_sdk model."""
+    return MatterbillrecipientbaseOut(**src.model_dump())
 
-def convert_matterbillrecipientbasein_to_sdk(src: MatterbillrecipientbaseIn) -> matter_bill_recipient:
-    return matter_bill_recipient(**src.dict())
+def convert_matterbillrecipientbasein_to_sdk(src: MatterbillrecipientBaseIn) -> MatterBillRecipient:
+    """Converts a clio_sdk model to clio_client model."""
+    return MatterBillRecipient(**src.model_dump())

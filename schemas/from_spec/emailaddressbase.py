@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class EmailaddressbaseIn(BaseModel):
+class EmailaddressBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     address: Optional[str] = None
@@ -11,7 +11,7 @@ class EmailaddressbaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class EmailaddressbaseOut(BaseModel):
+class EmailaddressBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     address: Optional[str] = None
@@ -20,7 +20,7 @@ class EmailaddressbaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class EmailaddressbaseUpdate(BaseModel):
+class EmailaddressBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     address: Optional[str] = None
@@ -29,7 +29,7 @@ class EmailaddressbaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class EmailaddressbaseDb(BaseModel):
+class EmailaddressBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     address: Optional[str] = None

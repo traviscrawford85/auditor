@@ -1,10 +1,10 @@
 # Adapter stubs for Polymorphiccustomratebase
-from schemas.from_spec.polymorphiccustomratebase import PolymorphiccustomratebaseIn, PolymorphiccustomratebaseOut, PolymorphiccustomratebaseUpdate, PolymorphiccustomratebaseDb
+from schemas.from_spec.polymorphiccustomratebase import PolymorphiccustomrateBaseIn, PolymorphiccustomrateBaseOut, PolymorphiccustomrateBaseUpdate, PolymorphiccustomrateBaseDb
 
-def convert_sdk_to_polymorphiccustomratebaseout(sdk_obj):
+def convert_sdk_to_polymorphiccustomrateBaseOut(sdk_obj):
     # TODO
-    return PolymorphiccustomratebaseOut()
+    return PolymorphiccustomrateBaseOut()
 
-def convert_polymorphiccustomratebasein_to_sdk(model):
+def convert_polymorphiccustomrateBaseIn_to_sdk(model):
     # TODO
     return None

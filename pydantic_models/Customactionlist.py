@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class CustomactionlistIn(BaseModel):
+class CustomactionListIn(BaseModel):
     """Incoming model for creating a Customactionlist"""
     # TODO: Add fields
 

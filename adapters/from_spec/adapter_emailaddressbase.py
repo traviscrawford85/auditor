@@ -1,10 +1,10 @@
 # Adapter stubs for Emailaddressbase
-from schemas.from_spec.emailaddressbase import EmailaddressbaseIn, EmailaddressbaseOut, EmailaddressbaseUpdate, EmailaddressbaseDb
+from schemas.from_spec.emailaddressbase import EmailaddressBaseIn, EmailaddressBaseOut, EmailaddressBaseUpdate, EmailaddressBaseDb
 
-def convert_sdk_to_emailaddressbaseout(sdk_obj):
+def convert_sdk_to_emailaddressBaseOut(sdk_obj):
     # TODO
-    return EmailaddressbaseOut()
+    return EmailaddressBaseOut()
 
-def convert_emailaddressbasein_to_sdk(model):
+def convert_emailaddressBaseIn_to_sdk(model):
     # TODO
     return None

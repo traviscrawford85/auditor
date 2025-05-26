@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class RemindertemplatebaseIn(BaseModel):
+class RemindertemplateBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     duration: Optional[str] = None
@@ -10,7 +10,7 @@ class RemindertemplatebaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class RemindertemplatebaseOut(BaseModel):
+class RemindertemplateBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     duration: Optional[str] = None
@@ -18,7 +18,7 @@ class RemindertemplatebaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class RemindertemplatebaseUpdate(BaseModel):
+class RemindertemplateBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     duration: Optional[str] = None
@@ -26,7 +26,7 @@ class RemindertemplatebaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class RemindertemplatebaseDb(BaseModel):
+class RemindertemplateBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     duration: Optional[str] = None

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class CliopaymentslinkshowIn(BaseModel):
+class CliopaymentslinkShowIn(BaseModel):
     """Incoming model for creating a Cliopaymentslinkshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class CliopaymentslinkshowOut(BaseModel):
     # TODO: Add fields
 
 
-class CliopaymentslinkshowUpdate(BaseModel):
+class CliopaymentslinkShowUpdate(BaseModel):
     """Update model for patching a Cliopaymentslinkshow"""
     # TODO: Add fields
 

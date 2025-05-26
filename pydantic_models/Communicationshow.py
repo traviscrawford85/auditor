@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class CommunicationshowIn(BaseModel):
+class CommunicationShowIn(BaseModel):
     """Incoming model for creating a Communicationshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class CommunicationshowOut(BaseModel):
     # TODO: Add fields
 
 
-class CommunicationshowUpdate(BaseModel):
+class CommunicationShowUpdate(BaseModel):
     """Update model for patching a Communicationshow"""
     # TODO: Add fields
 

@@ -1,10 +1,10 @@
 # Adapter stubs for Documentcategorybase
-from schemas.from_spec.documentcategorybase import DocumentcategorybaseIn, DocumentcategorybaseOut, DocumentcategorybaseUpdate, DocumentcategorybaseDb
+from schemas.from_spec.documentcategorybase import DocumentcategoryBaseIn, DocumentcategoryBaseOut, DocumentcategoryBaseUpdate, DocumentcategoryBaseDb
 
-def convert_sdk_to_documentcategorybaseout(sdk_obj):
+def convert_sdk_to_documentcategoryBaseOut(sdk_obj):
     # TODO
-    return DocumentcategorybaseOut()
+    return DocumentcategoryBaseOut()
 
-def convert_documentcategorybasein_to_sdk(model):
+def convert_documentcategoryBaseIn_to_sdk(model):
     # TODO
     return None

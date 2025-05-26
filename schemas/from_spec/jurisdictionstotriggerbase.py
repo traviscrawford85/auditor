@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class JurisdictionstotriggerbaseIn(BaseModel):
+class JurisdictionstotriggerBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     system_id: Optional[str] = None
@@ -13,7 +13,7 @@ class JurisdictionstotriggerbaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class JurisdictionstotriggerbaseOut(BaseModel):
+class JurisdictionstotriggerBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     system_id: Optional[str] = None
@@ -24,7 +24,7 @@ class JurisdictionstotriggerbaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class JurisdictionstotriggerbaseUpdate(BaseModel):
+class JurisdictionstotriggerBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     system_id: Optional[str] = None
@@ -35,7 +35,7 @@ class JurisdictionstotriggerbaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class JurisdictionstotriggerbaseDb(BaseModel):
+class JurisdictionstotriggerBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     system_id: Optional[str] = None

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class UtbmscodeshowIn(BaseModel):
+class UtbmscodeShowIn(BaseModel):
     """Incoming model for creating a Utbmscodeshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class UtbmscodeshowOut(BaseModel):
     # TODO: Add fields
 
 
-class UtbmscodeshowUpdate(BaseModel):
+class UtbmscodeShowUpdate(BaseModel):
     """Update model for patching a Utbmscodeshow"""
     # TODO: Add fields
 

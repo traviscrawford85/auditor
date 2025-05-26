@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class PracticeareashowIn(BaseModel):
+class PracticeareaShowIn(BaseModel):
     """Incoming model for creating a Practiceareashow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class PracticeareashowOut(BaseModel):
     # TODO: Add fields
 
 
-class PracticeareashowUpdate(BaseModel):
+class PracticeareaShowUpdate(BaseModel):
     """Update model for patching a Practiceareashow"""
     # TODO: Add fields
 

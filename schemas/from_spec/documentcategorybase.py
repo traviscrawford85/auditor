@@ -2,28 +2,28 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class DocumentcategorybaseIn(BaseModel):
+class DocumentcategoryBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class DocumentcategorybaseOut(BaseModel):
+class DocumentcategoryBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class DocumentcategorybaseUpdate(BaseModel):
+class DocumentcategoryBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class DocumentcategorybaseDb(BaseModel):
+class DocumentcategoryBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class CreditmemolistIn(BaseModel):
+class CreditmemoListIn(BaseModel):
     """Incoming model for creating a Creditmemolist"""
     # TODO: Add fields
 

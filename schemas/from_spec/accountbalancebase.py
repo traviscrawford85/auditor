@@ -2,25 +2,25 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class AccountbalancebaseIn(BaseModel):
+class AccountbalanceBaseIn(BaseModel):
     id: Optional[str] = None
     balance: Optional[str] = None
     type: Optional[str] = None
     name: Optional[str] = None
 
-class AccountbalancebaseOut(BaseModel):
+class AccountbalanceBaseOut(BaseModel):
     id: Optional[str] = None
     balance: Optional[str] = None
     type: Optional[str] = None
     name: Optional[str] = None
 
-class AccountbalancebaseUpdate(BaseModel):
+class AccountbalanceBaseUpdate(BaseModel):
     id: Optional[str] = None
     balance: Optional[str] = None
     type: Optional[str] = None
     name: Optional[str] = None
 
-class AccountbalancebaseDb(BaseModel):
+class AccountbalanceBaseDb(BaseModel):
     id: Optional[str] = None
     balance: Optional[str] = None
     type: Optional[str] = None

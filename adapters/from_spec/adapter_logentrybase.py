@@ -1,10 +1,10 @@
 # Adapter stubs for Logentrybase
-from schemas.from_spec.logentrybase import LogentrybaseIn, LogentrybaseOut, LogentrybaseUpdate, LogentrybaseDb
+from schemas.from_spec.logentrybase import LogentryBaseIn, LogentryBaseOut, LogentryBaseUpdate, LogentryBaseDb
 
-def convert_sdk_to_logentrybaseout(sdk_obj):
+def convert_sdk_to_logentryBaseOut(sdk_obj):
     # TODO
-    return LogentrybaseOut()
+    return LogentryBaseOut()
 
-def convert_logentrybasein_to_sdk(model):
+def convert_logentryBaseIn_to_sdk(model):
     # TODO
     return None

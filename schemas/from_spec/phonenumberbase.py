@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class PhonenumberbaseIn(BaseModel):
+class PhonenumberBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     number: Optional[str] = None
@@ -11,7 +11,7 @@ class PhonenumberbaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class PhonenumberbaseOut(BaseModel):
+class PhonenumberBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     number: Optional[str] = None
@@ -20,7 +20,7 @@ class PhonenumberbaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class PhonenumberbaseUpdate(BaseModel):
+class PhonenumberBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     number: Optional[str] = None
@@ -29,7 +29,7 @@ class PhonenumberbaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class PhonenumberbaseDb(BaseModel):
+class PhonenumberBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     number: Optional[str] = None

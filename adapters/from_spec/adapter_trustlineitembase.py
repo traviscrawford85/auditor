@@ -1,10 +1,10 @@
 # Adapter stubs for Trustlineitembase
-from schemas.from_spec.trustlineitembase import TrustlineitembaseIn, TrustlineitembaseOut, TrustlineitembaseUpdate, TrustlineitembaseDb
+from schemas.from_spec.trustlineitembase import TrustlineitemBaseIn, TrustlineitemBaseOut, TrustlineitemBaseUpdate, TrustlineitemBaseDb
 
-def convert_sdk_to_trustlineitembaseout(sdk_obj):
+def convert_sdk_to_trustlineitemBaseOut(sdk_obj):
     # TODO
-    return TrustlineitembaseOut()
+    return TrustlineitemBaseOut()
 
-def convert_trustlineitembasein_to_sdk(model):
+def convert_trustlineitemBaseIn_to_sdk(model):
     # TODO
     return None

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class TextsnippetshowIn(BaseModel):
+class TextsnippetShowIn(BaseModel):
     """Incoming model for creating a Textsnippetshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class TextsnippetshowOut(BaseModel):
     # TODO: Add fields
 
 
-class TextsnippetshowUpdate(BaseModel):
+class TextsnippetShowUpdate(BaseModel):
     """Update model for patching a Textsnippetshow"""
     # TODO: Add fields
 

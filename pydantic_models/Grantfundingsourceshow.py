@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class GrantfundingsourceshowIn(BaseModel):
+class GrantfundingsourceShowIn(BaseModel):
     """Incoming model for creating a Grantfundingsourceshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class GrantfundingsourceshowOut(BaseModel):
     # TODO: Add fields
 
 
-class GrantfundingsourceshowUpdate(BaseModel):
+class GrantfundingsourceShowUpdate(BaseModel):
     """Update model for patching a Grantfundingsourceshow"""
     # TODO: Add fields
 

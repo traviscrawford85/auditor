@@ -1,10 +1,10 @@
 # Adapter stubs for Medicalbillbase
-from schemas.from_spec.medicalbillbase import MedicalbillbaseIn, MedicalbillbaseOut, MedicalbillbaseUpdate, MedicalbillbaseDb
+from schemas.from_spec.medicalbillbase import MedicalbillBaseIn, MedicalbillBaseOut, MedicalbillBaseUpdate, MedicalbillBaseDb
 
-def convert_sdk_to_medicalbillbaseout(sdk_obj):
+def convert_sdk_to_medicalbillBaseOut(sdk_obj):
     # TODO
-    return MedicalbillbaseOut()
+    return MedicalbillBaseOut()
 
-def convert_medicalbillbasein_to_sdk(model):
+def convert_medicalbillBaseIn_to_sdk(model):
     # TODO
     return None

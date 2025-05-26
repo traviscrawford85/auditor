@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class UtbmscodebaseIn(BaseModel):
+class UtbmscodeBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -13,7 +13,7 @@ class UtbmscodebaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class UtbmscodebaseOut(BaseModel):
+class UtbmscodeBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -24,7 +24,7 @@ class UtbmscodebaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class UtbmscodebaseUpdate(BaseModel):
+class UtbmscodeBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -35,7 +35,7 @@ class UtbmscodebaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class UtbmscodebaseDb(BaseModel):
+class UtbmscodeBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None

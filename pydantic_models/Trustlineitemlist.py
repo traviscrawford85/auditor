@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class TrustlineitemlistIn(BaseModel):
+class TrustlineitemListIn(BaseModel):
     """Incoming model for creating a Trustlineitemlist"""
     # TODO: Add fields
 

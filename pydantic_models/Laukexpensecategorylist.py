@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class LaukexpensecategorylistIn(BaseModel):
+class LaukexpensecategoryListIn(BaseModel):
     """Incoming model for creating a Laukexpensecategorylist"""
     # TODO: Add fields
 

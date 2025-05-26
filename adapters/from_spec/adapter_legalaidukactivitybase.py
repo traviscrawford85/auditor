@@ -1,10 +1,10 @@
 # Adapter stubs for Legalaidukactivitybase
-from schemas.from_spec.legalaidukactivitybase import LegalaidukactivitybaseIn, LegalaidukactivitybaseOut, LegalaidukactivitybaseUpdate, LegalaidukactivitybaseDb
+from schemas.from_spec.legalaidukactivitybase import LegalaidukactivityBaseIn, LegalaidukactivityBaseOut, LegalaidukactivityBaseUpdate, LegalaidukactivityBaseDb
 
-def convert_sdk_to_legalaidukactivitybaseout(sdk_obj):
+def convert_sdk_to_legalaidukactivityBaseOut(sdk_obj):
     # TODO
-    return LegalaidukactivitybaseOut()
+    return LegalaidukactivityBaseOut()
 
-def convert_legalaidukactivitybasein_to_sdk(model):
+def convert_legalaidukactivityBaseIn_to_sdk(model):
     # TODO
     return None

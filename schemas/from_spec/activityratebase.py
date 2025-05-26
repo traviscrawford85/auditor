@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class ActivityratebaseIn(BaseModel):
+class ActivityrateBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     rate: Optional[str] = None
@@ -12,7 +12,7 @@ class ActivityratebaseIn(BaseModel):
     contact_id: Optional[str] = None
     co_counsel_contact_id: Optional[str] = None
 
-class ActivityratebaseOut(BaseModel):
+class ActivityrateBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     rate: Optional[str] = None
@@ -22,7 +22,7 @@ class ActivityratebaseOut(BaseModel):
     contact_id: Optional[str] = None
     co_counsel_contact_id: Optional[str] = None
 
-class ActivityratebaseUpdate(BaseModel):
+class ActivityrateBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     rate: Optional[str] = None
@@ -32,7 +32,7 @@ class ActivityratebaseUpdate(BaseModel):
     contact_id: Optional[str] = None
     co_counsel_contact_id: Optional[str] = None
 
-class ActivityratebaseDb(BaseModel):
+class ActivityrateBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     rate: Optional[str] = None

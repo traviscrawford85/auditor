@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class CliopaymentslinkbaseIn(BaseModel):
+class CliopaymentslinkBaseIn(BaseModel):
     active: Optional[str] = None
     amount: Optional[str] = None
     created_at: Optional[str] = None
@@ -16,7 +16,7 @@ class CliopaymentslinkbaseIn(BaseModel):
     redirect_url: Optional[str] = None
     url: Optional[str] = None
 
-class CliopaymentslinkbaseOut(BaseModel):
+class CliopaymentslinkBaseOut(BaseModel):
     active: Optional[str] = None
     amount: Optional[str] = None
     created_at: Optional[str] = None
@@ -30,7 +30,7 @@ class CliopaymentslinkbaseOut(BaseModel):
     redirect_url: Optional[str] = None
     url: Optional[str] = None
 
-class CliopaymentslinkbaseUpdate(BaseModel):
+class CliopaymentslinkBaseUpdate(BaseModel):
     active: Optional[str] = None
     amount: Optional[str] = None
     created_at: Optional[str] = None
@@ -44,7 +44,7 @@ class CliopaymentslinkbaseUpdate(BaseModel):
     redirect_url: Optional[str] = None
     url: Optional[str] = None
 
-class CliopaymentslinkbaseDb(BaseModel):
+class CliopaymentslinkBaseDb(BaseModel):
     active: Optional[str] = None
     amount: Optional[str] = None
     created_at: Optional[str] = None

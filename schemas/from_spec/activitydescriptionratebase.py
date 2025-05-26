@@ -2,25 +2,25 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class ActivitydescriptionratebaseIn(BaseModel):
+class ActivitydescriptionrateBaseIn(BaseModel):
     amount: Optional[str] = None
     non_billable_amount: Optional[str] = None
     type: Optional[str] = None
     hierarchy: Optional[str] = None
 
-class ActivitydescriptionratebaseOut(BaseModel):
+class ActivitydescriptionrateBaseOut(BaseModel):
     amount: Optional[str] = None
     non_billable_amount: Optional[str] = None
     type: Optional[str] = None
     hierarchy: Optional[str] = None
 
-class ActivitydescriptionratebaseUpdate(BaseModel):
+class ActivitydescriptionrateBaseUpdate(BaseModel):
     amount: Optional[str] = None
     non_billable_amount: Optional[str] = None
     type: Optional[str] = None
     hierarchy: Optional[str] = None
 
-class ActivitydescriptionratebaseDb(BaseModel):
+class ActivitydescriptionrateBaseDb(BaseModel):
     amount: Optional[str] = None
     non_billable_amount: Optional[str] = None
     type: Optional[str] = None

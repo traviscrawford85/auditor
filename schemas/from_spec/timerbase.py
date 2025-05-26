@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class TimerbaseIn(BaseModel):
+class TimerBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     start_time: Optional[str] = None
@@ -10,7 +10,7 @@ class TimerbaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class TimerbaseOut(BaseModel):
+class TimerBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     start_time: Optional[str] = None
@@ -18,7 +18,7 @@ class TimerbaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class TimerbaseUpdate(BaseModel):
+class TimerBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     start_time: Optional[str] = None
@@ -26,7 +26,7 @@ class TimerbaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class TimerbaseDb(BaseModel):
+class TimerBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     start_time: Optional[str] = None

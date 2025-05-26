@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class LegalaidukmatterbaseIn(BaseModel):
+class LegalaidukmatterBaseIn(BaseModel):
     access_point: Optional[str] = None
     laa_office_number: Optional[str] = None
     ait_hearing_centre: Optional[str] = None
@@ -89,7 +89,7 @@ class LegalaidukmatterbaseIn(BaseModel):
     user_type: Optional[str] = None
     youth_court: Optional[str] = None
 
-class LegalaidukmatterbaseOut(BaseModel):
+class LegalaidukmatterBaseOut(BaseModel):
     access_point: Optional[str] = None
     laa_office_number: Optional[str] = None
     ait_hearing_centre: Optional[str] = None
@@ -176,7 +176,7 @@ class LegalaidukmatterbaseOut(BaseModel):
     user_type: Optional[str] = None
     youth_court: Optional[str] = None
 
-class LegalaidukmatterbaseUpdate(BaseModel):
+class LegalaidukmatterBaseUpdate(BaseModel):
     access_point: Optional[str] = None
     laa_office_number: Optional[str] = None
     ait_hearing_centre: Optional[str] = None
@@ -263,7 +263,7 @@ class LegalaidukmatterbaseUpdate(BaseModel):
     user_type: Optional[str] = None
     youth_court: Optional[str] = None
 
-class LegalaidukmatterbaseDb(BaseModel):
+class LegalaidukmatterBaseDb(BaseModel):
     access_point: Optional[str] = None
     laa_office_number: Optional[str] = None
     ait_hearing_centre: Optional[str] = None

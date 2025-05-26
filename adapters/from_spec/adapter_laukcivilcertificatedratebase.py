@@ -1,10 +1,10 @@
 # Adapter stubs for Laukcivilcertificatedratebase
-from schemas.from_spec.laukcivilcertificatedratebase import LaukcivilcertificatedratebaseIn, LaukcivilcertificatedratebaseOut, LaukcivilcertificatedratebaseUpdate, LaukcivilcertificatedratebaseDb
+from schemas.from_spec.laukcivilcertificatedratebase import LaukcivilcertificatedrateBaseIn, LaukcivilcertificatedrateBaseOut, LaukcivilcertificatedrateBaseUpdate, LaukcivilcertificatedrateBaseDb
 
-def convert_sdk_to_laukcivilcertificatedratebaseout(sdk_obj):
+def convert_sdk_to_laukcivilcertificatedrateBaseOut(sdk_obj):
     # TODO
-    return LaukcivilcertificatedratebaseOut()
+    return LaukcivilcertificatedrateBaseOut()
 
-def convert_laukcivilcertificatedratebasein_to_sdk(model):
+def convert_laukcivilcertificatedrateBaseIn_to_sdk(model):
     # TODO
     return None

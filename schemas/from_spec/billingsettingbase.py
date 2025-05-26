@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class BillingsettingbaseIn(BaseModel):
+class BillingsettingBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     rounded_duration: Optional[str] = None
@@ -23,7 +23,7 @@ class BillingsettingbaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class BillingsettingbaseOut(BaseModel):
+class BillingsettingBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     rounded_duration: Optional[str] = None
@@ -44,7 +44,7 @@ class BillingsettingbaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class BillingsettingbaseUpdate(BaseModel):
+class BillingsettingBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     rounded_duration: Optional[str] = None
@@ -65,7 +65,7 @@ class BillingsettingbaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class BillingsettingbaseDb(BaseModel):
+class BillingsettingBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     rounded_duration: Optional[str] = None

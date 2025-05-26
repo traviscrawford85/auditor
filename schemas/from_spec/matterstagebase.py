@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class MatterstagebaseIn(BaseModel):
+class MatterstageBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     practice_area_id: Optional[str] = None
@@ -11,7 +11,7 @@ class MatterstagebaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class MatterstagebaseOut(BaseModel):
+class MatterstageBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     practice_area_id: Optional[str] = None
@@ -20,7 +20,7 @@ class MatterstagebaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class MatterstagebaseUpdate(BaseModel):
+class MatterstageBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     practice_area_id: Optional[str] = None
@@ -29,7 +29,7 @@ class MatterstagebaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class MatterstagebaseDb(BaseModel):
+class MatterstageBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     practice_area_id: Optional[str] = None

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class ActivitybaseIn(BaseModel):
+class ActivityBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     type: Optional[str] = None
@@ -28,7 +28,7 @@ class ActivitybaseIn(BaseModel):
     tax_setting: Optional[str] = None
     currency: Optional[str] = None
 
-class ActivitybaseOut(BaseModel):
+class ActivityBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     type: Optional[str] = None
@@ -54,7 +54,7 @@ class ActivitybaseOut(BaseModel):
     tax_setting: Optional[str] = None
     currency: Optional[str] = None
 
-class ActivitybaseUpdate(BaseModel):
+class ActivityBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     type: Optional[str] = None
@@ -80,7 +80,7 @@ class ActivitybaseUpdate(BaseModel):
     tax_setting: Optional[str] = None
     currency: Optional[str] = None
 
-class ActivitybaseDb(BaseModel):
+class ActivityBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     type: Optional[str] = None

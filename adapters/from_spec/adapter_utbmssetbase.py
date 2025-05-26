@@ -1,10 +1,10 @@
 # Adapter stubs for Utbmssetbase
-from schemas.from_spec.utbmssetbase import UtbmssetbaseIn, UtbmssetbaseOut, UtbmssetbaseUpdate, UtbmssetbaseDb
+from schemas.from_spec.utbmssetbase import UtbmssetBaseIn, UtbmssetBaseOut, UtbmssetBaseUpdate, UtbmssetBaseDb
 
-def convert_sdk_to_utbmssetbaseout(sdk_obj):
+def convert_sdk_to_utbmssetBaseOut(sdk_obj):
     # TODO
-    return UtbmssetbaseOut()
+    return UtbmssetBaseOut()
 
-def convert_utbmssetbasein_to_sdk(model):
+def convert_utbmssetBaseIn_to_sdk(model):
     # TODO
     return None

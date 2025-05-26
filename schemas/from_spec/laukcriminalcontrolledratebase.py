@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class LaukcriminalcontrolledratebaseIn(BaseModel):
+class LaukcriminalcontrolledrateBaseIn(BaseModel):
     id: Optional[str] = None
     activity: Optional[str] = None
     activity_type: Optional[str] = None
@@ -24,7 +24,7 @@ class LaukcriminalcontrolledratebaseIn(BaseModel):
     solicitor_type: Optional[str] = None
     updated_at: Optional[str] = None
 
-class LaukcriminalcontrolledratebaseOut(BaseModel):
+class LaukcriminalcontrolledrateBaseOut(BaseModel):
     id: Optional[str] = None
     activity: Optional[str] = None
     activity_type: Optional[str] = None
@@ -46,7 +46,7 @@ class LaukcriminalcontrolledratebaseOut(BaseModel):
     solicitor_type: Optional[str] = None
     updated_at: Optional[str] = None
 
-class LaukcriminalcontrolledratebaseUpdate(BaseModel):
+class LaukcriminalcontrolledrateBaseUpdate(BaseModel):
     id: Optional[str] = None
     activity: Optional[str] = None
     activity_type: Optional[str] = None
@@ -68,7 +68,7 @@ class LaukcriminalcontrolledratebaseUpdate(BaseModel):
     solicitor_type: Optional[str] = None
     updated_at: Optional[str] = None
 
-class LaukcriminalcontrolledratebaseDb(BaseModel):
+class LaukcriminalcontrolledrateBaseDb(BaseModel):
     id: Optional[str] = None
     activity: Optional[str] = None
     activity_type: Optional[str] = None

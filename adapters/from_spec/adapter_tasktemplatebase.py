@@ -1,10 +1,10 @@
 # Adapter stubs for Tasktemplatebase
-from schemas.from_spec.tasktemplatebase import TasktemplatebaseIn, TasktemplatebaseOut, TasktemplatebaseUpdate, TasktemplatebaseDb
+from schemas.from_spec.tasktemplatebase import TasktemplateBaseIn, TasktemplateBaseOut, TasktemplateBaseUpdate, TasktemplateBaseDb
 
-def convert_sdk_to_tasktemplatebaseout(sdk_obj):
+def convert_sdk_to_tasktemplateBaseOut(sdk_obj):
     # TODO
-    return TasktemplatebaseOut()
+    return TasktemplateBaseOut()
 
-def convert_tasktemplatebasein_to_sdk(model):
+def convert_tasktemplateBaseIn_to_sdk(model):
     # TODO
     return None

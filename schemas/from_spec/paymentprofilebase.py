@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class PaymentprofilebaseIn(BaseModel):
+class PaymentprofileBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -16,7 +16,7 @@ class PaymentprofilebaseIn(BaseModel):
     interest_period: Optional[str] = None
     interest_type: Optional[str] = None
 
-class PaymentprofilebaseOut(BaseModel):
+class PaymentprofileBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -30,7 +30,7 @@ class PaymentprofilebaseOut(BaseModel):
     interest_period: Optional[str] = None
     interest_type: Optional[str] = None
 
-class PaymentprofilebaseUpdate(BaseModel):
+class PaymentprofileBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -44,7 +44,7 @@ class PaymentprofilebaseUpdate(BaseModel):
     interest_period: Optional[str] = None
     interest_type: Optional[str] = None
 
-class PaymentprofilebaseDb(BaseModel):
+class PaymentprofileBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None

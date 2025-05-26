@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class EmailaddresslistIn(BaseModel):
+class EmailaddressListIn(BaseModel):
     """Incoming model for creating a Emailaddresslist"""
     # TODO: Add fields
 

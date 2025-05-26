@@ -2,19 +2,19 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class MattercustomratebaseIn(BaseModel):
+class MattercustomrateBaseIn(BaseModel):
     type: Optional[str] = None
     on_invoice: Optional[str] = None
 
-class MattercustomratebaseOut(BaseModel):
+class MattercustomrateBaseOut(BaseModel):
     type: Optional[str] = None
     on_invoice: Optional[str] = None
 
-class MattercustomratebaseUpdate(BaseModel):
+class MattercustomrateBaseUpdate(BaseModel):
     type: Optional[str] = None
     on_invoice: Optional[str] = None
 
-class MattercustomratebaseDb(BaseModel):
+class MattercustomrateBaseDb(BaseModel):
     type: Optional[str] = None
     on_invoice: Optional[str] = None
 

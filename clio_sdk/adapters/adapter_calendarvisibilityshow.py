@@ -1,9 +1,11 @@
 # Adapter for calendarvisibilityshow
 from clio_sdk.models.calendarvisibilityshow import CalendarvisibilityshowIn, CalendarvisibilityshowOut, CalendarvisibilityshowUpdate, CalendarvisibilityshowDb
-from clio_client.models import calendar_visibility_show
+from clio_client.models.calendar_visibility_show import CalendarVisibilityShow
 
-def convert_sdk_to_calendarvisibilityshowout(src: calendar_visibility_show) -> CalendarvisibilityshowOut:
-    return CalendarvisibilityshowOut(**src.dict())
+def convert_sdk_to_calendarvisibilityshowout(src: CalendarVisibilityShow) -> CalendarvisibilityshowOut:
+    """Converts a clio_client model to clio_sdk model."""
+    return CalendarvisibilityshowOut(**src.model_dump())
 
-def convert_calendarvisibilityshowin_to_sdk(src: CalendarvisibilityshowIn) -> calendar_visibility_show:
-    return calendar_visibility_show(**src.dict())
+def convert_calendarvisibilityshowin_to_sdk(src: CalendarvisibilityshowIn) -> CalendarVisibilityShow:
+    """Converts a clio_sdk model to clio_client model."""
+    return CalendarVisibilityShow(**src.model_dump())

@@ -1,10 +1,10 @@
 # Adapter stubs for Lineitemtotalsbase
-from schemas.from_spec.lineitemtotalsbase import LineitemtotalsbaseIn, LineitemtotalsbaseOut, LineitemtotalsbaseUpdate, LineitemtotalsbaseDb
+from schemas.from_spec.lineitemtotalsbase import LineitemtotalsBaseIn, LineitemtotalsBaseOut, LineitemtotalsBaseUpdate, LineitemtotalsBaseDb
 
-def convert_sdk_to_lineitemtotalsbaseout(sdk_obj):
+def convert_sdk_to_lineitemtotalsBaseOut(sdk_obj):
     # TODO
-    return LineitemtotalsbaseOut()
+    return LineitemtotalsBaseOut()
 
-def convert_lineitemtotalsbasein_to_sdk(model):
+def convert_lineitemtotalsBaseIn_to_sdk(model):
     # TODO
     return None

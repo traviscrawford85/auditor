@@ -1,10 +1,10 @@
 # Adapter stubs for Grantbase
-from schemas.from_spec.grantbase import GrantbaseIn, GrantbaseOut, GrantbaseUpdate, GrantbaseDb
+from schemas.from_spec.grantbase import GrantBaseIn, GrantBaseOut, GrantBaseUpdate, GrantBaseDb
 
-def convert_sdk_to_grantbaseout(sdk_obj):
+def convert_sdk_to_grantBaseOut(sdk_obj):
     # TODO
-    return GrantbaseOut()
+    return GrantBaseOut()
 
-def convert_grantbasein_to_sdk(model):
+def convert_grantBaseIn_to_sdk(model):
     # TODO
     return None

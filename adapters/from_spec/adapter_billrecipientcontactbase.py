@@ -1,10 +1,10 @@
 # Adapter stubs for Billrecipientcontactbase
-from schemas.from_spec.billrecipientcontactbase import BillrecipientcontactbaseIn, BillrecipientcontactbaseOut, BillrecipientcontactbaseUpdate, BillrecipientcontactbaseDb
+from schemas.from_spec.billrecipientcontactbase import BillrecipientcontactBaseIn, BillrecipientcontactBaseOut, BillrecipientcontactBaseUpdate, BillrecipientcontactBaseDb
 
-def convert_sdk_to_billrecipientcontactbaseout(sdk_obj):
+def convert_sdk_to_billrecipientcontactBaseOut(sdk_obj):
     # TODO
-    return BillrecipientcontactbaseOut()
+    return BillrecipientcontactBaseOut()
 
-def convert_billrecipientcontactbasein_to_sdk(model):
+def convert_billrecipientcontactBaseIn_to_sdk(model):
     # TODO
     return None

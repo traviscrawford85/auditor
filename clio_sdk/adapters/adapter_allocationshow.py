@@ -1,9 +1,11 @@
 # Adapter for allocationshow
 from clio_sdk.models.allocationshow import AllocationshowIn, AllocationshowOut, AllocationshowUpdate, AllocationshowDb
-from clio_client.models import allocation_show
+from clio_client.models.allocation_show import AllocationShow
 
-def convert_sdk_to_allocationshowout(src: allocation_show) -> AllocationshowOut:
-    return AllocationshowOut(**src.dict())
+def convert_sdk_to_allocationshowout(src: AllocationShow) -> AllocationshowOut:
+    """Converts a clio_client model to clio_sdk model."""
+    return AllocationshowOut(**src.model_dump())
 
-def convert_allocationshowin_to_sdk(src: AllocationshowIn) -> allocation_show:
-    return allocation_show(**src.dict())
+def convert_allocationshowin_to_sdk(src: AllocationshowIn) -> AllocationShow:
+    """Converts a clio_sdk model to clio_client model."""
+    return AllocationShow(**src.model_dump())

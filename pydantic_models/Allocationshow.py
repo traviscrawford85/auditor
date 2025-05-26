@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class AllocationshowIn(BaseModel):
+class AllocationShowIn(BaseModel):
     """Incoming model for creating a Allocationshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class AllocationshowOut(BaseModel):
     # TODO: Add fields
 
 
-class AllocationshowUpdate(BaseModel):
+class AllocationShowUpdate(BaseModel):
     """Update model for patching a Allocationshow"""
     # TODO: Add fields
 

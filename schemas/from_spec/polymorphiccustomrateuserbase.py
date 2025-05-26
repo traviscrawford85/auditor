@@ -2,25 +2,25 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class PolymorphiccustomrateuserbaseIn(BaseModel):
+class PolymorphiccustomrateuserBaseIn(BaseModel):
     enabled: Optional[str] = None
     etag: Optional[str] = None
     id: Optional[str] = None
     name: Optional[str] = None
 
-class PolymorphiccustomrateuserbaseOut(BaseModel):
+class PolymorphiccustomrateuserBaseOut(BaseModel):
     enabled: Optional[str] = None
     etag: Optional[str] = None
     id: Optional[str] = None
     name: Optional[str] = None
 
-class PolymorphiccustomrateuserbaseUpdate(BaseModel):
+class PolymorphiccustomrateuserBaseUpdate(BaseModel):
     enabled: Optional[str] = None
     etag: Optional[str] = None
     id: Optional[str] = None
     name: Optional[str] = None
 
-class PolymorphiccustomrateuserbaseDb(BaseModel):
+class PolymorphiccustomrateuserBaseDb(BaseModel):
     enabled: Optional[str] = None
     etag: Optional[str] = None
     id: Optional[str] = None

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class CliopaymentspaymentbaseIn(BaseModel):
+class CliopaymentspaymentBaseIn(BaseModel):
     amount: Optional[str] = None
     confirmation_number: Optional[str] = None
     created_at: Optional[str] = None
@@ -14,7 +14,7 @@ class CliopaymentspaymentbaseIn(BaseModel):
     state: Optional[str] = None
     updated_at: Optional[str] = None
 
-class CliopaymentspaymentbaseOut(BaseModel):
+class CliopaymentspaymentBaseOut(BaseModel):
     amount: Optional[str] = None
     confirmation_number: Optional[str] = None
     created_at: Optional[str] = None
@@ -26,7 +26,7 @@ class CliopaymentspaymentbaseOut(BaseModel):
     state: Optional[str] = None
     updated_at: Optional[str] = None
 
-class CliopaymentspaymentbaseUpdate(BaseModel):
+class CliopaymentspaymentBaseUpdate(BaseModel):
     amount: Optional[str] = None
     confirmation_number: Optional[str] = None
     created_at: Optional[str] = None
@@ -38,7 +38,7 @@ class CliopaymentspaymentbaseUpdate(BaseModel):
     state: Optional[str] = None
     updated_at: Optional[str] = None
 
-class CliopaymentspaymentbaseDb(BaseModel):
+class CliopaymentspaymentBaseDb(BaseModel):
     amount: Optional[str] = None
     confirmation_number: Optional[str] = None
     created_at: Optional[str] = None

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class CustomfieldshowIn(BaseModel):
+class CustomfieldShowIn(BaseModel):
     """Incoming model for creating a Customfieldshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class CustomfieldshowOut(BaseModel):
     # TODO: Add fields
 
 
-class CustomfieldshowUpdate(BaseModel):
+class CustomfieldShowUpdate(BaseModel):
     """Update model for patching a Customfieldshow"""
     # TODO: Add fields
 

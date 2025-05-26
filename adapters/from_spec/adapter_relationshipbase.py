@@ -1,10 +1,10 @@
 # Adapter stubs for Relationshipbase
-from schemas.from_spec.relationshipbase import RelationshipbaseIn, RelationshipbaseOut, RelationshipbaseUpdate, RelationshipbaseDb
+from schemas.from_spec.relationshipbase import RelationshipBaseIn, RelationshipBaseOut, RelationshipBaseUpdate, RelationshipBaseDb
 
-def convert_sdk_to_relationshipbaseout(sdk_obj):
+def convert_sdk_to_relationshipBaseOut(sdk_obj):
     # TODO
-    return RelationshipbaseOut()
+    return RelationshipBaseOut()
 
-def convert_relationshipbasein_to_sdk(model):
+def convert_relationshipBaseIn_to_sdk(model):
     # TODO
     return None

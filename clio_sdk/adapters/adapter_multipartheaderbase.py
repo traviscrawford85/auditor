@@ -1,9 +1,11 @@
 # Adapter for multipartheaderbase
-from clio_sdk.models.multipartheaderbase import MultipartheaderbaseIn, MultipartheaderbaseOut, MultipartheaderbaseUpdate, MultipartheaderbaseDb
-from clio_client.models import multipart_header_base
+from clio_sdk.models.multipartheaderbase import MultipartheaderBaseIn, MultipartheaderbaseOut, MultipartheaderbaseUpdate, MultipartheaderbaseDb
+from clio_client.models.multipart_header_base import MultipartHeaderBase
 
-def convert_sdk_to_multipartheaderbaseout(src: multipart_header_base) -> MultipartheaderbaseOut:
-    return MultipartheaderbaseOut(**src.dict())
+def convert_sdk_to_multipartheaderbaseout(src: MultipartHeaderBase) -> MultipartheaderbaseOut:
+    """Converts a clio_client model to clio_sdk model."""
+    return MultipartheaderbaseOut(**src.model_dump())
 
-def convert_multipartheaderbasein_to_sdk(src: MultipartheaderbaseIn) -> multipart_header_base:
-    return multipart_header_base(**src.dict())
+def convert_multipartheaderbasein_to_sdk(src: MultipartheaderBaseIn) -> MultipartHeaderBase:
+    """Converts a clio_sdk model to clio_client model."""
+    return MultipartHeaderBase(**src.model_dump())

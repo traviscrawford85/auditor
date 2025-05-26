@@ -1,10 +1,10 @@
 # Adapter stubs for Contactbase
-from schemas.from_spec.contactbase import ContactbaseIn, ContactbaseOut, ContactbaseUpdate, ContactbaseDb
+from schemas.from_spec.contactbase import ContactBaseIn, ContactBaseOut, ContactBaseUpdate, ContactBaseDb
 
-def convert_sdk_to_contactbaseout(sdk_obj):
+def convert_sdk_to_contactBaseOut(sdk_obj):
     # TODO
-    return ContactbaseOut()
+    return ContactBaseOut()
 
-def convert_contactbasein_to_sdk(model):
+def convert_contactBaseIn_to_sdk(model):
     # TODO
     return None

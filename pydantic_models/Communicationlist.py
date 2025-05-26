@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class CommunicationlistIn(BaseModel):
+class CommunicationListIn(BaseModel):
     """Incoming model for creating a Communicationlist"""
     # TODO: Add fields
 

@@ -1,10 +1,10 @@
 # Adapter stubs for Lineitembase
-from schemas.from_spec.lineitembase import LineitembaseIn, LineitembaseOut, LineitembaseUpdate, LineitembaseDb
+from schemas.from_spec.lineitembase import LineitemBaseIn, LineitemBaseOut, LineitemBaseUpdate, LineitemBaseDb
 
-def convert_sdk_to_lineitembaseout(sdk_obj):
+def convert_sdk_to_lineitemBaseOut(sdk_obj):
     # TODO
-    return LineitembaseOut()
+    return LineitemBaseOut()
 
-def convert_lineitembasein_to_sdk(model):
+def convert_lineitemBaseIn_to_sdk(model):
     # TODO
     return None

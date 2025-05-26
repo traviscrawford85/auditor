@@ -1,9 +1,11 @@
 # Adapter for expensecategorybase
-from clio_sdk.models.expensecategorybase import ExpensecategorybaseIn, ExpensecategorybaseOut, ExpensecategorybaseUpdate, ExpensecategorybaseDb
-from clio_client.models import expense_category
+from clio_sdk.models.expensecategorybase import ExpensecategoryBaseIn, ExpensecategorybaseOut, ExpensecategorybaseUpdate, ExpensecategorybaseDb
+from clio_client.models.expense_category import ExpenseCategory
 
-def convert_sdk_to_expensecategorybaseout(src: expense_category) -> ExpensecategorybaseOut:
-    return ExpensecategorybaseOut(**src.dict())
+def convert_sdk_to_expensecategorybaseout(src: ExpenseCategory) -> ExpensecategorybaseOut:
+    """Converts a clio_client model to clio_sdk model."""
+    return ExpensecategorybaseOut(**src.model_dump())
 
-def convert_expensecategorybasein_to_sdk(src: ExpensecategorybaseIn) -> expense_category:
-    return expense_category(**src.dict())
+def convert_expensecategorybasein_to_sdk(src: ExpensecategoryBaseIn) -> ExpenseCategory:
+    """Converts a clio_sdk model to clio_client model."""
+    return ExpenseCategory(**src.model_dump())

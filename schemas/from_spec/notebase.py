@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class NotebaseIn(BaseModel):
+class NoteBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     type: Optional[str] = None
@@ -13,7 +13,7 @@ class NotebaseIn(BaseModel):
     updated_at: Optional[str] = None
     time_entries_count: Optional[str] = None
 
-class NotebaseOut(BaseModel):
+class NoteBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     type: Optional[str] = None
@@ -24,7 +24,7 @@ class NotebaseOut(BaseModel):
     updated_at: Optional[str] = None
     time_entries_count: Optional[str] = None
 
-class NotebaseUpdate(BaseModel):
+class NoteBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     type: Optional[str] = None
@@ -35,7 +35,7 @@ class NotebaseUpdate(BaseModel):
     updated_at: Optional[str] = None
     time_entries_count: Optional[str] = None
 
-class NotebaseDb(BaseModel):
+class NoteBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     type: Optional[str] = None

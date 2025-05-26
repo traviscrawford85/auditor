@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class LegalaidukbillbaseIn(BaseModel):
+class LegalaidukbillBaseIn(BaseModel):
     additional_travel_payment: Optional[str] = None
     adjourned_hearing_fee: Optional[str] = None
     advocacy_costs: Optional[str] = None
@@ -47,7 +47,7 @@ class LegalaidukbillbaseIn(BaseModel):
     value_of_costs: Optional[str] = None
     waiting_time: Optional[str] = None
 
-class LegalaidukbillbaseOut(BaseModel):
+class LegalaidukbillBaseOut(BaseModel):
     additional_travel_payment: Optional[str] = None
     adjourned_hearing_fee: Optional[str] = None
     advocacy_costs: Optional[str] = None
@@ -92,7 +92,7 @@ class LegalaidukbillbaseOut(BaseModel):
     value_of_costs: Optional[str] = None
     waiting_time: Optional[str] = None
 
-class LegalaidukbillbaseUpdate(BaseModel):
+class LegalaidukbillBaseUpdate(BaseModel):
     additional_travel_payment: Optional[str] = None
     adjourned_hearing_fee: Optional[str] = None
     advocacy_costs: Optional[str] = None
@@ -137,7 +137,7 @@ class LegalaidukbillbaseUpdate(BaseModel):
     value_of_costs: Optional[str] = None
     waiting_time: Optional[str] = None
 
-class LegalaidukbillbaseDb(BaseModel):
+class LegalaidukbillBaseDb(BaseModel):
     additional_travel_payment: Optional[str] = None
     adjourned_hearing_fee: Optional[str] = None
     advocacy_costs: Optional[str] = None

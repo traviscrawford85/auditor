@@ -2,28 +2,28 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class GrantfundingsourcebaseIn(BaseModel):
+class GrantfundingsourceBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class GrantfundingsourcebaseOut(BaseModel):
+class GrantfundingsourceBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class GrantfundingsourcebaseUpdate(BaseModel):
+class GrantfundingsourceBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class GrantfundingsourcebaseDb(BaseModel):
+class GrantfundingsourceBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class ContactbaseIn(BaseModel):
+class ContactBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -32,7 +32,7 @@ class ContactbaseIn(BaseModel):
     sales_tax_number: Optional[str] = None
     currency: Optional[str] = None
 
-class ContactbaseOut(BaseModel):
+class ContactBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -62,7 +62,7 @@ class ContactbaseOut(BaseModel):
     sales_tax_number: Optional[str] = None
     currency: Optional[str] = None
 
-class ContactbaseUpdate(BaseModel):
+class ContactBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -92,7 +92,7 @@ class ContactbaseUpdate(BaseModel):
     sales_tax_number: Optional[str] = None
     currency: Optional[str] = None
 
-class ContactbaseDb(BaseModel):
+class ContactBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None

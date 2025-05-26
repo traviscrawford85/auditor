@@ -1,9 +1,11 @@
 # Adapter for mattercontactsbase
-from clio_sdk.models.mattercontactsbase import MattercontactsbaseIn, MattercontactsbaseOut, MattercontactsbaseUpdate, MattercontactsbaseDb
-from clio_client.models import matter_contacts
+from clio_sdk.models.mattercontactsbase import MattercontactsBaseIn, MattercontactsbaseOut, MattercontactsbaseUpdate, MattercontactsbaseDb
+from clio_client.models.matter_contacts import MatterContacts
 
-def convert_sdk_to_mattercontactsbaseout(src: matter_contacts) -> MattercontactsbaseOut:
-    return MattercontactsbaseOut(**src.dict())
+def convert_sdk_to_mattercontactsbaseout(src: MatterContacts) -> MattercontactsbaseOut:
+    """Converts a clio_client model to clio_sdk model."""
+    return MattercontactsbaseOut(**src.model_dump())
 
-def convert_mattercontactsbasein_to_sdk(src: MattercontactsbaseIn) -> matter_contacts:
-    return matter_contacts(**src.dict())
+def convert_mattercontactsbasein_to_sdk(src: MattercontactsBaseIn) -> MatterContacts:
+    """Converts a clio_sdk model to clio_client model."""
+    return MatterContacts(**src.model_dump())

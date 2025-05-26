@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class ReportlistIn(BaseModel):
+class ReportListIn(BaseModel):
     """Incoming model for creating a Reportlist"""
     # TODO: Add fields
 

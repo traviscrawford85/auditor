@@ -1,10 +1,10 @@
 # Adapter stubs for Creditmemobase
-from schemas.from_spec.creditmemobase import CreditmemobaseIn, CreditmemobaseOut, CreditmemobaseUpdate, CreditmemobaseDb
+from schemas.from_spec.creditmemobase import CreditmemoBaseIn, CreditmemoBaseOut, CreditmemoBaseUpdate, CreditmemoBaseDb
 
-def convert_sdk_to_creditmemobaseout(sdk_obj):
+def convert_sdk_to_creditmemoBaseOut(sdk_obj):
     # TODO
-    return CreditmemobaseOut()
+    return CreditmemoBaseOut()
 
-def convert_creditmemobasein_to_sdk(model):
+def convert_creditmemoBaseIn_to_sdk(model):
     # TODO
     return None

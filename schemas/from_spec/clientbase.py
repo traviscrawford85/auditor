@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class ClientbaseIn(BaseModel):
+class ClientBaseIn(BaseModel):
     id: Optional[str] = None
     name: Optional[str] = None
     first_name: Optional[str] = None
@@ -20,7 +20,7 @@ class ClientbaseIn(BaseModel):
     client_connect_user_id: Optional[str] = None
     date_of_birth: Optional[str] = None
 
-class ClientbaseOut(BaseModel):
+class ClientBaseOut(BaseModel):
     id: Optional[str] = None
     name: Optional[str] = None
     first_name: Optional[str] = None
@@ -38,7 +38,7 @@ class ClientbaseOut(BaseModel):
     client_connect_user_id: Optional[str] = None
     date_of_birth: Optional[str] = None
 
-class ClientbaseUpdate(BaseModel):
+class ClientBaseUpdate(BaseModel):
     id: Optional[str] = None
     name: Optional[str] = None
     first_name: Optional[str] = None
@@ -56,7 +56,7 @@ class ClientbaseUpdate(BaseModel):
     client_connect_user_id: Optional[str] = None
     date_of_birth: Optional[str] = None
 
-class ClientbaseDb(BaseModel):
+class ClientBaseDb(BaseModel):
     id: Optional[str] = None
     name: Optional[str] = None
     first_name: Optional[str] = None

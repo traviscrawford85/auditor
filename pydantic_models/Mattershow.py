@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class MattershowIn(BaseModel):
+class MatterShowIn(BaseModel):
     """Incoming model for creating a Mattershow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class MattershowOut(BaseModel):
     # TODO: Add fields
 
 
-class MattershowUpdate(BaseModel):
+class MatterShowUpdate(BaseModel):
     """Update model for patching a Mattershow"""
     # TODO: Add fields
 

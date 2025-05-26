@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class DamageshowIn(BaseModel):
+class DamageShowIn(BaseModel):
     """Incoming model for creating a Damageshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class DamageshowOut(BaseModel):
     # TODO: Add fields
 
 
-class DamageshowUpdate(BaseModel):
+class DamageShowUpdate(BaseModel):
     """Update model for patching a Damageshow"""
     # TODO: Add fields
 

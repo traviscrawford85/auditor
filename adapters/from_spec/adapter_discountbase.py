@@ -1,10 +1,10 @@
 # Adapter stubs for Discountbase
-from schemas.from_spec.discountbase import DiscountbaseIn, DiscountbaseOut, DiscountbaseUpdate, DiscountbaseDb
+from schemas.from_spec.discountbase import DiscountBaseIn, DiscountBaseOut, DiscountBaseUpdate, DiscountBaseDb
 
-def convert_sdk_to_discountbaseout(sdk_obj):
+def convert_sdk_to_discountBaseOut(sdk_obj):
     # TODO
-    return DiscountbaseOut()
+    return DiscountBaseOut()
 
-def convert_discountbasein_to_sdk(model):
+def convert_discountBaseIn_to_sdk(model):
     # TODO
     return None

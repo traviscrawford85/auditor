@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class ServicetypeshowIn(BaseModel):
+class ServicetypeShowIn(BaseModel):
     """Incoming model for creating a Servicetypeshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class ServicetypeshowOut(BaseModel):
     # TODO: Add fields
 
 
-class ServicetypeshowUpdate(BaseModel):
+class ServicetypeShowUpdate(BaseModel):
     """Update model for patching a Servicetypeshow"""
     # TODO: Add fields
 

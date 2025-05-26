@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class CreditmemoshowIn(BaseModel):
+class CreditmemoShowIn(BaseModel):
     """Incoming model for creating a Creditmemoshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class CreditmemoshowOut(BaseModel):
     # TODO: Add fields
 
 
-class CreditmemoshowUpdate(BaseModel):
+class CreditmemoShowUpdate(BaseModel):
     """Update model for patching a Creditmemoshow"""
     # TODO: Add fields
 

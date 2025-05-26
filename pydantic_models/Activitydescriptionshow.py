@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class ActivitydescriptionshowIn(BaseModel):
+class ActivitydescriptionShowIn(BaseModel):
     """Incoming model for creating a Activitydescriptionshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class ActivitydescriptionshowOut(BaseModel):
     # TODO: Add fields
 
 
-class ActivitydescriptionshowUpdate(BaseModel):
+class ActivitydescriptionShowUpdate(BaseModel):
     """Update model for patching a Activitydescriptionshow"""
     # TODO: Add fields
 

@@ -1,9 +1,11 @@
 # Adapter for trustlineitemshow
 from clio_sdk.models.trustlineitemshow import TrustlineitemshowIn, TrustlineitemshowOut, TrustlineitemshowUpdate, TrustlineitemshowDb
-from clio_client.models import trust_line_item_show
+from clio_client.models.trust_line_item_show import TrustLineItemShow
 
-def convert_sdk_to_trustlineitemshowout(src: trust_line_item_show) -> TrustlineitemshowOut:
-    return TrustlineitemshowOut(**src.dict())
+def convert_sdk_to_trustlineitemshowout(src: TrustLineItemShow) -> TrustlineitemshowOut:
+    """Converts a clio_client model to clio_sdk model."""
+    return TrustlineitemshowOut(**src.model_dump())
 
-def convert_trustlineitemshowin_to_sdk(src: TrustlineitemshowIn) -> trust_line_item_show:
-    return trust_line_item_show(**src.dict())
+def convert_trustlineitemshowin_to_sdk(src: TrustlineitemshowIn) -> TrustLineItemShow:
+    """Converts a clio_sdk model to clio_client model."""
+    return TrustLineItemShow(**src.model_dump())

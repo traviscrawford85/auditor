@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class MedicalrecordshowIn(BaseModel):
+class MedicalrecordShowIn(BaseModel):
     """Incoming model for creating a Medicalrecordshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class MedicalrecordshowOut(BaseModel):
     # TODO: Add fields
 
 
-class MedicalrecordshowUpdate(BaseModel):
+class MedicalrecordShowUpdate(BaseModel):
     """Update model for patching a Medicalrecordshow"""
     # TODO: Add fields
 

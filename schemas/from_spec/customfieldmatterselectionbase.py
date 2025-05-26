@@ -2,19 +2,19 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class CustomfieldmatterselectionbaseIn(BaseModel):
+class CustomfieldmatterselectionBaseIn(BaseModel):
     id: Optional[str] = None
     display_number: Optional[str] = None
 
-class CustomfieldmatterselectionbaseOut(BaseModel):
+class CustomfieldmatterselectionBaseOut(BaseModel):
     id: Optional[str] = None
     display_number: Optional[str] = None
 
-class CustomfieldmatterselectionbaseUpdate(BaseModel):
+class CustomfieldmatterselectionBaseUpdate(BaseModel):
     id: Optional[str] = None
     display_number: Optional[str] = None
 
-class CustomfieldmatterselectionbaseDb(BaseModel):
+class CustomfieldmatterselectionBaseDb(BaseModel):
     id: Optional[str] = None
     display_number: Optional[str] = None
 

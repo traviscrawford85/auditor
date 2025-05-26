@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class BillthemeshowIn(BaseModel):
+class BillthemeShowIn(BaseModel):
     """Incoming model for creating a Billthemeshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class BillthemeshowOut(BaseModel):
     # TODO: Add fields
 
 
-class BillthemeshowUpdate(BaseModel):
+class BillthemeShowUpdate(BaseModel):
     """Update model for patching a Billthemeshow"""
     # TODO: Add fields
 

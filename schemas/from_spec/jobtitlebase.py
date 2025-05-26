@@ -2,25 +2,25 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class JobtitlebaseIn(BaseModel):
+class JobtitleBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
     initials: Optional[str] = None
 
-class JobtitlebaseOut(BaseModel):
+class JobtitleBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
     initials: Optional[str] = None
 
-class JobtitlebaseUpdate(BaseModel):
+class JobtitleBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
     initials: Optional[str] = None
 
-class JobtitlebaseDb(BaseModel):
+class JobtitleBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None

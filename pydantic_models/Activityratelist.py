@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class ActivityratelistIn(BaseModel):
+class ActivityrateListIn(BaseModel):
     """Incoming model for creating a Activityratelist"""
     # TODO: Add fields
 

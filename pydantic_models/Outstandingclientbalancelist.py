@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class OutstandingclientbalancelistIn(BaseModel):
+class OutstandingclientbalanceListIn(BaseModel):
     """Incoming model for creating a Outstandingclientbalancelist"""
     # TODO: Add fields
 

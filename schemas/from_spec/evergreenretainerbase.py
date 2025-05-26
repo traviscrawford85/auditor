@@ -2,28 +2,28 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class EvergreenretainerbaseIn(BaseModel):
+class EvergreenretainerBaseIn(BaseModel):
     id: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
     etag: Optional[str] = None
     minimum_threshold: Optional[str] = None
 
-class EvergreenretainerbaseOut(BaseModel):
+class EvergreenretainerBaseOut(BaseModel):
     id: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
     etag: Optional[str] = None
     minimum_threshold: Optional[str] = None
 
-class EvergreenretainerbaseUpdate(BaseModel):
+class EvergreenretainerBaseUpdate(BaseModel):
     id: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
     etag: Optional[str] = None
     minimum_threshold: Optional[str] = None
 
-class EvergreenretainerbaseDb(BaseModel):
+class EvergreenretainerBaseDb(BaseModel):
     id: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None

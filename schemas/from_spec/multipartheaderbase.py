@@ -2,19 +2,19 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class MultipartheaderbaseIn(BaseModel):
+class MultipartheaderBaseIn(BaseModel):
     name: Optional[str] = None
     value: Optional[str] = None
 
-class MultipartheaderbaseOut(BaseModel):
+class MultipartheaderBaseOut(BaseModel):
     name: Optional[str] = None
     value: Optional[str] = None
 
-class MultipartheaderbaseUpdate(BaseModel):
+class MultipartheaderBaseUpdate(BaseModel):
     name: Optional[str] = None
     value: Optional[str] = None
 
-class MultipartheaderbaseDb(BaseModel):
+class MultipartheaderBaseDb(BaseModel):
     name: Optional[str] = None
     value: Optional[str] = None
 

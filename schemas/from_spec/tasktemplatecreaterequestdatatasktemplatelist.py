@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class TasktemplatecreaterequestdatatasktemplatelistIn(BaseModel):
+class TasktemplatecreaterequestdatatasktemplateListIn(BaseModel):
     id: Optional[str] = None
 
 class TasktemplatecreaterequestdatatasktemplatelistOut(BaseModel):

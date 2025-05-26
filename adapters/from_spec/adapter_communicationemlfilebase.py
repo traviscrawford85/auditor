@@ -1,10 +1,10 @@
 # Adapter stubs for Communicationemlfilebase
-from schemas.from_spec.communicationemlfilebase import CommunicationemlfilebaseIn, CommunicationemlfilebaseOut, CommunicationemlfilebaseUpdate, CommunicationemlfilebaseDb
+from schemas.from_spec.communicationemlfilebase import CommunicationemlfileBaseIn, CommunicationemlfileBaseOut, CommunicationemlfileBaseUpdate, CommunicationemlfileBaseDb
 
-def convert_sdk_to_communicationemlfilebaseout(sdk_obj):
+def convert_sdk_to_communicationemlfileBaseOut(sdk_obj):
     # TODO
-    return CommunicationemlfilebaseOut()
+    return CommunicationemlfileBaseOut()
 
-def convert_communicationemlfilebasein_to_sdk(model):
+def convert_communicationemlfileBaseIn_to_sdk(model):
     # TODO
     return None

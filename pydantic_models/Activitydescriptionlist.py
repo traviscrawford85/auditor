@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class ActivitydescriptionlistIn(BaseModel):
+class ActivitydescriptionListIn(BaseModel):
     """Incoming model for creating a Activitydescriptionlist"""
     # TODO: Add fields
 

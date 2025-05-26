@@ -1,10 +1,10 @@
 # Adapter stubs for Lienbase
-from schemas.from_spec.lienbase import LienbaseIn, LienbaseOut, LienbaseUpdate, LienbaseDb
+from schemas.from_spec.lienbase import LienBaseIn, LienBaseOut, LienBaseUpdate, LienBaseDb
 
-def convert_sdk_to_lienbaseout(sdk_obj):
+def convert_sdk_to_lienBaseOut(sdk_obj):
     # TODO
-    return LienbaseOut()
+    return LienBaseOut()
 
-def convert_lienbasein_to_sdk(model):
+def convert_lienBaseIn_to_sdk(model):
     # TODO
     return None

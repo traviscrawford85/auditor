@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class WebsitebaseIn(BaseModel):
+class WebsiteBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     address: Optional[str] = None
@@ -11,7 +11,7 @@ class WebsitebaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class WebsitebaseOut(BaseModel):
+class WebsiteBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     address: Optional[str] = None
@@ -20,7 +20,7 @@ class WebsitebaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class WebsitebaseUpdate(BaseModel):
+class WebsiteBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     address: Optional[str] = None
@@ -29,7 +29,7 @@ class WebsitebaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class WebsitebaseDb(BaseModel):
+class WebsiteBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     address: Optional[str] = None

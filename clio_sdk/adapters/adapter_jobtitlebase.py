@@ -1,9 +1,11 @@
 # Adapter for jobtitlebase
-from clio_sdk.models.jobtitlebase import JobtitlebaseIn, JobtitlebaseOut, JobtitlebaseUpdate, JobtitlebaseDb
-from clio_client.models import user_job_title
+from clio_sdk.models.jobtitlebase import JobtitleBaseIn, JobtitlebaseOut, JobtitlebaseUpdate, JobtitlebaseDb
+from clio_client.models.user_job_title import UserJobTitle
 
-def convert_sdk_to_jobtitlebaseout(src: user_job_title) -> JobtitlebaseOut:
-    return JobtitlebaseOut(**src.dict())
+def convert_sdk_to_jobtitlebaseout(src: UserJobTitle) -> JobtitlebaseOut:
+    """Converts a clio_client model to clio_sdk model."""
+    return JobtitlebaseOut(**src.model_dump())
 
-def convert_jobtitlebasein_to_sdk(src: JobtitlebaseIn) -> user_job_title:
-    return user_job_title(**src.dict())
+def convert_jobtitlebasein_to_sdk(src: JobtitleBaseIn) -> UserJobTitle:
+    """Converts a clio_sdk model to clio_client model."""
+    return UserJobTitle(**src.model_dump())

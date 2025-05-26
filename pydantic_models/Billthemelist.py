@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class BillthemelistIn(BaseModel):
+class BillthemeListIn(BaseModel):
     """Incoming model for creating a Billthemelist"""
     # TODO: Add fields
 

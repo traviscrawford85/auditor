@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class MyeventshowIn(BaseModel):
+class MyeventShowIn(BaseModel):
     """Incoming model for creating a Myeventshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class MyeventshowOut(BaseModel):
     # TODO: Add fields
 
 
-class MyeventshowUpdate(BaseModel):
+class MyeventShowUpdate(BaseModel):
     """Update model for patching a Myeventshow"""
     # TODO: Add fields
 

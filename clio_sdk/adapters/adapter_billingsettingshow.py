@@ -1,9 +1,11 @@
 # Adapter for billingsettingshow
 from clio_sdk.models.billingsettingshow import BillingsettingshowIn, BillingsettingshowOut, BillingsettingshowUpdate, BillingsettingshowDb
-from clio_client.models import billing_setting_show
+from clio_client.models.billing_setting_show import BillingSettingShow
 
-def convert_sdk_to_billingsettingshowout(src: billing_setting_show) -> BillingsettingshowOut:
-    return BillingsettingshowOut(**src.dict())
+def convert_sdk_to_billingsettingshowout(src: BillingSettingShow) -> BillingsettingshowOut:
+    """Converts a clio_client model to clio_sdk model."""
+    return BillingsettingshowOut(**src.model_dump())
 
-def convert_billingsettingshowin_to_sdk(src: BillingsettingshowIn) -> billing_setting_show:
-    return billing_setting_show(**src.dict())
+def convert_billingsettingshowin_to_sdk(src: BillingsettingshowIn) -> BillingSettingShow:
+    """Converts a clio_sdk model to clio_client model."""
+    return BillingSettingShow(**src.model_dump())

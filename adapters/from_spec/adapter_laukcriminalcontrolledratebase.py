@@ -1,10 +1,10 @@
 # Adapter stubs for Laukcriminalcontrolledratebase
-from schemas.from_spec.laukcriminalcontrolledratebase import LaukcriminalcontrolledratebaseIn, LaukcriminalcontrolledratebaseOut, LaukcriminalcontrolledratebaseUpdate, LaukcriminalcontrolledratebaseDb
+from schemas.from_spec.laukcriminalcontrolledratebase import LaukcriminalcontrolledrateBaseIn, LaukcriminalcontrolledrateBaseOut, LaukcriminalcontrolledrateBaseUpdate, LaukcriminalcontrolledrateBaseDb
 
-def convert_sdk_to_laukcriminalcontrolledratebaseout(sdk_obj):
+def convert_sdk_to_laukcriminalcontrolledrateBaseOut(sdk_obj):
     # TODO
-    return LaukcriminalcontrolledratebaseOut()
+    return LaukcriminalcontrolledrateBaseOut()
 
-def convert_laukcriminalcontrolledratebasein_to_sdk(model):
+def convert_laukcriminalcontrolledrateBaseIn_to_sdk(model):
     # TODO
     return None

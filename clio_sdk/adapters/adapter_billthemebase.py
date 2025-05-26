@@ -1,9 +1,11 @@
 # Adapter for billthemebase
-from clio_sdk.models.billthemebase import BillthemebaseIn, BillthemebaseOut, BillthemebaseUpdate, BillthemebaseDb
-from clio_client.models import bill_theme
+from clio_sdk.models.billthemebase import BillthemeBaseIn, BillthemebaseOut, BillthemebaseUpdate, BillthemebaseDb
+from clio_client.models.bill_theme import BillTheme
 
-def convert_sdk_to_billthemebaseout(src: bill_theme) -> BillthemebaseOut:
-    return BillthemebaseOut(**src.dict())
+def convert_sdk_to_billthemebaseout(src: BillTheme) -> BillthemebaseOut:
+    """Converts a clio_client model to clio_sdk model."""
+    return BillthemebaseOut(**src.model_dump())
 
-def convert_billthemebasein_to_sdk(src: BillthemebaseIn) -> bill_theme:
-    return bill_theme(**src.dict())
+def convert_billthemebasein_to_sdk(src: BillthemeBaseIn) -> BillTheme:
+    """Converts a clio_sdk model to clio_client model."""
+    return BillTheme(**src.model_dump())

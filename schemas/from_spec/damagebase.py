@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class DamagebaseIn(BaseModel):
+class DamageBaseIn(BaseModel):
     id: Optional[str] = None
     amount: Optional[str] = None
     damage_type: Optional[str] = None
@@ -11,7 +11,7 @@ class DamagebaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class DamagebaseOut(BaseModel):
+class DamageBaseOut(BaseModel):
     id: Optional[str] = None
     amount: Optional[str] = None
     damage_type: Optional[str] = None
@@ -20,7 +20,7 @@ class DamagebaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class DamagebaseUpdate(BaseModel):
+class DamageBaseUpdate(BaseModel):
     id: Optional[str] = None
     amount: Optional[str] = None
     damage_type: Optional[str] = None
@@ -29,7 +29,7 @@ class DamagebaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class DamagebaseDb(BaseModel):
+class DamageBaseDb(BaseModel):
     id: Optional[str] = None
     amount: Optional[str] = None
     damage_type: Optional[str] = None

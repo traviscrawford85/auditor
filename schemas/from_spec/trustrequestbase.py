@@ -2,25 +2,25 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class TrustrequestbaseIn(BaseModel):
+class TrustrequestBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class TrustrequestbaseOut(BaseModel):
+class TrustrequestBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class TrustrequestbaseUpdate(BaseModel):
+class TrustrequestBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class TrustrequestbaseDb(BaseModel):
+class TrustrequestBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None

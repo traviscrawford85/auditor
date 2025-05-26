@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class DocumentversionbaseIn(BaseModel):
+class DocumentversionBaseIn(BaseModel):
     id: Optional[str] = None
     document_id: Optional[str] = None
     etag: Optional[str] = None
@@ -17,7 +17,7 @@ class DocumentversionbaseIn(BaseModel):
     put_url: Optional[str] = None
     fully_uploaded: Optional[str] = None
 
-class DocumentversionbaseOut(BaseModel):
+class DocumentversionBaseOut(BaseModel):
     id: Optional[str] = None
     document_id: Optional[str] = None
     etag: Optional[str] = None
@@ -32,7 +32,7 @@ class DocumentversionbaseOut(BaseModel):
     put_url: Optional[str] = None
     fully_uploaded: Optional[str] = None
 
-class DocumentversionbaseUpdate(BaseModel):
+class DocumentversionBaseUpdate(BaseModel):
     id: Optional[str] = None
     document_id: Optional[str] = None
     etag: Optional[str] = None
@@ -47,7 +47,7 @@ class DocumentversionbaseUpdate(BaseModel):
     put_url: Optional[str] = None
     fully_uploaded: Optional[str] = None
 
-class DocumentversionbaseDb(BaseModel):
+class DocumentversionBaseDb(BaseModel):
     id: Optional[str] = None
     document_id: Optional[str] = None
     etag: Optional[str] = None

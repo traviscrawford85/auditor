@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class GrantbaseIn(BaseModel):
+class GrantBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -15,7 +15,7 @@ class GrantbaseIn(BaseModel):
     start_date: Optional[str] = None
     end_date: Optional[str] = None
 
-class GrantbaseOut(BaseModel):
+class GrantBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -28,7 +28,7 @@ class GrantbaseOut(BaseModel):
     start_date: Optional[str] = None
     end_date: Optional[str] = None
 
-class GrantbaseUpdate(BaseModel):
+class GrantBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -41,7 +41,7 @@ class GrantbaseUpdate(BaseModel):
     start_date: Optional[str] = None
     end_date: Optional[str] = None
 
-class GrantbaseDb(BaseModel):
+class GrantBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None

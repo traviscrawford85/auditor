@@ -1,10 +1,10 @@
 # Adapter stubs for Taskbase
-from schemas.from_spec.taskbase import TaskbaseIn, TaskbaseOut, TaskbaseUpdate, TaskbaseDb
+from schemas.from_spec.taskbase import TaskBaseIn, TaskBaseOut, TaskBaseUpdate, TaskBaseDb
 
-def convert_sdk_to_taskbaseout(sdk_obj):
+def convert_sdk_to_taskBaseOut(sdk_obj):
     # TODO
-    return TaskbaseOut()
+    return TaskBaseOut()
 
-def convert_taskbasein_to_sdk(model):
+def convert_taskBaseIn_to_sdk(model):
     # TODO
     return None

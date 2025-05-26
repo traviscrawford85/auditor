@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class ExpensecategoryshowIn(BaseModel):
+class ExpensecategoryShowIn(BaseModel):
     """Incoming model for creating a Expensecategoryshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class ExpensecategoryshowOut(BaseModel):
     # TODO: Add fields
 
 
-class ExpensecategoryshowUpdate(BaseModel):
+class ExpensecategoryShowUpdate(BaseModel):
     """Update model for patching a Expensecategoryshow"""
     # TODO: Add fields
 

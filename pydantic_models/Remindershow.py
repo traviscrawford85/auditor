@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class RemindershowIn(BaseModel):
+class ReminderShowIn(BaseModel):
     """Incoming model for creating a Remindershow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class RemindershowOut(BaseModel):
     # TODO: Add fields
 
 
-class RemindershowUpdate(BaseModel):
+class ReminderShowUpdate(BaseModel):
     """Update model for patching a Remindershow"""
     # TODO: Add fields
 

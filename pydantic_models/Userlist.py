@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class UserlistIn(BaseModel):
+class UserListIn(BaseModel):
     """Incoming model for creating a Userlist"""
     # TODO: Add fields
 

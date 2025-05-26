@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class GroupbaseIn(BaseModel):
+class GroupBaseIn(BaseModel):
     client_connect_user: Optional[str] = None
     etag: Optional[str] = None
     id: Optional[str] = None
@@ -10,7 +10,7 @@ class GroupbaseIn(BaseModel):
     type: Optional[str] = None
     updated_at: Optional[str] = None
 
-class GroupbaseOut(BaseModel):
+class GroupBaseOut(BaseModel):
     client_connect_user: Optional[str] = None
     etag: Optional[str] = None
     id: Optional[str] = None
@@ -18,7 +18,7 @@ class GroupbaseOut(BaseModel):
     type: Optional[str] = None
     updated_at: Optional[str] = None
 
-class GroupbaseUpdate(BaseModel):
+class GroupBaseUpdate(BaseModel):
     client_connect_user: Optional[str] = None
     etag: Optional[str] = None
     id: Optional[str] = None
@@ -26,7 +26,7 @@ class GroupbaseUpdate(BaseModel):
     type: Optional[str] = None
     updated_at: Optional[str] = None
 
-class GroupbaseDb(BaseModel):
+class GroupBaseDb(BaseModel):
     client_connect_user: Optional[str] = None
     etag: Optional[str] = None
     id: Optional[str] = None

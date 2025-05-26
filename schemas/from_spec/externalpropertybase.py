@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class ExternalpropertybaseIn(BaseModel):
+class ExternalpropertyBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -10,7 +10,7 @@ class ExternalpropertybaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class ExternalpropertybaseOut(BaseModel):
+class ExternalpropertyBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -18,7 +18,7 @@ class ExternalpropertybaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class ExternalpropertybaseUpdate(BaseModel):
+class ExternalpropertyBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -26,7 +26,7 @@ class ExternalpropertybaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class ExternalpropertybaseDb(BaseModel):
+class ExternalpropertyBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None

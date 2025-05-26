@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class GrantlistIn(BaseModel):
+class GrantListIn(BaseModel):
     """Incoming model for creating a Grantlist"""
     # TODO: Add fields
 

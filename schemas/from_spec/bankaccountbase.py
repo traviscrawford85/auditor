@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class BankaccountbaseIn(BaseModel):
+class BankaccountBaseIn(BaseModel):
     account_number: Optional[str] = None
     balance: Optional[str] = None
     bank_transactions_count: Optional[str] = None
@@ -26,7 +26,7 @@ class BankaccountbaseIn(BaseModel):
     type: Optional[str] = None
     updated_at: Optional[str] = None
 
-class BankaccountbaseOut(BaseModel):
+class BankaccountBaseOut(BaseModel):
     account_number: Optional[str] = None
     balance: Optional[str] = None
     bank_transactions_count: Optional[str] = None
@@ -50,7 +50,7 @@ class BankaccountbaseOut(BaseModel):
     type: Optional[str] = None
     updated_at: Optional[str] = None
 
-class BankaccountbaseUpdate(BaseModel):
+class BankaccountBaseUpdate(BaseModel):
     account_number: Optional[str] = None
     balance: Optional[str] = None
     bank_transactions_count: Optional[str] = None
@@ -74,7 +74,7 @@ class BankaccountbaseUpdate(BaseModel):
     type: Optional[str] = None
     updated_at: Optional[str] = None
 
-class BankaccountbaseDb(BaseModel):
+class BankaccountBaseDb(BaseModel):
     account_number: Optional[str] = None
     balance: Optional[str] = None
     bank_transactions_count: Optional[str] = None

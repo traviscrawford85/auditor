@@ -1,10 +1,10 @@
 # Adapter stubs for Relatedcontactsbase
-from schemas.from_spec.relatedcontactsbase import RelatedcontactsbaseIn, RelatedcontactsbaseOut, RelatedcontactsbaseUpdate, RelatedcontactsbaseDb
+from schemas.from_spec.relatedcontactsbase import RelatedcontactsBaseIn, RelatedcontactsBaseOut, RelatedcontactsBaseUpdate, RelatedcontactsBaseDb
 
-def convert_sdk_to_relatedcontactsbaseout(sdk_obj):
+def convert_sdk_to_relatedcontactsBaseOut(sdk_obj):
     # TODO
-    return RelatedcontactsbaseOut()
+    return RelatedcontactsBaseOut()
 
-def convert_relatedcontactsbasein_to_sdk(model):
+def convert_relatedcontactsBaseIn_to_sdk(model):
     # TODO
     return None

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class WebhookbaseIn(BaseModel):
+class WebhookBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     url: Optional[str] = None
@@ -15,7 +15,7 @@ class WebhookbaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class WebhookbaseOut(BaseModel):
+class WebhookBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     url: Optional[str] = None
@@ -28,7 +28,7 @@ class WebhookbaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class WebhookbaseUpdate(BaseModel):
+class WebhookBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     url: Optional[str] = None
@@ -41,7 +41,7 @@ class WebhookbaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class WebhookbaseDb(BaseModel):
+class WebhookBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     url: Optional[str] = None

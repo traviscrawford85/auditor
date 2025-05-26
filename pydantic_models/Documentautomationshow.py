@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class DocumentautomationshowIn(BaseModel):
+class DocumentautomationShowIn(BaseModel):
     """Incoming model for creating a Documentautomationshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class DocumentautomationshowOut(BaseModel):
     # TODO: Add fields
 
 
-class DocumentautomationshowUpdate(BaseModel):
+class DocumentautomationShowUpdate(BaseModel):
     """Update model for patching a Documentautomationshow"""
     # TODO: Add fields
 

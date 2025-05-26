@@ -1,10 +1,10 @@
 # Adapter stubs for Cliocreatorbase
-from schemas.from_spec.cliocreatorbase import CliocreatorbaseIn, CliocreatorbaseOut, CliocreatorbaseUpdate, CliocreatorbaseDb
+from schemas.from_spec.cliocreatorbase import CliocreatorBaseIn, CliocreatorBaseOut, CliocreatorBaseUpdate, CliocreatorBaseDb
 
-def convert_sdk_to_cliocreatorbaseout(sdk_obj):
+def convert_sdk_to_cliocreatorBaseOut(sdk_obj):
     # TODO
-    return CliocreatorbaseOut()
+    return CliocreatorBaseOut()
 
-def convert_cliocreatorbasein_to_sdk(model):
+def convert_cliocreatorBaseIn_to_sdk(model):
     # TODO
     return None

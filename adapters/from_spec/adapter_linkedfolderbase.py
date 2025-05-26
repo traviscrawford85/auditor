@@ -1,10 +1,10 @@
 # Adapter stubs for Linkedfolderbase
-from schemas.from_spec.linkedfolderbase import LinkedfolderbaseIn, LinkedfolderbaseOut, LinkedfolderbaseUpdate, LinkedfolderbaseDb
+from schemas.from_spec.linkedfolderbase import LinkedfolderBaseIn, LinkedfolderBaseOut, LinkedfolderBaseUpdate, LinkedfolderBaseDb
 
-def convert_sdk_to_linkedfolderbaseout(sdk_obj):
+def convert_sdk_to_linkedfolderBaseOut(sdk_obj):
     # TODO
-    return LinkedfolderbaseOut()
+    return LinkedfolderBaseOut()
 
-def convert_linkedfolderbasein_to_sdk(model):
+def convert_linkedfolderBaseIn_to_sdk(model):
     # TODO
     return None

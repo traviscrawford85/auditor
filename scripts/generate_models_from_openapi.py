@@ -9,7 +9,8 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 os.makedirs(ADAPTER_DIR, exist_ok=True)
 
 def pascal_case(name: str) -> str:
-    return "".join(word.capitalize() for word in name.split("_"))
+    # Ensures TitleCase (PascalCase) for all model class names
+    return "".join(word.capitalize() for word in name.replace("-", "_").split("_") if word)
 
 def infer_type(prop):
     t = prop.get("type", "Any")
@@ -50,7 +51,9 @@ def generate_model_class(name, fields, suffix):
     return "\n".join(lines)
 
 def write_models(base_name, fields):
-    path = os.path.join(OUTPUT_DIR, f"{base_name.lower()}.py")
+    # Use TitleCase for the filename as well
+    file_name = f"{base_name}.py"
+    path = os.path.join(OUTPUT_DIR, file_name)
     with open(path, "w") as f:
         f.write("from pydantic import BaseModel\n")
         f.write("from typing import Optional, Any, List\n")
@@ -61,10 +64,12 @@ def write_models(base_name, fields):
     print(f"✅ Model file created: {path}")
 
 def write_adapter(base_name):
-    path = os.path.join(ADAPTER_DIR, f"adapter_{base_name.lower()}.py")
+    # Use TitleCase for the filename as well
+    file_name = f"adapter_{base_name.lower()}.py"
+    path = os.path.join(ADAPTER_DIR, file_name)
     with open(path, "w") as f:
         f.write(f"# Adapter stubs for {base_name}\n")
-        f.write(f"from schemas.from_expanded.{base_name.lower()} import {base_name}In, {base_name}Out, {base_name}Update, {base_name}Db\n\n")
+        f.write(f"from schemas.from_expanded.{base_name} import {base_name}In, {base_name}Out, {base_name}Update, {base_name}Db\n\n")
         f.write(f"def convert_sdk_to_{base_name.lower()}out(sdk_obj):\n    # TODO\n    return {base_name}Out()\n\n")
         f.write(f"def convert_{base_name.lower()}in_to_sdk(model):\n    # TODO\n    return None\n")
     print(f"✅ Adapter stub created: {path}")
@@ -77,8 +82,8 @@ schemas = spec.get("components", {}).get("schemas", {})
 for name, schema in schemas.items():
     if not isinstance(schema, dict) or "properties" not in schema:
         continue
-    fields = extract_fields(schema)
     base_name = pascal_case(name)
+    fields = extract_fields(schema)
     write_models(base_name, fields)
     write_adapter(base_name)
 

@@ -2,15 +2,15 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class CommunicationemlfilebaseIn(BaseModel):
+class CommunicationemlfileBaseIn(BaseModel):
     id: Optional[str] = None
 
-class CommunicationemlfilebaseOut(BaseModel):
+class CommunicationemlfileBaseOut(BaseModel):
     id: Optional[str] = None
 
-class CommunicationemlfilebaseUpdate(BaseModel):
+class CommunicationemlfileBaseUpdate(BaseModel):
     id: Optional[str] = None
 
-class CommunicationemlfilebaseDb(BaseModel):
+class CommunicationemlfileBaseDb(BaseModel):
     id: Optional[str] = None
 

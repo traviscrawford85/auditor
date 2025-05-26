@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class ParticipantbaseIn(BaseModel):
+class ParticipantBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -15,7 +15,7 @@ class ParticipantbaseIn(BaseModel):
     initials: Optional[str] = None
     job_title_name: Optional[str] = None
 
-class ParticipantbaseOut(BaseModel):
+class ParticipantBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -28,7 +28,7 @@ class ParticipantbaseOut(BaseModel):
     initials: Optional[str] = None
     job_title_name: Optional[str] = None
 
-class ParticipantbaseUpdate(BaseModel):
+class ParticipantBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -41,7 +41,7 @@ class ParticipantbaseUpdate(BaseModel):
     initials: Optional[str] = None
     job_title_name: Optional[str] = None
 
-class ParticipantbaseDb(BaseModel):
+class ParticipantBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None

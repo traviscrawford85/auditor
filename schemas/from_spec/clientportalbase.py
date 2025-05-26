@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class ClientportalbaseIn(BaseModel):
+class ClientportalBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -10,7 +10,7 @@ class ClientportalbaseIn(BaseModel):
     unread_count: Optional[str] = None
     unread_notifiable_count: Optional[str] = None
 
-class ClientportalbaseOut(BaseModel):
+class ClientportalBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -18,7 +18,7 @@ class ClientportalbaseOut(BaseModel):
     unread_count: Optional[str] = None
     unread_notifiable_count: Optional[str] = None
 
-class ClientportalbaseUpdate(BaseModel):
+class ClientportalBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -26,7 +26,7 @@ class ClientportalbaseUpdate(BaseModel):
     unread_count: Optional[str] = None
     unread_notifiable_count: Optional[str] = None
 
-class ClientportalbaseDb(BaseModel):
+class ClientportalBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None

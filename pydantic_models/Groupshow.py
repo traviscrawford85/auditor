@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class GroupshowIn(BaseModel):
+class GroupShowIn(BaseModel):
     """Incoming model for creating a Groupshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class GroupshowOut(BaseModel):
     # TODO: Add fields
 
 
-class GroupshowUpdate(BaseModel):
+class GroupShowUpdate(BaseModel):
     """Update model for patching a Groupshow"""
     # TODO: Add fields
 

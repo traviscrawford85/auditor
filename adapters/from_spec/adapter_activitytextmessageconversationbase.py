@@ -1,10 +1,10 @@
 # Adapter stubs for Activitytextmessageconversationbase
-from schemas.from_spec.activitytextmessageconversationbase import ActivitytextmessageconversationbaseIn, ActivitytextmessageconversationbaseOut, ActivitytextmessageconversationbaseUpdate, ActivitytextmessageconversationbaseDb
+from schemas.from_spec.activitytextmessageconversationbase import ActivitytextmessageconversationBaseIn, ActivitytextmessageconversationBaseOut, ActivitytextmessageconversationBaseUpdate, ActivitytextmessageconversationBaseDb
 
-def convert_sdk_to_activitytextmessageconversationbaseout(sdk_obj):
+def convert_sdk_to_activitytextmessageconversationBaseOut(sdk_obj):
     # TODO
-    return ActivitytextmessageconversationbaseOut()
+    return ActivitytextmessageconversationBaseOut()
 
-def convert_activitytextmessageconversationbasein_to_sdk(model):
+def convert_activitytextmessageconversationBaseIn_to_sdk(model):
     # TODO
     return None

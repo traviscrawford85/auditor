@@ -1,9 +1,11 @@
 # Adapter for legalaidukmatterbase
-from clio_sdk.models.legalaidukmatterbase import LegalaidukmatterbaseIn, LegalaidukmatterbaseOut, LegalaidukmatterbaseUpdate, LegalaidukmatterbaseDb
-from clio_client.models import legal_aid_uk_matter_base
+from clio_sdk.models.legalaidukmatterbase import LegalaidukmatterBaseIn, LegalaidukmatterbaseOut, LegalaidukmatterbaseUpdate, LegalaidukmatterbaseDb
+from clio_client.models.legal_aid_uk_matter_base import LegalAidUkMatterBase
 
-def convert_sdk_to_legalaidukmatterbaseout(src: legal_aid_uk_matter_base) -> LegalaidukmatterbaseOut:
-    return LegalaidukmatterbaseOut(**src.dict())
+def convert_sdk_to_legalaidukmatterbaseout(src: LegalAidUkMatterBase) -> LegalaidukmatterbaseOut:
+    """Converts a clio_client model to clio_sdk model."""
+    return LegalaidukmatterbaseOut(**src.model_dump())
 
-def convert_legalaidukmatterbasein_to_sdk(src: LegalaidukmatterbaseIn) -> legal_aid_uk_matter_base:
-    return legal_aid_uk_matter_base(**src.dict())
+def convert_legalaidukmatterbasein_to_sdk(src: LegalaidukmatterBaseIn) -> LegalAidUkMatterBase:
+    """Converts a clio_sdk model to clio_client model."""
+    return LegalAidUkMatterBase(**src.model_dump())

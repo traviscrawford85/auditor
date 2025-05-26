@@ -1,10 +1,10 @@
 # Adapter stubs for Legalaidukmatterbase
-from schemas.from_spec.legalaidukmatterbase import LegalaidukmatterbaseIn, LegalaidukmatterbaseOut, LegalaidukmatterbaseUpdate, LegalaidukmatterbaseDb
+from schemas.from_spec.legalaidukmatterbase import LegalaidukmatterBaseIn, LegalaidukmatterBaseOut, LegalaidukmatterBaseUpdate, LegalaidukmatterBaseDb
 
-def convert_sdk_to_legalaidukmatterbaseout(sdk_obj):
+def convert_sdk_to_legalaidukmatterBaseOut(sdk_obj):
     # TODO
-    return LegalaidukmatterbaseOut()
+    return LegalaidukmatterBaseOut()
 
-def convert_legalaidukmatterbasein_to_sdk(model):
+def convert_legalaidukmatterBaseIn_to_sdk(model):
     # TODO
     return None

@@ -1,10 +1,10 @@
 # Adapter stubs for Cascadingtasktemplatebase
-from schemas.from_spec.cascadingtasktemplatebase import CascadingtasktemplatebaseIn, CascadingtasktemplatebaseOut, CascadingtasktemplatebaseUpdate, CascadingtasktemplatebaseDb
+from schemas.from_spec.cascadingtasktemplatebase import CascadingtasktemplateBaseIn, CascadingtasktemplateBaseOut, CascadingtasktemplateBaseUpdate, CascadingtasktemplateBaseDb
 
-def convert_sdk_to_cascadingtasktemplatebaseout(sdk_obj):
+def convert_sdk_to_cascadingtasktemplateBaseOut(sdk_obj):
     # TODO
-    return CascadingtasktemplatebaseOut()
+    return CascadingtasktemplateBaseOut()
 
-def convert_cascadingtasktemplatebasein_to_sdk(model):
+def convert_cascadingtasktemplateBaseIn_to_sdk(model):
     # TODO
     return None

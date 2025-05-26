@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class ConversationbaseIn(BaseModel):
+class ConversationBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     archived: Optional[str] = None
@@ -15,7 +15,7 @@ class ConversationbaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class ConversationbaseOut(BaseModel):
+class ConversationBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     archived: Optional[str] = None
@@ -28,7 +28,7 @@ class ConversationbaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class ConversationbaseUpdate(BaseModel):
+class ConversationBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     archived: Optional[str] = None
@@ -41,7 +41,7 @@ class ConversationbaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class ConversationbaseDb(BaseModel):
+class ConversationBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     archived: Optional[str] = None

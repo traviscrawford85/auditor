@@ -1,10 +1,10 @@
 # Adapter stubs for Billingsettingbase
-from schemas.from_spec.billingsettingbase import BillingsettingbaseIn, BillingsettingbaseOut, BillingsettingbaseUpdate, BillingsettingbaseDb
+from schemas.from_spec.billingsettingbase import BillingsettingBaseIn, BillingsettingBaseOut, BillingsettingBaseUpdate, BillingsettingBaseDb
 
-def convert_sdk_to_billingsettingbaseout(sdk_obj):
+def convert_sdk_to_billingsettingBaseOut(sdk_obj):
     # TODO
-    return BillingsettingbaseOut()
+    return BillingsettingBaseOut()
 
-def convert_billingsettingbasein_to_sdk(model):
+def convert_billingsettingBaseIn_to_sdk(model):
     # TODO
     return None

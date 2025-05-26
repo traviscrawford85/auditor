@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class TaskbaseIn(BaseModel):
+class TaskBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -19,7 +19,7 @@ class TaskbaseIn(BaseModel):
     updated_at: Optional[str] = None
     time_entries_count: Optional[str] = None
 
-class TaskbaseOut(BaseModel):
+class TaskBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -36,7 +36,7 @@ class TaskbaseOut(BaseModel):
     updated_at: Optional[str] = None
     time_entries_count: Optional[str] = None
 
-class TaskbaseUpdate(BaseModel):
+class TaskBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -53,7 +53,7 @@ class TaskbaseUpdate(BaseModel):
     updated_at: Optional[str] = None
     time_entries_count: Optional[str] = None
 
-class TaskbaseDb(BaseModel):
+class TaskBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None

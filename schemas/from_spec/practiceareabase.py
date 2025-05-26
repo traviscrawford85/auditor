@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class PracticeareabaseIn(BaseModel):
+class PracticeareaBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -11,7 +11,7 @@ class PracticeareabaseIn(BaseModel):
     category: Optional[str] = None
     code: Optional[str] = None
 
-class PracticeareabaseOut(BaseModel):
+class PracticeareaBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -20,7 +20,7 @@ class PracticeareabaseOut(BaseModel):
     category: Optional[str] = None
     code: Optional[str] = None
 
-class PracticeareabaseUpdate(BaseModel):
+class PracticeareaBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -29,7 +29,7 @@ class PracticeareabaseUpdate(BaseModel):
     category: Optional[str] = None
     code: Optional[str] = None
 
-class PracticeareabaseDb(BaseModel):
+class PracticeareaBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None

@@ -1,10 +1,10 @@
 # Adapter stubs for Cliopaymentslinkbase
-from schemas.from_spec.cliopaymentslinkbase import CliopaymentslinkbaseIn, CliopaymentslinkbaseOut, CliopaymentslinkbaseUpdate, CliopaymentslinkbaseDb
+from schemas.from_spec.cliopaymentslinkbase import CliopaymentslinkBaseIn, CliopaymentslinkBaseOut, CliopaymentslinkBaseUpdate, CliopaymentslinkBaseDb
 
-def convert_sdk_to_cliopaymentslinkbaseout(sdk_obj):
+def convert_sdk_to_cliopaymentslinkBaseOut(sdk_obj):
     # TODO
-    return CliopaymentslinkbaseOut()
+    return CliopaymentslinkBaseOut()
 
-def convert_cliopaymentslinkbasein_to_sdk(model):
+def convert_cliopaymentslinkBaseIn_to_sdk(model):
     # TODO
     return None

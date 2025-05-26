@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class JurisdictionbaseIn(BaseModel):
+class JurisdictionBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -14,7 +14,7 @@ class JurisdictionbaseIn(BaseModel):
     valid_subscription: Optional[str] = None
     is_local_timezone: Optional[str] = None
 
-class JurisdictionbaseOut(BaseModel):
+class JurisdictionBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -26,7 +26,7 @@ class JurisdictionbaseOut(BaseModel):
     valid_subscription: Optional[str] = None
     is_local_timezone: Optional[str] = None
 
-class JurisdictionbaseUpdate(BaseModel):
+class JurisdictionBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -38,7 +38,7 @@ class JurisdictionbaseUpdate(BaseModel):
     valid_subscription: Optional[str] = None
     is_local_timezone: Optional[str] = None
 
-class JurisdictionbaseDb(BaseModel):
+class JurisdictionBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None

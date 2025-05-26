@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class BillbaseIn(BaseModel):
+class BillBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     number: Optional[str] = None
@@ -44,7 +44,7 @@ class BillbaseIn(BaseModel):
     total_tax: Optional[str] = None
     available_state_transitions: Optional[str] = None
 
-class BillbaseOut(BaseModel):
+class BillBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     number: Optional[str] = None
@@ -86,7 +86,7 @@ class BillbaseOut(BaseModel):
     total_tax: Optional[str] = None
     available_state_transitions: Optional[str] = None
 
-class BillbaseUpdate(BaseModel):
+class BillBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     number: Optional[str] = None
@@ -128,7 +128,7 @@ class BillbaseUpdate(BaseModel):
     total_tax: Optional[str] = None
     available_state_transitions: Optional[str] = None
 
-class BillbaseDb(BaseModel):
+class BillBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     number: Optional[str] = None

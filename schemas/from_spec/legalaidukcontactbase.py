@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class LegalaidukcontactbaseIn(BaseModel):
+class LegalaidukcontactBaseIn(BaseModel):
     id: Optional[str] = None
     disability: Optional[str] = None
     disability_code: Optional[str] = None
@@ -13,7 +13,7 @@ class LegalaidukcontactbaseIn(BaseModel):
     gender_title: Optional[str] = None
     national_insurance_number: Optional[str] = None
 
-class LegalaidukcontactbaseOut(BaseModel):
+class LegalaidukcontactBaseOut(BaseModel):
     id: Optional[str] = None
     disability: Optional[str] = None
     disability_code: Optional[str] = None
@@ -24,7 +24,7 @@ class LegalaidukcontactbaseOut(BaseModel):
     gender_title: Optional[str] = None
     national_insurance_number: Optional[str] = None
 
-class LegalaidukcontactbaseUpdate(BaseModel):
+class LegalaidukcontactBaseUpdate(BaseModel):
     id: Optional[str] = None
     disability: Optional[str] = None
     disability_code: Optional[str] = None
@@ -35,7 +35,7 @@ class LegalaidukcontactbaseUpdate(BaseModel):
     gender_title: Optional[str] = None
     national_insurance_number: Optional[str] = None
 
-class LegalaidukcontactbaseDb(BaseModel):
+class LegalaidukcontactBaseDb(BaseModel):
     id: Optional[str] = None
     disability: Optional[str] = None
     disability_code: Optional[str] = None

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class CommunicationbaseIn(BaseModel):
+class CommunicationBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     subject: Optional[str] = None
@@ -14,7 +14,7 @@ class CommunicationbaseIn(BaseModel):
     updated_at: Optional[str] = None
     received_at: Optional[str] = None
 
-class CommunicationbaseOut(BaseModel):
+class CommunicationBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     subject: Optional[str] = None
@@ -26,7 +26,7 @@ class CommunicationbaseOut(BaseModel):
     updated_at: Optional[str] = None
     received_at: Optional[str] = None
 
-class CommunicationbaseUpdate(BaseModel):
+class CommunicationBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     subject: Optional[str] = None
@@ -38,7 +38,7 @@ class CommunicationbaseUpdate(BaseModel):
     updated_at: Optional[str] = None
     received_at: Optional[str] = None
 
-class CommunicationbaseDb(BaseModel):
+class CommunicationBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     subject: Optional[str] = None

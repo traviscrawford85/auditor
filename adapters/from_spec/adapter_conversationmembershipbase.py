@@ -1,10 +1,10 @@
 # Adapter stubs for Conversationmembershipbase
-from schemas.from_spec.conversationmembershipbase import ConversationmembershipbaseIn, ConversationmembershipbaseOut, ConversationmembershipbaseUpdate, ConversationmembershipbaseDb
+from schemas.from_spec.conversationmembershipbase import ConversationmembershipBaseIn, ConversationmembershipBaseOut, ConversationmembershipBaseUpdate, ConversationmembershipBaseDb
 
-def convert_sdk_to_conversationmembershipbaseout(sdk_obj):
+def convert_sdk_to_conversationmembershipBaseOut(sdk_obj):
     # TODO
-    return ConversationmembershipbaseOut()
+    return ConversationmembershipBaseOut()
 
-def convert_conversationmembershipbasein_to_sdk(model):
+def convert_conversationmembershipBaseIn_to_sdk(model):
     # TODO
     return None

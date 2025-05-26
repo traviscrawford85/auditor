@@ -2,28 +2,28 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class LineitemtotalsbaseIn(BaseModel):
+class LineitemtotalsBaseIn(BaseModel):
     quantity: Optional[str] = None
     price: Optional[str] = None
     discount_percent: Optional[str] = None
     total: Optional[str] = None
     sub_total: Optional[str] = None
 
-class LineitemtotalsbaseOut(BaseModel):
+class LineitemtotalsBaseOut(BaseModel):
     quantity: Optional[str] = None
     price: Optional[str] = None
     discount_percent: Optional[str] = None
     total: Optional[str] = None
     sub_total: Optional[str] = None
 
-class LineitemtotalsbaseUpdate(BaseModel):
+class LineitemtotalsBaseUpdate(BaseModel):
     quantity: Optional[str] = None
     price: Optional[str] = None
     discount_percent: Optional[str] = None
     total: Optional[str] = None
     sub_total: Optional[str] = None
 
-class LineitemtotalsbaseDb(BaseModel):
+class LineitemtotalsBaseDb(BaseModel):
     quantity: Optional[str] = None
     price: Optional[str] = None
     discount_percent: Optional[str] = None

@@ -1,10 +1,10 @@
 # Adapter stubs for Itembase
-from schemas.from_spec.itembase import ItembaseIn, ItembaseOut, ItembaseUpdate, ItembaseDb
+from schemas.from_spec.itembase import ItemBaseIn, ItemBaseOut, ItemBaseUpdate, ItemBaseDb
 
-def convert_sdk_to_itembaseout(sdk_obj):
+def convert_sdk_to_itemBaseOut(sdk_obj):
     # TODO
-    return ItembaseOut()
+    return ItemBaseOut()
 
-def convert_itembasein_to_sdk(model):
+def convert_itemBaseIn_to_sdk(model):
     # TODO
     return None

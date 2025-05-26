@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class BillablematterbaseIn(BaseModel):
+class BillablematterBaseIn(BaseModel):
     currency_code: Optional[str] = None
     currency_id: Optional[str] = None
     id: Optional[str] = None
@@ -11,7 +11,7 @@ class BillablematterbaseIn(BaseModel):
     amount_in_trust: Optional[str] = None
     display_number: Optional[str] = None
 
-class BillablematterbaseOut(BaseModel):
+class BillablematterBaseOut(BaseModel):
     currency_code: Optional[str] = None
     currency_id: Optional[str] = None
     id: Optional[str] = None
@@ -20,7 +20,7 @@ class BillablematterbaseOut(BaseModel):
     amount_in_trust: Optional[str] = None
     display_number: Optional[str] = None
 
-class BillablematterbaseUpdate(BaseModel):
+class BillablematterBaseUpdate(BaseModel):
     currency_code: Optional[str] = None
     currency_id: Optional[str] = None
     id: Optional[str] = None
@@ -29,7 +29,7 @@ class BillablematterbaseUpdate(BaseModel):
     amount_in_trust: Optional[str] = None
     display_number: Optional[str] = None
 
-class BillablematterbaseDb(BaseModel):
+class BillablematterBaseDb(BaseModel):
     currency_code: Optional[str] = None
     currency_id: Optional[str] = None
     id: Optional[str] = None

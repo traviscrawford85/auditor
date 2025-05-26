@@ -1,10 +1,10 @@
 # Adapter stubs for Billbase
-from schemas.from_spec.billbase import BillbaseIn, BillbaseOut, BillbaseUpdate, BillbaseDb
+from schemas.from_spec.billbase import BillBaseIn, BillBaseOut, BillBaseUpdate, BillBaseDb
 
-def convert_sdk_to_billbaseout(sdk_obj):
+def convert_sdk_to_billBaseOut(sdk_obj):
     # TODO
-    return BillbaseOut()
+    return BillBaseOut()
 
-def convert_billbasein_to_sdk(model):
+def convert_billBaseIn_to_sdk(model):
     # TODO
     return None

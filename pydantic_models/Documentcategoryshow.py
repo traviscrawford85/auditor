@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class DocumentcategoryshowIn(BaseModel):
+class DocumentcategoryShowIn(BaseModel):
     """Incoming model for creating a Documentcategoryshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class DocumentcategoryshowOut(BaseModel):
     # TODO: Add fields
 
 
-class DocumentcategoryshowUpdate(BaseModel):
+class DocumentcategoryShowUpdate(BaseModel):
     """Update model for patching a Documentcategoryshow"""
     # TODO: Add fields
 

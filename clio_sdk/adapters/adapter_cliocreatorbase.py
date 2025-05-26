@@ -1,9 +1,11 @@
 # Adapter for cliocreatorbase
-from clio_sdk.models.cliocreatorbase import CliocreatorbaseIn, CliocreatorbaseOut, CliocreatorbaseUpdate, CliocreatorbaseDb
-from clio_client.models import clio_creator_base
+from clio_sdk.models.cliocreatorbase import CliocreatorBaseIn, CliocreatorbaseOut, CliocreatorbaseUpdate, CliocreatorbaseDb
+from clio_client.models.clio_creator_base import ClioCreatorBase
 
-def convert_sdk_to_cliocreatorbaseout(src: clio_creator_base) -> CliocreatorbaseOut:
-    return CliocreatorbaseOut(**src.dict())
+def convert_sdk_to_cliocreatorbaseout(src: ClioCreatorBase) -> CliocreatorbaseOut:
+    """Converts a clio_client model to clio_sdk model."""
+    return CliocreatorbaseOut(**src.model_dump())
 
-def convert_cliocreatorbasein_to_sdk(src: CliocreatorbaseIn) -> clio_creator_base:
-    return clio_creator_base(**src.dict())
+def convert_cliocreatorbasein_to_sdk(src: CliocreatorBaseIn) -> ClioCreatorBase:
+    """Converts a clio_sdk model to clio_client model."""
+    return ClioCreatorBase(**src.model_dump())

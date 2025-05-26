@@ -1,10 +1,10 @@
 # Adapter stubs for Grantfundingsourcebase
-from schemas.from_spec.grantfundingsourcebase import GrantfundingsourcebaseIn, GrantfundingsourcebaseOut, GrantfundingsourcebaseUpdate, GrantfundingsourcebaseDb
+from schemas.from_spec.grantfundingsourcebase import GrantfundingsourceBaseIn, GrantfundingsourceBaseOut, GrantfundingsourceBaseUpdate, GrantfundingsourceBaseDb
 
-def convert_sdk_to_grantfundingsourcebaseout(sdk_obj):
+def convert_sdk_to_grantfundingsourceBaseOut(sdk_obj):
     # TODO
-    return GrantfundingsourcebaseOut()
+    return GrantfundingsourceBaseOut()
 
-def convert_grantfundingsourcebasein_to_sdk(model):
+def convert_grantfundingsourceBaseIn_to_sdk(model):
     # TODO
     return None

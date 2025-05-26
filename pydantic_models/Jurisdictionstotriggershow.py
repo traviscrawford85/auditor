@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class JurisdictionstotriggershowIn(BaseModel):
+class JurisdictionstotriggerShowIn(BaseModel):
     """Incoming model for creating a Jurisdictionstotriggershow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class JurisdictionstotriggershowOut(BaseModel):
     # TODO: Add fields
 
 
-class JurisdictionstotriggershowUpdate(BaseModel):
+class JurisdictionstotriggerShowUpdate(BaseModel):
     """Update model for patching a Jurisdictionstotriggershow"""
     # TODO: Add fields
 

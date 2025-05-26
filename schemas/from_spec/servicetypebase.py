@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class ServicetypebaseIn(BaseModel):
+class ServicetypeBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -11,7 +11,7 @@ class ServicetypebaseIn(BaseModel):
     description: Optional[str] = None
     default: Optional[str] = None
 
-class ServicetypebaseOut(BaseModel):
+class ServicetypeBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -20,7 +20,7 @@ class ServicetypebaseOut(BaseModel):
     description: Optional[str] = None
     default: Optional[str] = None
 
-class ServicetypebaseUpdate(BaseModel):
+class ServicetypeBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -29,7 +29,7 @@ class ServicetypebaseUpdate(BaseModel):
     description: Optional[str] = None
     default: Optional[str] = None
 
-class ServicetypebaseDb(BaseModel):
+class ServicetypeBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None

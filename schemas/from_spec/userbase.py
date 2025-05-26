@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class UserbaseIn(BaseModel):
+class UserBaseIn(BaseModel):
     account_owner: Optional[str] = None
     clio_connect: Optional[str] = None
     court_rules_default_attendee: Optional[str] = None
@@ -23,7 +23,7 @@ class UserbaseIn(BaseModel):
     time_zone: Optional[str] = None
     updated_at: Optional[str] = None
 
-class UserbaseOut(BaseModel):
+class UserBaseOut(BaseModel):
     account_owner: Optional[str] = None
     clio_connect: Optional[str] = None
     court_rules_default_attendee: Optional[str] = None
@@ -44,7 +44,7 @@ class UserbaseOut(BaseModel):
     time_zone: Optional[str] = None
     updated_at: Optional[str] = None
 
-class UserbaseUpdate(BaseModel):
+class UserBaseUpdate(BaseModel):
     account_owner: Optional[str] = None
     clio_connect: Optional[str] = None
     court_rules_default_attendee: Optional[str] = None
@@ -65,7 +65,7 @@ class UserbaseUpdate(BaseModel):
     time_zone: Optional[str] = None
     updated_at: Optional[str] = None
 
-class UserbaseDb(BaseModel):
+class UserBaseDb(BaseModel):
     account_owner: Optional[str] = None
     clio_connect: Optional[str] = None
     court_rules_default_attendee: Optional[str] = None

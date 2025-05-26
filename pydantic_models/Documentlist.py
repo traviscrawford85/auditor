@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class DocumentlistIn(BaseModel):
+class DocumentListIn(BaseModel):
     """Incoming model for creating a Documentlist"""
     # TODO: Add fields
 

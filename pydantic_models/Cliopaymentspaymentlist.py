@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class CliopaymentspaymentlistIn(BaseModel):
+class CliopaymentspaymentListIn(BaseModel):
     """Incoming model for creating a Cliopaymentspaymentlist"""
     # TODO: Add fields
 

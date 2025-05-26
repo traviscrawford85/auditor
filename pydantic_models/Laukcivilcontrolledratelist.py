@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class LaukcivilcontrolledratelistIn(BaseModel):
+class LaukcivilcontrolledrateListIn(BaseModel):
     """Incoming model for creating a Laukcivilcontrolledratelist"""
     # TODO: Add fields
 

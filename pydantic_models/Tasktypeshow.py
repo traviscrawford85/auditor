@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class TasktypeshowIn(BaseModel):
+class TasktypeShowIn(BaseModel):
     """Incoming model for creating a Tasktypeshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class TasktypeshowOut(BaseModel):
     # TODO: Add fields
 
 
-class TasktypeshowUpdate(BaseModel):
+class TasktypeShowUpdate(BaseModel):
     """Update model for patching a Tasktypeshow"""
     # TODO: Add fields
 

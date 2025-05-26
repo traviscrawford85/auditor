@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class UtbmssetlistIn(BaseModel):
+class UtbmssetListIn(BaseModel):
     """Incoming model for creating a Utbmssetlist"""
     # TODO: Add fields
 

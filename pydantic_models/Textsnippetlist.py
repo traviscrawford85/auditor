@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class TextsnippetlistIn(BaseModel):
+class TextsnippetListIn(BaseModel):
     """Incoming model for creating a Textsnippetlist"""
     # TODO: Add fields
 

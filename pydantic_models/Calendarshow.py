@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class CalendarshowIn(BaseModel):
+class CalendarShowIn(BaseModel):
     """Incoming model for creating a Calendarshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class CalendarshowOut(BaseModel):
     # TODO: Add fields
 
 
-class CalendarshowUpdate(BaseModel):
+class CalendarShowUpdate(BaseModel):
     """Update model for patching a Calendarshow"""
     # TODO: Add fields
 

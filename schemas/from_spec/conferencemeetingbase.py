@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class ConferencemeetingbaseIn(BaseModel):
+class ConferencemeetingBaseIn(BaseModel):
     conference_id: Optional[str] = None
     conference_password: Optional[str] = None
     created_at: Optional[str] = None
@@ -13,7 +13,7 @@ class ConferencemeetingbaseIn(BaseModel):
     source_id: Optional[str] = None
     updated_at: Optional[str] = None
 
-class ConferencemeetingbaseOut(BaseModel):
+class ConferencemeetingBaseOut(BaseModel):
     conference_id: Optional[str] = None
     conference_password: Optional[str] = None
     created_at: Optional[str] = None
@@ -24,7 +24,7 @@ class ConferencemeetingbaseOut(BaseModel):
     source_id: Optional[str] = None
     updated_at: Optional[str] = None
 
-class ConferencemeetingbaseUpdate(BaseModel):
+class ConferencemeetingBaseUpdate(BaseModel):
     conference_id: Optional[str] = None
     conference_password: Optional[str] = None
     created_at: Optional[str] = None
@@ -35,7 +35,7 @@ class ConferencemeetingbaseUpdate(BaseModel):
     source_id: Optional[str] = None
     updated_at: Optional[str] = None
 
-class ConferencemeetingbaseDb(BaseModel):
+class ConferencemeetingBaseDb(BaseModel):
     conference_id: Optional[str] = None
     conference_password: Optional[str] = None
     created_at: Optional[str] = None

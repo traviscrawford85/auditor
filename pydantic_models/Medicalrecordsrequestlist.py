@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class MedicalrecordsrequestlistIn(BaseModel):
+class MedicalrecordsrequestListIn(BaseModel):
     """Incoming model for creating a Medicalrecordsrequestlist"""
     # TODO: Add fields
 

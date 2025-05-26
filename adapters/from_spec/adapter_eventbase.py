@@ -1,10 +1,10 @@
 # Adapter stubs for Eventbase
-from schemas.from_spec.eventbase import EventbaseIn, EventbaseOut, EventbaseUpdate, EventbaseDb
+from schemas.from_spec.eventbase import EventBaseIn, EventBaseOut, EventBaseUpdate, EventBaseDb
 
-def convert_sdk_to_eventbaseout(sdk_obj):
+def convert_sdk_to_eventBaseOut(sdk_obj):
     # TODO
-    return EventbaseOut()
+    return EventBaseOut()
 
-def convert_eventbasein_to_sdk(model):
+def convert_eventBaseIn_to_sdk(model):
     # TODO
     return None

@@ -1,10 +1,10 @@
 # Adapter stubs for Jurisdictionstotriggerbase
-from schemas.from_spec.jurisdictionstotriggerbase import JurisdictionstotriggerbaseIn, JurisdictionstotriggerbaseOut, JurisdictionstotriggerbaseUpdate, JurisdictionstotriggerbaseDb
+from schemas.from_spec.jurisdictionstotriggerbase import JurisdictionstotriggerBaseIn, JurisdictionstotriggerBaseOut, JurisdictionstotriggerBaseUpdate, JurisdictionstotriggerBaseDb
 
-def convert_sdk_to_jurisdictionstotriggerbaseout(sdk_obj):
+def convert_sdk_to_jurisdictionstotriggerBaseOut(sdk_obj):
     # TODO
-    return JurisdictionstotriggerbaseOut()
+    return JurisdictionstotriggerBaseOut()
 
-def convert_jurisdictionstotriggerbasein_to_sdk(model):
+def convert_jurisdictionstotriggerBaseIn_to_sdk(model):
     # TODO
     return None

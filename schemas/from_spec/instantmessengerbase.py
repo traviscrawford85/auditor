@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class InstantmessengerbaseIn(BaseModel):
+class InstantmessengerBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     address: Optional[str] = None
@@ -10,7 +10,7 @@ class InstantmessengerbaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class InstantmessengerbaseOut(BaseModel):
+class InstantmessengerBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     address: Optional[str] = None
@@ -18,7 +18,7 @@ class InstantmessengerbaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class InstantmessengerbaseUpdate(BaseModel):
+class InstantmessengerBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     address: Optional[str] = None
@@ -26,7 +26,7 @@ class InstantmessengerbaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class InstantmessengerbaseDb(BaseModel):
+class InstantmessengerBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     address: Optional[str] = None

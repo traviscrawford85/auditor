@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class RelatedcontactslistIn(BaseModel):
+class RelatedcontactsListIn(BaseModel):
     """Incoming model for creating a Relatedcontactslist"""
     # TODO: Add fields
 

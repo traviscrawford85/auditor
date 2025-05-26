@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class EventbaseIn(BaseModel):
+class EventBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     message: Optional[str] = None
@@ -20,7 +20,7 @@ class EventbaseIn(BaseModel):
     subject_type: Optional[str] = None
     subject_id: Optional[str] = None
 
-class EventbaseOut(BaseModel):
+class EventBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     message: Optional[str] = None
@@ -38,7 +38,7 @@ class EventbaseOut(BaseModel):
     subject_type: Optional[str] = None
     subject_id: Optional[str] = None
 
-class EventbaseUpdate(BaseModel):
+class EventBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     message: Optional[str] = None
@@ -56,7 +56,7 @@ class EventbaseUpdate(BaseModel):
     subject_type: Optional[str] = None
     subject_id: Optional[str] = None
 
-class EventbaseDb(BaseModel):
+class EventBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     message: Optional[str] = None

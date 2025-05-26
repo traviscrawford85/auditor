@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class CreditmemobaseIn(BaseModel):
+class CreditmemoBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     date: Optional[str] = None
@@ -13,7 +13,7 @@ class CreditmemobaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class CreditmemobaseOut(BaseModel):
+class CreditmemoBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     date: Optional[str] = None
@@ -24,7 +24,7 @@ class CreditmemobaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class CreditmemobaseUpdate(BaseModel):
+class CreditmemoBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     date: Optional[str] = None
@@ -35,7 +35,7 @@ class CreditmemobaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class CreditmemobaseDb(BaseModel):
+class CreditmemoBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     date: Optional[str] = None

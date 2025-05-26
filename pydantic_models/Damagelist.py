@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class DamagelistIn(BaseModel):
+class DamageListIn(BaseModel):
     """Incoming model for creating a Damagelist"""
     # TODO: Add fields
 

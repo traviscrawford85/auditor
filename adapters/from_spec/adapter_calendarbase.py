@@ -1,10 +1,10 @@
 # Adapter stubs for Calendarbase
-from schemas.from_spec.calendarbase import CalendarbaseIn, CalendarbaseOut, CalendarbaseUpdate, CalendarbaseDb
+from schemas.from_spec.calendarbase import CalendarBaseIn, CalendarBaseOut, CalendarBaseUpdate, CalendarBaseDb
 
-def convert_sdk_to_calendarbaseout(sdk_obj):
+def convert_sdk_to_calendarBaseOut(sdk_obj):
     # TODO
-    return CalendarbaseOut()
+    return CalendarBaseOut()
 
-def convert_calendarbasein_to_sdk(model):
+def convert_calendarBaseIn_to_sdk(model):
     # TODO
     return None

@@ -1,10 +1,10 @@
 # Adapter stubs for Groupbase
-from schemas.from_spec.groupbase import GroupbaseIn, GroupbaseOut, GroupbaseUpdate, GroupbaseDb
+from schemas.from_spec.groupbase import GroupBaseIn, GroupBaseOut, GroupBaseUpdate, GroupBaseDb
 
-def convert_sdk_to_groupbaseout(sdk_obj):
+def convert_sdk_to_groupBaseOut(sdk_obj):
     # TODO
-    return GroupbaseOut()
+    return GroupBaseOut()
 
-def convert_groupbasein_to_sdk(model):
+def convert_groupBaseIn_to_sdk(model):
     # TODO
     return None

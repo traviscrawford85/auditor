@@ -1,9 +1,11 @@
 # Adapter for activitytaskbase
-from clio_sdk.models.activitytaskbase import ActivitytaskbaseIn, ActivitytaskbaseOut, ActivitytaskbaseUpdate, ActivitytaskbaseDb
-from clio_client.models import activity_task
+from clio_sdk.models.activitytaskbase import ActivitytaskBaseIn, ActivitytaskbaseOut, ActivitytaskbaseUpdate, ActivitytaskbaseDb
+from clio_client.models.activity_task import ActivityTask
 
-def convert_sdk_to_activitytaskbaseout(src: activity_task) -> ActivitytaskbaseOut:
-    return ActivitytaskbaseOut(**src.dict())
+def convert_sdk_to_activitytaskbaseout(src: ActivityTask) -> ActivitytaskbaseOut:
+    """Converts a clio_client model to clio_sdk model."""
+    return ActivitytaskbaseOut(**src.model_dump())
 
-def convert_activitytaskbasein_to_sdk(src: ActivitytaskbaseIn) -> activity_task:
-    return activity_task(**src.dict())
+def convert_activitytaskbasein_to_sdk(src: ActivitytaskBaseIn) -> ActivityTask:
+    """Converts a clio_sdk model to clio_client model."""
+    return ActivityTask(**src.model_dump())

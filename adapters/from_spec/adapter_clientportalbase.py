@@ -1,10 +1,10 @@
 # Adapter stubs for Clientportalbase
-from schemas.from_spec.clientportalbase import ClientportalbaseIn, ClientportalbaseOut, ClientportalbaseUpdate, ClientportalbaseDb
+from schemas.from_spec.clientportalbase import ClientportalBaseIn, ClientportalBaseOut, ClientportalBaseUpdate, ClientportalBaseDb
 
-def convert_sdk_to_clientportalbaseout(sdk_obj):
+def convert_sdk_to_clientportalBaseOut(sdk_obj):
     # TODO
-    return ClientportalbaseOut()
+    return ClientportalBaseOut()
 
-def convert_clientportalbasein_to_sdk(model):
+def convert_clientportalBaseIn_to_sdk(model):
     # TODO
     return None

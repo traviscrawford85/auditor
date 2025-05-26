@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class CustomfieldsetlistIn(BaseModel):
+class CustomfieldsetListIn(BaseModel):
     """Incoming model for creating a Customfieldsetlist"""
     # TODO: Add fields
 

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class ReportschedulebaseIn(BaseModel):
+class ReportscheduleBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     time_of_day: Optional[str] = None
@@ -19,7 +19,7 @@ class ReportschedulebaseIn(BaseModel):
     every_no_of_months: Optional[str] = None
     effective_from: Optional[str] = None
 
-class ReportschedulebaseOut(BaseModel):
+class ReportscheduleBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     time_of_day: Optional[str] = None
@@ -36,7 +36,7 @@ class ReportschedulebaseOut(BaseModel):
     every_no_of_months: Optional[str] = None
     effective_from: Optional[str] = None
 
-class ReportschedulebaseUpdate(BaseModel):
+class ReportscheduleBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     time_of_day: Optional[str] = None
@@ -53,7 +53,7 @@ class ReportschedulebaseUpdate(BaseModel):
     every_no_of_months: Optional[str] = None
     effective_from: Optional[str] = None
 
-class ReportschedulebaseDb(BaseModel):
+class ReportscheduleBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     time_of_day: Optional[str] = None

@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class JurisdictionstotriggerlistIn(BaseModel):
+class JurisdictionstotriggerListIn(BaseModel):
     """Incoming model for creating a Jurisdictionstotriggerlist"""
     # TODO: Add fields
 

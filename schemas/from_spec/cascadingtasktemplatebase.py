@@ -2,19 +2,19 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class CascadingtasktemplatebaseIn(BaseModel):
+class CascadingtasktemplateBaseIn(BaseModel):
     id: Optional[str] = None
     name: Optional[str] = None
 
-class CascadingtasktemplatebaseOut(BaseModel):
+class CascadingtasktemplateBaseOut(BaseModel):
     id: Optional[str] = None
     name: Optional[str] = None
 
-class CascadingtasktemplatebaseUpdate(BaseModel):
+class CascadingtasktemplateBaseUpdate(BaseModel):
     id: Optional[str] = None
     name: Optional[str] = None
 
-class CascadingtasktemplatebaseDb(BaseModel):
+class CascadingtasktemplateBaseDb(BaseModel):
     id: Optional[str] = None
     name: Optional[str] = None
 

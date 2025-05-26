@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class UsershowIn(BaseModel):
+class UserShowIn(BaseModel):
     """Incoming model for creating a Usershow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class UsershowOut(BaseModel):
     # TODO: Add fields
 
 
-class UsershowUpdate(BaseModel):
+class UserShowUpdate(BaseModel):
     """Update model for patching a Usershow"""
     # TODO: Add fields
 

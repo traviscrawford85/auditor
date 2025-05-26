@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class TrustlineitembaseIn(BaseModel):
+class TrustlineitemBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     date: Optional[str] = None
@@ -11,7 +11,7 @@ class TrustlineitembaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class TrustlineitembaseOut(BaseModel):
+class TrustlineitemBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     date: Optional[str] = None
@@ -20,7 +20,7 @@ class TrustlineitembaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class TrustlineitembaseUpdate(BaseModel):
+class TrustlineitemBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     date: Optional[str] = None
@@ -29,7 +29,7 @@ class TrustlineitembaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class TrustlineitembaseDb(BaseModel):
+class TrustlineitemBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     date: Optional[str] = None

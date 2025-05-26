@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class MatterdocketbaseIn(BaseModel):
+class MatterdocketBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -13,7 +13,7 @@ class MatterdocketbaseIn(BaseModel):
     updated_at: Optional[str] = None
     deleted_at: Optional[str] = None
 
-class MatterdocketbaseOut(BaseModel):
+class MatterdocketBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -24,7 +24,7 @@ class MatterdocketbaseOut(BaseModel):
     updated_at: Optional[str] = None
     deleted_at: Optional[str] = None
 
-class MatterdocketbaseUpdate(BaseModel):
+class MatterdocketBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None
@@ -35,7 +35,7 @@ class MatterdocketbaseUpdate(BaseModel):
     updated_at: Optional[str] = None
     deleted_at: Optional[str] = None
 
-class MatterdocketbaseDb(BaseModel):
+class MatterdocketBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     name: Optional[str] = None

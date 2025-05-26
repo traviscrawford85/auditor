@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class MatterbudgetbaseIn(BaseModel):
+class MatterbudgetBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     budget: Optional[str] = None
@@ -12,7 +12,7 @@ class MatterbudgetbaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class MatterbudgetbaseOut(BaseModel):
+class MatterbudgetBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     budget: Optional[str] = None
@@ -22,7 +22,7 @@ class MatterbudgetbaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class MatterbudgetbaseUpdate(BaseModel):
+class MatterbudgetBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     budget: Optional[str] = None
@@ -32,7 +32,7 @@ class MatterbudgetbaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class MatterbudgetbaseDb(BaseModel):
+class MatterbudgetBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     budget: Optional[str] = None

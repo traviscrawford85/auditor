@@ -1,10 +1,10 @@
 # Adapter stubs for Participantbase
-from schemas.from_spec.participantbase import ParticipantbaseIn, ParticipantbaseOut, ParticipantbaseUpdate, ParticipantbaseDb
+from schemas.from_spec.participantbase import ParticipantBaseIn, ParticipantBaseOut, ParticipantBaseUpdate, ParticipantBaseDb
 
-def convert_sdk_to_participantbaseout(sdk_obj):
+def convert_sdk_to_participantBaseOut(sdk_obj):
     # TODO
-    return ParticipantbaseOut()
+    return ParticipantBaseOut()
 
-def convert_participantbasein_to_sdk(model):
+def convert_participantBaseIn_to_sdk(model):
     # TODO
     return None

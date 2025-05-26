@@ -2,25 +2,25 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class TasktemplatelistinstacebaseIn(BaseModel):
+class TasktemplatelistinstaceBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class TasktemplatelistinstacebaseOut(BaseModel):
+class TasktemplatelistinstaceBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class TasktemplatelistinstacebaseUpdate(BaseModel):
+class TasktemplatelistinstaceBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class TasktemplatelistinstacebaseDb(BaseModel):
+class TasktemplatelistinstaceBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None

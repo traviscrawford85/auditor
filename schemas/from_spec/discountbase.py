@@ -2,28 +2,28 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class DiscountbaseIn(BaseModel):
+class DiscountBaseIn(BaseModel):
     rate: Optional[str] = None
     type: Optional[str] = None
     note: Optional[str] = None
     early_payment_rate: Optional[str] = None
     early_payment_period: Optional[str] = None
 
-class DiscountbaseOut(BaseModel):
+class DiscountBaseOut(BaseModel):
     rate: Optional[str] = None
     type: Optional[str] = None
     note: Optional[str] = None
     early_payment_rate: Optional[str] = None
     early_payment_period: Optional[str] = None
 
-class DiscountbaseUpdate(BaseModel):
+class DiscountBaseUpdate(BaseModel):
     rate: Optional[str] = None
     type: Optional[str] = None
     note: Optional[str] = None
     early_payment_rate: Optional[str] = None
     early_payment_period: Optional[str] = None
 
-class DiscountbaseDb(BaseModel):
+class DiscountBaseDb(BaseModel):
     rate: Optional[str] = None
     type: Optional[str] = None
     note: Optional[str] = None

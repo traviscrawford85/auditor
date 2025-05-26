@@ -1,10 +1,10 @@
 # Adapter stubs for Reportbase
-from schemas.from_spec.reportbase import ReportbaseIn, ReportbaseOut, ReportbaseUpdate, ReportbaseDb
+from schemas.from_spec.reportbase import ReportBaseIn, ReportBaseOut, ReportBaseUpdate, ReportBaseDb
 
-def convert_sdk_to_reportbaseout(sdk_obj):
+def convert_sdk_to_reportBaseOut(sdk_obj):
     # TODO
-    return ReportbaseOut()
+    return ReportBaseOut()
 
-def convert_reportbasein_to_sdk(model):
+def convert_reportBaseIn_to_sdk(model):
     # TODO
     return None

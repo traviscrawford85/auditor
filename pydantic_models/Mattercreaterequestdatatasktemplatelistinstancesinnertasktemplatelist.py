@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class MattercreaterequestdatatasktemplatelistinstancesinnertasktemplatelistIn(BaseModel):
+class MattercreaterequestdatatasktemplatelistinstancesinnertasktemplateListIn(BaseModel):
     """Incoming model for creating a Mattercreaterequestdatatasktemplatelistinstancesinnertasktemplatelist"""
     # TODO: Add fields
 

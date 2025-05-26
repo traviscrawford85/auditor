@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class PracticearealistIn(BaseModel):
+class PracticeareaListIn(BaseModel):
     """Incoming model for creating a Practicearealist"""
     # TODO: Add fields
 

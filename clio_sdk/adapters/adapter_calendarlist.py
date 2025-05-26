@@ -1,9 +1,11 @@
 # Adapter for calendarlist
 from clio_sdk.models.calendarlist import CalendarlistIn, CalendarlistOut, CalendarlistUpdate, CalendarlistDb
-from clio_client.models import calendar_list
+from clio_client.models.calendar_list import CalendarList
 
-def convert_sdk_to_calendarlistout(src: calendar_list) -> CalendarlistOut:
-    return CalendarlistOut(**src.dict())
+def convert_sdk_to_calendarlistout(src: CalendarList) -> CalendarlistOut:
+    """Converts a clio_client model to clio_sdk model."""
+    return CalendarlistOut(**src.model_dump())
 
-def convert_calendarlistin_to_sdk(src: CalendarlistIn) -> calendar_list:
-    return calendar_list(**src.dict())
+def convert_calendarlistin_to_sdk(src: CalendarlistIn) -> CalendarList:
+    """Converts a clio_sdk model to clio_client model."""
+    return CalendarList(**src.model_dump())

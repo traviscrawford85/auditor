@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class CurrencybaseIn(BaseModel):
+class CurrencyBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     code: Optional[str] = None
@@ -10,7 +10,7 @@ class CurrencybaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class CurrencybaseOut(BaseModel):
+class CurrencyBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     code: Optional[str] = None
@@ -18,7 +18,7 @@ class CurrencybaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class CurrencybaseUpdate(BaseModel):
+class CurrencyBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     code: Optional[str] = None
@@ -26,7 +26,7 @@ class CurrencybaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class CurrencybaseDb(BaseModel):
+class CurrencyBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     code: Optional[str] = None

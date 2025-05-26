@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class TrustlineitemshowIn(BaseModel):
+class TrustlineitemShowIn(BaseModel):
     """Incoming model for creating a Trustlineitemshow"""
     # TODO: Add fields
 
@@ -12,7 +12,7 @@ class TrustlineitemshowOut(BaseModel):
     # TODO: Add fields
 
 
-class TrustlineitemshowUpdate(BaseModel):
+class TrustlineitemShowUpdate(BaseModel):
     """Update model for patching a Trustlineitemshow"""
     # TODO: Add fields
 

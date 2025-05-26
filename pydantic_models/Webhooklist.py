@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class WebhooklistIn(BaseModel):
+class WebhookListIn(BaseModel):
     """Incoming model for creating a Webhooklist"""
     # TODO: Add fields
 

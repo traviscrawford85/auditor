@@ -1,44 +1,48 @@
 import os
 from difflib import get_close_matches
 
-# Paths
-custom_model_dir = "clio_sdk/models"
-sdk_model_dir = "clio_client/models"
-adapter_dir = "clio_sdk/adapters"
+def to_title_case(s):
+    return "".join([part.capitalize() for part in s.replace("_", " ").split()])
+
+custom_model_dir = "/home/solutionpartner/auditor/clio_sdk/models"
+sdk_model_dir = "/home/solutionpartner/auditor/clio_client/models"
+adapter_dir = "/home/solutionpartner/auditor/clio_sdk/adapters"
 os.makedirs(adapter_dir, exist_ok=True)
 
-# List of your custom model files (e.g., matterbase.py)
 custom_models = [
     f for f in os.listdir(custom_model_dir)
     if f.endswith(".py") and f != "__init__.py"
 ]
 custom_bases = [f.replace(".py", "") for f in custom_models]
 
-# List of SDK model base names (without .py)
 sdk_models = [
     f.replace(".py", "") for f in os.listdir(sdk_model_dir)
     if f.endswith(".py")
 ]
 
-# Generate adapter files with close match
-adapter_scripts = {}
 for base in custom_bases:
     match = get_close_matches(base.replace("base", ""), sdk_models, n=1)
     if match:
         sdk_class = match[0]
-        class_base = base.capitalize()
+        class_base = to_title_case(base)
+        sdk_class_title = to_title_case(sdk_class)
+        import_classes = ", ".join([
+            f"{class_base}In",
+            f"{class_base}Out",
+            f"{class_base}Update",
+            f"{class_base}Db"
+        ])
         adapter_content = f"""# Adapter for {base}
-from clio_sdk.models.{base} import {class_base}In, {class_base}Out, {class_base}Update, {class_base}Db
-from clio_client.models import {sdk_class}
+from clio_sdk.models.{base} import {import_classes}
+from clio_client.models.{sdk_class} import {sdk_class_title}
 
-def convert_sdk_to_{base}out(src: {sdk_class}) -> {class_base}Out:
-    return {class_base}Out(**src.dict())
+def convert_sdk_to_{base}out(src: {sdk_class_title}) -> {class_base}Out:
+    \"\"\"Converts a clio_client model to clio_sdk model.\"\"\"
+    return {class_base}Out(**src.model_dump())
 
-def convert_{base}in_to_sdk(src: {class_base}In) -> {sdk_class}:
-    return {sdk_class}(**src.dict())
+def convert_{base}in_to_sdk(src: {class_base}In) -> {sdk_class_title}:
+    \"\"\"Converts a clio_sdk model to clio_client model.\"\"\"
+    return {sdk_class_title}(**src.model_dump())
 """
-        adapter_scripts[base] = adapter_content
         with open(os.path.join(adapter_dir, f"adapter_{base}.py"), "w") as f:
             f.write(adapter_content)
-
-adapter_scripts.keys()

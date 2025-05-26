@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class AddressbaseIn(BaseModel):
+class AddressBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     street: Optional[str] = None
@@ -15,7 +15,7 @@ class AddressbaseIn(BaseModel):
     updated_at: Optional[str] = None
     primary: Optional[str] = None
 
-class AddressbaseOut(BaseModel):
+class AddressBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     street: Optional[str] = None
@@ -28,7 +28,7 @@ class AddressbaseOut(BaseModel):
     updated_at: Optional[str] = None
     primary: Optional[str] = None
 
-class AddressbaseUpdate(BaseModel):
+class AddressBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     street: Optional[str] = None
@@ -41,7 +41,7 @@ class AddressbaseUpdate(BaseModel):
     updated_at: Optional[str] = None
     primary: Optional[str] = None
 
-class AddressbaseDb(BaseModel):
+class AddressBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     street: Optional[str] = None

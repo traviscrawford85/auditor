@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class CommentlistIn(BaseModel):
+class CommentListIn(BaseModel):
     """Incoming model for creating a Commentlist"""
     # TODO: Add fields
 

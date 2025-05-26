@@ -1,9 +1,11 @@
 # Adapter for trustlineitembase
-from clio_sdk.models.trustlineitembase import TrustlineitembaseIn, TrustlineitembaseOut, TrustlineitembaseUpdate, TrustlineitembaseDb
-from clio_client.models import trust_line_item
+from clio_sdk.models.trustlineitembase import TrustlineitemBaseIn, TrustlineitembaseOut, TrustlineitembaseUpdate, TrustlineitembaseDb
+from clio_client.models.trust_line_item import TrustLineItem
 
-def convert_sdk_to_trustlineitembaseout(src: trust_line_item) -> TrustlineitembaseOut:
-    return TrustlineitembaseOut(**src.dict())
+def convert_sdk_to_trustlineitembaseout(src: TrustLineItem) -> TrustlineitembaseOut:
+    """Converts a clio_client model to clio_sdk model."""
+    return TrustlineitembaseOut(**src.model_dump())
 
-def convert_trustlineitembasein_to_sdk(src: TrustlineitembaseIn) -> trust_line_item:
-    return trust_line_item(**src.dict())
+def convert_trustlineitembasein_to_sdk(src: TrustlineitemBaseIn) -> TrustLineItem:
+    """Converts a clio_sdk model to clio_client model."""
+    return TrustLineItem(**src.model_dump())

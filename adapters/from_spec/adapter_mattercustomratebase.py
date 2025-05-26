@@ -1,10 +1,10 @@
 # Adapter stubs for Mattercustomratebase
-from schemas.from_spec.mattercustomratebase import MattercustomratebaseIn, MattercustomratebaseOut, MattercustomratebaseUpdate, MattercustomratebaseDb
+from schemas.from_spec.mattercustomratebase import MattercustomrateBaseIn, MattercustomrateBaseOut, MattercustomrateBaseUpdate, MattercustomrateBaseDb
 
-def convert_sdk_to_mattercustomratebaseout(sdk_obj):
+def convert_sdk_to_mattercustomrateBaseOut(sdk_obj):
     # TODO
-    return MattercustomratebaseOut()
+    return MattercustomrateBaseOut()
 
-def convert_mattercustomratebasein_to_sdk(model):
+def convert_mattercustomrateBaseIn_to_sdk(model):
     # TODO
     return None

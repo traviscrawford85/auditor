@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class MatterbaseIn(BaseModel):
+class MatterBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     number: Optional[str] = None
@@ -27,7 +27,7 @@ class MatterbaseIn(BaseModel):
     last_activity_date: Optional[str] = None
     matter_stage_updated_at: Optional[str] = None
 
-class MatterbaseOut(BaseModel):
+class MatterBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     number: Optional[str] = None
@@ -52,7 +52,7 @@ class MatterbaseOut(BaseModel):
     last_activity_date: Optional[str] = None
     matter_stage_updated_at: Optional[str] = None
 
-class MatterbaseUpdate(BaseModel):
+class MatterBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     number: Optional[str] = None
@@ -77,7 +77,7 @@ class MatterbaseUpdate(BaseModel):
     last_activity_date: Optional[str] = None
     matter_stage_updated_at: Optional[str] = None
 
-class MatterbaseDb(BaseModel):
+class MatterBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     number: Optional[str] = None

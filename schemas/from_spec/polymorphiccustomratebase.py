@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class PolymorphiccustomratebaseIn(BaseModel):
+class PolymorphiccustomrateBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -12,7 +12,7 @@ class PolymorphiccustomratebaseIn(BaseModel):
     note: Optional[str] = None
     date: Optional[str] = None
 
-class PolymorphiccustomratebaseOut(BaseModel):
+class PolymorphiccustomrateBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -22,7 +22,7 @@ class PolymorphiccustomratebaseOut(BaseModel):
     note: Optional[str] = None
     date: Optional[str] = None
 
-class PolymorphiccustomratebaseUpdate(BaseModel):
+class PolymorphiccustomrateBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -32,7 +32,7 @@ class PolymorphiccustomratebaseUpdate(BaseModel):
     note: Optional[str] = None
     date: Optional[str] = None
 
-class PolymorphiccustomratebaseDb(BaseModel):
+class PolymorphiccustomrateBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None

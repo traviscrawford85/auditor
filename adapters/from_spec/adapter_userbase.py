@@ -1,10 +1,10 @@
 # Adapter stubs for Userbase
-from schemas.from_spec.userbase import UserbaseIn, UserbaseOut, UserbaseUpdate, UserbaseDb
+from schemas.from_spec.userbase import UserBaseIn, UserBaseOut, UserBaseUpdate, UserBaseDb
 
-def convert_sdk_to_userbaseout(sdk_obj):
+def convert_sdk_to_userBaseOut(sdk_obj):
     # TODO
-    return UserbaseOut()
+    return UserBaseOut()
 
-def convert_userbasein_to_sdk(model):
+def convert_userBaseIn_to_sdk(model):
     # TODO
     return None

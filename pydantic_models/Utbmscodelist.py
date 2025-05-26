@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class UtbmscodelistIn(BaseModel):
+class UtbmscodeListIn(BaseModel):
     """Incoming model for creating a Utbmscodelist"""
     # TODO: Add fields
 

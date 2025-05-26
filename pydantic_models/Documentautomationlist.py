@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class DocumentautomationlistIn(BaseModel):
+class DocumentautomationListIn(BaseModel):
     """Incoming model for creating a Documentautomationlist"""
     # TODO: Add fields
 

@@ -77,12 +77,22 @@ def write_models(base_name, fields):
     print(f"✅ Model file created: {path}")
 
 def write_adapter(base_name):
-    path = os.path.join(ADAPTER_DIR, f"adapter_{base_name.lower()}.py")
+    file_name = f"adapter_{base_name.lower()}.py"
+    path = os.path.join(ADAPTER_DIR, file_name)
     with open(path, "w") as f:
         f.write(f"# Adapter stubs for {base_name}\n")
-        f.write(f"from clio_sdk.models.{base_name.lower()} import {base_name}In, {base_name}Out, {base_name}Update, {base_name}Db\n\n")
-        f.write(f"def convert_sdk_to_{base_name.lower()}out(sdk_obj):\n    # TODO\n    return {base_name}Out()\n\n")
-        f.write(f"def convert_{base_name.lower()}in_to_sdk(model):\n    # TODO\n    return None\n")
+        f.write(
+            f"from clio_sdk.models.{base_name.lower()} import "
+            f"{base_name}In, {base_name}Out, {base_name}Update, {base_name}Db\n"
+        )
+        f.write(
+            f"def convert_sdk_to_{base_name.lower()}out(sdk_obj):\n"
+            f"    # TODO\n    return {base_name}Out()\n\n"
+        )
+        f.write(
+            f"def convert_{base_name.lower()}in_to_sdk(model):\n"
+            f"    # TODO\n    return None\n"
+        )
     print(f"✅ Adapter stub created: {path}")
 
 # Process schemas

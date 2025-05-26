@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, List
 
 
-class BanktransactionlistIn(BaseModel):
+class BanktransactionListIn(BaseModel):
     """Incoming model for creating a Banktransactionlist"""
     # TODO: Add fields
 

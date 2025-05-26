@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class CustomactionbaseIn(BaseModel):
+class CustomactionBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -11,7 +11,7 @@ class CustomactionbaseIn(BaseModel):
     target_url: Optional[str] = None
     ui_reference: Optional[str] = None
 
-class CustomactionbaseOut(BaseModel):
+class CustomactionBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -20,7 +20,7 @@ class CustomactionbaseOut(BaseModel):
     target_url: Optional[str] = None
     ui_reference: Optional[str] = None
 
-class CustomactionbaseUpdate(BaseModel):
+class CustomactionBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None
@@ -29,7 +29,7 @@ class CustomactionbaseUpdate(BaseModel):
     target_url: Optional[str] = None
     ui_reference: Optional[str] = None
 
-class CustomactionbaseDb(BaseModel):
+class CustomactionBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     created_at: Optional[str] = None

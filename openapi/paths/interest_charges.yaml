@@ -3,7 +3,7 @@
     tags:
     - Interest Charges
     summary: Return the data for all InterestCharges
-    operationId: listInterest_charges
+    operationId: ListInterest_charges
     description: Outlines the parameters, optional and required, used when requesting
       the data for all InterestCharges
     parameters:

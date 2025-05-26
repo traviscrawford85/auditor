@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class MattercreaterequestdatatasktemplatelistinstancesinnertasktemplatelistIn(BaseModel):
+class MattercreaterequestdatatasktemplatelistinstancesinnertasktemplateListIn(BaseModel):
     id: int
 
 class MattercreaterequestdatatasktemplatelistinstancesinnertasktemplatelistOut(BaseModel):

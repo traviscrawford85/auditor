@@ -1,10 +1,10 @@
 # Adapter stubs for Conversationbase
-from schemas.from_spec.conversationbase import ConversationbaseIn, ConversationbaseOut, ConversationbaseUpdate, ConversationbaseDb
+from schemas.from_spec.conversationbase import ConversationBaseIn, ConversationBaseOut, ConversationBaseUpdate, ConversationBaseDb
 
-def convert_sdk_to_conversationbaseout(sdk_obj):
+def convert_sdk_to_conversationBaseOut(sdk_obj):
     # TODO
-    return ConversationbaseOut()
+    return ConversationBaseOut()
 
-def convert_conversationbasein_to_sdk(model):
+def convert_conversationBaseIn_to_sdk(model):
     # TODO
     return None

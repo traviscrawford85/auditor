@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional, Any, List
 from datetime import datetime
 
-class InterestchargebaseIn(BaseModel):
+class InterestchargeBaseIn(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     date: Optional[str] = None
@@ -11,7 +11,7 @@ class InterestchargebaseIn(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class InterestchargebaseOut(BaseModel):
+class InterestchargeBaseOut(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     date: Optional[str] = None
@@ -20,7 +20,7 @@ class InterestchargebaseOut(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class InterestchargebaseUpdate(BaseModel):
+class InterestchargeBaseUpdate(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     date: Optional[str] = None
@@ -29,7 +29,7 @@ class InterestchargebaseUpdate(BaseModel):
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
 
-class InterestchargebaseDb(BaseModel):
+class InterestchargeBaseDb(BaseModel):
     id: Optional[str] = None
     etag: Optional[str] = None
     date: Optional[str] = None
