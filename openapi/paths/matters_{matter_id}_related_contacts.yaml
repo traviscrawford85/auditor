@@ -1,0 +1,26 @@
+/matters/{matter/id}/related/contacts:
+  get:
+    tags:
+    - Related Contacts
+    summary: Return the related contact data for a single matter
+    operationId: listRelated_contacts
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for all RelatedContacts
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/limit'
+    - $ref: '#/components/parameters/matter_id'
+    - $ref: '#/components/parameters/order'
+    - $ref: '#/components/parameters/page_token'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'

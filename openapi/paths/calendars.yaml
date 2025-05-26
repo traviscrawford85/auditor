@@ -1,0 +1,61 @@
+/calendars:
+  get:
+    tags:
+    - Calendars
+    summary: Return the data for all Calendars
+    operationId: listCalendars
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for all Calendars
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/created_since'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/filter_inactive_users'
+    - $ref: ./components/parameters/ids[].yaml
+    - $ref: '#/components/parameters/limit'
+    - $ref: '#/components/parameters/order'
+    - $ref: '#/components/parameters/owner'
+    - $ref: '#/components/parameters/page_token'
+    - $ref: '#/components/parameters/source'
+    - $ref: '#/components/parameters/type'
+    - $ref: '#/components/parameters/updated_since'
+    - $ref: '#/components/parameters/visible'
+    - $ref: '#/components/parameters/writeable'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+  post:
+    tags:
+    - Calendars
+    summary: Create a new Calendar
+    operationId: createCalendar
+    description: Outlines the parameters and data fields used when creating a new
+      Calendar
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    responses:
+      '201':
+        $ref: '#/components/responses/201_Created'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '422':
+        $ref: '#/components/responses/422_Unprocessable_Entity'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+    requestBody:
+      $ref: '#/components/requestBodies/ReqBody_9a9a25eb'

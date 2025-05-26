@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 $defs:
   ActivityBase:
     description: ActivityBase
@@ -32,6 +9,7 @@ $defs:
         default: null
         description: Unique identifier for the *Activity*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -39,6 +17,7 @@ $defs:
         default: null
         description: ETag for the *Activity*
         title: Etag
+        type: string
       type:
         anyOf:
         - type: string
@@ -46,6 +25,7 @@ $defs:
         default: null
         description: The type of the *Activity*
         title: Type
+        type: string
       date:
         anyOf:
         - format: date
@@ -54,6 +34,7 @@ $defs:
         default: null
         description: The date the *Activity* was performed (as a ISO-8601 date)
         title: Date
+        type: string
       quantity_in_hours:
         anyOf:
         - type: number
@@ -62,6 +43,7 @@ $defs:
         default: null
         description: The number of hours the TimeEntry took.
         title: Quantity In Hours
+        type: string
       rounded_quantity_in_hours:
         anyOf:
         - type: number
@@ -71,6 +53,7 @@ $defs:
         description: 'The number of hours rounded accordingly to the billing settings.
           The rounded value is used to calculate the total. '
         title: Rounded Quantity In Hours
+        type: string
       quantity:
         anyOf:
         - type: number
@@ -81,6 +64,7 @@ $defs:
           <= 4.0.3:** The number of hours the TimeEntry took.  **Latest version:**
           The number of seconds the TimeEntry took. '
         title: Quantity
+        type: string
       rounded_quantity:
         anyOf:
         - type: number
@@ -93,6 +77,7 @@ $defs:
           number of seconds rounded accordingly to the billing settings. The rounded
           value is used to calculate the total. '
         title: Rounded Quantity
+        type: string
       quantity_redacted:
         anyOf:
         - type: boolean
@@ -102,6 +87,7 @@ $defs:
           `rounded_quantity`, `rounded_quantity_in_hours`, `quantity_in_hours`, `total`,
           `non_billable_total` '
         title: Quantity Redacted
+        type: string
       price:
         anyOf:
         - type: number
@@ -110,6 +96,7 @@ $defs:
         default: null
         description: The hourly or flat rate of the *Activity*
         title: Price
+        type: string
       note:
         anyOf:
         - type: string
@@ -117,6 +104,7 @@ $defs:
         default: null
         description: The details about the *Activity*
         title: Note
+        type: string
       flat_rate:
         anyOf:
         - type: boolean
@@ -124,6 +112,7 @@ $defs:
         default: null
         description: Whether the *Activity* is a flat rate
         title: Flat Rate
+        type: string
       billed:
         anyOf:
         - type: boolean
@@ -132,6 +121,7 @@ $defs:
         description: Whether the *Activity* has been added to an active bill that
           is in the state of `awaiting_payment` or `paid`
         title: Billed
+        type: string
       on_bill:
         anyOf:
         - type: boolean
@@ -140,6 +130,7 @@ $defs:
         description: Whether the *Activity* has been added to an active bill that
           is in the state of `draft`, `awaiting_approval`, `awaiting_payment` or `paid`
         title: On Bill
+        type: string
       total:
         anyOf:
         - type: number
@@ -148,6 +139,7 @@ $defs:
         default: null
         description: The total cost of draft, billable and billed items in the *Activity*
         title: Total
+        type: string
       contingency_fee:
         anyOf:
         - type: boolean
@@ -155,6 +147,7 @@ $defs:
         default: null
         description: Whether or not the *Activity* is a contingency fee
         title: Contingency Fee
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -163,6 +156,7 @@ $defs:
         default: null
         description: The time the *Activity* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -171,6 +165,7 @@ $defs:
         default: null
         description: The time the *Activity* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
       reference:
         anyOf:
         - type: string
@@ -178,6 +173,7 @@ $defs:
         default: null
         description: A check reference for a HardCostEntry.
         title: Reference
+        type: string
       non_billable:
         anyOf:
         - type: boolean
@@ -185,6 +181,7 @@ $defs:
         default: null
         description: Whether the *Activity* is non-billable
         title: Non Billable
+        type: string
       non_billable_total:
         anyOf:
         - type: number
@@ -193,6 +190,7 @@ $defs:
         default: null
         description: The total cost of non-billable items in the *Activity*
         title: Non Billable Total
+        type: string
       no_charge:
         anyOf:
         - type: boolean
@@ -200,6 +198,7 @@ $defs:
         default: null
         description: Whether the non-billable *Activity* is shown on the bill.
         title: No Charge
+        type: string
       tax_setting:
         anyOf:
         - type: string
@@ -208,6 +207,7 @@ $defs:
         description: The option denoting whether primary tax, secondary tax, or both
           is applied to an expense entry.
         title: Tax Setting
+        type: string
       currency:
         anyOf:
         - additionalProperties: true
@@ -216,6 +216,7 @@ $defs:
         default: null
         description: The currency of the *Activity*
         title: Currency
+        type: string
     title: ActivityBase
     type: object
   Timer:
@@ -228,6 +229,7 @@ $defs:
         default: null
         description: Unique identifier for the *Timer*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -235,6 +237,7 @@ $defs:
         default: null
         description: ETag for the *Timer*
         title: Etag
+        type: string
       start_time:
         anyOf:
         - format: date-time
@@ -243,6 +246,7 @@ $defs:
         default: null
         description: The time the *Timer* was started (as ISO-8601 timestamp)
         title: Start Time
+        type: string
       elapsed_time:
         anyOf:
         - type: number
@@ -251,6 +255,7 @@ $defs:
         default: null
         description: How much time has elapsed, in hours, since the timer was started
         title: Elapsed Time
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -259,6 +264,7 @@ $defs:
         default: null
         description: The time the *Timer* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -267,11 +273,13 @@ $defs:
         default: null
         description: The time the *Timer* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
       activity:
         anyOf:
         - $ref: '#/$defs/ActivityBase'
         - type: 'null'
         default: null
+        type: string
     title: Timer
     type: object
 description: TimerShow

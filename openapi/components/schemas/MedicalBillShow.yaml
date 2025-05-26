@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 $defs:
   LienBase:
     description: LienBase
@@ -32,6 +9,7 @@ $defs:
         default: null
         description: Unique identifier for the *Lien*
         title: Id
+        type: string
       amount:
         anyOf:
         - type: number
@@ -40,6 +18,7 @@ $defs:
         default: null
         description: The amount for Lien
         title: Amount
+        type: string
       description:
         anyOf:
         - type: string
@@ -47,6 +26,7 @@ $defs:
         default: null
         description: Lien description
         title: Description
+        type: string
       etag:
         anyOf:
         - type: string
@@ -54,6 +34,7 @@ $defs:
         default: null
         description: ETag for the *Lien*
         title: Etag
+        type: string
       lien_type:
         anyOf:
         - type: string
@@ -61,6 +42,7 @@ $defs:
         default: null
         description: Lien type
         title: Lien Type
+        type: string
       mark_as_lien:
         anyOf:
         - type: boolean
@@ -68,6 +50,7 @@ $defs:
         default: null
         description: Mark item as Lien
         title: Mark As Lien
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -76,6 +59,7 @@ $defs:
         default: null
         description: The time the *Lien* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -84,6 +68,7 @@ $defs:
         default: null
         description: The time the *Lien* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
     title: LienBase
     type: object
   MatterBase:
@@ -96,6 +81,7 @@ $defs:
         default: null
         description: Unique identifier for the *Matter*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -103,6 +89,7 @@ $defs:
         default: null
         description: ETag for the *Matter*
         title: Etag
+        type: string
       number:
         anyOf:
         - type: integer
@@ -110,6 +97,7 @@ $defs:
         default: null
         description: The number given to the *Matter* within an account
         title: Number
+        type: string
       display_number:
         anyOf:
         - type: string
@@ -119,6 +107,7 @@ $defs:
           manual_matter_numbering setting, this is either read only (generated) or
           customizable.
         title: Display Number
+        type: string
       custom_number:
         anyOf:
         - type: string
@@ -126,6 +115,7 @@ $defs:
         default: null
         description: User defined custom number of the *Matter*
         title: Custom Number
+        type: string
       currency:
         anyOf:
         - additionalProperties: true
@@ -134,6 +124,7 @@ $defs:
         default: null
         description: Currency of the matter
         title: Currency
+        type: string
       description:
         anyOf:
         - type: string
@@ -141,6 +132,7 @@ $defs:
         default: null
         description: The detailed description of the *Matter*
         title: Description
+        type: string
       status:
         anyOf:
         - type: string
@@ -148,6 +140,7 @@ $defs:
         default: null
         description: The current status of the *Matter*
         title: Status
+        type: string
       location:
         anyOf:
         - type: string
@@ -155,6 +148,7 @@ $defs:
         default: null
         description: The location of the *Matter*
         title: Location
+        type: string
       client_reference:
         anyOf:
         - type: string
@@ -162,6 +156,7 @@ $defs:
         default: null
         description: Client Reference string for external uses
         title: Client Reference
+        type: string
       client_id:
         anyOf:
         - type: integer
@@ -169,6 +164,7 @@ $defs:
         default: null
         description: Client ID
         title: Client Id
+        type: string
       billable:
         anyOf:
         - type: boolean
@@ -176,6 +172,7 @@ $defs:
         default: null
         description: Whether this matter is billable
         title: Billable
+        type: string
       maildrop_address:
         anyOf:
         - type: string
@@ -183,6 +180,7 @@ $defs:
         default: null
         description: A unique Maildrop email address for the matter
         title: Maildrop Address
+        type: string
       billing_method:
         anyOf:
         - type: string
@@ -190,6 +188,7 @@ $defs:
         default: null
         description: Billing method of this matter
         title: Billing Method
+        type: string
       open_date:
         anyOf:
         - format: date
@@ -198,6 +197,7 @@ $defs:
         default: null
         description: The date the matter was set to open (as a ISO-8601 date)
         title: Open Date
+        type: string
       close_date:
         anyOf:
         - format: date
@@ -206,6 +206,7 @@ $defs:
         default: null
         description: The date the matter was set to closed (as a ISO-8601 date)
         title: Close Date
+        type: string
       pending_date:
         anyOf:
         - format: date
@@ -214,6 +215,7 @@ $defs:
         default: null
         description: The date the matter was set to pending (as a ISO-8601 date)
         title: Pending Date
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -222,6 +224,7 @@ $defs:
         default: null
         description: The time the *Matter* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -230,6 +233,7 @@ $defs:
         default: null
         description: The time the *Matter* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
       shared:
         anyOf:
         - type: boolean
@@ -237,6 +241,7 @@ $defs:
         default: null
         description: Whether the matter is currently shared with Clio Connect
         title: Shared
+        type: string
       has_tasks:
         anyOf:
         - type: boolean
@@ -244,6 +249,7 @@ $defs:
         default: null
         description: Whether or not the matter has any tasks.
         title: Has Tasks
+        type: string
       last_activity_date:
         anyOf:
         - format: date
@@ -253,6 +259,7 @@ $defs:
         description: The greatest date out of all of the activities on the matter
           (as a ISO-8601 date)
         title: Last Activity Date
+        type: string
       matter_stage_updated_at:
         anyOf:
         - format: date-time
@@ -261,6 +268,7 @@ $defs:
         default: null
         description: The date the matter stage was last updated (as a ISO-8601 date)
         title: Matter Stage Updated At
+        type: string
     title: MatterBase
     type: object
   MedicalBill:
@@ -273,6 +281,7 @@ $defs:
         default: null
         description: Unique identifier for the *MedicalBill*
         title: Id
+        type: string
       adjustment:
         anyOf:
         - type: number
@@ -281,6 +290,7 @@ $defs:
         default: null
         description: Adjustment for Medical Bill
         title: Adjustment
+        type: string
       amount:
         anyOf:
         - type: number
@@ -289,6 +299,7 @@ $defs:
         default: null
         description: Amount for Medical Bill
         title: Amount
+        type: string
       bill_date:
         anyOf:
         - format: date
@@ -297,6 +308,7 @@ $defs:
         default: null
         description: Bill date for Medical Bill (as a ISO-8601 date)
         title: Bill Date
+        type: string
       bill_received_date:
         anyOf:
         - format: date
@@ -305,6 +317,7 @@ $defs:
         default: null
         description: Bill received date for Medical Bill (as a ISO-8601 date)
         title: Bill Received Date
+        type: string
       damage_type:
         anyOf:
         - type: string
@@ -312,6 +325,7 @@ $defs:
         default: null
         description: Damage Type
         title: Damage Type
+        type: string
       document_id:
         anyOf:
         - type: integer
@@ -319,6 +333,7 @@ $defs:
         default: null
         description: The id of the document associated with the Medical Bill
         title: Document Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -326,6 +341,7 @@ $defs:
         default: null
         description: ETag for the *MedicalBill*
         title: Etag
+        type: string
       name:
         anyOf:
         - type: string
@@ -333,6 +349,7 @@ $defs:
         default: null
         description: Name of the Medical Bill
         title: Name
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -341,6 +358,7 @@ $defs:
         default: null
         description: The time the *MedicalBill* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -349,11 +367,13 @@ $defs:
         default: null
         description: The time the *MedicalBill* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
       matter:
         anyOf:
         - $ref: '#/$defs/MatterBase'
         - type: 'null'
         default: null
+        type: string
       liens:
         anyOf:
         - items:
@@ -363,6 +383,7 @@ $defs:
         default: null
         description: Lien
         title: Liens
+        type: string
     title: MedicalBill
     type: object
 description: MedicalBillShow

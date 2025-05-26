@@ -1,0 +1,68 @@
+components:
+  responses:
+    201_Created:
+      description: Created
+      content:
+        application/json; charset=utf-8:
+          schema:
+            $ref: ../schemas/Activity_Show.yaml
+    204_No_Content:
+      description: No Content
+    400_Bad_Request:
+      description: Bad Request
+      content:
+        application/json; charset=utf-8:
+          schema:
+            $ref: ../schemas/Error.yaml
+    422_Unprocessable_Entity:
+      description: Unprocessable Entity
+      content:
+        application/json; charset=utf-8:
+          schema:
+            $ref: ../schemas/Error.yaml
+    403_Forbidden:
+      description: Forbidden
+      content:
+        application/json; charset=utf-8:
+          schema:
+            $ref: ../schemas/Error.yaml
+    304_Not_Modified:
+      description: Not Modified
+    401_Unauthorized:
+      description: Unauthorized
+      content:
+        application/json; charset=utf-8:
+          schema:
+            $ref: ../schemas/Error.yaml
+    200_Ok:
+      description: Ok
+      content:
+        application/json; charset=utf-8:
+          schema:
+            $ref: ../schemas/Activity_List.yaml
+    429_Too_Many_Requests:
+      description: Too Many Requests
+      content:
+        application/json; charset=utf-8:
+          schema:
+            $ref: ../schemas/Error.yaml
+    404_Not_Found:
+      description: Not Found
+      content:
+        application/json; charset=utf-8:
+          schema:
+            $ref: ../schemas/Error.yaml
+    409_Conflict:
+      description: Conflict
+      content:
+        application/json; charset=utf-8:
+          schema:
+            $ref: ../schemas/Error.yaml
+    412_Precondition_Failed:
+      description: Precondition Failed
+      content:
+        application/json; charset=utf-8:
+          schema:
+            $ref: ../schemas/Error.yaml
+    303_See_Other:
+      description: See Other

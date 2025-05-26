@@ -1,0 +1,22 @@
+/task/template/lists/{id}/copy:
+  post:
+    tags:
+    - Task Template Lists
+    summary: Copy a TaskTemplateList
+    operationId: createCopy
+    description: 'Creates a copy of the TaskTemplateList identified by the `id` path
+      parameter.
+
+      '
+    parameters:
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/id'
+    responses:
+      '201':
+        $ref: '#/components/responses/201_Created'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+    requestBody:
+      $ref: '#/components/requestBodies/ReqBody_914a4d29'

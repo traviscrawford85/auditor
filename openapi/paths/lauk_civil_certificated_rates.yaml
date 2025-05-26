@@ -1,0 +1,41 @@
+/lauk/civil/certificated/rates:
+  get:
+    tags:
+    - Civil Certificated Rates
+    summary: List Civil Certificated Rates
+    operationId: listLauk_civil_certificated_rates
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for all LaukCivilCertificatedRates
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/activity'
+    - $ref: '#/components/parameters/activity_sub_category'
+    - $ref: '#/components/parameters/attended_several_hearings_for_multiple_clients'
+    - $ref: '#/components/parameters/category_of_law'
+    - $ref: '#/components/parameters/change_of_solicitor'
+    - $ref: '#/components/parameters/court'
+    - $ref: '#/components/parameters/eligible_for_sqm'
+    - $ref: '#/components/parameters/fee_scheme'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/first_conducting_solicitor'
+    - $ref: '#/components/parameters/key'
+    - $ref: '#/components/parameters/limit'
+    - $ref: '#/components/parameters/number_of_clients'
+    - $ref: '#/components/parameters/page_token'
+    - $ref: '#/components/parameters/party'
+    - $ref: '#/components/parameters/post_transfer_clients_represented'
+    - $ref: '#/components/parameters/rate_type'
+    - $ref: '#/components/parameters/region'
+    - $ref: '#/components/parameters/session_type'
+    - $ref: '#/components/parameters/user_type'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'

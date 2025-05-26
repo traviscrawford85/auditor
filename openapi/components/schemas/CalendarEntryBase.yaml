@@ -1,36 +1,14 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 UnnamedSchema:
   description: CalendarEntryBase
   properties:
     id:
       anyOf:
-      - type: string
+      - type: integer
       - type: 'null'
       default: null
       description: Unique identifier for the *CalendarEntry*
       title: Id
+      type: integer
     etag:
       anyOf:
       - type: string
@@ -38,6 +16,7 @@ UnnamedSchema:
       default: null
       description: ETag for the *CalendarEntry*
       title: Etag
+      type: string
     summary:
       anyOf:
       - type: string
@@ -45,6 +24,7 @@ UnnamedSchema:
       default: null
       description: A short summary of the *CalendarEntry*
       title: Summary
+      type: string
     description:
       anyOf:
       - type: string
@@ -52,6 +32,7 @@ UnnamedSchema:
       default: null
       description: A detailed description of the *CalendarEntry*
       title: Description
+      type: string
     location:
       anyOf:
       - type: string
@@ -59,6 +40,7 @@ UnnamedSchema:
       default: null
       description: The geographic location of the *CalendarEntry*
       title: Location
+      type: string
     start_at:
       anyOf:
       - format: date-time
@@ -67,6 +49,7 @@ UnnamedSchema:
       default: null
       description: The time the *CalendarEntry* starts (as an ISO-8601 timestamp)
       title: Start At
+      type: string
     end_at:
       anyOf:
       - format: date-time
@@ -75,6 +58,7 @@ UnnamedSchema:
       default: null
       description: The time the *CalendarEntry* ends (as an ISO-8601 timestamp)
       title: End At
+      type: string
     all_day:
       anyOf:
       - type: boolean
@@ -82,6 +66,7 @@ UnnamedSchema:
       default: null
       description: Whether the event is all day
       title: All Day
+      type: string
     recurrence_rule:
       anyOf:
       - type: string
@@ -89,6 +74,7 @@ UnnamedSchema:
       default: null
       description: Recurrence rule for expanding
       title: Recurrence Rule
+      type: string
     parent_calendar_entry_id:
       anyOf:
       - type: integer
@@ -96,6 +82,7 @@ UnnamedSchema:
       default: null
       description: Identifier for the parent *CalendarEntry*
       title: Parent Calendar Entry Id
+      type: string
     court_rule:
       anyOf:
       - type: boolean
@@ -103,6 +90,7 @@ UnnamedSchema:
       default: null
       description: Whether this event is associated with a Court Rule
       title: Court Rule
+      type: string
     created_at:
       anyOf:
       - format: date-time
@@ -111,6 +99,7 @@ UnnamedSchema:
       default: null
       description: The time the *CalendarEntry* was created (as a ISO-8601 timestamp)
       title: Created At
+      type: string
     updated_at:
       anyOf:
       - format: date-time
@@ -119,6 +108,7 @@ UnnamedSchema:
       default: null
       description: The time the *CalendarEntry* was last updated (as a ISO-8601 timestamp)
       title: Updated At
+      type: string
     permission:
       anyOf:
       - type: string
@@ -127,6 +117,7 @@ UnnamedSchema:
       description: The view permission for the current user, will return 'viewer'
         when permission is 'limited_viewer' and the user is an attendee.
       title: Permission
+      type: string
     calendar_owner_id:
       anyOf:
       - type: integer
@@ -134,6 +125,7 @@ UnnamedSchema:
       default: null
       description: The id of the calendar owner.
       title: Calendar Owner Id
+      type: string
     start_at_time_zone:
       anyOf:
       - type: string
@@ -141,6 +133,7 @@ UnnamedSchema:
       default: null
       description: Original start at time zone of the event.
       title: Start At Time Zone
+      type: string
     time_entries_count:
       anyOf:
       - type: integer
@@ -148,5 +141,6 @@ UnnamedSchema:
       default: null
       description: The number of `TimeEntry` activities associated with the *CalendarEntry*
       title: Time Entries Count
+      type: string
   title: CalendarEntryBase
   type: object

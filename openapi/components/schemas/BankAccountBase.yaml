@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 UnnamedSchema:
   description: BankAccountBase
   properties:
@@ -31,6 +8,7 @@ UnnamedSchema:
       default: null
       description: The account number for *BankAccount*
       title: Account Number
+      type: string
     balance:
       anyOf:
       - type: number
@@ -39,6 +17,7 @@ UnnamedSchema:
       default: null
       description: The current balance of the *BankAccount*
       title: Balance
+      type: string
     bank_transactions_count:
       anyOf:
       - type: integer
@@ -46,6 +25,7 @@ UnnamedSchema:
       default: null
       description: The number of bank transactions associated with the account.
       title: Bank Transactions Count
+      type: string
     clio_payment_page_link:
       anyOf:
       - type: string
@@ -54,6 +34,7 @@ UnnamedSchema:
       description: Link to Single Payment Page which allows to transfer funds without
         logging in.
       title: Clio Payment Page Link
+      type: string
     clio_payment_page_qr_code:
       anyOf:
       - type: string
@@ -62,6 +43,7 @@ UnnamedSchema:
       description: A QR code that links to a Single Payment Page which allows to transfer
         funds without logging in.
       title: Clio Payment Page Qr Code
+      type: string
     clio_payments_enabled:
       anyOf:
       - type: boolean
@@ -69,6 +51,7 @@ UnnamedSchema:
       default: null
       description: Whether the bank account is connected to Clio Payments
       title: Clio Payments Enabled
+      type: string
     controlled_account:
       anyOf:
       - type: boolean
@@ -76,6 +59,7 @@ UnnamedSchema:
       default: null
       description: Whether is a controlled account
       title: Controlled Account
+      type: string
     created_at:
       anyOf:
       - format: date-time
@@ -84,6 +68,7 @@ UnnamedSchema:
       default: null
       description: The time the *BankAccount* was created (as a ISO-8601 timestamp)
       title: Created At
+      type: string
     currency:
       anyOf:
       - type: string
@@ -91,6 +76,7 @@ UnnamedSchema:
       default: null
       description: The currency type of the *BankAccount*
       title: Currency
+      type: string
     currency_id:
       anyOf:
       - type: number
@@ -99,6 +85,7 @@ UnnamedSchema:
       default: null
       description: The currency ID of the *BankAccount*
       title: Currency Id
+      type: string
     default_account:
       anyOf:
       - type: boolean
@@ -106,6 +93,7 @@ UnnamedSchema:
       default: null
       description: Whether it is the default account
       title: Default Account
+      type: string
     domicile_branch:
       anyOf:
       - type: string
@@ -113,6 +101,7 @@ UnnamedSchema:
       default: null
       description: The name of the branch where the account was opened
       title: Domicile Branch
+      type: string
     etag:
       anyOf:
       - type: string
@@ -120,6 +109,7 @@ UnnamedSchema:
       default: null
       description: ETag for the *BankAccount*
       title: Etag
+      type: string
     general_ledger_number:
       anyOf:
       - type: string
@@ -127,6 +117,7 @@ UnnamedSchema:
       default: null
       description: General ledger number
       title: General Ledger Number
+      type: string
     holder:
       anyOf:
       - type: string
@@ -134,6 +125,7 @@ UnnamedSchema:
       default: null
       description: The name of the person or business that owns the *BankAccount*
       title: Holder
+      type: string
     id:
       anyOf:
       - type: integer
@@ -141,6 +133,7 @@ UnnamedSchema:
       default: null
       description: Unique identifier for the *BankAccount*
       title: Id
+      type: integer
     institution:
       anyOf:
       - type: string
@@ -148,6 +141,7 @@ UnnamedSchema:
       default: null
       description: The financial institution where the *BankAccount* is registered
       title: Institution
+      type: string
     name:
       anyOf:
       - type: string
@@ -155,6 +149,7 @@ UnnamedSchema:
       default: null
       description: The name of the *BankAccount*
       title: Name
+      type: string
     swift:
       anyOf:
       - type: string
@@ -162,6 +157,7 @@ UnnamedSchema:
       default: null
       description: A unique identification code for the financial institution
       title: Swift
+      type: string
     transit_number:
       anyOf:
       - type: string
@@ -169,6 +165,7 @@ UnnamedSchema:
       default: null
       description: Transit number for the bank account branch
       title: Transit Number
+      type: string
     type:
       anyOf:
       - type: string
@@ -176,6 +173,7 @@ UnnamedSchema:
       default: null
       description: The type of the *BankAccount*
       title: Type
+      type: string
     updated_at:
       anyOf:
       - format: date-time
@@ -184,5 +182,6 @@ UnnamedSchema:
       default: null
       description: The time the *BankAccount* was last updated (as a ISO-8601 timestamp)
       title: Updated At
+      type: string
   title: BankAccountBase
   type: object

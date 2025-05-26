@@ -1,0 +1,33 @@
+/lauk/criminal/controlled/rates:
+  get:
+    tags:
+    - Criminal Controlled Rates
+    summary: List Criminal Controlled Rates
+    operationId: listLauk_criminal_controlled_rates
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for all LaukCriminalControlledRates
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/activity'
+    - $ref: '#/components/parameters/category_of_law'
+    - $ref: '#/components/parameters/counsel'
+    - $ref: '#/components/parameters/court'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/key'
+    - $ref: '#/components/parameters/limit'
+    - $ref: '#/components/parameters/page_token'
+    - $ref: '#/components/parameters/rate_type'
+    - $ref: '#/components/parameters/region'
+    - $ref: '#/components/parameters/solicitor_type'
+    - $ref: '#/components/parameters/standard_fee_category'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'

@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 $defs:
   ContactCreateRequestData:
     description: ContactCreateRequestData
@@ -33,11 +10,13 @@ $defs:
         - type: 'null'
         default: null
         title: Addresses
+        type: string
       avatar:
         anyOf:
         - $ref: '#/$defs/ContactCreateRequestDataAvatar'
         - type: 'null'
         default: null
+        type: string
       clio_connect_email:
         anyOf:
         - type: string
@@ -45,16 +24,19 @@ $defs:
         default: null
         description: Notifications will be sent to this email when a resource is shared.
         title: Clio Connect Email
+        type: string
       co_counsel_rate:
         anyOf:
         - $ref: '#/$defs/ContactCreateRequestDataCoCounselRate'
         - type: 'null'
         default: null
+        type: string
       company:
         anyOf:
         - $ref: '#/$defs/ContactCreateRequestDataCompany'
         - type: 'null'
         default: null
+        type: string
       currency:
         anyOf:
         - additionalProperties: true
@@ -63,6 +45,7 @@ $defs:
         default: null
         description: The Currency the contact is associated with.
         title: Currency
+        type: string
       custom_field_set_associations:
         anyOf:
         - items:
@@ -71,6 +54,7 @@ $defs:
         - type: 'null'
         default: null
         title: Custom Field Set Associations
+        type: string
       custom_field_values:
         anyOf:
         - items:
@@ -79,6 +63,7 @@ $defs:
         - type: 'null'
         default: null
         title: Custom Field Values
+        type: string
       date_of_birth:
         anyOf:
         - format: date
@@ -87,6 +72,7 @@ $defs:
         default: null
         description: Date of birth of the Contact.
         title: Date Of Birth
+        type: string
       email_addresses:
         anyOf:
         - items:
@@ -95,6 +81,7 @@ $defs:
         - type: 'null'
         default: null
         title: Email Addresses
+        type: string
       first_name:
         anyOf:
         - type: string
@@ -102,6 +89,7 @@ $defs:
         default: null
         description: First name of the Contact.
         title: First Name
+        type: string
       instant_messengers:
         anyOf:
         - items:
@@ -110,6 +98,7 @@ $defs:
         - type: 'null'
         default: null
         title: Instant Messengers
+        type: string
       last_name:
         anyOf:
         - type: string
@@ -117,6 +106,7 @@ $defs:
         default: null
         description: Last name of the Contact.
         title: Last Name
+        type: string
       ledes_client_id:
         anyOf:
         - type: string
@@ -124,6 +114,7 @@ $defs:
         default: null
         description: LEDES client id of the Contact.
         title: Ledes Client Id
+        type: string
       middle_name:
         anyOf:
         - type: string
@@ -131,6 +122,7 @@ $defs:
         default: null
         description: Middle name of the Contact.
         title: Middle Name
+        type: string
       name:
         description: Full name of the Contact. For requirements, see [Contact Name](https://docs.developers.clio.com/api-reference/#section/Contact-Name).
         title: Name
@@ -143,6 +135,7 @@ $defs:
         - type: 'null'
         default: null
         title: Phone Numbers
+        type: string
       prefix:
         anyOf:
         - type: string
@@ -150,6 +143,7 @@ $defs:
         default: null
         description: Personal title of the Contact.
         title: Prefix
+        type: string
       sales_tax_number:
         anyOf:
         - type: string
@@ -158,6 +152,7 @@ $defs:
         description: A contact's sales tax number will appear on invoices generated
           for the Contact.
         title: Sales Tax Number
+        type: string
       title:
         anyOf:
         - type: string
@@ -165,6 +160,7 @@ $defs:
         default: null
         description: Professional title of the Contact.
         title: Title
+        type: string
       type:
         description: Type of the Contact.
         title: Type
@@ -177,6 +173,7 @@ $defs:
         - type: 'null'
         default: null
         title: Web Sites
+        type: string
     required:
     - name
     - type
@@ -192,6 +189,7 @@ $defs:
         default: Other
         description: Name of the Address.
         title: Name
+        type: string
       street:
         anyOf:
         - type: string
@@ -199,6 +197,7 @@ $defs:
         default: null
         description: Street.
         title: Street
+        type: string
       city:
         anyOf:
         - type: string
@@ -206,6 +205,7 @@ $defs:
         default: null
         description: City.
         title: City
+        type: string
       province:
         anyOf:
         - type: string
@@ -213,6 +213,7 @@ $defs:
         default: null
         description: Province or state.
         title: Province
+        type: string
       postal_code:
         anyOf:
         - type: string
@@ -220,6 +221,7 @@ $defs:
         default: null
         description: Postal code or zip code.
         title: Postal Code
+        type: string
       country:
         anyOf:
         - type: string
@@ -227,6 +229,7 @@ $defs:
         default: null
         description: Country
         title: Country
+        type: string
     title: ContactCreateRequestDataAddressesInner
     type: object
   ContactCreateRequestDataAvatar:
@@ -240,6 +243,7 @@ $defs:
         description: The avatar image for the *Contact*, base64-encoded. Must be a
           valid GIF, JPG, or PNG image of less than 2 megabytes in size.
         title: Image
+        type: string
       _destroy:
         anyOf:
         - type: boolean
@@ -249,6 +253,7 @@ $defs:
           identifier of the associated Avatar is present, the Avatar is deleted from
           the Contact.
         title: Destroy
+        type: string
     title: ContactCreateRequestDataAvatar
     type: object
   ContactCreateRequestDataCoCounselRate:
@@ -264,6 +269,7 @@ $defs:
           can only be provided during PATCH requests. It cannot be provided at the
           time a Contact is created (i.e. POST requests). '
         title: Rate
+        type: string
     title: ContactCreateRequestDataCoCounselRate
     type: object
   ContactCreateRequestDataCompany:
@@ -277,6 +283,7 @@ $defs:
         description: The unique identifier for a single Company associated with the
           Contact. The keyword `null` is not valid for this field.
         title: Id
+        type: string
     title: ContactCreateRequestDataCompany
     type: object
   ContactCreateRequestDataCustomFieldSetAssociationsInner:
@@ -290,6 +297,7 @@ $defs:
         description: The order to display the CustomFieldSet in a Contact. If not
           specified, it is added as the last CustomFieldSet of the Contact.
         title: Display Order
+        type: string
       custom_field_set:
         $ref: '#/$defs/ContactCreateRequestDataCustomFieldSetAssociationsInnerCustomFieldSet'
     required:
@@ -345,6 +353,7 @@ $defs:
         default: Other
         description: Name of the EmailAddress.
         title: Name
+        type: string
       address:
         anyOf:
         - type: string
@@ -352,6 +361,7 @@ $defs:
         default: null
         description: Email address.
         title: Address
+        type: string
       default_email:
         anyOf:
         - type: boolean
@@ -360,6 +370,7 @@ $defs:
         description: Whether or not the Contact should be the default email for the
           Contact.
         title: Default Email
+        type: string
     title: ContactCreateRequestDataEmailAddressesInner
     type: object
   ContactCreateRequestDataInstantMessengersInner:
@@ -372,6 +383,7 @@ $defs:
         default: Other
         description: Name of the InstantMessenger.
         title: Name
+        type: string
       address:
         anyOf:
         - type: string
@@ -379,6 +391,7 @@ $defs:
         default: null
         description: Address of the InstantMessenger.
         title: Address
+        type: string
     title: ContactCreateRequestDataInstantMessengersInner
     type: object
   ContactCreateRequestDataPhoneNumbersInner:
@@ -391,6 +404,7 @@ $defs:
         default: Other
         description: Name of the PhoneNumber.
         title: Name
+        type: string
       number:
         anyOf:
         - type: string
@@ -398,6 +412,7 @@ $defs:
         default: null
         description: Phone number.
         title: Number
+        type: string
       default_number:
         anyOf:
         - type: boolean
@@ -406,6 +421,7 @@ $defs:
         description: Whether or not the PhoneNumber should be the default number for
           the Contact.
         title: Default Number
+        type: string
     title: ContactCreateRequestDataPhoneNumbersInner
     type: object
   ContactCreateRequestDataWebSitesInner:
@@ -418,6 +434,7 @@ $defs:
         default: Other
         description: Name of the WebSite.
         title: Name
+        type: string
       address:
         anyOf:
         - type: string
@@ -425,6 +442,7 @@ $defs:
         default: null
         description: URL of the WebSite.
         title: Address
+        type: string
       default_web_site:
         anyOf:
         - type: boolean
@@ -433,6 +451,7 @@ $defs:
         description: Whether or not the Contact should be the default website for
           the Contact.
         title: Default Web Site
+        type: string
     title: ContactCreateRequestDataWebSitesInner
     type: object
 description: ContactCreateRequest

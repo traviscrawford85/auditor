@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 UnnamedSchema:
   description: ContactBase
   properties:
@@ -31,6 +8,7 @@ UnnamedSchema:
       default: null
       description: Unique identifier for the *Contact*
       title: Id
+      type: integer
     etag:
       anyOf:
       - type: string
@@ -38,6 +16,7 @@ UnnamedSchema:
       default: null
       description: ETag for the *Contact*
       title: Etag
+      type: string
     name:
       anyOf:
       - type: string
@@ -45,6 +24,7 @@ UnnamedSchema:
       default: null
       description: The full name of the *Contact*
       title: Name
+      type: string
     first_name:
       anyOf:
       - type: string
@@ -52,6 +32,7 @@ UnnamedSchema:
       default: null
       description: First name of the Person
       title: First Name
+      type: string
     middle_name:
       anyOf:
       - type: string
@@ -59,6 +40,7 @@ UnnamedSchema:
       default: null
       description: Middle name of the Person
       title: Middle Name
+      type: string
     last_name:
       anyOf:
       - type: string
@@ -66,6 +48,7 @@ UnnamedSchema:
       default: null
       description: Last name of the Person
       title: Last Name
+      type: string
     date_of_birth:
       anyOf:
       - format: date
@@ -74,6 +57,7 @@ UnnamedSchema:
       default: null
       description: Date of birth
       title: Date Of Birth
+      type: string
     type:
       anyOf:
       - type: string
@@ -81,6 +65,7 @@ UnnamedSchema:
       default: null
       description: The type of the *Contact*
       title: Type
+      type: string
     created_at:
       anyOf:
       - format: date-time
@@ -89,6 +74,7 @@ UnnamedSchema:
       default: null
       description: The time the *Contact* was created (as a ISO-8601 timestamp)
       title: Created At
+      type: string
     updated_at:
       anyOf:
       - format: date-time
@@ -97,6 +83,7 @@ UnnamedSchema:
       default: null
       description: The time the *Contact* was last updated (as a ISO-8601 timestamp)
       title: Updated At
+      type: string
     prefix:
       anyOf:
       - type: string
@@ -104,6 +91,7 @@ UnnamedSchema:
       default: null
       description: The prefix of the *Contact* (Mr, Mrs, etc)
       title: Prefix
+      type: string
     title:
       anyOf:
       - type: string
@@ -111,6 +99,7 @@ UnnamedSchema:
       default: null
       description: The designated title of the *Contact*
       title: Title
+      type: string
     initials:
       anyOf:
       - type: string
@@ -118,6 +107,7 @@ UnnamedSchema:
       default: null
       description: The initials of the *Contact*
       title: Initials
+      type: string
     clio_connect_email:
       anyOf:
       - type: string
@@ -125,6 +115,7 @@ UnnamedSchema:
       default: null
       description: Clio Connect email if the *Contact* is a ClioConnect User
       title: Clio Connect Email
+      type: string
     locked_clio_connect_email:
       anyOf:
       - type: boolean
@@ -133,6 +124,7 @@ UnnamedSchema:
       description: A boolean indicating if the ability to modify this *Contacts Clio
         connect email is locked.
       title: Locked Clio Connect Email
+      type: string
     client_connect_user_id:
       anyOf:
       - type: integer
@@ -140,6 +132,7 @@ UnnamedSchema:
       default: null
       description: The ID for the Clio Connect user associated with this *Contact*
       title: Client Connect User Id
+      type: string
     primary_email_address:
       anyOf:
       - type: string
@@ -147,6 +140,7 @@ UnnamedSchema:
       default: null
       description: The primary email address associated with this *Contact*.
       title: Primary Email Address
+      type: string
     secondary_email_address:
       anyOf:
       - type: string
@@ -154,6 +148,7 @@ UnnamedSchema:
       default: null
       description: The secondary email address associated with this *Contact*.
       title: Secondary Email Address
+      type: string
     primary_phone_number:
       anyOf:
       - type: string
@@ -161,6 +156,7 @@ UnnamedSchema:
       default: null
       description: The primary phone number associated with this *Contact*.
       title: Primary Phone Number
+      type: string
     secondary_phone_number:
       anyOf:
       - type: string
@@ -168,6 +164,7 @@ UnnamedSchema:
       default: null
       description: The secondary phone number of the *Contact*.
       title: Secondary Phone Number
+      type: string
     ledes_client_id:
       anyOf:
       - type: string
@@ -175,6 +172,7 @@ UnnamedSchema:
       default: null
       description: LEDES client id of the Contact
       title: Ledes Client Id
+      type: string
     has_clio_for_clients_permission:
       anyOf:
       - type: boolean
@@ -183,6 +181,7 @@ UnnamedSchema:
       description: True if at least one resource has been shared with the contact
         using Clio for Clients.
       title: Has Clio For Clients Permission
+      type: string
     is_client:
       anyOf:
       - type: boolean
@@ -190,6 +189,7 @@ UnnamedSchema:
       default: null
       description: Whether or not the Contact is a client
       title: Is Client
+      type: string
     is_clio_for_client_user:
       anyOf:
       - type: boolean
@@ -198,6 +198,7 @@ UnnamedSchema:
       description: Whether or not this contact has client_login and client_user (can
         be created due to addition to client portal or client_share_permissions)
       title: Is Clio For Client User
+      type: string
     is_co_counsel:
       anyOf:
       - type: boolean
@@ -205,6 +206,7 @@ UnnamedSchema:
       default: null
       description: Whether or not the Contact has matters shared as co-counsel
       title: Is Co Counsel
+      type: string
     is_bill_recipient:
       anyOf:
       - type: boolean
@@ -212,6 +214,7 @@ UnnamedSchema:
       default: null
       description: Whether the Contact is a bill recipient on at least one matter.
       title: Is Bill Recipient
+      type: string
     sales_tax_number:
       anyOf:
       - type: string
@@ -219,6 +222,7 @@ UnnamedSchema:
       default: null
       description: The sales tax number of the *Contact*
       title: Sales Tax Number
+      type: string
     currency:
       anyOf:
       - additionalProperties: true
@@ -227,5 +231,6 @@ UnnamedSchema:
       default: null
       description: Currency of the *Contact*
       title: Currency
+      type: string
   title: ContactBase
   type: object

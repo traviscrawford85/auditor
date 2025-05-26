@@ -1,0 +1,44 @@
+/court/rules/matter/dockets/{id}:
+  get:
+    tags:
+    - Matter Dockets
+    summary: Return the data for the matter docket
+    operationId: get
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for a single MatterDocket
+    parameters:
+    - $ref: '#/components/parameters/IF-MODIFIED-SINCE'
+    - $ref: '#/components/parameters/IF-NONE-MATCH'
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/id'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '304':
+        $ref: '#/components/responses/304_Not_Modified'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+  delete:
+    tags:
+    - Matter Dockets
+    summary: Deletes the requested matter docket
+    operationId: delete
+    description: Outlines the parameters, optional and required, used when deleting
+      the record for a single MatterDocket
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/id'
+    responses:
+      '204':
+        $ref: '#/components/responses/204_No_Content'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'

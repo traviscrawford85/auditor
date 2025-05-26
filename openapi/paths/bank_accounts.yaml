@@ -1,0 +1,58 @@
+/bank/accounts:
+  get:
+    tags:
+    - Bank Accounts
+    summary: Return the data for all BankAccounts
+    operationId: listBank_accounts
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for all BankAccounts
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/created_since'
+    - $ref: '#/components/parameters/fields'
+    - $ref: ./components/parameters/ids[].yaml
+    - $ref: '#/components/parameters/limit'
+    - $ref: '#/components/parameters/order'
+    - $ref: '#/components/parameters/page_token'
+    - $ref: '#/components/parameters/show_empty_accounts'
+    - $ref: '#/components/parameters/type'
+    - $ref: '#/components/parameters/updated_since'
+    - $ref: '#/components/parameters/user_id'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+  post:
+    tags:
+    - Bank Accounts
+    summary: Create a new BankAccount
+    operationId: createBank_account
+    description: Outlines the parameters and data fields used when creating a new
+      BankAccount
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    responses:
+      '201':
+        $ref: '#/components/responses/201_Created'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '422':
+        $ref: '#/components/responses/422_Unprocessable_Entity'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+    requestBody:
+      $ref: '#/components/requestBodies/ReqBody_62abff87'

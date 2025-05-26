@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 UnnamedSchema:
   description: LineItemBase
   properties:
@@ -31,6 +8,7 @@ UnnamedSchema:
       default: null
       description: Unique identifier for the *LineItem*
       title: Id
+      type: integer
     etag:
       anyOf:
       - type: string
@@ -38,6 +16,7 @@ UnnamedSchema:
       default: null
       description: ETag for the *LineItem*
       title: Etag
+      type: string
     type:
       anyOf:
       - type: string
@@ -45,6 +24,7 @@ UnnamedSchema:
       default: null
       description: The type of the *LineItem*
       title: Type
+      type: string
     description:
       anyOf:
       - type: string
@@ -52,6 +32,7 @@ UnnamedSchema:
       default: null
       description: The description for the *LineItem*
       title: Description
+      type: string
     date:
       anyOf:
       - format: date
@@ -60,6 +41,7 @@ UnnamedSchema:
       default: null
       description: The *LineItem* date (as a ISO-8601 date)
       title: Date
+      type: string
     price:
       anyOf:
       - type: number
@@ -68,6 +50,7 @@ UnnamedSchema:
       default: null
       description: The price of the *LineItem*
       title: Price
+      type: string
     taxable:
       anyOf:
       - type: boolean
@@ -75,6 +58,7 @@ UnnamedSchema:
       default: null
       description: Whether the *LineItem* is taxable
       title: Taxable
+      type: string
     kind:
       anyOf:
       - type: string
@@ -82,6 +66,7 @@ UnnamedSchema:
       default: null
       description: The kind of *LineItem*
       title: Kind
+      type: string
     note:
       anyOf:
       - type: string
@@ -89,6 +74,7 @@ UnnamedSchema:
       default: null
       description: The note attached to the *LineItem*
       title: Note
+      type: string
     secondary_taxable:
       anyOf:
       - type: boolean
@@ -96,6 +82,7 @@ UnnamedSchema:
       default: null
       description: Whether the *LineItem* is secondary taxable
       title: Secondary Taxable
+      type: string
     total:
       anyOf:
       - type: number
@@ -104,6 +91,7 @@ UnnamedSchema:
       default: null
       description: The total amount for the *LineItem*
       title: Total
+      type: string
     tax:
       anyOf:
       - type: number
@@ -112,6 +100,7 @@ UnnamedSchema:
       default: null
       description: The tax amount for the *LineItem*
       title: Tax
+      type: string
     secondary_tax:
       anyOf:
       - type: number
@@ -120,6 +109,7 @@ UnnamedSchema:
       default: null
       description: The secondary tax amount for the *LineItem*
       title: Secondary Tax
+      type: string
     sub_total:
       anyOf:
       - type: number
@@ -128,6 +118,7 @@ UnnamedSchema:
       default: null
       description: The subtotal amount for the *LineItem*
       title: Sub Total
+      type: string
     quantity:
       anyOf:
       - type: number
@@ -136,6 +127,7 @@ UnnamedSchema:
       default: null
       description: The amount of hours for the *LineItem*
       title: Quantity
+      type: string
     group_ordering:
       anyOf:
       - type: integer
@@ -143,6 +135,7 @@ UnnamedSchema:
       default: null
       description: The value to specify the ordering of the *LineItem* on a bill
       title: Group Ordering
+      type: string
     created_at:
       anyOf:
       - format: date-time
@@ -151,6 +144,7 @@ UnnamedSchema:
       default: null
       description: The time the *LineItem* was created (as a ISO-8601 timestamp)
       title: Created At
+      type: string
     updated_at:
       anyOf:
       - format: date-time
@@ -159,5 +153,6 @@ UnnamedSchema:
       default: null
       description: The time the *LineItem* was last updated (as a ISO-8601 timestamp)
       title: Updated At
+      type: string
   title: LineItemBase
   type: object

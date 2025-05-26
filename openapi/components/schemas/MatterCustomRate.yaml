@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 $defs:
   PolymorphicCustomRate:
     description: PolymorphicCustomRate
@@ -32,6 +9,7 @@ $defs:
         default: null
         description: The unique identifier for the custom rate
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -39,6 +17,7 @@ $defs:
         default: null
         description: ETag for the *PolymorphicCustomRate*
         title: Etag
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -48,6 +27,7 @@ $defs:
         description: The time the *PolymorphicCustomRate* was created (as a ISO-8601
           timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -57,6 +37,7 @@ $defs:
         description: The time the *PolymorphicCustomRate* was last updated (as a ISO-8601
           timestamp)
         title: Updated At
+        type: string
       rate:
         anyOf:
         - type: number
@@ -71,6 +52,7 @@ $defs:
           as string that represents a rational number such as `1/3`.  If the user
           does not have sufficient rate visibility, the rates are hidden. '
         title: Rate
+        type: string
       award:
         anyOf:
         - type: number
@@ -79,6 +61,7 @@ $defs:
         default: null
         description: The value of the ContingencyFee award.
         title: Award
+        type: string
       note:
         anyOf:
         - type: string
@@ -86,6 +69,7 @@ $defs:
         default: null
         description: Details about the ContingencyFee award.
         title: Note
+        type: string
       date:
         anyOf:
         - format: date
@@ -94,21 +78,25 @@ $defs:
         default: null
         description: The date of the ContingencyFee award.
         title: Date
+        type: string
       user:
         anyOf:
         - $ref: '#/$defs/PolymorphicCustomRateUserBase'
         - type: 'null'
         default: null
+        type: string
       group:
         anyOf:
         - $ref: '#/$defs/PolymorphicCustomRateGroupBase'
         - type: 'null'
         default: null
+        type: string
       activity_description:
         anyOf:
         - $ref: '#/$defs/PolymorphicCustomRateActivityDescriptionBase'
         - type: 'null'
         default: null
+        type: string
     title: PolymorphicCustomRate
     type: object
   PolymorphicCustomRateActivityDescriptionBase:
@@ -121,6 +109,7 @@ $defs:
         default: null
         description: Unique identifier for the *ActivityDescription*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -128,6 +117,7 @@ $defs:
         default: null
         description: ETag for the *ActivityDescription*
         title: Etag
+        type: string
       name:
         anyOf:
         - type: string
@@ -135,6 +125,7 @@ $defs:
         default: null
         description: The name of the *ActivityDescription*
         title: Name
+        type: string
     title: PolymorphicCustomRateActivityDescriptionBase
     type: object
   PolymorphicCustomRateGroupBase:
@@ -147,6 +138,7 @@ $defs:
         default: null
         description: ETag for the *Group*
         title: Etag
+        type: string
       id:
         anyOf:
         - type: integer
@@ -154,6 +146,7 @@ $defs:
         default: null
         description: Unique identifier for the *Group*
         title: Id
+        type: string
       name:
         anyOf:
         - type: string
@@ -161,6 +154,7 @@ $defs:
         default: null
         description: The name of the *Group*
         title: Name
+        type: string
     title: PolymorphicCustomRateGroupBase
     type: object
   PolymorphicCustomRateUserBase:
@@ -173,6 +167,7 @@ $defs:
         default: null
         description: Whether the *User* is allowed to log in
         title: Enabled
+        type: string
       etag:
         anyOf:
         - type: string
@@ -180,6 +175,7 @@ $defs:
         default: null
         description: ETag for the *User*
         title: Etag
+        type: string
       id:
         anyOf:
         - type: integer
@@ -187,6 +183,7 @@ $defs:
         default: null
         description: Unique identifier for the *User*
         title: Id
+        type: string
       name:
         anyOf:
         - type: string
@@ -194,6 +191,7 @@ $defs:
         default: null
         description: The full name of the *User*
         title: Name
+        type: string
     title: PolymorphicCustomRateUserBase
     type: object
 description: MatterCustomRate
@@ -205,6 +203,7 @@ properties:
     default: null
     description: The type of the *MatterCustomRate*
     title: Type
+    type: string
   on_invoice:
     anyOf:
     - type: boolean
@@ -212,6 +211,7 @@ properties:
     default: null
     description: Specifies if the matter's associated activity is posted or on a bill.
     title: On Invoice
+    type: string
   rates:
     anyOf:
     - items:
@@ -221,5 +221,6 @@ properties:
     default: null
     description: PolymorphicCustomRate
     title: Rates
+    type: string
 title: MatterCustomRate
 type: object

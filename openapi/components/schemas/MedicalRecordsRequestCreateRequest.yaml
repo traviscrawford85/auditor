@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 $defs:
   MedicalRecordsRequestCreateRequestData:
     description: MedicalRecordsRequestCreateRequestData
@@ -33,6 +10,7 @@ $defs:
         default: null
         description: Follow up date for Medical Bills. (Expects an ISO-8601 date).
         title: Bills Follow Up Date
+        type: string
       bills_request_date:
         anyOf:
         - format: date-time
@@ -41,6 +19,7 @@ $defs:
         default: null
         description: Requested date for Medical Bills. (Expects an ISO-8601 date).
         title: Bills Request Date
+        type: string
       bills_status:
         description: Current status for the Medical Bills.
         title: Bills Status
@@ -52,6 +31,7 @@ $defs:
         default: null
         description: Detailed description of the Medical Records Detail.
         title: Description
+        type: string
       in_treatment:
         description: True or false value to record if the treatment has been completed.
         title: In Treatment
@@ -69,6 +49,7 @@ $defs:
         - type: 'null'
         default: null
         title: Medical Bills
+        type: string
       medical_provider_id:
         description: The unique identifier for a single Medical Provider associated
           with this Medical Records Detail.
@@ -82,6 +63,7 @@ $defs:
         - type: 'null'
         default: null
         title: Medical Records
+        type: string
       records_follow_up_date:
         anyOf:
         - format: date-time
@@ -90,6 +72,7 @@ $defs:
         default: null
         description: Follow up date for Medical Records. (Expects an ISO-8601 date).
         title: Records Follow Up Date
+        type: string
       records_request_date:
         anyOf:
         - format: date-time
@@ -98,6 +81,7 @@ $defs:
         default: null
         description: Requested date for Medical Records. (Expects an ISO-8601 date).
         title: Records Request Date
+        type: string
       records_status:
         description: Current status for the Medical Records.
         title: Records Status
@@ -110,6 +94,7 @@ $defs:
         default: null
         description: End date for the treatment. (Expects an ISO-8601 date).
         title: Treatment End Date
+        type: string
       treatment_start_date:
         anyOf:
         - format: date-time
@@ -118,6 +103,7 @@ $defs:
         default: null
         description: Start date for the treatment. (Expects an ISO-8601 date).
         title: Treatment Start Date
+        type: string
     required:
     - bills_status
     - in_treatment
@@ -135,18 +121,21 @@ $defs:
         - type: integer
         description: Adjustment for Medical Bill.
         title: Adjustment
+        type: string
       amount:
         anyOf:
         - type: number
         - type: integer
         description: Amount for Medical Bill.
         title: Amount
+        type: string
       balance:
         anyOf:
         - type: number
         - type: integer
         description: Balance for Medical Bill.
         title: Balance
+        type: string
       bill_date:
         anyOf:
         - format: date
@@ -155,6 +144,7 @@ $defs:
         default: null
         description: Bill date for Medical Bill. (Expects an ISO-8601 date).
         title: Bill Date
+        type: string
       bill_received_date:
         anyOf:
         - format: date
@@ -163,6 +153,7 @@ $defs:
         default: null
         description: Bill received date for Medical Bill. (Expects an ISO-8601 date).
         title: Bill Received Date
+        type: string
       document_id:
         anyOf:
         - type: integer
@@ -171,6 +162,7 @@ $defs:
         description: The unique identifier for a single Damage associated with the
           MedicalRecordsRequest. The keyword `null` is not valid for this field.
         title: Document Id
+        type: string
       name:
         description: Name for Medical Bill.
         title: Name
@@ -187,6 +179,7 @@ $defs:
         - type: 'null'
         default: null
         title: Payers
+        type: string
     required:
     - adjustment
     - amount
@@ -204,6 +197,7 @@ $defs:
         - type: integer
         description: Lien amount.
         title: Amount
+        type: string
       holder_id:
         description: The unique identifier for a single Damage associated with the
           MedicalRecordsRequest. The keyword `null` is not valid for this field.
@@ -235,6 +229,7 @@ $defs:
         default: null
         description: End date for Medical Record.
         title: End Date
+        type: string
       start_date:
         anyOf:
         - format: date-time
@@ -243,6 +238,7 @@ $defs:
         default: null
         description: Start date for Medical Record.
         title: Start Date
+        type: string
     required:
     - document_id
     title: MedicalRecordsRequestCreateRequestDataMedicalRecordsInner

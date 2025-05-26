@@ -1,0 +1,46 @@
+/bills:
+  get:
+    tags:
+    - Bills
+    summary: Return the data for all Bills
+    operationId: listBills
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for all Bills
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/client_id'
+    - $ref: '#/components/parameters/created_since'
+    - $ref: '#/components/parameters/currency_id'
+    - $ref: '#/components/parameters/custom_field_values'
+    - $ref: '#/components/parameters/due_after'
+    - $ref: '#/components/parameters/due_at'
+    - $ref: '#/components/parameters/due_before'
+    - $ref: '#/components/parameters/fields'
+    - $ref: ./components/parameters/ids[].yaml
+    - $ref: '#/components/parameters/issued_after'
+    - $ref: '#/components/parameters/issued_before'
+    - $ref: '#/components/parameters/last_sent_end_date'
+    - $ref: '#/components/parameters/last_sent_start_date'
+    - $ref: '#/components/parameters/limit'
+    - $ref: '#/components/parameters/matter_id'
+    - $ref: '#/components/parameters/order'
+    - $ref: '#/components/parameters/originating_attorney_id'
+    - $ref: '#/components/parameters/overdue_only'
+    - $ref: '#/components/parameters/page_token'
+    - $ref: '#/components/parameters/query'
+    - $ref: '#/components/parameters/responsible_attorney_id'
+    - $ref: '#/components/parameters/state'
+    - $ref: '#/components/parameters/status'
+    - $ref: '#/components/parameters/type'
+    - $ref: '#/components/parameters/updated_since'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'

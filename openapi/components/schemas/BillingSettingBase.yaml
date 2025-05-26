@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 UnnamedSchema:
   description: BillingSettingBase
   properties:
@@ -31,6 +8,7 @@ UnnamedSchema:
       default: null
       description: Unique identifier for the *BillingSetting*
       title: Id
+      type: integer
     etag:
       anyOf:
       - type: string
@@ -38,6 +16,7 @@ UnnamedSchema:
       default: null
       description: ETag for the *BillingSetting*
       title: Etag
+      type: string
     rounded_duration:
       anyOf:
       - type: number
@@ -46,6 +25,7 @@ UnnamedSchema:
       default: null
       description: Rounded equivalent of duration submitted
       title: Rounded Duration
+      type: string
     rounding:
       anyOf:
       - type: integer
@@ -53,6 +33,7 @@ UnnamedSchema:
       default: null
       description: Minute increment for time rounding
       title: Rounding
+      type: string
     use_decimal_rounding:
       anyOf:
       - type: boolean
@@ -60,6 +41,7 @@ UnnamedSchema:
       default: null
       description: Round time to two decimal places
       title: Use Decimal Rounding
+      type: string
     currency:
       anyOf:
       - type: string
@@ -67,6 +49,7 @@ UnnamedSchema:
       default: null
       description: Current user setting of currency
       title: Currency
+      type: string
     currency_sign:
       anyOf:
       - type: string
@@ -74,6 +57,7 @@ UnnamedSchema:
       default: null
       description: The sign of the current currency
       title: Currency Sign
+      type: string
     tax_rate:
       anyOf:
       - type: number
@@ -82,6 +66,7 @@ UnnamedSchema:
       default: null
       description: Rate applied for primary tax on invoices using this BillingSetting
       title: Tax Rate
+      type: string
     tax_name:
       anyOf:
       - type: string
@@ -89,6 +74,7 @@ UnnamedSchema:
       default: null
       description: Name shown for primary tax on invoices using this BillingSetting
       title: Tax Name
+      type: string
     apply_tax_by_default:
       anyOf:
       - type: boolean
@@ -97,6 +83,7 @@ UnnamedSchema:
       description: Used to determine if primary tax should be applied to invoices
         by default
       title: Apply Tax By Default
+      type: string
     time_on_flat_rate_contingency_matters_is_non_billable:
       anyOf:
       - type: boolean
@@ -105,6 +92,7 @@ UnnamedSchema:
       description: Used to determine if hourly time entries on flat rate or contingency
         fee matters should be non-billable by default
       title: Time On Flat Rate Contingency Matters Is Non Billable
+      type: string
     use_secondary_tax:
       anyOf:
       - type: boolean
@@ -113,6 +101,7 @@ UnnamedSchema:
       description: Used to determine if secondary tax applies to invoices using this
         BillingSetting
       title: Use Secondary Tax
+      type: string
     secondary_tax_rate:
       anyOf:
       - type: number
@@ -121,6 +110,7 @@ UnnamedSchema:
       default: null
       description: Rate applied for secondary tax on invoices using this BillingSetting
       title: Secondary Tax Rate
+      type: string
     secondary_tax_rule:
       anyOf:
       - type: string
@@ -129,6 +119,7 @@ UnnamedSchema:
       description: Used to determine if secondary tax should be applied separately
         or additionally to primary tax
       title: Secondary Tax Rule
+      type: string
     secondary_tax_name:
       anyOf:
       - type: string
@@ -136,6 +127,7 @@ UnnamedSchema:
       default: null
       description: Name shown for secondary tax on invoices using this BillingSetting
       title: Secondary Tax Name
+      type: string
     notify_after_bill_created:
       anyOf:
       - type: boolean
@@ -144,6 +136,7 @@ UnnamedSchema:
       description: Flag to indicate if users should have the option to notify other
         users when generating a bill
       title: Notify After Bill Created
+      type: string
     use_utbms_codes:
       anyOf:
       - type: boolean
@@ -152,6 +145,7 @@ UnnamedSchema:
       description: Controls usage of UTBMS codes, allowing creation of coded time
         entries and expenses
       title: Use Utbms Codes
+      type: string
     created_at:
       anyOf:
       - format: date-time
@@ -160,6 +154,7 @@ UnnamedSchema:
       default: null
       description: The time the *BillingSetting* was created (as a ISO-8601 timestamp)
       title: Created At
+      type: string
     updated_at:
       anyOf:
       - format: date-time
@@ -168,5 +163,6 @@ UnnamedSchema:
       default: null
       description: The time the *BillingSetting* was last updated (as a ISO-8601 timestamp)
       title: Updated At
+      type: string
   title: BillingSettingBase
   type: object

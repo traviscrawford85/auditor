@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 $defs:
   ContactCreateRequestDataCustomFieldSetAssociationsInnerCustomFieldSet:
     description: ContactCreateRequestDataCustomFieldSetAssociationsInnerCustomFieldSet
@@ -71,6 +48,7 @@ $defs:
         default: true
         description: Whether or not the matter is billable.
         title: Billable
+        type: string
       client:
         $ref: '#/$defs/MatterCreateRequestDataClient'
       client_reference:
@@ -80,6 +58,7 @@ $defs:
         default: null
         description: Client Reference string for external uses.
         title: Client Reference
+        type: string
       close_date:
         anyOf:
         - format: date
@@ -88,6 +67,7 @@ $defs:
         default: null
         description: Date the Matter was set to closed. (Expects an ISO-8601 date).
         title: Close Date
+        type: string
       currency:
         anyOf:
         - additionalProperties: true
@@ -96,6 +76,7 @@ $defs:
         default: null
         description: Currency of the matter
         title: Currency
+        type: string
       custom_field_set_associations:
         anyOf:
         - items:
@@ -104,6 +85,7 @@ $defs:
         - type: 'null'
         default: null
         title: Custom Field Set Associations
+        type: string
       custom_field_values:
         anyOf:
         - items:
@@ -112,11 +94,13 @@ $defs:
         - type: 'null'
         default: null
         title: Custom Field Values
+        type: string
       custom_rate:
         anyOf:
         - $ref: '#/$defs/MatterCreateRequestDataCustomRate'
         - type: 'null'
         default: null
+        type: string
       description:
         description: Detailed description of the Matter.
         title: Description
@@ -129,16 +113,19 @@ $defs:
         description: Matter reference and label. Depending on the account's manual_matter_numbering
           setting, this is either read only (generated), or customizable.
         title: Display Number
+        type: string
       evergreen_retainer:
         anyOf:
         - $ref: '#/$defs/MatterCreateRequestDataEvergreenRetainer'
         - type: 'null'
         default: null
+        type: string
       group:
         anyOf:
         - $ref: '#/$defs/MatterCreateRequestDataGroup'
         - type: 'null'
         default: null
+        type: string
       location:
         anyOf:
         - type: string
@@ -146,16 +133,19 @@ $defs:
         default: null
         description: Location of the Matter.
         title: Location
+        type: string
       matter_budget:
         anyOf:
         - $ref: '#/$defs/MatterCreateRequestDataMatterBudget'
         - type: 'null'
         default: null
+        type: string
       matter_stage:
         anyOf:
         - $ref: '#/$defs/MatterCreateRequestDataMatterStage'
         - type: 'null'
         default: null
+        type: string
       open_date:
         anyOf:
         - format: date
@@ -164,11 +154,13 @@ $defs:
         default: null
         description: Date the Matter was set to open. (Expects an ISO-8601 date).
         title: Open Date
+        type: string
       originating_attorney:
         anyOf:
         - $ref: '#/$defs/MatterCreateRequestDataOriginatingAttorney'
         - type: 'null'
         default: null
+        type: string
       pending_date:
         anyOf:
         - format: date
@@ -177,11 +169,13 @@ $defs:
         default: null
         description: Date the Matter was set to pending. (Expects an ISO-8601 date).
         title: Pending Date
+        type: string
       practice_area:
         anyOf:
         - $ref: '#/$defs/MatterCreateRequestDataPracticeArea'
         - type: 'null'
         default: null
+        type: string
       relationships:
         anyOf:
         - items:
@@ -190,6 +184,7 @@ $defs:
         - type: 'null'
         default: null
         title: Relationships
+        type: string
       reset_matter_number:
         anyOf:
         - type: boolean
@@ -198,11 +193,13 @@ $defs:
         description: Defaults to false. Resets the matter's number based on the account's
           matter numbering scheme.
         title: Reset Matter Number
+        type: string
       responsible_attorney:
         anyOf:
         - $ref: '#/$defs/MatterCreateRequestDataOriginatingAttorney'
         - type: 'null'
         default: null
+        type: string
       split_invoice_payers:
         anyOf:
         - items:
@@ -211,6 +208,7 @@ $defs:
         - type: 'null'
         default: null
         title: Split Invoice Payers
+        type: string
       status:
         anyOf:
         - type: string
@@ -218,11 +216,13 @@ $defs:
         default: null
         description: Matter status.
         title: Status
+        type: string
       statute_of_limitations:
         anyOf:
         - $ref: '#/$defs/MatterCreateRequestDataStatuteOfLimitations'
         - type: 'null'
         default: null
+        type: string
       task_template_list_instances:
         anyOf:
         - items:
@@ -231,6 +231,7 @@ $defs:
         - type: 'null'
         default: null
         title: Task Template List Instances
+        type: string
     required:
     - client
     - description
@@ -259,6 +260,7 @@ $defs:
         description: The order to display the CustomFieldSet in a Matter. If not specified,
           it is added as the last CustomFieldSet of the Matter.
         title: Display Order
+        type: string
       custom_field_set:
         $ref: '#/$defs/ContactCreateRequestDataCustomFieldSetAssociationsInnerCustomFieldSet'
     required:
@@ -280,6 +282,7 @@ $defs:
         - type: 'null'
         default: null
         title: Rates
+        type: string
     required:
     - type
     title: MatterCreateRequestDataCustomRate
@@ -299,6 +302,7 @@ $defs:
           If given as an empty string, it will reset the ContingencyFee into the unawarded
           state.
         title: Award
+        type: string
       note:
         anyOf:
         - type: string
@@ -306,6 +310,7 @@ $defs:
         default: null
         description: Detailed description of the rate. Only valid for ContingencyFee.
         title: Note
+        type: string
       date:
         anyOf:
         - format: date
@@ -315,6 +320,7 @@ $defs:
         description: The date the rate is for. Only valid for ContingencyFee. (Expects
           an ISO-8601 date).
         title: Date
+        type: string
       rate:
         anyOf:
         - type: number
@@ -325,16 +331,19 @@ $defs:
           `ContingencyFee`, it is the percentage of the contingency fee awarded to
           the user for the Matter. '
         title: Rate
+        type: string
       activity_description:
         anyOf:
         - $ref: '#/$defs/MatterCreateRequestDataCustomRateRatesInnerActivityDescription'
         - type: 'null'
         default: null
+        type: string
       group:
         anyOf:
         - $ref: '#/$defs/MatterCreateRequestDataCustomRateRatesInnerGroup'
         - type: 'null'
         default: null
+        type: string
     required:
     - user
     - rate
@@ -351,6 +360,7 @@ $defs:
         description: The unique identifier for a single ActivityDescription associated
           with the Rate. The keyword `null` is not valid for this field.
         title: Id
+        type: string
     title: MatterCreateRequestDataCustomRateRatesInnerActivityDescription
     type: object
   MatterCreateRequestDataCustomRateRatesInnerGroup:
@@ -364,6 +374,7 @@ $defs:
         description: The unique identifier for a single Group associated with the
           Rate. The keyword `null` is not valid for this field.
         title: Id
+        type: string
     title: MatterCreateRequestDataCustomRateRatesInnerGroup
     type: object
   MatterCreateRequestDataCustomRateRatesInnerUser:
@@ -391,6 +402,7 @@ $defs:
           falls below the threshold, the retainer's associated recipients (firm users)
           will receive a notification.
         title: Minimum Threshold
+        type: string
       recipients:
         anyOf:
         - items:
@@ -399,6 +411,7 @@ $defs:
         - type: 'null'
         default: null
         title: Recipients
+        type: string
     title: MatterCreateRequestDataEvergreenRetainer
     type: object
   MatterCreateRequestDataEvergreenRetainerRecipientsInner:
@@ -411,6 +424,7 @@ $defs:
         default: null
         description: the `id` of a User who will receive the trust balance notification.
         title: Id
+        type: string
       _destroy:
         anyOf:
         - type: boolean
@@ -419,6 +433,7 @@ $defs:
         description: Used to remove an existing User as a recipient of the trust balance
           notification.
         title: Destroy
+        type: string
     title: MatterCreateRequestDataEvergreenRetainerRecipientsInner
     type: object
   MatterCreateRequestDataGroup:
@@ -432,6 +447,7 @@ $defs:
         description: The unique identifier for a single Group associated with the
           Matter. Use the keyword `null` to specify no association.
         title: Id
+        type: string
     title: MatterCreateRequestDataGroup
     type: object
   MatterCreateRequestDataMatterBudget:
@@ -446,6 +462,7 @@ $defs:
           should be destroyed. Only users with matter budget destroy capabilities
           can destroy matter budgets.
         title: Destroy
+        type: string
       budget:
         anyOf:
         - type: number
@@ -454,6 +471,7 @@ $defs:
         default: null
         description: The amount allocated for the matter.
         title: Budget
+        type: string
       include_expenses:
         anyOf:
         - type: boolean
@@ -461,6 +479,7 @@ $defs:
         default: null
         description: Determines whether the budget includes expenses in the calculation.
         title: Include Expenses
+        type: string
       notification_threshold:
         anyOf:
         - type: integer
@@ -468,6 +487,7 @@ $defs:
         default: null
         description: Percentage of the budget when it starts notifying users.
         title: Notification Threshold
+        type: string
       notify_users:
         anyOf:
         - type: boolean
@@ -476,6 +496,7 @@ $defs:
         description: Determine whether to notify users when the matter reaches the
           notification threshold.
         title: Notify Users
+        type: string
     title: MatterCreateRequestDataMatterBudget
     type: object
   MatterCreateRequestDataMatterStage:
@@ -489,6 +510,7 @@ $defs:
         description: The unique identifier for a single MatterStage associated with
           the Matter. Use the keyword `null` to specify no association.
         title: Id
+        type: string
     title: MatterCreateRequestDataMatterStage
     type: object
   MatterCreateRequestDataOriginatingAttorney:
@@ -502,6 +524,7 @@ $defs:
         description: The unique identifier for a single User associated with the Matter.
           The keyword `null` is not valid for this field.
         title: Id
+        type: string
     title: MatterCreateRequestDataOriginatingAttorney
     type: object
   MatterCreateRequestDataPracticeArea:
@@ -515,6 +538,7 @@ $defs:
         description: The unique identifier for a single PracticeArea associated with
           the Matter. Use the keyword `null` to specify no association.
         title: Id
+        type: string
     title: MatterCreateRequestDataPracticeArea
     type: object
   MatterCreateRequestDataRelationshipsInner:
@@ -557,12 +581,14 @@ $defs:
         default: null
         description: Boolean indication to send a split invoice to all bill recipients.
         title: Send To Bill Recipients
+        type: string
       split_portion:
         anyOf:
         - type: number
         - type: integer
         description: The split portion for the payer.
         title: Split Portion
+        type: string
     required:
     - contact_id
     - split_portion
@@ -579,6 +605,7 @@ $defs:
         description: The task status of Statue of Limitations. Users without advanced
           tasks are allowed to select `Complete' or `Pending` only.
         title: Status
+        type: string
       due_at:
         anyOf:
         - format: date
@@ -588,6 +615,7 @@ $defs:
         description: The due date of Statute of Limitations. (Expects an ISO-8601
           date).
         title: Due At
+        type: string
       reminders:
         anyOf:
         - items:
@@ -596,6 +624,7 @@ $defs:
         - type: 'null'
         default: null
         title: Reminders
+        type: string
     title: MatterCreateRequestDataStatuteOfLimitations
     type: object
   MatterCreateRequestDataStatuteOfLimitationsRemindersInner:
@@ -641,6 +670,7 @@ $defs:
         default: null
         description: The id of the user to assign the task template list to.
         title: Assignee Id
+        type: string
       notify_assignees:
         anyOf:
         - type: boolean
@@ -649,6 +679,7 @@ $defs:
         description: Whether or not task list assignees should be notified when the
           task list is assigned to a matter.
         title: Notify Assignees
+        type: string
       due_at:
         anyOf:
         - format: date
@@ -657,6 +688,7 @@ $defs:
         default: null
         description: Due date of the tasks. (Expects an ISO-8601 date).
         title: Due At
+        type: string
     required:
     - task_template_list
     title: MatterCreateRequestDataTaskTemplateListInstancesInner

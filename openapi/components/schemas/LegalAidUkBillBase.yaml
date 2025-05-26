@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 UnnamedSchema:
   description: LegalAidUkBillBase
   properties:
@@ -31,6 +8,7 @@ UnnamedSchema:
       default: null
       description: Additional travel payment, for Legal Aid England and Wales
       title: Additional Travel Payment
+      type: string
     adjourned_hearing_fee:
       anyOf:
       - type: string
@@ -38,6 +16,7 @@ UnnamedSchema:
       default: null
       description: Adjourned hearing fee
       title: Adjourned Hearing Fee
+      type: string
     advocacy_costs:
       anyOf:
       - type: number
@@ -46,6 +25,7 @@ UnnamedSchema:
       default: null
       description: Advocacy costs
       title: Advocacy Costs
+      type: string
     advice_time:
       anyOf:
       - type: integer
@@ -53,6 +33,7 @@ UnnamedSchema:
       default: null
       description: Advice time
       title: Advice Time
+      type: string
     bill_type:
       anyOf:
       - type: integer
@@ -60,6 +41,7 @@ UnnamedSchema:
       default: null
       description: Bill type
       title: Bill Type
+      type: string
     case_concluded:
       anyOf:
       - format: date
@@ -68,6 +50,7 @@ UnnamedSchema:
       default: null
       description: Case concluded
       title: Case Concluded
+      type: string
     case_stage_level:
       anyOf:
       - type: integer
@@ -75,6 +58,7 @@ UnnamedSchema:
       default: null
       description: Case stage level
       title: Case Stage Level
+      type: string
     cla_exemption_code:
       anyOf:
       - type: string
@@ -82,6 +66,7 @@ UnnamedSchema:
       default: null
       description: CLA exemption code
       title: Cla Exemption Code
+      type: string
     cla_reference:
       anyOf:
       - type: string
@@ -89,6 +74,7 @@ UnnamedSchema:
       default: null
       description: CLA reference
       title: Cla Reference
+      type: string
     cmrh_oral:
       anyOf:
       - type: integer
@@ -96,6 +82,7 @@ UnnamedSchema:
       default: null
       description: CMRH oral
       title: Cmrh Oral
+      type: string
     cmrh_telephone:
       anyOf:
       - type: integer
@@ -103,6 +90,7 @@ UnnamedSchema:
       default: null
       description: CMRH telephone
       title: Cmrh Telephone
+      type: string
     cost_of_counsel:
       anyOf:
       - type: string
@@ -110,6 +98,7 @@ UnnamedSchema:
       default: null
       description: Cost of counsel
       title: Cost Of Counsel
+      type: string
     costs_are_those_of:
       anyOf:
       - type: integer
@@ -117,6 +106,7 @@ UnnamedSchema:
       default: null
       description: Costs are those of
       title: Costs Are Those Of
+      type: string
     court_location:
       anyOf:
       - type: string
@@ -124,6 +114,7 @@ UnnamedSchema:
       default: null
       description: Court location (HPCDS matters)
       title: Court Location
+      type: string
     date_of_claim:
       anyOf:
       - format: date
@@ -132,6 +123,7 @@ UnnamedSchema:
       default: null
       description: Date of claim
       title: Date Of Claim
+      type: string
     designated_accredited_representative:
       anyOf:
       - type: integer
@@ -139,6 +131,7 @@ UnnamedSchema:
       default: null
       description: Designated accredited representative
       title: Designated Accredited Representative
+      type: string
     detention_travel_and_waiting_costs:
       anyOf:
       - type: string
@@ -146,6 +139,7 @@ UnnamedSchema:
       default: null
       description: Detention travel & waiting costs ex VAT
       title: Detention Travel And Waiting Costs
+      type: string
     disbursements_vat:
       anyOf:
       - type: number
@@ -154,6 +148,7 @@ UnnamedSchema:
       default: null
       description: Disbursements VAT
       title: Disbursements Vat
+      type: string
     exceptional_case_funding_reference:
       anyOf:
       - type: string
@@ -161,6 +156,7 @@ UnnamedSchema:
       default: null
       description: Exceptional case funding reference
       title: Exceptional Case Funding Reference
+      type: string
     exemption_criteria_satisfied:
       anyOf:
       - type: integer
@@ -168,6 +164,7 @@ UnnamedSchema:
       default: null
       description: Exemption criteria satisfied
       title: Exemption Criteria Satisfied
+      type: string
     follow_on_work:
       anyOf:
       - type: integer
@@ -175,6 +172,7 @@ UnnamedSchema:
       default: null
       description: Follow on work
       title: Follow On Work
+      type: string
     ho_interview:
       anyOf:
       - type: integer
@@ -182,6 +180,7 @@ UnnamedSchema:
       default: null
       description: HO interview
       title: Ho Interview
+      type: string
     ho_ucn:
       anyOf:
       - type: integer
@@ -189,6 +188,7 @@ UnnamedSchema:
       default: null
       description: HO UCN
       title: Ho Ucn
+      type: string
     id:
       anyOf:
       - type: integer
@@ -196,6 +196,7 @@ UnnamedSchema:
       default: null
       description: Unique identifier for the *LegalAidUkBill*
       title: Id
+      type: integer
     independent_medical_reports_claimed:
       anyOf:
       - type: string
@@ -203,6 +204,7 @@ UnnamedSchema:
       default: null
       description: Independent medical reports claimed
       title: Independent Medical Reports Claimed
+      type: string
     jr_form_filling:
       anyOf:
       - type: string
@@ -210,6 +212,7 @@ UnnamedSchema:
       default: null
       description: JR/Form filling ex VAT, for Legal Aid England and Wales
       title: Jr Form Filling
+      type: string
     maat_id:
       anyOf:
       - type: string
@@ -217,6 +220,7 @@ UnnamedSchema:
       default: null
       description: MAAT ID
       title: Maat Id
+      type: string
     meetings_attended:
       anyOf:
       - type: integer
@@ -224,6 +228,7 @@ UnnamedSchema:
       default: null
       description: Meetings attended
       title: Meetings Attended
+      type: string
     mht_ref_no:
       anyOf:
       - type: string
@@ -231,6 +236,7 @@ UnnamedSchema:
       default: null
       description: MHT reference number
       title: Mht Ref No
+      type: string
     net_disbursements:
       anyOf:
       - type: number
@@ -239,6 +245,7 @@ UnnamedSchema:
       default: null
       description: Net disbursements
       title: Net Disbursements
+      type: string
     net_profit_costs:
       anyOf:
       - type: number
@@ -247,6 +254,7 @@ UnnamedSchema:
       default: null
       description: Net profit cost
       title: Net Profit Costs
+      type: string
     niat_disbursement_prior_authority_number:
       anyOf:
       - type: string
@@ -254,6 +262,7 @@ UnnamedSchema:
       default: null
       description: NIAT disbursement prior authority number
       title: Niat Disbursement Prior Authority Number
+      type: string
     number_of_attendances:
       anyOf:
       - type: integer
@@ -261,6 +270,7 @@ UnnamedSchema:
       default: null
       description: Number of attendances
       title: Number Of Attendances
+      type: string
     outcome_for_the_client:
       anyOf:
       - type: integer
@@ -268,6 +278,7 @@ UnnamedSchema:
       default: null
       description: Outcome for the client
       title: Outcome For The Client
+      type: string
     profit_costs_ex_vat:
       anyOf:
       - type: integer
@@ -275,6 +286,7 @@ UnnamedSchema:
       default: null
       description: Profit costs ex VAT
       title: Profit Costs Ex Vat
+      type: string
     prior_authority_reference:
       anyOf:
       - type: string
@@ -282,6 +294,7 @@ UnnamedSchema:
       default: null
       description: Prior authority reference number
       title: Prior Authority Reference
+      type: string
     representation_order_date:
       anyOf:
       - format: date
@@ -290,6 +303,7 @@ UnnamedSchema:
       default: null
       description: Representation order date
       title: Representation Order Date
+      type: string
     stage_reached:
       anyOf:
       - type: integer
@@ -297,6 +311,7 @@ UnnamedSchema:
       default: null
       description: Stage reached
       title: Stage Reached
+      type: string
     substantive_hearing:
       anyOf:
       - type: integer
@@ -304,6 +319,7 @@ UnnamedSchema:
       default: null
       description: Substantive hearing
       title: Substantive Hearing
+      type: string
     travel_and_waiting_costs:
       anyOf:
       - type: number
@@ -312,6 +328,7 @@ UnnamedSchema:
       default: null
       description: Travel & waiting costs
       title: Travel And Waiting Costs
+      type: string
     travel_time:
       anyOf:
       - type: integer
@@ -319,6 +336,7 @@ UnnamedSchema:
       default: null
       description: Travel time
       title: Travel Time
+      type: string
     value_of_costs:
       anyOf:
       - type: string
@@ -326,6 +344,7 @@ UnnamedSchema:
       default: null
       description: Value of costs
       title: Value Of Costs
+      type: string
     waiting_time:
       anyOf:
       - type: integer
@@ -333,5 +352,6 @@ UnnamedSchema:
       default: null
       description: Waiting time
       title: Waiting Time
+      type: string
   title: LegalAidUkBillBase
   type: object

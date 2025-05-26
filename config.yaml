@@ -1,0 +1,15 @@
+project_name_override: clio_api_client
+package_name_override: clio_api_client
+class_overrides:
+  TaskTemplate_List: TaskTemplateListResponse
+  TaskTemplateList: TaskTemplateListModel  # avoid conflict
+field_overrides:
+  id:
+    default: null
+    required: false
+use_path_prefixes_for_title: false
+set_operation_id_as_name: true
+use_schema_description: true
+allow_populating_default_none: true
+post_hooks:
+  - scripts/post_gen_hook.py  # Optional: your custom post-processing hook

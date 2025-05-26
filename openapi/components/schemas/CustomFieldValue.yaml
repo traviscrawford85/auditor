@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 $defs:
   ContactBase:
     description: ContactBase
@@ -32,6 +9,7 @@ $defs:
         default: null
         description: Unique identifier for the *Contact*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -39,6 +17,7 @@ $defs:
         default: null
         description: ETag for the *Contact*
         title: Etag
+        type: string
       name:
         anyOf:
         - type: string
@@ -46,6 +25,7 @@ $defs:
         default: null
         description: The full name of the *Contact*
         title: Name
+        type: string
       first_name:
         anyOf:
         - type: string
@@ -53,6 +33,7 @@ $defs:
         default: null
         description: First name of the Person
         title: First Name
+        type: string
       middle_name:
         anyOf:
         - type: string
@@ -60,6 +41,7 @@ $defs:
         default: null
         description: Middle name of the Person
         title: Middle Name
+        type: string
       last_name:
         anyOf:
         - type: string
@@ -67,6 +49,7 @@ $defs:
         default: null
         description: Last name of the Person
         title: Last Name
+        type: string
       date_of_birth:
         anyOf:
         - format: date
@@ -75,6 +58,7 @@ $defs:
         default: null
         description: Date of birth
         title: Date Of Birth
+        type: string
       type:
         anyOf:
         - type: string
@@ -82,6 +66,7 @@ $defs:
         default: null
         description: The type of the *Contact*
         title: Type
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -90,6 +75,7 @@ $defs:
         default: null
         description: The time the *Contact* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -98,6 +84,7 @@ $defs:
         default: null
         description: The time the *Contact* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
       prefix:
         anyOf:
         - type: string
@@ -105,6 +92,7 @@ $defs:
         default: null
         description: The prefix of the *Contact* (Mr, Mrs, etc)
         title: Prefix
+        type: string
       title:
         anyOf:
         - type: string
@@ -112,6 +100,7 @@ $defs:
         default: null
         description: The designated title of the *Contact*
         title: Title
+        type: string
       initials:
         anyOf:
         - type: string
@@ -119,6 +108,7 @@ $defs:
         default: null
         description: The initials of the *Contact*
         title: Initials
+        type: string
       clio_connect_email:
         anyOf:
         - type: string
@@ -126,6 +116,7 @@ $defs:
         default: null
         description: Clio Connect email if the *Contact* is a ClioConnect User
         title: Clio Connect Email
+        type: string
       locked_clio_connect_email:
         anyOf:
         - type: boolean
@@ -134,6 +125,7 @@ $defs:
         description: A boolean indicating if the ability to modify this *Contacts
           Clio connect email is locked.
         title: Locked Clio Connect Email
+        type: string
       client_connect_user_id:
         anyOf:
         - type: integer
@@ -141,6 +133,7 @@ $defs:
         default: null
         description: The ID for the Clio Connect user associated with this *Contact*
         title: Client Connect User Id
+        type: string
       primary_email_address:
         anyOf:
         - type: string
@@ -148,6 +141,7 @@ $defs:
         default: null
         description: The primary email address associated with this *Contact*.
         title: Primary Email Address
+        type: string
       secondary_email_address:
         anyOf:
         - type: string
@@ -155,6 +149,7 @@ $defs:
         default: null
         description: The secondary email address associated with this *Contact*.
         title: Secondary Email Address
+        type: string
       primary_phone_number:
         anyOf:
         - type: string
@@ -162,6 +157,7 @@ $defs:
         default: null
         description: The primary phone number associated with this *Contact*.
         title: Primary Phone Number
+        type: string
       secondary_phone_number:
         anyOf:
         - type: string
@@ -169,6 +165,7 @@ $defs:
         default: null
         description: The secondary phone number of the *Contact*.
         title: Secondary Phone Number
+        type: string
       ledes_client_id:
         anyOf:
         - type: string
@@ -176,6 +173,7 @@ $defs:
         default: null
         description: LEDES client id of the Contact
         title: Ledes Client Id
+        type: string
       has_clio_for_clients_permission:
         anyOf:
         - type: boolean
@@ -184,6 +182,7 @@ $defs:
         description: True if at least one resource has been shared with the contact
           using Clio for Clients.
         title: Has Clio For Clients Permission
+        type: string
       is_client:
         anyOf:
         - type: boolean
@@ -191,6 +190,7 @@ $defs:
         default: null
         description: Whether or not the Contact is a client
         title: Is Client
+        type: string
       is_clio_for_client_user:
         anyOf:
         - type: boolean
@@ -199,6 +199,7 @@ $defs:
         description: Whether or not this contact has client_login and client_user
           (can be created due to addition to client portal or client_share_permissions)
         title: Is Clio For Client User
+        type: string
       is_co_counsel:
         anyOf:
         - type: boolean
@@ -206,6 +207,7 @@ $defs:
         default: null
         description: Whether or not the Contact has matters shared as co-counsel
         title: Is Co Counsel
+        type: string
       is_bill_recipient:
         anyOf:
         - type: boolean
@@ -213,6 +215,7 @@ $defs:
         default: null
         description: Whether the Contact is a bill recipient on at least one matter.
         title: Is Bill Recipient
+        type: string
       sales_tax_number:
         anyOf:
         - type: string
@@ -220,6 +223,7 @@ $defs:
         default: null
         description: The sales tax number of the *Contact*
         title: Sales Tax Number
+        type: string
       currency:
         anyOf:
         - additionalProperties: true
@@ -228,6 +232,7 @@ $defs:
         default: null
         description: Currency of the *Contact*
         title: Currency
+        type: string
     title: ContactBase
     type: object
   CustomField:
@@ -240,6 +245,7 @@ $defs:
         default: null
         description: Unique identifier for the *CustomField*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -247,6 +253,7 @@ $defs:
         default: null
         description: ETag for the *CustomField*
         title: Etag
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -255,6 +262,7 @@ $defs:
         default: null
         description: The time the *CustomField* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -263,6 +271,7 @@ $defs:
         default: null
         description: The time the *CustomField* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
       name:
         anyOf:
         - type: string
@@ -270,6 +279,7 @@ $defs:
         default: null
         description: The name of the *CustomField*
         title: Name
+        type: string
       parent_type:
         anyOf:
         - type: string
@@ -277,6 +287,7 @@ $defs:
         default: null
         description: Type of object the *CustomField* is for
         title: Parent Type
+        type: string
       field_type:
         anyOf:
         - type: string
@@ -284,6 +295,7 @@ $defs:
         default: null
         description: Field type of the *CustomField*
         title: Field Type
+        type: string
       displayed:
         anyOf:
         - type: boolean
@@ -291,6 +303,7 @@ $defs:
         default: null
         description: Whether the *CustomField* is displayed by default
         title: Displayed
+        type: string
       deleted:
         anyOf:
         - type: boolean
@@ -298,6 +311,7 @@ $defs:
         default: null
         description: Whether the *CustomField* is deleted for future use
         title: Deleted
+        type: string
       required:
         anyOf:
         - type: boolean
@@ -305,6 +319,7 @@ $defs:
         default: null
         description: Whether the *CustomField* requires a value
         title: Required
+        type: string
       display_order:
         anyOf:
         - type: integer
@@ -312,6 +327,7 @@ $defs:
         default: null
         description: The display position of the *CustomField*
         title: Display Order
+        type: string
       picklist_options:
         anyOf:
         - items:
@@ -321,6 +337,7 @@ $defs:
         default: null
         description: PicklistOption
         title: Picklist Options
+        type: string
     title: CustomField
     type: object
   CustomFieldMatterSelectionBase:
@@ -333,6 +350,7 @@ $defs:
         default: null
         description: Unique identifier for the *CustomFieldMatterSelection*
         title: Id
+        type: string
       display_number:
         anyOf:
         - type: string
@@ -342,6 +360,7 @@ $defs:
           Depending on the account's manual_matter_numbering setting, this is either
           read only (generated) or customizable.
         title: Display Number
+        type: string
     title: CustomFieldMatterSelectionBase
     type: object
   PicklistOption:
@@ -354,6 +373,7 @@ $defs:
         default: null
         description: Unique identifier for the *PicklistOption*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -361,6 +381,7 @@ $defs:
         default: null
         description: ETag for the *PicklistOption*
         title: Etag
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -369,6 +390,7 @@ $defs:
         default: null
         description: The time the *PicklistOption* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -378,6 +400,7 @@ $defs:
         description: The time the *PicklistOption* was last updated (as a ISO-8601
           timestamp)
         title: Updated At
+        type: string
       option:
         anyOf:
         - type: string
@@ -385,6 +408,7 @@ $defs:
         default: null
         description: The value of the *PicklistOption*
         title: Option
+        type: string
       deleted_at:
         anyOf:
         - format: date-time
@@ -393,6 +417,7 @@ $defs:
         default: null
         description: The time the *PicklistOption* was deleted (as a ISO-8601 timestamp)
         title: Deleted At
+        type: string
     title: PicklistOption
     type: object
   PicklistOptionBase:
@@ -405,6 +430,7 @@ $defs:
         default: null
         description: Unique identifier for the *PicklistOption*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -412,6 +438,7 @@ $defs:
         default: null
         description: ETag for the *PicklistOption*
         title: Etag
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -420,6 +447,7 @@ $defs:
         default: null
         description: The time the *PicklistOption* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -429,6 +457,7 @@ $defs:
         description: The time the *PicklistOption* was last updated (as a ISO-8601
           timestamp)
         title: Updated At
+        type: string
       option:
         anyOf:
         - type: string
@@ -436,6 +465,7 @@ $defs:
         default: null
         description: The value of the *PicklistOption*
         title: Option
+        type: string
       deleted_at:
         anyOf:
         - format: date-time
@@ -444,6 +474,7 @@ $defs:
         default: null
         description: The time the *PicklistOption* was deleted (as a ISO-8601 timestamp)
         title: Deleted At
+        type: string
     title: PicklistOptionBase
     type: object
 description: CustomFieldValue
@@ -455,6 +486,7 @@ properties:
     default: null
     description: Unique identifier for the *CustomFieldValue*
     title: Id
+    type: string
   etag:
     anyOf:
     - type: string
@@ -462,6 +494,7 @@ properties:
     default: null
     description: ETag for the *CustomFieldValue*
     title: Etag
+    type: string
   field_name:
     anyOf:
     - type: string
@@ -469,6 +502,7 @@ properties:
     default: null
     description: The name of the custom field
     title: Field Name
+    type: string
   created_at:
     anyOf:
     - format: date-time
@@ -477,6 +511,7 @@ properties:
     default: null
     description: The time the *CustomFieldValue* was created (as a ISO-8601 timestamp)
     title: Created At
+    type: string
   updated_at:
     anyOf:
     - format: date-time
@@ -485,6 +520,7 @@ properties:
     default: null
     description: The time the *CustomFieldValue* was last updated (as a ISO-8601 timestamp)
     title: Updated At
+    type: string
   field_type:
     anyOf:
     - type: string
@@ -492,6 +528,7 @@ properties:
     default: null
     description: The type of the *CustomFieldValue*
     title: Field Type
+    type: string
   field_required:
     anyOf:
     - type: boolean
@@ -499,6 +536,7 @@ properties:
     default: null
     description: Whether the *CustomFieldValue* requires a value
     title: Field Required
+    type: string
   field_displayed:
     anyOf:
     - type: boolean
@@ -506,6 +544,7 @@ properties:
     default: null
     description: Whether the *CustomFieldValue* is displayed by default
     title: Field Displayed
+    type: string
   field_display_order:
     anyOf:
     - type: integer
@@ -513,6 +552,7 @@ properties:
     default: null
     description: The display position of the *CustomFieldValue*
     title: Field Display Order
+    type: string
   value:
     anyOf:
     - type: string
@@ -520,6 +560,7 @@ properties:
     default: null
     description: The value of the *CustomFieldValue*
     title: Value
+    type: string
   soft_deleted:
     anyOf:
     - type: boolean
@@ -527,25 +568,30 @@ properties:
     default: null
     description: Whether the value is associated with a deleted custom field
     title: Soft Deleted
+    type: string
   custom_field:
     anyOf:
     - $ref: '#/$defs/CustomField'
     - type: 'null'
     default: null
+    type: string
   picklist_option:
     anyOf:
     - $ref: '#/$defs/PicklistOption'
     - type: 'null'
     default: null
+    type: string
   matter:
     anyOf:
     - $ref: '#/$defs/CustomFieldMatterSelectionBase'
     - type: 'null'
     default: null
+    type: string
   contact:
     anyOf:
     - $ref: '#/$defs/ContactBase'
     - type: 'null'
     default: null
+    type: string
 title: CustomFieldValue
 type: object

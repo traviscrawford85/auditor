@@ -1,0 +1,101 @@
+/bills/{id}:
+  get:
+    tags:
+    - Bills
+    summary: Return the data for a single Bill
+    operationId: get
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for a single Bill
+    parameters:
+    - $ref: '#/components/parameters/IF-MODIFIED-SINCE'
+    - $ref: '#/components/parameters/IF-NONE-MATCH'
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/id'
+    - $ref: ./components/parameters/navigation.next.yaml
+    - $ref: ./components/parameters/navigation.previous.yaml
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '304':
+        $ref: '#/components/responses/304_Not_Modified'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+  patch:
+    tags:
+    - Bills
+    summary: Update a single Bill
+    operationId: update
+    description: Outlines the parameters and data fields used when updating a single
+      Bill
+    parameters:
+    - $ref: '#/components/parameters/IF-MATCH'
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/id'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '412':
+        $ref: '#/components/responses/412_Precondition_Failed'
+      '422':
+        $ref: '#/components/responses/422_Unprocessable_Entity'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+    requestBody:
+      $ref: '#/components/requestBodies/ReqBody_45eea465'
+  delete:
+    tags:
+    - Bills
+    summary: Delete or void a Bill
+    operationId: delete
+    description: 'This endpoint will transition a bill to either its deleted or voided
+      state.
+
+      A bill can only be deleted or voided if it has no payments recorded
+
+      and its current state is one of the following:
+
+      * Draft
+
+      * Pending Approval
+
+      * Unpaid
+
+
+      A bill will automatically be moved to a deleted or void state based on its current
+      state.
+
+      The mappings for this are:
+
+      * Draft -> Deleted
+
+      * Pending Approval -> Deleted
+
+      * Unpaid -> Void
+
+      '
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/id'
+    responses:
+      '204':
+        $ref: '#/components/responses/204_No_Content'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'

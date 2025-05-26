@@ -1,0 +1,23 @@
+/documents/{id}/copy:
+  post:
+    tags:
+    - Documents
+    summary: Copy a Document
+    operationId: createCopy
+    description: 'Copies the latest document version of a Document into a new Document.
+      The parameters `filename` and `name` will be copied from the source Document
+      if none are provided.
+
+      '
+    parameters:
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/id'
+    responses:
+      '201':
+        $ref: '#/components/responses/201_Created'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+    requestBody:
+      $ref: '#/components/requestBodies/ReqBody_6d27f7ad'

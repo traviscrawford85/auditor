@@ -1,0 +1,69 @@
+/reports:
+  get:
+    tags:
+    - Reports
+    summary: Return the data for all Reports
+    operationId: listReports
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for all Reports
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/category'
+    - $ref: '#/components/parameters/created_before'
+    - $ref: '#/components/parameters/created_since'
+    - $ref: '#/components/parameters/fields'
+    - $ref: ./components/parameters/ids[].yaml
+    - $ref: '#/components/parameters/kind'
+    - $ref: '#/components/parameters/limit'
+    - $ref: '#/components/parameters/output_format'
+    - $ref: '#/components/parameters/page_token'
+    - $ref: '#/components/parameters/query'
+    - $ref: '#/components/parameters/source'
+    - $ref: '#/components/parameters/state'
+    - $ref: '#/components/parameters/updated_since'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+        content:
+          application/json:
+            schema:
+              $ref: ../components/schemas/ReportScheduleBase.yaml
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+  post:
+    tags:
+    - Reports
+    summary: Create a new Report
+    operationId: createReport
+    description: Outlines the parameters and data fields used when creating a new
+      Report
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    responses:
+      '201':
+        $ref: '#/components/responses/201_Created'
+        content:
+          application/json:
+            schema:
+              $ref: ../components/schemas/ReportScheduleBase.yaml
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '422':
+        $ref: '#/components/responses/422_Unprocessable_Entity'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+    requestBody:
+      $ref: '#/components/requestBodies/ReqBody_f9783b84'

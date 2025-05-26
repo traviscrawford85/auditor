@@ -1,0 +1,78 @@
+/webhooks/{id}:
+  get:
+    tags:
+    - Webhooks
+    summary: Return the data for a single Webhook
+    operationId: get
+    description: "Outlines the parameters, optional and required, used when requesting\
+      \ the data for a single Webhook [\u26A0\uFE0F REVIEW] This endpoint looks like\
+      \ it may not require authentication.\n"
+    parameters:
+    - $ref: '#/components/parameters/IF-MODIFIED-SINCE'
+    - $ref: '#/components/parameters/IF-NONE-MATCH'
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/id'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '304':
+        $ref: '#/components/responses/304_Not_Modified'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+  patch:
+    tags:
+    - Webhooks
+    summary: Update a single Webhook
+    operationId: update
+    description: "Outlines the parameters and data fields used when updating a single\
+      \ Webhook [\u26A0\uFE0F REVIEW] This endpoint looks like it may not require\
+      \ authentication.\n"
+    parameters:
+    - $ref: '#/components/parameters/IF-MATCH'
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/id'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '412':
+        $ref: '#/components/responses/412_Precondition_Failed'
+      '422':
+        $ref: '#/components/responses/422_Unprocessable_Entity'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+    requestBody:
+      $ref: '#/components/requestBodies/ReqBody_97dfff73'
+  delete:
+    tags:
+    - Webhooks
+    summary: Delete a single Webhook
+    operationId: delete
+    description: "Outlines the parameters, optional and required, used when deleting\
+      \ the record for a single Webhook [\u26A0\uFE0F REVIEW] This endpoint looks\
+      \ like it may not require authentication.\n"
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/id'
+    responses:
+      '204':
+        $ref: '#/components/responses/204_No_Content'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'

@@ -1,0 +1,17 @@
+/documents/{id}/download:
+  get:
+    tags:
+    - Documents
+    summary: Download the Document
+    operationId: getDownload
+    description: Download the Document
+    parameters:
+    - $ref: '#/components/parameters/document_version_id'
+    - $ref: '#/components/parameters/id'
+    responses:
+      '303':
+        $ref: '#/components/responses/303_See_Other'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'

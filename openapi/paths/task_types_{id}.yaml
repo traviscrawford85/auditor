@@ -1,0 +1,60 @@
+/task/types/{id}:
+  get:
+    tags:
+    - Task Types
+    summary: Return the data for a single TaskType
+    operationId: get
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for a single TaskType
+    parameters:
+    - $ref: '#/components/parameters/IF-MODIFIED-SINCE'
+    - $ref: '#/components/parameters/IF-NONE-MATCH'
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/id'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '304':
+        $ref: '#/components/responses/304_Not_Modified'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+  patch:
+    tags:
+    - Task Types
+    summary: Update a single TaskType
+    operationId: update
+    description: Outlines the parameters and data fields used when updating a single
+      TaskType
+    parameters:
+    - $ref: '#/components/parameters/IF-MATCH'
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/id'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '412':
+        $ref: '#/components/responses/412_Precondition_Failed'
+      '422':
+        $ref: '#/components/responses/422_Unprocessable_Entity'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+    requestBody:
+      $ref: '#/components/requestBodies/ReqBody_9bac5140'

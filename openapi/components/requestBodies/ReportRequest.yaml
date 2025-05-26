@@ -1,234 +1,215 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
 
-ReportRequest:
-  description: Request Body for Report Presets
-  content:
-    application/json:
-      schema:
-        type: object
-        required:
-          - data
-        properties:
-          data:
-            type: object
-            properties:
-              format:
-                type: string
-                enum:
-                  - csv
-                  - html
-                  - json
-                  - pdf
-                  - xlsx
-                  - zip
-                description: What format the report will be generated in.
-              kind:
-                type: string
-                enum:
-                  - accounts_receivable
-                  - accounts_receivable_aging
-                  - bank_account_activity
-                  - billing_history
-                  - billing_rate
-                  - client_activity
-                  - client_ledger
-                  - clio_payments_deposit
-                  - clio_payments_ledger
-                  - clio_payments_monthly_statement
-                  - clio_payments_sales_tax
-                  - clio_payments_transaction
-                  - contact_information
-                  - disbursement_payment
-                  - fee_allocation
-                  - general_ledger
-                  - grant_matters
-                  - invoice_payments_v2
-                  - law_society_of_alberta
-                  - law_society_of_alberta_al
-                  - law_society_of_alberta_bar
-                  - law_society_of_alberta_tl
-                  - law_society_of_alberta_tt
-                  - matter
-                  - matter_balance_summary
-                  - matter_productivity_by_user
-                  - matters_by_responsible_attorney
-                  - originating_attorney_revenue
-                  - other_revenue
-                  - productivity_by_client
-                  - productivity_by_user
-                  - revenue
-                  - task_productivity_by_user
-                  - task_progress_by_user
-                  - trust_ledger
-                  - trust_ledger_nsw
-                  - trust_listing
-                  - trust_management
-                  - work_in_progress
-                description: What kind of report will be generated.
-              name:
-                type: string
-                description: Name of the ReportPreset.
-              options:
-                type: string
-                description: |-
-                  What the report generation parameters are. See [Creating a Report Preset](#section/Creating-a-Report-Preset) for a sample request.
-    application/x-www-form-urlencoded:
-      schema:
-        type: object
-        required:
-          - data
-        properties:
-          data:
-            type: object
-            properties:
-              format:
-                type: string
-                enum:
-                  - csv
-                  - html
-                  - json
-                  - pdf
-                  - xlsx
-                  - zip
-                description: What format the report will be generated in.
-              kind:
-                type: string
-                enum:
-                  - accounts_receivable
-                  - accounts_receivable_aging
-                  - bank_account_activity
-                  - billing_history
-                  - billing_rate
-                  - client_activity
-                  - client_ledger
-                  - clio_payments_deposit
-                  - clio_payments_ledger
-                  - clio_payments_monthly_statement
-                  - clio_payments_sales_tax
-                  - clio_payments_transaction
-                  - contact_information
-                  - disbursement_payment
-                  - fee_allocation
-                  - general_ledger
-                  - grant_matters
-                  - invoice_payments_v2
-                  - law_society_of_alberta
-                  - law_society_of_alberta_al
-                  - law_society_of_alberta_bar
-                  - law_society_of_alberta_tl
-                  - law_society_of_alberta_tt
-                  - matter
-                  - matter_balance_summary
-                  - matter_productivity_by_user
-                  - matters_by_responsible_attorney
-                  - originating_attorney_revenue
-                  - other_revenue
-                  - productivity_by_client
-                  - productivity_by_user
-                  - revenue
-                  - task_productivity_by_user
-                  - task_progress_by_user
-                  - trust_ledger
-                  - trust_ledger_nsw
-                  - trust_listing
-                  - trust_management
-                  - work_in_progress
-                description: What kind of report will be generated.
-              name:
-                type: string
-                description: Name of the ReportPreset.
-              options:
-                type: string
-                description: |-
-                  What the report generation parameters are. See [Creating a Report Preset](#section/Creating-a-Report-Preset) for a sample request.
-    multipart/form-data:
-      schema:
-        type: object
-        required:
-          - data
-        properties:
-          data:
-            type: object
-            properties:
-              format:
-                type: string
-                enum:
-                  - csv
-                  - html
-                  - json
-                  - pdf
-                  - xlsx
-                  - zip
-                description: What format the report will be generated in.
-              kind:
-                type: string
-                enum:
-                  - accounts_receivable
-                  - accounts_receivable_aging
-                  - bank_account_activity
-                  - billing_history
-                  - billing_rate
-                  - client_activity
-                  - client_ledger
-                  - clio_payments_deposit
-                  - clio_payments_ledger
-                  - clio_payments_monthly_statement
-                  - clio_payments_sales_tax
-                  - clio_payments_transaction
-                  - contact_information
-                  - disbursement_payment
-                  - fee_allocation
-                  - general_ledger
-                  - grant_matters
-                  - invoice_payments_v2
-                  - law_society_of_alberta
-                  - law_society_of_alberta_al
-                  - law_society_of_alberta_bar
-                  - law_society_of_alberta_tl
-                  - law_society_of_alberta_tt
-                  - matter
-                  - matter_balance_summary
-                  - matter_productivity_by_user
-                  - matters_by_responsible_attorney
-                  - originating_attorney_revenue
-                  - other_revenue
-                  - productivity_by_client
-                  - productivity_by_user
-                  - revenue
-                  - task_productivity_by_user
-                  - task_progress_by_user
-                  - trust_ledger
-                  - trust_ledger_nsw
-                  - trust_listing
-                  - trust_management
-                  - work_in_progress
-                description: What kind of report will be generated.
-              name:
-                type: string
-                description: Name of the ReportPreset.
-              options:
-                type: string
-                description: |-
-                  What the report generation parameters are. See [Creating a Report Preset](#section/Creating-a-Report-Preset) for a sample request.
-  required: false
+      ReportRequest:
+        description: Request Body for Report Presets
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - data
+              properties:
+                data:
+                  type: object
+                  properties:
+                    format:
+                      type: string
+                      enum:
+                      - csv
+                      - html
+                      - json
+                      - pdf
+                      - xlsx
+                      - zip
+                      description: What format the report will be generated in.
+                    kind:
+                      type: string
+                      enum:
+                      - accounts_receivable
+                      - accounts_receivable_aging
+                      - bank_account_activity
+                      - billing_history
+                      - billing_rate
+                      - client_activity
+                      - client_ledger
+                      - clio_payments_deposit
+                      - clio_payments_ledger
+                      - clio_payments_monthly_statement
+                      - clio_payments_sales_tax
+                      - clio_payments_transaction
+                      - contact_information
+                      - disbursement_payment
+                      - fee_allocation
+                      - general_ledger
+                      - grant_matters
+                      - invoice_payments_v2
+                      - law_society_of_alberta
+                      - law_society_of_alberta_al
+                      - law_society_of_alberta_bar
+                      - law_society_of_alberta_tl
+                      - law_society_of_alberta_tt
+                      - matter
+                      - matter_balance_summary
+                      - matter_productivity_by_user
+                      - matters_by_responsible_attorney
+                      - originating_attorney_revenue
+                      - other_revenue
+                      - productivity_by_client
+                      - productivity_by_user
+                      - revenue
+                      - task_productivity_by_user
+                      - task_progress_by_user
+                      - trust_ledger
+                      - trust_ledger_nsw
+                      - trust_listing
+                      - trust_management
+                      - work_in_progress
+                      description: What kind of report will be generated.
+                    name:
+                      type: string
+                      description: Name of the ReportPreset.
+                    options:
+                      type: string
+                      description: What the report generation parameters are. See
+                        [Creating a Report Preset](#section/Creating-a-Report-Preset)
+                        for a sample request.
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required:
+              - data
+              properties:
+                data:
+                  type: object
+                  properties:
+                    format:
+                      type: string
+                      enum:
+                      - csv
+                      - html
+                      - json
+                      - pdf
+                      - xlsx
+                      - zip
+                      description: What format the report will be generated in.
+                    kind:
+                      type: string
+                      enum:
+                      - accounts_receivable
+                      - accounts_receivable_aging
+                      - bank_account_activity
+                      - billing_history
+                      - billing_rate
+                      - client_activity
+                      - client_ledger
+                      - clio_payments_deposit
+                      - clio_payments_ledger
+                      - clio_payments_monthly_statement
+                      - clio_payments_sales_tax
+                      - clio_payments_transaction
+                      - contact_information
+                      - disbursement_payment
+                      - fee_allocation
+                      - general_ledger
+                      - grant_matters
+                      - invoice_payments_v2
+                      - law_society_of_alberta
+                      - law_society_of_alberta_al
+                      - law_society_of_alberta_bar
+                      - law_society_of_alberta_tl
+                      - law_society_of_alberta_tt
+                      - matter
+                      - matter_balance_summary
+                      - matter_productivity_by_user
+                      - matters_by_responsible_attorney
+                      - originating_attorney_revenue
+                      - other_revenue
+                      - productivity_by_client
+                      - productivity_by_user
+                      - revenue
+                      - task_productivity_by_user
+                      - task_progress_by_user
+                      - trust_ledger
+                      - trust_ledger_nsw
+                      - trust_listing
+                      - trust_management
+                      - work_in_progress
+                      description: What kind of report will be generated.
+                    name:
+                      type: string
+                      description: Name of the ReportPreset.
+                    options:
+                      type: string
+                      description: What the report generation parameters are. See
+                        [Creating a Report Preset](#section/Creating-a-Report-Preset)
+                        for a sample request.
+          multipart/form-data:
+            schema:
+              type: object
+              required:
+              - data
+              properties:
+                data:
+                  type: object
+                  properties:
+                    format:
+                      type: string
+                      enum:
+                      - csv
+                      - html
+                      - json
+                      - pdf
+                      - xlsx
+                      - zip
+                      description: What format the report will be generated in.
+                    kind:
+                      type: string
+                      enum:
+                      - accounts_receivable
+                      - accounts_receivable_aging
+                      - bank_account_activity
+                      - billing_history
+                      - billing_rate
+                      - client_activity
+                      - client_ledger
+                      - clio_payments_deposit
+                      - clio_payments_ledger
+                      - clio_payments_monthly_statement
+                      - clio_payments_sales_tax
+                      - clio_payments_transaction
+                      - contact_information
+                      - disbursement_payment
+                      - fee_allocation
+                      - general_ledger
+                      - grant_matters
+                      - invoice_payments_v2
+                      - law_society_of_alberta
+                      - law_society_of_alberta_al
+                      - law_society_of_alberta_bar
+                      - law_society_of_alberta_tl
+                      - law_society_of_alberta_tt
+                      - matter
+                      - matter_balance_summary
+                      - matter_productivity_by_user
+                      - matters_by_responsible_attorney
+                      - originating_attorney_revenue
+                      - other_revenue
+                      - productivity_by_client
+                      - productivity_by_user
+                      - revenue
+                      - task_productivity_by_user
+                      - task_progress_by_user
+                      - trust_ledger
+                      - trust_ledger_nsw
+                      - trust_listing
+                      - trust_management
+                      - work_in_progress
+                      description: What kind of report will be generated.
+                    name:
+                      type: string
+                      description: Name of the ReportPreset.
+                    options:
+                      type: string
+                      description: What the report generation parameters are. See
+                        [Creating a Report Preset](#section/Creating-a-Report-Preset)
+                        for a sample request.
+        required: false

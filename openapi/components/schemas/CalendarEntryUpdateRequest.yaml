@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 $defs:
   CalendarEntryCreateRequestDataAttendeesInner:
     description: CalendarEntryCreateRequestDataAttendeesInner
@@ -28,27 +5,30 @@ $defs:
       id:
         anyOf:
         - type: integer
-        - type: 'null'
+        
         default: null
         description: The unique identifier for a single Attendee associated with the
           CalendarEntry. The keyword `null` is not valid for this field. Not required
           for creating new Attendee, but required for updating or deleting existing
           ones.
         title: Id
+        type: string
       type:
         anyOf:
         - type: string
-        - type: 'null'
+        
         default: null
         description: The type of attendee (Calendar, Contact)
         title: Type
+        type: string
       _destroy:
         anyOf:
         - type: boolean
-        - type: 'null'
+        
         default: null
         description: Flag to delete a specific attendee.
         title: Destroy
+        type: string
     title: CalendarEntryCreateRequestDataAttendeesInner
     type: object
   CalendarEntryCreateRequestDataCalendarEntryEventType:
@@ -57,11 +37,12 @@ $defs:
       id:
         anyOf:
         - type: integer
-        - type: 'null'
+        
         default: null
         description: The unique identifier for a single CalendarEntryEventType associated
           with the CalendarEntry. Use the keyword `null` to specify no association.
         title: Id
+        type: string
     title: CalendarEntryCreateRequestDataCalendarEntryEventType
     type: object
   CalendarEntryCreateRequestDataConferenceMeeting:
@@ -70,12 +51,13 @@ $defs:
       type:
         anyOf:
         - type: string
-        - type: 'null'
+        
         default: null
         description: The type of conference meeting. If no conference meeting is present
           or the user is in an ineligible pricing tier for this feature, it will be
           null.
         title: Type
+        type: string
     title: CalendarEntryCreateRequestDataConferenceMeeting
     type: object
   CalendarEntryCreateRequestDataMatter:
@@ -84,11 +66,12 @@ $defs:
       id:
         anyOf:
         - type: integer
-        - type: 'null'
+        
         default: null
         description: The unique identifier for a single Matter associated with the
           CalendarEntry. Use the keyword `null` to specify no association.
         title: Id
+        type: string
     title: CalendarEntryCreateRequestDataMatter
     type: object
   CalendarEntryUpdateRequestData:
@@ -97,107 +80,122 @@ $defs:
       _deleted:
         anyOf:
         - type: string
-        - type: 'null'
+        
         default: null
         description: Flag to delete a specific instance of a recurring event.
         title: Deleted
+        type: string
       all_day:
         anyOf:
         - type: boolean
-        - type: 'null'
+        
         default: null
         description: Whether or not the CalendarEntry is for all day.
         title: All Day
+        type: string
       attendees:
         anyOf:
         - items:
             $ref: '#/$defs/CalendarEntryCreateRequestDataAttendeesInner'
           type: array
-        - type: 'null'
+        
         default: null
         title: Attendees
+        type: string
       calendar_entry_event_type:
         anyOf:
         - $ref: '#/$defs/CalendarEntryCreateRequestDataCalendarEntryEventType'
-        - type: 'null'
+        
         default: null
+        type: string
       calendar_owner:
         anyOf:
         - $ref: '#/$defs/CalendarEntryUpdateRequestDataCalendarOwner'
-        - type: 'null'
+        
         default: null
+        type: string
       conference_meeting:
         anyOf:
         - $ref: '#/$defs/CalendarEntryCreateRequestDataConferenceMeeting'
-        - type: 'null'
+        
         default: null
+        type: string
       description:
         anyOf:
         - type: string
-        - type: 'null'
+        
         default: null
         description: A detailed description of the CalendarEntry.
         title: Description
+        type: string
       end_at:
         anyOf:
         - format: date-time
           type: string
-        - type: 'null'
+        
         default: null
         description: The time the CalendarEntry ends (Expects an ISO-8601 timestamp).
         title: End At
+        type: string
       external_properties:
         anyOf:
         - items:
             $ref: '#/$defs/CalendarEntryUpdateRequestDataExternalPropertiesInner'
           type: array
-        - type: 'null'
+        
         default: null
         title: External Properties
+        type: string
       location:
         anyOf:
         - type: string
-        - type: 'null'
+        
         default: null
         description: The geographic location of the CalendarEntry.
         title: Location
+        type: string
       matter:
         anyOf:
         - $ref: '#/$defs/CalendarEntryCreateRequestDataMatter'
-        - type: 'null'
+        
         default: null
+        type: string
       recurrence_rule:
         anyOf:
         - type: string
-        - type: 'null'
+        
         default: null
         description: Recurrence rule for expanding recurring CalendarEntry. To convert
           an existing recurring event to a non-recurring event, `''` or `null` are
           valid values.
         title: Recurrence Rule
+        type: string
       send_email_notification:
         anyOf:
         - type: boolean
-        - type: 'null'
+        
         default: null
         description: Whether the calendar Entry should send email notifications to
           attendees
         title: Send Email Notification
+        type: string
       start_at:
         anyOf:
         - format: date-time
           type: string
-        - type: 'null'
+        
         default: null
         description: The time the CalendarEntry starts (Expects an ISO-8601 timestamp).
         title: Start At
+        type: string
       summary:
         anyOf:
         - type: string
-        - type: 'null'
+        
         default: null
         description: A short summary of the CalendarEntry.
         title: Summary
+        type: string
     title: CalendarEntryUpdateRequestData
     type: object
   CalendarEntryUpdateRequestDataCalendarOwner:
@@ -206,11 +204,12 @@ $defs:
       id:
         anyOf:
         - type: integer
-        - type: 'null'
+        
         default: null
         description: The unique identifier for a single Calendar associated with the
           CalendarEntry. The keyword `null` is not valid for this field.
         title: Id
+        type: string
     title: CalendarEntryUpdateRequestDataCalendarOwner
     type: object
   CalendarEntryUpdateRequestDataExternalPropertiesInner:
@@ -219,35 +218,39 @@ $defs:
       id:
         anyOf:
         - type: integer
-        - type: 'null'
+        
         default: null
         description: The unique identifier for a single ExternalProperty associated
           with the CalendarEntry. The keyword `null` is not valid for this field.
         title: Id
+        type: string
       name:
         anyOf:
         - type: string
-        - type: 'null'
+        
         default: null
         description: 'The ExternalProperty name. Note: **there is a limit of 5 external_properties
           per CalendarEntry**'
         title: Name
+        type: string
       value:
         anyOf:
         - type: string
-        - type: 'null'
+        
         default: null
         description: The ExternalProperty value.
         title: Value
+        type: string
       _destroy:
         anyOf:
         - type: boolean
-        - type: 'null'
+        
         default: null
         description: The destroy flag. If the flag is set to `true` and the unique
           identifier of the associated ExternalProperty is present, the ExternalProperty
           is deleted from the CalendarEntry.
         title: Destroy
+        type: string
     title: CalendarEntryUpdateRequestDataExternalPropertiesInner
     type: object
 description: CalendarEntryUpdateRequest

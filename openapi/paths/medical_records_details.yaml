@@ -1,0 +1,65 @@
+/medical/records/details:
+  get:
+    tags:
+    - Medical Records Details
+    summary: Return the data for all Medical Records Details
+    operationId: listMedical_records_details
+    description: 'Outlines the parameters, optional and required, used when requesting
+      the data for all Medical Records Details
+
+      '
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/created_since'
+    - $ref: '#/components/parameters/fields'
+    - $ref: ./components/parameters/ids[].yaml
+    - $ref: '#/components/parameters/limit'
+    - $ref: '#/components/parameters/page_token'
+    - $ref: '#/components/parameters/treatment_end_date'
+    - $ref: '#/components/parameters/treatment_start_date'
+    - $ref: '#/components/parameters/updated_since'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+  post:
+    tags:
+    - Medical Records Details
+    summary: Creating a Medical Records Detail, Medical Records and Medical Bills
+    operationId: createMedical_records_detail
+    description: 'This endpoint allows a creation of a Medical Records Detail, multiple
+      Medical Records and Medical Bills.
+
+      Medical Liens can also be created as a property under Medical Bills.
+
+
+      Reference the payload to see how the records are being passed in.
+
+      '
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    responses:
+      '201':
+        $ref: '#/components/responses/201_Created'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '422':
+        $ref: '#/components/responses/422_Unprocessable_Entity'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+    requestBody:
+      $ref: '#/components/requestBodies/ReqBody_8040db7b'

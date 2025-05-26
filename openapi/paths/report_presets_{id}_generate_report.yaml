@@ -1,0 +1,22 @@
+/report/presets/{id}/generate/report:
+  post:
+    tags:
+    - Report Presets
+    summary: Generate a new report for a given preset
+    operationId: createGenerate_report
+    description: Generate a new report for a given preset
+    parameters:
+    - $ref: '#/components/parameters/id'
+    responses:
+      '201':
+        $ref: '#/components/responses/201_Created'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'

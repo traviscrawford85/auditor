@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 $defs:
   Activity:
     description: Activity
@@ -32,6 +9,7 @@ $defs:
         default: null
         description: Unique identifier for the *Activity*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -39,6 +17,7 @@ $defs:
         default: null
         description: ETag for the *Activity*
         title: Etag
+        type: string
       type:
         anyOf:
         - type: string
@@ -46,6 +25,7 @@ $defs:
         default: null
         description: The type of the *Activity*
         title: Type
+        type: string
       date:
         anyOf:
         - format: date
@@ -54,6 +34,7 @@ $defs:
         default: null
         description: The date the *Activity* was performed (as a ISO-8601 date)
         title: Date
+        type: string
       quantity_in_hours:
         anyOf:
         - type: number
@@ -62,6 +43,7 @@ $defs:
         default: null
         description: The number of hours the TimeEntry took.
         title: Quantity In Hours
+        type: string
       rounded_quantity_in_hours:
         anyOf:
         - type: number
@@ -71,6 +53,7 @@ $defs:
         description: 'The number of hours rounded accordingly to the billing settings.
           The rounded value is used to calculate the total. '
         title: Rounded Quantity In Hours
+        type: string
       quantity:
         anyOf:
         - type: number
@@ -81,6 +64,7 @@ $defs:
           <= 4.0.3:** The number of hours the TimeEntry took.  **Latest version:**
           The number of seconds the TimeEntry took. '
         title: Quantity
+        type: string
       rounded_quantity:
         anyOf:
         - type: number
@@ -93,6 +77,7 @@ $defs:
           number of seconds rounded accordingly to the billing settings. The rounded
           value is used to calculate the total. '
         title: Rounded Quantity
+        type: string
       quantity_redacted:
         anyOf:
         - type: boolean
@@ -102,6 +87,7 @@ $defs:
           `rounded_quantity`, `rounded_quantity_in_hours`, `quantity_in_hours`, `total`,
           `non_billable_total` '
         title: Quantity Redacted
+        type: string
       price:
         anyOf:
         - type: number
@@ -110,6 +96,7 @@ $defs:
         default: null
         description: The hourly or flat rate of the *Activity*
         title: Price
+        type: string
       note:
         anyOf:
         - type: string
@@ -117,6 +104,7 @@ $defs:
         default: null
         description: The details about the *Activity*
         title: Note
+        type: string
       flat_rate:
         anyOf:
         - type: boolean
@@ -124,6 +112,7 @@ $defs:
         default: null
         description: Whether the *Activity* is a flat rate
         title: Flat Rate
+        type: string
       billed:
         anyOf:
         - type: boolean
@@ -132,6 +121,7 @@ $defs:
         description: Whether the *Activity* has been added to an active bill that
           is in the state of `awaiting_payment` or `paid`
         title: Billed
+        type: string
       on_bill:
         anyOf:
         - type: boolean
@@ -140,6 +130,7 @@ $defs:
         description: Whether the *Activity* has been added to an active bill that
           is in the state of `draft`, `awaiting_approval`, `awaiting_payment` or `paid`
         title: On Bill
+        type: string
       total:
         anyOf:
         - type: number
@@ -148,6 +139,7 @@ $defs:
         default: null
         description: The total cost of draft, billable and billed items in the *Activity*
         title: Total
+        type: string
       contingency_fee:
         anyOf:
         - type: boolean
@@ -155,6 +147,7 @@ $defs:
         default: null
         description: Whether or not the *Activity* is a contingency fee
         title: Contingency Fee
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -163,6 +156,7 @@ $defs:
         default: null
         description: The time the *Activity* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -171,6 +165,7 @@ $defs:
         default: null
         description: The time the *Activity* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
       reference:
         anyOf:
         - type: string
@@ -178,6 +173,7 @@ $defs:
         default: null
         description: A check reference for a HardCostEntry.
         title: Reference
+        type: string
       non_billable:
         anyOf:
         - type: boolean
@@ -185,6 +181,7 @@ $defs:
         default: null
         description: Whether the *Activity* is non-billable
         title: Non Billable
+        type: string
       non_billable_total:
         anyOf:
         - type: number
@@ -193,6 +190,7 @@ $defs:
         default: null
         description: The total cost of non-billable items in the *Activity*
         title: Non Billable Total
+        type: string
       no_charge:
         anyOf:
         - type: boolean
@@ -200,6 +198,7 @@ $defs:
         default: null
         description: Whether the non-billable *Activity* is shown on the bill.
         title: No Charge
+        type: string
       tax_setting:
         anyOf:
         - type: string
@@ -208,101 +207,121 @@ $defs:
         description: The option denoting whether primary tax, secondary tax, or both
           is applied to an expense entry.
         title: Tax Setting
+        type: string
       currency:
         anyOf:
         - $ref: '#/$defs/CurrencyBase'
         - type: 'null'
         default: null
+        type: string
       activity_description:
         anyOf:
         - $ref: '#/$defs/ActivityDescriptionBase'
         - type: 'null'
         default: null
+        type: string
       expense_category:
         anyOf:
         - $ref: '#/$defs/ExpenseCategoryBase'
         - type: 'null'
         default: null
+        type: string
       bill:
         anyOf:
         - $ref: '#/$defs/BillBase'
         - type: 'null'
         default: null
+        type: string
       communication:
         anyOf:
         - $ref: '#/$defs/CommunicationBase'
         - type: 'null'
         default: null
+        type: string
       client_portal:
         anyOf:
         - $ref: '#/$defs/ClientPortalBase'
         - type: 'null'
         default: null
+        type: string
       matter:
         anyOf:
         - $ref: '#/$defs/MatterBase'
         - type: 'null'
         default: null
+        type: string
       matter_note:
         anyOf:
         - $ref: '#/$defs/NoteBase'
         - type: 'null'
         default: null
+        type: string
       contact_note:
         anyOf:
         - $ref: '#/$defs/NoteBase'
         - type: 'null'
         default: null
+        type: string
       subject:
         anyOf:
         - $ref: '#/$defs/PolymorphicObjectBase'
         - type: 'null'
         default: null
+        type: string
       timer:
         anyOf:
         - $ref: '#/$defs/TimerBase'
         - type: 'null'
         default: null
+        type: string
       user:
         anyOf:
         - $ref: '#/$defs/UserBase'
         - type: 'null'
         default: null
+        type: string
       utbms_expense:
         anyOf:
         - $ref: '#/$defs/UtbmsCodeBase'
         - type: 'null'
         default: null
+        type: string
       vendor:
         anyOf:
         - $ref: '#/$defs/ContactBase'
         - type: 'null'
         default: null
+        type: string
       calendar_entry:
         anyOf:
         - $ref: '#/$defs/ActivityCalendarEntryBase'
         - type: 'null'
         default: null
+        type: string
       task:
         anyOf:
         - $ref: '#/$defs/ActivityTaskBase'
         - type: 'null'
         default: null
+        type: string
       text_message_conversation:
         anyOf:
         - $ref: '#/$defs/ActivityTextMessageConversationBase'
         - type: 'null'
         default: null
+        type: string
       document_version:
         anyOf:
         - $ref: '#/$defs/DocumentVersionBase'
         - type: 'null'
         default: null
+        type: string
       legal_aid_uk_activity:
         anyOf:
         - $ref: '#/$defs/LegalAidUkActivityBase'
         - type: 'null'
         default: null
+        type: string
     title: Activity
     type: object
   ActivityCalendarEntryBase:
@@ -315,6 +334,7 @@ $defs:
         default: null
         description: Unique identifier for the *CalendarEntry*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -322,6 +342,7 @@ $defs:
         default: null
         description: ETag for the *CalendarEntry*
         title: Etag
+        type: string
       calendar_owner_id:
         anyOf:
         - type: integer
@@ -329,6 +350,7 @@ $defs:
         default: null
         description: The id of the calendar owner.
         title: Calendar Owner Id
+        type: string
     title: ActivityCalendarEntryBase
     type: object
   ActivityDescriptionBase:
@@ -341,6 +363,7 @@ $defs:
         default: null
         description: Unique identifier for the *ActivityDescription*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -348,6 +371,7 @@ $defs:
         default: null
         description: ETag for the *ActivityDescription*
         title: Etag
+        type: string
       name:
         anyOf:
         - type: string
@@ -355,6 +379,7 @@ $defs:
         default: null
         description: The name of the *ActivityDescription*
         title: Name
+        type: string
       visible_to_co_counsel:
         anyOf:
         - type: boolean
@@ -363,6 +388,7 @@ $defs:
         description: A toggle that determines if a co-counsel user of the firm can
           have access to this activity description
         title: Visible To Co Counsel
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -372,6 +398,7 @@ $defs:
         description: The time the *ActivityDescription* was created (as a ISO-8601
           timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -381,6 +408,7 @@ $defs:
         description: The time the *ActivityDescription* was last updated (as a ISO-8601
           timestamp)
         title: Updated At
+        type: string
       default:
         anyOf:
         - type: boolean
@@ -388,6 +416,7 @@ $defs:
         default: null
         description: Whether it is the user's default activity description
         title: Default
+        type: string
       type:
         anyOf:
         - type: string
@@ -395,6 +424,7 @@ $defs:
         default: null
         description: The type of the *ActivityDescription*
         title: Type
+        type: string
       utbms_activity_id:
         anyOf:
         - type: integer
@@ -403,6 +433,7 @@ $defs:
         description: The UTBMS activity id if the *ActivityDescription* is a UTBMS
           activity description
         title: Utbms Activity Id
+        type: string
       utbms_task_name:
         anyOf:
         - type: string
@@ -411,6 +442,7 @@ $defs:
         description: The UTBMS activity task name if attached to a UTBMS activity
           description
         title: Utbms Task Name
+        type: string
       utbms_task_id:
         anyOf:
         - type: integer
@@ -418,6 +450,7 @@ $defs:
         default: null
         description: The UTBMS activity task id if attached to a UTBMS activity description
         title: Utbms Task Id
+        type: string
       xero_service_code:
         anyOf:
         - type: string
@@ -425,6 +458,7 @@ $defs:
         default: null
         description: Custom Xero service code for this activity description
         title: Xero Service Code
+        type: string
       accessible_to_user:
         anyOf:
         - type: boolean
@@ -432,6 +466,7 @@ $defs:
         default: null
         description: Determines if activity description is accessible to user
         title: Accessible To User
+        type: string
       category_type:
         anyOf:
         - type: string
@@ -439,6 +474,7 @@ $defs:
         default: null
         description: Activity category rate type. Either hourly or flat fee
         title: Category Type
+        type: string
       currency:
         anyOf:
         - additionalProperties: true
@@ -447,6 +483,7 @@ $defs:
         default: null
         description: The currency of the activity description
         title: Currency
+        type: string
     title: ActivityDescriptionBase
     type: object
   ActivityTaskBase:
@@ -459,6 +496,7 @@ $defs:
         default: null
         description: Unique identifier for the *Task*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -466,6 +504,7 @@ $defs:
         default: null
         description: ETag for the *Task*
         title: Etag
+        type: string
     title: ActivityTaskBase
     type: object
   ActivityTextMessageConversationBase:
@@ -478,6 +517,7 @@ $defs:
         default: null
         description: Unique identifier for the *TextMessageConversation*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -485,6 +525,7 @@ $defs:
         default: null
         description: ETag for the *TextMessageConversation*
         title: Etag
+        type: string
     title: ActivityTextMessageConversationBase
     type: object
   BillBase:
@@ -497,6 +538,7 @@ $defs:
         default: null
         description: Unique identifier for the *Bill*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -504,6 +546,7 @@ $defs:
         default: null
         description: ETag for the *Bill*
         title: Etag
+        type: string
       number:
         anyOf:
         - type: string
@@ -511,6 +554,7 @@ $defs:
         default: null
         description: The *Bill* identifier (not necessarily numeric)'
         title: Number
+        type: string
       issued_at:
         anyOf:
         - format: date
@@ -519,6 +563,7 @@ $defs:
         default: null
         description: The time the *Bill* was issued (as a ISO-8601 date)
         title: Issued At
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -527,6 +572,7 @@ $defs:
         default: null
         description: The time the *Bill* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       due_at:
         anyOf:
         - format: date
@@ -535,6 +581,7 @@ $defs:
         default: null
         description: The date the *Bill* is due (as a ISO-8601 date)
         title: Due At
+        type: string
       tax_rate:
         anyOf:
         - type: number
@@ -543,6 +590,7 @@ $defs:
         default: null
         description: The tax rate to the *Bill*
         title: Tax Rate
+        type: string
       secondary_tax_rate:
         anyOf:
         - type: number
@@ -551,6 +599,7 @@ $defs:
         default: null
         description: A secondary tax rate applied to the *Bill*
         title: Secondary Tax Rate
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -559,6 +608,7 @@ $defs:
         default: null
         description: The time the *Bill* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
       subject:
         anyOf:
         - type: string
@@ -566,6 +616,7 @@ $defs:
         default: null
         description: The subject of the *Bill*
         title: Subject
+        type: string
       purchase_order:
         anyOf:
         - type: string
@@ -573,6 +624,7 @@ $defs:
         default: null
         description: The purchase order of the *Bill*
         title: Purchase Order
+        type: string
       type:
         anyOf:
         - type: string
@@ -580,6 +632,7 @@ $defs:
         default: null
         description: The type of the *Bill*
         title: Type
+        type: string
       memo:
         anyOf:
         - type: string
@@ -587,6 +640,7 @@ $defs:
         default: null
         description: A memo for the *Bill*
         title: Memo
+        type: string
       start_at:
         anyOf:
         - format: date
@@ -595,6 +649,7 @@ $defs:
         default: null
         description: The time the billing period starts (as a ISO-8601 date)
         title: Start At
+        type: string
       end_at:
         anyOf:
         - format: date
@@ -603,6 +658,7 @@ $defs:
         default: null
         description: The time the billing period ends (as a ISO-8601 date)
         title: End At
+        type: string
       balance:
         anyOf:
         - type: number
@@ -611,6 +667,7 @@ $defs:
         default: null
         description: The outstanding balance of the *Bill*
         title: Balance
+        type: string
       state:
         anyOf:
         - type: string
@@ -618,6 +675,7 @@ $defs:
         default: null
         description: The billing state the *Bill* is in
         title: State
+        type: string
       kind:
         anyOf:
         - type: string
@@ -625,6 +683,7 @@ $defs:
         default: null
         description: The kind of the *Bill*
         title: Kind
+        type: string
       total:
         anyOf:
         - type: number
@@ -633,6 +692,7 @@ $defs:
         default: null
         description: The total with interest of the *Bill*
         title: Total
+        type: string
       paid:
         anyOf:
         - type: number
@@ -641,6 +701,7 @@ $defs:
         default: null
         description: The total amount paid for the *Bill*
         title: Paid
+        type: string
       paid_at:
         anyOf:
         - format: date-time
@@ -649,6 +710,7 @@ $defs:
         default: null
         description: The date of the last payment on the *Bill*
         title: Paid At
+        type: string
       pending:
         anyOf:
         - type: number
@@ -657,6 +719,7 @@ $defs:
         default: null
         description: The amount of pending credit card payments on the *Bill*
         title: Pending
+        type: string
       due:
         anyOf:
         - type: number
@@ -665,6 +728,7 @@ $defs:
         default: null
         description: The total amount of the *Bill* with interest and less discounts
         title: Due
+        type: string
       discount_services_only:
         anyOf:
         - type: string
@@ -672,6 +736,7 @@ $defs:
         default: null
         description: The selected discount is applied to services only.
         title: Discount Services Only
+        type: string
       can_update:
         anyOf:
         - type: boolean
@@ -680,6 +745,7 @@ $defs:
         description: This value indicates if your *Bill*'s line items and information
           can be updated.
         title: Can Update
+        type: string
       credits_issued:
         anyOf:
         - type: number
@@ -688,6 +754,7 @@ $defs:
         default: null
         description: The total credits issued for the *Bill*
         title: Credits Issued
+        type: string
       shared:
         anyOf:
         - type: boolean
@@ -695,6 +762,7 @@ $defs:
         default: null
         description: Whether the *Bill* is a shared
         title: Shared
+        type: string
       last_sent_at:
         anyOf:
         - format: date-time
@@ -703,6 +771,7 @@ $defs:
         default: null
         description: The last time the *Bill* was sent (as a ISO-8601 date)
         title: Last Sent At
+        type: string
       services_secondary_tax:
         anyOf:
         - type: number
@@ -712,6 +781,7 @@ $defs:
         description: The total secondary tax of the bill's line items of a service
           kind
         title: Services Secondary Tax
+        type: string
       services_sub_total:
         anyOf:
         - type: number
@@ -720,6 +790,7 @@ $defs:
         default: null
         description: The sub total of all the bill's line items of a service kind
         title: Services Sub Total
+        type: string
       services_tax:
         anyOf:
         - type: number
@@ -728,6 +799,7 @@ $defs:
         default: null
         description: The total tax of the bill's line items of a service kind
         title: Services Tax
+        type: string
       services_taxable_sub_total:
         anyOf:
         - type: integer
@@ -735,6 +807,7 @@ $defs:
         default: null
         description: The services portion of the bill's primary tax
         title: Services Taxable Sub Total
+        type: string
       services_secondary_taxable_sub_total:
         anyOf:
         - type: integer
@@ -742,6 +815,7 @@ $defs:
         default: null
         description: The services portion of the bill's secondary tax
         title: Services Secondary Taxable Sub Total
+        type: string
       taxable_sub_total:
         anyOf:
         - type: integer
@@ -749,6 +823,7 @@ $defs:
         default: null
         description: The total taxable bill amount
         title: Taxable Sub Total
+        type: string
       secondary_taxable_sub_total:
         anyOf:
         - type: integer
@@ -756,6 +831,7 @@ $defs:
         default: null
         description: The subtotal of the bill's secondary tax
         title: Secondary Taxable Sub Total
+        type: string
       sub_total:
         anyOf:
         - type: number
@@ -764,6 +840,7 @@ $defs:
         default: null
         description: Sub total for the *Bill*
         title: Sub Total
+        type: string
       tax_sum:
         anyOf:
         - type: number
@@ -772,6 +849,7 @@ $defs:
         default: null
         description: Sum of primary tax for the model
         title: Tax Sum
+        type: string
       secondary_tax_sum:
         anyOf:
         - type: number
@@ -780,6 +858,7 @@ $defs:
         default: null
         description: Sum of secondary tax for the model
         title: Secondary Tax Sum
+        type: string
       total_tax:
         anyOf:
         - type: number
@@ -788,6 +867,7 @@ $defs:
         default: null
         description: The total amount of tax for the bill.
         title: Total Tax
+        type: string
       available_state_transitions:
         anyOf:
         - items:
@@ -797,6 +877,7 @@ $defs:
         default: null
         description: The available *Bill* state transitions.
         title: Available State Transitions
+        type: string
     title: BillBase
     type: object
   ClientPortalBase:
@@ -809,6 +890,7 @@ $defs:
         default: null
         description: Unique identifier for the *ClientPortal*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -816,6 +898,7 @@ $defs:
         default: null
         description: ETag for the *ClientPortal*
         title: Etag
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -824,6 +907,7 @@ $defs:
         default: null
         description: The time the *ClientPortal* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -832,6 +916,7 @@ $defs:
         default: null
         description: The time the *ClientPortal* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
       unread_count:
         anyOf:
         - type: integer
@@ -839,6 +924,7 @@ $defs:
         default: null
         description: The number of unread count messages for the current user.
         title: Unread Count
+        type: string
       unread_notifiable_count:
         anyOf:
         - type: integer
@@ -847,6 +933,7 @@ $defs:
         description: The number of unread messages for the current user once their
           notification settings have been applied.
         title: Unread Notifiable Count
+        type: string
     title: ClientPortalBase
     type: object
   CommunicationBase:
@@ -859,6 +946,7 @@ $defs:
         default: null
         description: Unique identifier for the *Communication*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -866,6 +954,7 @@ $defs:
         default: null
         description: ETag for the *Communication*
         title: Etag
+        type: string
       subject:
         anyOf:
         - type: string
@@ -873,6 +962,7 @@ $defs:
         default: null
         description: The subject line of the *Communication*
         title: Subject
+        type: string
       body:
         anyOf:
         - type: string
@@ -880,6 +970,7 @@ $defs:
         default: null
         description: The main content of the *Communication*
         title: Body
+        type: string
       type:
         anyOf:
         - type: string
@@ -887,6 +978,7 @@ $defs:
         default: null
         description: The type of the *Communication*
         title: Type
+        type: string
       date:
         anyOf:
         - format: date
@@ -895,6 +987,7 @@ $defs:
         default: null
         description: The date of the *Communication* (as a ISO-8601 datestamp)
         title: Date
+        type: string
       time_entries_count:
         anyOf:
         - type: integer
@@ -902,6 +995,7 @@ $defs:
         default: null
         description: The number of time_entries associated with the *Communication*
         title: Time Entries Count
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -910,6 +1004,7 @@ $defs:
         default: null
         description: The time the *Communication* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -919,6 +1014,7 @@ $defs:
         description: The time the *Communication* was last updated (as a ISO-8601
           timestamp)
         title: Updated At
+        type: string
       received_at:
         anyOf:
         - format: date-time
@@ -927,6 +1023,7 @@ $defs:
         default: null
         description: The date-time of the *Communication* (in ISO-8601 format)
         title: Received At
+        type: string
     title: CommunicationBase
     type: object
   ContactBase:
@@ -939,6 +1036,7 @@ $defs:
         default: null
         description: Unique identifier for the *Contact*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -946,6 +1044,7 @@ $defs:
         default: null
         description: ETag for the *Contact*
         title: Etag
+        type: string
       name:
         anyOf:
         - type: string
@@ -953,6 +1052,7 @@ $defs:
         default: null
         description: The full name of the *Contact*
         title: Name
+        type: string
       first_name:
         anyOf:
         - type: string
@@ -960,6 +1060,7 @@ $defs:
         default: null
         description: First name of the Person
         title: First Name
+        type: string
       middle_name:
         anyOf:
         - type: string
@@ -967,6 +1068,7 @@ $defs:
         default: null
         description: Middle name of the Person
         title: Middle Name
+        type: string
       last_name:
         anyOf:
         - type: string
@@ -974,6 +1076,7 @@ $defs:
         default: null
         description: Last name of the Person
         title: Last Name
+        type: string
       date_of_birth:
         anyOf:
         - format: date
@@ -982,6 +1085,7 @@ $defs:
         default: null
         description: Date of birth
         title: Date Of Birth
+        type: string
       type:
         anyOf:
         - type: string
@@ -989,6 +1093,7 @@ $defs:
         default: null
         description: The type of the *Contact*
         title: Type
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -997,6 +1102,7 @@ $defs:
         default: null
         description: The time the *Contact* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -1005,6 +1111,7 @@ $defs:
         default: null
         description: The time the *Contact* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
       prefix:
         anyOf:
         - type: string
@@ -1012,6 +1119,7 @@ $defs:
         default: null
         description: The prefix of the *Contact* (Mr, Mrs, etc)
         title: Prefix
+        type: string
       title:
         anyOf:
         - type: string
@@ -1019,6 +1127,7 @@ $defs:
         default: null
         description: The designated title of the *Contact*
         title: Title
+        type: string
       initials:
         anyOf:
         - type: string
@@ -1026,6 +1135,7 @@ $defs:
         default: null
         description: The initials of the *Contact*
         title: Initials
+        type: string
       clio_connect_email:
         anyOf:
         - type: string
@@ -1033,6 +1143,7 @@ $defs:
         default: null
         description: Clio Connect email if the *Contact* is a ClioConnect User
         title: Clio Connect Email
+        type: string
       locked_clio_connect_email:
         anyOf:
         - type: boolean
@@ -1041,6 +1152,7 @@ $defs:
         description: A boolean indicating if the ability to modify this *Contacts
           Clio connect email is locked.
         title: Locked Clio Connect Email
+        type: string
       client_connect_user_id:
         anyOf:
         - type: integer
@@ -1048,6 +1160,7 @@ $defs:
         default: null
         description: The ID for the Clio Connect user associated with this *Contact*
         title: Client Connect User Id
+        type: string
       primary_email_address:
         anyOf:
         - type: string
@@ -1055,6 +1168,7 @@ $defs:
         default: null
         description: The primary email address associated with this *Contact*.
         title: Primary Email Address
+        type: string
       secondary_email_address:
         anyOf:
         - type: string
@@ -1062,6 +1176,7 @@ $defs:
         default: null
         description: The secondary email address associated with this *Contact*.
         title: Secondary Email Address
+        type: string
       primary_phone_number:
         anyOf:
         - type: string
@@ -1069,6 +1184,7 @@ $defs:
         default: null
         description: The primary phone number associated with this *Contact*.
         title: Primary Phone Number
+        type: string
       secondary_phone_number:
         anyOf:
         - type: string
@@ -1076,6 +1192,7 @@ $defs:
         default: null
         description: The secondary phone number of the *Contact*.
         title: Secondary Phone Number
+        type: string
       ledes_client_id:
         anyOf:
         - type: string
@@ -1083,6 +1200,7 @@ $defs:
         default: null
         description: LEDES client id of the Contact
         title: Ledes Client Id
+        type: string
       has_clio_for_clients_permission:
         anyOf:
         - type: boolean
@@ -1091,6 +1209,7 @@ $defs:
         description: True if at least one resource has been shared with the contact
           using Clio for Clients.
         title: Has Clio For Clients Permission
+        type: string
       is_client:
         anyOf:
         - type: boolean
@@ -1098,6 +1217,7 @@ $defs:
         default: null
         description: Whether or not the Contact is a client
         title: Is Client
+        type: string
       is_clio_for_client_user:
         anyOf:
         - type: boolean
@@ -1106,6 +1226,7 @@ $defs:
         description: Whether or not this contact has client_login and client_user
           (can be created due to addition to client portal or client_share_permissions)
         title: Is Clio For Client User
+        type: string
       is_co_counsel:
         anyOf:
         - type: boolean
@@ -1113,6 +1234,7 @@ $defs:
         default: null
         description: Whether or not the Contact has matters shared as co-counsel
         title: Is Co Counsel
+        type: string
       is_bill_recipient:
         anyOf:
         - type: boolean
@@ -1120,6 +1242,7 @@ $defs:
         default: null
         description: Whether the Contact is a bill recipient on at least one matter.
         title: Is Bill Recipient
+        type: string
       sales_tax_number:
         anyOf:
         - type: string
@@ -1127,6 +1250,7 @@ $defs:
         default: null
         description: The sales tax number of the *Contact*
         title: Sales Tax Number
+        type: string
       currency:
         anyOf:
         - additionalProperties: true
@@ -1135,6 +1259,7 @@ $defs:
         default: null
         description: Currency of the *Contact*
         title: Currency
+        type: string
     title: ContactBase
     type: object
   CurrencyBase:
@@ -1147,6 +1272,7 @@ $defs:
         default: null
         description: Unique identifier for the *Currency*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -1154,6 +1280,7 @@ $defs:
         default: null
         description: ETag for the *Currency*
         title: Etag
+        type: string
       code:
         anyOf:
         - type: string
@@ -1161,6 +1288,7 @@ $defs:
         default: null
         description: ISO 4217 code for the *Currency*
         title: Code
+        type: string
       sign:
         anyOf:
         - type: string
@@ -1168,6 +1296,7 @@ $defs:
         default: null
         description: Symbol used to denote monetary values using this *Currency*
         title: Sign
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -1176,6 +1305,7 @@ $defs:
         default: null
         description: The time the *Currency* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -1184,6 +1314,7 @@ $defs:
         default: null
         description: The time the *Currency* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
     title: CurrencyBase
     type: object
   DocumentVersionBase:
@@ -1196,6 +1327,7 @@ $defs:
         default: null
         description: Unique identifier for the *DocumentVersion*
         title: Id
+        type: string
       document_id:
         anyOf:
         - type: integer
@@ -1203,6 +1335,7 @@ $defs:
         default: null
         description: The ID of the parent document.
         title: Document Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -1210,6 +1343,7 @@ $defs:
         default: null
         description: ETag for the *DocumentVersion*
         title: Etag
+        type: string
       uuid:
         anyOf:
         - type: string
@@ -1218,6 +1352,7 @@ $defs:
         description: UUID associated with the DocumentVersion. UUID is required to
           mark a document fully uploaded.
         title: Uuid
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -1226,6 +1361,7 @@ $defs:
         default: null
         description: The time the *DocumentVersion* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -1235,6 +1371,7 @@ $defs:
         description: The time the *DocumentVersion* was last updated (as a ISO-8601
           timestamp)
         title: Updated At
+        type: string
       filename:
         anyOf:
         - type: string
@@ -1242,6 +1379,7 @@ $defs:
         default: null
         description: The uploaded file name of the DocumentVersion.
         title: Filename
+        type: string
       size:
         anyOf:
         - type: integer
@@ -1249,6 +1387,7 @@ $defs:
         default: null
         description: The size of the DocumentVersion in bytes.
         title: Size
+        type: string
       version_number:
         anyOf:
         - type: integer
@@ -1256,6 +1395,7 @@ $defs:
         default: null
         description: The ordered number of when this DocumentVersion was uploaded.
         title: Version Number
+        type: string
       content_type:
         anyOf:
         - type: string
@@ -1263,6 +1403,7 @@ $defs:
         default: null
         description: A standard MIME type describing the format of the object data.
         title: Content Type
+        type: string
       received_at:
         anyOf:
         - format: date-time
@@ -1271,6 +1412,7 @@ $defs:
         default: null
         description: The time the DocumentVersion was received (as an ISO-8601 timestamp)
         title: Received At
+        type: string
       put_url:
         anyOf:
         - type: string
@@ -1279,6 +1421,7 @@ $defs:
         description: A signed URL for uploading the file in a single operation. It
           expires in 10 minutes. If the document is fully uploaded, the field is empty.
         title: Put Url
+        type: string
       fully_uploaded:
         anyOf:
         - type: boolean
@@ -1287,6 +1430,7 @@ $defs:
         description: True if the DocumentVersion is uploaded. False if the DocumentVersion
           is being uploaded.
         title: Fully Uploaded
+        type: string
     title: DocumentVersionBase
     type: object
   ExpenseCategoryBase:
@@ -1299,6 +1443,7 @@ $defs:
         default: null
         description: Unique identifier for the *ExpenseCategory*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -1306,6 +1451,7 @@ $defs:
         default: null
         description: ETag for the *ExpenseCategory*
         title: Etag
+        type: string
       name:
         anyOf:
         - type: string
@@ -1313,6 +1459,7 @@ $defs:
         default: null
         description: The name of the expense category
         title: Name
+        type: string
       rate:
         anyOf:
         - type: integer
@@ -1320,6 +1467,7 @@ $defs:
         default: null
         description: The price charged per unit cost
         title: Rate
+        type: string
       entry_type:
         anyOf:
         - type: string
@@ -1328,6 +1476,7 @@ $defs:
         description: The type of expense entry the category is associated to. Can
           be either "hard_cost", "soft_cost" or "unassociated"
         title: Entry Type
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -1336,6 +1485,7 @@ $defs:
         default: null
         description: The time the *ExpenseCategory* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -1345,6 +1495,7 @@ $defs:
         description: The time the *ExpenseCategory* was last updated (as a ISO-8601
           timestamp)
         title: Updated At
+        type: string
       xero_expense_code:
         anyOf:
         - type: string
@@ -1352,6 +1503,7 @@ $defs:
         default: null
         description: Custom Xero expense code for an expense category
         title: Xero Expense Code
+        type: string
       accessible_to_user:
         anyOf:
         - type: boolean
@@ -1359,6 +1511,7 @@ $defs:
         default: null
         description: Determines if expense category is accessible to user
         title: Accessible To User
+        type: string
       tax_setting:
         anyOf:
         - type: string
@@ -1366,6 +1519,7 @@ $defs:
         default: null
         description: The type of tax rate applied to the expense category.
         title: Tax Setting
+        type: string
       currency:
         anyOf:
         - additionalProperties: true
@@ -1374,6 +1528,7 @@ $defs:
         default: null
         description: The currency details for the expense category
         title: Currency
+        type: string
     title: ExpenseCategoryBase
     type: object
   LegalAidUkActivityBase:
@@ -1386,6 +1541,7 @@ $defs:
         default: null
         description: Activity sub-category
         title: Activity Sub Category
+        type: string
       advocacy:
         anyOf:
         - type: integer
@@ -1393,6 +1549,7 @@ $defs:
         default: null
         description: Advocacy
         title: Advocacy
+        type: string
       base_rate:
         anyOf:
         - type: number
@@ -1401,6 +1558,7 @@ $defs:
         default: null
         description: Base rate
         title: Base Rate
+        type: string
       bolt_ons:
         anyOf:
         - type: string
@@ -1408,6 +1566,7 @@ $defs:
         default: null
         description: Bolt ons
         title: Bolt Ons
+        type: string
       bolt_ons_summary:
         anyOf:
         - type: string
@@ -1415,6 +1574,7 @@ $defs:
         default: null
         description: Bolt ons summary
         title: Bolt Ons Summary
+        type: string
       court:
         anyOf:
         - type: integer
@@ -1422,6 +1582,7 @@ $defs:
         default: null
         description: Court
         title: Court
+        type: string
       eligible_for_sqm:
         anyOf:
         - type: boolean
@@ -1429,6 +1590,7 @@ $defs:
         default: null
         description: Eligible for SQM
         title: Eligible For Sqm
+        type: string
       expert:
         anyOf:
         - type: integer
@@ -1436,6 +1598,7 @@ $defs:
         default: null
         description: Expert
         title: Expert
+        type: string
       form_of_civil_legal_service:
         anyOf:
         - type: integer
@@ -1443,6 +1606,7 @@ $defs:
         default: null
         description: Form of civil legal service
         title: Form Of Civil Legal Service
+        type: string
       id:
         anyOf:
         - type: integer
@@ -1450,6 +1614,7 @@ $defs:
         default: null
         description: Unique identifier for the *LegalAidUkActivity*
         title: Id
+        type: string
       is_custom_rate:
         anyOf:
         - type: boolean
@@ -1457,6 +1622,7 @@ $defs:
         default: null
         description: Flag to indicate if rate was manually entered by user
         title: Is Custom Rate
+        type: string
       json_key:
         anyOf:
         - type: string
@@ -1464,6 +1630,7 @@ $defs:
         default: null
         description: Lookup key that references JSON data
         title: Json Key
+        type: string
       region:
         anyOf:
         - type: integer
@@ -1471,6 +1638,7 @@ $defs:
         default: null
         description: Region
         title: Region
+        type: string
       tax_exclusive:
         anyOf:
         - type: boolean
@@ -1478,6 +1646,7 @@ $defs:
         default: null
         description: Flag to indicate if tax is exclusive
         title: Tax Exclusive
+        type: string
       uplift:
         anyOf:
         - type: number
@@ -1486,6 +1655,7 @@ $defs:
         default: null
         description: Uplift percentage applied to activity rate
         title: Uplift
+        type: string
       user_type:
         anyOf:
         - type: integer
@@ -1493,6 +1663,7 @@ $defs:
         default: null
         description: User type
         title: User Type
+        type: string
     title: LegalAidUkActivityBase
     type: object
   MatterBase:
@@ -1505,6 +1676,7 @@ $defs:
         default: null
         description: Unique identifier for the *Matter*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -1512,6 +1684,7 @@ $defs:
         default: null
         description: ETag for the *Matter*
         title: Etag
+        type: string
       number:
         anyOf:
         - type: integer
@@ -1519,6 +1692,7 @@ $defs:
         default: null
         description: The number given to the *Matter* within an account
         title: Number
+        type: string
       display_number:
         anyOf:
         - type: string
@@ -1528,6 +1702,7 @@ $defs:
           manual_matter_numbering setting, this is either read only (generated) or
           customizable.
         title: Display Number
+        type: string
       custom_number:
         anyOf:
         - type: string
@@ -1535,6 +1710,7 @@ $defs:
         default: null
         description: User defined custom number of the *Matter*
         title: Custom Number
+        type: string
       currency:
         anyOf:
         - additionalProperties: true
@@ -1543,6 +1719,7 @@ $defs:
         default: null
         description: Currency of the matter
         title: Currency
+        type: string
       description:
         anyOf:
         - type: string
@@ -1550,6 +1727,7 @@ $defs:
         default: null
         description: The detailed description of the *Matter*
         title: Description
+        type: string
       status:
         anyOf:
         - type: string
@@ -1557,6 +1735,7 @@ $defs:
         default: null
         description: The current status of the *Matter*
         title: Status
+        type: string
       location:
         anyOf:
         - type: string
@@ -1564,6 +1743,7 @@ $defs:
         default: null
         description: The location of the *Matter*
         title: Location
+        type: string
       client_reference:
         anyOf:
         - type: string
@@ -1571,6 +1751,7 @@ $defs:
         default: null
         description: Client Reference string for external uses
         title: Client Reference
+        type: string
       client_id:
         anyOf:
         - type: integer
@@ -1578,6 +1759,7 @@ $defs:
         default: null
         description: Client ID
         title: Client Id
+        type: string
       billable:
         anyOf:
         - type: boolean
@@ -1585,6 +1767,7 @@ $defs:
         default: null
         description: Whether this matter is billable
         title: Billable
+        type: string
       maildrop_address:
         anyOf:
         - type: string
@@ -1592,6 +1775,7 @@ $defs:
         default: null
         description: A unique Maildrop email address for the matter
         title: Maildrop Address
+        type: string
       billing_method:
         anyOf:
         - type: string
@@ -1599,6 +1783,7 @@ $defs:
         default: null
         description: Billing method of this matter
         title: Billing Method
+        type: string
       open_date:
         anyOf:
         - format: date
@@ -1607,6 +1792,7 @@ $defs:
         default: null
         description: The date the matter was set to open (as a ISO-8601 date)
         title: Open Date
+        type: string
       close_date:
         anyOf:
         - format: date
@@ -1615,6 +1801,7 @@ $defs:
         default: null
         description: The date the matter was set to closed (as a ISO-8601 date)
         title: Close Date
+        type: string
       pending_date:
         anyOf:
         - format: date
@@ -1623,6 +1810,7 @@ $defs:
         default: null
         description: The date the matter was set to pending (as a ISO-8601 date)
         title: Pending Date
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -1631,6 +1819,7 @@ $defs:
         default: null
         description: The time the *Matter* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -1639,6 +1828,7 @@ $defs:
         default: null
         description: The time the *Matter* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
       shared:
         anyOf:
         - type: boolean
@@ -1646,6 +1836,7 @@ $defs:
         default: null
         description: Whether the matter is currently shared with Clio Connect
         title: Shared
+        type: string
       has_tasks:
         anyOf:
         - type: boolean
@@ -1653,6 +1844,7 @@ $defs:
         default: null
         description: Whether or not the matter has any tasks.
         title: Has Tasks
+        type: string
       last_activity_date:
         anyOf:
         - format: date
@@ -1662,6 +1854,7 @@ $defs:
         description: The greatest date out of all of the activities on the matter
           (as a ISO-8601 date)
         title: Last Activity Date
+        type: string
       matter_stage_updated_at:
         anyOf:
         - format: date-time
@@ -1670,6 +1863,7 @@ $defs:
         default: null
         description: The date the matter stage was last updated (as a ISO-8601 date)
         title: Matter Stage Updated At
+        type: string
     title: MatterBase
     type: object
   NoteBase:
@@ -1682,6 +1876,7 @@ $defs:
         default: null
         description: Unique identifier for the *Note*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -1689,6 +1884,7 @@ $defs:
         default: null
         description: ETag for the *Note*
         title: Etag
+        type: string
       type:
         anyOf:
         - type: string
@@ -1696,6 +1892,7 @@ $defs:
         default: null
         description: The type of the *Note*
         title: Type
+        type: string
       subject:
         anyOf:
         - type: string
@@ -1703,6 +1900,7 @@ $defs:
         default: null
         description: The subject of the *Note*
         title: Subject
+        type: string
       detail:
         anyOf:
         - type: string
@@ -1710,6 +1908,7 @@ $defs:
         default: null
         description: The body of the *Note*
         title: Detail
+        type: string
       date:
         anyOf:
         - format: date
@@ -1718,6 +1917,7 @@ $defs:
         default: null
         description: The date the *Note* is for (as a ISO-8601 date)
         title: Date
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -1726,6 +1926,7 @@ $defs:
         default: null
         description: The time the *Note* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -1734,6 +1935,7 @@ $defs:
         default: null
         description: The time the *Note* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
       time_entries_count:
         anyOf:
         - type: integer
@@ -1741,6 +1943,7 @@ $defs:
         default: null
         description: The number of time_entries associated with the *Note*
         title: Time Entries Count
+        type: string
     title: NoteBase
     type: object
   PolymorphicObjectBase:
@@ -1753,6 +1956,7 @@ $defs:
         default: null
         description: Unique identifier for the *PolymorphicObject*
         title: Id
+        type: string
       type:
         anyOf:
         - type: string
@@ -1760,6 +1964,7 @@ $defs:
         default: null
         description: The type of the *PolymorphicObject*
         title: Type
+        type: string
       identifier:
         anyOf:
         - type: string
@@ -1767,6 +1972,7 @@ $defs:
         default: null
         description: A string to identify the *PolymorphicObject*
         title: Identifier
+        type: string
       secondary_identifier:
         anyOf:
         - type: string
@@ -1774,6 +1980,7 @@ $defs:
         default: null
         description: A secondary string to identify the *PolymorphicObject*
         title: Secondary Identifier
+        type: string
       tertiary_identifier:
         anyOf:
         - type: string
@@ -1781,6 +1988,7 @@ $defs:
         default: null
         description: A tertiary string to identify the *PolymorphicObject*
         title: Tertiary Identifier
+        type: string
     title: PolymorphicObjectBase
     type: object
   TimerBase:
@@ -1793,6 +2001,7 @@ $defs:
         default: null
         description: Unique identifier for the *Timer*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -1800,6 +2009,7 @@ $defs:
         default: null
         description: ETag for the *Timer*
         title: Etag
+        type: string
       start_time:
         anyOf:
         - format: date-time
@@ -1808,6 +2018,7 @@ $defs:
         default: null
         description: The time the *Timer* was started (as ISO-8601 timestamp)
         title: Start Time
+        type: string
       elapsed_time:
         anyOf:
         - type: number
@@ -1816,6 +2027,7 @@ $defs:
         default: null
         description: How much time has elapsed, in hours, since the timer was started
         title: Elapsed Time
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -1824,6 +2036,7 @@ $defs:
         default: null
         description: The time the *Timer* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -1832,6 +2045,7 @@ $defs:
         default: null
         description: The time the *Timer* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
     title: TimerBase
     type: object
   UserBase:
@@ -1844,6 +2058,7 @@ $defs:
         default: null
         description: Whether the *User* is the owner of the account
         title: Account Owner
+        type: string
       clio_connect:
         anyOf:
         - type: boolean
@@ -1851,6 +2066,7 @@ $defs:
         default: null
         description: Whether the *User* is a Clio Connect user
         title: Clio Connect
+        type: string
       court_rules_default_attendee:
         anyOf:
         - type: boolean
@@ -1858,6 +2074,7 @@ $defs:
         default: null
         description: Whether the *User* is a default attendee for court rules events
         title: Court Rules Default Attendee
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -1866,6 +2083,7 @@ $defs:
         default: null
         description: The time the *User* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       default_calendar_id:
         anyOf:
         - type: integer
@@ -1873,6 +2091,7 @@ $defs:
         default: null
         description: Default calendar id for *User*.
         title: Default Calendar Id
+        type: string
       email:
         anyOf:
         - type: string
@@ -1880,6 +2099,7 @@ $defs:
         default: null
         description: The email of the *User*
         title: Email
+        type: string
       enabled:
         anyOf:
         - type: boolean
@@ -1887,6 +2107,7 @@ $defs:
         default: null
         description: Whether the *User* is allowed to log in
         title: Enabled
+        type: string
       etag:
         anyOf:
         - type: string
@@ -1894,6 +2115,7 @@ $defs:
         default: null
         description: ETag for the *User*
         title: Etag
+        type: string
       first_name:
         anyOf:
         - type: string
@@ -1901,6 +2123,7 @@ $defs:
         default: null
         description: The first name of the *User*
         title: First Name
+        type: string
       id:
         anyOf:
         - type: integer
@@ -1908,6 +2131,7 @@ $defs:
         default: null
         description: Unique identifier for the *User*
         title: Id
+        type: string
       initials:
         anyOf:
         - type: string
@@ -1915,6 +2139,7 @@ $defs:
         default: null
         description: The initials of the *User*
         title: Initials
+        type: string
       last_name:
         anyOf:
         - type: string
@@ -1922,6 +2147,7 @@ $defs:
         default: null
         description: The last name of the *User*
         title: Last Name
+        type: string
       name:
         anyOf:
         - type: string
@@ -1929,6 +2155,7 @@ $defs:
         default: null
         description: The full name of the *User*
         title: Name
+        type: string
       phone_number:
         anyOf:
         - type: string
@@ -1936,6 +2163,7 @@ $defs:
         default: null
         description: The primary phone number for the *User*.
         title: Phone Number
+        type: string
       rate:
         anyOf:
         - type: number
@@ -1944,6 +2172,7 @@ $defs:
         default: null
         description: Default user activity rate for *User*.
         title: Rate
+        type: string
       roles:
         anyOf:
         - items:
@@ -1953,6 +2182,7 @@ $defs:
         default: null
         description: An array of roles assigned to this *User*
         title: Roles
+        type: string
       subscription_type:
         anyOf:
         - type: string
@@ -1960,6 +2190,7 @@ $defs:
         default: null
         description: The subscription type of the *User*
         title: Subscription Type
+        type: string
       time_zone:
         anyOf:
         - type: string
@@ -1967,6 +2198,7 @@ $defs:
         default: null
         description: The selected time zone of the *User*
         title: Time Zone
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -1975,6 +2207,7 @@ $defs:
         default: null
         description: The time the *User* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
     title: UserBase
     type: object
   UtbmsCodeBase:
@@ -1987,6 +2220,7 @@ $defs:
         default: null
         description: Unique identifier for the *UtbmsCode*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -1994,6 +2228,7 @@ $defs:
         default: null
         description: ETag for the *UtbmsCode*
         title: Etag
+        type: string
       name:
         anyOf:
         - type: string
@@ -2001,6 +2236,7 @@ $defs:
         default: null
         description: The name of the *UtbmsCode*
         title: Name
+        type: string
       code:
         anyOf:
         - type: string
@@ -2008,6 +2244,7 @@ $defs:
         default: null
         description: The UTBMS code for the *UtbmsCode*
         title: Code
+        type: string
       description:
         anyOf:
         - type: string
@@ -2015,6 +2252,7 @@ $defs:
         default: null
         description: The UTBMS description for the *UtbmsCode*
         title: Description
+        type: string
       type:
         anyOf:
         - type: string
@@ -2022,6 +2260,7 @@ $defs:
         default: null
         description: The type of the *UtbmsCode*
         title: Type
+        type: string
       utbms_set_id:
         anyOf:
         - type: integer
@@ -2029,6 +2268,7 @@ $defs:
         default: null
         description: Set id for the *UtbmsCode*
         title: Utbms Set Id
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -2037,6 +2277,7 @@ $defs:
         default: null
         description: The time the *UtbmsCode* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -2045,6 +2286,7 @@ $defs:
         default: null
         description: The time the *UtbmsCode* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
     title: UtbmsCodeBase
     type: object
 description: ActivityShow

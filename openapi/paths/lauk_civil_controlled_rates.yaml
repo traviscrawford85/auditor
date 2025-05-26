@@ -1,0 +1,31 @@
+/lauk/civil/controlled/rates:
+  get:
+    tags:
+    - Civil Controlled Rates
+    summary: List Civil Controlled Rates
+    operationId: listLauk_civil_controlled_rates
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for all LaukCivilControlledRates
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/activity'
+    - $ref: '#/components/parameters/category_of_law'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/key'
+    - $ref: '#/components/parameters/limit'
+    - $ref: '#/components/parameters/matter_type_1'
+    - $ref: '#/components/parameters/matter_type_2'
+    - $ref: '#/components/parameters/page_token'
+    - $ref: '#/components/parameters/rate_type'
+    - $ref: '#/components/parameters/region'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'

@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 UnnamedSchema:
   description: ClioCreatorBase
   properties:
@@ -31,6 +8,7 @@ UnnamedSchema:
       default: null
       description: Whether the *ClioCreator* is the owner of the account
       title: Account Owner
+      type: string
     clio_connect:
       anyOf:
       - type: boolean
@@ -38,6 +16,7 @@ UnnamedSchema:
       default: null
       description: Whether the *ClioCreator* is a Clio Connect user
       title: Clio Connect
+      type: string
     court_rules_default_attendee:
       anyOf:
       - type: boolean
@@ -46,6 +25,7 @@ UnnamedSchema:
       description: Whether the *ClioCreator* is a default attendee for court rules
         events
       title: Court Rules Default Attendee
+      type: string
     default_calendar_id:
       anyOf:
       - type: integer
@@ -53,6 +33,7 @@ UnnamedSchema:
       default: null
       description: Default calendar id for *ClioCreator*.
       title: Default Calendar Id
+      type: string
     email:
       anyOf:
       - type: string
@@ -60,6 +41,7 @@ UnnamedSchema:
       default: null
       description: The email of the *ClioCreator*
       title: Email
+      type: string
     enabled:
       anyOf:
       - type: boolean
@@ -67,6 +49,7 @@ UnnamedSchema:
       default: null
       description: Whether the *ClioCreator* is allowed to log in
       title: Enabled
+      type: string
     etag:
       anyOf:
       - type: string
@@ -74,6 +57,7 @@ UnnamedSchema:
       default: null
       description: ETag for the *ClioCreator*
       title: Etag
+      type: string
     id:
       anyOf:
       - type: integer
@@ -81,6 +65,7 @@ UnnamedSchema:
       default: null
       description: Unique identifier for the *ClioCreator*
       title: Id
+      type: integer
     type:
       anyOf:
       - type: string
@@ -88,6 +73,7 @@ UnnamedSchema:
       default: null
       description: The type of the *ClioCreator*
       title: Type
+      type: string
     initials:
       anyOf:
       - type: string
@@ -95,6 +81,7 @@ UnnamedSchema:
       default: null
       description: The initials of the *ClioCreator*
       title: Initials
+      type: string
     first_name:
       anyOf:
       - type: string
@@ -102,6 +89,7 @@ UnnamedSchema:
       default: null
       description: The first name of the *ClioCreator*
       title: First Name
+      type: string
     last_name:
       anyOf:
       - type: string
@@ -109,6 +97,7 @@ UnnamedSchema:
       default: null
       description: The last name of the *ClioCreator*
       title: Last Name
+      type: string
     name:
       anyOf:
       - type: string
@@ -116,6 +105,7 @@ UnnamedSchema:
       default: null
       description: The full name of the *ClioCreator*
       title: Name
+      type: string
     phone_number:
       anyOf:
       - type: string
@@ -123,6 +113,7 @@ UnnamedSchema:
       default: null
       description: The primary phone number for the *ClioCreator*.
       title: Phone Number
+      type: string
     rate:
       anyOf:
       - type: number
@@ -131,6 +122,7 @@ UnnamedSchema:
       default: null
       description: Default user activity rate for *ClioCreator*.
       title: Rate
+      type: string
     subscription_type:
       anyOf:
       - type: string
@@ -138,6 +130,7 @@ UnnamedSchema:
       default: null
       description: The subscription type of the *ClioCreator*
       title: Subscription Type
+      type: string
     time_zone:
       anyOf:
       - type: string
@@ -145,6 +138,7 @@ UnnamedSchema:
       default: null
       description: The selected time zone of the *ClioCreator*
       title: Time Zone
+      type: string
     roles:
       anyOf:
       - items:
@@ -154,6 +148,7 @@ UnnamedSchema:
       default: null
       description: An array of roles assigned to this *ClioCreator*
       title: Roles
+      type: string
     created_at:
       anyOf:
       - format: date-time
@@ -162,6 +157,7 @@ UnnamedSchema:
       default: null
       description: The time the *ClioCreator* was created (as a ISO-8601 timestamp)
       title: Created At
+      type: string
     updated_at:
       anyOf:
       - format: date-time
@@ -170,5 +166,6 @@ UnnamedSchema:
       default: null
       description: The time the *ClioCreator* was last updated (as a ISO-8601 timestamp)
       title: Updated At
+      type: string
   title: ClioCreatorBase
   type: object

@@ -1,0 +1,22 @@
+/internal/notifications/event/metrics:
+  get:
+    tags:
+    - Event Metrics
+    summary: Unread in-app notification events
+    operationId: listEvent_metrics
+    description: Outlines the parameters, optional and required, used when requesting
+      Event Metrics
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'

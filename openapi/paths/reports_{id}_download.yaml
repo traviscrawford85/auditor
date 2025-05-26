@@ -1,0 +1,20 @@
+/reports/{id}/download:
+  get:
+    tags:
+    - Reports
+    summary: Download the completed Report
+    operationId: getDownload
+    description: Download the completed Report
+    parameters:
+    - $ref: '#/components/parameters/id'
+    responses:
+      '303':
+        $ref: '#/components/responses/303_See_Other'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'

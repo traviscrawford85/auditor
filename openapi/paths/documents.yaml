@@ -1,0 +1,66 @@
+/documents:
+  get:
+    tags:
+    - Documents
+    summary: Return the data for all Documents
+    operationId: listDocuments
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for all Documents
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/contact_id'
+    - $ref: '#/components/parameters/created_since'
+    - $ref: '#/components/parameters/document_category_id'
+    - $ref: '#/components/parameters/external_property_name'
+    - $ref: '#/components/parameters/external_property_value'
+    - $ref: '#/components/parameters/fields'
+    - $ref: ./components/parameters/ids[].yaml
+    - $ref: '#/components/parameters/include_deleted'
+    - $ref: '#/components/parameters/limit'
+    - $ref: '#/components/parameters/matter_id'
+    - $ref: '#/components/parameters/order'
+    - $ref: '#/components/parameters/page_token'
+    - $ref: '#/components/parameters/parent_id'
+    - $ref: '#/components/parameters/query'
+    - $ref: '#/components/parameters/scope'
+    - $ref: '#/components/parameters/show_uncompleted'
+    - $ref: '#/components/parameters/updated_since'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+  post:
+    tags:
+    - Documents
+    summary: Create a new Document
+    operationId: createDocument
+    description: 'Create a Document, or Create Document Version to an existing Document.
+
+      '
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    responses:
+      '201':
+        $ref: '#/components/responses/201_Created'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '422':
+        $ref: '#/components/responses/422_Unprocessable_Entity'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+    requestBody:
+      $ref: '#/components/requestBodies/ReqBody_6f913005'

@@ -1,0 +1,51 @@
+/medical/bills/{id}:
+  patch:
+    tags:
+    - Medical Bills
+    summary: Updating a Medical Bill
+    operationId: update
+    description: 'Outlines the parameters and data fields used when updating a single
+      Medical Bill
+
+      '
+    parameters:
+    - $ref: '#/components/parameters/IF-MATCH'
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/id'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '412':
+        $ref: '#/components/responses/412_Precondition_Failed'
+      '422':
+        $ref: '#/components/responses/422_Unprocessable_Entity'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+    requestBody:
+      $ref: '#/components/requestBodies/ReqBody_fc585a39'
+  delete:
+    tags:
+    - Medical Bills
+    summary: Destroying a Medical Bill
+    operationId: delete
+    description: 'Outlines the parameters, optional and required, used when deleting
+      the record for a single Medical Bill
+
+      '
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/id'
+    responses:
+      '204':
+        $ref: '#/components/responses/204_No_Content'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'

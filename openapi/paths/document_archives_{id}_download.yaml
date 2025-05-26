@@ -1,0 +1,14 @@
+/document/archives/{id}/download:
+  get:
+    tags:
+    - Document Archives
+    summary: Download the DocumentArchive
+    operationId: getDownload
+    description: Download the DocumentArchive
+    parameters:
+    - $ref: '#/components/parameters/id'
+    responses:
+      '303':
+        $ref: '#/components/responses/303_See_Other'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'

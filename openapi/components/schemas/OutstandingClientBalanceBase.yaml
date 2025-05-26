@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 UnnamedSchema:
   description: OutstandingClientBalanceBase
   properties:
@@ -33,6 +10,7 @@ UnnamedSchema:
       default: null
       description: An array of Matter IDs associated with bills in the unpaid state
       title: Associated Matter Ids
+      type: string
     etag:
       anyOf:
       - type: string
@@ -40,6 +18,7 @@ UnnamedSchema:
       default: null
       description: ETag for the *OutstandingClientBalance*
       title: Etag
+      type: string
     id:
       anyOf:
       - type: integer
@@ -47,6 +26,7 @@ UnnamedSchema:
       default: null
       description: Unique identifier for the *OutstandingClientBalance*
       title: Id
+      type: integer
     last_payment_date:
       anyOf:
       - format: date
@@ -55,6 +35,7 @@ UnnamedSchema:
       default: null
       description: The date the most recent payment from the contact was received
       title: Last Payment Date
+      type: string
     last_shared_date:
       anyOf:
       - format: date
@@ -64,6 +45,7 @@ UnnamedSchema:
       description: The date of the most recently shared bills through the outstanding
         balance table
       title: Last Shared Date
+      type: string
     newest_issued_bill_due_date:
       anyOf:
       - format: date
@@ -72,6 +54,7 @@ UnnamedSchema:
       default: null
       description: The due date of the contact's newest bill
       title: Newest Issued Bill Due Date
+      type: string
     pending_payments_total:
       anyOf:
       - type: number
@@ -81,6 +64,7 @@ UnnamedSchema:
       description: The sum of all online payments in a pending state on the outstanding
         bills
       title: Pending Payments Total
+      type: string
     reminders_enabled:
       anyOf:
       - type: boolean
@@ -88,6 +72,7 @@ UnnamedSchema:
       default: null
       description: The status of automated reminders for this client
       title: Reminders Enabled
+      type: string
     total_outstanding_balance:
       anyOf:
       - type: number
@@ -96,6 +81,7 @@ UnnamedSchema:
       default: null
       description: The sum of all bills in the unpaid state
       title: Total Outstanding Balance
+      type: string
     created_at:
       anyOf:
       - format: date-time
@@ -105,6 +91,7 @@ UnnamedSchema:
       description: The time the *OutstandingClientBalance* was created (as a ISO-8601
         timestamp)
       title: Created At
+      type: string
     updated_at:
       anyOf:
       - format: date-time
@@ -114,5 +101,6 @@ UnnamedSchema:
       description: The time the *OutstandingClientBalance* was last updated (as a
         ISO-8601 timestamp)
       title: Updated At
+      type: string
   title: OutstandingClientBalanceBase
   type: object

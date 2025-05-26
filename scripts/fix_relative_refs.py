@@ -7,23 +7,25 @@ TARGET_FOLDER = "components"
 def fix_refs_in_file(filepath):
     changed = False
 
-    def fix_ref_path(ref, current_file):
-        if isinstance(ref, str) and TARGET_FOLDER in ref and not ref.startswith("../"):
-            base_path = os.path.dirname(current_file)
-            while not os.path.isdir(os.path.join(base_path, TARGET_FOLDER)):
-                base_path = os.path.dirname(base_path)
-                if base_path == "/":
-                    break
-            rel_path = os.path.relpath(os.path.join(base_path, TARGET_FOLDER), os.path.dirname(current_file))
-            return ref.replace(f"{TARGET_FOLDER}/", f"{rel_path}/{TARGET_FOLDER}/")
+    def fix_ref_path(ref):
+        if isinstance(ref, str) and "#/components/" in ref:
+            parts = ref.split("#/")
+            path = parts[0].replace("..", "").replace("./", "").replace("//", "/").strip("/")
+            fragment = parts[1].split("/")
+            if len(fragment) >= 3:
+                component_type = fragment[1]
+                component_name = fragment[2]
+                new_ref = f"components/{component_type}.yaml#/components/{component_type}/{component_name}"
+                return new_ref
         return ref
+
 
     def recurse(obj, current_file):
         nonlocal changed
         if isinstance(obj, dict):
             for k, v in obj.items():
                 if k == "$ref":
-                    fixed = fix_ref_path(v, current_file)
+                    fixed = fix_ref_path(v)
                     if fixed != v:
                         obj[k] = fixed
                         changed = True

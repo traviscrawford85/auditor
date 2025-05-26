@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 UnnamedSchema:
   description: LaukCivilCertificatedRateBase
   properties:
@@ -31,6 +8,7 @@ UnnamedSchema:
       default: null
       description: Unique identifier for the *LaukCivilCertificatedRate*
       title: Id
+      type: integer
     activity:
       anyOf:
       - type: string
@@ -38,6 +16,7 @@ UnnamedSchema:
       default: null
       description: Activity of the *LaukCivilCertificatedRate*
       title: Activity
+      type: string
     activity_sub_category:
       anyOf:
       - type: string
@@ -45,6 +24,7 @@ UnnamedSchema:
       default: null
       description: Activity sub-category
       title: Activity Sub Category
+      type: string
     activity_type:
       anyOf:
       - type: string
@@ -52,6 +32,7 @@ UnnamedSchema:
       default: null
       description: Activity type
       title: Activity Type
+      type: string
     attended_several_hearings_for_multiple_clients:
       anyOf:
       - type: boolean
@@ -59,6 +40,7 @@ UnnamedSchema:
       default: null
       description: Multiple hearings for multiple clients indicator
       title: Attended Several Hearings For Multiple Clients
+      type: string
     category_of_law:
       anyOf:
       - type: string
@@ -66,6 +48,7 @@ UnnamedSchema:
       default: null
       description: Category of law
       title: Category Of Law
+      type: string
     created_at:
       anyOf:
       - format: date-time
@@ -75,6 +58,7 @@ UnnamedSchema:
       description: The time the *LaukCivilCertificatedRate* was created (as a ISO-8601
         timestamp)
       title: Created At
+      type: string
     change_of_solicitor:
       anyOf:
       - type: boolean
@@ -82,6 +66,7 @@ UnnamedSchema:
       default: null
       description: Change of solicitor indicator
       title: Change Of Solicitor
+      type: string
     court:
       anyOf:
       - type: string
@@ -89,6 +74,7 @@ UnnamedSchema:
       default: null
       description: Court associated
       title: Court
+      type: string
     eligible_for_sqm:
       anyOf:
       - type: boolean
@@ -96,6 +82,7 @@ UnnamedSchema:
       default: null
       description: SQM eligibility (Legal Aid England and Wales)
       title: Eligible For Sqm
+      type: string
     exceptional:
       anyOf:
       - type: number
@@ -104,6 +91,7 @@ UnnamedSchema:
       default: null
       description: Fee applied for high activity count
       title: Exceptional
+      type: string
     exceptional_warning:
       anyOf:
       - type: string
@@ -111,6 +99,7 @@ UnnamedSchema:
       default: null
       description: Warning for exceptional status
       title: Exceptional Warning
+      type: string
     etag:
       anyOf:
       - type: string
@@ -118,6 +107,7 @@ UnnamedSchema:
       default: null
       description: ETag for the *LaukCivilCertificatedRate*
       title: Etag
+      type: string
     fee:
       anyOf:
       - type: number
@@ -126,6 +116,7 @@ UnnamedSchema:
       default: null
       description: Fee amount
       title: Fee
+      type: string
     fee_scheme:
       anyOf:
       - type: string
@@ -133,6 +124,7 @@ UnnamedSchema:
       default: null
       description: Fee scheme
       title: Fee Scheme
+      type: string
     first_conducting_solicitor:
       anyOf:
       - type: boolean
@@ -140,6 +132,7 @@ UnnamedSchema:
       default: null
       description: First conducting solicitor indicator
       title: First Conducting Solicitor
+      type: string
     key:
       anyOf:
       - type: string
@@ -147,6 +140,7 @@ UnnamedSchema:
       default: null
       description: Unique key
       title: Key
+      type: string
     number_of_clients:
       anyOf:
       - type: string
@@ -154,6 +148,7 @@ UnnamedSchema:
       default: null
       description: Number of clients
       title: Number Of Clients
+      type: string
     party:
       anyOf:
       - type: string
@@ -161,6 +156,7 @@ UnnamedSchema:
       default: null
       description: Associated party
       title: Party
+      type: string
     post_transfer_clients_represented:
       anyOf:
       - type: string
@@ -168,6 +164,7 @@ UnnamedSchema:
       default: null
       description: Post-transfer clients represented
       title: Post Transfer Clients Represented
+      type: string
     rate_type:
       anyOf:
       - type: string
@@ -175,6 +172,7 @@ UnnamedSchema:
       default: null
       description: Rate type
       title: Rate Type
+      type: string
     region:
       anyOf:
       - type: string
@@ -182,6 +180,7 @@ UnnamedSchema:
       default: null
       description: Region
       title: Region
+      type: string
     session_type:
       anyOf:
       - type: string
@@ -189,6 +188,7 @@ UnnamedSchema:
       default: null
       description: Session type
       title: Session Type
+      type: string
     user_type:
       anyOf:
       - type: string
@@ -196,6 +196,7 @@ UnnamedSchema:
       default: null
       description: User type
       title: User Type
+      type: string
     updated_at:
       anyOf:
       - format: date-time
@@ -205,5 +206,6 @@ UnnamedSchema:
       description: The time the *LaukCivilCertificatedRate* was last updated (as a
         ISO-8601 timestamp)
       title: Updated At
+      type: string
   title: LaukCivilCertificatedRateBase
   type: object

@@ -1,0 +1,24 @@
+/internal/notifications/my/events:
+  get:
+    tags:
+    - My Events
+    summary: Return the data for all of my in-app notification events
+    operationId: listMy_events
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for all MyEvents
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/limit'
+    - $ref: '#/components/parameters/page_token'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'

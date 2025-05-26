@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 $defs:
   ReportCreateRequestData:
     description: ReportCreateRequestData
@@ -28,16 +5,18 @@ $defs:
       client:
         anyOf:
         - $ref: '#/$defs/ReportCreateRequestDataClient'
-        - type: 'null'
+        
         default: null
+        type: string
       end_date:
         anyOf:
         - format: date
           type: string
-        - type: 'null'
+        
         default: null
         description: Filters Report data by date. (Expects an ISO-8601 date).
         title: End Date
+        type: string
       format:
         description: What format the Report will be generated in.
         title: Format
@@ -49,44 +28,51 @@ $defs:
       matter:
         anyOf:
         - $ref: '#/$defs/ReportCreateRequestDataMatter'
-        - type: 'null'
+        
         default: null
+        type: string
       originating_attorney:
         anyOf:
         - $ref: '#/$defs/ReportCreateRequestDataOriginatingAttorney'
-        - type: 'null'
+        
         default: null
+        type: string
       practice_area:
         anyOf:
         - $ref: '#/$defs/ReportCreateRequestDataPracticeArea'
-        - type: 'null'
+        
         default: null
+        type: string
       responsible_attorney:
         anyOf:
         - $ref: '#/$defs/ReportCreateRequestDataOriginatingAttorney'
-        - type: 'null'
+        
         default: null
+        type: string
       start_date:
         anyOf:
         - format: date
           type: string
-        - type: 'null'
+        
         default: null
         description: Filters Report data by date. (Expects an ISO-8601 date).
         title: Start Date
+        type: string
       user:
         anyOf:
         - $ref: '#/$defs/ReportCreateRequestDataOriginatingAttorney'
-        - type: 'null'
+        
         default: null
+        type: string
       year:
         anyOf:
         - type: string
-        - type: 'null'
+        
         default: null
         description: Filters Report data by year. Sets start_date and end_date. (Expects
           a year).
         title: Year
+        type: string
     required:
     - format
     - kind
@@ -98,11 +84,12 @@ $defs:
       id:
         anyOf:
         - type: integer
-        - type: 'null'
+        
         default: null
         description: The unique identifier for a single Contact associated with the
           Report. The keyword `null` is not valid for this field.
         title: Id
+        type: string
     title: ReportCreateRequestDataClient
     type: object
   ReportCreateRequestDataMatter:
@@ -111,11 +98,12 @@ $defs:
       id:
         anyOf:
         - type: integer
-        - type: 'null'
+        
         default: null
         description: The unique identifier for a single Matter associated with the
           Report. The keyword `null` is not valid for this field.
         title: Id
+        type: string
     title: ReportCreateRequestDataMatter
     type: object
   ReportCreateRequestDataOriginatingAttorney:
@@ -124,11 +112,12 @@ $defs:
       id:
         anyOf:
         - type: integer
-        - type: 'null'
+        
         default: null
         description: The unique identifier for a single User associated with the Report.
           The keyword `null` is not valid for this field.
         title: Id
+        type: string
     title: ReportCreateRequestDataOriginatingAttorney
     type: object
   ReportCreateRequestDataPracticeArea:
@@ -137,11 +126,12 @@ $defs:
       id:
         anyOf:
         - type: integer
-        - type: 'null'
+        
         default: null
         description: The unique identifier for a single PracticeArea associated with
           the Report. The keyword `null` is not valid for this field.
         title: Id
+        type: string
     title: ReportCreateRequestDataPracticeArea
     type: object
 description: ReportCreateRequest

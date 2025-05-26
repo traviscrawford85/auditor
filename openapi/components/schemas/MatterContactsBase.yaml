@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 UnnamedSchema:
   description: MatterContactsBase
   properties:
@@ -32,6 +9,7 @@ UnnamedSchema:
       default: null
       description: Timestamp of the time the contact was created
       title: Contact Created At
+      type: string
     contact_updated_at:
       anyOf:
       - format: date-time
@@ -40,6 +18,7 @@ UnnamedSchema:
       default: null
       description: Timestamp of the time the contact was created
       title: Contact Updated At
+      type: string
     created_at:
       anyOf:
       - format: date-time
@@ -48,6 +27,7 @@ UnnamedSchema:
       default: null
       description: The time the *MatterContacts* was created (as a ISO-8601 timestamp)
       title: Created At
+      type: string
     description:
       anyOf:
       - type: string
@@ -55,6 +35,7 @@ UnnamedSchema:
       default: null
       description: Description of the matter
       title: Description
+      type: string
     etag:
       anyOf:
       - type: string
@@ -62,6 +43,7 @@ UnnamedSchema:
       default: null
       description: ETag for the *MatterContacts*
       title: Etag
+      type: string
     first_name:
       anyOf:
       - type: string
@@ -69,6 +51,7 @@ UnnamedSchema:
       default: null
       description: First name of the Person
       title: First Name
+      type: string
     id:
       anyOf:
       - type: integer
@@ -76,6 +59,7 @@ UnnamedSchema:
       default: null
       description: Unique identifier for the *MatterContacts*
       title: Id
+      type: integer
     initials:
       anyOf:
       - type: string
@@ -83,6 +67,7 @@ UnnamedSchema:
       default: null
       description: The initials of the *MatterContacts*
       title: Initials
+      type: string
     is_client:
       anyOf:
       - type: boolean
@@ -90,6 +75,7 @@ UnnamedSchema:
       default: null
       description: Whether or not the MatterContacts is a client
       title: Is Client
+      type: string
     last_name:
       anyOf:
       - type: string
@@ -97,6 +83,7 @@ UnnamedSchema:
       default: null
       description: Last name of the Person
       title: Last Name
+      type: string
     matter_id:
       anyOf:
       - type: integer
@@ -104,6 +91,7 @@ UnnamedSchema:
       default: null
       description: ID of the matter
       title: Matter Id
+      type: string
     matter_number:
       anyOf:
       - type: string
@@ -111,6 +99,7 @@ UnnamedSchema:
       default: null
       description: Number of the matter
       title: Matter Number
+      type: string
     middle_name:
       anyOf:
       - type: string
@@ -118,6 +107,7 @@ UnnamedSchema:
       default: null
       description: Middle name of the Person
       title: Middle Name
+      type: string
     name:
       anyOf:
       - type: string
@@ -125,6 +115,7 @@ UnnamedSchema:
       default: null
       description: The full name of the *MatterContacts*
       title: Name
+      type: string
     prefix:
       anyOf:
       - type: string
@@ -132,6 +123,7 @@ UnnamedSchema:
       default: null
       description: The prefix of the *MatterContacts* (Mr, Mrs, etc)
       title: Prefix
+      type: string
     primary_email_address:
       anyOf:
       - type: string
@@ -139,6 +131,7 @@ UnnamedSchema:
       default: null
       description: The primary email address associated with this *MatterContacts*.
       title: Primary Email Address
+      type: string
     primary_phone_number:
       anyOf:
       - type: string
@@ -146,6 +139,7 @@ UnnamedSchema:
       default: null
       description: The primary phone number associated with this *MatterContacts*.
       title: Primary Phone Number
+      type: string
     relationship_name:
       anyOf:
       - type: string
@@ -154,6 +148,7 @@ UnnamedSchema:
       description: The description of the relation between the contact and the matter,
         or "Client" if the user is the client.
       title: Relationship Name
+      type: string
     secondary_email_address:
       anyOf:
       - type: string
@@ -161,6 +156,7 @@ UnnamedSchema:
       default: null
       description: The secondary email address of the contact
       title: Secondary Email Address
+      type: string
     secondary_phone_number:
       anyOf:
       - type: string
@@ -168,6 +164,7 @@ UnnamedSchema:
       default: null
       description: The secondary phone number of the contact
       title: Secondary Phone Number
+      type: string
     title:
       anyOf:
       - type: string
@@ -175,6 +172,7 @@ UnnamedSchema:
       default: null
       description: The designated title of the *MatterContacts*
       title: Title
+      type: string
     type:
       anyOf:
       - type: string
@@ -182,6 +180,7 @@ UnnamedSchema:
       default: null
       description: The type of the *MatterContacts*
       title: Type
+      type: string
     updated_at:
       anyOf:
       - format: date-time
@@ -190,6 +189,7 @@ UnnamedSchema:
       default: null
       description: The time the *MatterContacts* was last updated (as a ISO-8601 timestamp)
       title: Updated At
+      type: string
     client_connect_user_id:
       anyOf:
       - type: integer
@@ -197,5 +197,6 @@ UnnamedSchema:
       default: null
       description: The client connect ID of the contacts associated user
       title: Client Connect User Id
+      type: string
   title: MatterContactsBase
   type: object

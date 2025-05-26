@@ -1,0 +1,81 @@
+/timer:
+  get:
+    tags:
+    - Timers
+    summary: Return the data for a single Timer
+    operationId: listTimers
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for a single Timer
+    parameters:
+    - $ref: '#/components/parameters/IF-MODIFIED-SINCE'
+    - $ref: '#/components/parameters/IF-NONE-MATCH'
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+        content:
+          application/json:
+            schema:
+              $ref: ../components/schemas/Timer.yaml
+      '304':
+        $ref: '#/components/responses/304_Not_Modified'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+  delete:
+    tags:
+    - Timers
+    summary: Delete a single Timer
+    operationId: deleteTimer
+    description: Outlines the parameters, optional and required, used when deleting
+      the record for a single Timer
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    responses:
+      '204':
+        $ref: '#/components/responses/204_No_Content'
+        content:
+          application/json:
+            schema:
+              $ref: ../components/schemas/Timer.yaml
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+  post:
+    tags:
+    - Timers
+    summary: Create a new Timer
+    operationId: createTimer
+    description: Outlines the parameters and data fields used when creating a new
+      Timer
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    responses:
+      '201':
+        $ref: '#/components/responses/201_Created'
+        content:
+          application/json:
+            schema:
+              $ref: ../components/schemas/Timer.yaml
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '422':
+        $ref: '#/components/responses/422_Unprocessable_Entity'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+    requestBody:
+      $ref: '#/components/requestBodies/ReqBody_0b9caf19'

@@ -1,0 +1,14 @@
+/document/templates/{id}/download:
+  get:
+    tags:
+    - Document Templates
+    summary: Get the contents of the DocumentTemplate
+    operationId: getDownload
+    description: Get the contents of the DocumentTemplate
+    parameters:
+    - $ref: '#/components/parameters/id'
+    responses:
+      '303':
+        $ref: '#/components/responses/303_See_Other'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'

@@ -1,0 +1,72 @@
+/activities:
+  get:
+    tags:
+    - Activities
+    summary: Return the data for all Activities
+    operationId: listActivities
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for all Activities
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/activity_description_id'
+    - $ref: '#/components/parameters/calendar_entry_id'
+    - $ref: '#/components/parameters/communication_id'
+    - $ref: '#/components/parameters/contact_note_id'
+    - $ref: '#/components/parameters/created_since'
+    - $ref: '#/components/parameters/end_date'
+    - $ref: '#/components/parameters/expense_category_id'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/flat_rate'
+    - $ref: '#/components/parameters/grant_id'
+    - $ref: ./components/parameters/ids[].yaml
+    - $ref: '#/components/parameters/limit'
+    - $ref: '#/components/parameters/matter_id'
+    - $ref: '#/components/parameters/matter_note_id'
+    - $ref: '#/components/parameters/only_unaccounted_for'
+    - $ref: '#/components/parameters/order'
+    - $ref: '#/components/parameters/page_token'
+    - $ref: '#/components/parameters/query'
+    - $ref: '#/components/parameters/start_date'
+    - $ref: '#/components/parameters/status'
+    - $ref: '#/components/parameters/task_id'
+    - $ref: '#/components/parameters/type'
+    - $ref: '#/components/parameters/updated_since'
+    - $ref: '#/components/parameters/user_id'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+  post:
+    tags:
+    - Activities
+    summary: Create a new Activity
+    operationId: createActivitie
+    description: Outlines the parameters and data fields used when creating a new
+      Activity
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    responses:
+      '201':
+        $ref: '#/components/responses/201_Created'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '422':
+        $ref: '#/components/responses/422_Unprocessable_Entity'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+    requestBody:
+      $ref: '#/components/requestBodies/ReqBody_15264083'

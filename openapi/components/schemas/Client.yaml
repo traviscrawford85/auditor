@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 $defs:
   AddressBase:
     description: AddressBase
@@ -32,6 +9,7 @@ $defs:
         default: null
         description: Unique identifier for the *Address*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -39,6 +17,7 @@ $defs:
         default: null
         description: ETag for the *Address*
         title: Etag
+        type: string
       street:
         anyOf:
         - type: string
@@ -46,6 +25,7 @@ $defs:
         default: null
         description: Street of the *Address*
         title: Street
+        type: string
       city:
         anyOf:
         - type: string
@@ -53,6 +33,7 @@ $defs:
         default: null
         description: City of the *Address*
         title: City
+        type: string
       province:
         anyOf:
         - type: string
@@ -60,6 +41,7 @@ $defs:
         default: null
         description: Province or state of the *Address*
         title: Province
+        type: string
       postal_code:
         anyOf:
         - type: string
@@ -67,6 +49,7 @@ $defs:
         default: null
         description: Postal code of the *Address*
         title: Postal Code
+        type: string
       country:
         anyOf:
         - type: string
@@ -74,6 +57,7 @@ $defs:
         default: null
         description: Country of the *Address*
         title: Country
+        type: string
       name:
         anyOf:
         - type: string
@@ -81,6 +65,7 @@ $defs:
         default: null
         description: The name of the *Address*
         title: Name
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -89,6 +74,7 @@ $defs:
         default: null
         description: The time the *Address* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -97,6 +83,7 @@ $defs:
         default: null
         description: The time the *Address* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
       primary:
         anyOf:
         - type: boolean
@@ -104,6 +91,7 @@ $defs:
         default: null
         description: Whether it is the default for this contact
         title: Primary
+        type: string
     title: AddressBase
     type: object
   AvatarBase:
@@ -116,6 +104,7 @@ $defs:
         default: null
         description: Unique identifier for the *Avatar*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -123,6 +112,7 @@ $defs:
         default: null
         description: ETag for the *Avatar*
         title: Etag
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -131,6 +121,7 @@ $defs:
         default: null
         description: The time the *Avatar* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -139,6 +130,7 @@ $defs:
         default: null
         description: The time the *Avatar* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
       url:
         anyOf:
         - type: string
@@ -146,6 +138,7 @@ $defs:
         default: null
         description: The URL for the *Avatar*
         title: Url
+        type: string
       _destroy:
         anyOf:
         - type: boolean
@@ -153,6 +146,7 @@ $defs:
         default: null
         description: Whether to destroy the *Avatar*
         title: Destroy
+        type: string
     title: AvatarBase
     type: object
   ContactBase:
@@ -165,6 +159,7 @@ $defs:
         default: null
         description: Unique identifier for the *Contact*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -172,6 +167,7 @@ $defs:
         default: null
         description: ETag for the *Contact*
         title: Etag
+        type: string
       name:
         anyOf:
         - type: string
@@ -179,6 +175,7 @@ $defs:
         default: null
         description: The full name of the *Contact*
         title: Name
+        type: string
       first_name:
         anyOf:
         - type: string
@@ -186,6 +183,7 @@ $defs:
         default: null
         description: First name of the Person
         title: First Name
+        type: string
       middle_name:
         anyOf:
         - type: string
@@ -193,6 +191,7 @@ $defs:
         default: null
         description: Middle name of the Person
         title: Middle Name
+        type: string
       last_name:
         anyOf:
         - type: string
@@ -200,6 +199,7 @@ $defs:
         default: null
         description: Last name of the Person
         title: Last Name
+        type: string
       date_of_birth:
         anyOf:
         - format: date
@@ -208,6 +208,7 @@ $defs:
         default: null
         description: Date of birth
         title: Date Of Birth
+        type: string
       type:
         anyOf:
         - type: string
@@ -215,6 +216,7 @@ $defs:
         default: null
         description: The type of the *Contact*
         title: Type
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -223,6 +225,7 @@ $defs:
         default: null
         description: The time the *Contact* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -231,6 +234,7 @@ $defs:
         default: null
         description: The time the *Contact* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
       prefix:
         anyOf:
         - type: string
@@ -238,6 +242,7 @@ $defs:
         default: null
         description: The prefix of the *Contact* (Mr, Mrs, etc)
         title: Prefix
+        type: string
       title:
         anyOf:
         - type: string
@@ -245,6 +250,7 @@ $defs:
         default: null
         description: The designated title of the *Contact*
         title: Title
+        type: string
       initials:
         anyOf:
         - type: string
@@ -252,6 +258,7 @@ $defs:
         default: null
         description: The initials of the *Contact*
         title: Initials
+        type: string
       clio_connect_email:
         anyOf:
         - type: string
@@ -259,6 +266,7 @@ $defs:
         default: null
         description: Clio Connect email if the *Contact* is a ClioConnect User
         title: Clio Connect Email
+        type: string
       locked_clio_connect_email:
         anyOf:
         - type: boolean
@@ -267,6 +275,7 @@ $defs:
         description: A boolean indicating if the ability to modify this *Contacts
           Clio connect email is locked.
         title: Locked Clio Connect Email
+        type: string
       client_connect_user_id:
         anyOf:
         - type: integer
@@ -274,6 +283,7 @@ $defs:
         default: null
         description: The ID for the Clio Connect user associated with this *Contact*
         title: Client Connect User Id
+        type: string
       primary_email_address:
         anyOf:
         - type: string
@@ -281,6 +291,7 @@ $defs:
         default: null
         description: The primary email address associated with this *Contact*.
         title: Primary Email Address
+        type: string
       secondary_email_address:
         anyOf:
         - type: string
@@ -288,6 +299,7 @@ $defs:
         default: null
         description: The secondary email address associated with this *Contact*.
         title: Secondary Email Address
+        type: string
       primary_phone_number:
         anyOf:
         - type: string
@@ -295,6 +307,7 @@ $defs:
         default: null
         description: The primary phone number associated with this *Contact*.
         title: Primary Phone Number
+        type: string
       secondary_phone_number:
         anyOf:
         - type: string
@@ -302,6 +315,7 @@ $defs:
         default: null
         description: The secondary phone number of the *Contact*.
         title: Secondary Phone Number
+        type: string
       ledes_client_id:
         anyOf:
         - type: string
@@ -309,6 +323,7 @@ $defs:
         default: null
         description: LEDES client id of the Contact
         title: Ledes Client Id
+        type: string
       has_clio_for_clients_permission:
         anyOf:
         - type: boolean
@@ -317,6 +332,7 @@ $defs:
         description: True if at least one resource has been shared with the contact
           using Clio for Clients.
         title: Has Clio For Clients Permission
+        type: string
       is_client:
         anyOf:
         - type: boolean
@@ -324,6 +340,7 @@ $defs:
         default: null
         description: Whether or not the Contact is a client
         title: Is Client
+        type: string
       is_clio_for_client_user:
         anyOf:
         - type: boolean
@@ -332,6 +349,7 @@ $defs:
         description: Whether or not this contact has client_login and client_user
           (can be created due to addition to client portal or client_share_permissions)
         title: Is Clio For Client User
+        type: string
       is_co_counsel:
         anyOf:
         - type: boolean
@@ -339,6 +357,7 @@ $defs:
         default: null
         description: Whether or not the Contact has matters shared as co-counsel
         title: Is Co Counsel
+        type: string
       is_bill_recipient:
         anyOf:
         - type: boolean
@@ -346,6 +365,7 @@ $defs:
         default: null
         description: Whether the Contact is a bill recipient on at least one matter.
         title: Is Bill Recipient
+        type: string
       sales_tax_number:
         anyOf:
         - type: string
@@ -353,6 +373,7 @@ $defs:
         default: null
         description: The sales tax number of the *Contact*
         title: Sales Tax Number
+        type: string
       currency:
         anyOf:
         - additionalProperties: true
@@ -361,6 +382,7 @@ $defs:
         default: null
         description: Currency of the *Contact*
         title: Currency
+        type: string
     title: ContactBase
     type: object
   EmailAddressBase:
@@ -373,6 +395,7 @@ $defs:
         default: null
         description: Unique identifier for the *EmailAddress*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -380,6 +403,7 @@ $defs:
         default: null
         description: ETag for the *EmailAddress*
         title: Etag
+        type: string
       address:
         anyOf:
         - type: string
@@ -387,6 +411,7 @@ $defs:
         default: null
         description: The address of the *EmailAddress*
         title: Address
+        type: string
       name:
         anyOf:
         - type: string
@@ -396,6 +421,7 @@ $defs:
           `Home`, `Work`, and `Other`, as these are the only selectable options within
           Clio Manage, but other values may be returned for this field.
         title: Name
+        type: string
       primary:
         anyOf:
         - type: boolean
@@ -403,6 +429,7 @@ $defs:
         default: null
         description: Whether it is the default for this contact
         title: Primary
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -411,6 +438,7 @@ $defs:
         default: null
         description: The time the *EmailAddress* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -419,6 +447,7 @@ $defs:
         default: null
         description: The time the *EmailAddress* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
     title: EmailAddressBase
     type: object
   PhoneNumberBase:
@@ -431,6 +460,7 @@ $defs:
         default: null
         description: Unique identifier for the *PhoneNumber*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -438,6 +468,7 @@ $defs:
         default: null
         description: ETag for the *PhoneNumber*
         title: Etag
+        type: string
       number:
         anyOf:
         - type: string
@@ -445,6 +476,7 @@ $defs:
         default: null
         description: Contact's Phone Number
         title: Number
+        type: string
       name:
         anyOf:
         - type: string
@@ -452,6 +484,7 @@ $defs:
         default: null
         description: The type of *PhoneNumber* it is
         title: Name
+        type: string
       primary:
         anyOf:
         - type: boolean
@@ -459,6 +492,7 @@ $defs:
         default: null
         description: Whether it is default for this contact
         title: Primary
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -467,6 +501,7 @@ $defs:
         default: null
         description: The time the *PhoneNumber* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -475,6 +510,7 @@ $defs:
         default: null
         description: The time the *PhoneNumber* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
     title: PhoneNumberBase
     type: object
   WebSiteBase:
@@ -487,6 +523,7 @@ $defs:
         default: null
         description: Unique identifier for the *WebSite*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -494,6 +531,7 @@ $defs:
         default: null
         description: ETag for the *WebSite*
         title: Etag
+        type: string
       address:
         anyOf:
         - type: string
@@ -501,6 +539,7 @@ $defs:
         default: null
         description: The address of the *WebSite*
         title: Address
+        type: string
       name:
         anyOf:
         - type: string
@@ -508,6 +547,7 @@ $defs:
         default: null
         description: The type of *WebSite* it is
         title: Name
+        type: string
       default_web_site:
         anyOf:
         - type: boolean
@@ -515,6 +555,7 @@ $defs:
         default: null
         description: Whether it is the default for this contact
         title: Default Web Site
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -523,6 +564,7 @@ $defs:
         default: null
         description: The time the *WebSite* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -531,6 +573,7 @@ $defs:
         default: null
         description: The time the *WebSite* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
     title: WebSiteBase
     type: object
 description: Client
@@ -542,6 +585,7 @@ properties:
     default: null
     description: Unique identifier for the *Client*
     title: Id
+    type: string
   name:
     anyOf:
     - type: string
@@ -549,6 +593,7 @@ properties:
     default: null
     description: The full name of the *Client*
     title: Name
+    type: string
   first_name:
     anyOf:
     - type: string
@@ -556,6 +601,7 @@ properties:
     default: null
     description: First name of the Person
     title: First Name
+    type: string
   middle_name:
     anyOf:
     - type: string
@@ -563,6 +609,7 @@ properties:
     default: null
     description: Middle name of the Person
     title: Middle Name
+    type: string
   last_name:
     anyOf:
     - type: string
@@ -570,6 +617,7 @@ properties:
     default: null
     description: Last name of the Person
     title: Last Name
+    type: string
   type:
     anyOf:
     - type: string
@@ -577,6 +625,7 @@ properties:
     default: null
     description: The type of the *Client*
     title: Type
+    type: string
   created_at:
     anyOf:
     - format: date-time
@@ -585,6 +634,7 @@ properties:
     default: null
     description: The time the *Client* was created (as a ISO-8601 timestamp)
     title: Created At
+    type: string
   updated_at:
     anyOf:
     - format: date-time
@@ -593,6 +643,7 @@ properties:
     default: null
     description: The time the *Client* was last updated (as a ISO-8601 timestamp)
     title: Updated At
+    type: string
   prefix:
     anyOf:
     - type: string
@@ -600,6 +651,7 @@ properties:
     default: null
     description: The prefix of the *Client* (Mr, Mrs, etc)
     title: Prefix
+    type: string
   title:
     anyOf:
     - type: string
@@ -607,6 +659,7 @@ properties:
     default: null
     description: The designated title of the *Client*
     title: Title
+    type: string
   initials:
     anyOf:
     - type: string
@@ -614,6 +667,7 @@ properties:
     default: null
     description: The initials of the *Client*
     title: Initials
+    type: string
   is_matter_client:
     anyOf:
     - type: boolean
@@ -621,6 +675,7 @@ properties:
     default: null
     description: Whether or not the Client is also the client of the matter
     title: Is Matter Client
+    type: string
   primary_email_address:
     anyOf:
     - type: string
@@ -628,6 +683,7 @@ properties:
     default: null
     description: The primary email address of client
     title: Primary Email Address
+    type: string
   primary_phone_number:
     anyOf:
     - type: string
@@ -635,6 +691,7 @@ properties:
     default: null
     description: The primary phone number of client
     title: Primary Phone Number
+    type: string
   client_connect_user_id:
     anyOf:
     - type: integer
@@ -642,6 +699,7 @@ properties:
     default: null
     description: The client connect ID of the contacts associated user
     title: Client Connect User Id
+    type: string
   date_of_birth:
     anyOf:
     - format: date
@@ -650,16 +708,19 @@ properties:
     default: null
     description: Date of Birth
     title: Date Of Birth
+    type: string
   avatar:
     anyOf:
     - $ref: '#/$defs/AvatarBase'
     - type: 'null'
     default: null
+    type: string
   company:
     anyOf:
     - $ref: '#/$defs/ContactBase'
     - type: 'null'
     default: null
+    type: string
   addresses:
     anyOf:
     - items:
@@ -669,6 +730,7 @@ properties:
     default: null
     description: Address
     title: Addresses
+    type: string
   email_addresses:
     anyOf:
     - items:
@@ -678,6 +740,7 @@ properties:
     default: null
     description: EmailAddress
     title: Email Addresses
+    type: string
   phone_numbers:
     anyOf:
     - items:
@@ -687,6 +750,7 @@ properties:
     default: null
     description: PhoneNumber
     title: Phone Numbers
+    type: string
   web_sites:
     anyOf:
     - items:
@@ -696,5 +760,6 @@ properties:
     default: null
     description: WebSite
     title: Web Sites
+    type: string
 title: Client
 type: object

@@ -1,0 +1,11 @@
+components:
+  schemas:
+    StatuteOfLimitationsComputeRequest:
+      type: object
+      required:
+        - date_of_incident
+      properties:
+        date_of_incident:
+          type: string
+          format: date
+          description: The date when the incident occurred.

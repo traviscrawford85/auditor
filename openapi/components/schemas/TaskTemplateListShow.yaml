@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 $defs:
   CascadingTaskTemplateBase:
     description: CascadingTaskTemplateBase
@@ -32,6 +9,7 @@ $defs:
         default: null
         description: Unique identifier for the *TaskTemplate*
         title: Id
+        type: string
       name:
         anyOf:
         - type: string
@@ -39,6 +17,7 @@ $defs:
         default: null
         description: The name of the *TaskTemplate*
         title: Name
+        type: string
     title: CascadingTaskTemplateBase
     type: object
   ReminderTemplateBase:
@@ -51,6 +30,7 @@ $defs:
         default: null
         description: Unique identifier for the *ReminderTemplate*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -58,6 +38,7 @@ $defs:
         default: null
         description: ETag for the *ReminderTemplate*
         title: Etag
+        type: string
       duration:
         anyOf:
         - type: integer
@@ -65,6 +46,7 @@ $defs:
         default: null
         description: The time in minutes to remind user before the subject.
         title: Duration
+        type: string
       notification_type:
         anyOf:
         - type: string
@@ -72,6 +54,7 @@ $defs:
         default: null
         description: The type of method to be notified by
         title: Notification Type
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -80,6 +63,7 @@ $defs:
         default: null
         description: The time the *ReminderTemplate* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -89,6 +73,7 @@ $defs:
         description: The time the *ReminderTemplate* was last updated (as a ISO-8601
           timestamp)
         title: Updated At
+        type: string
     title: ReminderTemplateBase
     type: object
   TaskTemplate:
@@ -101,6 +86,7 @@ $defs:
         default: null
         description: Unique identifier for the *TaskTemplate*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -108,6 +94,7 @@ $defs:
         default: null
         description: ETag for the *TaskTemplate*
         title: Etag
+        type: string
       name:
         anyOf:
         - type: string
@@ -115,6 +102,7 @@ $defs:
         default: null
         description: The name of the *TaskTemplate*
         title: Name
+        type: string
       description:
         anyOf:
         - type: string
@@ -122,6 +110,7 @@ $defs:
         default: null
         description: A detailed description of the *TaskTemplate*
         title: Description
+        type: string
       priority:
         anyOf:
         - type: string
@@ -129,6 +118,7 @@ $defs:
         default: null
         description: '*TaskTemplate* priority'
         title: Priority
+        type: string
       private:
         anyOf:
         - type: boolean
@@ -136,6 +126,7 @@ $defs:
         default: null
         description: Whether the *TaskTemplate* is private.
         title: Private
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -144,6 +135,7 @@ $defs:
         default: null
         description: The time the *TaskTemplate* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -152,31 +144,37 @@ $defs:
         default: null
         description: The time the *TaskTemplate* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
       cascading_source:
         anyOf:
         - $ref: '#/$defs/CascadingTaskTemplateBase'
         - type: 'null'
         default: null
+        type: string
       assignee:
         anyOf:
         - $ref: '#/$defs/UserBase'
         - type: 'null'
         default: null
+        type: string
       task_template_list:
         anyOf:
         - $ref: '#/$defs/TaskTemplateListBase'
         - type: 'null'
         default: null
+        type: string
       task_type:
         anyOf:
         - $ref: '#/$defs/TaskTypeBase'
         - type: 'null'
         default: null
+        type: string
       template_creator:
         anyOf:
         - $ref: '#/$defs/UserBase'
         - type: 'null'
         default: null
+        type: string
       reminder_templates:
         anyOf:
         - items:
@@ -186,6 +184,7 @@ $defs:
         default: null
         description: ReminderTemplate
         title: Reminder Templates
+        type: string
     title: TaskTemplate
     type: object
   TaskTemplateList:
@@ -212,6 +211,7 @@ $defs:
         default: null
         description: The time the *TaskTemplateList* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       description:
         anyOf:
         - type: string
@@ -219,6 +219,7 @@ $defs:
         default: null
         description: A detailed description of the *TaskTemplateList*
         title: Description
+        type: string
       id:
         anyOf:
         - type: integer
@@ -226,6 +227,7 @@ $defs:
         default: null
         description: Unique identifier for the *TaskTemplateList*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -233,6 +235,7 @@ $defs:
         default: null
         description: ETag for the *TaskTemplateList*
         title: Etag
+        type: string
       name:
         anyOf:
         - type: string
@@ -240,6 +243,7 @@ $defs:
         default: null
         description: The name of the *TaskTemplateList*
         title: Name
+        type: string
       templates_count:
         anyOf:
         - type: integer
@@ -247,6 +251,7 @@ $defs:
         default: null
         description: How many task templates exist as an association to the *TaskTemplateList*
         title: Templates Count
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -256,6 +261,7 @@ $defs:
         description: The time the *TaskTemplateList* was last updated (as a ISO-8601
           timestamp)
         title: Updated At
+        type: string
     title: TaskTemplateListBase
     type: object
   TaskTypeBase:
@@ -268,6 +274,7 @@ $defs:
         default: null
         description: Unique identifier for the *TaskType*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -275,6 +282,7 @@ $defs:
         default: null
         description: ETag for the *TaskType*
         title: Etag
+        type: string
       name:
         anyOf:
         - type: string
@@ -282,6 +290,7 @@ $defs:
         default: null
         description: The name of the *TaskType*
         title: Name
+        type: string
       deleted_at:
         anyOf:
         - format: date-time
@@ -290,6 +299,7 @@ $defs:
         default: null
         description: The time the *TaskType* was deleted (as a ISO-8601 timestamp)
         title: Deleted At
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -298,6 +308,7 @@ $defs:
         default: null
         description: The time the *TaskType* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -306,6 +317,7 @@ $defs:
         default: null
         description: The time the *TaskType* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
     title: TaskTypeBase
     type: object
   UserBase:
@@ -318,6 +330,7 @@ $defs:
         default: null
         description: Whether the *User* is the owner of the account
         title: Account Owner
+        type: string
       clio_connect:
         anyOf:
         - type: boolean
@@ -325,6 +338,7 @@ $defs:
         default: null
         description: Whether the *User* is a Clio Connect user
         title: Clio Connect
+        type: string
       court_rules_default_attendee:
         anyOf:
         - type: boolean
@@ -332,6 +346,7 @@ $defs:
         default: null
         description: Whether the *User* is a default attendee for court rules events
         title: Court Rules Default Attendee
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -340,6 +355,7 @@ $defs:
         default: null
         description: The time the *User* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       default_calendar_id:
         anyOf:
         - type: integer
@@ -347,6 +363,7 @@ $defs:
         default: null
         description: Default calendar id for *User*.
         title: Default Calendar Id
+        type: string
       email:
         anyOf:
         - type: string
@@ -354,6 +371,7 @@ $defs:
         default: null
         description: The email of the *User*
         title: Email
+        type: string
       enabled:
         anyOf:
         - type: boolean
@@ -361,6 +379,7 @@ $defs:
         default: null
         description: Whether the *User* is allowed to log in
         title: Enabled
+        type: string
       etag:
         anyOf:
         - type: string
@@ -368,6 +387,7 @@ $defs:
         default: null
         description: ETag for the *User*
         title: Etag
+        type: string
       first_name:
         anyOf:
         - type: string
@@ -375,6 +395,7 @@ $defs:
         default: null
         description: The first name of the *User*
         title: First Name
+        type: string
       id:
         anyOf:
         - type: integer
@@ -382,6 +403,7 @@ $defs:
         default: null
         description: Unique identifier for the *User*
         title: Id
+        type: string
       initials:
         anyOf:
         - type: string
@@ -389,6 +411,7 @@ $defs:
         default: null
         description: The initials of the *User*
         title: Initials
+        type: string
       last_name:
         anyOf:
         - type: string
@@ -396,6 +419,7 @@ $defs:
         default: null
         description: The last name of the *User*
         title: Last Name
+        type: string
       name:
         anyOf:
         - type: string
@@ -403,6 +427,7 @@ $defs:
         default: null
         description: The full name of the *User*
         title: Name
+        type: string
       phone_number:
         anyOf:
         - type: string
@@ -410,6 +435,7 @@ $defs:
         default: null
         description: The primary phone number for the *User*.
         title: Phone Number
+        type: string
       rate:
         anyOf:
         - type: number
@@ -418,6 +444,7 @@ $defs:
         default: null
         description: Default user activity rate for *User*.
         title: Rate
+        type: string
       roles:
         anyOf:
         - items:
@@ -427,6 +454,7 @@ $defs:
         default: null
         description: An array of roles assigned to this *User*
         title: Roles
+        type: string
       subscription_type:
         anyOf:
         - type: string
@@ -434,6 +462,7 @@ $defs:
         default: null
         description: The subscription type of the *User*
         title: Subscription Type
+        type: string
       time_zone:
         anyOf:
         - type: string
@@ -441,6 +470,7 @@ $defs:
         default: null
         description: The selected time zone of the *User*
         title: Time Zone
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -449,6 +479,7 @@ $defs:
         default: null
         description: The time the *User* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
     title: UserBase
     type: object
 description: TaskTemplateListShow

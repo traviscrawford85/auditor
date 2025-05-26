@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 $defs:
   DocumentCopyRequestDataDocumentCategory:
     description: DocumentCopyRequestDataDocumentCategory
@@ -33,6 +10,7 @@ $defs:
         description: The unique identifier for a single DocumentCategory associated
           with the Document. Use the keyword `null` to specify no association.
         title: Id
+        type: string
     title: DocumentCopyRequestDataDocumentCategory
     type: object
   DocumentCopyRequestDataExternalPropertiesInner:
@@ -46,6 +24,7 @@ $defs:
         description: The unique identifier for a single ExternalProperty associated
           with the Document. The keyword `null` is not valid for this field.
         title: Id
+        type: string
       name:
         anyOf:
         - type: string
@@ -54,6 +33,7 @@ $defs:
         description: 'The ExternalProperty name. Note: **there is a limit of 5 external_properties
           per Document**'
         title: Name
+        type: string
       value:
         anyOf:
         - type: string
@@ -61,6 +41,7 @@ $defs:
         default: null
         description: The ExternalProperty value.
         title: Value
+        type: string
       _destroy:
         anyOf:
         - type: boolean
@@ -70,6 +51,7 @@ $defs:
           identifier of the associated ExternalProperty is present, the ExternalProperty
           is deleted from the Document.
         title: Destroy
+        type: string
     title: DocumentCopyRequestDataExternalPropertiesInner
     type: object
   DocumentUpdateRequestData:
@@ -82,6 +64,7 @@ $defs:
         default: null
         description: Related communication record.
         title: Communication Id
+        type: string
       copy_version:
         anyOf:
         - type: boolean
@@ -92,11 +75,13 @@ $defs:
           has been changed; if the document extension has not changed, no new version
           will be created.
         title: Copy Version
+        type: string
       document_category:
         anyOf:
         - $ref: '#/$defs/DocumentCopyRequestDataDocumentCategory'
         - type: 'null'
         default: null
+        type: string
       external_properties:
         anyOf:
         - items:
@@ -105,6 +90,7 @@ $defs:
         - type: 'null'
         default: null
         title: External Properties
+        type: string
       fully_uploaded:
         anyOf:
         - type: boolean
@@ -115,6 +101,7 @@ $defs:
           * Not all the file parts are uploaded. * The document is already marked
           as fully uploaded. '
         title: Fully Uploaded
+        type: string
       multiparts:
         anyOf:
         - items:
@@ -123,6 +110,7 @@ $defs:
         - type: 'null'
         default: null
         title: Multiparts
+        type: string
       name:
         anyOf:
         - type: string
@@ -130,11 +118,13 @@ $defs:
         default: null
         description: Document name.
         title: Name
+        type: string
       parent:
         anyOf:
         - $ref: '#/$defs/DocumentUpdateRequestDataParent'
         - type: 'null'
         default: null
+        type: string
       received_at:
         anyOf:
         - format: date-time
@@ -144,6 +134,7 @@ $defs:
         description: Date and time the document was received (Expects an ISO-8601
           timestamp).
         title: Received At
+        type: string
       restore:
         anyOf:
         - type: boolean
@@ -151,6 +142,7 @@ $defs:
         default: null
         description: Whether or not a trashed Document should be restored.
         title: Restore
+        type: string
       uuid:
         anyOf:
         - type: string
@@ -159,6 +151,7 @@ $defs:
         description: UUID associated with the document version. UUID is required to
           mark a document fully uploaded.
         title: Uuid
+        type: string
     title: DocumentUpdateRequestData
     type: object
   DocumentUpdateRequestDataMultipartsInner:
@@ -180,6 +173,7 @@ $defs:
           to more than 50 parts, make a PUT request with `fully_uploaded` equal to
           `false`, and another set of part numbers. '
         title: Part Number
+        type: string
       content_length:
         anyOf:
         - type: string
@@ -187,6 +181,7 @@ $defs:
         default: null
         description: The size of the part of the upload file in bytes.
         title: Content Length
+        type: string
       content_md5:
         anyOf:
         - type: string
@@ -198,6 +193,7 @@ $defs:
           we recommend using the Content-MD5 mechanism as an end-to-end integrity
           check.
         title: Content Md5
+        type: string
     title: DocumentUpdateRequestDataMultipartsInner
     type: object
   DocumentUpdateRequestDataParent:
@@ -210,6 +206,7 @@ $defs:
         default: null
         description: The unique identifier of the parent object.
         title: Id
+        type: string
       type:
         anyOf:
         - type: string
@@ -225,6 +222,7 @@ $defs:
           * "Matter" represents a matter folder on Clio identified by matter id. It
           is specified when you add / move an item to a matter folder. '
         title: Type
+        type: string
     title: DocumentUpdateRequestDataParent
     type: object
 description: DocumentUpdateRequest

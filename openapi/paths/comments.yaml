@@ -1,0 +1,54 @@
+/comments:
+  get:
+    tags:
+    - Comments
+    summary: Return the data for all Comments
+    operationId: listComments
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for all Comments
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/created_since'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/item_id'
+    - $ref: '#/components/parameters/limit'
+    - $ref: '#/components/parameters/page_token'
+    - $ref: '#/components/parameters/updated_since'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+  post:
+    tags:
+    - Comments
+    summary: Create a new Comment
+    operationId: createComment
+    description: Outlines the parameters and data fields used when creating a new
+      Comment
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    responses:
+      '201':
+        $ref: '#/components/responses/201_Created'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '422':
+        $ref: '#/components/responses/422_Unprocessable_Entity'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+    requestBody:
+      $ref: '#/components/requestBodies/ReqBody_aea9af0f'

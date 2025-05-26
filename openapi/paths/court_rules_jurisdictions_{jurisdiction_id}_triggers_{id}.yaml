@@ -1,0 +1,30 @@
+/court/rules/jurisdictions/{jurisdiction/id}/triggers/{id}:
+  get:
+    tags:
+    - Jurisdictions To Triggers
+    summary: Return the data for the trigger
+    operationId: get
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for a single JurisdictionsToTrigger
+    parameters:
+    - $ref: '#/components/parameters/IF-MODIFIED-SINCE'
+    - $ref: '#/components/parameters/IF-NONE-MATCH'
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/id'
+    - $ref: '#/components/parameters/jurisdiction_id'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '304':
+        $ref: '#/components/responses/304_Not_Modified'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'

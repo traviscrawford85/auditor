@@ -1,0 +1,1792 @@
+components:
+  parameters:
+    time_entries_present:
+      name: time_entries_present
+      in: query
+      description: Filter Task records to those that have associated time entries,
+        or not.
+      required: false
+      schema:
+        type: boolean
+    task_type_id:
+      name: task_type_id
+      in: query
+      description: The unique identifier for a single TaskType. Use the keyword `null`
+        to match those without a Task. The list will be filtered to include only the
+        Task records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    external_property_name:
+      name: external_property_name
+      in: query
+      description: 'Filter records to only those with the given external property(s)
+        name set.
+
+
+        e.g. `?external_property_name=Name`
+
+        '
+      required: false
+      schema:
+        type: string
+    received_at:
+      name: received_at
+      in: query
+      description: Filter Communication records to those that occur on the specified
+        date (Expects an ISO-8601 date-time).
+      required: false
+      schema:
+        type: string
+        format: date-time
+    IF-MODIFIED-SINCE:
+      name: IF-MODIFIED-SINCE
+      in: header
+      description: The server will send the requested resource with a 200 status,
+        but only if it has been modified after the given date. (Expects an RFC 2822
+        timestamp).
+      required: false
+      schema:
+        type: string
+        format: date
+    from:
+      name: from
+      in: query
+      description: Filter CalendarEntry records to those that end on or after the
+        provided time (Expects an ISO-8601 timestamp).
+      required: false
+      schema:
+        type: string
+        format: date-time
+    attended_several_hearings_for_multiple_clients:
+      name: attended_several_hearings_for_multiple_clients
+      in: query
+      description: Filter by whether multiple hearings were attended for multiple
+        clients.
+      required: false
+      schema:
+        type: boolean
+    expense_category_id:
+      name: expense_category_id
+      in: query
+      description: The unique identifier for a single ExpenseCategory. Use the keyword
+        `null` to match those without a Activity. The list will be filtered to include
+        only the Activity records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    statute_of_limitations:
+      name: statute_of_limitations
+      in: query
+      description: Filter Task records to those which are a statute of limitations
+        or not.
+      required: false
+      schema:
+        type: boolean
+    order:
+      name: order
+      in: query
+      description: 'Orders the Activity records by the given field. Default: `id(asc)`.'
+      required: false
+      schema:
+        type: string
+        enum:
+        - id(asc)
+        - id(desc)
+        - display_number(asc)
+        - display_number(desc)
+        - user.name(asc)
+        - user.name(desc)
+        - price(asc)
+        - price(desc)
+        - total(asc)
+        - total(desc)
+        - type(asc)
+        - type(desc)
+        - date(asc)
+        - date(desc)
+        - note(asc)
+        - note(desc)
+        - updated_at(asc)
+        - updated_at(desc)
+        - vendor.name(asc)
+        - vendor.name(desc)
+        - expense_category.name(asc)
+        - expense_category.name(desc)
+        - non_billable(asc)
+        - non_billable(desc)
+        - non_billable_total(asc)
+        - non_billable_total(desc)
+    clio_connect_only:
+      name: clio_connect_only
+      in: query
+      description: Filter Contact records to those that are Clio Connect users.
+      required: false
+      schema:
+        type: boolean
+    jurisdiction_id:
+      name: jurisdiction_id
+      in: path
+      description: The unique identifier for the Jurisdiction.
+      required: true
+      schema:
+        type: integer
+        format: int64
+    solicitor_type:
+      name: solicitor_type
+      in: query
+      description: Filter by solicitor type.
+      required: false
+      schema:
+        type: string
+    limit:
+      name: limit
+      in: query
+      description: 'A limit on the number of Activity records to be returned. Limit
+        can range between 1 and 200. Default: `200`.'
+      required: false
+      schema:
+        type: integer
+        format: int32
+    task_template_list_id:
+      name: task_template_list_id
+      in: query
+      description: The unique identifier for a single TaskTemplateList. The keyword
+        `null` is not valid for this field. The list will be filtered to include only
+        the TaskTemplate records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    visible:
+      name: visible
+      in: query
+      description: Filter CalendarEntry records to those that are visible.
+      required: false
+      schema:
+        type: boolean
+    currency_id:
+      name: currency_id
+      in: query
+      description: Filter Bill records to those of a specific currency.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    category_of_law:
+      name: category_of_law
+      in: query
+      description: Filter by category of law.
+      required: false
+      schema:
+        type: string
+    client_only:
+      name: client_only
+      in: query
+      description: Filter Contact records to those that are clients.
+      required: false
+      schema:
+        type: boolean
+    counsel:
+      name: counsel
+      in: query
+      description: Filter by counsel.
+      required: false
+      schema:
+        type: string
+    owner:
+      name: owner
+      in: query
+      description: Filter Calendar records to those that the user owns.
+      required: false
+      schema:
+        type: boolean
+    updated_since:
+      name: updated_since
+      in: query
+      description: Filter Activity records to those having the `updated_at` field
+        after a specific time. (Expects an ISO-8601 timestamp).
+      required: false
+      schema:
+        type: string
+        format: date-time
+    kind:
+      name: kind
+      in: query
+      description: The kind of LineItem.
+      required: false
+      schema:
+        type: string
+    duration:
+      name: duration
+      in: query
+      description: 'Duration string for time rounding, conforming to the Chronic date
+        parser. For example: ''3h'' or ''2:15''.'
+      required: false
+      schema:
+        type: string
+    received_before:
+      name: received_before
+      in: query
+      description: Filter Communication records to those whose `date` is on or before
+        the date provided (Expects an ISO-8601 date).
+      required: false
+      schema:
+        type: string
+        format: date-time
+    activity_sub_category:
+      name: activity_sub_category
+      in: query
+      description: Filter by activity sub-category.
+      required: false
+      schema:
+        type: string
+    calendar_id:
+      name: calendar_id
+      in: query
+      description: The unique identifier for a single Calendar. The keyword `null`
+        is not valid for this field. The list will be filtered to include only the
+        CalendarEntry records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    custom_field_ids[]:
+      name: custom_field_ids[]
+      in: query
+      description: Filter Contact's custom_field_values to only include values for
+        the given custom field unique identifiers.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    due_at_from:
+      name: due_at_from
+      in: query
+      description: Start of date range when querying by due_at in a range. (Expects
+        an ISO-8601 date).
+      required: false
+      schema:
+        type: string
+        format: date
+    standard_fee_category:
+      name: standard_fee_category
+      in: query
+      description: Filter by standard fee category.
+      required: false
+      schema:
+        type: string
+    is_requirements_required:
+      name: is_requirements_required
+      in: query
+      description: Filter JurisdictionsToTrigger records to those which require addition
+        requirements to be checked (usually specifying trigger time).
+      required: false
+      schema:
+        type: boolean
+    rate_for[matter_id]:
+      name: rate_for[matter_id]
+      in: query
+      description: Matter id for rate calculation.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    group_ordering:
+      name: group_ordering
+      in: query
+      description: Filters LineItem records to match given group ordering.
+      required: false
+      schema:
+        type: integer
+        format: int32
+    pending_date[]:
+      name: pending_date[]
+      in: query
+      description: 'Filter Matter records by the pending date. The date should be
+        provided in the format YYYY-MM-DD.
+
+
+        e.g. `?pending_date==2020-01-01`, `?pending_date=<=2021-12-31`
+
+
+        You can provide more than one value to narrow the results of this filter.
+        You can do so by passing several individual values and appending `[]` to the
+        parameter name.
+
+
+        e.g. `?pending_date[]=>=2020-01-01&pending_date[]=<=2021-12-31`
+
+
+        Note that, when providing multiple values for this filter, only Matter records
+        that meet *all* filter conditions will be returned.
+
+        '
+      required: false
+      schema:
+        type: string
+        enum:
+        - '>DATE'
+        - '>=DATE'
+        - =DATE
+        - <=DATE
+        - <DATE
+    region:
+      name: region
+      in: query
+      description: Filter by region.
+      required: false
+      schema:
+        type: string
+    field_type:
+      name: field_type
+      in: query
+      description: Field type of this custom field
+      required: false
+      schema:
+        type: string
+        enum:
+        - checkbox
+        - contact
+        - currency
+        - date
+        - time
+        - email
+        - matter
+        - numeric
+        - picklist
+        - text_area
+        - text_line
+        - url
+    parent_id:
+      name: parent_id
+      in: query
+      description: ID of parent (either a Payment or CreditMemo) this allocation belongs
+        to
+      required: false
+      schema:
+        type: integer
+        format: int64
+    conversation_id:
+      name: conversation_id
+      in: query
+      description: The unique identifier for a single Conversation. Use the keyword
+        `null` to match those without a ConversationMessage. The list will be filtered
+        to include only the ConversationMessage records with the matching property.
+      required: true
+      schema:
+        type: integer
+        format: int64
+    due_before:
+      name: due_before
+      in: query
+      description: Filter Bill records to those that have a `due_date` before the
+        one provided (Expects an ISO-8601 date).
+      required: false
+      schema:
+        type: string
+        format: date
+    priority:
+      name: priority
+      in: query
+      description: Filter Task records to those with the given priority.
+      required: false
+      schema:
+        type: string
+        enum:
+        - high
+        - normal
+        - low
+    start_time:
+      name: start_time
+      in: query
+      description: The time the MatterDocket should start. (Expects an ISO-8601 timestamp).
+      required: true
+      schema:
+        type: string
+        format: date-time
+    fee_scheme:
+      name: fee_scheme
+      in: query
+      description: Fee scheme
+      required: false
+      schema:
+        type: string
+    assignee_type:
+      name: assignee_type
+      in: query
+      description: Filter Task records to those with a specific assignee. Must be
+        passed if filtering by assignee.
+      required: false
+      schema:
+        type: string
+        enum:
+        - user
+        - contact
+    deleted:
+      name: deleted
+      in: query
+      description: Filter CustomField records to those that have been deleted for
+        future use.
+      required: false
+      schema:
+        type: boolean
+    assigner_id:
+      name: assigner_id
+      in: query
+      description: The unique identifier for a single User. Use the keyword `null`
+        to match those without a Task. The list will be filtered to include only the
+        Task records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    matter_note_id:
+      name: matter_note_id
+      in: query
+      description: The unique identifier for a single Note. Use the keyword `null`
+        to match those without a Activity. The list will be filtered to include only
+        the Activity records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    query:
+      name: query
+      in: query
+      description: Wildcard search for `note` matching a given string.
+      required: false
+      schema:
+        type: string
+    subscription_type:
+      name: subscription_type
+      in: query
+      description: Filter User records to those with a specific subscription type.
+      required: false
+      schema:
+        type: string
+        enum:
+        - attorney
+        - nonattorney
+    scope:
+      name: scope
+      in: query
+      description: Filters Document record to those being a child of the parent Folder,
+        or a descendant of the parent Folder. Default is `children`.
+      required: false
+      schema:
+        type: string
+        enum:
+        - descendants
+        - children
+    statuses[]:
+      name: statuses[]
+      in: query
+      description: Filter Task records to those with the given statuses. Users without
+        advanced tasks enabled may only specify 'complete' or 'pending'.
+      required: false
+      schema:
+        type: string
+        enum:
+        - pending
+        - in_progress
+        - in_review
+        - complete
+    permission:
+      name: permission
+      in: query
+      description: Filter Task records to those with the given permission. Returns
+        all tasks by default.
+      required: false
+      schema:
+        type: string
+        enum:
+        - private
+        - public
+    navigation.next:
+      name: navigation.next
+      in: query
+      description: The id of the next *Bill* available for viewing
+      required: false
+      schema:
+        type: integer
+        format: int32
+    co_counsel_contact_id:
+      name: co_counsel_contact_id
+      in: query
+      description: The unique identifier for a single Contact. The keyword `null`
+        is not valid for this field. The list will be filtered to include only the
+        ActivityRate records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    communication_id:
+      name: communication_id
+      in: query
+      description: The unique identifier for a single Communication. Use the keyword
+        `null` to match those without a Activity. The list will be filtered to include
+        only the Activity records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    pending_setup:
+      name: pending_setup
+      in: query
+      description: Filter User records based on whether or not they are still being
+        setup.
+      required: false
+      schema:
+        type: boolean
+    exclude_ids[]:
+      name: exclude_ids[]
+      in: query
+      description: Filter Contact records to those who are not included in the given
+        list of unique identifiers.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    task_id:
+      name: task_id
+      in: query
+      description: The unique identifier for a single Task. Use the keyword `null`
+        to match those without a Activity. The list will be filtered to include only
+        the Activity records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    notification_event_subscriber_user_id:
+      name: notification_event_subscriber_user_id
+      in: query
+      description: The unique identifier for a single NotificationEventSubscriber.
+        Use the keyword `null` to match those without a Matter. The list will be filtered
+        to include only the Matter records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    owner_entries_across_all_users:
+      name: owner_entries_across_all_users
+      in: query
+      description: Returns CalendarEntry records for all users related to a matter.
+        Requires matter id.
+      required: false
+      schema:
+        type: boolean
+    rate_for[user_id]:
+      name: rate_for[user_id]
+      in: query
+      description: User id for rate calculation. If not provided, the user associated
+        to the API request is assumed.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    status:
+      name: status
+      in: query
+      description: Filter Activity records to those that are draft, billed, unbilled
+        or non-billable.
+      required: false
+      schema:
+        type: string
+        enum:
+        - billed
+        - draft
+        - unbilled
+        - non_billable
+        - billable
+        - written_off
+    user_type:
+      name: user_type
+      in: query
+      description: Filter by user type.
+      required: false
+      schema:
+        type: string
+    eligible_for_sqm:
+      name: eligible_for_sqm
+      in: query
+      description: Filter by SQM eligibility.
+      required: false
+      schema:
+        type: boolean
+    due_at_to:
+      name: due_at_to
+      in: query
+      description: End of date range when querying by due_at in a range. (Expects
+        an ISO-8601 date).
+      required: false
+      schema:
+        type: string
+        format: date
+    assignee_id:
+      name: assignee_id
+      in: query
+      description: The unique identifier for a single User or Contact. Use the keyword
+        `null` to match those without a Task. The list will be filtered to include
+        only the Task records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    treatment_start_date:
+      name: treatment_start_date
+      in: query
+      description: Filters Medical Records data by treatment start date.
+      required: false
+      schema:
+        type: string
+        format: date-time
+    id:
+      name: id
+      in: query
+      description: The unique identifier for the DocumentVersion.
+      required: true
+      schema:
+        type: integer
+        format: int64
+    notification_method_id:
+      name: notification_method_id
+      in: query
+      description: The unique identifier for a single NotificationMethod. The keyword
+        `null` is not valid for this field. The list will be filtered to include only
+        the Reminder records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    to:
+      name: to
+      in: query
+      description: Filter CalendarEntry records to those that begin on or before the
+        provided time (Expects an ISO-8601 timestamp).
+      required: false
+      schema:
+        type: string
+        format: date-time
+    having_time_entries:
+      name: having_time_entries
+      in: query
+      description: Filter Communication records to those that do or do not have time
+        entries.
+      required: false
+      schema:
+        type: boolean
+    last_paid_start_date:
+      name: last_paid_start_date
+      in: query
+      description: Filter OutstandingClientBalance records for those whose bills have
+        been paid after the specified date
+      required: false
+      schema:
+        type: string
+        format: date
+    category:
+      name: category
+      in: query
+      description: Filters Report data by category.
+      required: false
+      schema:
+        type: string
+    responsible_staff_id:
+      name: responsible_staff_id
+      in: query
+      description: The unique identifier for a single User. Use the keyword `null`
+        to match those without a Matter. The list will be filtered to include only
+        the Matter records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    utbms_set_id:
+      name: utbms_set_id
+      in: query
+      description: The unique identifier for a single UtbmsSet. Use the keyword `null`
+        to match those without a UtbmsCode. The list will be filtered to include only
+        the UtbmsCode records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    activity:
+      name: activity
+      in: query
+      description: Filter by activity.
+      required: false
+      schema:
+        type: string
+    X-API-VERSION:
+      name: X-API-VERSION
+      in: header
+      description: 'The [API minor version](#section/Minor-Versions). Default: latest
+        version.'
+      required: false
+      schema:
+        type: string
+    active:
+      name: active
+      in: query
+      description: Filter ClioPaymentsLink records based on whether or not they have
+        expired.
+      required: false
+      schema:
+        type: boolean
+    matter_id:
+      name: matter_id
+      in: path
+      description: Filters Client data by matter.
+      required: true
+      schema:
+        type: integer
+        format: int64
+    rate_type:
+      name: rate_type
+      in: query
+      description: Filter by rate type.
+      required: false
+      schema:
+        type: string
+    enabled:
+      name: enabled
+      in: query
+      description: Filter TaskType records to those that are enabled or disabled.
+      required: false
+      schema:
+        type: boolean
+    matter_type_1:
+      name: matter_type_1
+      in: query
+      description: Filter by matter type 1.
+      required: false
+      schema:
+        type: integer
+        format: int32
+    issued_before:
+      name: issued_before
+      in: query
+      description: Filter Bill records to those that have an `issue_date` before the
+        one provided (Expects an ISO-8601 date).
+      required: false
+      schema:
+        type: string
+        format: date
+    created_before:
+      name: created_before
+      in: query
+      description: Filters Report data by date. (Expects an ISO-8601 date).
+      required: false
+      schema:
+        type: string
+        format: date-time
+    client_id:
+      name: client_id
+      in: query
+      description: The unique identifier for a single Contact. The keyword `null`
+        is not valid for this field. The list will be filtered to include only the
+        BankTransaction records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    page_token:
+      name: page_token
+      in: query
+      description: A token specifying which page to return.
+      required: false
+      schema:
+        type: string
+    cascading_source_id:
+      name: cascading_source_id
+      in: query
+      description: Filter Task records to those with a parent task that has the specified
+        ID.
+      required: false
+      schema:
+        type: integer
+        format: int32
+    type:
+      name: type
+      in: query
+      description: Filter Activity records to those of a specific type.
+      required: false
+      schema:
+        type: string
+        enum:
+        - TimeEntry
+        - ExpenseEntry
+        - HardCostEntry
+        - SoftCostEntry
+    practice_area:
+      name: practice_area
+      in: query
+      description: Filter by expense practice area.
+      required: false
+      schema:
+        type: string
+    displayed:
+      name: displayed
+      in: query
+      description: Filter CustomFieldSet records to those that should be displayed
+        by default.
+      required: false
+      schema:
+        type: boolean
+    code:
+      name: code
+      in: query
+      description: Filter PracticeArea records to those that match the given code.
+      required: false
+      schema:
+        type: string
+    matter_type_2:
+      name: matter_type_2
+      in: query
+      description: Filter by matter type 2.
+      required: false
+      schema:
+        type: integer
+        format: int32
+    close_date[]:
+      name: close_date[]
+      in: query
+      description: 'Filter Matter records by the close date. The date should be provided
+        in the format YYYY-MM-DD.
+
+
+        e.g. `?close_date==2020-01-01`, `?close_date=<=2021-12-31`
+
+
+        You can provide more than one value to narrow the results of this filter.
+        You can do so by passing several individual values and appending `[]` to the
+        parameter name.
+
+
+        e.g. `?close_date[]=>=2020-01-01&close_date[]=<=2021-12-31`
+
+
+        Note that, when providing multiple values for this filter, only Matter records
+        that meet *all* filter conditions will be returned.
+
+        '
+      required: false
+      schema:
+        type: string
+        enum:
+        - '>DATE'
+        - '>=DATE'
+        - =DATE
+        - <=DATE
+        - <DATE
+    billable:
+      name: billable
+      in: query
+      description: Filter Matter records to those which are billable.
+      required: false
+      schema:
+        type: boolean
+    due_after:
+      name: due_after
+      in: query
+      description: Filter Bill records to those that have a `due_date` after the one
+        provided (Expects an ISO-8601 date).
+      required: false
+      schema:
+        type: string
+        format: date
+    due_at:
+      name: due_at
+      in: query
+      description: Filter Bill records to those that have a specific `due_date` (Expects
+        an ISO-8601 date).
+      required: false
+      schema:
+        type: string
+        format: date
+    has_time_entries:
+      name: has_time_entries
+      in: query
+      description: Filter Note records to those with or without associated time entries.
+      required: false
+      schema:
+        type: boolean
+    last_sent_end_date:
+      name: last_sent_end_date
+      in: query
+      description: Filter Bill records for those whose bills have been sent before
+        the specified date
+      required: false
+      schema:
+        type: string
+        format: date
+    writeable:
+      name: writeable
+      in: query
+      description: Filter Calendar records to those which the user can write to.
+      required: false
+      schema:
+        type: boolean
+    subject_id:
+      name: subject_id
+      in: query
+      description: The unique identifier for a single CalendarEntry or Task. The keyword
+        `null` is not valid for this field. The list will be filtered to include only
+        the Reminder records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    archived:
+      name: archived
+      in: query
+      description: Filter archived Conversation records.
+      required: false
+      schema:
+        type: boolean
+    has_schedule:
+      name: has_schedule
+      in: query
+      description: Filters ReportPreset records to those that have or do not have
+        a Report Schedule.
+      required: false
+      schema:
+        type: boolean
+    only_unaccounted_for:
+      name: only_unaccounted_for
+      in: query
+      description: Only unaccounted for activities.
+      required: false
+      schema:
+        type: boolean
+    received_since:
+      name: received_since
+      in: query
+      description: Filter Communication records to those whose `date` is on or after
+        the date provided (Expects an ISO-8601 date).
+      required: false
+      schema:
+        type: string
+        format: date-time
+    shared_resource_id:
+      name: shared_resource_id
+      in: query
+      description: Filter Contact records to those that currently have access to a
+        given shared resource.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    output_format:
+      name: output_format
+      in: query
+      description: Filters Report data by format.
+      required: false
+      schema:
+        type: string
+    subject_type:
+      name: subject_type
+      in: query
+      description: Filter Reminder records to those of a given subject type, required
+        if using subject_id.
+      required: false
+      schema:
+        type: string
+        enum:
+        - calendar_entry
+        - task
+    for_current_account:
+      name: for_current_account
+      in: query
+      description: Filter Jurisdiction records to those set up for this account.
+      required: false
+      schema:
+        type: boolean
+    initial:
+      name: initial
+      in: query
+      description: Filter Contact records to those where the last name or company
+        name start with the given initial.
+      required: false
+      schema:
+        type: string
+        enum:
+        - A
+        - B
+        - C
+        - D
+        - E
+        - F
+        - G
+        - H
+        - I
+        - J
+        - K
+        - L
+        - M
+        - N
+        - O
+        - P
+        - Q
+        - R
+        - S
+        - T
+        - U
+        - V
+        - W
+        - X
+        - Y
+        - Z
+    IF-MATCH:
+      name: IF-MATCH
+      in: header
+      description: The server will update the requested resource and send back a 200
+        status, but only if value in the header matches the existing resource's [ETag](#section/ETags).
+      required: false
+      schema:
+        type: string
+    external_property_value:
+      name: external_property_value
+      in: query
+      description: 'Filter records to only those with the given external property(s)
+        value set. Requires external property name as well.
+
+
+        e.g. `?external_property_name=Name&external_property_value=Value`
+
+        '
+      required: false
+      schema:
+        type: string
+    activity_description_id:
+      name: activity_description_id
+      in: query
+      description: The unique identifier for a single ActivityDescription. Use the
+        keyword `null` to match those without a Activity. The list will be filtered
+        to include only the Activity records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    newest_bill_due_start_date:
+      name: newest_bill_due_start_date
+      in: query
+      description: Filter OutstandingClientBalance records for the contact's newest
+        bill due date after the specified date
+      required: false
+      schema:
+        type: string
+        format: date
+    originating_attorney_id:
+      name: originating_attorney_id
+      in: query
+      description: The unique identifier for a single User. Use the keyword `null`
+        to match those without a BillableClient. The list will be filtered to include
+        only the BillableClient records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    trigger[id]:
+      name: trigger[id]
+      in: query
+      description: The unique identifier for a single JurisdictionsToTrigger. The
+        keyword `null` is not valid for this field. The list will be filtered to include
+        only the MatterDocket records with the matching property.
+      required: true
+      schema:
+        type: integer
+        format: int64
+    activity_id:
+      name: activity_id
+      in: query
+      description: The unique identifier for a single Activity. Use the keyword `null`
+        to match those without a LineItem. The list will be filtered to include only
+        the LineItem records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    treatment_end_date:
+      name: treatment_end_date
+      in: query
+      description: Filters Medical Records data by treatment end date.
+      required: false
+      schema:
+        type: string
+        format: date-time
+    fully_uploaded:
+      name: fully_uploaded
+      in: query
+      description: Filter DocumentVersion records to those with the given `fully_uploaded`
+        status.
+      required: false
+      schema:
+        type: boolean
+    event_prefix:
+      name: event_prefix
+      in: query
+      description: The prefix that will be added to the beginning of all court rule
+        event titles
+      required: false
+      schema:
+        type: string
+    expanded:
+      name: expanded
+      in: query
+      description: Returns a record for each occurrence of a recurring calendar event.  Non-recurring
+        calendar events are unaffected and returned as separate records regardless
+        of the expanded setting.
+      required: false
+      schema:
+        type: boolean
+    service_type[id]:
+      name: service_type[id]
+      in: query
+      description: The unique identifier for a single ServiceType. The keyword `null`
+        is not valid for this field. The list will be filtered to include only the
+        MatterDocket records with the matching property.
+      required: true
+      schema:
+        type: integer
+        format: int64
+    filter_inactive_users:
+      name: filter_inactive_users
+      in: query
+      description: Filter any shared UserCalendar records whose owner is inactive.
+      required: false
+      schema:
+        type: boolean
+    show_uncompleted:
+      name: show_uncompleted
+      in: query
+      description: Allow Document record being uploaded to be included.
+      required: false
+      schema:
+        type: boolean
+    time_entries:
+      name: time_entries
+      in: query
+      description: Filter Conversation records to those with or without associated
+        time entries.
+      required: false
+      schema:
+        type: boolean
+    show_empty_accounts:
+      name: show_empty_accounts
+      in: query
+      description: Filter BankAccount records to those having a zero or non zero balance.
+      required: false
+      schema:
+        type: boolean
+    due_at_present:
+      name: due_at_present
+      in: query
+      description: Filter Task records to those that have a due date specified, or
+        not.
+      required: false
+      schema:
+        type: boolean
+    group_id:
+      name: group_id
+      in: query
+      description: The unique identifier for a single Group. The keyword `null` is
+        not valid for this field. The list will be filtered to include only the Matter
+        records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    read_status:
+      name: read_status
+      in: query
+      description: Filter Conversation records to those which have been read.
+      required: false
+      schema:
+        type: boolean
+    subscriber_user_id:
+      name: subscriber_user_id
+      in: query
+      description: The unique identifier for a single NotificationEventSubscriber.
+        Use the keyword `null` to match those without a Matter. The list will be filtered
+        to include only the Matter records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    complete:
+      name: complete
+      in: query
+      description: Filter Task records to those which are complete or not.
+      required: false
+      schema:
+        type: boolean
+    newest_bill_due_end_date:
+      name: newest_bill_due_end_date
+      in: query
+      description: Filter OutstandingClientBalance records for the contact's newest
+        bill due date before the specified date
+      required: false
+      schema:
+        type: string
+        format: date
+    last_sent_start_date:
+      name: last_sent_start_date
+      in: query
+      description: Filter Bill records for those whose bills have been sent after
+        the specified date
+      required: false
+      schema:
+        type: string
+        format: date
+    flat_rate:
+      name: flat_rate
+      in: query
+      description: Filter Activity TimeEntry records to those that have a flat rate,
+        or not.
+      required: false
+      schema:
+        type: boolean
+    jurisdiction[id]:
+      name: jurisdiction[id]
+      in: query
+      description: The unique identifier for a single Jurisdiction. The keyword `null`
+        is not valid for this field. The list will be filtered to include only the
+        MatterDocket records with the matching property.
+      required: true
+      schema:
+        type: integer
+        format: int64
+    bank_account_id:
+      name: bank_account_id
+      in: query
+      description: The unique identifier for a single BankAccount. The keyword `null`
+        is not valid for this field. The list will be filtered to include only the
+        BankTransaction records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    session_type:
+      name: session_type
+      in: query
+      description: Filter by session type.
+      required: false
+      schema:
+        type: string
+    date:
+      name: date
+      in: query
+      description: Filter Communication records to those that occur on the specified
+        date (Expects an ISO-8601 date).
+      required: false
+      schema:
+        type: string
+        format: date
+    issued_after:
+      name: issued_after
+      in: query
+      description: Filter Bill records to those that have an `issue_date` after the
+        one provided (Expects an ISO-8601 date).
+      required: false
+      schema:
+        type: string
+        format: date
+    has_court_rule:
+      name: has_court_rule
+      in: query
+      description: Allows matching court rule on calendar entry.
+      required: false
+      schema:
+        type: boolean
+    is_served:
+      name: is_served
+      in: query
+      description: Filter JurisdictionsToTrigger records to those which require a
+        service type to be selected.
+      required: false
+      schema:
+        type: boolean
+    IF-NONE-MATCH:
+      name: IF-NONE-MATCH
+      in: header
+      description: The server will send the requested resource with a 200 status,
+        but only if the existing resource's [ETag](#section/ETags) doesn't match any
+        of the values listed.
+      required: false
+      schema:
+        type: string
+    ids[]:
+      name: ids[]
+      in: query
+      description: Filter Activity records to those having the specified unique identifiers.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    item_id:
+      name: item_id
+      in: query
+      description: The ID of the Document or Folder this Comment belongs to
+      required: false
+      schema:
+        type: integer
+        format: int64
+    party:
+      name: party
+      in: query
+      description: Filter by party.
+      required: false
+      schema:
+        type: string
+    name:
+      name: name
+      in: query
+      description: Filter Grant records to those that match the given name.
+      required: false
+      schema:
+        type: string
+    email_only:
+      name: email_only
+      in: query
+      description: Filter Contact records to those that have email addresses.
+      required: false
+      schema:
+        type: boolean
+    first_conducting_solicitor:
+      name: first_conducting_solicitor
+      in: query
+      description: Filter by first conducting solicitor status.
+      required: false
+      schema:
+        type: boolean
+    entry_type:
+      name: entry_type
+      in: query
+      description: Filter ExpenseCategory records to those that match the given type.
+      required: false
+      schema:
+        type: string
+        enum:
+        - hard_cost
+        - soft_cost
+        - unassociated
+    responsible_attorney_id:
+      name: responsible_attorney_id
+      in: query
+      description: The unique identifier for a single User. Use the keyword `null`
+        to match those without a BillableClient. The list will be filtered to include
+        only the BillableClient records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    number_of_clients:
+      name: number_of_clients
+      in: query
+      description: Filter by number of clients.
+      required: false
+      schema:
+        type: string
+    change_of_solicitor:
+      name: change_of_solicitor
+      in: query
+      description: Filter by change of solicitor status.
+      required: false
+      schema:
+        type: boolean
+    source:
+      name: source
+      in: query
+      description: Filter CalendarEntry records to those having a specific calendar
+        visibility source (mobile, web).
+      required: false
+      schema:
+        type: string
+        enum:
+        - web
+        - mobile
+    visible_and_required:
+      name: visible_and_required
+      in: query
+      description: Filter CustomField records to those that are visible and required.
+      required: false
+      schema:
+        type: boolean
+    start_date:
+      name: start_date
+      in: query
+      description: Filter Activity records to those whose `date` is on or after the
+        date provided (Expects an ISO-8601 date).
+      required: false
+      schema:
+        type: string
+        format: date-time
+    contact_id:
+      name: contact_id
+      in: path
+      description: ID of the Contact
+      required: true
+      schema:
+        type: integer
+        format: int64
+    open_date[]:
+      name: open_date[]
+      in: query
+      description: 'Filter Matter records by the open date. The date should be provided
+        in the format YYYY-MM-DD.
+
+
+        e.g. `?open_date==2020-01-01`, `?open_date=<=2021-12-31`
+
+
+        You can provide more than one value to narrow the results of this filter.
+        You can do so by passing several individual values and appending `[]` to the
+        parameter name.
+
+
+        e.g. `?open_date[]=>=2020-01-01&open_date[]=<=2021-12-31`
+
+
+        Note that, when providing multiple values for this filter, only Matter records
+        that meet *all* filter conditions will be returned.
+
+        '
+      required: false
+      schema:
+        type: string
+        enum:
+        - '>DATE'
+        - '>=DATE'
+        - =DATE
+        - <=DATE
+        - <DATE
+    navigation.previous:
+      name: navigation.previous
+      in: query
+      description: The id of the previous *Bill* available for viewing
+      required: false
+      schema:
+        type: integer
+        format: int32
+    contact_note_id:
+      name: contact_note_id
+      in: query
+      description: The unique identifier for a single Note. Use the keyword `null`
+        to match those without a Activity. The list will be filtered to include only
+        the Activity records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    parent_type:
+      name: parent_type
+      in: query
+      description: Filter Allocation records based on whether the parent is a CreditMemo
+        or a Payment.
+      required: false
+      schema:
+        type: integer
+        format: int32
+    fields:
+      name: fields
+      in: query
+      description: The fields to be returned. See response samples for what fields
+        are available. For more information see the [fields section](#section/Fields).
+      required: false
+      schema:
+        type: string
+    matter_status:
+      name: matter_status
+      in: query
+      description: Filter MatterDocket records to those with Matters having a specific
+        status.
+      required: false
+      schema:
+        type: string
+        enum:
+        - open
+        - closed
+        - pending
+    bill_id:
+      name: bill_id
+      in: query
+      description: The unique identifier for a single Bill. The keyword `null` is
+        not valid for this field. The list will be filtered to include only the Allocation
+        records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    document_version_id:
+      name: document_version_id
+      in: query
+      description: The unique identifier for a DocumentVersion to be downloaded. Defaults
+        to the latest.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    role:
+      name: role
+      in: query
+      description: Filter User records to those with a specific role.
+      required: false
+      schema:
+        type: string
+        enum:
+        - admin
+        - accounts
+        - billing
+        - reports
+    user_id:
+      name: user_id
+      in: query
+      description: The unique identifier for a single User. Use the keyword `null`
+        to match those without a Activity. The list will be filtered to include only
+        the Activity records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    overdue_only:
+      name: overdue_only
+      in: query
+      description: Filter Bill records to those that are overdue.
+      required: false
+      schema:
+        type: boolean
+    last_paid_end_date:
+      name: last_paid_end_date
+      in: query
+      description: Filter OutstandingClientBalance records for those whose bills have
+        been paid before the specified date
+      required: false
+      schema:
+        type: string
+        format: date
+    calendar_entry_id:
+      name: calendar_entry_id
+      in: query
+      description: The unique identifier for a single CalendarEntry. Use the keyword
+        `null` to match those without a Activity. The list will be filtered to include
+        only the Activity records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    key:
+      name: key
+      in: query
+      description: Filter by key.
+      required: false
+      schema:
+        type: string
+    custom_field_values:
+      name: custom_field_values
+      in: query
+      description: 'Filter records to only those with the given custom field(s) set.
+        The value is compared using the operator provided, or,
+
+        if the value type only supports one operator, the supported operator is used.
+        In the latter case, no check for operator is performed on the input string.
+
+        The key for the custom field value filter is the custom_field.id. e.g. `custom_field_values[12345]`
+
+        If an operator is used for a type that does not support it, an `400 Bad Request`
+        is returned.
+
+
+        *Supported operators:*
+
+        * `checkbox`, `contact`, `matter`, `picklist` : `=`
+
+
+        e.g. `?custom_field_values[1]=42`
+
+
+        * `currency`, `date`, `time`, `numeric` : `=`, `<`, `>`, `<=`, `>=`
+
+
+        e.g. `?custom_field_values[1]=>=105.4`
+
+
+        * `email`, `text_area`, `text_line`, `url` : `=`
+
+
+        e.g. `?custom_field_values[1]=url_encoded`
+
+
+        *Multiple conditions for the same custom field:*
+
+
+        If you want to use more than one operator to filter a custom field, you can
+        do so by passing in an array of values.
+
+        e.g. `?custom_field_values[1]=[<=50, >=45]`
+
+        '
+      required: false
+      schema:
+        type: string
+        enum:
+        - '='
+        - <
+        - '>'
+        - <=
+        - '>='
+    document_category_id:
+      name: document_category_id
+      in: query
+      description: The unique identifier for a single DocumentCategory. Use the keyword
+        `null` to match those without a Document. The list will be filtered to include
+        only the Document records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    court:
+      name: court
+      in: query
+      description: Filter by court.
+      required: false
+      schema:
+        type: string
+    post_transfer_clients_represented:
+      name: post_transfer_clients_represented
+      in: query
+      description: Filter by post-transfer clients represented.
+      required: false
+      schema:
+        type: string
+    created_since:
+      name: created_since
+      in: query
+      description: Filter Activity records to those having the `created_at` field
+        after a specific time. (Expects an ISO-8601 timestamp).
+      required: false
+      schema:
+        type: string
+        format: date-time
+    end_date:
+      name: end_date
+      in: query
+      description: Filter Activity records to those whose `date` is on or before the
+        date provided (Expects an ISO-8601 date).
+      required: false
+      schema:
+        type: string
+        format: date-time
+    include_deleted:
+      name: include_deleted
+      in: query
+      description: Allow trashed Document record to be included.
+      required: false
+      schema:
+        type: boolean
+    practice_area_id:
+      name: practice_area_id
+      in: query
+      description: The unique identifier for a single PracticeArea. The keyword `null`
+        is not valid for this field. The list will be filtered to include only the
+        Matter records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    service_type_id:
+      name: service_type_id
+      in: query
+      description: The unique identifier for a single ServiceType. Use the keyword
+        `null` to match those without a MatterDocket. The list will be filtered to
+        include only the MatterDocket records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    for_user:
+      name: for_user
+      in: query
+      description: 'If set to true, filter Conversation records accessible to any
+        groups of the user.
+
+        Note that the user may not be member of the conversations.
+
+
+        If set to false, filter Conversation records of which the user is a member.
+
+        '
+      required: false
+      schema:
+        type: boolean
+    empty:
+      name: empty
+      in: query
+      description: Filter TaskTemplateList records to those that either contain at
+        least one task template or contain none.
+      required: false
+      schema:
+        type: boolean
+    grant_id:
+      name: grant_id
+      in: query
+      description: The unique identifier for a single Grant. Use the keyword `null`
+        to match those without a Activity. The list will be filtered to include only
+        the Activity records with the matching property.
+      required: false
+      schema:
+        type: integer
+        format: int64
+    display:
+      name: display
+      in: query
+      description: Set this flag to true to return only LineItems displayed on the
+        bill.
+      required: false
+      schema:
+        type: boolean
+    schedule_frequency:
+      name: schedule_frequency
+      in: query
+      description: Filters ReportPreset records to those that have a Report Schedule
+        of the specified frequency.
+      required: false
+      schema:
+        type: string
+        enum:
+        - daily
+        - weekly
+        - monthly
+    is_all_day:
+      name: is_all_day
+      in: query
+      description: Filter CalendarEntry records to those that are marked as all day
+        events.
+      required: false
+      schema:
+        type: boolean
+    include_co_counsel:
+      name: include_co_counsel
+      in: query
+      description: Filter User to include co-counsel users
+      required: false
+      schema:
+        type: boolean
+    state:
+      name: state
+      in: query
+      description: Filter Bill records to those in a given state.
+      required: false
+      schema:
+        type: string
+        enum:
+        - draft
+        - awaiting_approval
+        - awaiting_payment
+        - paid
+        - void
+        - deleted

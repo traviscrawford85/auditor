@@ -1,0 +1,28 @@
+/lauk/expense/categories:
+  get:
+    tags:
+    - Expense Categories
+    summary: List Expense Categories
+    operationId: listLauk_expense_categories
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for all LaukExpenseCategories
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/key'
+    - $ref: '#/components/parameters/limit'
+    - $ref: '#/components/parameters/name'
+    - $ref: '#/components/parameters/page_token'
+    - $ref: '#/components/parameters/practice_area'
+    - $ref: '#/components/parameters/region'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'

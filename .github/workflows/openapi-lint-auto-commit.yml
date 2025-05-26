@@ -45,6 +45,9 @@ jobs:
           python scripts/validate_refs_extended.py
           python scripts/lint_openapi.py
 
+      - name: Validate OpenAPI paths section
+        run: python scripts/validate_paths_section.py
+
       - name: Commit and push with fallback + auto PR
         run: |
           git config --global user.name "github-actions[bot]"

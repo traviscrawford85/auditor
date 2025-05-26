@@ -1,0 +1,31 @@
+/outstanding/client/balances:
+  get:
+    tags:
+    - Outstanding Client Balances
+    summary: Return the data for all OutstandingClientBalances
+    operationId: listOutstanding_client_balances
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for all OutstandingClientBalances
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/contact_id'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/last_paid_end_date'
+    - $ref: '#/components/parameters/last_paid_start_date'
+    - $ref: '#/components/parameters/limit'
+    - $ref: '#/components/parameters/newest_bill_due_end_date'
+    - $ref: '#/components/parameters/newest_bill_due_start_date'
+    - $ref: '#/components/parameters/originating_attorney_id'
+    - $ref: '#/components/parameters/page_token'
+    - $ref: '#/components/parameters/responsible_attorney_id'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'

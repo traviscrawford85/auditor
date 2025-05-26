@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 $defs:
   BalanceBase:
     description: BalanceBase
@@ -32,6 +9,7 @@ $defs:
         default: null
         description: Unique identifier for the *Balance*
         title: Id
+        type: string
       amount:
         anyOf:
         - type: number
@@ -40,6 +18,7 @@ $defs:
         default: null
         description: The amount for this Balance.
         title: Amount
+        type: string
       type:
         anyOf:
         - type: string
@@ -47,6 +26,7 @@ $defs:
         default: null
         description: The type of Balance this data is for.
         title: Type
+        type: string
       interest_amount:
         anyOf:
         - type: number
@@ -55,6 +35,7 @@ $defs:
         default: null
         description: The interest amount for this Balance.
         title: Interest Amount
+        type: string
       due:
         anyOf:
         - type: number
@@ -63,6 +44,7 @@ $defs:
         default: null
         description: The amount due for this Balance, factoring in applicable discounts.
         title: Due
+        type: string
     title: BalanceBase
     type: object
   BillBase:
@@ -75,6 +57,7 @@ $defs:
         default: null
         description: Unique identifier for the *Bill*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -82,6 +65,7 @@ $defs:
         default: null
         description: ETag for the *Bill*
         title: Etag
+        type: string
       number:
         anyOf:
         - type: string
@@ -89,6 +73,7 @@ $defs:
         default: null
         description: The *Bill* identifier (not necessarily numeric)'
         title: Number
+        type: string
       issued_at:
         anyOf:
         - format: date
@@ -97,6 +82,7 @@ $defs:
         default: null
         description: The time the *Bill* was issued (as a ISO-8601 date)
         title: Issued At
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -105,6 +91,7 @@ $defs:
         default: null
         description: The time the *Bill* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       due_at:
         anyOf:
         - format: date
@@ -113,6 +100,7 @@ $defs:
         default: null
         description: The date the *Bill* is due (as a ISO-8601 date)
         title: Due At
+        type: string
       tax_rate:
         anyOf:
         - type: number
@@ -121,6 +109,7 @@ $defs:
         default: null
         description: The tax rate to the *Bill*
         title: Tax Rate
+        type: string
       secondary_tax_rate:
         anyOf:
         - type: number
@@ -129,6 +118,7 @@ $defs:
         default: null
         description: A secondary tax rate applied to the *Bill*
         title: Secondary Tax Rate
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -137,6 +127,7 @@ $defs:
         default: null
         description: The time the *Bill* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
       subject:
         anyOf:
         - type: string
@@ -144,6 +135,7 @@ $defs:
         default: null
         description: The subject of the *Bill*
         title: Subject
+        type: string
       purchase_order:
         anyOf:
         - type: string
@@ -151,6 +143,7 @@ $defs:
         default: null
         description: The purchase order of the *Bill*
         title: Purchase Order
+        type: string
       type:
         anyOf:
         - type: string
@@ -158,6 +151,7 @@ $defs:
         default: null
         description: The type of the *Bill*
         title: Type
+        type: string
       memo:
         anyOf:
         - type: string
@@ -165,6 +159,7 @@ $defs:
         default: null
         description: A memo for the *Bill*
         title: Memo
+        type: string
       start_at:
         anyOf:
         - format: date
@@ -173,6 +168,7 @@ $defs:
         default: null
         description: The time the billing period starts (as a ISO-8601 date)
         title: Start At
+        type: string
       end_at:
         anyOf:
         - format: date
@@ -181,6 +177,7 @@ $defs:
         default: null
         description: The time the billing period ends (as a ISO-8601 date)
         title: End At
+        type: string
       balance:
         anyOf:
         - type: number
@@ -189,6 +186,7 @@ $defs:
         default: null
         description: The outstanding balance of the *Bill*
         title: Balance
+        type: string
       state:
         anyOf:
         - type: string
@@ -196,6 +194,7 @@ $defs:
         default: null
         description: The billing state the *Bill* is in
         title: State
+        type: string
       kind:
         anyOf:
         - type: string
@@ -203,6 +202,7 @@ $defs:
         default: null
         description: The kind of the *Bill*
         title: Kind
+        type: string
       total:
         anyOf:
         - type: number
@@ -211,6 +211,7 @@ $defs:
         default: null
         description: The total with interest of the *Bill*
         title: Total
+        type: string
       paid:
         anyOf:
         - type: number
@@ -219,6 +220,7 @@ $defs:
         default: null
         description: The total amount paid for the *Bill*
         title: Paid
+        type: string
       paid_at:
         anyOf:
         - format: date-time
@@ -227,6 +229,7 @@ $defs:
         default: null
         description: The date of the last payment on the *Bill*
         title: Paid At
+        type: string
       pending:
         anyOf:
         - type: number
@@ -235,6 +238,7 @@ $defs:
         default: null
         description: The amount of pending credit card payments on the *Bill*
         title: Pending
+        type: string
       due:
         anyOf:
         - type: number
@@ -243,6 +247,7 @@ $defs:
         default: null
         description: The total amount of the *Bill* with interest and less discounts
         title: Due
+        type: string
       discount_services_only:
         anyOf:
         - type: string
@@ -250,6 +255,7 @@ $defs:
         default: null
         description: The selected discount is applied to services only.
         title: Discount Services Only
+        type: string
       can_update:
         anyOf:
         - type: boolean
@@ -258,6 +264,7 @@ $defs:
         description: This value indicates if your *Bill*'s line items and information
           can be updated.
         title: Can Update
+        type: string
       credits_issued:
         anyOf:
         - type: number
@@ -266,6 +273,7 @@ $defs:
         default: null
         description: The total credits issued for the *Bill*
         title: Credits Issued
+        type: string
       shared:
         anyOf:
         - type: boolean
@@ -273,6 +281,7 @@ $defs:
         default: null
         description: Whether the *Bill* is a shared
         title: Shared
+        type: string
       last_sent_at:
         anyOf:
         - format: date-time
@@ -281,6 +290,7 @@ $defs:
         default: null
         description: The last time the *Bill* was sent (as a ISO-8601 date)
         title: Last Sent At
+        type: string
       services_secondary_tax:
         anyOf:
         - type: number
@@ -290,6 +300,7 @@ $defs:
         description: The total secondary tax of the bill's line items of a service
           kind
         title: Services Secondary Tax
+        type: string
       services_sub_total:
         anyOf:
         - type: number
@@ -298,6 +309,7 @@ $defs:
         default: null
         description: The sub total of all the bill's line items of a service kind
         title: Services Sub Total
+        type: string
       services_tax:
         anyOf:
         - type: number
@@ -306,6 +318,7 @@ $defs:
         default: null
         description: The total tax of the bill's line items of a service kind
         title: Services Tax
+        type: string
       services_taxable_sub_total:
         anyOf:
         - type: integer
@@ -313,6 +326,7 @@ $defs:
         default: null
         description: The services portion of the bill's primary tax
         title: Services Taxable Sub Total
+        type: string
       services_secondary_taxable_sub_total:
         anyOf:
         - type: integer
@@ -320,6 +334,7 @@ $defs:
         default: null
         description: The services portion of the bill's secondary tax
         title: Services Secondary Taxable Sub Total
+        type: string
       taxable_sub_total:
         anyOf:
         - type: integer
@@ -327,6 +342,7 @@ $defs:
         default: null
         description: The total taxable bill amount
         title: Taxable Sub Total
+        type: string
       secondary_taxable_sub_total:
         anyOf:
         - type: integer
@@ -334,6 +350,7 @@ $defs:
         default: null
         description: The subtotal of the bill's secondary tax
         title: Secondary Taxable Sub Total
+        type: string
       sub_total:
         anyOf:
         - type: number
@@ -342,6 +359,7 @@ $defs:
         default: null
         description: Sub total for the *Bill*
         title: Sub Total
+        type: string
       tax_sum:
         anyOf:
         - type: number
@@ -350,6 +368,7 @@ $defs:
         default: null
         description: Sum of primary tax for the model
         title: Tax Sum
+        type: string
       secondary_tax_sum:
         anyOf:
         - type: number
@@ -358,6 +377,7 @@ $defs:
         default: null
         description: Sum of secondary tax for the model
         title: Secondary Tax Sum
+        type: string
       total_tax:
         anyOf:
         - type: number
@@ -366,6 +386,7 @@ $defs:
         default: null
         description: The total amount of tax for the bill.
         title: Total Tax
+        type: string
       available_state_transitions:
         anyOf:
         - items:
@@ -375,6 +396,7 @@ $defs:
         default: null
         description: The available *Bill* state transitions.
         title: Available State Transitions
+        type: string
     title: BillBase
     type: object
   InterestCharge:
@@ -387,6 +409,7 @@ $defs:
         default: null
         description: Unique identifier for the *InterestCharge*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -394,6 +417,7 @@ $defs:
         default: null
         description: ETag for the *InterestCharge*
         title: Etag
+        type: string
       date:
         anyOf:
         - format: date
@@ -402,6 +426,7 @@ $defs:
         default: null
         description: The *InterestCharge* date (as a ISO-8601 date)
         title: Date
+        type: string
       description:
         anyOf:
         - type: string
@@ -409,6 +434,7 @@ $defs:
         default: null
         description: The description for the *InterestCharge*
         title: Description
+        type: string
       total:
         anyOf:
         - type: number
@@ -417,6 +443,7 @@ $defs:
         default: null
         description: The total amount for the *InterestCharge*
         title: Total
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -425,6 +452,7 @@ $defs:
         default: null
         description: The time the *InterestCharge* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -434,11 +462,13 @@ $defs:
         description: The time the *InterestCharge* was last updated (as a ISO-8601
           timestamp)
         title: Updated At
+        type: string
       bill:
         anyOf:
         - $ref: '#/$defs/BillBase'
         - type: 'null'
         default: null
+        type: string
       balances:
         anyOf:
         - items:
@@ -448,6 +478,7 @@ $defs:
         default: null
         description: Balance
         title: Balances
+        type: string
       matters:
         anyOf:
         - items:
@@ -457,6 +488,7 @@ $defs:
         default: null
         description: Matter
         title: Matters
+        type: string
     title: InterestCharge
     type: object
   MatterBase:
@@ -469,6 +501,7 @@ $defs:
         default: null
         description: Unique identifier for the *Matter*
         title: Id
+        type: string
       etag:
         anyOf:
         - type: string
@@ -476,6 +509,7 @@ $defs:
         default: null
         description: ETag for the *Matter*
         title: Etag
+        type: string
       number:
         anyOf:
         - type: integer
@@ -483,6 +517,7 @@ $defs:
         default: null
         description: The number given to the *Matter* within an account
         title: Number
+        type: string
       display_number:
         anyOf:
         - type: string
@@ -492,6 +527,7 @@ $defs:
           manual_matter_numbering setting, this is either read only (generated) or
           customizable.
         title: Display Number
+        type: string
       custom_number:
         anyOf:
         - type: string
@@ -499,6 +535,7 @@ $defs:
         default: null
         description: User defined custom number of the *Matter*
         title: Custom Number
+        type: string
       currency:
         anyOf:
         - additionalProperties: true
@@ -507,6 +544,7 @@ $defs:
         default: null
         description: Currency of the matter
         title: Currency
+        type: string
       description:
         anyOf:
         - type: string
@@ -514,6 +552,7 @@ $defs:
         default: null
         description: The detailed description of the *Matter*
         title: Description
+        type: string
       status:
         anyOf:
         - type: string
@@ -521,6 +560,7 @@ $defs:
         default: null
         description: The current status of the *Matter*
         title: Status
+        type: string
       location:
         anyOf:
         - type: string
@@ -528,6 +568,7 @@ $defs:
         default: null
         description: The location of the *Matter*
         title: Location
+        type: string
       client_reference:
         anyOf:
         - type: string
@@ -535,6 +576,7 @@ $defs:
         default: null
         description: Client Reference string for external uses
         title: Client Reference
+        type: string
       client_id:
         anyOf:
         - type: integer
@@ -542,6 +584,7 @@ $defs:
         default: null
         description: Client ID
         title: Client Id
+        type: string
       billable:
         anyOf:
         - type: boolean
@@ -549,6 +592,7 @@ $defs:
         default: null
         description: Whether this matter is billable
         title: Billable
+        type: string
       maildrop_address:
         anyOf:
         - type: string
@@ -556,6 +600,7 @@ $defs:
         default: null
         description: A unique Maildrop email address for the matter
         title: Maildrop Address
+        type: string
       billing_method:
         anyOf:
         - type: string
@@ -563,6 +608,7 @@ $defs:
         default: null
         description: Billing method of this matter
         title: Billing Method
+        type: string
       open_date:
         anyOf:
         - format: date
@@ -571,6 +617,7 @@ $defs:
         default: null
         description: The date the matter was set to open (as a ISO-8601 date)
         title: Open Date
+        type: string
       close_date:
         anyOf:
         - format: date
@@ -579,6 +626,7 @@ $defs:
         default: null
         description: The date the matter was set to closed (as a ISO-8601 date)
         title: Close Date
+        type: string
       pending_date:
         anyOf:
         - format: date
@@ -587,6 +635,7 @@ $defs:
         default: null
         description: The date the matter was set to pending (as a ISO-8601 date)
         title: Pending Date
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -595,6 +644,7 @@ $defs:
         default: null
         description: The time the *Matter* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -603,6 +653,7 @@ $defs:
         default: null
         description: The time the *Matter* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
       shared:
         anyOf:
         - type: boolean
@@ -610,6 +661,7 @@ $defs:
         default: null
         description: Whether the matter is currently shared with Clio Connect
         title: Shared
+        type: string
       has_tasks:
         anyOf:
         - type: boolean
@@ -617,6 +669,7 @@ $defs:
         default: null
         description: Whether or not the matter has any tasks.
         title: Has Tasks
+        type: string
       last_activity_date:
         anyOf:
         - format: date
@@ -626,6 +679,7 @@ $defs:
         description: The greatest date out of all of the activities on the matter
           (as a ISO-8601 date)
         title: Last Activity Date
+        type: string
       matter_stage_updated_at:
         anyOf:
         - format: date-time
@@ -634,6 +688,7 @@ $defs:
         default: null
         description: The date the matter stage was last updated (as a ISO-8601 date)
         title: Matter Stage Updated At
+        type: string
     title: MatterBase
     type: object
 description: InterestChargeList

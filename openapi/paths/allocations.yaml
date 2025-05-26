@@ -1,0 +1,34 @@
+/allocations:
+  get:
+    tags:
+    - Allocations
+    summary: Return the data for all Allocations
+    operationId: listAllocations
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for all Allocations
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/bill_id'
+    - $ref: '#/components/parameters/contact_id'
+    - $ref: '#/components/parameters/created_since'
+    - $ref: '#/components/parameters/fields'
+    - $ref: ./components/parameters/ids[].yaml
+    - $ref: '#/components/parameters/limit'
+    - $ref: '#/components/parameters/matter_id'
+    - $ref: '#/components/parameters/order'
+    - $ref: '#/components/parameters/page_token'
+    - $ref: '#/components/parameters/parent_id'
+    - $ref: '#/components/parameters/parent_type'
+    - $ref: '#/components/parameters/status'
+    - $ref: '#/components/parameters/updated_since'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'

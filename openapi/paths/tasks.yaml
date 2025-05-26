@@ -1,0 +1,74 @@
+/tasks:
+  get:
+    tags:
+    - Tasks
+    summary: Return the data for all Tasks
+    operationId: listTasks
+    description: Outlines the parameters, optional and required, used when requesting
+      the data for all Tasks
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/assignee_id'
+    - $ref: '#/components/parameters/assignee_type'
+    - $ref: '#/components/parameters/assigner_id'
+    - $ref: '#/components/parameters/cascading_source_id'
+    - $ref: '#/components/parameters/client_id'
+    - $ref: '#/components/parameters/complete'
+    - $ref: '#/components/parameters/created_since'
+    - $ref: '#/components/parameters/due_at_from'
+    - $ref: '#/components/parameters/due_at_present'
+    - $ref: '#/components/parameters/due_at_to'
+    - $ref: '#/components/parameters/fields'
+    - $ref: ./components/parameters/ids[].yaml
+    - $ref: '#/components/parameters/limit'
+    - $ref: '#/components/parameters/matter_id'
+    - $ref: '#/components/parameters/order'
+    - $ref: '#/components/parameters/page_token'
+    - $ref: '#/components/parameters/permission'
+    - $ref: '#/components/parameters/priority'
+    - $ref: '#/components/parameters/query'
+    - $ref: '#/components/parameters/responsible_attorney_id'
+    - $ref: '#/components/parameters/status'
+    - $ref: ./components/parameters/statuses[].yaml
+    - $ref: '#/components/parameters/statute_of_limitations'
+    - $ref: '#/components/parameters/task_type_id'
+    - $ref: '#/components/parameters/time_entries_present'
+    - $ref: '#/components/parameters/updated_since'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+  post:
+    tags:
+    - Tasks
+    summary: Create a new Task
+    operationId: createTask
+    description: Outlines the parameters and data fields used when creating a new
+      Task
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    responses:
+      '201':
+        $ref: '#/components/responses/201_Created'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '422':
+        $ref: '#/components/responses/422_Unprocessable_Entity'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+    requestBody:
+      $ref: '#/components/requestBodies/ReqBody_adce5636'

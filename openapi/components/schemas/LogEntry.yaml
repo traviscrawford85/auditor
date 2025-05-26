@@ -1,26 +1,3 @@
-# copilot-audit: true
-# Description: This file is a modular part of a larger OpenAPI specification for a Clio API integration.
-# Objective: Audit this spec segment for completeness, correctness, and consistency with OpenAPI 3.1 standards.
-# Tasks:
-# 1. Verify valid OpenAPI syntax (YAML structure, keys).
-# 2. Confirm all `$ref` targets exist and are reachable (local or shared component references).
-# 3. Ensure operationId values are unique, descriptive, and follow the {method}_{resource} pattern.
-# 4. Check that requestBody and response schemas use proper `$ref`s and avoid inline duplication.
-# 5. Validate that all schemas and components are named clearly and represent their intent.
-# 6. Detect and flag unused components under `components.schemas`, `components.responses`, etc.
-# 7. Review tag usage for clarity, grouping, and alignment with x-tagGroups (if used).
-# 8. Enforce use of standard HTTP methods and response codes (e.g., 200, 201, 400, 404, 422, 500).
-# 9. Validate pagination, filtering, and sorting patterns for list endpoints.
-# 10. Check that the top-level spec (if root) defines: openapi version, info, servers, paths, components, and tags.
-# 11. Ensure every schema property has a `type` and if applicable a `format`; infer missing types where possible.
-# 12. Recommend stronger type hints (e.g., `integer` vs `string`, `date-time` vs `string`) where obvious.
-# Output:
-# - A checklist of errors or improvements, preferably with line references.
-# - Suggestions for how to fix or improve structure, naming, reuse, and typing.
-#
-# NOTE: This file is part of a spec intended to generate a custom Python client using `openapi-python-client`,
-# which expects well-formed operationIds and `$ref`s to derive method names and models.
-
 $defs:
   PolymorphicObjectBase:
     description: PolymorphicObjectBase
@@ -32,6 +9,7 @@ $defs:
         default: null
         description: Unique identifier for the *PolymorphicObject*
         title: Id
+        type: string
       type:
         anyOf:
         - type: string
@@ -39,6 +17,7 @@ $defs:
         default: null
         description: The type of the *PolymorphicObject*
         title: Type
+        type: string
       identifier:
         anyOf:
         - type: string
@@ -46,6 +25,7 @@ $defs:
         default: null
         description: A string to identify the *PolymorphicObject*
         title: Identifier
+        type: string
       secondary_identifier:
         anyOf:
         - type: string
@@ -53,6 +33,7 @@ $defs:
         default: null
         description: A secondary string to identify the *PolymorphicObject*
         title: Secondary Identifier
+        type: string
       tertiary_identifier:
         anyOf:
         - type: string
@@ -60,6 +41,7 @@ $defs:
         default: null
         description: A tertiary string to identify the *PolymorphicObject*
         title: Tertiary Identifier
+        type: string
     title: PolymorphicObjectBase
     type: object
   UserBase:
@@ -72,6 +54,7 @@ $defs:
         default: null
         description: Whether the *User* is the owner of the account
         title: Account Owner
+        type: string
       clio_connect:
         anyOf:
         - type: boolean
@@ -79,6 +62,7 @@ $defs:
         default: null
         description: Whether the *User* is a Clio Connect user
         title: Clio Connect
+        type: string
       court_rules_default_attendee:
         anyOf:
         - type: boolean
@@ -86,6 +70,7 @@ $defs:
         default: null
         description: Whether the *User* is a default attendee for court rules events
         title: Court Rules Default Attendee
+        type: string
       created_at:
         anyOf:
         - format: date-time
@@ -94,6 +79,7 @@ $defs:
         default: null
         description: The time the *User* was created (as a ISO-8601 timestamp)
         title: Created At
+        type: string
       default_calendar_id:
         anyOf:
         - type: integer
@@ -101,6 +87,7 @@ $defs:
         default: null
         description: Default calendar id for *User*.
         title: Default Calendar Id
+        type: string
       email:
         anyOf:
         - type: string
@@ -108,6 +95,7 @@ $defs:
         default: null
         description: The email of the *User*
         title: Email
+        type: string
       enabled:
         anyOf:
         - type: boolean
@@ -115,6 +103,7 @@ $defs:
         default: null
         description: Whether the *User* is allowed to log in
         title: Enabled
+        type: string
       etag:
         anyOf:
         - type: string
@@ -122,6 +111,7 @@ $defs:
         default: null
         description: ETag for the *User*
         title: Etag
+        type: string
       first_name:
         anyOf:
         - type: string
@@ -129,6 +119,7 @@ $defs:
         default: null
         description: The first name of the *User*
         title: First Name
+        type: string
       id:
         anyOf:
         - type: integer
@@ -136,6 +127,7 @@ $defs:
         default: null
         description: Unique identifier for the *User*
         title: Id
+        type: string
       initials:
         anyOf:
         - type: string
@@ -143,6 +135,7 @@ $defs:
         default: null
         description: The initials of the *User*
         title: Initials
+        type: string
       last_name:
         anyOf:
         - type: string
@@ -150,6 +143,7 @@ $defs:
         default: null
         description: The last name of the *User*
         title: Last Name
+        type: string
       name:
         anyOf:
         - type: string
@@ -157,6 +151,7 @@ $defs:
         default: null
         description: The full name of the *User*
         title: Name
+        type: string
       phone_number:
         anyOf:
         - type: string
@@ -164,6 +159,7 @@ $defs:
         default: null
         description: The primary phone number for the *User*.
         title: Phone Number
+        type: string
       rate:
         anyOf:
         - type: number
@@ -172,6 +168,7 @@ $defs:
         default: null
         description: Default user activity rate for *User*.
         title: Rate
+        type: string
       roles:
         anyOf:
         - items:
@@ -181,6 +178,7 @@ $defs:
         default: null
         description: An array of roles assigned to this *User*
         title: Roles
+        type: string
       subscription_type:
         anyOf:
         - type: string
@@ -188,6 +186,7 @@ $defs:
         default: null
         description: The subscription type of the *User*
         title: Subscription Type
+        type: string
       time_zone:
         anyOf:
         - type: string
@@ -195,6 +194,7 @@ $defs:
         default: null
         description: The selected time zone of the *User*
         title: Time Zone
+        type: string
       updated_at:
         anyOf:
         - format: date-time
@@ -203,6 +203,7 @@ $defs:
         default: null
         description: The time the *User* was last updated (as a ISO-8601 timestamp)
         title: Updated At
+        type: string
     title: UserBase
     type: object
 description: LogEntry
@@ -214,6 +215,7 @@ properties:
     default: null
     description: Unique identifier for the *LogEntry*
     title: Id
+    type: string
   etag:
     anyOf:
     - type: string
@@ -221,6 +223,7 @@ properties:
     default: null
     description: ETag for the *LogEntry*
     title: Etag
+    type: string
   type:
     anyOf:
     - type: string
@@ -228,6 +231,7 @@ properties:
     default: null
     description: The type of the *LogEntry*
     title: Type
+    type: string
   accessed_at:
     anyOf:
     - format: date-time
@@ -236,6 +240,7 @@ properties:
     default: null
     description: The time the item was last accessed (as a ISO-8601 timestamp)
     title: Accessed At
+    type: string
   created_at:
     anyOf:
     - format: date-time
@@ -244,6 +249,7 @@ properties:
     default: null
     description: The time the *LogEntry* was created (as a ISO-8601 timestamp)
     title: Created At
+    type: string
   updated_at:
     anyOf:
     - format: date-time
@@ -252,15 +258,18 @@ properties:
     default: null
     description: The time the *LogEntry* was last updated (as a ISO-8601 timestamp)
     title: Updated At
+    type: string
   item:
     anyOf:
     - $ref: '#/$defs/PolymorphicObjectBase'
     - type: 'null'
     default: null
+    type: string
   user:
     anyOf:
     - $ref: '#/$defs/UserBase'
     - type: 'null'
     default: null
+    type: string
 title: LogEntry
 type: object

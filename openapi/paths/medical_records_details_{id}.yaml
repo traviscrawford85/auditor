@@ -1,0 +1,85 @@
+/medical/records/details/{id}:
+  get:
+    tags:
+    - Medical Records Details
+    summary: Return the data for a single Medical Records Detail
+    operationId: get
+    description: 'Outlines the parameters, optional and required, used when requesting
+      the data for a single Medical Records Details
+
+      '
+    parameters:
+    - $ref: '#/components/parameters/IF-MODIFIED-SINCE'
+    - $ref: '#/components/parameters/IF-NONE-MATCH'
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/id'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '304':
+        $ref: '#/components/responses/304_Not_Modified'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+  patch:
+    tags:
+    - Medical Records Details
+    summary: Updating a Medical Records Detail
+    operationId: update
+    description: 'If there are records being passed into the Medical Records or Medical
+      Bills parameter they will be treated
+
+      as new records and new Medical Records / Medical Bills will be created.
+
+      '
+    parameters:
+    - $ref: '#/components/parameters/IF-MATCH'
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/id'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '412':
+        $ref: '#/components/responses/412_Precondition_Failed'
+      '422':
+        $ref: '#/components/responses/422_Unprocessable_Entity'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
+    requestBody:
+      $ref: '#/components/requestBodies/ReqBody_a9281122'
+  delete:
+    tags:
+    - Medical Records Details
+    summary: Destroying a Medical Records Detail
+    operationId: delete
+    description: 'When a Medical Records Detail is destroyed, the child records, such
+      as Medical Records, Medical Bills and Liens
+
+      will also be destroyed in the same transaction.
+
+      '
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/id'
+    responses:
+      '204':
+        $ref: '#/components/responses/204_No_Content'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'

@@ -1,0 +1,31 @@
+/billable/matters/ids:
+  get:
+    tags:
+    - Billable Matters
+    summary: Returns the unique identifiers of all BillableMatter
+    operationId: listIds
+    description: This data is retrieved asynchronously
+    parameters:
+    - $ref: '#/components/parameters/X-API-VERSION'
+    - $ref: '#/components/parameters/client_id'
+    - $ref: '#/components/parameters/custom_field_values'
+    - $ref: '#/components/parameters/end_date'
+    - $ref: '#/components/parameters/fields'
+    - $ref: '#/components/parameters/limit'
+    - $ref: '#/components/parameters/matter_id'
+    - $ref: '#/components/parameters/originating_attorney_id'
+    - $ref: '#/components/parameters/page_token'
+    - $ref: '#/components/parameters/query'
+    - $ref: '#/components/parameters/responsible_attorney_id'
+    - $ref: '#/components/parameters/start_date'
+    responses:
+      '200':
+        $ref: '#/components/responses/200_Ok'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '403':
+        $ref: '#/components/responses/403_Forbidden'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'

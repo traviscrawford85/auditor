@@ -26,28 +26,22 @@ COPILOT_PROMPT = """\
 # which expects well-formed operationIds and `$ref`s to derive method names and models.
 """
 
-
+def check_prompt_in_file(filepath: str) -> bool:
+    with open(filepath, "r", encoding="utf-8") as f:
+        return COPILOT_PROMPT.strip().splitlines()[0] in f.read()
 
 def prepend_prompt_to_yaml_files():
     for subdir, _, files in os.walk(OPENAPI_ROOT):
         for file in files:
             if file.endswith((".yaml", ".yml")):
                 path = os.path.join(subdir, file)
-                with open(path, "r") as f:
-                    content = f.read()
-                    if COPILOT_PROMPT.strip().splitlines()[0] not in content:
-                        with open(path, "w") as fw:
-                            fw.write(COPILOT_PROMPT + "\n" + content)
+                if not check_prompt_in_file(path):
+                    with open(path, "r", encoding="utf-8") as f:
+                        content = f.read()
+                    with open(path, "w", encoding="utf-8") as fw:
+                        fw.write(COPILOT_PROMPT + "\n" + content)
+                    print(f"Prepended prompt to: {path}")
 
-
-"""
-    Add a chek to see if the file already has the prompt and avoid adding it again
-    """
-def check_prompt_in_file(filepath):
-    with open(filepath, "r") as f:
-        content = f.read()
-        return COPILOT_PROMPT.strip().splitlines()[0] in content
-    
 if __name__ == "__main__":
     prepend_prompt_to_yaml_files()
-    print("Copilot prompt prepended to all YAML files.")
+    print("Copilot prompt prepended to all YAML files where it was missing.")

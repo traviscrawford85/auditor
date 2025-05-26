@@ -1,0 +1,25 @@
+/court/rules/matter/dockets/preview:
+  get:
+    tags:
+    - Matter Dockets
+    summary: Preview calendar dates for the docket
+    operationId: listPreviews
+    description: Preview calendar dates for the docket
+    parameters:
+    - $ref: '#/components/parameters/event_prefix'
+    - $ref: ./components/parameters/jurisdiction[id].yaml
+    - $ref: ./components/parameters/service_type[id].yaml
+    - $ref: '#/components/parameters/start_date'
+    - $ref: '#/components/parameters/start_time'
+    - $ref: ./components/parameters/trigger[id].yaml
+    responses:
+      '303':
+        $ref: '#/components/responses/303_See_Other'
+      '400':
+        $ref: '#/components/responses/400_Bad_Request'
+      '401':
+        $ref: '#/components/responses/401_Unauthorized'
+      '404':
+        $ref: '#/components/responses/404_Not_Found'
+      '429':
+        $ref: '#/components/responses/429_Too_Many_Requests'
