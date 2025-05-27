@@ -7,37 +7,40 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.mattercreate_files_body_data_status import (
-    MattercreateFilesBodyDataStatus,
-    check_mattercreate_files_body_data_status,
-)
+    MattercreateFilesBodyDataStatus, check_mattercreate_files_body_data_status)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.mattercreate_files_body_data_client import MattercreateFilesBodyDataClient
-    from ..models.mattercreate_files_body_data_custom_field_set_associations_item import (
-        MattercreateFilesBodyDataCustomFieldSetAssociationsItem,
-    )
-    from ..models.mattercreate_files_body_data_custom_field_values_item import (
-        MattercreateFilesBodyDataCustomFieldValuesItem,
-    )
-    from ..models.mattercreate_files_body_data_custom_rate import MattercreateFilesBodyDataCustomRate
-    from ..models.mattercreate_files_body_data_evergreen_retainer import MattercreateFilesBodyDataEvergreenRetainer
-    from ..models.mattercreate_files_body_data_group import MattercreateFilesBodyDataGroup
-    from ..models.mattercreate_files_body_data_matter_budget import MattercreateFilesBodyDataMatterBudget
-    from ..models.mattercreate_files_body_data_matter_stage import MattercreateFilesBodyDataMatterStage
-    from ..models.mattercreate_files_body_data_originating_attorney import MattercreateFilesBodyDataOriginatingAttorney
-    from ..models.mattercreate_files_body_data_practice_area import MattercreateFilesBodyDataPracticeArea
-    from ..models.mattercreate_files_body_data_relationships_item import MattercreateFilesBodyDataRelationshipsItem
-    from ..models.mattercreate_files_body_data_responsible_attorney import MattercreateFilesBodyDataResponsibleAttorney
-    from ..models.mattercreate_files_body_data_split_invoice_payers_item import (
-        MattercreateFilesBodyDataSplitInvoicePayersItem,
-    )
-    from ..models.mattercreate_files_body_data_statute_of_limitations import (
-        MattercreateFilesBodyDataStatuteOfLimitations,
-    )
-    from ..models.mattercreate_files_body_data_task_template_list_instances_item import (
-        MattercreateFilesBodyDataTaskTemplateListInstancesItem,
-    )
+    from ..models.mattercreate_files_body_data_client import \
+        MattercreateFilesBodyDataClient
+    from ..models.mattercreate_files_body_data_custom_field_set_associations_item import \
+        MattercreateFilesBodyDataCustomFieldSetAssociationsItem
+    from ..models.mattercreate_files_body_data_custom_field_values_item import \
+        MattercreateFilesBodyDataCustomFieldValuesItem
+    from ..models.mattercreate_files_body_data_custom_rate import \
+        MattercreateFilesBodyDataCustomRate
+    from ..models.mattercreate_files_body_data_evergreen_retainer import \
+        MattercreateFilesBodyDataEvergreenRetainer
+    from ..models.mattercreate_files_body_data_group import \
+        MattercreateFilesBodyDataGroup
+    from ..models.mattercreate_files_body_data_matter_budget import \
+        MattercreateFilesBodyDataMatterBudget
+    from ..models.mattercreate_files_body_data_matter_stage import \
+        MattercreateFilesBodyDataMatterStage
+    from ..models.mattercreate_files_body_data_originating_attorney import \
+        MattercreateFilesBodyDataOriginatingAttorney
+    from ..models.mattercreate_files_body_data_practice_area import \
+        MattercreateFilesBodyDataPracticeArea
+    from ..models.mattercreate_files_body_data_relationships_item import \
+        MattercreateFilesBodyDataRelationshipsItem
+    from ..models.mattercreate_files_body_data_responsible_attorney import \
+        MattercreateFilesBodyDataResponsibleAttorney
+    from ..models.mattercreate_files_body_data_split_invoice_payers_item import \
+        MattercreateFilesBodyDataSplitInvoicePayersItem
+    from ..models.mattercreate_files_body_data_statute_of_limitations import \
+        MattercreateFilesBodyDataStatuteOfLimitations
+    from ..models.mattercreate_files_body_data_task_template_list_instances_item import \
+        MattercreateFilesBodyDataTaskTemplateListInstancesItem
 
 
 T = TypeVar("T", bound="MattercreateFilesBodyData")
@@ -264,35 +267,36 @@ class MattercreateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.mattercreate_files_body_data_client import MattercreateFilesBodyDataClient
-        from ..models.mattercreate_files_body_data_custom_field_set_associations_item import (
-            MattercreateFilesBodyDataCustomFieldSetAssociationsItem,
-        )
-        from ..models.mattercreate_files_body_data_custom_field_values_item import (
-            MattercreateFilesBodyDataCustomFieldValuesItem,
-        )
-        from ..models.mattercreate_files_body_data_custom_rate import MattercreateFilesBodyDataCustomRate
-        from ..models.mattercreate_files_body_data_evergreen_retainer import MattercreateFilesBodyDataEvergreenRetainer
-        from ..models.mattercreate_files_body_data_group import MattercreateFilesBodyDataGroup
-        from ..models.mattercreate_files_body_data_matter_budget import MattercreateFilesBodyDataMatterBudget
-        from ..models.mattercreate_files_body_data_matter_stage import MattercreateFilesBodyDataMatterStage
-        from ..models.mattercreate_files_body_data_originating_attorney import (
-            MattercreateFilesBodyDataOriginatingAttorney,
-        )
-        from ..models.mattercreate_files_body_data_practice_area import MattercreateFilesBodyDataPracticeArea
-        from ..models.mattercreate_files_body_data_relationships_item import MattercreateFilesBodyDataRelationshipsItem
-        from ..models.mattercreate_files_body_data_responsible_attorney import (
-            MattercreateFilesBodyDataResponsibleAttorney,
-        )
-        from ..models.mattercreate_files_body_data_split_invoice_payers_item import (
-            MattercreateFilesBodyDataSplitInvoicePayersItem,
-        )
-        from ..models.mattercreate_files_body_data_statute_of_limitations import (
-            MattercreateFilesBodyDataStatuteOfLimitations,
-        )
-        from ..models.mattercreate_files_body_data_task_template_list_instances_item import (
-            MattercreateFilesBodyDataTaskTemplateListInstancesItem,
-        )
+        from ..models.mattercreate_files_body_data_client import \
+            MattercreateFilesBodyDataClient
+        from ..models.mattercreate_files_body_data_custom_field_set_associations_item import \
+            MattercreateFilesBodyDataCustomFieldSetAssociationsItem
+        from ..models.mattercreate_files_body_data_custom_field_values_item import \
+            MattercreateFilesBodyDataCustomFieldValuesItem
+        from ..models.mattercreate_files_body_data_custom_rate import \
+            MattercreateFilesBodyDataCustomRate
+        from ..models.mattercreate_files_body_data_evergreen_retainer import \
+            MattercreateFilesBodyDataEvergreenRetainer
+        from ..models.mattercreate_files_body_data_group import \
+            MattercreateFilesBodyDataGroup
+        from ..models.mattercreate_files_body_data_matter_budget import \
+            MattercreateFilesBodyDataMatterBudget
+        from ..models.mattercreate_files_body_data_matter_stage import \
+            MattercreateFilesBodyDataMatterStage
+        from ..models.mattercreate_files_body_data_originating_attorney import \
+            MattercreateFilesBodyDataOriginatingAttorney
+        from ..models.mattercreate_files_body_data_practice_area import \
+            MattercreateFilesBodyDataPracticeArea
+        from ..models.mattercreate_files_body_data_relationships_item import \
+            MattercreateFilesBodyDataRelationshipsItem
+        from ..models.mattercreate_files_body_data_responsible_attorney import \
+            MattercreateFilesBodyDataResponsibleAttorney
+        from ..models.mattercreate_files_body_data_split_invoice_payers_item import \
+            MattercreateFilesBodyDataSplitInvoicePayersItem
+        from ..models.mattercreate_files_body_data_statute_of_limitations import \
+            MattercreateFilesBodyDataStatuteOfLimitations
+        from ..models.mattercreate_files_body_data_task_template_list_instances_item import \
+            MattercreateFilesBodyDataTaskTemplateListInstancesItem
 
         d = dict(src_dict)
         client = MattercreateFilesBodyDataClient.from_dict(d.pop("client"))

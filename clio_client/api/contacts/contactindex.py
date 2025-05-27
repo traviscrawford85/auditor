@@ -7,9 +7,8 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.contact_list import ContactList
-from ...models.contactindex_custom_field_values import (
-    ContactindexCustomFieldValues,
-)
+from ...models.contactindex_custom_field_values import \
+    ContactindexCustomFieldValues
 from ...models.contactindex_initial import ContactindexInitial
 from ...models.contactindex_order import ContactindexOrder
 from ...models.contactindex_type import ContactindexType

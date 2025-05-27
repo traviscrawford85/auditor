@@ -7,7 +7,8 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.communication_show import CommunicationShow
 from ...models.communicationupdate_data_body import CommunicationupdateDataBody
-from ...models.communicationupdate_files_body import CommunicationupdateFilesBody
+from ...models.communicationupdate_files_body import \
+    CommunicationupdateFilesBody
 from ...models.communicationupdate_json_body import CommunicationupdateJsonBody
 from ...models.error import Error
 from ...types import UNSET, Response, Unset

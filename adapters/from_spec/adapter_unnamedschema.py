@@ -1,5 +1,6 @@
 # Adapter stubs for Unnamedschema
-from schemas.from_spec.unnamedschema import UnnamedschemaIn, UnnamedschemaOut, UnnamedschemaUpdate, UnnamedschemaDb
+from schemas.from_spec.unnamedschema import UnnamedschemaOut
+
 
 def convert_sdk_to_unnamedschemaout(sdk_obj):
     # TODO

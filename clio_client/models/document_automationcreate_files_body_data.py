@@ -6,14 +6,13 @@ from attrs import field as _attrs_field
 
 from ..models.document_automationcreate_files_body_data_formats_item import (
     DocumentAutomationcreateFilesBodyDataFormatsItem,
-    check_document_automationcreate_files_body_data_formats_item,
-)
+    check_document_automationcreate_files_body_data_formats_item)
 
 if TYPE_CHECKING:
-    from ..models.document_automationcreate_files_body_data_document_template import (
-        DocumentAutomationcreateFilesBodyDataDocumentTemplate,
-    )
-    from ..models.document_automationcreate_files_body_data_matter import DocumentAutomationcreateFilesBodyDataMatter
+    from ..models.document_automationcreate_files_body_data_document_template import \
+        DocumentAutomationcreateFilesBodyDataDocumentTemplate
+    from ..models.document_automationcreate_files_body_data_matter import \
+        DocumentAutomationcreateFilesBodyDataMatter
 
 
 T = TypeVar("T", bound="DocumentAutomationcreateFilesBodyData")
@@ -63,12 +62,10 @@ class DocumentAutomationcreateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.document_automationcreate_files_body_data_document_template import (
-            DocumentAutomationcreateFilesBodyDataDocumentTemplate,
-        )
-        from ..models.document_automationcreate_files_body_data_matter import (
-            DocumentAutomationcreateFilesBodyDataMatter,
-        )
+        from ..models.document_automationcreate_files_body_data_document_template import \
+            DocumentAutomationcreateFilesBodyDataDocumentTemplate
+        from ..models.document_automationcreate_files_body_data_matter import \
+            DocumentAutomationcreateFilesBodyDataMatter
 
         d = dict(src_dict)
         document_template = DocumentAutomationcreateFilesBodyDataDocumentTemplate.from_dict(d.pop("document_template"))

@@ -1,5 +1,7 @@
 # Adapter stubs for Laukcivilcontrolledrate
-from schemas.from_spec.laukcivilcontrolledrate import LaukcivilcontrolledrateIn, LaukcivilcontrolledrateOut, LaukcivilcontrolledrateUpdate, LaukcivilcontrolledrateDb
+from schemas.from_spec.laukcivilcontrolledrate import \
+    LaukcivilcontrolledrateOut
+
 
 def convert_sdk_to_laukcivilcontrolledrateout(sdk_obj):
     # TODO

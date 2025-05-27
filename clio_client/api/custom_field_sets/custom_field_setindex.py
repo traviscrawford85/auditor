@@ -8,9 +8,8 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.custom_field_set_list import CustomFieldSetList
 from ...models.custom_field_setindex_order import CustomFieldSetindexOrder
-from ...models.custom_field_setindex_parent_type import (
-    CustomFieldSetindexParentType,
-)
+from ...models.custom_field_setindex_parent_type import \
+    CustomFieldSetindexParentType
 from ...models.error import Error
 from ...types import UNSET, Response, Unset
 

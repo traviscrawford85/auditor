@@ -1,4 +1,5 @@
 from pathlib import Path
+
 import yaml
 
 REQUEST_BODIES_DIR = Path("openapi/components/requestBodies")

@@ -1,7 +1,7 @@
 import argparse
-import yaml
 from pathlib import Path
-from collections import defaultdict
+
+import yaml
 
 try:
     from openapi_spec_validator import validate_spec

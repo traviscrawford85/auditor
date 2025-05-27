@@ -7,9 +7,8 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.contactupdate_files_body_data_custom_field_values_item_custom_field import (
-        ContactupdateFilesBodyDataCustomFieldValuesItemCustomField,
-    )
+    from ..models.contactupdate_files_body_data_custom_field_values_item_custom_field import \
+        ContactupdateFilesBodyDataCustomFieldValuesItemCustomField
 
 
 T = TypeVar("T", bound="ContactupdateFilesBodyDataCustomFieldValuesItem")
@@ -60,9 +59,8 @@ class ContactupdateFilesBodyDataCustomFieldValuesItem:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.contactupdate_files_body_data_custom_field_values_item_custom_field import (
-            ContactupdateFilesBodyDataCustomFieldValuesItemCustomField,
-        )
+        from ..models.contactupdate_files_body_data_custom_field_values_item_custom_field import \
+            ContactupdateFilesBodyDataCustomFieldValuesItemCustomField
 
         d = dict(src_dict)
         value = d.pop("value", UNSET)

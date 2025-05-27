@@ -8,27 +8,22 @@ from dateutil.parser import isoparse
 
 from ..models.calendar_entrycreate_files_body_data_deleted import (
     CalendarEntrycreateFilesBodyDataDeleted,
-    check_calendar_entrycreate_files_body_data_deleted,
-)
+    check_calendar_entrycreate_files_body_data_deleted)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.calendar_entrycreate_files_body_data_attendees_item import (
-        CalendarEntrycreateFilesBodyDataAttendeesItem,
-    )
-    from ..models.calendar_entrycreate_files_body_data_calendar_entry_event_type import (
-        CalendarEntrycreateFilesBodyDataCalendarEntryEventType,
-    )
-    from ..models.calendar_entrycreate_files_body_data_calendar_owner import (
-        CalendarEntrycreateFilesBodyDataCalendarOwner,
-    )
-    from ..models.calendar_entrycreate_files_body_data_conference_meeting import (
-        CalendarEntrycreateFilesBodyDataConferenceMeeting,
-    )
-    from ..models.calendar_entrycreate_files_body_data_external_properties_item import (
-        CalendarEntrycreateFilesBodyDataExternalPropertiesItem,
-    )
-    from ..models.calendar_entrycreate_files_body_data_matter import CalendarEntrycreateFilesBodyDataMatter
+    from ..models.calendar_entrycreate_files_body_data_attendees_item import \
+        CalendarEntrycreateFilesBodyDataAttendeesItem
+    from ..models.calendar_entrycreate_files_body_data_calendar_entry_event_type import \
+        CalendarEntrycreateFilesBodyDataCalendarEntryEventType
+    from ..models.calendar_entrycreate_files_body_data_calendar_owner import \
+        CalendarEntrycreateFilesBodyDataCalendarOwner
+    from ..models.calendar_entrycreate_files_body_data_conference_meeting import \
+        CalendarEntrycreateFilesBodyDataConferenceMeeting
+    from ..models.calendar_entrycreate_files_body_data_external_properties_item import \
+        CalendarEntrycreateFilesBodyDataExternalPropertiesItem
+    from ..models.calendar_entrycreate_files_body_data_matter import \
+        CalendarEntrycreateFilesBodyDataMatter
 
 
 T = TypeVar("T", bound="CalendarEntrycreateFilesBodyData")
@@ -161,22 +156,18 @@ class CalendarEntrycreateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.calendar_entrycreate_files_body_data_attendees_item import (
-            CalendarEntrycreateFilesBodyDataAttendeesItem,
-        )
-        from ..models.calendar_entrycreate_files_body_data_calendar_entry_event_type import (
-            CalendarEntrycreateFilesBodyDataCalendarEntryEventType,
-        )
-        from ..models.calendar_entrycreate_files_body_data_calendar_owner import (
-            CalendarEntrycreateFilesBodyDataCalendarOwner,
-        )
-        from ..models.calendar_entrycreate_files_body_data_conference_meeting import (
-            CalendarEntrycreateFilesBodyDataConferenceMeeting,
-        )
-        from ..models.calendar_entrycreate_files_body_data_external_properties_item import (
-            CalendarEntrycreateFilesBodyDataExternalPropertiesItem,
-        )
-        from ..models.calendar_entrycreate_files_body_data_matter import CalendarEntrycreateFilesBodyDataMatter
+        from ..models.calendar_entrycreate_files_body_data_attendees_item import \
+            CalendarEntrycreateFilesBodyDataAttendeesItem
+        from ..models.calendar_entrycreate_files_body_data_calendar_entry_event_type import \
+            CalendarEntrycreateFilesBodyDataCalendarEntryEventType
+        from ..models.calendar_entrycreate_files_body_data_calendar_owner import \
+            CalendarEntrycreateFilesBodyDataCalendarOwner
+        from ..models.calendar_entrycreate_files_body_data_conference_meeting import \
+            CalendarEntrycreateFilesBodyDataConferenceMeeting
+        from ..models.calendar_entrycreate_files_body_data_external_properties_item import \
+            CalendarEntrycreateFilesBodyDataExternalPropertiesItem
+        from ..models.calendar_entrycreate_files_body_data_matter import \
+            CalendarEntrycreateFilesBodyDataMatter
 
         d = dict(src_dict)
         calendar_owner = CalendarEntrycreateFilesBodyDataCalendarOwner.from_dict(d.pop("calendar_owner"))

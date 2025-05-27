@@ -7,11 +7,12 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.folderupdate_files_body_data_document_category import FolderupdateFilesBodyDataDocumentCategory
-    from ..models.folderupdate_files_body_data_external_properties_item import (
-        FolderupdateFilesBodyDataExternalPropertiesItem,
-    )
-    from ..models.folderupdate_files_body_data_parent import FolderupdateFilesBodyDataParent
+    from ..models.folderupdate_files_body_data_document_category import \
+        FolderupdateFilesBodyDataDocumentCategory
+    from ..models.folderupdate_files_body_data_external_properties_item import \
+        FolderupdateFilesBodyDataExternalPropertiesItem
+    from ..models.folderupdate_files_body_data_parent import \
+        FolderupdateFilesBodyDataParent
 
 
 T = TypeVar("T", bound="FolderupdateFilesBodyData")
@@ -73,11 +74,12 @@ class FolderupdateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.folderupdate_files_body_data_document_category import FolderupdateFilesBodyDataDocumentCategory
-        from ..models.folderupdate_files_body_data_external_properties_item import (
-            FolderupdateFilesBodyDataExternalPropertiesItem,
-        )
-        from ..models.folderupdate_files_body_data_parent import FolderupdateFilesBodyDataParent
+        from ..models.folderupdate_files_body_data_document_category import \
+            FolderupdateFilesBodyDataDocumentCategory
+        from ..models.folderupdate_files_body_data_external_properties_item import \
+            FolderupdateFilesBodyDataExternalPropertiesItem
+        from ..models.folderupdate_files_body_data_parent import \
+            FolderupdateFilesBodyDataParent
 
         d = dict(src_dict)
         _document_category = d.pop("document_category", UNSET)

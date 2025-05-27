@@ -1,5 +1,7 @@
 # Adapter stubs for Conversationupdaterequestdatamatter
-from schemas.from_spec.conversationupdaterequestdatamatter import ConversationupdaterequestdatamatterIn, ConversationupdaterequestdatamatterOut, ConversationupdaterequestdatamatterUpdate, ConversationupdaterequestdatamatterDb
+from schemas.from_spec.conversationupdaterequestdatamatter import \
+    ConversationupdaterequestdatamatterOut
+
 
 def convert_sdk_to_conversationupdaterequestdatamatterout(sdk_obj):
     # TODO

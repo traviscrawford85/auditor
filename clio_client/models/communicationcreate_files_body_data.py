@@ -6,22 +6,20 @@ from attrs import field as _attrs_field
 
 from ..models.communicationcreate_files_body_data_type import (
     CommunicationcreateFilesBodyDataType,
-    check_communicationcreate_files_body_data_type,
-)
+    check_communicationcreate_files_body_data_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.communicationcreate_files_body_data_external_properties_item import (
-        CommunicationcreateFilesBodyDataExternalPropertiesItem,
-    )
-    from ..models.communicationcreate_files_body_data_matter import CommunicationcreateFilesBodyDataMatter
-    from ..models.communicationcreate_files_body_data_notification_event_subscribers_item import (
-        CommunicationcreateFilesBodyDataNotificationEventSubscribersItem,
-    )
-    from ..models.communicationcreate_files_body_data_receivers_item import (
-        CommunicationcreateFilesBodyDataReceiversItem,
-    )
-    from ..models.communicationcreate_files_body_data_senders_item import CommunicationcreateFilesBodyDataSendersItem
+    from ..models.communicationcreate_files_body_data_external_properties_item import \
+        CommunicationcreateFilesBodyDataExternalPropertiesItem
+    from ..models.communicationcreate_files_body_data_matter import \
+        CommunicationcreateFilesBodyDataMatter
+    from ..models.communicationcreate_files_body_data_notification_event_subscribers_item import \
+        CommunicationcreateFilesBodyDataNotificationEventSubscribersItem
+    from ..models.communicationcreate_files_body_data_receivers_item import \
+        CommunicationcreateFilesBodyDataReceiversItem
+    from ..models.communicationcreate_files_body_data_senders_item import \
+        CommunicationcreateFilesBodyDataSendersItem
 
 
 T = TypeVar("T", bound="CommunicationcreateFilesBodyData")
@@ -129,19 +127,16 @@ class CommunicationcreateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.communicationcreate_files_body_data_external_properties_item import (
-            CommunicationcreateFilesBodyDataExternalPropertiesItem,
-        )
-        from ..models.communicationcreate_files_body_data_matter import CommunicationcreateFilesBodyDataMatter
-        from ..models.communicationcreate_files_body_data_notification_event_subscribers_item import (
-            CommunicationcreateFilesBodyDataNotificationEventSubscribersItem,
-        )
-        from ..models.communicationcreate_files_body_data_receivers_item import (
-            CommunicationcreateFilesBodyDataReceiversItem,
-        )
-        from ..models.communicationcreate_files_body_data_senders_item import (
-            CommunicationcreateFilesBodyDataSendersItem,
-        )
+        from ..models.communicationcreate_files_body_data_external_properties_item import \
+            CommunicationcreateFilesBodyDataExternalPropertiesItem
+        from ..models.communicationcreate_files_body_data_matter import \
+            CommunicationcreateFilesBodyDataMatter
+        from ..models.communicationcreate_files_body_data_notification_event_subscribers_item import \
+            CommunicationcreateFilesBodyDataNotificationEventSubscribersItem
+        from ..models.communicationcreate_files_body_data_receivers_item import \
+            CommunicationcreateFilesBodyDataReceiversItem
+        from ..models.communicationcreate_files_body_data_senders_item import \
+            CommunicationcreateFilesBodyDataSendersItem
 
         d = dict(src_dict)
         body = d.pop("body")

@@ -6,20 +6,20 @@ from attrs import field as _attrs_field
 
 from ..models.communicationupdate_data_body_data_type import (
     CommunicationupdateDataBodyDataType,
-    check_communicationupdate_data_body_data_type,
-)
+    check_communicationupdate_data_body_data_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.communicationupdate_data_body_data_external_properties_item import (
-        CommunicationupdateDataBodyDataExternalPropertiesItem,
-    )
-    from ..models.communicationupdate_data_body_data_matter import CommunicationupdateDataBodyDataMatter
-    from ..models.communicationupdate_data_body_data_notification_event_subscribers_item import (
-        CommunicationupdateDataBodyDataNotificationEventSubscribersItem,
-    )
-    from ..models.communicationupdate_data_body_data_receivers_item import CommunicationupdateDataBodyDataReceiversItem
-    from ..models.communicationupdate_data_body_data_senders_item import CommunicationupdateDataBodyDataSendersItem
+    from ..models.communicationupdate_data_body_data_external_properties_item import \
+        CommunicationupdateDataBodyDataExternalPropertiesItem
+    from ..models.communicationupdate_data_body_data_matter import \
+        CommunicationupdateDataBodyDataMatter
+    from ..models.communicationupdate_data_body_data_notification_event_subscribers_item import \
+        CommunicationupdateDataBodyDataNotificationEventSubscribersItem
+    from ..models.communicationupdate_data_body_data_receivers_item import \
+        CommunicationupdateDataBodyDataReceiversItem
+    from ..models.communicationupdate_data_body_data_senders_item import \
+        CommunicationupdateDataBodyDataSendersItem
 
 
 T = TypeVar("T", bound="CommunicationupdateDataBodyData")
@@ -129,17 +129,16 @@ class CommunicationupdateDataBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.communicationupdate_data_body_data_external_properties_item import (
-            CommunicationupdateDataBodyDataExternalPropertiesItem,
-        )
-        from ..models.communicationupdate_data_body_data_matter import CommunicationupdateDataBodyDataMatter
-        from ..models.communicationupdate_data_body_data_notification_event_subscribers_item import (
-            CommunicationupdateDataBodyDataNotificationEventSubscribersItem,
-        )
-        from ..models.communicationupdate_data_body_data_receivers_item import (
-            CommunicationupdateDataBodyDataReceiversItem,
-        )
-        from ..models.communicationupdate_data_body_data_senders_item import CommunicationupdateDataBodyDataSendersItem
+        from ..models.communicationupdate_data_body_data_external_properties_item import \
+            CommunicationupdateDataBodyDataExternalPropertiesItem
+        from ..models.communicationupdate_data_body_data_matter import \
+            CommunicationupdateDataBodyDataMatter
+        from ..models.communicationupdate_data_body_data_notification_event_subscribers_item import \
+            CommunicationupdateDataBodyDataNotificationEventSubscribersItem
+        from ..models.communicationupdate_data_body_data_receivers_item import \
+            CommunicationupdateDataBodyDataReceiversItem
+        from ..models.communicationupdate_data_body_data_senders_item import \
+            CommunicationupdateDataBodyDataSendersItem
 
         d = dict(src_dict)
         body = d.pop("body", UNSET)

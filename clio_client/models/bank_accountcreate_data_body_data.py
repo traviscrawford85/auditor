@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.bank_accountcreate_data_body_data_type import (
     BankAccountcreateDataBodyDataType,
-    check_bank_accountcreate_data_body_data_type,
-)
+    check_bank_accountcreate_data_body_data_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="BankAccountcreateDataBodyData")

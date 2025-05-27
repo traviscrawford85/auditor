@@ -7,9 +7,8 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.matterupdate_json_body_data_evergreen_retainer_recipients_item import (
-        MatterupdateJsonBodyDataEvergreenRetainerRecipientsItem,
-    )
+    from ..models.matterupdate_json_body_data_evergreen_retainer_recipients_item import \
+        MatterupdateJsonBodyDataEvergreenRetainerRecipientsItem
 
 
 T = TypeVar("T", bound="MatterupdateJsonBodyDataEvergreenRetainer")
@@ -57,9 +56,8 @@ class MatterupdateJsonBodyDataEvergreenRetainer:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.matterupdate_json_body_data_evergreen_retainer_recipients_item import (
-            MatterupdateJsonBodyDataEvergreenRetainerRecipientsItem,
-        )
+        from ..models.matterupdate_json_body_data_evergreen_retainer_recipients_item import \
+            MatterupdateJsonBodyDataEvergreenRetainerRecipientsItem
 
         d = dict(src_dict)
         minimum_threshold = d.pop("minimum_threshold", UNSET)

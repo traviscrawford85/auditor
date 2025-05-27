@@ -7,9 +7,7 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.custom_field_value_base_field_type import (
-    CustomFieldValueBaseFieldType,
-    check_custom_field_value_base_field_type,
-)
+    CustomFieldValueBaseFieldType, check_custom_field_value_base_field_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="CustomFieldValueBase")

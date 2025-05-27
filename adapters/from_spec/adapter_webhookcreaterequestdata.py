@@ -1,5 +1,7 @@
 # Adapter stubs for Webhookcreaterequestdata
-from schemas.from_spec.webhookcreaterequestdata import WebhookcreaterequestdataIn, WebhookcreaterequestdataOut, WebhookcreaterequestdataUpdate, WebhookcreaterequestdataDb
+from schemas.from_spec.webhookcreaterequestdata import \
+    WebhookcreaterequestdataOut
+
 
 def convert_sdk_to_webhookcreaterequestdataout(sdk_obj):
     # TODO

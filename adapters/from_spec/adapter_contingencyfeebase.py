@@ -1,5 +1,6 @@
 # Adapter stubs for Contingencyfeebase
-from schemas.from_spec.contingencyfeebase import ContingencyfeeBaseIn, ContingencyfeeBaseOut, ContingencyfeeBaseUpdate, ContingencyfeeBaseDb
+from schemas.from_spec.contingencyfeebase import ContingencyfeeBaseOut
+
 
 def convert_sdk_to_contingencyfeeBaseOut(sdk_obj):
     # TODO

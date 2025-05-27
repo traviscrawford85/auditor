@@ -1,7 +1,7 @@
 import os
-import yaml
 import re
-from collections import defaultdict
+
+import yaml
 
 OPENAPI_ROOT = "./openapi"
 ALLOWED_ENTITIES = {

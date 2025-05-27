@@ -1,5 +1,7 @@
 # Adapter stubs for Conversationmembershipbase
-from schemas.from_spec.conversationmembershipbase import ConversationmembershipBaseIn, ConversationmembershipBaseOut, ConversationmembershipBaseUpdate, ConversationmembershipBaseDb
+from schemas.from_spec.conversationmembershipbase import \
+    ConversationmembershipBaseOut
+
 
 def convert_sdk_to_conversationmembershipBaseOut(sdk_obj):
     # TODO

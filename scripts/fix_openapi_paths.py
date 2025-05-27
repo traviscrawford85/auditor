@@ -1,6 +1,7 @@
-import re
-import yaml
 from pathlib import Path
+
+import yaml
+
 
 def clean_refs(obj, base_path: Path, root_dir: Path):
     if isinstance(obj, dict):

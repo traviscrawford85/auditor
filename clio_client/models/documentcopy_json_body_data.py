@@ -9,11 +9,12 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.documentcopy_json_body_data_document_category import DocumentcopyJsonBodyDataDocumentCategory
-    from ..models.documentcopy_json_body_data_external_properties_item import (
-        DocumentcopyJsonBodyDataExternalPropertiesItem,
-    )
-    from ..models.documentcopy_json_body_data_parent import DocumentcopyJsonBodyDataParent
+    from ..models.documentcopy_json_body_data_document_category import \
+        DocumentcopyJsonBodyDataDocumentCategory
+    from ..models.documentcopy_json_body_data_external_properties_item import \
+        DocumentcopyJsonBodyDataExternalPropertiesItem
+    from ..models.documentcopy_json_body_data_parent import \
+        DocumentcopyJsonBodyDataParent
 
 
 T = TypeVar("T", bound="DocumentcopyJsonBodyData")
@@ -90,11 +91,12 @@ class DocumentcopyJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.documentcopy_json_body_data_document_category import DocumentcopyJsonBodyDataDocumentCategory
-        from ..models.documentcopy_json_body_data_external_properties_item import (
-            DocumentcopyJsonBodyDataExternalPropertiesItem,
-        )
-        from ..models.documentcopy_json_body_data_parent import DocumentcopyJsonBodyDataParent
+        from ..models.documentcopy_json_body_data_document_category import \
+            DocumentcopyJsonBodyDataDocumentCategory
+        from ..models.documentcopy_json_body_data_external_properties_item import \
+            DocumentcopyJsonBodyDataExternalPropertiesItem
+        from ..models.documentcopy_json_body_data_parent import \
+            DocumentcopyJsonBodyDataParent
 
         d = dict(src_dict)
         parent = DocumentcopyJsonBodyDataParent.from_dict(d.pop("parent"))

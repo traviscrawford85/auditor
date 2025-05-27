@@ -1,5 +1,6 @@
 # Adapter stubs for Documentautomationbase
-from schemas.from_spec.documentautomationbase import DocumentautomationBaseIn, DocumentautomationBaseOut, DocumentautomationBaseUpdate, DocumentautomationBaseDb
+from schemas.from_spec.documentautomationbase import DocumentautomationBaseOut
+
 
 def convert_sdk_to_documentautomationBaseOut(sdk_obj):
     # TODO

@@ -8,7 +8,8 @@ from ...client import AuthenticatedClient, Client
 from ...models.error import Error
 from ...models.task_template_show import TaskTemplateShow
 from ...models.task_templatecreate_data_body import TaskTemplatecreateDataBody
-from ...models.task_templatecreate_files_body import TaskTemplatecreateFilesBody
+from ...models.task_templatecreate_files_body import \
+    TaskTemplatecreateFilesBody
 from ...models.task_templatecreate_json_body import TaskTemplatecreateJsonBody
 from ...types import UNSET, Response, Unset
 

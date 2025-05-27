@@ -1,5 +1,6 @@
-import yaml
 from pathlib import Path
+
+import yaml
 
 SCHEMAS_DIR = Path("openapi/components/schemas")
 OUTPUT_FILE = Path("openapi/components/schemas.yaml")

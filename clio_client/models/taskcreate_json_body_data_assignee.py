@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.taskcreate_json_body_data_assignee_type import (
     TaskcreateJsonBodyDataAssigneeType,
-    check_taskcreate_json_body_data_assignee_type,
-)
+    check_taskcreate_json_body_data_assignee_type)
 
 T = TypeVar("T", bound="TaskcreateJsonBodyDataAssignee")
 

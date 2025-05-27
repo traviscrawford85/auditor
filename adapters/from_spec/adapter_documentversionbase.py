@@ -1,5 +1,6 @@
 # Adapter stubs for Documentversionbase
-from schemas.from_spec.documentversionbase import DocumentversionBaseIn, DocumentversionBaseOut, DocumentversionBaseUpdate, DocumentversionBaseDb
+from schemas.from_spec.documentversionbase import DocumentversionBaseOut
+
 
 def convert_sdk_to_documentversionBaseOut(sdk_obj):
     # TODO

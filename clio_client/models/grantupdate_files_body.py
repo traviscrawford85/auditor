@@ -52,7 +52,8 @@ class GrantupdateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.grantupdate_files_body_data import GrantupdateFilesBodyData
+        from ..models.grantupdate_files_body_data import \
+            GrantupdateFilesBodyData
 
         d = dict(src_dict)
         data = GrantupdateFilesBodyData.from_dict(d.pop("data"))

@@ -1,5 +1,6 @@
 # Adapter stubs for Laukexpensecategory
-from schemas.from_spec.laukexpensecategory import LaukexpensecategoryIn, LaukexpensecategoryOut, LaukexpensecategoryUpdate, LaukexpensecategoryDb
+from schemas.from_spec.laukexpensecategory import LaukexpensecategoryOut
+
 
 def convert_sdk_to_laukexpensecategoryout(sdk_obj):
     # TODO

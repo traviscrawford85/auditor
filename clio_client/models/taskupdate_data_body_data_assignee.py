@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.taskupdate_data_body_data_assignee_type import (
     TaskupdateDataBodyDataAssigneeType,
-    check_taskupdate_data_body_data_assignee_type,
-)
+    check_taskupdate_data_body_data_assignee_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="TaskupdateDataBodyDataAssignee")

@@ -36,7 +36,8 @@ class DamageupdateJsonBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.damageupdate_json_body_data import DamageupdateJsonBodyData
+        from ..models.damageupdate_json_body_data import \
+            DamageupdateJsonBodyData
 
         d = dict(src_dict)
         data = DamageupdateJsonBodyData.from_dict(d.pop("data"))

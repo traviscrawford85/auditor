@@ -1,5 +1,6 @@
 # Adapter stubs for Communicationbase
-from schemas.from_spec.communicationbase import CommunicationBaseIn, CommunicationBaseOut, CommunicationBaseUpdate, CommunicationBaseDb
+from schemas.from_spec.communicationbase import CommunicationBaseOut
+
 
 def convert_sdk_to_communicationBaseOut(sdk_obj):
     # TODO

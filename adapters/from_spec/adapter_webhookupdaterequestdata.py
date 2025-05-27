@@ -1,5 +1,7 @@
 # Adapter stubs for Webhookupdaterequestdata
-from schemas.from_spec.webhookupdaterequestdata import WebhookupdaterequestdataIn, WebhookupdaterequestdataOut, WebhookupdaterequestdataUpdate, WebhookupdaterequestdataDb
+from schemas.from_spec.webhookupdaterequestdata import \
+    WebhookupdaterequestdataOut
+
 
 def convert_sdk_to_webhookupdaterequestdataout(sdk_obj):
     # TODO

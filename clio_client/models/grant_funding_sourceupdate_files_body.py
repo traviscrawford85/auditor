@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.grant_funding_sourceupdate_files_body_data import GrantFundingSourceupdateFilesBodyData
+    from ..models.grant_funding_sourceupdate_files_body_data import \
+        GrantFundingSourceupdateFilesBodyData
 
 
 T = TypeVar("T", bound="GrantFundingSourceupdateFilesBody")
@@ -52,7 +53,8 @@ class GrantFundingSourceupdateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.grant_funding_sourceupdate_files_body_data import GrantFundingSourceupdateFilesBodyData
+        from ..models.grant_funding_sourceupdate_files_body_data import \
+            GrantFundingSourceupdateFilesBodyData
 
         d = dict(src_dict)
         data = GrantFundingSourceupdateFilesBodyData.from_dict(d.pop("data"))

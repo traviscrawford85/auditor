@@ -1,5 +1,7 @@
 # Adapter stubs for Matterupdaterequestdataclient
-from schemas.from_spec.matterupdaterequestdataclient import MatterupdaterequestdataclientIn, MatterupdaterequestdataclientOut, MatterupdaterequestdataclientUpdate, MatterupdaterequestdataclientDb
+from schemas.from_spec.matterupdaterequestdataclient import \
+    MatterupdaterequestdataclientOut
+
 
 def convert_sdk_to_matterupdaterequestdataclientout(sdk_obj):
     # TODO

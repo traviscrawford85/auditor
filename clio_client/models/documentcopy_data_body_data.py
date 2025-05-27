@@ -9,11 +9,12 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.documentcopy_data_body_data_document_category import DocumentcopyDataBodyDataDocumentCategory
-    from ..models.documentcopy_data_body_data_external_properties_item import (
-        DocumentcopyDataBodyDataExternalPropertiesItem,
-    )
-    from ..models.documentcopy_data_body_data_parent import DocumentcopyDataBodyDataParent
+    from ..models.documentcopy_data_body_data_document_category import \
+        DocumentcopyDataBodyDataDocumentCategory
+    from ..models.documentcopy_data_body_data_external_properties_item import \
+        DocumentcopyDataBodyDataExternalPropertiesItem
+    from ..models.documentcopy_data_body_data_parent import \
+        DocumentcopyDataBodyDataParent
 
 
 T = TypeVar("T", bound="DocumentcopyDataBodyData")
@@ -90,11 +91,12 @@ class DocumentcopyDataBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.documentcopy_data_body_data_document_category import DocumentcopyDataBodyDataDocumentCategory
-        from ..models.documentcopy_data_body_data_external_properties_item import (
-            DocumentcopyDataBodyDataExternalPropertiesItem,
-        )
-        from ..models.documentcopy_data_body_data_parent import DocumentcopyDataBodyDataParent
+        from ..models.documentcopy_data_body_data_document_category import \
+            DocumentcopyDataBodyDataDocumentCategory
+        from ..models.documentcopy_data_body_data_external_properties_item import \
+            DocumentcopyDataBodyDataExternalPropertiesItem
+        from ..models.documentcopy_data_body_data_parent import \
+            DocumentcopyDataBodyDataParent
 
         d = dict(src_dict)
         parent = DocumentcopyDataBodyDataParent.from_dict(d.pop("parent"))

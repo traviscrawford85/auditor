@@ -1,5 +1,6 @@
 # Adapter stubs for Accountbase
-from schemas.from_spec.accountbase import AccountBaseIn, AccountBaseOut, AccountBaseUpdate, AccountBaseDb
+from schemas.from_spec.accountbase import AccountBaseOut
+
 
 def convert_sdk_to_accountBaseOut(sdk_obj):
     # TODO

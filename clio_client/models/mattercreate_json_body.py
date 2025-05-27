@@ -36,7 +36,8 @@ class MattercreateJsonBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.mattercreate_json_body_data import MattercreateJsonBodyData
+        from ..models.mattercreate_json_body_data import \
+            MattercreateJsonBodyData
 
         d = dict(src_dict)
         data = MattercreateJsonBodyData.from_dict(d.pop("data"))

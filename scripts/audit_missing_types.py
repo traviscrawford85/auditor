@@ -1,6 +1,6 @@
-import os
-import yaml
 from pathlib import Path
+
+import yaml
 
 SCHEMA_PATH = Path("./openapi/components/schemas")
 MISSING_TYPE_LOG = "missing_schema_property_types.txt"

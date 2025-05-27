@@ -36,7 +36,8 @@ class DamagecreateDataBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.damagecreate_data_body_data import DamagecreateDataBodyData
+        from ..models.damagecreate_data_body_data import \
+            DamagecreateDataBodyData
 
         d = dict(src_dict)
         data = DamagecreateDataBodyData.from_dict(d.pop("data"))

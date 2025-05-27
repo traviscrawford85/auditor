@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.documentcopy_json_body_data_parent_type import (
     DocumentcopyJsonBodyDataParentType,
-    check_documentcopy_json_body_data_parent_type,
-)
+    check_documentcopy_json_body_data_parent_type)
 
 T = TypeVar("T", bound="DocumentcopyJsonBodyDataParent")
 

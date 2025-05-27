@@ -7,11 +7,12 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.foldercreate_json_body_data_document_category import FoldercreateJsonBodyDataDocumentCategory
-    from ..models.foldercreate_json_body_data_external_properties_item import (
-        FoldercreateJsonBodyDataExternalPropertiesItem,
-    )
-    from ..models.foldercreate_json_body_data_parent import FoldercreateJsonBodyDataParent
+    from ..models.foldercreate_json_body_data_document_category import \
+        FoldercreateJsonBodyDataDocumentCategory
+    from ..models.foldercreate_json_body_data_external_properties_item import \
+        FoldercreateJsonBodyDataExternalPropertiesItem
+    from ..models.foldercreate_json_body_data_parent import \
+        FoldercreateJsonBodyDataParent
 
 
 T = TypeVar("T", bound="FoldercreateJsonBodyData")
@@ -72,11 +73,12 @@ class FoldercreateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.foldercreate_json_body_data_document_category import FoldercreateJsonBodyDataDocumentCategory
-        from ..models.foldercreate_json_body_data_external_properties_item import (
-            FoldercreateJsonBodyDataExternalPropertiesItem,
-        )
-        from ..models.foldercreate_json_body_data_parent import FoldercreateJsonBodyDataParent
+        from ..models.foldercreate_json_body_data_document_category import \
+            FoldercreateJsonBodyDataDocumentCategory
+        from ..models.foldercreate_json_body_data_external_properties_item import \
+            FoldercreateJsonBodyDataExternalPropertiesItem
+        from ..models.foldercreate_json_body_data_parent import \
+            FoldercreateJsonBodyDataParent
 
         d = dict(src_dict)
         name = d.pop("name")

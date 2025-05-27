@@ -7,9 +7,12 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.error import Error
 from ...models.medical_record_show import MedicalRecordShow
-from ...models.medical_recordupdate_data_body import MedicalRecordupdateDataBody
-from ...models.medical_recordupdate_files_body import MedicalRecordupdateFilesBody
-from ...models.medical_recordupdate_json_body import MedicalRecordupdateJsonBody
+from ...models.medical_recordupdate_data_body import \
+    MedicalRecordupdateDataBody
+from ...models.medical_recordupdate_files_body import \
+    MedicalRecordupdateFilesBody
+from ...models.medical_recordupdate_json_body import \
+    MedicalRecordupdateJsonBody
 from ...types import UNSET, Response, Unset
 
 

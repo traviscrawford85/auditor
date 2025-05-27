@@ -1,5 +1,7 @@
 # Adapter stubs for Commentcreaterequestdataitem
-from schemas.from_spec.commentcreaterequestdataitem import CommentcreaterequestdataitemIn, CommentcreaterequestdataitemOut, CommentcreaterequestdataitemUpdate, CommentcreaterequestdataitemDb
+from schemas.from_spec.commentcreaterequestdataitem import \
+    CommentcreaterequestdataitemOut
+
 
 def convert_sdk_to_commentcreaterequestdataitemout(sdk_obj):
     # TODO

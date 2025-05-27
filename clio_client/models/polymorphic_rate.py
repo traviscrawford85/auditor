@@ -9,7 +9,8 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.polymorphic_rate_activity_description import PolymorphicRateActivityDescription
+    from ..models.polymorphic_rate_activity_description import \
+        PolymorphicRateActivityDescription
     from ..models.polymorphic_rate_group import PolymorphicRateGroup
     from ..models.polymorphic_rate_user import PolymorphicRateUser
 
@@ -145,7 +146,8 @@ class PolymorphicRate:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.polymorphic_rate_activity_description import PolymorphicRateActivityDescription
+        from ..models.polymorphic_rate_activity_description import \
+            PolymorphicRateActivityDescription
         from ..models.polymorphic_rate_group import PolymorphicRateGroup
         from ..models.polymorphic_rate_user import PolymorphicRateUser
 

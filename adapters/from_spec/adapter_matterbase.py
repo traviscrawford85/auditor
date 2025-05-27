@@ -1,5 +1,6 @@
 # Adapter stubs for Matterbase
-from schemas.from_spec.matterbase import MatterBaseIn, MatterBaseOut, MatterBaseUpdate, MatterBaseDb
+from schemas.from_spec.matterbase import MatterBaseOut
+
 
 def convert_sdk_to_matterBaseOut(sdk_obj):
     # TODO

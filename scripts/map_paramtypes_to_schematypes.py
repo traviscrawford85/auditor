@@ -1,5 +1,6 @@
+from typing import Any, Dict
+
 import yaml
-from typing import Dict, Any
 
 # Refactor of the JSON version to handle YAML
 yaml_input_path = "final.normalized.yaml"

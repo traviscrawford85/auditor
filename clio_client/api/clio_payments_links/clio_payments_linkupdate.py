@@ -6,9 +6,12 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.clio_payments_link_show import ClioPaymentsLinkShow
-from ...models.clio_payments_linkupdate_data_body import ClioPaymentsLinkupdateDataBody
-from ...models.clio_payments_linkupdate_files_body import ClioPaymentsLinkupdateFilesBody
-from ...models.clio_payments_linkupdate_json_body import ClioPaymentsLinkupdateJsonBody
+from ...models.clio_payments_linkupdate_data_body import \
+    ClioPaymentsLinkupdateDataBody
+from ...models.clio_payments_linkupdate_files_body import \
+    ClioPaymentsLinkupdateFilesBody
+from ...models.clio_payments_linkupdate_json_body import \
+    ClioPaymentsLinkupdateJsonBody
 from ...models.error import Error
 from ...types import UNSET, Response, Unset
 

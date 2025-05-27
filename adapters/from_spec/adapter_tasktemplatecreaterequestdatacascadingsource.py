@@ -1,5 +1,7 @@
 # Adapter stubs for Tasktemplatecreaterequestdatacascadingsource
-from schemas.from_spec.tasktemplatecreaterequestdatacascadingsource import TasktemplatecreaterequestdatacascadingsourceIn, TasktemplatecreaterequestdatacascadingsourceOut, TasktemplatecreaterequestdatacascadingsourceUpdate, TasktemplatecreaterequestdatacascadingsourceDb
+from schemas.from_spec.tasktemplatecreaterequestdatacascadingsource import \
+    TasktemplatecreaterequestdatacascadingsourceOut
+
 
 def convert_sdk_to_tasktemplatecreaterequestdatacascadingsourceout(sdk_obj):
     # TODO

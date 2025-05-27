@@ -8,8 +8,7 @@ from dateutil.parser import isoparse
 
 from ..models.calendar_entry_event_type_base_color import (
     CalendarEntryEventTypeBaseColor,
-    check_calendar_entry_event_type_base_color,
-)
+    check_calendar_entry_event_type_base_color)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="CalendarEntryCalendarEntryEventType")

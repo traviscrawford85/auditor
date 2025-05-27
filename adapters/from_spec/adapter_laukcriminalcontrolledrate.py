@@ -1,5 +1,7 @@
 # Adapter stubs for Laukcriminalcontrolledrate
-from schemas.from_spec.laukcriminalcontrolledrate import LaukcriminalcontrolledrateIn, LaukcriminalcontrolledrateOut, LaukcriminalcontrolledrateUpdate, LaukcriminalcontrolledrateDb
+from schemas.from_spec.laukcriminalcontrolledrate import \
+    LaukcriminalcontrolledrateOut
+
 
 def convert_sdk_to_laukcriminalcontrolledrateout(sdk_obj):
     # TODO

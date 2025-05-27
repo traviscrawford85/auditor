@@ -8,32 +8,38 @@ from dateutil.parser import isoparse
 
 from ..models.activitycreate_json_body_data_tax_setting import (
     ActivitycreateJsonBodyDataTaxSetting,
-    check_activitycreate_json_body_data_tax_setting,
-)
+    check_activitycreate_json_body_data_tax_setting)
 from ..models.activitycreate_json_body_data_type import (
-    ActivitycreateJsonBodyDataType,
-    check_activitycreate_json_body_data_type,
-)
+    ActivitycreateJsonBodyDataType, check_activitycreate_json_body_data_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.activitycreate_json_body_data_activity_description import (
-        ActivitycreateJsonBodyDataActivityDescription,
-    )
-    from ..models.activitycreate_json_body_data_calendar_entry import ActivitycreateJsonBodyDataCalendarEntry
-    from ..models.activitycreate_json_body_data_client_portal import ActivitycreateJsonBodyDataClientPortal
-    from ..models.activitycreate_json_body_data_communication import ActivitycreateJsonBodyDataCommunication
-    from ..models.activitycreate_json_body_data_contact_note import ActivitycreateJsonBodyDataContactNote
-    from ..models.activitycreate_json_body_data_expense_category import ActivitycreateJsonBodyDataExpenseCategory
-    from ..models.activitycreate_json_body_data_matter import ActivitycreateJsonBodyDataMatter
-    from ..models.activitycreate_json_body_data_matter_note import ActivitycreateJsonBodyDataMatterNote
-    from ..models.activitycreate_json_body_data_task import ActivitycreateJsonBodyDataTask
-    from ..models.activitycreate_json_body_data_text_message_conversation import (
-        ActivitycreateJsonBodyDataTextMessageConversation,
-    )
-    from ..models.activitycreate_json_body_data_user import ActivitycreateJsonBodyDataUser
-    from ..models.activitycreate_json_body_data_utbms_expense import ActivitycreateJsonBodyDataUtbmsExpense
-    from ..models.activitycreate_json_body_data_vendor import ActivitycreateJsonBodyDataVendor
+    from ..models.activitycreate_json_body_data_activity_description import \
+        ActivitycreateJsonBodyDataActivityDescription
+    from ..models.activitycreate_json_body_data_calendar_entry import \
+        ActivitycreateJsonBodyDataCalendarEntry
+    from ..models.activitycreate_json_body_data_client_portal import \
+        ActivitycreateJsonBodyDataClientPortal
+    from ..models.activitycreate_json_body_data_communication import \
+        ActivitycreateJsonBodyDataCommunication
+    from ..models.activitycreate_json_body_data_contact_note import \
+        ActivitycreateJsonBodyDataContactNote
+    from ..models.activitycreate_json_body_data_expense_category import \
+        ActivitycreateJsonBodyDataExpenseCategory
+    from ..models.activitycreate_json_body_data_matter import \
+        ActivitycreateJsonBodyDataMatter
+    from ..models.activitycreate_json_body_data_matter_note import \
+        ActivitycreateJsonBodyDataMatterNote
+    from ..models.activitycreate_json_body_data_task import \
+        ActivitycreateJsonBodyDataTask
+    from ..models.activitycreate_json_body_data_text_message_conversation import \
+        ActivitycreateJsonBodyDataTextMessageConversation
+    from ..models.activitycreate_json_body_data_user import \
+        ActivitycreateJsonBodyDataUser
+    from ..models.activitycreate_json_body_data_utbms_expense import \
+        ActivitycreateJsonBodyDataUtbmsExpense
+    from ..models.activitycreate_json_body_data_vendor import \
+        ActivitycreateJsonBodyDataVendor
 
 
 T = TypeVar("T", bound="ActivitycreateJsonBodyData")
@@ -249,23 +255,32 @@ class ActivitycreateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.activitycreate_json_body_data_activity_description import (
-            ActivitycreateJsonBodyDataActivityDescription,
-        )
-        from ..models.activitycreate_json_body_data_calendar_entry import ActivitycreateJsonBodyDataCalendarEntry
-        from ..models.activitycreate_json_body_data_client_portal import ActivitycreateJsonBodyDataClientPortal
-        from ..models.activitycreate_json_body_data_communication import ActivitycreateJsonBodyDataCommunication
-        from ..models.activitycreate_json_body_data_contact_note import ActivitycreateJsonBodyDataContactNote
-        from ..models.activitycreate_json_body_data_expense_category import ActivitycreateJsonBodyDataExpenseCategory
-        from ..models.activitycreate_json_body_data_matter import ActivitycreateJsonBodyDataMatter
-        from ..models.activitycreate_json_body_data_matter_note import ActivitycreateJsonBodyDataMatterNote
-        from ..models.activitycreate_json_body_data_task import ActivitycreateJsonBodyDataTask
-        from ..models.activitycreate_json_body_data_text_message_conversation import (
-            ActivitycreateJsonBodyDataTextMessageConversation,
-        )
-        from ..models.activitycreate_json_body_data_user import ActivitycreateJsonBodyDataUser
-        from ..models.activitycreate_json_body_data_utbms_expense import ActivitycreateJsonBodyDataUtbmsExpense
-        from ..models.activitycreate_json_body_data_vendor import ActivitycreateJsonBodyDataVendor
+        from ..models.activitycreate_json_body_data_activity_description import \
+            ActivitycreateJsonBodyDataActivityDescription
+        from ..models.activitycreate_json_body_data_calendar_entry import \
+            ActivitycreateJsonBodyDataCalendarEntry
+        from ..models.activitycreate_json_body_data_client_portal import \
+            ActivitycreateJsonBodyDataClientPortal
+        from ..models.activitycreate_json_body_data_communication import \
+            ActivitycreateJsonBodyDataCommunication
+        from ..models.activitycreate_json_body_data_contact_note import \
+            ActivitycreateJsonBodyDataContactNote
+        from ..models.activitycreate_json_body_data_expense_category import \
+            ActivitycreateJsonBodyDataExpenseCategory
+        from ..models.activitycreate_json_body_data_matter import \
+            ActivitycreateJsonBodyDataMatter
+        from ..models.activitycreate_json_body_data_matter_note import \
+            ActivitycreateJsonBodyDataMatterNote
+        from ..models.activitycreate_json_body_data_task import \
+            ActivitycreateJsonBodyDataTask
+        from ..models.activitycreate_json_body_data_text_message_conversation import \
+            ActivitycreateJsonBodyDataTextMessageConversation
+        from ..models.activitycreate_json_body_data_user import \
+            ActivitycreateJsonBodyDataUser
+        from ..models.activitycreate_json_body_data_utbms_expense import \
+            ActivitycreateJsonBodyDataUtbmsExpense
+        from ..models.activitycreate_json_body_data_vendor import \
+            ActivitycreateJsonBodyDataVendor
 
         d = dict(src_dict)
         date = isoparse(d.pop("date")).date()

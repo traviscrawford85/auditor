@@ -8,21 +8,17 @@ from dateutil.parser import isoparse
 
 from ..models.medical_records_requestupdate_data_body_data_bills_status import (
     MedicalRecordsRequestupdateDataBodyDataBillsStatus,
-    check_medical_records_requestupdate_data_body_data_bills_status,
-)
+    check_medical_records_requestupdate_data_body_data_bills_status)
 from ..models.medical_records_requestupdate_data_body_data_records_status import (
     MedicalRecordsRequestupdateDataBodyDataRecordsStatus,
-    check_medical_records_requestupdate_data_body_data_records_status,
-)
+    check_medical_records_requestupdate_data_body_data_records_status)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.medical_records_requestupdate_data_body_data_medical_bills_item import (
-        MedicalRecordsRequestupdateDataBodyDataMedicalBillsItem,
-    )
-    from ..models.medical_records_requestupdate_data_body_data_medical_records_item import (
-        MedicalRecordsRequestupdateDataBodyDataMedicalRecordsItem,
-    )
+    from ..models.medical_records_requestupdate_data_body_data_medical_bills_item import \
+        MedicalRecordsRequestupdateDataBodyDataMedicalBillsItem
+    from ..models.medical_records_requestupdate_data_body_data_medical_records_item import \
+        MedicalRecordsRequestupdateDataBodyDataMedicalRecordsItem
 
 
 T = TypeVar("T", bound="MedicalRecordsRequestupdateDataBodyData")
@@ -157,12 +153,10 @@ class MedicalRecordsRequestupdateDataBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.medical_records_requestupdate_data_body_data_medical_bills_item import (
-            MedicalRecordsRequestupdateDataBodyDataMedicalBillsItem,
-        )
-        from ..models.medical_records_requestupdate_data_body_data_medical_records_item import (
-            MedicalRecordsRequestupdateDataBodyDataMedicalRecordsItem,
-        )
+        from ..models.medical_records_requestupdate_data_body_data_medical_bills_item import \
+            MedicalRecordsRequestupdateDataBodyDataMedicalBillsItem
+        from ..models.medical_records_requestupdate_data_body_data_medical_records_item import \
+            MedicalRecordsRequestupdateDataBodyDataMedicalRecordsItem
 
         d = dict(src_dict)
         _bills_follow_up_date = d.pop("bills_follow_up_date", UNSET)

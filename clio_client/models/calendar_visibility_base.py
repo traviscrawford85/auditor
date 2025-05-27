@@ -6,11 +6,11 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.calendar_visibility_base_color import CalendarVisibilityBaseColor, check_calendar_visibility_base_color
+from ..models.calendar_visibility_base_color import (
+    CalendarVisibilityBaseColor, check_calendar_visibility_base_color)
 from ..models.calendar_visibility_base_light_color import (
     CalendarVisibilityBaseLightColor,
-    check_calendar_visibility_base_light_color,
-)
+    check_calendar_visibility_base_light_color)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="CalendarVisibilityBase")

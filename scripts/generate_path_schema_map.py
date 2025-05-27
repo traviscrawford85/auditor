@@ -1,5 +1,7 @@
-import sys, os, yaml
+import sys
 from pathlib import Path
+
+import yaml
 
 input_dir = Path(sys.argv[1])
 output_file = Path(sys.argv[2])

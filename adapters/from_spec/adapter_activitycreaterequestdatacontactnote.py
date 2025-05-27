@@ -1,5 +1,7 @@
 # Adapter stubs for Activitycreaterequestdatacontactnote
-from schemas.from_spec.activitycreaterequestdatacontactnote import ActivitycreaterequestdatacontactnoteIn, ActivitycreaterequestdatacontactnoteOut, ActivitycreaterequestdatacontactnoteUpdate, ActivitycreaterequestdatacontactnoteDb
+from schemas.from_spec.activitycreaterequestdatacontactnote import \
+    ActivitycreaterequestdatacontactnoteOut
+
 
 def convert_sdk_to_activitycreaterequestdatacontactnoteout(sdk_obj):
     # TODO

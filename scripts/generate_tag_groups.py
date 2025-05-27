@@ -1,7 +1,8 @@
-import yaml
 import os
 import re
 from collections import defaultdict
+
+import yaml
 
 ROOT_PATH = "./openapi/root.yaml"
 

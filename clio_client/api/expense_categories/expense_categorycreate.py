@@ -7,9 +7,12 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.error import Error
 from ...models.expense_category_show import ExpenseCategoryShow
-from ...models.expense_categorycreate_data_body import ExpenseCategorycreateDataBody
-from ...models.expense_categorycreate_files_body import ExpenseCategorycreateFilesBody
-from ...models.expense_categorycreate_json_body import ExpenseCategorycreateJsonBody
+from ...models.expense_categorycreate_data_body import \
+    ExpenseCategorycreateDataBody
+from ...models.expense_categorycreate_files_body import \
+    ExpenseCategorycreateFilesBody
+from ...models.expense_categorycreate_json_body import \
+    ExpenseCategorycreateJsonBody
 from ...types import UNSET, Response, Unset
 
 

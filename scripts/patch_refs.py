@@ -1,5 +1,6 @@
-import yaml
 from pathlib import Path
+
+import yaml
 
 OPENAPI_DIR = Path('openapi')
 COMPONENTS_DIR = 'components'

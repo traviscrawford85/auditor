@@ -1,5 +1,6 @@
 # Adapter stubs for Picklistoption
-from schemas.from_spec.picklistoption import PicklistoptionIn, PicklistoptionOut, PicklistoptionUpdate, PicklistoptionDb
+from schemas.from_spec.picklistoption import PicklistoptionOut
+
 
 def convert_sdk_to_picklistoptionout(sdk_obj):
     # TODO

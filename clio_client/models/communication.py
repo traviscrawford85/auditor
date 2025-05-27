@@ -6,17 +6,20 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.communication_base_type import CommunicationBaseType, check_communication_base_type
+from ..models.communication_base_type import (CommunicationBaseType,
+                                              check_communication_base_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.activity_base import ActivityBase
-    from ..models.communication_communication_eml_file import CommunicationCommunicationEmlFile
+    from ..models.communication_communication_eml_file import \
+        CommunicationCommunicationEmlFile
     from ..models.communication_matter import CommunicationMatter
     from ..models.communication_user import CommunicationUser
     from ..models.document_base import DocumentBase
     from ..models.external_property_base import ExternalPropertyBase
-    from ..models.notification_event_subscriber_base import NotificationEventSubscriberBase
+    from ..models.notification_event_subscriber_base import \
+        NotificationEventSubscriberBase
     from ..models.participant import Participant
 
 
@@ -203,12 +206,14 @@ class Communication:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.activity_base import ActivityBase
-        from ..models.communication_communication_eml_file import CommunicationCommunicationEmlFile
+        from ..models.communication_communication_eml_file import \
+            CommunicationCommunicationEmlFile
         from ..models.communication_matter import CommunicationMatter
         from ..models.communication_user import CommunicationUser
         from ..models.document_base import DocumentBase
         from ..models.external_property_base import ExternalPropertyBase
-        from ..models.notification_event_subscriber_base import NotificationEventSubscriberBase
+        from ..models.notification_event_subscriber_base import \
+            NotificationEventSubscriberBase
         from ..models.participant import Participant
 
         d = dict(src_dict)

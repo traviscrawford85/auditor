@@ -9,12 +9,14 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.documentupdate_json_body_data_document_category import DocumentupdateJsonBodyDataDocumentCategory
-    from ..models.documentupdate_json_body_data_external_properties_item import (
-        DocumentupdateJsonBodyDataExternalPropertiesItem,
-    )
-    from ..models.documentupdate_json_body_data_multiparts_item import DocumentupdateJsonBodyDataMultipartsItem
-    from ..models.documentupdate_json_body_data_parent import DocumentupdateJsonBodyDataParent
+    from ..models.documentupdate_json_body_data_document_category import \
+        DocumentupdateJsonBodyDataDocumentCategory
+    from ..models.documentupdate_json_body_data_external_properties_item import \
+        DocumentupdateJsonBodyDataExternalPropertiesItem
+    from ..models.documentupdate_json_body_data_multiparts_item import \
+        DocumentupdateJsonBodyDataMultipartsItem
+    from ..models.documentupdate_json_body_data_parent import \
+        DocumentupdateJsonBodyDataParent
 
 
 T = TypeVar("T", bound="DocumentupdateJsonBodyData")
@@ -128,12 +130,14 @@ class DocumentupdateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.documentupdate_json_body_data_document_category import DocumentupdateJsonBodyDataDocumentCategory
-        from ..models.documentupdate_json_body_data_external_properties_item import (
-            DocumentupdateJsonBodyDataExternalPropertiesItem,
-        )
-        from ..models.documentupdate_json_body_data_multiparts_item import DocumentupdateJsonBodyDataMultipartsItem
-        from ..models.documentupdate_json_body_data_parent import DocumentupdateJsonBodyDataParent
+        from ..models.documentupdate_json_body_data_document_category import \
+            DocumentupdateJsonBodyDataDocumentCategory
+        from ..models.documentupdate_json_body_data_external_properties_item import \
+            DocumentupdateJsonBodyDataExternalPropertiesItem
+        from ..models.documentupdate_json_body_data_multiparts_item import \
+            DocumentupdateJsonBodyDataMultipartsItem
+        from ..models.documentupdate_json_body_data_parent import \
+            DocumentupdateJsonBodyDataParent
 
         d = dict(src_dict)
         communication_id = d.pop("communication_id", UNSET)

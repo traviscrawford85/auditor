@@ -7,9 +7,8 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.matterupdate_data_body_data_statute_of_limitations_reminders_item_notification_method import (
-        MatterupdateDataBodyDataStatuteOfLimitationsRemindersItemNotificationMethod,
-    )
+    from ..models.matterupdate_data_body_data_statute_of_limitations_reminders_item_notification_method import \
+        MatterupdateDataBodyDataStatuteOfLimitationsRemindersItemNotificationMethod
 
 
 T = TypeVar("T", bound="MatterupdateDataBodyDataStatuteOfLimitationsRemindersItem")
@@ -68,9 +67,8 @@ class MatterupdateDataBodyDataStatuteOfLimitationsRemindersItem:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.matterupdate_data_body_data_statute_of_limitations_reminders_item_notification_method import (
-            MatterupdateDataBodyDataStatuteOfLimitationsRemindersItemNotificationMethod,
-        )
+        from ..models.matterupdate_data_body_data_statute_of_limitations_reminders_item_notification_method import \
+            MatterupdateDataBodyDataStatuteOfLimitationsRemindersItemNotificationMethod
 
         d = dict(src_dict)
         duration_value = d.pop("duration_value", UNSET)

@@ -1,7 +1,8 @@
-import yaml
-from pathlib import Path
 import os
 import re
+from pathlib import Path
+
+import yaml
 
 RESPONSES_DIR = Path("openapi/components/responses")
 RESPONSES_BUNDLE = Path("openapi/components/responses.yaml")

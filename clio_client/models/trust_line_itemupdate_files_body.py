@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.trust_line_itemupdate_files_body_data import TrustLineItemupdateFilesBodyData
+    from ..models.trust_line_itemupdate_files_body_data import \
+        TrustLineItemupdateFilesBodyData
 
 
 T = TypeVar("T", bound="TrustLineItemupdateFilesBody")
@@ -52,7 +53,8 @@ class TrustLineItemupdateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.trust_line_itemupdate_files_body_data import TrustLineItemupdateFilesBodyData
+        from ..models.trust_line_itemupdate_files_body_data import \
+            TrustLineItemupdateFilesBodyData
 
         d = dict(src_dict)
         data = TrustLineItemupdateFilesBodyData.from_dict(d.pop("data"))

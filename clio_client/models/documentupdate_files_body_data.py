@@ -9,12 +9,14 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.documentupdate_files_body_data_document_category import DocumentupdateFilesBodyDataDocumentCategory
-    from ..models.documentupdate_files_body_data_external_properties_item import (
-        DocumentupdateFilesBodyDataExternalPropertiesItem,
-    )
-    from ..models.documentupdate_files_body_data_multiparts_item import DocumentupdateFilesBodyDataMultipartsItem
-    from ..models.documentupdate_files_body_data_parent import DocumentupdateFilesBodyDataParent
+    from ..models.documentupdate_files_body_data_document_category import \
+        DocumentupdateFilesBodyDataDocumentCategory
+    from ..models.documentupdate_files_body_data_external_properties_item import \
+        DocumentupdateFilesBodyDataExternalPropertiesItem
+    from ..models.documentupdate_files_body_data_multiparts_item import \
+        DocumentupdateFilesBodyDataMultipartsItem
+    from ..models.documentupdate_files_body_data_parent import \
+        DocumentupdateFilesBodyDataParent
 
 
 T = TypeVar("T", bound="DocumentupdateFilesBodyData")
@@ -128,14 +130,14 @@ class DocumentupdateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.documentupdate_files_body_data_document_category import (
-            DocumentupdateFilesBodyDataDocumentCategory,
-        )
-        from ..models.documentupdate_files_body_data_external_properties_item import (
-            DocumentupdateFilesBodyDataExternalPropertiesItem,
-        )
-        from ..models.documentupdate_files_body_data_multiparts_item import DocumentupdateFilesBodyDataMultipartsItem
-        from ..models.documentupdate_files_body_data_parent import DocumentupdateFilesBodyDataParent
+        from ..models.documentupdate_files_body_data_document_category import \
+            DocumentupdateFilesBodyDataDocumentCategory
+        from ..models.documentupdate_files_body_data_external_properties_item import \
+            DocumentupdateFilesBodyDataExternalPropertiesItem
+        from ..models.documentupdate_files_body_data_multiparts_item import \
+            DocumentupdateFilesBodyDataMultipartsItem
+        from ..models.documentupdate_files_body_data_parent import \
+            DocumentupdateFilesBodyDataParent
 
         d = dict(src_dict)
         communication_id = d.pop("communication_id", UNSET)

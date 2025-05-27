@@ -8,30 +8,26 @@ from dateutil.parser import isoparse
 
 from ..models.taskcreate_data_body_data_cascading_offset_polarity import (
     TaskcreateDataBodyDataCascadingOffsetPolarity,
-    check_taskcreate_data_body_data_cascading_offset_polarity,
-)
+    check_taskcreate_data_body_data_cascading_offset_polarity)
 from ..models.taskcreate_data_body_data_cascading_offset_type import (
     TaskcreateDataBodyDataCascadingOffsetType,
-    check_taskcreate_data_body_data_cascading_offset_type,
-)
+    check_taskcreate_data_body_data_cascading_offset_type)
 from ..models.taskcreate_data_body_data_permission import (
     TaskcreateDataBodyDataPermission,
-    check_taskcreate_data_body_data_permission,
-)
+    check_taskcreate_data_body_data_permission)
 from ..models.taskcreate_data_body_data_priority import (
-    TaskcreateDataBodyDataPriority,
-    check_taskcreate_data_body_data_priority,
-)
+    TaskcreateDataBodyDataPriority, check_taskcreate_data_body_data_priority)
 from ..models.taskcreate_data_body_data_status import (
-    TaskcreateDataBodyDataStatus,
-    check_taskcreate_data_body_data_status,
-)
+    TaskcreateDataBodyDataStatus, check_taskcreate_data_body_data_status)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.taskcreate_data_body_data_assignee import TaskcreateDataBodyDataAssignee
-    from ..models.taskcreate_data_body_data_matter import TaskcreateDataBodyDataMatter
-    from ..models.taskcreate_data_body_data_task_type import TaskcreateDataBodyDataTaskType
+    from ..models.taskcreate_data_body_data_assignee import \
+        TaskcreateDataBodyDataAssignee
+    from ..models.taskcreate_data_body_data_matter import \
+        TaskcreateDataBodyDataMatter
+    from ..models.taskcreate_data_body_data_task_type import \
+        TaskcreateDataBodyDataTaskType
 
 
 T = TypeVar("T", bound="TaskcreateDataBodyData")
@@ -185,9 +181,12 @@ class TaskcreateDataBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.taskcreate_data_body_data_assignee import TaskcreateDataBodyDataAssignee
-        from ..models.taskcreate_data_body_data_matter import TaskcreateDataBodyDataMatter
-        from ..models.taskcreate_data_body_data_task_type import TaskcreateDataBodyDataTaskType
+        from ..models.taskcreate_data_body_data_assignee import \
+            TaskcreateDataBodyDataAssignee
+        from ..models.taskcreate_data_body_data_matter import \
+            TaskcreateDataBodyDataMatter
+        from ..models.taskcreate_data_body_data_task_type import \
+            TaskcreateDataBodyDataTaskType
 
         d = dict(src_dict)
         assignee = TaskcreateDataBodyDataAssignee.from_dict(d.pop("assignee"))

@@ -1,5 +1,7 @@
 # Adapter stubs for Laukcivilcertificatedrate
-from schemas.from_spec.laukcivilcertificatedrate import LaukcivilcertificatedrateIn, LaukcivilcertificatedrateOut, LaukcivilcertificatedrateUpdate, LaukcivilcertificatedrateDb
+from schemas.from_spec.laukcivilcertificatedrate import \
+    LaukcivilcertificatedrateOut
+
 
 def convert_sdk_to_laukcivilcertificatedrateout(sdk_obj):
     # TODO

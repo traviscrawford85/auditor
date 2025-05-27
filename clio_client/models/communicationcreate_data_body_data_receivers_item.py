@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.communicationcreate_data_body_data_receivers_item_type import (
     CommunicationcreateDataBodyDataReceiversItemType,
-    check_communicationcreate_data_body_data_receivers_item_type,
-)
+    check_communicationcreate_data_body_data_receivers_item_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="CommunicationcreateDataBodyDataReceiversItem")

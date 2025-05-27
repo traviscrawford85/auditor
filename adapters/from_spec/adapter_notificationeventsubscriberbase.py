@@ -1,5 +1,7 @@
 # Adapter stubs for Notificationeventsubscriberbase
-from schemas.from_spec.notificationeventsubscriberbase import NotificationeventsubscriberBaseIn, NotificationeventsubscriberBaseOut, NotificationeventsubscriberBaseUpdate, NotificationeventsubscriberBaseDb
+from schemas.from_spec.notificationeventsubscriberbase import \
+    NotificationeventsubscriberBaseOut
+
 
 def convert_sdk_to_notificationeventsubscriberBaseOut(sdk_obj):
     # TODO

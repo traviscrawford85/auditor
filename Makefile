@@ -1,4 +1,5 @@
-.PHONY: help init audit validate refactor bundle merge deref generate derive lint clean
+.PHONY: help init audit validate refactor bundle merge deref generate derive lint clean clean-sdk clean-adapters generate-sdk generate-adapters
+
 
 # File paths
 ROOT_YAML=openapi/root.yaml
@@ -35,7 +36,38 @@ help:
 	@echo "  generate        Generate Pydantic models and adapters"
 	@echo "  derive          Derive API call suggestions from modular components"
 	@echo "  lint            Run Spectral linting"
-	@echo "  clean           Remove generated artifacts"
+	@echo "  clean           Remove generated artifacts"help:
+	@echo "📘 OpenAPI Modular Pipeline"
+	@echo ""
+	@echo "Usage: make <target>"
+	@echo ""
+	@echo "Init and Setup:"
+	@echo "  init                 Create necessary folders for modular OpenAPI structure"
+	@echo ""
+	@echo "Audit and Validation:"
+	@echo "  audit                Validate individual files (paths, components)"
+	@echo "  validate             Validate bundled requestBodies.yaml and components.yaml"
+	@echo ""
+	@echo "Refactor and Normalize:"
+	@echo "  refactor             Normalize, fix types, deduplicate, patch top-level spec"
+	@echo ""
+	@echo "Bundle and Wrap:"
+	@echo "  bundle               Bundle parameters, responses, schemas, and requestBodies"
+	@echo ""
+	@echo "Merge and Expand:"
+	@echo "  merge                Merge paths + components into final OpenAPI spec"
+	@echo "  deref                Deep-dereference full spec"
+	@echo ""
+	@echo "Generate and Lint:"
+	@echo "  generate             Generate Pydantic models and adapters"
+	@echo "  generate-sdk         Generate clio_sdk models and adapter stubs from OpenAPI spec"
+	@echo "  generate-adapters    Generate recursive clio_sdk <-> clio_client adapters"
+	@echo "  lint                 Run Spectral linting"
+	@echo ""
+	@echo "Cleanup:"
+	@echo "  clean                Remove generated OpenAPI artifacts"
+	@echo "  clean-sdk            Remove generated SDK model and adapter files"
+	@echo "  clean-adapters       Remove only generated adapters (including recursive)"
 
 init:
 	@echo "📁 Initializing OpenAPI directory structure..."
@@ -100,3 +132,21 @@ clean:
 	@echo "🧽 Cleaning generated output..."
 	rm -f $(FINAL_BUNDLE) $(FINAL_MERGED) $(EXPANDED) $(DEREF)
 	rm -rf schemas/from_expanded adapters/from_expanded
+generate-sdk:
+	@echo "🧬 Generating clio_sdk models and adapter stubs from OpenAPI spec..."
+	python3 scripts/generate_models_and_adapter_stubs.py
+
+generate-adapters:
+	@echo "🔁 Generating recursive clio_sdk <-> clio_client adapters..."
+	python3 scripts/adapter_auto_gen.py
+
+clean-sdk:
+	@echo "🧼 Cleaning clio_sdk models and adapters..."
+	rm -f clio_sdk/models/*.py
+	rm -f clio_sdk/adapters/*.py
+	rm -f clio_sdk/adapters_auto/*.py
+	
+clean-adapters:
+	@echo "🧼 Cleaning generated adapter files..."
+	rm -f clio_sdk/adapters/*.py
+	rm -f clio_sdk/adapters_auto/*.py

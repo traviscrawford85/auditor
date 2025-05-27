@@ -5,7 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.bank_accountupdate_json_body_data import BankAccountupdateJsonBodyData
+    from ..models.bank_accountupdate_json_body_data import \
+        BankAccountupdateJsonBodyData
 
 
 T = TypeVar("T", bound="BankAccountupdateJsonBody")
@@ -36,7 +37,8 @@ class BankAccountupdateJsonBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.bank_accountupdate_json_body_data import BankAccountupdateJsonBodyData
+        from ..models.bank_accountupdate_json_body_data import \
+            BankAccountupdateJsonBodyData
 
         d = dict(src_dict)
         data = BankAccountupdateJsonBodyData.from_dict(d.pop("data"))

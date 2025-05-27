@@ -5,7 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.communicationcreate_data_body_data import CommunicationcreateDataBodyData
+    from ..models.communicationcreate_data_body_data import \
+        CommunicationcreateDataBodyData
 
 
 T = TypeVar("T", bound="CommunicationcreateDataBody")
@@ -36,7 +37,8 @@ class CommunicationcreateDataBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.communicationcreate_data_body_data import CommunicationcreateDataBodyData
+        from ..models.communicationcreate_data_body_data import \
+            CommunicationcreateDataBodyData
 
         d = dict(src_dict)
         data = CommunicationcreateDataBodyData.from_dict(d.pop("data"))

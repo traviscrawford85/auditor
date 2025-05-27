@@ -1,5 +1,7 @@
 # Adapter stubs for Activitycreaterequestdatacommunication
-from schemas.from_spec.activitycreaterequestdatacommunication import ActivitycreaterequestdatacommunicationIn, ActivitycreaterequestdatacommunicationOut, ActivitycreaterequestdatacommunicationUpdate, ActivitycreaterequestdatacommunicationDb
+from schemas.from_spec.activitycreaterequestdatacommunication import \
+    ActivitycreaterequestdatacommunicationOut
+
 
 def convert_sdk_to_activitycreaterequestdatacommunicationout(sdk_obj):
     # TODO

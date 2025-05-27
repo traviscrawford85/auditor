@@ -9,12 +9,14 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.documentcreate_files_body_data_document_category import DocumentcreateFilesBodyDataDocumentCategory
-    from ..models.documentcreate_files_body_data_external_properties_item import (
-        DocumentcreateFilesBodyDataExternalPropertiesItem,
-    )
-    from ..models.documentcreate_files_body_data_multiparts_item import DocumentcreateFilesBodyDataMultipartsItem
-    from ..models.documentcreate_files_body_data_parent import DocumentcreateFilesBodyDataParent
+    from ..models.documentcreate_files_body_data_document_category import \
+        DocumentcreateFilesBodyDataDocumentCategory
+    from ..models.documentcreate_files_body_data_external_properties_item import \
+        DocumentcreateFilesBodyDataExternalPropertiesItem
+    from ..models.documentcreate_files_body_data_multiparts_item import \
+        DocumentcreateFilesBodyDataMultipartsItem
+    from ..models.documentcreate_files_body_data_parent import \
+        DocumentcreateFilesBodyDataParent
 
 
 T = TypeVar("T", bound="DocumentcreateFilesBodyData")
@@ -108,14 +110,14 @@ class DocumentcreateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.documentcreate_files_body_data_document_category import (
-            DocumentcreateFilesBodyDataDocumentCategory,
-        )
-        from ..models.documentcreate_files_body_data_external_properties_item import (
-            DocumentcreateFilesBodyDataExternalPropertiesItem,
-        )
-        from ..models.documentcreate_files_body_data_multiparts_item import DocumentcreateFilesBodyDataMultipartsItem
-        from ..models.documentcreate_files_body_data_parent import DocumentcreateFilesBodyDataParent
+        from ..models.documentcreate_files_body_data_document_category import \
+            DocumentcreateFilesBodyDataDocumentCategory
+        from ..models.documentcreate_files_body_data_external_properties_item import \
+            DocumentcreateFilesBodyDataExternalPropertiesItem
+        from ..models.documentcreate_files_body_data_multiparts_item import \
+            DocumentcreateFilesBodyDataMultipartsItem
+        from ..models.documentcreate_files_body_data_parent import \
+            DocumentcreateFilesBodyDataParent
 
         d = dict(src_dict)
         name = d.pop("name")

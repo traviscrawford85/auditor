@@ -1,5 +1,7 @@
 # Adapter stubs for Contactupdaterequestdataphonenumbersinner
-from schemas.from_spec.contactupdaterequestdataphonenumbersinner import ContactupdaterequestdataphonenumbersinnerIn, ContactupdaterequestdataphonenumbersinnerOut, ContactupdaterequestdataphonenumbersinnerUpdate, ContactupdaterequestdataphonenumbersinnerDb
+from schemas.from_spec.contactupdaterequestdataphonenumbersinner import \
+    ContactupdaterequestdataphonenumbersinnerOut
+
 
 def convert_sdk_to_contactupdaterequestdataphonenumbersinnerout(sdk_obj):
     # TODO

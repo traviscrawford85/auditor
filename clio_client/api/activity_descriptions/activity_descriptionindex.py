@@ -7,7 +7,8 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.activity_description_list import ActivityDescriptionList
-from ...models.activity_descriptionindex_type import ActivityDescriptionindexType
+from ...models.activity_descriptionindex_type import \
+    ActivityDescriptionindexType
 from ...models.error import Error
 from ...types import UNSET, Response, Unset
 

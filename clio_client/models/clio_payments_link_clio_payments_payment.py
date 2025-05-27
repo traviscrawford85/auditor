@@ -7,9 +7,7 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.clio_payments_payment_base_state import (
-    ClioPaymentsPaymentBaseState,
-    check_clio_payments_payment_base_state,
-)
+    ClioPaymentsPaymentBaseState, check_clio_payments_payment_base_state)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ClioPaymentsLinkClioPaymentsPayment")

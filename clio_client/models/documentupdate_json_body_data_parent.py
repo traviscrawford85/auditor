@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.documentupdate_json_body_data_parent_type import (
     DocumentupdateJsonBodyDataParentType,
-    check_documentupdate_json_body_data_parent_type,
-)
+    check_documentupdate_json_body_data_parent_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="DocumentupdateJsonBodyDataParent")

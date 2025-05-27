@@ -6,15 +6,14 @@ from attrs import field as _attrs_field
 
 from ..models.remindercreate_files_body_data_duration_unit import (
     RemindercreateFilesBodyDataDurationUnit,
-    check_remindercreate_files_body_data_duration_unit,
-)
+    check_remindercreate_files_body_data_duration_unit)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.remindercreate_files_body_data_notification_method import (
-        RemindercreateFilesBodyDataNotificationMethod,
-    )
-    from ..models.remindercreate_files_body_data_subject import RemindercreateFilesBodyDataSubject
+    from ..models.remindercreate_files_body_data_notification_method import \
+        RemindercreateFilesBodyDataNotificationMethod
+    from ..models.remindercreate_files_body_data_subject import \
+        RemindercreateFilesBodyDataSubject
 
 
 T = TypeVar("T", bound="RemindercreateFilesBodyData")
@@ -64,10 +63,10 @@ class RemindercreateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.remindercreate_files_body_data_notification_method import (
-            RemindercreateFilesBodyDataNotificationMethod,
-        )
-        from ..models.remindercreate_files_body_data_subject import RemindercreateFilesBodyDataSubject
+        from ..models.remindercreate_files_body_data_notification_method import \
+            RemindercreateFilesBodyDataNotificationMethod
+        from ..models.remindercreate_files_body_data_subject import \
+            RemindercreateFilesBodyDataSubject
 
         d = dict(src_dict)
         notification_method = RemindercreateFilesBodyDataNotificationMethod.from_dict(d.pop("notification_method"))

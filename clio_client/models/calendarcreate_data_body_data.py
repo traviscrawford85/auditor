@@ -5,13 +5,10 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 from ..models.calendarcreate_data_body_data_color import (
-    CalendarcreateDataBodyDataColor,
-    check_calendarcreate_data_body_data_color,
-)
+    CalendarcreateDataBodyDataColor, check_calendarcreate_data_body_data_color)
 from ..models.calendarcreate_data_body_data_source import (
     CalendarcreateDataBodyDataSource,
-    check_calendarcreate_data_body_data_source,
-)
+    check_calendarcreate_data_body_data_source)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="CalendarcreateDataBodyData")

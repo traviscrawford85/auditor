@@ -1,5 +1,6 @@
 # Adapter stubs for Billthemebase
-from schemas.from_spec.billthemebase import BillthemeBaseIn, BillthemeBaseOut, BillthemeBaseUpdate, BillthemeBaseDb
+from schemas.from_spec.billthemebase import BillthemeBaseOut
+
 
 def convert_sdk_to_billthemeBaseOut(sdk_obj):
     # TODO

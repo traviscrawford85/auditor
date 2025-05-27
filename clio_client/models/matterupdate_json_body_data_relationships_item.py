@@ -7,9 +7,8 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.matterupdate_json_body_data_relationships_item_contact import (
-        MatterupdateJsonBodyDataRelationshipsItemContact,
-    )
+    from ..models.matterupdate_json_body_data_relationships_item_contact import \
+        MatterupdateJsonBodyDataRelationshipsItemContact
 
 
 T = TypeVar("T", bound="MatterupdateJsonBodyDataRelationshipsItem")
@@ -60,9 +59,8 @@ class MatterupdateJsonBodyDataRelationshipsItem:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.matterupdate_json_body_data_relationships_item_contact import (
-            MatterupdateJsonBodyDataRelationshipsItemContact,
-        )
+        from ..models.matterupdate_json_body_data_relationships_item_contact import \
+            MatterupdateJsonBodyDataRelationshipsItemContact
 
         d = dict(src_dict)
         description = d.pop("description", UNSET)

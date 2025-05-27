@@ -8,8 +8,7 @@ from dateutil.parser import isoparse
 
 from ..models.reminder_template_base_notification_type import (
     ReminderTemplateBaseNotificationType,
-    check_reminder_template_base_notification_type,
-)
+    check_reminder_template_base_notification_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ReminderTemplateBase")

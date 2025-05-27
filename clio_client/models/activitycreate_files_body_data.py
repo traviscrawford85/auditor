@@ -8,32 +8,38 @@ from dateutil.parser import isoparse
 
 from ..models.activitycreate_files_body_data_tax_setting import (
     ActivitycreateFilesBodyDataTaxSetting,
-    check_activitycreate_files_body_data_tax_setting,
-)
+    check_activitycreate_files_body_data_tax_setting)
 from ..models.activitycreate_files_body_data_type import (
-    ActivitycreateFilesBodyDataType,
-    check_activitycreate_files_body_data_type,
-)
+    ActivitycreateFilesBodyDataType, check_activitycreate_files_body_data_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.activitycreate_files_body_data_activity_description import (
-        ActivitycreateFilesBodyDataActivityDescription,
-    )
-    from ..models.activitycreate_files_body_data_calendar_entry import ActivitycreateFilesBodyDataCalendarEntry
-    from ..models.activitycreate_files_body_data_client_portal import ActivitycreateFilesBodyDataClientPortal
-    from ..models.activitycreate_files_body_data_communication import ActivitycreateFilesBodyDataCommunication
-    from ..models.activitycreate_files_body_data_contact_note import ActivitycreateFilesBodyDataContactNote
-    from ..models.activitycreate_files_body_data_expense_category import ActivitycreateFilesBodyDataExpenseCategory
-    from ..models.activitycreate_files_body_data_matter import ActivitycreateFilesBodyDataMatter
-    from ..models.activitycreate_files_body_data_matter_note import ActivitycreateFilesBodyDataMatterNote
-    from ..models.activitycreate_files_body_data_task import ActivitycreateFilesBodyDataTask
-    from ..models.activitycreate_files_body_data_text_message_conversation import (
-        ActivitycreateFilesBodyDataTextMessageConversation,
-    )
-    from ..models.activitycreate_files_body_data_user import ActivitycreateFilesBodyDataUser
-    from ..models.activitycreate_files_body_data_utbms_expense import ActivitycreateFilesBodyDataUtbmsExpense
-    from ..models.activitycreate_files_body_data_vendor import ActivitycreateFilesBodyDataVendor
+    from ..models.activitycreate_files_body_data_activity_description import \
+        ActivitycreateFilesBodyDataActivityDescription
+    from ..models.activitycreate_files_body_data_calendar_entry import \
+        ActivitycreateFilesBodyDataCalendarEntry
+    from ..models.activitycreate_files_body_data_client_portal import \
+        ActivitycreateFilesBodyDataClientPortal
+    from ..models.activitycreate_files_body_data_communication import \
+        ActivitycreateFilesBodyDataCommunication
+    from ..models.activitycreate_files_body_data_contact_note import \
+        ActivitycreateFilesBodyDataContactNote
+    from ..models.activitycreate_files_body_data_expense_category import \
+        ActivitycreateFilesBodyDataExpenseCategory
+    from ..models.activitycreate_files_body_data_matter import \
+        ActivitycreateFilesBodyDataMatter
+    from ..models.activitycreate_files_body_data_matter_note import \
+        ActivitycreateFilesBodyDataMatterNote
+    from ..models.activitycreate_files_body_data_task import \
+        ActivitycreateFilesBodyDataTask
+    from ..models.activitycreate_files_body_data_text_message_conversation import \
+        ActivitycreateFilesBodyDataTextMessageConversation
+    from ..models.activitycreate_files_body_data_user import \
+        ActivitycreateFilesBodyDataUser
+    from ..models.activitycreate_files_body_data_utbms_expense import \
+        ActivitycreateFilesBodyDataUtbmsExpense
+    from ..models.activitycreate_files_body_data_vendor import \
+        ActivitycreateFilesBodyDataVendor
 
 
 T = TypeVar("T", bound="ActivitycreateFilesBodyData")
@@ -249,23 +255,32 @@ class ActivitycreateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.activitycreate_files_body_data_activity_description import (
-            ActivitycreateFilesBodyDataActivityDescription,
-        )
-        from ..models.activitycreate_files_body_data_calendar_entry import ActivitycreateFilesBodyDataCalendarEntry
-        from ..models.activitycreate_files_body_data_client_portal import ActivitycreateFilesBodyDataClientPortal
-        from ..models.activitycreate_files_body_data_communication import ActivitycreateFilesBodyDataCommunication
-        from ..models.activitycreate_files_body_data_contact_note import ActivitycreateFilesBodyDataContactNote
-        from ..models.activitycreate_files_body_data_expense_category import ActivitycreateFilesBodyDataExpenseCategory
-        from ..models.activitycreate_files_body_data_matter import ActivitycreateFilesBodyDataMatter
-        from ..models.activitycreate_files_body_data_matter_note import ActivitycreateFilesBodyDataMatterNote
-        from ..models.activitycreate_files_body_data_task import ActivitycreateFilesBodyDataTask
-        from ..models.activitycreate_files_body_data_text_message_conversation import (
-            ActivitycreateFilesBodyDataTextMessageConversation,
-        )
-        from ..models.activitycreate_files_body_data_user import ActivitycreateFilesBodyDataUser
-        from ..models.activitycreate_files_body_data_utbms_expense import ActivitycreateFilesBodyDataUtbmsExpense
-        from ..models.activitycreate_files_body_data_vendor import ActivitycreateFilesBodyDataVendor
+        from ..models.activitycreate_files_body_data_activity_description import \
+            ActivitycreateFilesBodyDataActivityDescription
+        from ..models.activitycreate_files_body_data_calendar_entry import \
+            ActivitycreateFilesBodyDataCalendarEntry
+        from ..models.activitycreate_files_body_data_client_portal import \
+            ActivitycreateFilesBodyDataClientPortal
+        from ..models.activitycreate_files_body_data_communication import \
+            ActivitycreateFilesBodyDataCommunication
+        from ..models.activitycreate_files_body_data_contact_note import \
+            ActivitycreateFilesBodyDataContactNote
+        from ..models.activitycreate_files_body_data_expense_category import \
+            ActivitycreateFilesBodyDataExpenseCategory
+        from ..models.activitycreate_files_body_data_matter import \
+            ActivitycreateFilesBodyDataMatter
+        from ..models.activitycreate_files_body_data_matter_note import \
+            ActivitycreateFilesBodyDataMatterNote
+        from ..models.activitycreate_files_body_data_task import \
+            ActivitycreateFilesBodyDataTask
+        from ..models.activitycreate_files_body_data_text_message_conversation import \
+            ActivitycreateFilesBodyDataTextMessageConversation
+        from ..models.activitycreate_files_body_data_user import \
+            ActivitycreateFilesBodyDataUser
+        from ..models.activitycreate_files_body_data_utbms_expense import \
+            ActivitycreateFilesBodyDataUtbmsExpense
+        from ..models.activitycreate_files_body_data_vendor import \
+            ActivitycreateFilesBodyDataVendor
 
         d = dict(src_dict)
         date = isoparse(d.pop("date")).date()

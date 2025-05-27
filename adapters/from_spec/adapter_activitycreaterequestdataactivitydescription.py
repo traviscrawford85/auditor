@@ -1,5 +1,7 @@
 # Adapter stubs for Activitycreaterequestdataactivitydescription
-from schemas.from_spec.activitycreaterequestdataactivitydescription import ActivitycreaterequestdataactivitydescriptionIn, ActivitycreaterequestdataactivitydescriptionOut, ActivitycreaterequestdataactivitydescriptionUpdate, ActivitycreaterequestdataactivitydescriptionDb
+from schemas.from_spec.activitycreaterequestdataactivitydescription import \
+    ActivitycreaterequestdataactivitydescriptionOut
+
 
 def convert_sdk_to_activitycreaterequestdataactivitydescriptionout(sdk_obj):
     # TODO

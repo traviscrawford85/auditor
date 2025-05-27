@@ -7,8 +7,10 @@ Validate each schema in components/schemas/*.yaml to ensure:
 """
 
 import sys
-import yaml
 from pathlib import Path
+
+import yaml
+
 
 def validate_schema(schema_path):
     errors = []

@@ -6,7 +6,8 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.error import Error
-from ...models.lauk_civil_controlled_rate_list import LaukCivilControlledRateList
+from ...models.lauk_civil_controlled_rate_list import \
+    LaukCivilControlledRateList
 from ...types import UNSET, Response, Unset
 
 

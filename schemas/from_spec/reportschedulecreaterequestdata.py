@@ -1,6 +1,8 @@
-from pydantic import BaseModel
-from typing import Optional, Any, List
 from datetime import datetime
+from typing import Optional
+
+from pydantic import BaseModel
+
 
 class ReportschedulecreaterequestdataIn(BaseModel):
     day_of_month: Optional[str] = None

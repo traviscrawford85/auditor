@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.task_templateupdate_data_body_data_reminder_templates_item_notification_type import (
     TaskTemplateupdateDataBodyDataReminderTemplatesItemNotificationType,
-    check_task_templateupdate_data_body_data_reminder_templates_item_notification_type,
-)
+    check_task_templateupdate_data_body_data_reminder_templates_item_notification_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="TaskTemplateupdateDataBodyDataReminderTemplatesItem")

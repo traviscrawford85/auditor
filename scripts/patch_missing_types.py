@@ -1,5 +1,7 @@
 from pathlib import Path
+
 import yaml
+
 
 def patch_missing_types(directory: Path, output_log: Path):
     patched_files = []

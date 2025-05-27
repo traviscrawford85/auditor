@@ -5,7 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.activityupdate_data_body_data import ActivityupdateDataBodyData
+    from ..models.activityupdate_data_body_data import \
+        ActivityupdateDataBodyData
 
 
 T = TypeVar("T", bound="ActivityupdateDataBody")
@@ -36,7 +37,8 @@ class ActivityupdateDataBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.activityupdate_data_body_data import ActivityupdateDataBodyData
+        from ..models.activityupdate_data_body_data import \
+            ActivityupdateDataBodyData
 
         d = dict(src_dict)
         data = ActivityupdateDataBodyData.from_dict(d.pop("data"))

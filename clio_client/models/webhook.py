@@ -6,9 +6,12 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.webhook_base_events_item import WebhookBaseEventsItem, check_webhook_base_events_item
-from ..models.webhook_base_model import WebhookBaseModel, check_webhook_base_model
-from ..models.webhook_base_status import WebhookBaseStatus, check_webhook_base_status
+from ..models.webhook_base_events_item import (WebhookBaseEventsItem,
+                                               check_webhook_base_events_item)
+from ..models.webhook_base_model import (WebhookBaseModel,
+                                         check_webhook_base_model)
+from ..models.webhook_base_status import (WebhookBaseStatus,
+                                          check_webhook_base_status)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:

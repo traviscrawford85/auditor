@@ -8,27 +8,22 @@ from dateutil.parser import isoparse
 
 from ..models.calendar_entryupdate_files_body_data_deleted import (
     CalendarEntryupdateFilesBodyDataDeleted,
-    check_calendar_entryupdate_files_body_data_deleted,
-)
+    check_calendar_entryupdate_files_body_data_deleted)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.calendar_entryupdate_files_body_data_attendees_item import (
-        CalendarEntryupdateFilesBodyDataAttendeesItem,
-    )
-    from ..models.calendar_entryupdate_files_body_data_calendar_entry_event_type import (
-        CalendarEntryupdateFilesBodyDataCalendarEntryEventType,
-    )
-    from ..models.calendar_entryupdate_files_body_data_calendar_owner import (
-        CalendarEntryupdateFilesBodyDataCalendarOwner,
-    )
-    from ..models.calendar_entryupdate_files_body_data_conference_meeting import (
-        CalendarEntryupdateFilesBodyDataConferenceMeeting,
-    )
-    from ..models.calendar_entryupdate_files_body_data_external_properties_item import (
-        CalendarEntryupdateFilesBodyDataExternalPropertiesItem,
-    )
-    from ..models.calendar_entryupdate_files_body_data_matter import CalendarEntryupdateFilesBodyDataMatter
+    from ..models.calendar_entryupdate_files_body_data_attendees_item import \
+        CalendarEntryupdateFilesBodyDataAttendeesItem
+    from ..models.calendar_entryupdate_files_body_data_calendar_entry_event_type import \
+        CalendarEntryupdateFilesBodyDataCalendarEntryEventType
+    from ..models.calendar_entryupdate_files_body_data_calendar_owner import \
+        CalendarEntryupdateFilesBodyDataCalendarOwner
+    from ..models.calendar_entryupdate_files_body_data_conference_meeting import \
+        CalendarEntryupdateFilesBodyDataConferenceMeeting
+    from ..models.calendar_entryupdate_files_body_data_external_properties_item import \
+        CalendarEntryupdateFilesBodyDataExternalPropertiesItem
+    from ..models.calendar_entryupdate_files_body_data_matter import \
+        CalendarEntryupdateFilesBodyDataMatter
 
 
 T = TypeVar("T", bound="CalendarEntryupdateFilesBodyData")
@@ -168,22 +163,18 @@ class CalendarEntryupdateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.calendar_entryupdate_files_body_data_attendees_item import (
-            CalendarEntryupdateFilesBodyDataAttendeesItem,
-        )
-        from ..models.calendar_entryupdate_files_body_data_calendar_entry_event_type import (
-            CalendarEntryupdateFilesBodyDataCalendarEntryEventType,
-        )
-        from ..models.calendar_entryupdate_files_body_data_calendar_owner import (
-            CalendarEntryupdateFilesBodyDataCalendarOwner,
-        )
-        from ..models.calendar_entryupdate_files_body_data_conference_meeting import (
-            CalendarEntryupdateFilesBodyDataConferenceMeeting,
-        )
-        from ..models.calendar_entryupdate_files_body_data_external_properties_item import (
-            CalendarEntryupdateFilesBodyDataExternalPropertiesItem,
-        )
-        from ..models.calendar_entryupdate_files_body_data_matter import CalendarEntryupdateFilesBodyDataMatter
+        from ..models.calendar_entryupdate_files_body_data_attendees_item import \
+            CalendarEntryupdateFilesBodyDataAttendeesItem
+        from ..models.calendar_entryupdate_files_body_data_calendar_entry_event_type import \
+            CalendarEntryupdateFilesBodyDataCalendarEntryEventType
+        from ..models.calendar_entryupdate_files_body_data_calendar_owner import \
+            CalendarEntryupdateFilesBodyDataCalendarOwner
+        from ..models.calendar_entryupdate_files_body_data_conference_meeting import \
+            CalendarEntryupdateFilesBodyDataConferenceMeeting
+        from ..models.calendar_entryupdate_files_body_data_external_properties_item import \
+            CalendarEntryupdateFilesBodyDataExternalPropertiesItem
+        from ..models.calendar_entryupdate_files_body_data_matter import \
+            CalendarEntryupdateFilesBodyDataMatter
 
         d = dict(src_dict)
         _deleted = d.pop("_deleted", UNSET)

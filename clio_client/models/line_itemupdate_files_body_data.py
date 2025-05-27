@@ -8,15 +8,18 @@ from dateutil.parser import isoparse
 
 from ..models.line_itemupdate_files_body_data_kind import (
     LineItemupdateFilesBodyDataKind,
-    check_line_itemupdate_files_body_data_kind,
-)
+    check_line_itemupdate_files_body_data_kind)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.line_itemupdate_files_body_data_activity import LineItemupdateFilesBodyDataActivity
-    from ..models.line_itemupdate_files_body_data_bill import LineItemupdateFilesBodyDataBill
-    from ..models.line_itemupdate_files_body_data_discount import LineItemupdateFilesBodyDataDiscount
-    from ..models.line_itemupdate_files_body_data_matter import LineItemupdateFilesBodyDataMatter
+    from ..models.line_itemupdate_files_body_data_activity import \
+        LineItemupdateFilesBodyDataActivity
+    from ..models.line_itemupdate_files_body_data_bill import \
+        LineItemupdateFilesBodyDataBill
+    from ..models.line_itemupdate_files_body_data_discount import \
+        LineItemupdateFilesBodyDataDiscount
+    from ..models.line_itemupdate_files_body_data_matter import \
+        LineItemupdateFilesBodyDataMatter
 
 
 T = TypeVar("T", bound="LineItemupdateFilesBodyData")
@@ -136,10 +139,14 @@ class LineItemupdateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.line_itemupdate_files_body_data_activity import LineItemupdateFilesBodyDataActivity
-        from ..models.line_itemupdate_files_body_data_bill import LineItemupdateFilesBodyDataBill
-        from ..models.line_itemupdate_files_body_data_discount import LineItemupdateFilesBodyDataDiscount
-        from ..models.line_itemupdate_files_body_data_matter import LineItemupdateFilesBodyDataMatter
+        from ..models.line_itemupdate_files_body_data_activity import \
+            LineItemupdateFilesBodyDataActivity
+        from ..models.line_itemupdate_files_body_data_bill import \
+            LineItemupdateFilesBodyDataBill
+        from ..models.line_itemupdate_files_body_data_discount import \
+            LineItemupdateFilesBodyDataDiscount
+        from ..models.line_itemupdate_files_body_data_matter import \
+            LineItemupdateFilesBodyDataMatter
 
         d = dict(src_dict)
         _activity = d.pop("activity", UNSET)

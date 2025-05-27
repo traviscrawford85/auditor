@@ -1,5 +1,7 @@
 # Adapter stubs for Conversationmessagebase
-from schemas.from_spec.conversationmessagebase import ConversationmessageBaseIn, ConversationmessageBaseOut, ConversationmessageBaseUpdate, ConversationmessageBaseDb
+from schemas.from_spec.conversationmessagebase import \
+    ConversationmessageBaseOut
+
 
 def convert_sdk_to_conversationmessageBaseOut(sdk_obj):
     # TODO

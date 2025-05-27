@@ -1,5 +1,6 @@
 # Adapter stubs for Tasktype
-from schemas.from_spec.tasktype import TasktypeIn, TasktypeOut, TasktypeUpdate, TasktypeDb
+from schemas.from_spec.tasktype import TasktypeOut
+
 
 def convert_sdk_to_tasktypeout(sdk_obj):
     # TODO

@@ -1,5 +1,6 @@
 # Rebuild the OpenAPI full spec from modular components and paths, using cleaned and verified structure
 from pathlib import Path
+
 import yaml
 
 BASE_DIR = Path("openapi")
@@ -33,7 +34,7 @@ def merge_openapi_spec(root_file, components_dir, paths_dir, output_file):
     for path_file in paths_dir.glob("*.yaml"):
         path_key = "/" + path_file.stem.replace("__", "/").replace("_.", ".").replace("_", "/")
         path_data = load_yaml(path_file)
-        if isinstance(path_data, dict) and not path_key in spec["paths"]:
+        if isinstance(path_data, dict) and path_key not in spec["paths"]:
             spec["paths"][path_key] = path_data
 
     with output_file.open("w", encoding="utf-8") as f:

@@ -24,7 +24,8 @@ if TYPE_CHECKING:
     from ..models.contact_primary_web_site import ContactPrimaryWebSite
     from ..models.contact_primary_work_address import ContactPrimaryWorkAddress
     from ..models.contact_secondary_address import ContactSecondaryAddress
-    from ..models.custom_field_set_association_base import CustomFieldSetAssociationBase
+    from ..models.custom_field_set_association_base import \
+        CustomFieldSetAssociationBase
     from ..models.custom_field_value import CustomFieldValue
     from ..models.email_address_base import EmailAddressBase
     from ..models.instant_messenger_base import InstantMessengerBase
@@ -435,13 +436,16 @@ class Contact:
         from ..models.contact_co_counsel_rate import ContactCoCounselRate
         from ..models.contact_company import ContactCompany
         from ..models.contact_folder import ContactFolder
-        from ..models.contact_legal_aid_uk_contact import ContactLegalAidUkContact
+        from ..models.contact_legal_aid_uk_contact import \
+            ContactLegalAidUkContact
         from ..models.contact_payment_profile import ContactPaymentProfile
         from ..models.contact_primary_address import ContactPrimaryAddress
         from ..models.contact_primary_web_site import ContactPrimaryWebSite
-        from ..models.contact_primary_work_address import ContactPrimaryWorkAddress
+        from ..models.contact_primary_work_address import \
+            ContactPrimaryWorkAddress
         from ..models.contact_secondary_address import ContactSecondaryAddress
-        from ..models.custom_field_set_association_base import CustomFieldSetAssociationBase
+        from ..models.custom_field_set_association_base import \
+            CustomFieldSetAssociationBase
         from ..models.custom_field_value import CustomFieldValue
         from ..models.email_address_base import EmailAddressBase
         from ..models.instant_messenger_base import InstantMessengerBase

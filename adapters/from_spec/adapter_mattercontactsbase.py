@@ -1,5 +1,6 @@
 # Adapter stubs for Mattercontactsbase
-from schemas.from_spec.mattercontactsbase import MattercontactsBaseIn, MattercontactsBaseOut, MattercontactsBaseUpdate, MattercontactsBaseDb
+from schemas.from_spec.mattercontactsbase import MattercontactsBaseOut
+
 
 def convert_sdk_to_mattercontactsBaseOut(sdk_obj):
     # TODO

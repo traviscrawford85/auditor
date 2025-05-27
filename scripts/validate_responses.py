@@ -7,8 +7,10 @@ Validate each response in components/responses/*.yaml to ensure:
 """
 
 import sys
-import yaml
 from pathlib import Path
+
+import yaml
+
 
 def validate_response(resp_path):
     errors = []

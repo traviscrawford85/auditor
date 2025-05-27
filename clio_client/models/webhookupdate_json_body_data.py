@@ -8,12 +8,9 @@ from dateutil.parser import isoparse
 
 from ..models.webhookupdate_json_body_data_events_item import (
     WebhookupdateJsonBodyDataEventsItem,
-    check_webhookupdate_json_body_data_events_item,
-)
+    check_webhookupdate_json_body_data_events_item)
 from ..models.webhookupdate_json_body_data_model import (
-    WebhookupdateJsonBodyDataModel,
-    check_webhookupdate_json_body_data_model,
-)
+    WebhookupdateJsonBodyDataModel, check_webhookupdate_json_body_data_model)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="WebhookupdateJsonBodyData")

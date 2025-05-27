@@ -1,5 +1,7 @@
 # Adapter stubs for Reportcreaterequestdatamatter
-from schemas.from_spec.reportcreaterequestdatamatter import ReportcreaterequestdatamatterIn, ReportcreaterequestdatamatterOut, ReportcreaterequestdatamatterUpdate, ReportcreaterequestdatamatterDb
+from schemas.from_spec.reportcreaterequestdatamatter import \
+    ReportcreaterequestdatamatterOut
+
 
 def convert_sdk_to_reportcreaterequestdatamatterout(sdk_obj):
     # TODO

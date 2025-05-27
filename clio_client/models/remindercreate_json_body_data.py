@@ -6,13 +6,14 @@ from attrs import field as _attrs_field
 
 from ..models.remindercreate_json_body_data_duration_unit import (
     RemindercreateJsonBodyDataDurationUnit,
-    check_remindercreate_json_body_data_duration_unit,
-)
+    check_remindercreate_json_body_data_duration_unit)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.remindercreate_json_body_data_notification_method import RemindercreateJsonBodyDataNotificationMethod
-    from ..models.remindercreate_json_body_data_subject import RemindercreateJsonBodyDataSubject
+    from ..models.remindercreate_json_body_data_notification_method import \
+        RemindercreateJsonBodyDataNotificationMethod
+    from ..models.remindercreate_json_body_data_subject import \
+        RemindercreateJsonBodyDataSubject
 
 
 T = TypeVar("T", bound="RemindercreateJsonBodyData")
@@ -62,10 +63,10 @@ class RemindercreateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.remindercreate_json_body_data_notification_method import (
-            RemindercreateJsonBodyDataNotificationMethod,
-        )
-        from ..models.remindercreate_json_body_data_subject import RemindercreateJsonBodyDataSubject
+        from ..models.remindercreate_json_body_data_notification_method import \
+            RemindercreateJsonBodyDataNotificationMethod
+        from ..models.remindercreate_json_body_data_subject import \
+            RemindercreateJsonBodyDataSubject
 
         d = dict(src_dict)
         notification_method = RemindercreateJsonBodyDataNotificationMethod.from_dict(d.pop("notification_method"))

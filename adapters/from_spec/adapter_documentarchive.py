@@ -1,5 +1,6 @@
 # Adapter stubs for Documentarchive
-from schemas.from_spec.documentarchive import DocumentarchiveIn, DocumentarchiveOut, DocumentarchiveUpdate, DocumentarchiveDb
+from schemas.from_spec.documentarchive import DocumentarchiveOut
+
 
 def convert_sdk_to_documentarchiveout(sdk_obj):
     # TODO

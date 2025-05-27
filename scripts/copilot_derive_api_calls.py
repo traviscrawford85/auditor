@@ -7,10 +7,12 @@ of the API, including inferred CRUD operation types, request/response characteri
 and key metadata.
 """
 
-import sys
-import yaml
-from pathlib import Path
 import re
+import sys
+from pathlib import Path
+
+import yaml
+
 
 def load_spec(spec_path):
     with open(spec_path, "r", encoding="utf-8") as f:

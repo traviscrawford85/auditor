@@ -9,7 +9,8 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.matter_bill_recipient_recipient import MatterBillRecipientRecipient
+    from ..models.matter_bill_recipient_recipient import \
+        MatterBillRecipientRecipient
 
 
 T = TypeVar("T", bound="MatterBillRecipient")
@@ -70,7 +71,8 @@ class MatterBillRecipient:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.matter_bill_recipient_recipient import MatterBillRecipientRecipient
+        from ..models.matter_bill_recipient_recipient import \
+            MatterBillRecipientRecipient
 
         d = dict(src_dict)
         _created_at = d.pop("created_at", UNSET)

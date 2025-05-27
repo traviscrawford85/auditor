@@ -1,5 +1,7 @@
 # Adapter stubs for Calendarentrycreaterequestdataattendeesinner
-from schemas.from_spec.calendarentrycreaterequestdataattendeesinner import CalendarentrycreaterequestdataattendeesinnerIn, CalendarentrycreaterequestdataattendeesinnerOut, CalendarentrycreaterequestdataattendeesinnerUpdate, CalendarentrycreaterequestdataattendeesinnerDb
+from schemas.from_spec.calendarentrycreaterequestdataattendeesinner import \
+    CalendarentrycreaterequestdataattendeesinnerOut
+
 
 def convert_sdk_to_calendarentrycreaterequestdataattendeesinnerout(sdk_obj):
     # TODO

@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.custom_field_setcreate_files_body_data_parent_type import (
     CustomFieldSetcreateFilesBodyDataParentType,
-    check_custom_field_setcreate_files_body_data_parent_type,
-)
+    check_custom_field_setcreate_files_body_data_parent_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="CustomFieldSetcreateFilesBodyData")

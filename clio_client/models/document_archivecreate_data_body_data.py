@@ -5,7 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.document_archivecreate_data_body_data_items_item import DocumentArchivecreateDataBodyDataItemsItem
+    from ..models.document_archivecreate_data_body_data_items_item import \
+        DocumentArchivecreateDataBodyDataItemsItem
 
 
 T = TypeVar("T", bound="DocumentArchivecreateDataBodyData")
@@ -39,7 +40,8 @@ class DocumentArchivecreateDataBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.document_archivecreate_data_body_data_items_item import DocumentArchivecreateDataBodyDataItemsItem
+        from ..models.document_archivecreate_data_body_data_items_item import \
+            DocumentArchivecreateDataBodyDataItemsItem
 
         d = dict(src_dict)
         items = []

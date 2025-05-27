@@ -1,5 +1,7 @@
 # Adapter stubs for Tasktemplatelistcopyrequestdatapracticearea
-from schemas.from_spec.tasktemplatelistcopyrequestdatapracticearea import TasktemplatelistcopyrequestdatapracticeareaIn, TasktemplatelistcopyrequestdatapracticeareaOut, TasktemplatelistcopyrequestdatapracticeareaUpdate, TasktemplatelistcopyrequestdatapracticeareaDb
+from schemas.from_spec.tasktemplatelistcopyrequestdatapracticearea import \
+    TasktemplatelistcopyrequestdatapracticeareaOut
+
 
 def convert_sdk_to_tasktemplatelistcopyrequestdatapracticeareaout(sdk_obj):
     # TODO

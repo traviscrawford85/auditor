@@ -7,9 +7,12 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.error import Error
 from ...models.trust_line_item_show import TrustLineItemShow
-from ...models.trust_line_itemupdate_data_body import TrustLineItemupdateDataBody
-from ...models.trust_line_itemupdate_files_body import TrustLineItemupdateFilesBody
-from ...models.trust_line_itemupdate_json_body import TrustLineItemupdateJsonBody
+from ...models.trust_line_itemupdate_data_body import \
+    TrustLineItemupdateDataBody
+from ...models.trust_line_itemupdate_files_body import \
+    TrustLineItemupdateFilesBody
+from ...models.trust_line_itemupdate_json_body import \
+    TrustLineItemupdateJsonBody
 from ...types import UNSET, Response, Unset
 
 

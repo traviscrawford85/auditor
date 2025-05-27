@@ -5,7 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.report_presetcreate_json_body_data import ReportPresetcreateJsonBodyData
+    from ..models.report_presetcreate_json_body_data import \
+        ReportPresetcreateJsonBodyData
 
 
 T = TypeVar("T", bound="ReportPresetcreateJsonBody")
@@ -36,7 +37,8 @@ class ReportPresetcreateJsonBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.report_presetcreate_json_body_data import ReportPresetcreateJsonBodyData
+        from ..models.report_presetcreate_json_body_data import \
+            ReportPresetcreateJsonBodyData
 
         d = dict(src_dict)
         data = ReportPresetcreateJsonBodyData.from_dict(d.pop("data"))

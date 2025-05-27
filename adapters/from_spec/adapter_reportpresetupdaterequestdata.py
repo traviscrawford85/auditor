@@ -1,5 +1,7 @@
 # Adapter stubs for Reportpresetupdaterequestdata
-from schemas.from_spec.reportpresetupdaterequestdata import ReportpresetupdaterequestdataIn, ReportpresetupdaterequestdataOut, ReportpresetupdaterequestdataUpdate, ReportpresetupdaterequestdataDb
+from schemas.from_spec.reportpresetupdaterequestdata import \
+    ReportpresetupdaterequestdataOut
+
 
 def convert_sdk_to_reportpresetupdaterequestdataout(sdk_obj):
     # TODO

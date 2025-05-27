@@ -1,5 +1,7 @@
 # Adapter stubs for Billupdaterequestdatabilltheme
-from schemas.from_spec.billupdaterequestdatabilltheme import BillupdaterequestdatabillthemeIn, BillupdaterequestdatabillthemeOut, BillupdaterequestdatabillthemeUpdate, BillupdaterequestdatabillthemeDb
+from schemas.from_spec.billupdaterequestdatabilltheme import \
+    BillupdaterequestdatabillthemeOut
+
 
 def convert_sdk_to_billupdaterequestdatabillthemeout(sdk_obj):
     # TODO

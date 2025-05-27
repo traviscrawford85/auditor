@@ -36,7 +36,8 @@ class CommentupdateJsonBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.commentupdate_json_body_data import CommentupdateJsonBodyData
+        from ..models.commentupdate_json_body_data import \
+            CommentupdateJsonBodyData
 
         d = dict(src_dict)
         data = CommentupdateJsonBodyData.from_dict(d.pop("data"))

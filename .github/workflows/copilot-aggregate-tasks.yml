@@ -1,0 +1,73 @@
+name: Copilot Aggregate Tasks
+
+on:
+  push:
+    paths:
+      - 'clio_client/**'
+      - 'clio_sdk/**'
+  workflow_dispatch:
+
+jobs:
+  build-task-interface:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Build index for tasks
+        run: |
+          echo "## Copilot Index for SDK: Tasks" > copilot_index_tasks.md
+          find clio_client/models -iname 'task*.py' -exec echo '- {}' \; >> copilot_index_tasks.md
+          find clio_client/tasks -iname 'task*.py' -exec echo '- {}' \; >> copilot_index_tasks.md
+          find clio_sdk/models -iname '*task*.py' -exec echo '- {}' \; >> copilot_index_tasks.md
+          find clio_sdk/queries -iname '*task*.py' -exec echo '- {}' \; >> copilot_index_tasks.md
+          find clio_sdk/commands -iname '*task*.py' -exec echo '- {}' \; >> copilot_index_tasks.md
+          echo "- clio_sdk/interfaces/aggregate_tasks.py" >> copilot_index_tasks.md
+
+      - name: Ensure interfaces directory exists
+        run: mkdir -p clio_sdk/interfaces
+
+      - name: Generate aggregate_tasks.py
+        run: |
+          cat <<EOF > clio_sdk/interfaces/aggregate_tasks.py
+"""
+Auto-aggregated task operations for Clio SDK.
+
+This file wraps low-level client methods and SDK queries/commands into a single, ergonomic interface
+for use across the application or by external developers.
+
+Copilot Guidance:
+- Add any additional methods found in clio_sdk/queries/tasks.py or clio_sdk/commands/tasks.py.
+- Only expose clean, business-relevant methods.
+- Use the SDK-level Task model (clio_sdk.models.task.Task) instead of low-level clio_client models.
+- Update __all__ to reflect any new additions.
+
+See: copilot_index_tasks.md for indexed files and discovery paths.
+"""
+
+from clio_sdk.queries.tasks import get_pending_tasks, get_tasks_by_matter, get_task_by_id
+from clio_sdk.queries.deadlines import get_upcoming_deadlines, get_conflicting_calendar_events
+from clio_sdk.commands.tasks import create_task, update_task, delete_task
+from clio_sdk.models.task import Task
+
+__all__ = [
+    "get_pending_tasks",
+    "get_tasks_by_matter",
+    "get_task_by_id",
+    "get_upcoming_deadlines",
+    "get_conflicting_calendar_events",
+    "create_task",
+    "update_task",
+    "delete_task",
+    "Task",
+]
+EOF
+
+      - name: Commit aggregate interface
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add clio_sdk/interfaces/aggregate_tasks.py copilot_index_tasks.md
+          git commit -m "Scaffold aggregate_tasks interface" || echo "No changes to commit"
+          git push

@@ -1,6 +1,6 @@
-import os
-import yaml
 from pathlib import Path
+
+import yaml
 
 REQUIRED_PATH_KEYS = {"get", "post", "put", "patch", "delete"}
 REQUIRED_COMPONENT_KEYS = {

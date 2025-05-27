@@ -1,5 +1,7 @@
 # Adapter stubs for Mattercreaterequestdataclient
-from schemas.from_spec.mattercreaterequestdataclient import MattercreaterequestdataclientIn, MattercreaterequestdataclientOut, MattercreaterequestdataclientUpdate, MattercreaterequestdataclientDb
+from schemas.from_spec.mattercreaterequestdataclient import \
+    MattercreaterequestdataclientOut
+
 
 def convert_sdk_to_mattercreaterequestdataclientout(sdk_obj):
     # TODO

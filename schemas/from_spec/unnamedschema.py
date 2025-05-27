@@ -1,6 +1,7 @@
+from typing import Any, Optional
+
 from pydantic import BaseModel
-from typing import Optional, Any, List
-from datetime import datetime
+
 
 class UnnamedschemaIn(BaseModel):
     name: Optional[Any] = None

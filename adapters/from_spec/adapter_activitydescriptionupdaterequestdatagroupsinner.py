@@ -1,5 +1,7 @@
 # Adapter stubs for Activitydescriptionupdaterequestdatagroupsinner
-from schemas.from_spec.activitydescriptionupdaterequestdatagroupsinner import ActivitydescriptionupdaterequestdatagroupsinnerIn, ActivitydescriptionupdaterequestdatagroupsinnerOut, ActivitydescriptionupdaterequestdatagroupsinnerUpdate, ActivitydescriptionupdaterequestdatagroupsinnerDb
+from schemas.from_spec.activitydescriptionupdaterequestdatagroupsinner import \
+    ActivitydescriptionupdaterequestdatagroupsinnerOut
+
 
 def convert_sdk_to_activitydescriptionupdaterequestdatagroupsinnerout(sdk_obj):
     # TODO

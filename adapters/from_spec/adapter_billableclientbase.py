@@ -1,5 +1,6 @@
 # Adapter stubs for Billableclientbase
-from schemas.from_spec.billableclientbase import BillableclientBaseIn, BillableclientBaseOut, BillableclientBaseUpdate, BillableclientBaseDb
+from schemas.from_spec.billableclientbase import BillableclientBaseOut
+
 
 def convert_sdk_to_billableclientBaseOut(sdk_obj):
     # TODO

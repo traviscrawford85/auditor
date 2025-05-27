@@ -1,5 +1,7 @@
 # Adapter stubs for Activitycreaterequestdatacalendarentry
-from schemas.from_spec.activitycreaterequestdatacalendarentry import ActivitycreaterequestdatacalendarentryIn, ActivitycreaterequestdatacalendarentryOut, ActivitycreaterequestdatacalendarentryUpdate, ActivitycreaterequestdatacalendarentryDb
+from schemas.from_spec.activitycreaterequestdatacalendarentry import \
+    ActivitycreaterequestdatacalendarentryOut
+
 
 def convert_sdk_to_activitycreaterequestdatacalendarentryout(sdk_obj):
     # TODO

@@ -5,7 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.clio_payments_linkcreate_json_body_data import ClioPaymentsLinkcreateJsonBodyData
+    from ..models.clio_payments_linkcreate_json_body_data import \
+        ClioPaymentsLinkcreateJsonBodyData
 
 
 T = TypeVar("T", bound="ClioPaymentsLinkcreateJsonBody")
@@ -36,7 +37,8 @@ class ClioPaymentsLinkcreateJsonBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.clio_payments_linkcreate_json_body_data import ClioPaymentsLinkcreateJsonBodyData
+        from ..models.clio_payments_linkcreate_json_body_data import \
+            ClioPaymentsLinkcreateJsonBodyData
 
         d = dict(src_dict)
         data = ClioPaymentsLinkcreateJsonBodyData.from_dict(d.pop("data"))

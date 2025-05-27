@@ -9,9 +9,8 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.mattercreate_files_body_data_task_template_list_instances_item_task_template_list import (
-        MattercreateFilesBodyDataTaskTemplateListInstancesItemTaskTemplateList,
-    )
+    from ..models.mattercreate_files_body_data_task_template_list_instances_item_task_template_list import \
+        MattercreateFilesBodyDataTaskTemplateListInstancesItemTaskTemplateList
 
 
 T = TypeVar("T", bound="MattercreateFilesBodyDataTaskTemplateListInstancesItem")
@@ -63,9 +62,8 @@ class MattercreateFilesBodyDataTaskTemplateListInstancesItem:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.mattercreate_files_body_data_task_template_list_instances_item_task_template_list import (
-            MattercreateFilesBodyDataTaskTemplateListInstancesItemTaskTemplateList,
-        )
+        from ..models.mattercreate_files_body_data_task_template_list_instances_item_task_template_list import \
+            MattercreateFilesBodyDataTaskTemplateListInstancesItemTaskTemplateList
 
         d = dict(src_dict)
         task_template_list = MattercreateFilesBodyDataTaskTemplateListInstancesItemTaskTemplateList.from_dict(

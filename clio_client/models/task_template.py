@@ -6,16 +6,20 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.task_template_base_priority import TaskTemplateBasePriority, check_task_template_base_priority
+from ..models.task_template_base_priority import (
+    TaskTemplateBasePriority, check_task_template_base_priority)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.reminder_template_base import ReminderTemplateBase
     from ..models.task_template_assignee import TaskTemplateAssignee
-    from ..models.task_template_cascading_source import TaskTemplateCascadingSource
-    from ..models.task_template_task_template_list import TaskTemplateTaskTemplateList
+    from ..models.task_template_cascading_source import \
+        TaskTemplateCascadingSource
+    from ..models.task_template_task_template_list import \
+        TaskTemplateTaskTemplateList
     from ..models.task_template_task_type import TaskTemplateTaskType
-    from ..models.task_template_template_creator import TaskTemplateTemplateCreator
+    from ..models.task_template_template_creator import \
+        TaskTemplateTemplateCreator
 
 
 T = TypeVar("T", bound="TaskTemplate")
@@ -146,10 +150,13 @@ class TaskTemplate:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.reminder_template_base import ReminderTemplateBase
         from ..models.task_template_assignee import TaskTemplateAssignee
-        from ..models.task_template_cascading_source import TaskTemplateCascadingSource
-        from ..models.task_template_task_template_list import TaskTemplateTaskTemplateList
+        from ..models.task_template_cascading_source import \
+            TaskTemplateCascadingSource
+        from ..models.task_template_task_template_list import \
+            TaskTemplateTaskTemplateList
         from ..models.task_template_task_type import TaskTemplateTaskType
-        from ..models.task_template_template_creator import TaskTemplateTemplateCreator
+        from ..models.task_template_template_creator import \
+            TaskTemplateTemplateCreator
 
         d = dict(src_dict)
         id = d.pop("id", UNSET)

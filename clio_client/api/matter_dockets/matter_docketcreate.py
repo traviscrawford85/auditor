@@ -8,7 +8,8 @@ from ...client import AuthenticatedClient, Client
 from ...models.error import Error
 from ...models.matter_docket_show import MatterDocketShow
 from ...models.matter_docketcreate_data_body import MatterDocketcreateDataBody
-from ...models.matter_docketcreate_files_body import MatterDocketcreateFilesBody
+from ...models.matter_docketcreate_files_body import \
+    MatterDocketcreateFilesBody
 from ...models.matter_docketcreate_json_body import MatterDocketcreateJsonBody
 from ...types import UNSET, Response, Unset
 

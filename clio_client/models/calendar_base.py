@@ -6,11 +6,16 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.calendar_base_color import CalendarBaseColor, check_calendar_base_color
-from ..models.calendar_base_light_color import CalendarBaseLightColor, check_calendar_base_light_color
-from ..models.calendar_base_permission import CalendarBasePermission, check_calendar_base_permission
-from ..models.calendar_base_source import CalendarBaseSource, check_calendar_base_source
-from ..models.calendar_base_type import CalendarBaseType, check_calendar_base_type
+from ..models.calendar_base_color import (CalendarBaseColor,
+                                          check_calendar_base_color)
+from ..models.calendar_base_light_color import (
+    CalendarBaseLightColor, check_calendar_base_light_color)
+from ..models.calendar_base_permission import (CalendarBasePermission,
+                                               check_calendar_base_permission)
+from ..models.calendar_base_source import (CalendarBaseSource,
+                                           check_calendar_base_source)
+from ..models.calendar_base_type import (CalendarBaseType,
+                                         check_calendar_base_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="CalendarBase")

@@ -1,5 +1,6 @@
 # Adapter stubs for Activitytaskbase
-from schemas.from_spec.activitytaskbase import ActivitytaskBaseIn, ActivitytaskBaseOut, ActivitytaskBaseUpdate, ActivitytaskBaseDb
+from schemas.from_spec.activitytaskbase import ActivitytaskBaseOut
+
 
 def convert_sdk_to_activitytaskBaseOut(sdk_obj):
     # TODO

@@ -6,12 +6,12 @@ from attrs import field as _attrs_field
 
 from ..models.mattercreate_data_body_data_custom_rate_type import (
     MattercreateDataBodyDataCustomRateType,
-    check_mattercreate_data_body_data_custom_rate_type,
-)
+    check_mattercreate_data_body_data_custom_rate_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.mattercreate_data_body_data_custom_rate_rates_item import MattercreateDataBodyDataCustomRateRatesItem
+    from ..models.mattercreate_data_body_data_custom_rate_rates_item import \
+        MattercreateDataBodyDataCustomRateRatesItem
 
 
 T = TypeVar("T", bound="MattercreateDataBodyDataCustomRate")
@@ -53,9 +53,8 @@ class MattercreateDataBodyDataCustomRate:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.mattercreate_data_body_data_custom_rate_rates_item import (
-            MattercreateDataBodyDataCustomRateRatesItem,
-        )
+        from ..models.mattercreate_data_body_data_custom_rate_rates_item import \
+            MattercreateDataBodyDataCustomRateRatesItem
 
         d = dict(src_dict)
         type_ = check_mattercreate_data_body_data_custom_rate_type(d.pop("type"))

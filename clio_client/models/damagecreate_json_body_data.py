@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.damagecreate_json_body_data_damage_type import (
     DamagecreateJsonBodyDataDamageType,
-    check_damagecreate_json_body_data_damage_type,
-)
+    check_damagecreate_json_body_data_damage_type)
 
 T = TypeVar("T", bound="DamagecreateJsonBodyData")
 

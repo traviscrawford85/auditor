@@ -1,5 +1,6 @@
 # Adapter stubs for Documentcategory
-from schemas.from_spec.documentcategory import DocumentcategoryIn, DocumentcategoryOut, DocumentcategoryUpdate, DocumentcategoryDb
+from schemas.from_spec.documentcategory import DocumentcategoryOut
+
 
 def convert_sdk_to_documentcategoryout(sdk_obj):
     # TODO

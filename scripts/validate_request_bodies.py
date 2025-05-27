@@ -8,8 +8,10 @@ Validate each request body in components/requestBodies/*.yaml to ensure:
 """
 
 import sys
-import yaml
 from pathlib import Path
+
+import yaml
+
 
 def validate_request_body(rb_path):
     errors = []

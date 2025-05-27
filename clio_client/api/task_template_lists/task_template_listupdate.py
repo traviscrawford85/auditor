@@ -7,9 +7,12 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.error import Error
 from ...models.task_template_list_show import TaskTemplateListShow
-from ...models.task_template_listupdate_data_body import TaskTemplateListupdateDataBody
-from ...models.task_template_listupdate_files_body import TaskTemplateListupdateFilesBody
-from ...models.task_template_listupdate_json_body import TaskTemplateListupdateJsonBody
+from ...models.task_template_listupdate_data_body import \
+    TaskTemplateListupdateDataBody
+from ...models.task_template_listupdate_files_body import \
+    TaskTemplateListupdateFilesBody
+from ...models.task_template_listupdate_json_body import \
+    TaskTemplateListupdateJsonBody
 from ...types import UNSET, Response, Unset
 
 

@@ -12,12 +12,16 @@ if TYPE_CHECKING:
     from ..models.activity_base import ActivityBase
     from ..models.attendee_base import AttendeeBase
     from ..models.calendar_base import CalendarBase
-    from ..models.calendar_entry_calendar_entry_event_type import CalendarEntryCalendarEntryEventType
-    from ..models.calendar_entry_calendar_owner import CalendarEntryCalendarOwner
-    from ..models.calendar_entry_conference_meeting import CalendarEntryConferenceMeeting
+    from ..models.calendar_entry_calendar_entry_event_type import \
+        CalendarEntryCalendarEntryEventType
+    from ..models.calendar_entry_calendar_owner import \
+        CalendarEntryCalendarOwner
+    from ..models.calendar_entry_conference_meeting import \
+        CalendarEntryConferenceMeeting
     from ..models.calendar_entry_matter import CalendarEntryMatter
     from ..models.calendar_entry_matter_docket import CalendarEntryMatterDocket
-    from ..models.calendar_entry_parent_calendar_entry import CalendarEntryParentCalendarEntry
+    from ..models.calendar_entry_parent_calendar_entry import \
+        CalendarEntryParentCalendarEntry
     from ..models.external_property_base import ExternalPropertyBase
     from ..models.reminder_base import ReminderBase
 
@@ -260,12 +264,17 @@ class CalendarEntry:
         from ..models.activity_base import ActivityBase
         from ..models.attendee_base import AttendeeBase
         from ..models.calendar_base import CalendarBase
-        from ..models.calendar_entry_calendar_entry_event_type import CalendarEntryCalendarEntryEventType
-        from ..models.calendar_entry_calendar_owner import CalendarEntryCalendarOwner
-        from ..models.calendar_entry_conference_meeting import CalendarEntryConferenceMeeting
+        from ..models.calendar_entry_calendar_entry_event_type import \
+            CalendarEntryCalendarEntryEventType
+        from ..models.calendar_entry_calendar_owner import \
+            CalendarEntryCalendarOwner
+        from ..models.calendar_entry_conference_meeting import \
+            CalendarEntryConferenceMeeting
         from ..models.calendar_entry_matter import CalendarEntryMatter
-        from ..models.calendar_entry_matter_docket import CalendarEntryMatterDocket
-        from ..models.calendar_entry_parent_calendar_entry import CalendarEntryParentCalendarEntry
+        from ..models.calendar_entry_matter_docket import \
+            CalendarEntryMatterDocket
+        from ..models.calendar_entry_parent_calendar_entry import \
+            CalendarEntryParentCalendarEntry
         from ..models.external_property_base import ExternalPropertyBase
         from ..models.reminder_base import ReminderBase
 

@@ -1,5 +1,7 @@
 # Adapter stubs for Documentcopyrequestdataparent
-from schemas.from_spec.documentcopyrequestdataparent import DocumentcopyrequestdataparentIn, DocumentcopyrequestdataparentOut, DocumentcopyrequestdataparentUpdate, DocumentcopyrequestdataparentDb
+from schemas.from_spec.documentcopyrequestdataparent import \
+    DocumentcopyrequestdataparentOut
+
 
 def convert_sdk_to_documentcopyrequestdataparentout(sdk_obj):
     # TODO

@@ -1,5 +1,7 @@
 # Adapter stubs for Customfieldsetupdaterequestdata
-from schemas.from_spec.customfieldsetupdaterequestdata import CustomfieldsetupdaterequestdataIn, CustomfieldsetupdaterequestdataOut, CustomfieldsetupdaterequestdataUpdate, CustomfieldsetupdaterequestdataDb
+from schemas.from_spec.customfieldsetupdaterequestdata import \
+    CustomfieldsetupdaterequestdataOut
+
 
 def convert_sdk_to_customfieldsetupdaterequestdataout(sdk_obj):
     # TODO

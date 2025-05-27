@@ -6,9 +6,12 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.conversation_message_show import ConversationMessageShow
-from ...models.conversation_messagecreate_data_body import ConversationMessagecreateDataBody
-from ...models.conversation_messagecreate_files_body import ConversationMessagecreateFilesBody
-from ...models.conversation_messagecreate_json_body import ConversationMessagecreateJsonBody
+from ...models.conversation_messagecreate_data_body import \
+    ConversationMessagecreateDataBody
+from ...models.conversation_messagecreate_files_body import \
+    ConversationMessagecreateFilesBody
+from ...models.conversation_messagecreate_json_body import \
+    ConversationMessagecreateJsonBody
 from ...models.error import Error
 from ...types import UNSET, Response, Unset
 

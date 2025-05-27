@@ -1,5 +1,7 @@
 # Adapter stubs for Communicationcreaterequestdatareceiversinner
-from schemas.from_spec.communicationcreaterequestdatareceiversinner import CommunicationcreaterequestdatareceiversinnerIn, CommunicationcreaterequestdatareceiversinnerOut, CommunicationcreaterequestdatareceiversinnerUpdate, CommunicationcreaterequestdatareceiversinnerDb
+from schemas.from_spec.communicationcreaterequestdatareceiversinner import \
+    CommunicationcreaterequestdatareceiversinnerOut
+
 
 def convert_sdk_to_communicationcreaterequestdatareceiversinnerout(sdk_obj):
     # TODO

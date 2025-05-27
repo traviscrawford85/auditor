@@ -1,5 +1,7 @@
 # Adapter stubs for Outstandingclientbalancebase
-from schemas.from_spec.outstandingclientbalancebase import OutstandingclientbalanceBaseIn, OutstandingclientbalanceBaseOut, OutstandingclientbalanceBaseUpdate, OutstandingclientbalanceBaseDb
+from schemas.from_spec.outstandingclientbalancebase import \
+    OutstandingclientbalanceBaseOut
+
 
 def convert_sdk_to_outstandingclientbalanceBaseOut(sdk_obj):
     # TODO

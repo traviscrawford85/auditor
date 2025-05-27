@@ -8,30 +8,26 @@ from dateutil.parser import isoparse
 
 from ..models.taskupdate_json_body_data_cascading_offset_polarity import (
     TaskupdateJsonBodyDataCascadingOffsetPolarity,
-    check_taskupdate_json_body_data_cascading_offset_polarity,
-)
+    check_taskupdate_json_body_data_cascading_offset_polarity)
 from ..models.taskupdate_json_body_data_cascading_offset_type import (
     TaskupdateJsonBodyDataCascadingOffsetType,
-    check_taskupdate_json_body_data_cascading_offset_type,
-)
+    check_taskupdate_json_body_data_cascading_offset_type)
 from ..models.taskupdate_json_body_data_permission import (
     TaskupdateJsonBodyDataPermission,
-    check_taskupdate_json_body_data_permission,
-)
+    check_taskupdate_json_body_data_permission)
 from ..models.taskupdate_json_body_data_priority import (
-    TaskupdateJsonBodyDataPriority,
-    check_taskupdate_json_body_data_priority,
-)
+    TaskupdateJsonBodyDataPriority, check_taskupdate_json_body_data_priority)
 from ..models.taskupdate_json_body_data_status import (
-    TaskupdateJsonBodyDataStatus,
-    check_taskupdate_json_body_data_status,
-)
+    TaskupdateJsonBodyDataStatus, check_taskupdate_json_body_data_status)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.taskupdate_json_body_data_assignee import TaskupdateJsonBodyDataAssignee
-    from ..models.taskupdate_json_body_data_matter import TaskupdateJsonBodyDataMatter
-    from ..models.taskupdate_json_body_data_task_type import TaskupdateJsonBodyDataTaskType
+    from ..models.taskupdate_json_body_data_assignee import \
+        TaskupdateJsonBodyDataAssignee
+    from ..models.taskupdate_json_body_data_matter import \
+        TaskupdateJsonBodyDataMatter
+    from ..models.taskupdate_json_body_data_task_type import \
+        TaskupdateJsonBodyDataTaskType
 
 
 T = TypeVar("T", bound="TaskupdateJsonBodyData")
@@ -181,9 +177,12 @@ class TaskupdateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.taskupdate_json_body_data_assignee import TaskupdateJsonBodyDataAssignee
-        from ..models.taskupdate_json_body_data_matter import TaskupdateJsonBodyDataMatter
-        from ..models.taskupdate_json_body_data_task_type import TaskupdateJsonBodyDataTaskType
+        from ..models.taskupdate_json_body_data_assignee import \
+            TaskupdateJsonBodyDataAssignee
+        from ..models.taskupdate_json_body_data_matter import \
+            TaskupdateJsonBodyDataMatter
+        from ..models.taskupdate_json_body_data_task_type import \
+            TaskupdateJsonBodyDataTaskType
 
         d = dict(src_dict)
         _assignee = d.pop("assignee", UNSET)

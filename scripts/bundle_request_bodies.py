@@ -1,7 +1,8 @@
-import yaml
-from pathlib import Path
 import os
 import re
+from pathlib import Path
+
+import yaml
 
 REQUEST_BODIES_DIR = Path("openapi/components/requestBodies")
 REQUEST_BODIES_BUNDLE = Path("openapi/components/requestBodies.yaml")

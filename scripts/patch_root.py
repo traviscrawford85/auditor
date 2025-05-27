@@ -1,6 +1,8 @@
 import argparse
-import yaml
 from pathlib import Path
+
+import yaml
+
 
 def load_yaml_or_json(path: Path):
     with path.open("r", encoding="utf-8") as f:

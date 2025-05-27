@@ -1,5 +1,7 @@
 # Adapter stubs for Documentcopyrequestdatadocumentcategory
-from schemas.from_spec.documentcopyrequestdatadocumentcategory import DocumentcopyrequestdatadocumentcategoryIn, DocumentcopyrequestdatadocumentcategoryOut, DocumentcopyrequestdatadocumentcategoryUpdate, DocumentcopyrequestdatadocumentcategoryDb
+from schemas.from_spec.documentcopyrequestdatadocumentcategory import \
+    DocumentcopyrequestdatadocumentcategoryOut
+
 
 def convert_sdk_to_documentcopyrequestdatadocumentcategoryout(sdk_obj):
     # TODO

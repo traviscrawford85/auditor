@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.practice_areaupdate_files_body_data_category import (
     PracticeAreaupdateFilesBodyDataCategory,
-    check_practice_areaupdate_files_body_data_category,
-)
+    check_practice_areaupdate_files_body_data_category)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="PracticeAreaupdateFilesBodyData")

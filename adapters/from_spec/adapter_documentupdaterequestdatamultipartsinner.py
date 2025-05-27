@@ -1,5 +1,7 @@
 # Adapter stubs for Documentupdaterequestdatamultipartsinner
-from schemas.from_spec.documentupdaterequestdatamultipartsinner import DocumentupdaterequestdatamultipartsinnerIn, DocumentupdaterequestdatamultipartsinnerOut, DocumentupdaterequestdatamultipartsinnerUpdate, DocumentupdaterequestdatamultipartsinnerDb
+from schemas.from_spec.documentupdaterequestdatamultipartsinner import \
+    DocumentupdaterequestdatamultipartsinnerOut
+
 
 def convert_sdk_to_documentupdaterequestdatamultipartsinnerout(sdk_obj):
     # TODO

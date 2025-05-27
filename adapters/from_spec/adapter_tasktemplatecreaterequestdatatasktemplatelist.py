@@ -1,5 +1,7 @@
 # Adapter stubs for Tasktemplatecreaterequestdatatasktemplatelist
-from schemas.from_spec.tasktemplatecreaterequestdatatasktemplatelist import TasktemplatecreaterequestdatatasktemplateListIn, TasktemplatecreaterequestdatatasktemplatelistOut, TasktemplatecreaterequestdatatasktemplatelistUpdate, TasktemplatecreaterequestdatatasktemplatelistDb
+from schemas.from_spec.tasktemplatecreaterequestdatatasktemplatelist import \
+    TasktemplatecreaterequestdatatasktemplatelistOut
+
 
 def convert_sdk_to_tasktemplatecreaterequestdatatasktemplatelistout(sdk_obj):
     # TODO

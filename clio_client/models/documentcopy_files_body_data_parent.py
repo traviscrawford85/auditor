@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.documentcopy_files_body_data_parent_type import (
     DocumentcopyFilesBodyDataParentType,
-    check_documentcopy_files_body_data_parent_type,
-)
+    check_documentcopy_files_body_data_parent_type)
 
 T = TypeVar("T", bound="DocumentcopyFilesBodyDataParent")
 

@@ -5,7 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.bill_themeupdate_json_body_data import BillThemeupdateJsonBodyData
+    from ..models.bill_themeupdate_json_body_data import \
+        BillThemeupdateJsonBodyData
 
 
 T = TypeVar("T", bound="BillThemeupdateJsonBody")
@@ -36,7 +37,8 @@ class BillThemeupdateJsonBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.bill_themeupdate_json_body_data import BillThemeupdateJsonBodyData
+        from ..models.bill_themeupdate_json_body_data import \
+            BillThemeupdateJsonBodyData
 
         d = dict(src_dict)
         data = BillThemeupdateJsonBodyData.from_dict(d.pop("data"))

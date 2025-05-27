@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.matter_contacts_base_type import MatterContactsBaseType, check_matter_contacts_base_type
+from ..models.matter_contacts_base_type import (
+    MatterContactsBaseType, check_matter_contacts_base_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -15,11 +16,16 @@ if TYPE_CHECKING:
     from ..models.email_address_base import EmailAddressBase
     from ..models.matter_contacts_avatar import MatterContactsAvatar
     from ..models.matter_contacts_company import MatterContactsCompany
-    from ..models.matter_contacts_primary_address import MatterContactsPrimaryAddress
-    from ..models.matter_contacts_primary_web_site import MatterContactsPrimaryWebSite
-    from ..models.matter_contacts_relationship import MatterContactsRelationship
-    from ..models.matter_contacts_secondary_address import MatterContactsSecondaryAddress
-    from ..models.matter_contacts_secondary_web_site import MatterContactsSecondaryWebSite
+    from ..models.matter_contacts_primary_address import \
+        MatterContactsPrimaryAddress
+    from ..models.matter_contacts_primary_web_site import \
+        MatterContactsPrimaryWebSite
+    from ..models.matter_contacts_relationship import \
+        MatterContactsRelationship
+    from ..models.matter_contacts_secondary_address import \
+        MatterContactsSecondaryAddress
+    from ..models.matter_contacts_secondary_web_site import \
+        MatterContactsSecondaryWebSite
     from ..models.phone_number_base import PhoneNumberBase
     from ..models.web_site_base import WebSiteBase
 
@@ -317,11 +323,16 @@ class MatterContacts:
         from ..models.email_address_base import EmailAddressBase
         from ..models.matter_contacts_avatar import MatterContactsAvatar
         from ..models.matter_contacts_company import MatterContactsCompany
-        from ..models.matter_contacts_primary_address import MatterContactsPrimaryAddress
-        from ..models.matter_contacts_primary_web_site import MatterContactsPrimaryWebSite
-        from ..models.matter_contacts_relationship import MatterContactsRelationship
-        from ..models.matter_contacts_secondary_address import MatterContactsSecondaryAddress
-        from ..models.matter_contacts_secondary_web_site import MatterContactsSecondaryWebSite
+        from ..models.matter_contacts_primary_address import \
+            MatterContactsPrimaryAddress
+        from ..models.matter_contacts_primary_web_site import \
+            MatterContactsPrimaryWebSite
+        from ..models.matter_contacts_relationship import \
+            MatterContactsRelationship
+        from ..models.matter_contacts_secondary_address import \
+            MatterContactsSecondaryAddress
+        from ..models.matter_contacts_secondary_web_site import \
+            MatterContactsSecondaryWebSite
         from ..models.phone_number_base import PhoneNumberBase
         from ..models.web_site_base import WebSiteBase
 

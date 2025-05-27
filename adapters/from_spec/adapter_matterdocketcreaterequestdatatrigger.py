@@ -1,5 +1,7 @@
 # Adapter stubs for Matterdocketcreaterequestdatatrigger
-from schemas.from_spec.matterdocketcreaterequestdatatrigger import MatterdocketcreaterequestdatatriggerIn, MatterdocketcreaterequestdatatriggerOut, MatterdocketcreaterequestdatatriggerUpdate, MatterdocketcreaterequestdatatriggerDb
+from schemas.from_spec.matterdocketcreaterequestdatatrigger import \
+    MatterdocketcreaterequestdatatriggerOut
+
 
 def convert_sdk_to_matterdocketcreaterequestdatatriggerout(sdk_obj):
     # TODO

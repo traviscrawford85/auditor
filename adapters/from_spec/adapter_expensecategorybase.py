@@ -1,5 +1,6 @@
 # Adapter stubs for Expensecategorybase
-from schemas.from_spec.expensecategorybase import ExpensecategoryBaseIn, ExpensecategoryBaseOut, ExpensecategoryBaseUpdate, ExpensecategoryBaseDb
+from schemas.from_spec.expensecategorybase import ExpensecategoryBaseOut
+
 
 def convert_sdk_to_expensecategoryBaseOut(sdk_obj):
     # TODO

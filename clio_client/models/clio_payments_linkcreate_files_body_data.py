@@ -7,13 +7,12 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.clio_payments_linkcreate_files_body_data_destination_account import (
-        ClioPaymentsLinkcreateFilesBodyDataDestinationAccount,
-    )
-    from ..models.clio_payments_linkcreate_files_body_data_destination_contact import (
-        ClioPaymentsLinkcreateFilesBodyDataDestinationContact,
-    )
-    from ..models.clio_payments_linkcreate_files_body_data_subject import ClioPaymentsLinkcreateFilesBodyDataSubject
+    from ..models.clio_payments_linkcreate_files_body_data_destination_account import \
+        ClioPaymentsLinkcreateFilesBodyDataDestinationAccount
+    from ..models.clio_payments_linkcreate_files_body_data_destination_contact import \
+        ClioPaymentsLinkcreateFilesBodyDataDestinationContact
+    from ..models.clio_payments_linkcreate_files_body_data_subject import \
+        ClioPaymentsLinkcreateFilesBodyDataSubject
 
 
 T = TypeVar("T", bound="ClioPaymentsLinkcreateFilesBodyData")
@@ -97,13 +96,12 @@ class ClioPaymentsLinkcreateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.clio_payments_linkcreate_files_body_data_destination_account import (
-            ClioPaymentsLinkcreateFilesBodyDataDestinationAccount,
-        )
-        from ..models.clio_payments_linkcreate_files_body_data_destination_contact import (
-            ClioPaymentsLinkcreateFilesBodyDataDestinationContact,
-        )
-        from ..models.clio_payments_linkcreate_files_body_data_subject import ClioPaymentsLinkcreateFilesBodyDataSubject
+        from ..models.clio_payments_linkcreate_files_body_data_destination_account import \
+            ClioPaymentsLinkcreateFilesBodyDataDestinationAccount
+        from ..models.clio_payments_linkcreate_files_body_data_destination_contact import \
+            ClioPaymentsLinkcreateFilesBodyDataDestinationContact
+        from ..models.clio_payments_linkcreate_files_body_data_subject import \
+            ClioPaymentsLinkcreateFilesBodyDataSubject
 
         d = dict(src_dict)
         currency = d.pop("currency")

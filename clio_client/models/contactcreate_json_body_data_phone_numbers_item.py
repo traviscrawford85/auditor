@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.contactcreate_json_body_data_phone_numbers_item_name import (
     ContactcreateJsonBodyDataPhoneNumbersItemName,
-    check_contactcreate_json_body_data_phone_numbers_item_name,
-)
+    check_contactcreate_json_body_data_phone_numbers_item_name)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ContactcreateJsonBodyDataPhoneNumbersItem")

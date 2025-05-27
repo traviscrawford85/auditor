@@ -6,13 +6,17 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.report_preset_base_category import ReportPresetBaseCategory, check_report_preset_base_category
-from ..models.report_preset_base_format import ReportPresetBaseFormat, check_report_preset_base_format
-from ..models.report_preset_base_kind import ReportPresetBaseKind, check_report_preset_base_kind
+from ..models.report_preset_base_category import (
+    ReportPresetBaseCategory, check_report_preset_base_category)
+from ..models.report_preset_base_format import (
+    ReportPresetBaseFormat, check_report_preset_base_format)
+from ..models.report_preset_base_kind import (ReportPresetBaseKind,
+                                              check_report_preset_base_kind)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.report_preset_report_schedule import ReportPresetReportSchedule
+    from ..models.report_preset_report_schedule import \
+        ReportPresetReportSchedule
 
 
 T = TypeVar("T", bound="ReportPreset")
@@ -117,7 +121,8 @@ class ReportPreset:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.report_preset_report_schedule import ReportPresetReportSchedule
+        from ..models.report_preset_report_schedule import \
+            ReportPresetReportSchedule
 
         d = dict(src_dict)
         id = d.pop("id", UNSET)

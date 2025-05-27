@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.bank_accountcreate_files_body_data import BankAccountcreateFilesBodyData
+    from ..models.bank_accountcreate_files_body_data import \
+        BankAccountcreateFilesBodyData
 
 
 T = TypeVar("T", bound="BankAccountcreateFilesBody")
@@ -52,7 +53,8 @@ class BankAccountcreateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.bank_accountcreate_files_body_data import BankAccountcreateFilesBodyData
+        from ..models.bank_accountcreate_files_body_data import \
+            BankAccountcreateFilesBodyData
 
         d = dict(src_dict)
         data = BankAccountcreateFilesBodyData.from_dict(d.pop("data"))

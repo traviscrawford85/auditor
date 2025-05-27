@@ -9,12 +9,16 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.clio_payments_link_bank_account import ClioPaymentsLinkBankAccount
+    from ..models.clio_payments_link_bank_account import \
+        ClioPaymentsLinkBankAccount
     from ..models.clio_payments_link_bill import ClioPaymentsLinkBill
-    from ..models.clio_payments_link_clio_payments_payment import ClioPaymentsLinkClioPaymentsPayment
+    from ..models.clio_payments_link_clio_payments_payment import \
+        ClioPaymentsLinkClioPaymentsPayment
     from ..models.clio_payments_link_contact import ClioPaymentsLinkContact
-    from ..models.clio_payments_link_destination_account import ClioPaymentsLinkDestinationAccount
-    from ..models.clio_payments_link_destination_contact import ClioPaymentsLinkDestinationContact
+    from ..models.clio_payments_link_destination_account import \
+        ClioPaymentsLinkDestinationAccount
+    from ..models.clio_payments_link_destination_contact import \
+        ClioPaymentsLinkDestinationContact
 
 
 T = TypeVar("T", bound="ClioPaymentsLink")
@@ -162,12 +166,16 @@ class ClioPaymentsLink:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.clio_payments_link_bank_account import ClioPaymentsLinkBankAccount
+        from ..models.clio_payments_link_bank_account import \
+            ClioPaymentsLinkBankAccount
         from ..models.clio_payments_link_bill import ClioPaymentsLinkBill
-        from ..models.clio_payments_link_clio_payments_payment import ClioPaymentsLinkClioPaymentsPayment
+        from ..models.clio_payments_link_clio_payments_payment import \
+            ClioPaymentsLinkClioPaymentsPayment
         from ..models.clio_payments_link_contact import ClioPaymentsLinkContact
-        from ..models.clio_payments_link_destination_account import ClioPaymentsLinkDestinationAccount
-        from ..models.clio_payments_link_destination_contact import ClioPaymentsLinkDestinationContact
+        from ..models.clio_payments_link_destination_account import \
+            ClioPaymentsLinkDestinationAccount
+        from ..models.clio_payments_link_destination_contact import \
+            ClioPaymentsLinkDestinationContact
 
         d = dict(src_dict)
         active = d.pop("active", UNSET)

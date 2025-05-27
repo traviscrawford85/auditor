@@ -1,4 +1,5 @@
 from pathlib import Path
+
 import yaml
 
 BASE_DIR = Path("]openapi")

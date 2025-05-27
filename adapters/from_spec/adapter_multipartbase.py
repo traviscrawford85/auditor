@@ -1,5 +1,6 @@
 # Adapter stubs for Multipartbase
-from schemas.from_spec.multipartbase import MultipartBaseIn, MultipartBaseOut, MultipartBaseUpdate, MultipartBaseDb
+from schemas.from_spec.multipartbase import MultipartBaseOut
+
 
 def convert_sdk_to_multipartBaseOut(sdk_obj):
     # TODO

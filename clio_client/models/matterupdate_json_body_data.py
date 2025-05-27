@@ -7,35 +7,40 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.matterupdate_json_body_data_status import (
-    MatterupdateJsonBodyDataStatus,
-    check_matterupdate_json_body_data_status,
-)
+    MatterupdateJsonBodyDataStatus, check_matterupdate_json_body_data_status)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.matterupdate_json_body_data_client import MatterupdateJsonBodyDataClient
-    from ..models.matterupdate_json_body_data_custom_field_set_associations_item import (
-        MatterupdateJsonBodyDataCustomFieldSetAssociationsItem,
-    )
-    from ..models.matterupdate_json_body_data_custom_field_values_item import (
-        MatterupdateJsonBodyDataCustomFieldValuesItem,
-    )
-    from ..models.matterupdate_json_body_data_custom_rate import MatterupdateJsonBodyDataCustomRate
-    from ..models.matterupdate_json_body_data_evergreen_retainer import MatterupdateJsonBodyDataEvergreenRetainer
-    from ..models.matterupdate_json_body_data_group import MatterupdateJsonBodyDataGroup
-    from ..models.matterupdate_json_body_data_matter_budget import MatterupdateJsonBodyDataMatterBudget
-    from ..models.matterupdate_json_body_data_matter_stage import MatterupdateJsonBodyDataMatterStage
-    from ..models.matterupdate_json_body_data_originating_attorney import MatterupdateJsonBodyDataOriginatingAttorney
-    from ..models.matterupdate_json_body_data_practice_area import MatterupdateJsonBodyDataPracticeArea
-    from ..models.matterupdate_json_body_data_relationships_item import MatterupdateJsonBodyDataRelationshipsItem
-    from ..models.matterupdate_json_body_data_responsible_attorney import MatterupdateJsonBodyDataResponsibleAttorney
-    from ..models.matterupdate_json_body_data_split_invoice_payers_item import (
-        MatterupdateJsonBodyDataSplitInvoicePayersItem,
-    )
-    from ..models.matterupdate_json_body_data_statute_of_limitations import MatterupdateJsonBodyDataStatuteOfLimitations
-    from ..models.matterupdate_json_body_data_task_template_list_instances_item import (
-        MatterupdateJsonBodyDataTaskTemplateListInstancesItem,
-    )
+    from ..models.matterupdate_json_body_data_client import \
+        MatterupdateJsonBodyDataClient
+    from ..models.matterupdate_json_body_data_custom_field_set_associations_item import \
+        MatterupdateJsonBodyDataCustomFieldSetAssociationsItem
+    from ..models.matterupdate_json_body_data_custom_field_values_item import \
+        MatterupdateJsonBodyDataCustomFieldValuesItem
+    from ..models.matterupdate_json_body_data_custom_rate import \
+        MatterupdateJsonBodyDataCustomRate
+    from ..models.matterupdate_json_body_data_evergreen_retainer import \
+        MatterupdateJsonBodyDataEvergreenRetainer
+    from ..models.matterupdate_json_body_data_group import \
+        MatterupdateJsonBodyDataGroup
+    from ..models.matterupdate_json_body_data_matter_budget import \
+        MatterupdateJsonBodyDataMatterBudget
+    from ..models.matterupdate_json_body_data_matter_stage import \
+        MatterupdateJsonBodyDataMatterStage
+    from ..models.matterupdate_json_body_data_originating_attorney import \
+        MatterupdateJsonBodyDataOriginatingAttorney
+    from ..models.matterupdate_json_body_data_practice_area import \
+        MatterupdateJsonBodyDataPracticeArea
+    from ..models.matterupdate_json_body_data_relationships_item import \
+        MatterupdateJsonBodyDataRelationshipsItem
+    from ..models.matterupdate_json_body_data_responsible_attorney import \
+        MatterupdateJsonBodyDataResponsibleAttorney
+    from ..models.matterupdate_json_body_data_split_invoice_payers_item import \
+        MatterupdateJsonBodyDataSplitInvoicePayersItem
+    from ..models.matterupdate_json_body_data_statute_of_limitations import \
+        MatterupdateJsonBodyDataStatuteOfLimitations
+    from ..models.matterupdate_json_body_data_task_template_list_instances_item import \
+        MatterupdateJsonBodyDataTaskTemplateListInstancesItem
 
 
 T = TypeVar("T", bound="MatterupdateJsonBodyData")
@@ -263,35 +268,36 @@ class MatterupdateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.matterupdate_json_body_data_client import MatterupdateJsonBodyDataClient
-        from ..models.matterupdate_json_body_data_custom_field_set_associations_item import (
-            MatterupdateJsonBodyDataCustomFieldSetAssociationsItem,
-        )
-        from ..models.matterupdate_json_body_data_custom_field_values_item import (
-            MatterupdateJsonBodyDataCustomFieldValuesItem,
-        )
-        from ..models.matterupdate_json_body_data_custom_rate import MatterupdateJsonBodyDataCustomRate
-        from ..models.matterupdate_json_body_data_evergreen_retainer import MatterupdateJsonBodyDataEvergreenRetainer
-        from ..models.matterupdate_json_body_data_group import MatterupdateJsonBodyDataGroup
-        from ..models.matterupdate_json_body_data_matter_budget import MatterupdateJsonBodyDataMatterBudget
-        from ..models.matterupdate_json_body_data_matter_stage import MatterupdateJsonBodyDataMatterStage
-        from ..models.matterupdate_json_body_data_originating_attorney import (
-            MatterupdateJsonBodyDataOriginatingAttorney,
-        )
-        from ..models.matterupdate_json_body_data_practice_area import MatterupdateJsonBodyDataPracticeArea
-        from ..models.matterupdate_json_body_data_relationships_item import MatterupdateJsonBodyDataRelationshipsItem
-        from ..models.matterupdate_json_body_data_responsible_attorney import (
-            MatterupdateJsonBodyDataResponsibleAttorney,
-        )
-        from ..models.matterupdate_json_body_data_split_invoice_payers_item import (
-            MatterupdateJsonBodyDataSplitInvoicePayersItem,
-        )
-        from ..models.matterupdate_json_body_data_statute_of_limitations import (
-            MatterupdateJsonBodyDataStatuteOfLimitations,
-        )
-        from ..models.matterupdate_json_body_data_task_template_list_instances_item import (
-            MatterupdateJsonBodyDataTaskTemplateListInstancesItem,
-        )
+        from ..models.matterupdate_json_body_data_client import \
+            MatterupdateJsonBodyDataClient
+        from ..models.matterupdate_json_body_data_custom_field_set_associations_item import \
+            MatterupdateJsonBodyDataCustomFieldSetAssociationsItem
+        from ..models.matterupdate_json_body_data_custom_field_values_item import \
+            MatterupdateJsonBodyDataCustomFieldValuesItem
+        from ..models.matterupdate_json_body_data_custom_rate import \
+            MatterupdateJsonBodyDataCustomRate
+        from ..models.matterupdate_json_body_data_evergreen_retainer import \
+            MatterupdateJsonBodyDataEvergreenRetainer
+        from ..models.matterupdate_json_body_data_group import \
+            MatterupdateJsonBodyDataGroup
+        from ..models.matterupdate_json_body_data_matter_budget import \
+            MatterupdateJsonBodyDataMatterBudget
+        from ..models.matterupdate_json_body_data_matter_stage import \
+            MatterupdateJsonBodyDataMatterStage
+        from ..models.matterupdate_json_body_data_originating_attorney import \
+            MatterupdateJsonBodyDataOriginatingAttorney
+        from ..models.matterupdate_json_body_data_practice_area import \
+            MatterupdateJsonBodyDataPracticeArea
+        from ..models.matterupdate_json_body_data_relationships_item import \
+            MatterupdateJsonBodyDataRelationshipsItem
+        from ..models.matterupdate_json_body_data_responsible_attorney import \
+            MatterupdateJsonBodyDataResponsibleAttorney
+        from ..models.matterupdate_json_body_data_split_invoice_payers_item import \
+            MatterupdateJsonBodyDataSplitInvoicePayersItem
+        from ..models.matterupdate_json_body_data_statute_of_limitations import \
+            MatterupdateJsonBodyDataStatuteOfLimitations
+        from ..models.matterupdate_json_body_data_task_template_list_instances_item import \
+            MatterupdateJsonBodyDataTaskTemplateListInstancesItem
 
         d = dict(src_dict)
         billable = d.pop("billable", UNSET)

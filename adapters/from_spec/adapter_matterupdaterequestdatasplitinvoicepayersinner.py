@@ -1,5 +1,7 @@
 # Adapter stubs for Matterupdaterequestdatasplitinvoicepayersinner
-from schemas.from_spec.matterupdaterequestdatasplitinvoicepayersinner import MatterupdaterequestdatasplitinvoicepayersinnerIn, MatterupdaterequestdatasplitinvoicepayersinnerOut, MatterupdaterequestdatasplitinvoicepayersinnerUpdate, MatterupdaterequestdatasplitinvoicepayersinnerDb
+from schemas.from_spec.matterupdaterequestdatasplitinvoicepayersinner import \
+    MatterupdaterequestdatasplitinvoicepayersinnerOut
+
 
 def convert_sdk_to_matterupdaterequestdatasplitinvoicepayersinnerout(sdk_obj):
     # TODO

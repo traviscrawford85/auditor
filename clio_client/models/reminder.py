@@ -6,11 +6,13 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.reminder_base_state import ReminderBaseState, check_reminder_base_state
+from ..models.reminder_base_state import (ReminderBaseState,
+                                          check_reminder_base_state)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.reminder_notification_method import ReminderNotificationMethod
+    from ..models.reminder_notification_method import \
+        ReminderNotificationMethod
     from ..models.reminder_subject import ReminderSubject
 
 
@@ -101,7 +103,8 @@ class Reminder:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.reminder_notification_method import ReminderNotificationMethod
+        from ..models.reminder_notification_method import \
+            ReminderNotificationMethod
         from ..models.reminder_subject import ReminderSubject
 
         d = dict(src_dict)

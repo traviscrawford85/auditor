@@ -1,5 +1,7 @@
 # Adapter stubs for Myeventupdaterequestdata
-from schemas.from_spec.myeventupdaterequestdata import MyeventupdaterequestdataIn, MyeventupdaterequestdataOut, MyeventupdaterequestdataUpdate, MyeventupdaterequestdataDb
+from schemas.from_spec.myeventupdaterequestdata import \
+    MyeventupdaterequestdataOut
+
 
 def convert_sdk_to_myeventupdaterequestdataout(sdk_obj):
     # TODO

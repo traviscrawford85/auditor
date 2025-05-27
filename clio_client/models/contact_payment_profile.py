@@ -7,9 +7,7 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.payment_profile_base_interest_type import (
-    PaymentProfileBaseInterestType,
-    check_payment_profile_base_interest_type,
-)
+    PaymentProfileBaseInterestType, check_payment_profile_base_interest_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ContactPaymentProfile")

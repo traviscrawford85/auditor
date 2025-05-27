@@ -1,5 +1,7 @@
 # Adapter stubs for Trustrequestcreaterequestdatamatterinner
-from schemas.from_spec.trustrequestcreaterequestdatamatterinner import TrustrequestcreaterequestdatamatterinnerIn, TrustrequestcreaterequestdatamatterinnerOut, TrustrequestcreaterequestdatamatterinnerUpdate, TrustrequestcreaterequestdatamatterinnerDb
+from schemas.from_spec.trustrequestcreaterequestdatamatterinner import \
+    TrustrequestcreaterequestdatamatterinnerOut
+
 
 def convert_sdk_to_trustrequestcreaterequestdatamatterinnerout(sdk_obj):
     # TODO

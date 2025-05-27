@@ -6,8 +6,10 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.report_schedule_base_frequency import ReportScheduleBaseFrequency, check_report_schedule_base_frequency
-from ..models.report_schedule_base_status import ReportScheduleBaseStatus, check_report_schedule_base_status
+from ..models.report_schedule_base_frequency import (
+    ReportScheduleBaseFrequency, check_report_schedule_base_frequency)
+from ..models.report_schedule_base_status import (
+    ReportScheduleBaseStatus, check_report_schedule_base_status)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ReportSchedule")

@@ -5,7 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.line_itemupdate_data_body_data import LineItemupdateDataBodyData
+    from ..models.line_itemupdate_data_body_data import \
+        LineItemupdateDataBodyData
 
 
 T = TypeVar("T", bound="LineItemupdateDataBody")
@@ -36,7 +37,8 @@ class LineItemupdateDataBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.line_itemupdate_data_body_data import LineItemupdateDataBodyData
+        from ..models.line_itemupdate_data_body_data import \
+            LineItemupdateDataBodyData
 
         d = dict(src_dict)
         data = LineItemupdateDataBodyData.from_dict(d.pop("data"))

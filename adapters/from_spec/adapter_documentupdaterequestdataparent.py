@@ -1,5 +1,7 @@
 # Adapter stubs for Documentupdaterequestdataparent
-from schemas.from_spec.documentupdaterequestdataparent import DocumentupdaterequestdataparentIn, DocumentupdaterequestdataparentOut, DocumentupdaterequestdataparentUpdate, DocumentupdaterequestdataparentDb
+from schemas.from_spec.documentupdaterequestdataparent import \
+    DocumentupdaterequestdataparentOut
+
 
 def convert_sdk_to_documentupdaterequestdataparentout(sdk_obj):
     # TODO

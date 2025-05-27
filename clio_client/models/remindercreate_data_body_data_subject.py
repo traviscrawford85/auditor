@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.remindercreate_data_body_data_subject_type import (
     RemindercreateDataBodyDataSubjectType,
-    check_remindercreate_data_body_data_subject_type,
-)
+    check_remindercreate_data_body_data_subject_type)
 
 T = TypeVar("T", bound="RemindercreateDataBodyDataSubject")
 

@@ -1,16 +1,18 @@
+
 from pydantic import BaseModel
-from typing import Optional, Any, List
-from datetime import datetime
+
+from .errordetail import ErrordetailOut
+
 
 class ErrorIn(BaseModel):
-    error: Errordetail
+    error: ErrordetailIn
 
 class ErrorOut(BaseModel):
-    error: Errordetail
+    error: ErrordetailOut
 
 class ErrorUpdate(BaseModel):
-    error: Errordetail
+    error: ErrordetailUpdate
 
 class ErrorDb(BaseModel):
-    error: Errordetail
+    error: ErrordetailDb
 

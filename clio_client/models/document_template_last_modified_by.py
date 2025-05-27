@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.user_base_subscription_type import UserBaseSubscriptionType, check_user_base_subscription_type
+from ..models.user_base_subscription_type import (
+    UserBaseSubscriptionType, check_user_base_subscription_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="DocumentTemplateLastModifiedBy")

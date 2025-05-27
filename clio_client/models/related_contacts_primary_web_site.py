@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.web_site_base_name import WebSiteBaseName, check_web_site_base_name
+from ..models.web_site_base_name import (WebSiteBaseName,
+                                         check_web_site_base_name)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="RelatedContactsPrimaryWebSite")

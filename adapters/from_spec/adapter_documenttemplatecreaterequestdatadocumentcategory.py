@@ -1,5 +1,7 @@
 # Adapter stubs for Documenttemplatecreaterequestdatadocumentcategory
-from schemas.from_spec.documenttemplatecreaterequestdatadocumentcategory import DocumenttemplatecreaterequestdatadocumentcategoryIn, DocumenttemplatecreaterequestdatadocumentcategoryOut, DocumenttemplatecreaterequestdatadocumentcategoryUpdate, DocumenttemplatecreaterequestdatadocumentcategoryDb
+from schemas.from_spec.documenttemplatecreaterequestdatadocumentcategory import \
+    DocumenttemplatecreaterequestdatadocumentcategoryOut
+
 
 def convert_sdk_to_documenttemplatecreaterequestdatadocumentcategoryout(sdk_obj):
     # TODO

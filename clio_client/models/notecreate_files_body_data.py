@@ -6,15 +6,17 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.notecreate_files_body_data_type import NotecreateFilesBodyDataType, check_notecreate_files_body_data_type
+from ..models.notecreate_files_body_data_type import (
+    NotecreateFilesBodyDataType, check_notecreate_files_body_data_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.notecreate_files_body_data_contact import NotecreateFilesBodyDataContact
-    from ..models.notecreate_files_body_data_matter import NotecreateFilesBodyDataMatter
-    from ..models.notecreate_files_body_data_notification_event_subscribers_item import (
-        NotecreateFilesBodyDataNotificationEventSubscribersItem,
-    )
+    from ..models.notecreate_files_body_data_contact import \
+        NotecreateFilesBodyDataContact
+    from ..models.notecreate_files_body_data_matter import \
+        NotecreateFilesBodyDataMatter
+    from ..models.notecreate_files_body_data_notification_event_subscribers_item import \
+        NotecreateFilesBodyDataNotificationEventSubscribersItem
 
 
 T = TypeVar("T", bound="NotecreateFilesBodyData")
@@ -88,11 +90,12 @@ class NotecreateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.notecreate_files_body_data_contact import NotecreateFilesBodyDataContact
-        from ..models.notecreate_files_body_data_matter import NotecreateFilesBodyDataMatter
-        from ..models.notecreate_files_body_data_notification_event_subscribers_item import (
-            NotecreateFilesBodyDataNotificationEventSubscribersItem,
-        )
+        from ..models.notecreate_files_body_data_contact import \
+            NotecreateFilesBodyDataContact
+        from ..models.notecreate_files_body_data_matter import \
+            NotecreateFilesBodyDataMatter
+        from ..models.notecreate_files_body_data_notification_event_subscribers_item import \
+            NotecreateFilesBodyDataNotificationEventSubscribersItem
 
         d = dict(src_dict)
         contact = NotecreateFilesBodyDataContact.from_dict(d.pop("contact"))

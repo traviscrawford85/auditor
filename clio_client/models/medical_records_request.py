@@ -8,19 +8,19 @@ from dateutil.parser import isoparse
 
 from ..models.medical_records_request_base_bills_status import (
     MedicalRecordsRequestBaseBillsStatus,
-    check_medical_records_request_base_bills_status,
-)
+    check_medical_records_request_base_bills_status)
 from ..models.medical_records_request_base_records_status import (
     MedicalRecordsRequestBaseRecordsStatus,
-    check_medical_records_request_base_records_status,
-)
+    check_medical_records_request_base_records_status)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.medical_bill_base import MedicalBillBase
     from ..models.medical_record_base import MedicalRecordBase
-    from ..models.medical_records_request_matter import MedicalRecordsRequestMatter
-    from ..models.medical_records_request_medical_provider import MedicalRecordsRequestMedicalProvider
+    from ..models.medical_records_request_matter import \
+        MedicalRecordsRequestMatter
+    from ..models.medical_records_request_medical_provider import \
+        MedicalRecordsRequestMedicalProvider
 
 
 T = TypeVar("T", bound="MedicalRecordsRequest")
@@ -194,8 +194,10 @@ class MedicalRecordsRequest:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.medical_bill_base import MedicalBillBase
         from ..models.medical_record_base import MedicalRecordBase
-        from ..models.medical_records_request_matter import MedicalRecordsRequestMatter
-        from ..models.medical_records_request_medical_provider import MedicalRecordsRequestMedicalProvider
+        from ..models.medical_records_request_matter import \
+            MedicalRecordsRequestMatter
+        from ..models.medical_records_request_medical_provider import \
+            MedicalRecordsRequestMedicalProvider
 
         d = dict(src_dict)
         id = d.pop("id", UNSET)

@@ -1,5 +1,7 @@
 # Adapter stubs for Tasktypecreaterequestdata
-from schemas.from_spec.tasktypecreaterequestdata import TasktypecreaterequestdataIn, TasktypecreaterequestdataOut, TasktypecreaterequestdataUpdate, TasktypecreaterequestdataDb
+from schemas.from_spec.tasktypecreaterequestdata import \
+    TasktypecreaterequestdataOut
+
 
 def convert_sdk_to_tasktypecreaterequestdataout(sdk_obj):
     # TODO

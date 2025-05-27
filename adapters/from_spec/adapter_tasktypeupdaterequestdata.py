@@ -1,5 +1,7 @@
 # Adapter stubs for Tasktypeupdaterequestdata
-from schemas.from_spec.tasktypeupdaterequestdata import TasktypeupdaterequestdataIn, TasktypeupdaterequestdataOut, TasktypeupdaterequestdataUpdate, TasktypeupdaterequestdataDb
+from schemas.from_spec.tasktypeupdaterequestdata import \
+    TasktypeupdaterequestdataOut
+
 
 def convert_sdk_to_tasktypeupdaterequestdataout(sdk_obj):
     # TODO

@@ -14,7 +14,8 @@ if TYPE_CHECKING:
     from ..models.note_author import NoteAuthor
     from ..models.note_contact import NoteContact
     from ..models.note_matter import NoteMatter
-    from ..models.notification_event_subscriber_base import NotificationEventSubscriberBase
+    from ..models.notification_event_subscriber_base import \
+        NotificationEventSubscriberBase
 
 
 T = TypeVar("T", bound="Note")
@@ -150,7 +151,8 @@ class Note:
         from ..models.note_author import NoteAuthor
         from ..models.note_contact import NoteContact
         from ..models.note_matter import NoteMatter
-        from ..models.notification_event_subscriber_base import NotificationEventSubscriberBase
+        from ..models.notification_event_subscriber_base import \
+            NotificationEventSubscriberBase
 
         d = dict(src_dict)
         id = d.pop("id", UNSET)

@@ -1,5 +1,6 @@
 # Adapter stubs for Medicalrecordbase
-from schemas.from_spec.medicalrecordbase import MedicalrecordBaseIn, MedicalrecordBaseOut, MedicalrecordBaseUpdate, MedicalrecordBaseDb
+from schemas.from_spec.medicalrecordbase import MedicalrecordBaseOut
+
 
 def convert_sdk_to_medicalrecordBaseOut(sdk_obj):
     # TODO

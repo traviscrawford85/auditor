@@ -1,5 +1,6 @@
 # Adapter stubs for Report
-from schemas.from_spec.report import ReportIn, ReportOut, ReportUpdate, ReportDb
+from schemas.from_spec.report import ReportOut
+
 
 def convert_sdk_to_reportout(sdk_obj):
     # TODO

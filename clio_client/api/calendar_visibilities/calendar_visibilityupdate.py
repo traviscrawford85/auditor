@@ -6,9 +6,12 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.calendar_visibility_show import CalendarVisibilityShow
-from ...models.calendar_visibilityupdate_data_body import CalendarVisibilityupdateDataBody
-from ...models.calendar_visibilityupdate_files_body import CalendarVisibilityupdateFilesBody
-from ...models.calendar_visibilityupdate_json_body import CalendarVisibilityupdateJsonBody
+from ...models.calendar_visibilityupdate_data_body import \
+    CalendarVisibilityupdateDataBody
+from ...models.calendar_visibilityupdate_files_body import \
+    CalendarVisibilityupdateFilesBody
+from ...models.calendar_visibilityupdate_json_body import \
+    CalendarVisibilityupdateJsonBody
 from ...models.error import Error
 from ...types import UNSET, Response, Unset
 

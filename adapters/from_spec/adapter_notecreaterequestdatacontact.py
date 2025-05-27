@@ -1,5 +1,7 @@
 # Adapter stubs for Notecreaterequestdatacontact
-from schemas.from_spec.notecreaterequestdatacontact import NotecreaterequestdatacontactIn, NotecreaterequestdatacontactOut, NotecreaterequestdatacontactUpdate, NotecreaterequestdatacontactDb
+from schemas.from_spec.notecreaterequestdatacontact import \
+    NotecreaterequestdatacontactOut
+
 
 def convert_sdk_to_notecreaterequestdatacontactout(sdk_obj):
     # TODO

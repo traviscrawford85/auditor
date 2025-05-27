@@ -7,7 +7,8 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.activity_rate_show import ActivityRateShow
 from ...models.activity_ratecreate_data_body import ActivityRatecreateDataBody
-from ...models.activity_ratecreate_files_body import ActivityRatecreateFilesBody
+from ...models.activity_ratecreate_files_body import \
+    ActivityRatecreateFilesBody
 from ...models.activity_ratecreate_json_body import ActivityRatecreateJsonBody
 from ...models.error import Error
 from ...types import UNSET, Response, Unset

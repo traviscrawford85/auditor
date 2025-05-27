@@ -1,5 +1,6 @@
 # Adapter stubs for Billablematterbase
-from schemas.from_spec.billablematterbase import BillablematterBaseIn, BillablematterBaseOut, BillablematterBaseUpdate, BillablematterBaseDb
+from schemas.from_spec.billablematterbase import BillablematterBaseOut
+
 
 def convert_sdk_to_billablematterBaseOut(sdk_obj):
     # TODO

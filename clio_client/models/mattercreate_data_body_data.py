@@ -7,35 +7,40 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.mattercreate_data_body_data_status import (
-    MattercreateDataBodyDataStatus,
-    check_mattercreate_data_body_data_status,
-)
+    MattercreateDataBodyDataStatus, check_mattercreate_data_body_data_status)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.mattercreate_data_body_data_client import MattercreateDataBodyDataClient
-    from ..models.mattercreate_data_body_data_custom_field_set_associations_item import (
-        MattercreateDataBodyDataCustomFieldSetAssociationsItem,
-    )
-    from ..models.mattercreate_data_body_data_custom_field_values_item import (
-        MattercreateDataBodyDataCustomFieldValuesItem,
-    )
-    from ..models.mattercreate_data_body_data_custom_rate import MattercreateDataBodyDataCustomRate
-    from ..models.mattercreate_data_body_data_evergreen_retainer import MattercreateDataBodyDataEvergreenRetainer
-    from ..models.mattercreate_data_body_data_group import MattercreateDataBodyDataGroup
-    from ..models.mattercreate_data_body_data_matter_budget import MattercreateDataBodyDataMatterBudget
-    from ..models.mattercreate_data_body_data_matter_stage import MattercreateDataBodyDataMatterStage
-    from ..models.mattercreate_data_body_data_originating_attorney import MattercreateDataBodyDataOriginatingAttorney
-    from ..models.mattercreate_data_body_data_practice_area import MattercreateDataBodyDataPracticeArea
-    from ..models.mattercreate_data_body_data_relationships_item import MattercreateDataBodyDataRelationshipsItem
-    from ..models.mattercreate_data_body_data_responsible_attorney import MattercreateDataBodyDataResponsibleAttorney
-    from ..models.mattercreate_data_body_data_split_invoice_payers_item import (
-        MattercreateDataBodyDataSplitInvoicePayersItem,
-    )
-    from ..models.mattercreate_data_body_data_statute_of_limitations import MattercreateDataBodyDataStatuteOfLimitations
-    from ..models.mattercreate_data_body_data_task_template_list_instances_item import (
-        MattercreateDataBodyDataTaskTemplateListInstancesItem,
-    )
+    from ..models.mattercreate_data_body_data_client import \
+        MattercreateDataBodyDataClient
+    from ..models.mattercreate_data_body_data_custom_field_set_associations_item import \
+        MattercreateDataBodyDataCustomFieldSetAssociationsItem
+    from ..models.mattercreate_data_body_data_custom_field_values_item import \
+        MattercreateDataBodyDataCustomFieldValuesItem
+    from ..models.mattercreate_data_body_data_custom_rate import \
+        MattercreateDataBodyDataCustomRate
+    from ..models.mattercreate_data_body_data_evergreen_retainer import \
+        MattercreateDataBodyDataEvergreenRetainer
+    from ..models.mattercreate_data_body_data_group import \
+        MattercreateDataBodyDataGroup
+    from ..models.mattercreate_data_body_data_matter_budget import \
+        MattercreateDataBodyDataMatterBudget
+    from ..models.mattercreate_data_body_data_matter_stage import \
+        MattercreateDataBodyDataMatterStage
+    from ..models.mattercreate_data_body_data_originating_attorney import \
+        MattercreateDataBodyDataOriginatingAttorney
+    from ..models.mattercreate_data_body_data_practice_area import \
+        MattercreateDataBodyDataPracticeArea
+    from ..models.mattercreate_data_body_data_relationships_item import \
+        MattercreateDataBodyDataRelationshipsItem
+    from ..models.mattercreate_data_body_data_responsible_attorney import \
+        MattercreateDataBodyDataResponsibleAttorney
+    from ..models.mattercreate_data_body_data_split_invoice_payers_item import \
+        MattercreateDataBodyDataSplitInvoicePayersItem
+    from ..models.mattercreate_data_body_data_statute_of_limitations import \
+        MattercreateDataBodyDataStatuteOfLimitations
+    from ..models.mattercreate_data_body_data_task_template_list_instances_item import \
+        MattercreateDataBodyDataTaskTemplateListInstancesItem
 
 
 T = TypeVar("T", bound="MattercreateDataBodyData")
@@ -262,35 +267,36 @@ class MattercreateDataBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.mattercreate_data_body_data_client import MattercreateDataBodyDataClient
-        from ..models.mattercreate_data_body_data_custom_field_set_associations_item import (
-            MattercreateDataBodyDataCustomFieldSetAssociationsItem,
-        )
-        from ..models.mattercreate_data_body_data_custom_field_values_item import (
-            MattercreateDataBodyDataCustomFieldValuesItem,
-        )
-        from ..models.mattercreate_data_body_data_custom_rate import MattercreateDataBodyDataCustomRate
-        from ..models.mattercreate_data_body_data_evergreen_retainer import MattercreateDataBodyDataEvergreenRetainer
-        from ..models.mattercreate_data_body_data_group import MattercreateDataBodyDataGroup
-        from ..models.mattercreate_data_body_data_matter_budget import MattercreateDataBodyDataMatterBudget
-        from ..models.mattercreate_data_body_data_matter_stage import MattercreateDataBodyDataMatterStage
-        from ..models.mattercreate_data_body_data_originating_attorney import (
-            MattercreateDataBodyDataOriginatingAttorney,
-        )
-        from ..models.mattercreate_data_body_data_practice_area import MattercreateDataBodyDataPracticeArea
-        from ..models.mattercreate_data_body_data_relationships_item import MattercreateDataBodyDataRelationshipsItem
-        from ..models.mattercreate_data_body_data_responsible_attorney import (
-            MattercreateDataBodyDataResponsibleAttorney,
-        )
-        from ..models.mattercreate_data_body_data_split_invoice_payers_item import (
-            MattercreateDataBodyDataSplitInvoicePayersItem,
-        )
-        from ..models.mattercreate_data_body_data_statute_of_limitations import (
-            MattercreateDataBodyDataStatuteOfLimitations,
-        )
-        from ..models.mattercreate_data_body_data_task_template_list_instances_item import (
-            MattercreateDataBodyDataTaskTemplateListInstancesItem,
-        )
+        from ..models.mattercreate_data_body_data_client import \
+            MattercreateDataBodyDataClient
+        from ..models.mattercreate_data_body_data_custom_field_set_associations_item import \
+            MattercreateDataBodyDataCustomFieldSetAssociationsItem
+        from ..models.mattercreate_data_body_data_custom_field_values_item import \
+            MattercreateDataBodyDataCustomFieldValuesItem
+        from ..models.mattercreate_data_body_data_custom_rate import \
+            MattercreateDataBodyDataCustomRate
+        from ..models.mattercreate_data_body_data_evergreen_retainer import \
+            MattercreateDataBodyDataEvergreenRetainer
+        from ..models.mattercreate_data_body_data_group import \
+            MattercreateDataBodyDataGroup
+        from ..models.mattercreate_data_body_data_matter_budget import \
+            MattercreateDataBodyDataMatterBudget
+        from ..models.mattercreate_data_body_data_matter_stage import \
+            MattercreateDataBodyDataMatterStage
+        from ..models.mattercreate_data_body_data_originating_attorney import \
+            MattercreateDataBodyDataOriginatingAttorney
+        from ..models.mattercreate_data_body_data_practice_area import \
+            MattercreateDataBodyDataPracticeArea
+        from ..models.mattercreate_data_body_data_relationships_item import \
+            MattercreateDataBodyDataRelationshipsItem
+        from ..models.mattercreate_data_body_data_responsible_attorney import \
+            MattercreateDataBodyDataResponsibleAttorney
+        from ..models.mattercreate_data_body_data_split_invoice_payers_item import \
+            MattercreateDataBodyDataSplitInvoicePayersItem
+        from ..models.mattercreate_data_body_data_statute_of_limitations import \
+            MattercreateDataBodyDataStatuteOfLimitations
+        from ..models.mattercreate_data_body_data_task_template_list_instances_item import \
+            MattercreateDataBodyDataTaskTemplateListInstancesItem
 
         d = dict(src_dict)
         client = MattercreateDataBodyDataClient.from_dict(d.pop("client"))

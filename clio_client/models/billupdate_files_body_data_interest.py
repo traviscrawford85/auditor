@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.billupdate_files_body_data_interest_type import (
     BillupdateFilesBodyDataInterestType,
-    check_billupdate_files_body_data_interest_type,
-)
+    check_billupdate_files_body_data_interest_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="BillupdateFilesBodyDataInterest")

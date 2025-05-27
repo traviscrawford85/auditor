@@ -6,8 +6,10 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.custom_field_base_field_type import CustomFieldBaseFieldType, check_custom_field_base_field_type
-from ..models.custom_field_base_parent_type import CustomFieldBaseParentType, check_custom_field_base_parent_type
+from ..models.custom_field_base_field_type import (
+    CustomFieldBaseFieldType, check_custom_field_base_field_type)
+from ..models.custom_field_base_parent_type import (
+    CustomFieldBaseParentType, check_custom_field_base_parent_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:

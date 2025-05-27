@@ -6,13 +6,14 @@ from attrs import field as _attrs_field
 
 from ..models.expense_categoryupdate_data_body_data_entry_type import (
     ExpenseCategoryupdateDataBodyDataEntryType,
-    check_expense_categoryupdate_data_body_data_entry_type,
-)
+    check_expense_categoryupdate_data_body_data_entry_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.expense_categoryupdate_data_body_data_groups_item import ExpenseCategoryupdateDataBodyDataGroupsItem
-    from ..models.expense_categoryupdate_data_body_data_utbms_code import ExpenseCategoryupdateDataBodyDataUtbmsCode
+    from ..models.expense_categoryupdate_data_body_data_groups_item import \
+        ExpenseCategoryupdateDataBodyDataGroupsItem
+    from ..models.expense_categoryupdate_data_body_data_utbms_code import \
+        ExpenseCategoryupdateDataBodyDataUtbmsCode
 
 
 T = TypeVar("T", bound="ExpenseCategoryupdateDataBodyData")
@@ -74,10 +75,10 @@ class ExpenseCategoryupdateDataBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.expense_categoryupdate_data_body_data_groups_item import (
-            ExpenseCategoryupdateDataBodyDataGroupsItem,
-        )
-        from ..models.expense_categoryupdate_data_body_data_utbms_code import ExpenseCategoryupdateDataBodyDataUtbmsCode
+        from ..models.expense_categoryupdate_data_body_data_groups_item import \
+            ExpenseCategoryupdateDataBodyDataGroupsItem
+        from ..models.expense_categoryupdate_data_body_data_utbms_code import \
+            ExpenseCategoryupdateDataBodyDataUtbmsCode
 
         d = dict(src_dict)
         _entry_type = d.pop("entry_type", UNSET)

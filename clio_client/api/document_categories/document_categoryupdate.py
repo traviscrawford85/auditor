@@ -6,9 +6,12 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.document_category_show import DocumentCategoryShow
-from ...models.document_categoryupdate_data_body import DocumentCategoryupdateDataBody
-from ...models.document_categoryupdate_files_body import DocumentCategoryupdateFilesBody
-from ...models.document_categoryupdate_json_body import DocumentCategoryupdateJsonBody
+from ...models.document_categoryupdate_data_body import \
+    DocumentCategoryupdateDataBody
+from ...models.document_categoryupdate_files_body import \
+    DocumentCategoryupdateFilesBody
+from ...models.document_categoryupdate_json_body import \
+    DocumentCategoryupdateJsonBody
 from ...models.error import Error
 from ...types import UNSET, Response, Unset
 

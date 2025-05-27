@@ -1,5 +1,6 @@
 # Adapter stubs for Websitebase
-from schemas.from_spec.websitebase import WebsiteBaseIn, WebsiteBaseOut, WebsiteBaseUpdate, WebsiteBaseDb
+from schemas.from_spec.websitebase import WebsiteBaseOut
+
 
 def convert_sdk_to_websiteBaseOut(sdk_obj):
     # TODO

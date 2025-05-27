@@ -8,9 +8,9 @@ from dateutil.parser import isoparse
 
 from ..models.document_automation_base_export_formats import (
     DocumentAutomationBaseExportFormats,
-    check_document_automation_base_export_formats,
-)
-from ..models.document_automation_base_state import DocumentAutomationBaseState, check_document_automation_base_state
+    check_document_automation_base_export_formats)
+from ..models.document_automation_base_state import (
+    DocumentAutomationBaseState, check_document_automation_base_state)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="DocumentAutomationBase")

@@ -1,6 +1,7 @@
-import argparse
-import yaml
 from pathlib import Path
+
+import yaml
+
 
 def rename_operation_ids(spec: dict, style: str = 'underscore') -> dict:
     for path, operations in spec.get('paths', {}).items():

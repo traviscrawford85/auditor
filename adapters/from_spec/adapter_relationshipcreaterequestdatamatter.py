@@ -1,5 +1,7 @@
 # Adapter stubs for Relationshipcreaterequestdatamatter
-from schemas.from_spec.relationshipcreaterequestdatamatter import RelationshipcreaterequestdatamatterIn, RelationshipcreaterequestdatamatterOut, RelationshipcreaterequestdatamatterUpdate, RelationshipcreaterequestdatamatterDb
+from schemas.from_spec.relationshipcreaterequestdatamatter import \
+    RelationshipcreaterequestdatamatterOut
+
 
 def convert_sdk_to_relationshipcreaterequestdatamatterout(sdk_obj):
     # TODO

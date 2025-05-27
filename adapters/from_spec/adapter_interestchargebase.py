@@ -1,5 +1,6 @@
 # Adapter stubs for Interestchargebase
-from schemas.from_spec.interestchargebase import InterestchargeBaseIn, InterestchargeBaseOut, InterestchargeBaseUpdate, InterestchargeBaseDb
+from schemas.from_spec.interestchargebase import InterestchargeBaseOut
+
 
 def convert_sdk_to_interestchargeBaseOut(sdk_obj):
     # TODO

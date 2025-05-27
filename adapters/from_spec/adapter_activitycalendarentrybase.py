@@ -1,5 +1,7 @@
 # Adapter stubs for Activitycalendarentrybase
-from schemas.from_spec.activitycalendarentrybase import ActivitycalendarentryBaseIn, ActivitycalendarentryBaseOut, ActivitycalendarentryBaseUpdate, ActivitycalendarentryBaseDb
+from schemas.from_spec.activitycalendarentrybase import \
+    ActivitycalendarentryBaseOut
+
 
 def convert_sdk_to_activitycalendarentryBaseOut(sdk_obj):
     # TODO

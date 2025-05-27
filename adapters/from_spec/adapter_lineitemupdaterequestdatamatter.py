@@ -1,5 +1,7 @@
 # Adapter stubs for Lineitemupdaterequestdatamatter
-from schemas.from_spec.lineitemupdaterequestdatamatter import LineitemupdaterequestdatamatterIn, LineitemupdaterequestdatamatterOut, LineitemupdaterequestdatamatterUpdate, LineitemupdaterequestdatamatterDb
+from schemas.from_spec.lineitemupdaterequestdatamatter import \
+    LineitemupdaterequestdatamatterOut
+
 
 def convert_sdk_to_lineitemupdaterequestdatamatterout(sdk_obj):
     # TODO

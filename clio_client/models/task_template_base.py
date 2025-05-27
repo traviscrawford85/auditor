@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.task_template_base_priority import TaskTemplateBasePriority, check_task_template_base_priority
+from ..models.task_template_base_priority import (
+    TaskTemplateBasePriority, check_task_template_base_priority)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="TaskTemplateBase")

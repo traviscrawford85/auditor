@@ -1,4 +1,5 @@
 from pathlib import Path
+
 import yaml
 
 SCHEMAS_DIR = Path("openapi/components/schemas")

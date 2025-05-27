@@ -1,5 +1,7 @@
 # Adapter stubs for Matterbillrecipientbase
-from schemas.from_spec.matterbillrecipientbase import MatterbillrecipientBaseIn, MatterbillrecipientBaseOut, MatterbillrecipientBaseUpdate, MatterbillrecipientBaseDb
+from schemas.from_spec.matterbillrecipientbase import \
+    MatterbillrecipientBaseOut
+
 
 def convert_sdk_to_matterbillrecipientBaseOut(sdk_obj):
     # TODO

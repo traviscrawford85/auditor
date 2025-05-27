@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.related_contacts_base_type import RelatedContactsBaseType, check_related_contacts_base_type
+from ..models.related_contacts_base_type import (
+    RelatedContactsBaseType, check_related_contacts_base_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -16,11 +17,16 @@ if TYPE_CHECKING:
     from ..models.phone_number_base import PhoneNumberBase
     from ..models.related_contacts_avatar import RelatedContactsAvatar
     from ..models.related_contacts_company import RelatedContactsCompany
-    from ..models.related_contacts_primary_address import RelatedContactsPrimaryAddress
-    from ..models.related_contacts_primary_web_site import RelatedContactsPrimaryWebSite
-    from ..models.related_contacts_relationship import RelatedContactsRelationship
-    from ..models.related_contacts_secondary_address import RelatedContactsSecondaryAddress
-    from ..models.related_contacts_secondary_web_site import RelatedContactsSecondaryWebSite
+    from ..models.related_contacts_primary_address import \
+        RelatedContactsPrimaryAddress
+    from ..models.related_contacts_primary_web_site import \
+        RelatedContactsPrimaryWebSite
+    from ..models.related_contacts_relationship import \
+        RelatedContactsRelationship
+    from ..models.related_contacts_secondary_address import \
+        RelatedContactsSecondaryAddress
+    from ..models.related_contacts_secondary_web_site import \
+        RelatedContactsSecondaryWebSite
     from ..models.web_site_base import WebSiteBase
 
 
@@ -265,11 +271,16 @@ class RelatedContacts:
         from ..models.phone_number_base import PhoneNumberBase
         from ..models.related_contacts_avatar import RelatedContactsAvatar
         from ..models.related_contacts_company import RelatedContactsCompany
-        from ..models.related_contacts_primary_address import RelatedContactsPrimaryAddress
-        from ..models.related_contacts_primary_web_site import RelatedContactsPrimaryWebSite
-        from ..models.related_contacts_relationship import RelatedContactsRelationship
-        from ..models.related_contacts_secondary_address import RelatedContactsSecondaryAddress
-        from ..models.related_contacts_secondary_web_site import RelatedContactsSecondaryWebSite
+        from ..models.related_contacts_primary_address import \
+            RelatedContactsPrimaryAddress
+        from ..models.related_contacts_primary_web_site import \
+            RelatedContactsPrimaryWebSite
+        from ..models.related_contacts_relationship import \
+            RelatedContactsRelationship
+        from ..models.related_contacts_secondary_address import \
+            RelatedContactsSecondaryAddress
+        from ..models.related_contacts_secondary_web_site import \
+            RelatedContactsSecondaryWebSite
         from ..models.web_site_base import WebSiteBase
 
         d = dict(src_dict)

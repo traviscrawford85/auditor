@@ -1,5 +1,7 @@
 # Adapter stubs for Cliopaymentslinkcreaterequestdatasubject
-from schemas.from_spec.cliopaymentslinkcreaterequestdatasubject import CliopaymentslinkcreaterequestdatasubjectIn, CliopaymentslinkcreaterequestdatasubjectOut, CliopaymentslinkcreaterequestdatasubjectUpdate, CliopaymentslinkcreaterequestdatasubjectDb
+from schemas.from_spec.cliopaymentslinkcreaterequestdatasubject import \
+    CliopaymentslinkcreaterequestdatasubjectOut
+
 
 def convert_sdk_to_cliopaymentslinkcreaterequestdatasubjectout(sdk_obj):
     # TODO

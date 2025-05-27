@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.conversationupdate_files_body_data import ConversationupdateFilesBodyData
+    from ..models.conversationupdate_files_body_data import \
+        ConversationupdateFilesBodyData
 
 
 T = TypeVar("T", bound="ConversationupdateFilesBody")
@@ -52,7 +53,8 @@ class ConversationupdateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.conversationupdate_files_body_data import ConversationupdateFilesBodyData
+        from ..models.conversationupdate_files_body_data import \
+            ConversationupdateFilesBodyData
 
         d = dict(src_dict)
         data = ConversationupdateFilesBodyData.from_dict(d.pop("data"))

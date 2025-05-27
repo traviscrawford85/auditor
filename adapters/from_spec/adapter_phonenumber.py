@@ -1,5 +1,6 @@
 # Adapter stubs for Phonenumber
-from schemas.from_spec.phonenumber import PhonenumberIn, PhonenumberOut, PhonenumberUpdate, PhonenumberDb
+from schemas.from_spec.phonenumber import PhonenumberOut
+
 
 def convert_sdk_to_phonenumberout(sdk_obj):
     # TODO

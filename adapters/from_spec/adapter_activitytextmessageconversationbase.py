@@ -1,5 +1,7 @@
 # Adapter stubs for Activitytextmessageconversationbase
-from schemas.from_spec.activitytextmessageconversationbase import ActivitytextmessageconversationBaseIn, ActivitytextmessageconversationBaseOut, ActivitytextmessageconversationBaseUpdate, ActivitytextmessageconversationBaseDb
+from schemas.from_spec.activitytextmessageconversationbase import \
+    ActivitytextmessageconversationBaseOut
+
 
 def convert_sdk_to_activitytextmessageconversationBaseOut(sdk_obj):
     # TODO

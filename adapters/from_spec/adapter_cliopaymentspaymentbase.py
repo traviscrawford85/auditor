@@ -1,5 +1,7 @@
 # Adapter stubs for Cliopaymentspaymentbase
-from schemas.from_spec.cliopaymentspaymentbase import CliopaymentspaymentBaseIn, CliopaymentspaymentBaseOut, CliopaymentspaymentBaseUpdate, CliopaymentspaymentBaseDb
+from schemas.from_spec.cliopaymentspaymentbase import \
+    CliopaymentspaymentBaseOut
+
 
 def convert_sdk_to_cliopaymentspaymentBaseOut(sdk_obj):
     # TODO

@@ -1,6 +1,8 @@
-import yaml
 from pathlib import Path
 from urllib.parse import urlparse
+
+import yaml
+
 
 def wrap_files(input_dir: str, output_file: str, section_name: str):
     combined = {}

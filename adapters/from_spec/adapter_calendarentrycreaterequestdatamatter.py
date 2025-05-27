@@ -1,5 +1,7 @@
 # Adapter stubs for Calendarentrycreaterequestdatamatter
-from schemas.from_spec.calendarentrycreaterequestdatamatter import CalendarentrycreaterequestdatamatterIn, CalendarentrycreaterequestdatamatterOut, CalendarentrycreaterequestdatamatterUpdate, CalendarentrycreaterequestdatamatterDb
+from schemas.from_spec.calendarentrycreaterequestdatamatter import \
+    CalendarentrycreaterequestdatamatterOut
+
 
 def convert_sdk_to_calendarentrycreaterequestdatamatterout(sdk_obj):
     # TODO

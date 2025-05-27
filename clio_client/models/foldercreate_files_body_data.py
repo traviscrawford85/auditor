@@ -7,11 +7,12 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.foldercreate_files_body_data_document_category import FoldercreateFilesBodyDataDocumentCategory
-    from ..models.foldercreate_files_body_data_external_properties_item import (
-        FoldercreateFilesBodyDataExternalPropertiesItem,
-    )
-    from ..models.foldercreate_files_body_data_parent import FoldercreateFilesBodyDataParent
+    from ..models.foldercreate_files_body_data_document_category import \
+        FoldercreateFilesBodyDataDocumentCategory
+    from ..models.foldercreate_files_body_data_external_properties_item import \
+        FoldercreateFilesBodyDataExternalPropertiesItem
+    from ..models.foldercreate_files_body_data_parent import \
+        FoldercreateFilesBodyDataParent
 
 
 T = TypeVar("T", bound="FoldercreateFilesBodyData")
@@ -72,11 +73,12 @@ class FoldercreateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.foldercreate_files_body_data_document_category import FoldercreateFilesBodyDataDocumentCategory
-        from ..models.foldercreate_files_body_data_external_properties_item import (
-            FoldercreateFilesBodyDataExternalPropertiesItem,
-        )
-        from ..models.foldercreate_files_body_data_parent import FoldercreateFilesBodyDataParent
+        from ..models.foldercreate_files_body_data_document_category import \
+            FoldercreateFilesBodyDataDocumentCategory
+        from ..models.foldercreate_files_body_data_external_properties_item import \
+            FoldercreateFilesBodyDataExternalPropertiesItem
+        from ..models.foldercreate_files_body_data_parent import \
+            FoldercreateFilesBodyDataParent
 
         d = dict(src_dict)
         name = d.pop("name")

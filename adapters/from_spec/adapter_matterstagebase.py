@@ -1,5 +1,6 @@
 # Adapter stubs for Matterstagebase
-from schemas.from_spec.matterstagebase import MatterstageBaseIn, MatterstageBaseOut, MatterstageBaseUpdate, MatterstageBaseDb
+from schemas.from_spec.matterstagebase import MatterstageBaseOut
+
 
 def convert_sdk_to_matterstageBaseOut(sdk_obj):
     # TODO

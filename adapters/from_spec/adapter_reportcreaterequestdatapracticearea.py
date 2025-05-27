@@ -1,5 +1,7 @@
 # Adapter stubs for Reportcreaterequestdatapracticearea
-from schemas.from_spec.reportcreaterequestdatapracticearea import ReportcreaterequestdatapracticeareaIn, ReportcreaterequestdatapracticeareaOut, ReportcreaterequestdatapracticeareaUpdate, ReportcreaterequestdatapracticeareaDb
+from schemas.from_spec.reportcreaterequestdatapracticearea import \
+    ReportcreaterequestdatapracticeareaOut
+
 
 def convert_sdk_to_reportcreaterequestdatapracticeareaout(sdk_obj):
     # TODO

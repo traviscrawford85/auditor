@@ -1,7 +1,8 @@
-import yaml
-from pathlib import Path
 import os
 import re
+from pathlib import Path
+
+import yaml
 
 PARAMETERS_DIR = Path("openapi/components/parameters")
 PARAMETERS_BUNDLE = Path("openapi/components/parameters.yaml")

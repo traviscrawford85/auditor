@@ -5,7 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.medical_records_requestupdate_data_body_data import MedicalRecordsRequestupdateDataBodyData
+    from ..models.medical_records_requestupdate_data_body_data import \
+        MedicalRecordsRequestupdateDataBodyData
 
 
 T = TypeVar("T", bound="MedicalRecordsRequestupdateDataBody")
@@ -36,7 +37,8 @@ class MedicalRecordsRequestupdateDataBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.medical_records_requestupdate_data_body_data import MedicalRecordsRequestupdateDataBodyData
+        from ..models.medical_records_requestupdate_data_body_data import \
+            MedicalRecordsRequestupdateDataBodyData
 
         d = dict(src_dict)
         data = MedicalRecordsRequestupdateDataBodyData.from_dict(d.pop("data"))

@@ -5,7 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.remindercreate_data_body_data import RemindercreateDataBodyData
+    from ..models.remindercreate_data_body_data import \
+        RemindercreateDataBodyData
 
 
 T = TypeVar("T", bound="RemindercreateDataBody")
@@ -36,7 +37,8 @@ class RemindercreateDataBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.remindercreate_data_body_data import RemindercreateDataBodyData
+        from ..models.remindercreate_data_body_data import \
+            RemindercreateDataBodyData
 
         d = dict(src_dict)
         data = RemindercreateDataBodyData.from_dict(d.pop("data"))

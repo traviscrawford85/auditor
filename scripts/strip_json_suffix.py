@@ -1,6 +1,7 @@
 import argparse
 from pathlib import Path
 
+
 def strip_json_suffix(directory: Path) -> int:
     count = 0
     for file_path in directory.iterdir():

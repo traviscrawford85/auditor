@@ -39,7 +39,8 @@ class LaukCivilCertificatedRateList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.lauk_civil_certificated_rate import LaukCivilCertificatedRate
+        from ..models.lauk_civil_certificated_rate import \
+            LaukCivilCertificatedRate
 
         d = dict(src_dict)
         data = []

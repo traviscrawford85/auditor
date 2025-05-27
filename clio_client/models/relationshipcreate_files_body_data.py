@@ -7,8 +7,10 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.relationshipcreate_files_body_data_contact import RelationshipcreateFilesBodyDataContact
-    from ..models.relationshipcreate_files_body_data_matter import RelationshipcreateFilesBodyDataMatter
+    from ..models.relationshipcreate_files_body_data_contact import \
+        RelationshipcreateFilesBodyDataContact
+    from ..models.relationshipcreate_files_body_data_matter import \
+        RelationshipcreateFilesBodyDataMatter
 
 
 T = TypeVar("T", bound="RelationshipcreateFilesBodyData")
@@ -53,8 +55,10 @@ class RelationshipcreateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.relationshipcreate_files_body_data_contact import RelationshipcreateFilesBodyDataContact
-        from ..models.relationshipcreate_files_body_data_matter import RelationshipcreateFilesBodyDataMatter
+        from ..models.relationshipcreate_files_body_data_contact import \
+            RelationshipcreateFilesBodyDataContact
+        from ..models.relationshipcreate_files_body_data_matter import \
+            RelationshipcreateFilesBodyDataMatter
 
         d = dict(src_dict)
         _contact = d.pop("contact", UNSET)

@@ -1,6 +1,7 @@
+from typing import Optional
+
 from pydantic import BaseModel
-from typing import Optional, Any, List
-from datetime import datetime
+
 
 class UserBaseIn(BaseModel):
     account_owner: Optional[str] = None

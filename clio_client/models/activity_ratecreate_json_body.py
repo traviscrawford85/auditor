@@ -5,7 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.activity_ratecreate_json_body_data import ActivityRatecreateJsonBodyData
+    from ..models.activity_ratecreate_json_body_data import \
+        ActivityRatecreateJsonBodyData
 
 
 T = TypeVar("T", bound="ActivityRatecreateJsonBody")
@@ -36,7 +37,8 @@ class ActivityRatecreateJsonBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.activity_ratecreate_json_body_data import ActivityRatecreateJsonBodyData
+        from ..models.activity_ratecreate_json_body_data import \
+            ActivityRatecreateJsonBodyData
 
         d = dict(src_dict)
         data = ActivityRatecreateJsonBodyData.from_dict(d.pop("data"))

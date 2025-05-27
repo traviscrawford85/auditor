@@ -1,5 +1,6 @@
 # Adapter stubs for Servicetype
-from schemas.from_spec.servicetype import ServicetypeIn, ServicetypeOut, ServicetypeUpdate, ServicetypeDb
+from schemas.from_spec.servicetype import ServicetypeOut
+
 
 def convert_sdk_to_servicetypeout(sdk_obj):
     # TODO

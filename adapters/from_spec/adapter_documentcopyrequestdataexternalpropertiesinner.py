@@ -1,5 +1,7 @@
 # Adapter stubs for Documentcopyrequestdataexternalpropertiesinner
-from schemas.from_spec.documentcopyrequestdataexternalpropertiesinner import DocumentcopyrequestdataexternalpropertiesinnerIn, DocumentcopyrequestdataexternalpropertiesinnerOut, DocumentcopyrequestdataexternalpropertiesinnerUpdate, DocumentcopyrequestdataexternalpropertiesinnerDb
+from schemas.from_spec.documentcopyrequestdataexternalpropertiesinner import \
+    DocumentcopyrequestdataexternalpropertiesinnerOut
+
 
 def convert_sdk_to_documentcopyrequestdataexternalpropertiesinnerout(sdk_obj):
     # TODO

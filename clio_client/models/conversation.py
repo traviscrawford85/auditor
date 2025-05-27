@@ -165,7 +165,8 @@ class Conversation:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.conversation_first_message import ConversationFirstMessage
+        from ..models.conversation_first_message import \
+            ConversationFirstMessage
         from ..models.conversation_last_message import ConversationLastMessage
         from ..models.conversation_matter import ConversationMatter
         from ..models.conversation_membership import ConversationMembership

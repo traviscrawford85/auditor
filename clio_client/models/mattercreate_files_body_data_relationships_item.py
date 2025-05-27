@@ -5,9 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.mattercreate_files_body_data_relationships_item_contact import (
-        MattercreateFilesBodyDataRelationshipsItemContact,
-    )
+    from ..models.mattercreate_files_body_data_relationships_item_contact import \
+        MattercreateFilesBodyDataRelationshipsItemContact
 
 
 T = TypeVar("T", bound="MattercreateFilesBodyDataRelationshipsItem")
@@ -43,9 +42,8 @@ class MattercreateFilesBodyDataRelationshipsItem:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.mattercreate_files_body_data_relationships_item_contact import (
-            MattercreateFilesBodyDataRelationshipsItemContact,
-        )
+        from ..models.mattercreate_files_body_data_relationships_item_contact import \
+            MattercreateFilesBodyDataRelationshipsItemContact
 
         d = dict(src_dict)
         description = d.pop("description")

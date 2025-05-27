@@ -6,13 +6,16 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.matter_base_billing_method import MatterBaseBillingMethod, check_matter_base_billing_method
-from ..models.matter_base_status import MatterBaseStatus, check_matter_base_status
+from ..models.matter_base_billing_method import (
+    MatterBaseBillingMethod, check_matter_base_billing_method)
+from ..models.matter_base_status import (MatterBaseStatus,
+                                         check_matter_base_status)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.account_balance_base import AccountBalanceBase
-    from ..models.custom_field_set_association_base import CustomFieldSetAssociationBase
+    from ..models.custom_field_set_association_base import \
+        CustomFieldSetAssociationBase
     from ..models.custom_field_value import CustomFieldValue
     from ..models.matter_bill_recipient import MatterBillRecipient
     from ..models.matter_client import MatterClient
@@ -27,10 +30,12 @@ if TYPE_CHECKING:
     from ..models.matter_originating_attorney import MatterOriginatingAttorney
     from ..models.matter_practice_area import MatterPracticeArea
     from ..models.matter_responsible_attorney import MatterResponsibleAttorney
-    from ..models.matter_statute_of_limitations import MatterStatuteOfLimitations
+    from ..models.matter_statute_of_limitations import \
+        MatterStatuteOfLimitations
     from ..models.matter_user import MatterUser
     from ..models.relationship_base import RelationshipBase
-    from ..models.task_template_list_instace_base import TaskTemplateListInstaceBase
+    from ..models.task_template_list_instace_base import \
+        TaskTemplateListInstaceBase
 
 
 T = TypeVar("T", bound="Matter")
@@ -385,7 +390,8 @@ class Matter:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.account_balance_base import AccountBalanceBase
-        from ..models.custom_field_set_association_base import CustomFieldSetAssociationBase
+        from ..models.custom_field_set_association_base import \
+            CustomFieldSetAssociationBase
         from ..models.custom_field_value import CustomFieldValue
         from ..models.matter_bill_recipient import MatterBillRecipient
         from ..models.matter_client import MatterClient
@@ -397,13 +403,17 @@ class Matter:
         from ..models.matter_legal_aid_uk_matter import MatterLegalAidUkMatter
         from ..models.matter_matter_budget import MatterMatterBudget
         from ..models.matter_matter_stage import MatterMatterStage
-        from ..models.matter_originating_attorney import MatterOriginatingAttorney
+        from ..models.matter_originating_attorney import \
+            MatterOriginatingAttorney
         from ..models.matter_practice_area import MatterPracticeArea
-        from ..models.matter_responsible_attorney import MatterResponsibleAttorney
-        from ..models.matter_statute_of_limitations import MatterStatuteOfLimitations
+        from ..models.matter_responsible_attorney import \
+            MatterResponsibleAttorney
+        from ..models.matter_statute_of_limitations import \
+            MatterStatuteOfLimitations
         from ..models.matter_user import MatterUser
         from ..models.relationship_base import RelationshipBase
-        from ..models.task_template_list_instace_base import TaskTemplateListInstaceBase
+        from ..models.task_template_list_instace_base import \
+            TaskTemplateListInstaceBase
 
         d = dict(src_dict)
         id = d.pop("id", UNSET)

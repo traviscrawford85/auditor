@@ -6,12 +6,10 @@ from attrs import field as _attrs_field
 
 from ..models.report_presetcreate_data_body_data_format import (
     ReportPresetcreateDataBodyDataFormat,
-    check_report_presetcreate_data_body_data_format,
-)
+    check_report_presetcreate_data_body_data_format)
 from ..models.report_presetcreate_data_body_data_kind import (
     ReportPresetcreateDataBodyDataKind,
-    check_report_presetcreate_data_body_data_kind,
-)
+    check_report_presetcreate_data_body_data_kind)
 
 T = TypeVar("T", bound="ReportPresetcreateDataBodyData")
 

@@ -7,9 +7,8 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.custom_fieldupdate_files_body_data_picklist_options_item import (
-        CustomFieldupdateFilesBodyDataPicklistOptionsItem,
-    )
+    from ..models.custom_fieldupdate_files_body_data_picklist_options_item import \
+        CustomFieldupdateFilesBodyDataPicklistOptionsItem
 
 
 T = TypeVar("T", bound="CustomFieldupdateFilesBodyData")
@@ -67,9 +66,8 @@ class CustomFieldupdateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.custom_fieldupdate_files_body_data_picklist_options_item import (
-            CustomFieldupdateFilesBodyDataPicklistOptionsItem,
-        )
+        from ..models.custom_fieldupdate_files_body_data_picklist_options_item import \
+            CustomFieldupdateFilesBodyDataPicklistOptionsItem
 
         d = dict(src_dict)
         display_order = d.pop("display_order", UNSET)

@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.documentcreate_data_body_data_parent_type import (
     DocumentcreateDataBodyDataParentType,
-    check_documentcreate_data_body_data_parent_type,
-)
+    check_documentcreate_data_body_data_parent_type)
 
 T = TypeVar("T", bound="DocumentcreateDataBodyDataParent")
 

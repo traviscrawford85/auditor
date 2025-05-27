@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.calendar_visibilityupdate_files_body_data import CalendarVisibilityupdateFilesBodyData
+    from ..models.calendar_visibilityupdate_files_body_data import \
+        CalendarVisibilityupdateFilesBodyData
 
 
 T = TypeVar("T", bound="CalendarVisibilityupdateFilesBody")
@@ -52,7 +53,8 @@ class CalendarVisibilityupdateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.calendar_visibilityupdate_files_body_data import CalendarVisibilityupdateFilesBodyData
+        from ..models.calendar_visibilityupdate_files_body_data import \
+            CalendarVisibilityupdateFilesBodyData
 
         d = dict(src_dict)
         data = CalendarVisibilityupdateFilesBodyData.from_dict(d.pop("data"))

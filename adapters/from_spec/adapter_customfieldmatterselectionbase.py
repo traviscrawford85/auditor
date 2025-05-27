@@ -1,5 +1,7 @@
 # Adapter stubs for Customfieldmatterselectionbase
-from schemas.from_spec.customfieldmatterselectionbase import CustomfieldmatterselectionBaseIn, CustomfieldmatterselectionBaseOut, CustomfieldmatterselectionBaseUpdate, CustomfieldmatterselectionBaseDb
+from schemas.from_spec.customfieldmatterselectionbase import \
+    CustomfieldmatterselectionBaseOut
+
 
 def convert_sdk_to_customfieldmatterselectionBaseOut(sdk_obj):
     # TODO

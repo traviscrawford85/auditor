@@ -1,5 +1,6 @@
 # Adapter stubs for Legalaidukactivitybase
-from schemas.from_spec.legalaidukactivitybase import LegalaidukactivityBaseIn, LegalaidukactivityBaseOut, LegalaidukactivityBaseUpdate, LegalaidukactivityBaseDb
+from schemas.from_spec.legalaidukactivitybase import LegalaidukactivityBaseOut
+
 
 def convert_sdk_to_legalaidukactivityBaseOut(sdk_obj):
     # TODO

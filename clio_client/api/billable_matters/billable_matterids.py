@@ -7,9 +7,8 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.billable_matter_show import BillableMatterShow
-from ...models.billable_matterids_custom_field_values import (
-    BillableMatteridsCustomFieldValues,
-)
+from ...models.billable_matterids_custom_field_values import \
+    BillableMatteridsCustomFieldValues
 from ...models.error import Error
 from ...types import UNSET, Response, Unset
 

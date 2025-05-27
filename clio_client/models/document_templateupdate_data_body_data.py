@@ -7,9 +7,8 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.document_templateupdate_data_body_data_document_category import (
-        DocumentTemplateupdateDataBodyDataDocumentCategory,
-    )
+    from ..models.document_templateupdate_data_body_data_document_category import \
+        DocumentTemplateupdateDataBodyDataDocumentCategory
 
 
 T = TypeVar("T", bound="DocumentTemplateupdateDataBodyData")
@@ -55,9 +54,8 @@ class DocumentTemplateupdateDataBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.document_templateupdate_data_body_data_document_category import (
-            DocumentTemplateupdateDataBodyDataDocumentCategory,
-        )
+        from ..models.document_templateupdate_data_body_data_document_category import \
+            DocumentTemplateupdateDataBodyDataDocumentCategory
 
         d = dict(src_dict)
         _document_category = d.pop("document_category", UNSET)

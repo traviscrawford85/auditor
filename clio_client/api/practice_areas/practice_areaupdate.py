@@ -8,7 +8,8 @@ from ...client import AuthenticatedClient, Client
 from ...models.error import Error
 from ...models.practice_area_show import PracticeAreaShow
 from ...models.practice_areaupdate_data_body import PracticeAreaupdateDataBody
-from ...models.practice_areaupdate_files_body import PracticeAreaupdateFilesBody
+from ...models.practice_areaupdate_files_body import \
+    PracticeAreaupdateFilesBody
 from ...models.practice_areaupdate_json_body import PracticeAreaupdateJsonBody
 from ...types import UNSET, Response, Unset
 

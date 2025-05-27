@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.bank_account_base_type import BankAccountBaseType, check_bank_account_base_type
+from ..models.bank_account_base_type import (BankAccountBaseType,
+                                             check_bank_account_base_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ClioPaymentsLinkDestinationAccount")

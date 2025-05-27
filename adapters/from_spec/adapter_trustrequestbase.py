@@ -1,5 +1,6 @@
 # Adapter stubs for Trustrequestbase
-from schemas.from_spec.trustrequestbase import TrustrequestBaseIn, TrustrequestBaseOut, TrustrequestBaseUpdate, TrustrequestBaseDb
+from schemas.from_spec.trustrequestbase import TrustrequestBaseOut
+
 
 def convert_sdk_to_trustrequestBaseOut(sdk_obj):
     # TODO

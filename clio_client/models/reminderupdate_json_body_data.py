@@ -6,12 +6,12 @@ from attrs import field as _attrs_field
 
 from ..models.reminderupdate_json_body_data_duration_unit import (
     ReminderupdateJsonBodyDataDurationUnit,
-    check_reminderupdate_json_body_data_duration_unit,
-)
+    check_reminderupdate_json_body_data_duration_unit)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.reminderupdate_json_body_data_notification_method import ReminderupdateJsonBodyDataNotificationMethod
+    from ..models.reminderupdate_json_body_data_notification_method import \
+        ReminderupdateJsonBodyDataNotificationMethod
 
 
 T = TypeVar("T", bound="ReminderupdateJsonBodyData")
@@ -56,9 +56,8 @@ class ReminderupdateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.reminderupdate_json_body_data_notification_method import (
-            ReminderupdateJsonBodyDataNotificationMethod,
-        )
+        from ..models.reminderupdate_json_body_data_notification_method import \
+            ReminderupdateJsonBodyDataNotificationMethod
 
         d = dict(src_dict)
         _duration_unit = d.pop("duration_unit", UNSET)

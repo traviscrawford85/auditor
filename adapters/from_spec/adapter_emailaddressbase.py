@@ -1,5 +1,6 @@
 # Adapter stubs for Emailaddressbase
-from schemas.from_spec.emailaddressbase import EmailaddressBaseIn, EmailaddressBaseOut, EmailaddressBaseUpdate, EmailaddressBaseDb
+from schemas.from_spec.emailaddressbase import EmailaddressBaseOut
+
 
 def convert_sdk_to_emailaddressBaseOut(sdk_obj):
     # TODO

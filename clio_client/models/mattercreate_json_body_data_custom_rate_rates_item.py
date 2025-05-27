@@ -9,15 +9,12 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.mattercreate_json_body_data_custom_rate_rates_item_activity_description import (
-        MattercreateJsonBodyDataCustomRateRatesItemActivityDescription,
-    )
-    from ..models.mattercreate_json_body_data_custom_rate_rates_item_group import (
-        MattercreateJsonBodyDataCustomRateRatesItemGroup,
-    )
-    from ..models.mattercreate_json_body_data_custom_rate_rates_item_user import (
-        MattercreateJsonBodyDataCustomRateRatesItemUser,
-    )
+    from ..models.mattercreate_json_body_data_custom_rate_rates_item_activity_description import \
+        MattercreateJsonBodyDataCustomRateRatesItemActivityDescription
+    from ..models.mattercreate_json_body_data_custom_rate_rates_item_group import \
+        MattercreateJsonBodyDataCustomRateRatesItemGroup
+    from ..models.mattercreate_json_body_data_custom_rate_rates_item_user import \
+        MattercreateJsonBodyDataCustomRateRatesItemUser
 
 
 T = TypeVar("T", bound="MattercreateJsonBodyDataCustomRateRatesItem")
@@ -96,15 +93,12 @@ class MattercreateJsonBodyDataCustomRateRatesItem:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.mattercreate_json_body_data_custom_rate_rates_item_activity_description import (
-            MattercreateJsonBodyDataCustomRateRatesItemActivityDescription,
-        )
-        from ..models.mattercreate_json_body_data_custom_rate_rates_item_group import (
-            MattercreateJsonBodyDataCustomRateRatesItemGroup,
-        )
-        from ..models.mattercreate_json_body_data_custom_rate_rates_item_user import (
-            MattercreateJsonBodyDataCustomRateRatesItemUser,
-        )
+        from ..models.mattercreate_json_body_data_custom_rate_rates_item_activity_description import \
+            MattercreateJsonBodyDataCustomRateRatesItemActivityDescription
+        from ..models.mattercreate_json_body_data_custom_rate_rates_item_group import \
+            MattercreateJsonBodyDataCustomRateRatesItemGroup
+        from ..models.mattercreate_json_body_data_custom_rate_rates_item_user import \
+            MattercreateJsonBodyDataCustomRateRatesItemUser
 
         d = dict(src_dict)
         user = MattercreateJsonBodyDataCustomRateRatesItemUser.from_dict(d.pop("user"))

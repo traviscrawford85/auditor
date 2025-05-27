@@ -1,7 +1,8 @@
 import os
-import yaml
 import re
 from pathlib import Path
+
+import yaml
 
 MODULAR_ROOT = "./openapi"
 REPEATED = re.compile(r"(components/)+")

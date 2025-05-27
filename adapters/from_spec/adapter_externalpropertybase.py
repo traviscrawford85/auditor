@@ -1,5 +1,6 @@
 # Adapter stubs for Externalpropertybase
-from schemas.from_spec.externalpropertybase import ExternalpropertyBaseIn, ExternalpropertyBaseOut, ExternalpropertyBaseUpdate, ExternalpropertyBaseDb
+from schemas.from_spec.externalpropertybase import ExternalpropertyBaseOut
+
 
 def convert_sdk_to_externalpropertyBaseOut(sdk_obj):
     # TODO

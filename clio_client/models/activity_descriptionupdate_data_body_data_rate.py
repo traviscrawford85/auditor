@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.activity_descriptionupdate_data_body_data_rate_type import (
     ActivityDescriptionupdateDataBodyDataRateType,
-    check_activity_descriptionupdate_data_body_data_rate_type,
-)
+    check_activity_descriptionupdate_data_body_data_rate_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ActivityDescriptionupdateDataBodyDataRate")

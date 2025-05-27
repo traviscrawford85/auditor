@@ -1,7 +1,8 @@
-import yaml
-from pathlib import Path
 import os
 import re
+from pathlib import Path
+
+import yaml
 
 SCHEMAS_DIR = Path("openapi/components/schemas")
 SCHEMAS_BUNDLE = Path("openapi/components/schemas.yaml")

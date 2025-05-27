@@ -1,5 +1,7 @@
 # Adapter stubs for Communicationcreaterequestdatamatter
-from schemas.from_spec.communicationcreaterequestdatamatter import CommunicationcreaterequestdatamatterIn, CommunicationcreaterequestdatamatterOut, CommunicationcreaterequestdatamatterUpdate, CommunicationcreaterequestdatamatterDb
+from schemas.from_spec.communicationcreaterequestdatamatter import \
+    CommunicationcreaterequestdatamatterOut
+
 
 def convert_sdk_to_communicationcreaterequestdatamatterout(sdk_obj):
     # TODO

@@ -7,37 +7,40 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.matterupdate_files_body_data_status import (
-    MatterupdateFilesBodyDataStatus,
-    check_matterupdate_files_body_data_status,
-)
+    MatterupdateFilesBodyDataStatus, check_matterupdate_files_body_data_status)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.matterupdate_files_body_data_client import MatterupdateFilesBodyDataClient
-    from ..models.matterupdate_files_body_data_custom_field_set_associations_item import (
-        MatterupdateFilesBodyDataCustomFieldSetAssociationsItem,
-    )
-    from ..models.matterupdate_files_body_data_custom_field_values_item import (
-        MatterupdateFilesBodyDataCustomFieldValuesItem,
-    )
-    from ..models.matterupdate_files_body_data_custom_rate import MatterupdateFilesBodyDataCustomRate
-    from ..models.matterupdate_files_body_data_evergreen_retainer import MatterupdateFilesBodyDataEvergreenRetainer
-    from ..models.matterupdate_files_body_data_group import MatterupdateFilesBodyDataGroup
-    from ..models.matterupdate_files_body_data_matter_budget import MatterupdateFilesBodyDataMatterBudget
-    from ..models.matterupdate_files_body_data_matter_stage import MatterupdateFilesBodyDataMatterStage
-    from ..models.matterupdate_files_body_data_originating_attorney import MatterupdateFilesBodyDataOriginatingAttorney
-    from ..models.matterupdate_files_body_data_practice_area import MatterupdateFilesBodyDataPracticeArea
-    from ..models.matterupdate_files_body_data_relationships_item import MatterupdateFilesBodyDataRelationshipsItem
-    from ..models.matterupdate_files_body_data_responsible_attorney import MatterupdateFilesBodyDataResponsibleAttorney
-    from ..models.matterupdate_files_body_data_split_invoice_payers_item import (
-        MatterupdateFilesBodyDataSplitInvoicePayersItem,
-    )
-    from ..models.matterupdate_files_body_data_statute_of_limitations import (
-        MatterupdateFilesBodyDataStatuteOfLimitations,
-    )
-    from ..models.matterupdate_files_body_data_task_template_list_instances_item import (
-        MatterupdateFilesBodyDataTaskTemplateListInstancesItem,
-    )
+    from ..models.matterupdate_files_body_data_client import \
+        MatterupdateFilesBodyDataClient
+    from ..models.matterupdate_files_body_data_custom_field_set_associations_item import \
+        MatterupdateFilesBodyDataCustomFieldSetAssociationsItem
+    from ..models.matterupdate_files_body_data_custom_field_values_item import \
+        MatterupdateFilesBodyDataCustomFieldValuesItem
+    from ..models.matterupdate_files_body_data_custom_rate import \
+        MatterupdateFilesBodyDataCustomRate
+    from ..models.matterupdate_files_body_data_evergreen_retainer import \
+        MatterupdateFilesBodyDataEvergreenRetainer
+    from ..models.matterupdate_files_body_data_group import \
+        MatterupdateFilesBodyDataGroup
+    from ..models.matterupdate_files_body_data_matter_budget import \
+        MatterupdateFilesBodyDataMatterBudget
+    from ..models.matterupdate_files_body_data_matter_stage import \
+        MatterupdateFilesBodyDataMatterStage
+    from ..models.matterupdate_files_body_data_originating_attorney import \
+        MatterupdateFilesBodyDataOriginatingAttorney
+    from ..models.matterupdate_files_body_data_practice_area import \
+        MatterupdateFilesBodyDataPracticeArea
+    from ..models.matterupdate_files_body_data_relationships_item import \
+        MatterupdateFilesBodyDataRelationshipsItem
+    from ..models.matterupdate_files_body_data_responsible_attorney import \
+        MatterupdateFilesBodyDataResponsibleAttorney
+    from ..models.matterupdate_files_body_data_split_invoice_payers_item import \
+        MatterupdateFilesBodyDataSplitInvoicePayersItem
+    from ..models.matterupdate_files_body_data_statute_of_limitations import \
+        MatterupdateFilesBodyDataStatuteOfLimitations
+    from ..models.matterupdate_files_body_data_task_template_list_instances_item import \
+        MatterupdateFilesBodyDataTaskTemplateListInstancesItem
 
 
 T = TypeVar("T", bound="MatterupdateFilesBodyData")
@@ -265,35 +268,36 @@ class MatterupdateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.matterupdate_files_body_data_client import MatterupdateFilesBodyDataClient
-        from ..models.matterupdate_files_body_data_custom_field_set_associations_item import (
-            MatterupdateFilesBodyDataCustomFieldSetAssociationsItem,
-        )
-        from ..models.matterupdate_files_body_data_custom_field_values_item import (
-            MatterupdateFilesBodyDataCustomFieldValuesItem,
-        )
-        from ..models.matterupdate_files_body_data_custom_rate import MatterupdateFilesBodyDataCustomRate
-        from ..models.matterupdate_files_body_data_evergreen_retainer import MatterupdateFilesBodyDataEvergreenRetainer
-        from ..models.matterupdate_files_body_data_group import MatterupdateFilesBodyDataGroup
-        from ..models.matterupdate_files_body_data_matter_budget import MatterupdateFilesBodyDataMatterBudget
-        from ..models.matterupdate_files_body_data_matter_stage import MatterupdateFilesBodyDataMatterStage
-        from ..models.matterupdate_files_body_data_originating_attorney import (
-            MatterupdateFilesBodyDataOriginatingAttorney,
-        )
-        from ..models.matterupdate_files_body_data_practice_area import MatterupdateFilesBodyDataPracticeArea
-        from ..models.matterupdate_files_body_data_relationships_item import MatterupdateFilesBodyDataRelationshipsItem
-        from ..models.matterupdate_files_body_data_responsible_attorney import (
-            MatterupdateFilesBodyDataResponsibleAttorney,
-        )
-        from ..models.matterupdate_files_body_data_split_invoice_payers_item import (
-            MatterupdateFilesBodyDataSplitInvoicePayersItem,
-        )
-        from ..models.matterupdate_files_body_data_statute_of_limitations import (
-            MatterupdateFilesBodyDataStatuteOfLimitations,
-        )
-        from ..models.matterupdate_files_body_data_task_template_list_instances_item import (
-            MatterupdateFilesBodyDataTaskTemplateListInstancesItem,
-        )
+        from ..models.matterupdate_files_body_data_client import \
+            MatterupdateFilesBodyDataClient
+        from ..models.matterupdate_files_body_data_custom_field_set_associations_item import \
+            MatterupdateFilesBodyDataCustomFieldSetAssociationsItem
+        from ..models.matterupdate_files_body_data_custom_field_values_item import \
+            MatterupdateFilesBodyDataCustomFieldValuesItem
+        from ..models.matterupdate_files_body_data_custom_rate import \
+            MatterupdateFilesBodyDataCustomRate
+        from ..models.matterupdate_files_body_data_evergreen_retainer import \
+            MatterupdateFilesBodyDataEvergreenRetainer
+        from ..models.matterupdate_files_body_data_group import \
+            MatterupdateFilesBodyDataGroup
+        from ..models.matterupdate_files_body_data_matter_budget import \
+            MatterupdateFilesBodyDataMatterBudget
+        from ..models.matterupdate_files_body_data_matter_stage import \
+            MatterupdateFilesBodyDataMatterStage
+        from ..models.matterupdate_files_body_data_originating_attorney import \
+            MatterupdateFilesBodyDataOriginatingAttorney
+        from ..models.matterupdate_files_body_data_practice_area import \
+            MatterupdateFilesBodyDataPracticeArea
+        from ..models.matterupdate_files_body_data_relationships_item import \
+            MatterupdateFilesBodyDataRelationshipsItem
+        from ..models.matterupdate_files_body_data_responsible_attorney import \
+            MatterupdateFilesBodyDataResponsibleAttorney
+        from ..models.matterupdate_files_body_data_split_invoice_payers_item import \
+            MatterupdateFilesBodyDataSplitInvoicePayersItem
+        from ..models.matterupdate_files_body_data_statute_of_limitations import \
+            MatterupdateFilesBodyDataStatuteOfLimitations
+        from ..models.matterupdate_files_body_data_task_template_list_instances_item import \
+            MatterupdateFilesBodyDataTaskTemplateListInstancesItem
 
         d = dict(src_dict)
         billable = d.pop("billable", UNSET)

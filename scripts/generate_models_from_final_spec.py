@@ -1,12 +1,14 @@
 import os
+
 import yaml
-from typing import Any, List
 
 INPUT_FILE = "openapi_final_cleaned.yaml"
 OUTPUT_DIR = "clio_sdk/models"
 ADAPTER_DIR = "clio_sdk/adapters"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 os.makedirs(ADAPTER_DIR, exist_ok=True)
+
+MAX_DEPTH = 10  # Limit recursion to prevent infinite loops
 
 def pascal_case(name: str) -> str:
     return "".join(word.capitalize() for word in name.split("_"))
@@ -18,11 +20,13 @@ with open(INPUT_FILE, "r", encoding="utf-8") as f:
 schemas = spec.get("components", {}).get("schemas", {})
 
 def resolve_ref_schema(ref: str) -> dict:
-    """ Given a $ref string like #/components/schemas/User, return the actual schema. """
     ref_name = ref.split("/")[-1]
     return schemas.get(ref_name, {})
 
-def infer_type(prop):
+def infer_type(prop, depth=0):
+    if depth > MAX_DEPTH:
+        return "Any"
+
     if "$ref" in prop:
         ref_name = prop["$ref"].split("/")[-1]
         return pascal_case(ref_name)
@@ -38,7 +42,7 @@ def infer_type(prop):
     if t == "number":
         return "float"
     if t == "array":
-        return f"List[{infer_type(prop.get('items', {}))}]"
+        return f"List[{infer_type(prop.get('items', {}), depth + 1)}]"
     return "Any"
 
 def extract_fields(schema):
@@ -95,7 +99,6 @@ def write_adapter(base_name):
         )
     print(f"✅ Adapter stub created: {path}")
 
-# Process schemas
 for name, schema in schemas.items():
     if not isinstance(schema, dict) or ("properties" not in schema and "$ref" not in schema):
         continue

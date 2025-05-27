@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.expense_categorycreate_files_body_data import ExpenseCategorycreateFilesBodyData
+    from ..models.expense_categorycreate_files_body_data import \
+        ExpenseCategorycreateFilesBodyData
 
 
 T = TypeVar("T", bound="ExpenseCategorycreateFilesBody")
@@ -52,7 +53,8 @@ class ExpenseCategorycreateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.expense_categorycreate_files_body_data import ExpenseCategorycreateFilesBodyData
+        from ..models.expense_categorycreate_files_body_data import \
+            ExpenseCategorycreateFilesBodyData
 
         d = dict(src_dict)
         data = ExpenseCategorycreateFilesBodyData.from_dict(d.pop("data"))

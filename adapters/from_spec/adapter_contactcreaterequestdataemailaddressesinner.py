@@ -1,5 +1,7 @@
 # Adapter stubs for Contactcreaterequestdataemailaddressesinner
-from schemas.from_spec.contactcreaterequestdataemailaddressesinner import ContactcreaterequestdataemailaddressesinnerIn, ContactcreaterequestdataemailaddressesinnerOut, ContactcreaterequestdataemailaddressesinnerUpdate, ContactcreaterequestdataemailaddressesinnerDb
+from schemas.from_spec.contactcreaterequestdataemailaddressesinner import \
+    ContactcreaterequestdataemailaddressesinnerOut
+
 
 def convert_sdk_to_contactcreaterequestdataemailaddressesinnerout(sdk_obj):
     # TODO

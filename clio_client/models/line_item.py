@@ -6,15 +6,18 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.line_item_base_kind import LineItemBaseKind, check_line_item_base_kind
-from ..models.line_item_base_type import LineItemBaseType, check_line_item_base_type
+from ..models.line_item_base_kind import (LineItemBaseKind,
+                                          check_line_item_base_kind)
+from ..models.line_item_base_type import (LineItemBaseType,
+                                          check_line_item_base_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.line_item_activity import LineItemActivity
     from ..models.line_item_bill import LineItemBill
     from ..models.line_item_discount import LineItemDiscount
-    from ..models.line_item_included_line_item_totals import LineItemIncludedLineItemTotals
+    from ..models.line_item_included_line_item_totals import \
+        LineItemIncludedLineItemTotals
     from ..models.line_item_matter import LineItemMatter
     from ..models.line_item_user import LineItemUser
 
@@ -208,7 +211,8 @@ class LineItem:
         from ..models.line_item_activity import LineItemActivity
         from ..models.line_item_bill import LineItemBill
         from ..models.line_item_discount import LineItemDiscount
-        from ..models.line_item_included_line_item_totals import LineItemIncludedLineItemTotals
+        from ..models.line_item_included_line_item_totals import \
+            LineItemIncludedLineItemTotals
         from ..models.line_item_matter import LineItemMatter
         from ..models.line_item_user import LineItemUser
 

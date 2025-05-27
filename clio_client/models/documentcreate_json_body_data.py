@@ -9,12 +9,14 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.documentcreate_json_body_data_document_category import DocumentcreateJsonBodyDataDocumentCategory
-    from ..models.documentcreate_json_body_data_external_properties_item import (
-        DocumentcreateJsonBodyDataExternalPropertiesItem,
-    )
-    from ..models.documentcreate_json_body_data_multiparts_item import DocumentcreateJsonBodyDataMultipartsItem
-    from ..models.documentcreate_json_body_data_parent import DocumentcreateJsonBodyDataParent
+    from ..models.documentcreate_json_body_data_document_category import \
+        DocumentcreateJsonBodyDataDocumentCategory
+    from ..models.documentcreate_json_body_data_external_properties_item import \
+        DocumentcreateJsonBodyDataExternalPropertiesItem
+    from ..models.documentcreate_json_body_data_multiparts_item import \
+        DocumentcreateJsonBodyDataMultipartsItem
+    from ..models.documentcreate_json_body_data_parent import \
+        DocumentcreateJsonBodyDataParent
 
 
 T = TypeVar("T", bound="DocumentcreateJsonBodyData")
@@ -108,12 +110,14 @@ class DocumentcreateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.documentcreate_json_body_data_document_category import DocumentcreateJsonBodyDataDocumentCategory
-        from ..models.documentcreate_json_body_data_external_properties_item import (
-            DocumentcreateJsonBodyDataExternalPropertiesItem,
-        )
-        from ..models.documentcreate_json_body_data_multiparts_item import DocumentcreateJsonBodyDataMultipartsItem
-        from ..models.documentcreate_json_body_data_parent import DocumentcreateJsonBodyDataParent
+        from ..models.documentcreate_json_body_data_document_category import \
+            DocumentcreateJsonBodyDataDocumentCategory
+        from ..models.documentcreate_json_body_data_external_properties_item import \
+            DocumentcreateJsonBodyDataExternalPropertiesItem
+        from ..models.documentcreate_json_body_data_multiparts_item import \
+            DocumentcreateJsonBodyDataMultipartsItem
+        from ..models.documentcreate_json_body_data_parent import \
+            DocumentcreateJsonBodyDataParent
 
         d = dict(src_dict)
         name = d.pop("name")

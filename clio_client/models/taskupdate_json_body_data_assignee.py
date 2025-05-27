@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.taskupdate_json_body_data_assignee_type import (
     TaskupdateJsonBodyDataAssigneeType,
-    check_taskupdate_json_body_data_assignee_type,
-)
+    check_taskupdate_json_body_data_assignee_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="TaskupdateJsonBodyDataAssignee")

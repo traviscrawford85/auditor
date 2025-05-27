@@ -10,7 +10,8 @@ from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.bank_transaction_allocation import BankTransactionAllocation
-    from ..models.bank_transaction_bank_account import BankTransactionBankAccount
+    from ..models.bank_transaction_bank_account import \
+        BankTransactionBankAccount
     from ..models.bank_transaction_bill import BankTransactionBill
     from ..models.bank_transaction_client import BankTransactionClient
     from ..models.bank_transaction_matter import BankTransactionMatter
@@ -198,8 +199,10 @@ class BankTransaction:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.bank_transaction_allocation import BankTransactionAllocation
-        from ..models.bank_transaction_bank_account import BankTransactionBankAccount
+        from ..models.bank_transaction_allocation import \
+            BankTransactionAllocation
+        from ..models.bank_transaction_bank_account import \
+            BankTransactionBankAccount
         from ..models.bank_transaction_bill import BankTransactionBill
         from ..models.bank_transaction_client import BankTransactionClient
         from ..models.bank_transaction_matter import BankTransactionMatter

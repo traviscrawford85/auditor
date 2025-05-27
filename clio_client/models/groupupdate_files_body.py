@@ -52,7 +52,8 @@ class GroupupdateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.groupupdate_files_body_data import GroupupdateFilesBodyData
+        from ..models.groupupdate_files_body_data import \
+            GroupupdateFilesBodyData
 
         d = dict(src_dict)
         data = GroupupdateFilesBodyData.from_dict(d.pop("data"))

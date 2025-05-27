@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.document_base_type import DocumentBaseType, check_document_base_type
+from ..models.document_base_type import (DocumentBaseType,
+                                         check_document_base_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="DocumentBase")

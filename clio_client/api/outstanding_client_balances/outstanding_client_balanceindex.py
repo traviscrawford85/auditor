@@ -7,7 +7,8 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.error import Error
-from ...models.outstanding_client_balance_list import OutstandingClientBalanceList
+from ...models.outstanding_client_balance_list import \
+    OutstandingClientBalanceList
 from ...types import UNSET, Response, Unset
 
 

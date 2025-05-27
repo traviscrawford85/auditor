@@ -1,5 +1,7 @@
 # Adapter stubs for Contactupdaterequestdatainstantmessengersinner
-from schemas.from_spec.contactupdaterequestdatainstantmessengersinner import ContactupdaterequestdatainstantmessengersinnerIn, ContactupdaterequestdatainstantmessengersinnerOut, ContactupdaterequestdatainstantmessengersinnerUpdate, ContactupdaterequestdatainstantmessengersinnerDb
+from schemas.from_spec.contactupdaterequestdatainstantmessengersinner import \
+    ContactupdaterequestdatainstantmessengersinnerOut
+
 
 def convert_sdk_to_contactupdaterequestdatainstantmessengersinnerout(sdk_obj):
     # TODO

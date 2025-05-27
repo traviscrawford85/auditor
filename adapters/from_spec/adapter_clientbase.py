@@ -1,5 +1,6 @@
 # Adapter stubs for Clientbase
-from schemas.from_spec.clientbase import ClientBaseIn, ClientBaseOut, ClientBaseUpdate, ClientBaseDb
+from schemas.from_spec.clientbase import ClientBaseOut
+
 
 def convert_sdk_to_clientBaseOut(sdk_obj):
     # TODO

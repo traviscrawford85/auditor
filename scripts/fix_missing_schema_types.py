@@ -1,6 +1,8 @@
 import argparse
-import yaml
 from pathlib import Path
+
+import yaml
+
 
 def fix_types(obj):
     if isinstance(obj, dict):

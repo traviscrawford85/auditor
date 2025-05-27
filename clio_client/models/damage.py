@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.damage_base_damage_type import DamageBaseDamageType, check_damage_base_damage_type
+from ..models.damage_base_damage_type import (DamageBaseDamageType,
+                                              check_damage_base_damage_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:

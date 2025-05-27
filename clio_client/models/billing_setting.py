@@ -8,8 +8,7 @@ from dateutil.parser import isoparse
 
 from ..models.billing_setting_base_secondary_tax_rule import (
     BillingSettingBaseSecondaryTaxRule,
-    check_billing_setting_base_secondary_tax_rule,
-)
+    check_billing_setting_base_secondary_tax_rule)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="BillingSetting")

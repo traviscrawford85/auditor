@@ -1,5 +1,7 @@
 # Adapter stubs for Customactionupdaterequestdata
-from schemas.from_spec.customactionupdaterequestdata import CustomactionupdaterequestdataIn, CustomactionupdaterequestdataOut, CustomactionupdaterequestdataUpdate, CustomactionupdaterequestdataDb
+from schemas.from_spec.customactionupdaterequestdata import \
+    CustomactionupdaterequestdataOut
+
 
 def convert_sdk_to_customactionupdaterequestdataout(sdk_obj):
     # TODO

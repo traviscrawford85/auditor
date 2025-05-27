@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.task_templatecreate_files_body_data import TaskTemplatecreateFilesBodyData
+    from ..models.task_templatecreate_files_body_data import \
+        TaskTemplatecreateFilesBodyData
 
 
 T = TypeVar("T", bound="TaskTemplatecreateFilesBody")
@@ -52,7 +53,8 @@ class TaskTemplatecreateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.task_templatecreate_files_body_data import TaskTemplatecreateFilesBodyData
+        from ..models.task_templatecreate_files_body_data import \
+            TaskTemplatecreateFilesBodyData
 
         d = dict(src_dict)
         data = TaskTemplatecreateFilesBodyData.from_dict(d.pop("data"))

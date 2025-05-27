@@ -1,5 +1,7 @@
 # Adapter stubs for Conversationmessagecreaterequestdatareceiversinner
-from schemas.from_spec.conversationmessagecreaterequestdatareceiversinner import ConversationmessagecreaterequestdatareceiversinnerIn, ConversationmessagecreaterequestdatareceiversinnerOut, ConversationmessagecreaterequestdatareceiversinnerUpdate, ConversationmessagecreaterequestdatareceiversinnerDb
+from schemas.from_spec.conversationmessagecreaterequestdatareceiversinner import \
+    ConversationmessagecreaterequestdatareceiversinnerOut
+
 
 def convert_sdk_to_conversationmessagecreaterequestdatareceiversinnerout(sdk_obj):
     # TODO

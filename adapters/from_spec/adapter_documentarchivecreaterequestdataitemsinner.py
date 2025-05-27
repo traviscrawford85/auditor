@@ -1,5 +1,7 @@
 # Adapter stubs for Documentarchivecreaterequestdataitemsinner
-from schemas.from_spec.documentarchivecreaterequestdataitemsinner import DocumentarchivecreaterequestdataitemsinnerIn, DocumentarchivecreaterequestdataitemsinnerOut, DocumentarchivecreaterequestdataitemsinnerUpdate, DocumentarchivecreaterequestdataitemsinnerDb
+from schemas.from_spec.documentarchivecreaterequestdataitemsinner import \
+    DocumentarchivecreaterequestdataitemsinnerOut
+
 
 def convert_sdk_to_documentarchivecreaterequestdataitemsinnerout(sdk_obj):
     # TODO

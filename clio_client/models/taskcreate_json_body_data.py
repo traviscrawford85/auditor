@@ -8,30 +8,26 @@ from dateutil.parser import isoparse
 
 from ..models.taskcreate_json_body_data_cascading_offset_polarity import (
     TaskcreateJsonBodyDataCascadingOffsetPolarity,
-    check_taskcreate_json_body_data_cascading_offset_polarity,
-)
+    check_taskcreate_json_body_data_cascading_offset_polarity)
 from ..models.taskcreate_json_body_data_cascading_offset_type import (
     TaskcreateJsonBodyDataCascadingOffsetType,
-    check_taskcreate_json_body_data_cascading_offset_type,
-)
+    check_taskcreate_json_body_data_cascading_offset_type)
 from ..models.taskcreate_json_body_data_permission import (
     TaskcreateJsonBodyDataPermission,
-    check_taskcreate_json_body_data_permission,
-)
+    check_taskcreate_json_body_data_permission)
 from ..models.taskcreate_json_body_data_priority import (
-    TaskcreateJsonBodyDataPriority,
-    check_taskcreate_json_body_data_priority,
-)
+    TaskcreateJsonBodyDataPriority, check_taskcreate_json_body_data_priority)
 from ..models.taskcreate_json_body_data_status import (
-    TaskcreateJsonBodyDataStatus,
-    check_taskcreate_json_body_data_status,
-)
+    TaskcreateJsonBodyDataStatus, check_taskcreate_json_body_data_status)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.taskcreate_json_body_data_assignee import TaskcreateJsonBodyDataAssignee
-    from ..models.taskcreate_json_body_data_matter import TaskcreateJsonBodyDataMatter
-    from ..models.taskcreate_json_body_data_task_type import TaskcreateJsonBodyDataTaskType
+    from ..models.taskcreate_json_body_data_assignee import \
+        TaskcreateJsonBodyDataAssignee
+    from ..models.taskcreate_json_body_data_matter import \
+        TaskcreateJsonBodyDataMatter
+    from ..models.taskcreate_json_body_data_task_type import \
+        TaskcreateJsonBodyDataTaskType
 
 
 T = TypeVar("T", bound="TaskcreateJsonBodyData")
@@ -185,9 +181,12 @@ class TaskcreateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.taskcreate_json_body_data_assignee import TaskcreateJsonBodyDataAssignee
-        from ..models.taskcreate_json_body_data_matter import TaskcreateJsonBodyDataMatter
-        from ..models.taskcreate_json_body_data_task_type import TaskcreateJsonBodyDataTaskType
+        from ..models.taskcreate_json_body_data_assignee import \
+            TaskcreateJsonBodyDataAssignee
+        from ..models.taskcreate_json_body_data_matter import \
+            TaskcreateJsonBodyDataMatter
+        from ..models.taskcreate_json_body_data_task_type import \
+            TaskcreateJsonBodyDataTaskType
 
         d = dict(src_dict)
         assignee = TaskcreateJsonBodyDataAssignee.from_dict(d.pop("assignee"))

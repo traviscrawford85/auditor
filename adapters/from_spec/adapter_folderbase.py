@@ -1,5 +1,6 @@
 # Adapter stubs for Folderbase
-from schemas.from_spec.folderbase import FolderBaseIn, FolderBaseOut, FolderBaseUpdate, FolderBaseDb
+from schemas.from_spec.folderbase import FolderBaseOut
+
 
 def convert_sdk_to_folderBaseOut(sdk_obj):
     # TODO

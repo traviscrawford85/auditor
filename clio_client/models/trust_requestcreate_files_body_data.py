@@ -8,12 +8,12 @@ from dateutil.parser import isoparse
 
 from ..models.trust_requestcreate_files_body_data_trust_type import (
     TrustRequestcreateFilesBodyDataTrustType,
-    check_trust_requestcreate_files_body_data_trust_type,
-)
+    check_trust_requestcreate_files_body_data_trust_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.trust_requestcreate_files_body_data_matter_item import TrustRequestcreateFilesBodyDataMatterItem
+    from ..models.trust_requestcreate_files_body_data_matter_item import \
+        TrustRequestcreateFilesBodyDataMatterItem
 
 
 T = TypeVar("T", bound="TrustRequestcreateFilesBodyData")
@@ -86,7 +86,8 @@ class TrustRequestcreateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.trust_requestcreate_files_body_data_matter_item import TrustRequestcreateFilesBodyDataMatterItem
+        from ..models.trust_requestcreate_files_body_data_matter_item import \
+            TrustRequestcreateFilesBodyDataMatterItem
 
         d = dict(src_dict)
         approved = d.pop("approved")

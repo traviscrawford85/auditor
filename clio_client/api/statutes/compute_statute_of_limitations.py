@@ -5,8 +5,10 @@ import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.statute_of_limitations_compute_request import StatuteOfLimitationsComputeRequest
-from ...models.statute_of_limitations_compute_response import StatuteOfLimitationsComputeResponse
+from ...models.statute_of_limitations_compute_request import \
+    StatuteOfLimitationsComputeRequest
+from ...models.statute_of_limitations_compute_response import \
+    StatuteOfLimitationsComputeResponse
 from ...types import Response
 
 

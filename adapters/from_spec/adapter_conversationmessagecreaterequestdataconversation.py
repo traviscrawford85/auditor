@@ -1,5 +1,7 @@
 # Adapter stubs for Conversationmessagecreaterequestdataconversation
-from schemas.from_spec.conversationmessagecreaterequestdataconversation import ConversationmessagecreaterequestdataconversationIn, ConversationmessagecreaterequestdataconversationOut, ConversationmessagecreaterequestdataconversationUpdate, ConversationmessagecreaterequestdataconversationDb
+from schemas.from_spec.conversationmessagecreaterequestdataconversation import \
+    ConversationmessagecreaterequestdataconversationOut
+
 
 def convert_sdk_to_conversationmessagecreaterequestdataconversationout(sdk_obj):
     # TODO

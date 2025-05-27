@@ -7,9 +7,8 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.matterupdate_json_body_data_custom_field_values_item_custom_field import (
-        MatterupdateJsonBodyDataCustomFieldValuesItemCustomField,
-    )
+    from ..models.matterupdate_json_body_data_custom_field_values_item_custom_field import \
+        MatterupdateJsonBodyDataCustomFieldValuesItemCustomField
 
 
 T = TypeVar("T", bound="MatterupdateJsonBodyDataCustomFieldValuesItem")
@@ -60,9 +59,8 @@ class MatterupdateJsonBodyDataCustomFieldValuesItem:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.matterupdate_json_body_data_custom_field_values_item_custom_field import (
-            MatterupdateJsonBodyDataCustomFieldValuesItemCustomField,
-        )
+        from ..models.matterupdate_json_body_data_custom_field_values_item_custom_field import \
+            MatterupdateJsonBodyDataCustomFieldValuesItemCustomField
 
         d = dict(src_dict)
         value = d.pop("value", UNSET)

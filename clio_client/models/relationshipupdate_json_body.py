@@ -5,7 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.relationshipupdate_json_body_data import RelationshipupdateJsonBodyData
+    from ..models.relationshipupdate_json_body_data import \
+        RelationshipupdateJsonBodyData
 
 
 T = TypeVar("T", bound="RelationshipupdateJsonBody")
@@ -36,7 +37,8 @@ class RelationshipupdateJsonBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.relationshipupdate_json_body_data import RelationshipupdateJsonBodyData
+        from ..models.relationshipupdate_json_body_data import \
+            RelationshipupdateJsonBodyData
 
         d = dict(src_dict)
         data = RelationshipupdateJsonBodyData.from_dict(d.pop("data"))

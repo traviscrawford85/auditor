@@ -1,5 +1,6 @@
 # Adapter stubs for Tasktemplatebase
-from schemas.from_spec.tasktemplatebase import TasktemplateBaseIn, TasktemplateBaseOut, TasktemplateBaseUpdate, TasktemplateBaseDb
+from schemas.from_spec.tasktemplatebase import TasktemplateBaseOut
+
 
 def convert_sdk_to_tasktemplateBaseOut(sdk_obj):
     # TODO

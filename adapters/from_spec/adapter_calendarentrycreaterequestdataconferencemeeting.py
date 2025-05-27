@@ -1,5 +1,7 @@
 # Adapter stubs for Calendarentrycreaterequestdataconferencemeeting
-from schemas.from_spec.calendarentrycreaterequestdataconferencemeeting import CalendarentrycreaterequestdataconferencemeetingIn, CalendarentrycreaterequestdataconferencemeetingOut, CalendarentrycreaterequestdataconferencemeetingUpdate, CalendarentrycreaterequestdataconferencemeetingDb
+from schemas.from_spec.calendarentrycreaterequestdataconferencemeeting import \
+    CalendarentrycreaterequestdataconferencemeetingOut
+
 
 def convert_sdk_to_calendarentrycreaterequestdataconferencemeetingout(sdk_obj):
     # TODO

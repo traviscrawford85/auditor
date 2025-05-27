@@ -1,5 +1,7 @@
 # Adapter stubs for Customfieldsetassociationbase
-from schemas.from_spec.customfieldsetassociationbase import CustomfieldsetassociationBaseIn, CustomfieldsetassociationBaseOut, CustomfieldsetassociationBaseUpdate, CustomfieldsetassociationBaseDb
+from schemas.from_spec.customfieldsetassociationbase import \
+    CustomfieldsetassociationBaseOut
+
 
 def convert_sdk_to_customfieldsetassociationBaseOut(sdk_obj):
     # TODO

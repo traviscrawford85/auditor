@@ -1,5 +1,7 @@
 # Adapter stubs for Calendarvisibilityupdaterequestdata
-from schemas.from_spec.calendarvisibilityupdaterequestdata import CalendarvisibilityupdaterequestdataIn, CalendarvisibilityupdaterequestdataOut, CalendarvisibilityupdaterequestdataUpdate, CalendarvisibilityupdaterequestdataDb
+from schemas.from_spec.calendarvisibilityupdaterequestdata import \
+    CalendarvisibilityupdaterequestdataOut
+
 
 def convert_sdk_to_calendarvisibilityupdaterequestdataout(sdk_obj):
     # TODO

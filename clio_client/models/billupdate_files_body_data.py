@@ -7,15 +7,16 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.billupdate_files_body_data_state import (
-    BillupdateFilesBodyDataState,
-    check_billupdate_files_body_data_state,
-)
+    BillupdateFilesBodyDataState, check_billupdate_files_body_data_state)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.billupdate_files_body_data_bill_theme import BillupdateFilesBodyDataBillTheme
-    from ..models.billupdate_files_body_data_discount import BillupdateFilesBodyDataDiscount
-    from ..models.billupdate_files_body_data_interest import BillupdateFilesBodyDataInterest
+    from ..models.billupdate_files_body_data_bill_theme import \
+        BillupdateFilesBodyDataBillTheme
+    from ..models.billupdate_files_body_data_discount import \
+        BillupdateFilesBodyDataDiscount
+    from ..models.billupdate_files_body_data_interest import \
+        BillupdateFilesBodyDataInterest
 
 
 T = TypeVar("T", bound="BillupdateFilesBodyData")
@@ -136,9 +137,12 @@ class BillupdateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.billupdate_files_body_data_bill_theme import BillupdateFilesBodyDataBillTheme
-        from ..models.billupdate_files_body_data_discount import BillupdateFilesBodyDataDiscount
-        from ..models.billupdate_files_body_data_interest import BillupdateFilesBodyDataInterest
+        from ..models.billupdate_files_body_data_bill_theme import \
+            BillupdateFilesBodyDataBillTheme
+        from ..models.billupdate_files_body_data_discount import \
+            BillupdateFilesBodyDataDiscount
+        from ..models.billupdate_files_body_data_interest import \
+            BillupdateFilesBodyDataInterest
 
         d = dict(src_dict)
         _bill_theme = d.pop("bill_theme", UNSET)

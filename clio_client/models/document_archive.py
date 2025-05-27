@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.document_archive_base_state import DocumentArchiveBaseState, check_document_archive_base_state
+from ..models.document_archive_base_state import (
+    DocumentArchiveBaseState, check_document_archive_base_state)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="DocumentArchive")

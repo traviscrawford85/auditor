@@ -6,20 +6,20 @@ from attrs import field as _attrs_field
 
 from ..models.communicationcreate_json_body_data_type import (
     CommunicationcreateJsonBodyDataType,
-    check_communicationcreate_json_body_data_type,
-)
+    check_communicationcreate_json_body_data_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.communicationcreate_json_body_data_external_properties_item import (
-        CommunicationcreateJsonBodyDataExternalPropertiesItem,
-    )
-    from ..models.communicationcreate_json_body_data_matter import CommunicationcreateJsonBodyDataMatter
-    from ..models.communicationcreate_json_body_data_notification_event_subscribers_item import (
-        CommunicationcreateJsonBodyDataNotificationEventSubscribersItem,
-    )
-    from ..models.communicationcreate_json_body_data_receivers_item import CommunicationcreateJsonBodyDataReceiversItem
-    from ..models.communicationcreate_json_body_data_senders_item import CommunicationcreateJsonBodyDataSendersItem
+    from ..models.communicationcreate_json_body_data_external_properties_item import \
+        CommunicationcreateJsonBodyDataExternalPropertiesItem
+    from ..models.communicationcreate_json_body_data_matter import \
+        CommunicationcreateJsonBodyDataMatter
+    from ..models.communicationcreate_json_body_data_notification_event_subscribers_item import \
+        CommunicationcreateJsonBodyDataNotificationEventSubscribersItem
+    from ..models.communicationcreate_json_body_data_receivers_item import \
+        CommunicationcreateJsonBodyDataReceiversItem
+    from ..models.communicationcreate_json_body_data_senders_item import \
+        CommunicationcreateJsonBodyDataSendersItem
 
 
 T = TypeVar("T", bound="CommunicationcreateJsonBodyData")
@@ -127,17 +127,16 @@ class CommunicationcreateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.communicationcreate_json_body_data_external_properties_item import (
-            CommunicationcreateJsonBodyDataExternalPropertiesItem,
-        )
-        from ..models.communicationcreate_json_body_data_matter import CommunicationcreateJsonBodyDataMatter
-        from ..models.communicationcreate_json_body_data_notification_event_subscribers_item import (
-            CommunicationcreateJsonBodyDataNotificationEventSubscribersItem,
-        )
-        from ..models.communicationcreate_json_body_data_receivers_item import (
-            CommunicationcreateJsonBodyDataReceiversItem,
-        )
-        from ..models.communicationcreate_json_body_data_senders_item import CommunicationcreateJsonBodyDataSendersItem
+        from ..models.communicationcreate_json_body_data_external_properties_item import \
+            CommunicationcreateJsonBodyDataExternalPropertiesItem
+        from ..models.communicationcreate_json_body_data_matter import \
+            CommunicationcreateJsonBodyDataMatter
+        from ..models.communicationcreate_json_body_data_notification_event_subscribers_item import \
+            CommunicationcreateJsonBodyDataNotificationEventSubscribersItem
+        from ..models.communicationcreate_json_body_data_receivers_item import \
+            CommunicationcreateJsonBodyDataReceiversItem
+        from ..models.communicationcreate_json_body_data_senders_item import \
+            CommunicationcreateJsonBodyDataSendersItem
 
         d = dict(src_dict)
         body = d.pop("body")

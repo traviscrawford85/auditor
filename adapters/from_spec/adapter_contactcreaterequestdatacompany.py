@@ -1,5 +1,7 @@
 # Adapter stubs for Contactcreaterequestdatacompany
-from schemas.from_spec.contactcreaterequestdatacompany import ContactcreaterequestdatacompanyIn, ContactcreaterequestdatacompanyOut, ContactcreaterequestdatacompanyUpdate, ContactcreaterequestdatacompanyDb
+from schemas.from_spec.contactcreaterequestdatacompany import \
+    ContactcreaterequestdatacompanyOut
+
 
 def convert_sdk_to_contactcreaterequestdatacompanyout(sdk_obj):
     # TODO

@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.task_base_priority import TaskBasePriority, check_task_base_priority
+from ..models.task_base_priority import (TaskBasePriority,
+                                         check_task_base_priority)
 from ..models.task_base_status import TaskBaseStatus, check_task_base_status
 from ..types import UNSET, Unset
 

@@ -1,7 +1,8 @@
-import yaml
-from pathlib import Path
 import os
 import re
+from pathlib import Path
+
+import yaml
 
 OPENAPI_ROOT = Path("openapi")
 COMPONENT_TYPES = ["requestBodies"]

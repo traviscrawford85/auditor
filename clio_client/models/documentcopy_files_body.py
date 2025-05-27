@@ -52,7 +52,8 @@ class DocumentcopyFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.documentcopy_files_body_data import DocumentcopyFilesBodyData
+        from ..models.documentcopy_files_body_data import \
+            DocumentcopyFilesBodyData
 
         d = dict(src_dict)
         data = DocumentcopyFilesBodyData.from_dict(d.pop("data"))

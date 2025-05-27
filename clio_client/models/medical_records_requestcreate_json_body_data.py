@@ -8,21 +8,17 @@ from dateutil.parser import isoparse
 
 from ..models.medical_records_requestcreate_json_body_data_bills_status import (
     MedicalRecordsRequestcreateJsonBodyDataBillsStatus,
-    check_medical_records_requestcreate_json_body_data_bills_status,
-)
+    check_medical_records_requestcreate_json_body_data_bills_status)
 from ..models.medical_records_requestcreate_json_body_data_records_status import (
     MedicalRecordsRequestcreateJsonBodyDataRecordsStatus,
-    check_medical_records_requestcreate_json_body_data_records_status,
-)
+    check_medical_records_requestcreate_json_body_data_records_status)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.medical_records_requestcreate_json_body_data_medical_bills_item import (
-        MedicalRecordsRequestcreateJsonBodyDataMedicalBillsItem,
-    )
-    from ..models.medical_records_requestcreate_json_body_data_medical_records_item import (
-        MedicalRecordsRequestcreateJsonBodyDataMedicalRecordsItem,
-    )
+    from ..models.medical_records_requestcreate_json_body_data_medical_bills_item import \
+        MedicalRecordsRequestcreateJsonBodyDataMedicalBillsItem
+    from ..models.medical_records_requestcreate_json_body_data_medical_records_item import \
+        MedicalRecordsRequestcreateJsonBodyDataMedicalRecordsItem
 
 
 T = TypeVar("T", bound="MedicalRecordsRequestcreateJsonBodyData")
@@ -155,12 +151,10 @@ class MedicalRecordsRequestcreateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.medical_records_requestcreate_json_body_data_medical_bills_item import (
-            MedicalRecordsRequestcreateJsonBodyDataMedicalBillsItem,
-        )
-        from ..models.medical_records_requestcreate_json_body_data_medical_records_item import (
-            MedicalRecordsRequestcreateJsonBodyDataMedicalRecordsItem,
-        )
+        from ..models.medical_records_requestcreate_json_body_data_medical_bills_item import \
+            MedicalRecordsRequestcreateJsonBodyDataMedicalBillsItem
+        from ..models.medical_records_requestcreate_json_body_data_medical_records_item import \
+            MedicalRecordsRequestcreateJsonBodyDataMedicalRecordsItem
 
         d = dict(src_dict)
         bills_status = check_medical_records_requestcreate_json_body_data_bills_status(d.pop("bills_status"))

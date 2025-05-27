@@ -1,5 +1,6 @@
 # Adapter stubs for Documentbase
-from schemas.from_spec.documentbase import DocumentBaseIn, DocumentBaseOut, DocumentBaseUpdate, DocumentBaseDb
+from schemas.from_spec.documentbase import DocumentBaseOut
+
 
 def convert_sdk_to_documentBaseOut(sdk_obj):
     # TODO

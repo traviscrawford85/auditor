@@ -1,5 +1,7 @@
 # Adapter stubs for Medicalbillupdaterequestdatapayersinner
-from schemas.from_spec.medicalbillupdaterequestdatapayersinner import MedicalbillupdaterequestdatapayersinnerIn, MedicalbillupdaterequestdatapayersinnerOut, MedicalbillupdaterequestdatapayersinnerUpdate, MedicalbillupdaterequestdatapayersinnerDb
+from schemas.from_spec.medicalbillupdaterequestdatapayersinner import \
+    MedicalbillupdaterequestdatapayersinnerOut
+
 
 def convert_sdk_to_medicalbillupdaterequestdatapayersinnerout(sdk_obj):
     # TODO

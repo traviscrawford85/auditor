@@ -6,12 +6,9 @@ from attrs import field as _attrs_field
 
 from ..models.activity_description_rate_base_hierarchy import (
     ActivityDescriptionRateBaseHierarchy,
-    check_activity_description_rate_base_hierarchy,
-)
+    check_activity_description_rate_base_hierarchy)
 from ..models.activity_description_rate_base_type import (
-    ActivityDescriptionRateBaseType,
-    check_activity_description_rate_base_type,
-)
+    ActivityDescriptionRateBaseType, check_activity_description_rate_base_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ActivityDescriptionRate")

@@ -36,7 +36,8 @@ class ContactupdateDataBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.contactupdate_data_body_data import ContactupdateDataBodyData
+        from ..models.contactupdate_data_body_data import \
+            ContactupdateDataBodyData
 
         d = dict(src_dict)
         data = ContactupdateDataBodyData.from_dict(d.pop("data"))

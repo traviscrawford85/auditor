@@ -8,30 +8,26 @@ from dateutil.parser import isoparse
 
 from ..models.taskupdate_data_body_data_cascading_offset_polarity import (
     TaskupdateDataBodyDataCascadingOffsetPolarity,
-    check_taskupdate_data_body_data_cascading_offset_polarity,
-)
+    check_taskupdate_data_body_data_cascading_offset_polarity)
 from ..models.taskupdate_data_body_data_cascading_offset_type import (
     TaskupdateDataBodyDataCascadingOffsetType,
-    check_taskupdate_data_body_data_cascading_offset_type,
-)
+    check_taskupdate_data_body_data_cascading_offset_type)
 from ..models.taskupdate_data_body_data_permission import (
     TaskupdateDataBodyDataPermission,
-    check_taskupdate_data_body_data_permission,
-)
+    check_taskupdate_data_body_data_permission)
 from ..models.taskupdate_data_body_data_priority import (
-    TaskupdateDataBodyDataPriority,
-    check_taskupdate_data_body_data_priority,
-)
+    TaskupdateDataBodyDataPriority, check_taskupdate_data_body_data_priority)
 from ..models.taskupdate_data_body_data_status import (
-    TaskupdateDataBodyDataStatus,
-    check_taskupdate_data_body_data_status,
-)
+    TaskupdateDataBodyDataStatus, check_taskupdate_data_body_data_status)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.taskupdate_data_body_data_assignee import TaskupdateDataBodyDataAssignee
-    from ..models.taskupdate_data_body_data_matter import TaskupdateDataBodyDataMatter
-    from ..models.taskupdate_data_body_data_task_type import TaskupdateDataBodyDataTaskType
+    from ..models.taskupdate_data_body_data_assignee import \
+        TaskupdateDataBodyDataAssignee
+    from ..models.taskupdate_data_body_data_matter import \
+        TaskupdateDataBodyDataMatter
+    from ..models.taskupdate_data_body_data_task_type import \
+        TaskupdateDataBodyDataTaskType
 
 
 T = TypeVar("T", bound="TaskupdateDataBodyData")
@@ -181,9 +177,12 @@ class TaskupdateDataBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.taskupdate_data_body_data_assignee import TaskupdateDataBodyDataAssignee
-        from ..models.taskupdate_data_body_data_matter import TaskupdateDataBodyDataMatter
-        from ..models.taskupdate_data_body_data_task_type import TaskupdateDataBodyDataTaskType
+        from ..models.taskupdate_data_body_data_assignee import \
+            TaskupdateDataBodyDataAssignee
+        from ..models.taskupdate_data_body_data_matter import \
+            TaskupdateDataBodyDataMatter
+        from ..models.taskupdate_data_body_data_task_type import \
+            TaskupdateDataBodyDataTaskType
 
         d = dict(src_dict)
         _assignee = d.pop("assignee", UNSET)

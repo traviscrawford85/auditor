@@ -1,5 +1,7 @@
 # Adapter stubs for Bankaccountcreaterequestdata
-from schemas.from_spec.bankaccountcreaterequestdata import BankaccountcreaterequestdataIn, BankaccountcreaterequestdataOut, BankaccountcreaterequestdataUpdate, BankaccountcreaterequestdataDb
+from schemas.from_spec.bankaccountcreaterequestdata import \
+    BankaccountcreaterequestdataOut
+
 
 def convert_sdk_to_bankaccountcreaterequestdataout(sdk_obj):
     # TODO

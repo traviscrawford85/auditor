@@ -1,5 +1,7 @@
 # Adapter stubs for Billrecipientcontactbase
-from schemas.from_spec.billrecipientcontactbase import BillrecipientcontactBaseIn, BillrecipientcontactBaseOut, BillrecipientcontactBaseUpdate, BillrecipientcontactBaseDb
+from schemas.from_spec.billrecipientcontactbase import \
+    BillrecipientcontactBaseOut
+
 
 def convert_sdk_to_billrecipientcontactBaseOut(sdk_obj):
     # TODO

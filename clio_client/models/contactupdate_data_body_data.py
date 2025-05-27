@@ -7,28 +7,30 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.contactupdate_data_body_data_type import (
-    ContactupdateDataBodyDataType,
-    check_contactupdate_data_body_data_type,
-)
+    ContactupdateDataBodyDataType, check_contactupdate_data_body_data_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.contactupdate_data_body_data_addresses_item import ContactupdateDataBodyDataAddressesItem
-    from ..models.contactupdate_data_body_data_avatar import ContactupdateDataBodyDataAvatar
-    from ..models.contactupdate_data_body_data_co_counsel_rate import ContactupdateDataBodyDataCoCounselRate
-    from ..models.contactupdate_data_body_data_company import ContactupdateDataBodyDataCompany
-    from ..models.contactupdate_data_body_data_custom_field_set_associations_item import (
-        ContactupdateDataBodyDataCustomFieldSetAssociationsItem,
-    )
-    from ..models.contactupdate_data_body_data_custom_field_values_item import (
-        ContactupdateDataBodyDataCustomFieldValuesItem,
-    )
-    from ..models.contactupdate_data_body_data_email_addresses_item import ContactupdateDataBodyDataEmailAddressesItem
-    from ..models.contactupdate_data_body_data_instant_messengers_item import (
-        ContactupdateDataBodyDataInstantMessengersItem,
-    )
-    from ..models.contactupdate_data_body_data_phone_numbers_item import ContactupdateDataBodyDataPhoneNumbersItem
-    from ..models.contactupdate_data_body_data_web_sites_item import ContactupdateDataBodyDataWebSitesItem
+    from ..models.contactupdate_data_body_data_addresses_item import \
+        ContactupdateDataBodyDataAddressesItem
+    from ..models.contactupdate_data_body_data_avatar import \
+        ContactupdateDataBodyDataAvatar
+    from ..models.contactupdate_data_body_data_co_counsel_rate import \
+        ContactupdateDataBodyDataCoCounselRate
+    from ..models.contactupdate_data_body_data_company import \
+        ContactupdateDataBodyDataCompany
+    from ..models.contactupdate_data_body_data_custom_field_set_associations_item import \
+        ContactupdateDataBodyDataCustomFieldSetAssociationsItem
+    from ..models.contactupdate_data_body_data_custom_field_values_item import \
+        ContactupdateDataBodyDataCustomFieldValuesItem
+    from ..models.contactupdate_data_body_data_email_addresses_item import \
+        ContactupdateDataBodyDataEmailAddressesItem
+    from ..models.contactupdate_data_body_data_instant_messengers_item import \
+        ContactupdateDataBodyDataInstantMessengersItem
+    from ..models.contactupdate_data_body_data_phone_numbers_item import \
+        ContactupdateDataBodyDataPhoneNumbersItem
+    from ..models.contactupdate_data_body_data_web_sites_item import \
+        ContactupdateDataBodyDataWebSitesItem
 
 
 T = TypeVar("T", bound="ContactupdateDataBodyData")
@@ -224,24 +226,26 @@ class ContactupdateDataBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.contactupdate_data_body_data_addresses_item import ContactupdateDataBodyDataAddressesItem
-        from ..models.contactupdate_data_body_data_avatar import ContactupdateDataBodyDataAvatar
-        from ..models.contactupdate_data_body_data_co_counsel_rate import ContactupdateDataBodyDataCoCounselRate
-        from ..models.contactupdate_data_body_data_company import ContactupdateDataBodyDataCompany
-        from ..models.contactupdate_data_body_data_custom_field_set_associations_item import (
-            ContactupdateDataBodyDataCustomFieldSetAssociationsItem,
-        )
-        from ..models.contactupdate_data_body_data_custom_field_values_item import (
-            ContactupdateDataBodyDataCustomFieldValuesItem,
-        )
-        from ..models.contactupdate_data_body_data_email_addresses_item import (
-            ContactupdateDataBodyDataEmailAddressesItem,
-        )
-        from ..models.contactupdate_data_body_data_instant_messengers_item import (
-            ContactupdateDataBodyDataInstantMessengersItem,
-        )
-        from ..models.contactupdate_data_body_data_phone_numbers_item import ContactupdateDataBodyDataPhoneNumbersItem
-        from ..models.contactupdate_data_body_data_web_sites_item import ContactupdateDataBodyDataWebSitesItem
+        from ..models.contactupdate_data_body_data_addresses_item import \
+            ContactupdateDataBodyDataAddressesItem
+        from ..models.contactupdate_data_body_data_avatar import \
+            ContactupdateDataBodyDataAvatar
+        from ..models.contactupdate_data_body_data_co_counsel_rate import \
+            ContactupdateDataBodyDataCoCounselRate
+        from ..models.contactupdate_data_body_data_company import \
+            ContactupdateDataBodyDataCompany
+        from ..models.contactupdate_data_body_data_custom_field_set_associations_item import \
+            ContactupdateDataBodyDataCustomFieldSetAssociationsItem
+        from ..models.contactupdate_data_body_data_custom_field_values_item import \
+            ContactupdateDataBodyDataCustomFieldValuesItem
+        from ..models.contactupdate_data_body_data_email_addresses_item import \
+            ContactupdateDataBodyDataEmailAddressesItem
+        from ..models.contactupdate_data_body_data_instant_messengers_item import \
+            ContactupdateDataBodyDataInstantMessengersItem
+        from ..models.contactupdate_data_body_data_phone_numbers_item import \
+            ContactupdateDataBodyDataPhoneNumbersItem
+        from ..models.contactupdate_data_body_data_web_sites_item import \
+            ContactupdateDataBodyDataWebSitesItem
 
         d = dict(src_dict)
         addresses = []

@@ -5,7 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.document_automationcreate_json_body_data import DocumentAutomationcreateJsonBodyData
+    from ..models.document_automationcreate_json_body_data import \
+        DocumentAutomationcreateJsonBodyData
 
 
 T = TypeVar("T", bound="DocumentAutomationcreateJsonBody")
@@ -36,7 +37,8 @@ class DocumentAutomationcreateJsonBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.document_automationcreate_json_body_data import DocumentAutomationcreateJsonBodyData
+        from ..models.document_automationcreate_json_body_data import \
+            DocumentAutomationcreateJsonBodyData
 
         d = dict(src_dict)
         data = DocumentAutomationcreateJsonBodyData.from_dict(d.pop("data"))

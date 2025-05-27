@@ -9,9 +9,8 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.medical_records_requestupdate_files_body_data_medical_bills_item_payers_item import (
-        MedicalRecordsRequestupdateFilesBodyDataMedicalBillsItemPayersItem,
-    )
+    from ..models.medical_records_requestupdate_files_body_data_medical_bills_item_payers_item import \
+        MedicalRecordsRequestupdateFilesBodyDataMedicalBillsItemPayersItem
 
 
 T = TypeVar("T", bound="MedicalRecordsRequestupdateFilesBodyDataMedicalBillsItem")
@@ -99,9 +98,8 @@ class MedicalRecordsRequestupdateFilesBodyDataMedicalBillsItem:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.medical_records_requestupdate_files_body_data_medical_bills_item_payers_item import (
-            MedicalRecordsRequestupdateFilesBodyDataMedicalBillsItemPayersItem,
-        )
+        from ..models.medical_records_requestupdate_files_body_data_medical_bills_item_payers_item import \
+            MedicalRecordsRequestupdateFilesBodyDataMedicalBillsItemPayersItem
 
         d = dict(src_dict)
         adjustment = d.pop("adjustment", UNSET)

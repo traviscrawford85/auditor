@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.custom_field_setupdate_files_body_data import CustomFieldSetupdateFilesBodyData
+    from ..models.custom_field_setupdate_files_body_data import \
+        CustomFieldSetupdateFilesBodyData
 
 
 T = TypeVar("T", bound="CustomFieldSetupdateFilesBody")
@@ -52,7 +53,8 @@ class CustomFieldSetupdateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.custom_field_setupdate_files_body_data import CustomFieldSetupdateFilesBodyData
+        from ..models.custom_field_setupdate_files_body_data import \
+            CustomFieldSetupdateFilesBodyData
 
         d = dict(src_dict)
         data = CustomFieldSetupdateFilesBodyData.from_dict(d.pop("data"))

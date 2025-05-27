@@ -7,9 +7,8 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.conversation_message_list import ConversationMessageList
-from ...models.conversation_messageindex_order import (
-    ConversationMessageindexOrder,
-)
+from ...models.conversation_messageindex_order import \
+    ConversationMessageindexOrder
 from ...models.error import Error
 from ...types import UNSET, Response, Unset
 

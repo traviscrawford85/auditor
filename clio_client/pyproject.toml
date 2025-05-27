@@ -16,9 +16,7 @@ httpx = ">=0.20.0,<0.29.0"
 attrs = ">=22.2.0"
 python-dateutil = "^2.8.0"
 
-[build-system][tool.poetry]
-name = "clio_client"
-
+[build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 

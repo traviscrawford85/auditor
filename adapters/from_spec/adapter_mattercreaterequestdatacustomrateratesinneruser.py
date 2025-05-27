@@ -1,5 +1,7 @@
 # Adapter stubs for Mattercreaterequestdatacustomrateratesinneruser
-from schemas.from_spec.mattercreaterequestdatacustomrateratesinneruser import MattercreaterequestdatacustomrateratesinneruserIn, MattercreaterequestdatacustomrateratesinneruserOut, MattercreaterequestdatacustomrateratesinneruserUpdate, MattercreaterequestdatacustomrateratesinneruserDb
+from schemas.from_spec.mattercreaterequestdatacustomrateratesinneruser import \
+    MattercreaterequestdatacustomrateratesinneruserOut
+
 
 def convert_sdk_to_mattercreaterequestdatacustomrateratesinneruserout(sdk_obj):
     # TODO

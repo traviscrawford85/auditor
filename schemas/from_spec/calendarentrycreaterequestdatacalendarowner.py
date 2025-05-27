@@ -1,6 +1,5 @@
 from pydantic import BaseModel
-from typing import Optional, Any, List
-from datetime import datetime
+
 
 class CalendarentrycreaterequestdatacalendarownerIn(BaseModel):
     id: int

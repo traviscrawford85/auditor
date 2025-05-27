@@ -1,5 +1,6 @@
-import yaml
 from pathlib import Path
+
+import yaml
 
 BASE_DIR = Path("openapi/components")
 SECTIONS = ["schemas", "parameters", "responses", "requestBodies"]

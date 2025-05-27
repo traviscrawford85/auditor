@@ -6,8 +6,10 @@ Validate openapi/components/requestBodies.yaml after bundling to ensure:
 """
 
 import sys
-import yaml
 from pathlib import Path
+
+import yaml
+
 
 def validate_request_bodies(request_bodies):
     errors = []

@@ -1,5 +1,6 @@
 # Adapter stubs for Servicetypebase
-from schemas.from_spec.servicetypebase import ServicetypeBaseIn, ServicetypeBaseOut, ServicetypeBaseUpdate, ServicetypeBaseDb
+from schemas.from_spec.servicetypebase import ServicetypeBaseOut
+
 
 def convert_sdk_to_servicetypeBaseOut(sdk_obj):
     # TODO

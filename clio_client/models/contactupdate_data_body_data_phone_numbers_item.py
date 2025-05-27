@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.contactupdate_data_body_data_phone_numbers_item_name import (
     ContactupdateDataBodyDataPhoneNumbersItemName,
-    check_contactupdate_data_body_data_phone_numbers_item_name,
-)
+    check_contactupdate_data_body_data_phone_numbers_item_name)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ContactupdateDataBodyDataPhoneNumbersItem")

@@ -10,8 +10,10 @@ from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.bill_base import BillBase
-    from ..models.outstanding_client_balance_contact import OutstandingClientBalanceContact
-    from ..models.outstanding_client_balance_currency import OutstandingClientBalanceCurrency
+    from ..models.outstanding_client_balance_contact import \
+        OutstandingClientBalanceContact
+    from ..models.outstanding_client_balance_currency import \
+        OutstandingClientBalanceCurrency
 
 
 T = TypeVar("T", bound="OutstandingClientBalance")
@@ -145,8 +147,10 @@ class OutstandingClientBalance:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.bill_base import BillBase
-        from ..models.outstanding_client_balance_contact import OutstandingClientBalanceContact
-        from ..models.outstanding_client_balance_currency import OutstandingClientBalanceCurrency
+        from ..models.outstanding_client_balance_contact import \
+            OutstandingClientBalanceContact
+        from ..models.outstanding_client_balance_currency import \
+            OutstandingClientBalanceCurrency
 
         d = dict(src_dict)
         associated_matter_ids = cast(list[int], d.pop("associated_matter_ids", UNSET))

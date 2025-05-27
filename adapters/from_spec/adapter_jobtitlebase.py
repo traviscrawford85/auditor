@@ -1,5 +1,6 @@
 # Adapter stubs for Jobtitlebase
-from schemas.from_spec.jobtitlebase import JobtitleBaseIn, JobtitleBaseOut, JobtitleBaseUpdate, JobtitleBaseDb
+from schemas.from_spec.jobtitlebase import JobtitleBaseOut
+
 
 def convert_sdk_to_jobtitleBaseOut(sdk_obj):
     # TODO

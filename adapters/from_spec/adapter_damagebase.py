@@ -1,5 +1,6 @@
 # Adapter stubs for Damagebase
-from schemas.from_spec.damagebase import DamageBaseIn, DamageBaseOut, DamageBaseUpdate, DamageBaseDb
+from schemas.from_spec.damagebase import DamageBaseOut
+
 
 def convert_sdk_to_damageBaseOut(sdk_obj):
     # TODO

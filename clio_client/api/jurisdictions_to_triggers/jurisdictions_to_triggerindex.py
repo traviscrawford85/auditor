@@ -8,9 +8,8 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.error import Error
 from ...models.jurisdictions_to_trigger_list import JurisdictionsToTriggerList
-from ...models.jurisdictions_to_triggerindex_order import (
-    JurisdictionsToTriggerindexOrder,
-)
+from ...models.jurisdictions_to_triggerindex_order import \
+    JurisdictionsToTriggerindexOrder
 from ...types import UNSET, Response, Unset
 
 

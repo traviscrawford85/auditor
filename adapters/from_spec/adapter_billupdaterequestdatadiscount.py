@@ -1,5 +1,7 @@
 # Adapter stubs for Billupdaterequestdatadiscount
-from schemas.from_spec.billupdaterequestdatadiscount import BillupdaterequestdatadiscountIn, BillupdaterequestdatadiscountOut, BillupdaterequestdatadiscountUpdate, BillupdaterequestdatadiscountDb
+from schemas.from_spec.billupdaterequestdatadiscount import \
+    BillupdaterequestdatadiscountOut
+
 
 def convert_sdk_to_billupdaterequestdatadiscountout(sdk_obj):
     # TODO

@@ -1,5 +1,6 @@
 # Adapter stubs for Jurisdictionstotrigger
-from schemas.from_spec.jurisdictionstotrigger import JurisdictionstotriggerIn, JurisdictionstotriggerOut, JurisdictionstotriggerUpdate, JurisdictionstotriggerDb
+from schemas.from_spec.jurisdictionstotrigger import JurisdictionstotriggerOut
+
 
 def convert_sdk_to_jurisdictionstotriggerout(sdk_obj):
     # TODO

@@ -5,7 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.timercreate_files_body_data_activity import TimercreateFilesBodyDataActivity
+    from ..models.timercreate_files_body_data_activity import \
+        TimercreateFilesBodyDataActivity
 
 
 T = TypeVar("T", bound="TimercreateFilesBodyData")
@@ -36,7 +37,8 @@ class TimercreateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.timercreate_files_body_data_activity import TimercreateFilesBodyDataActivity
+        from ..models.timercreate_files_body_data_activity import \
+            TimercreateFilesBodyDataActivity
 
         d = dict(src_dict)
         activity = TimercreateFilesBodyDataActivity.from_dict(d.pop("activity"))

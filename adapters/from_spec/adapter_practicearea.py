@@ -1,5 +1,6 @@
 # Adapter stubs for Practicearea
-from schemas.from_spec.practicearea import PracticeareaIn, PracticeareaOut, PracticeareaUpdate, PracticeareaDb
+from schemas.from_spec.practicearea import PracticeareaOut
+
 
 def convert_sdk_to_practiceareaout(sdk_obj):
     # TODO

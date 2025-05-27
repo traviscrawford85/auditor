@@ -1,7 +1,8 @@
 import os
-import yaml
 import re
 from pathlib import Path
+
+import yaml
 
 BASE_DIR = Path("openapi")
 SCHEMA_REF_PATTERN = re.compile(r"\.\/schemas\/([\w\-]+)\.yaml")

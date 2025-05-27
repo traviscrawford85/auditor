@@ -7,10 +7,9 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.clio_creator_base_subscription_type import (
-    ClioCreatorBaseSubscriptionType,
-    check_clio_creator_base_subscription_type,
-)
-from ..models.clio_creator_base_type import ClioCreatorBaseType, check_clio_creator_base_type
+    ClioCreatorBaseSubscriptionType, check_clio_creator_base_subscription_type)
+from ..models.clio_creator_base_type import (ClioCreatorBaseType,
+                                             check_clio_creator_base_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="DocumentVersionCreator")

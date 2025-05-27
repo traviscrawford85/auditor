@@ -1,5 +1,6 @@
 # Adapter stubs for Event
-from schemas.from_spec.event import EventIn, EventOut, EventUpdate, EventDb
+from schemas.from_spec.event import EventOut
+
 
 def convert_sdk_to_eventout(sdk_obj):
     # TODO

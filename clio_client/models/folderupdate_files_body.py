@@ -52,7 +52,8 @@ class FolderupdateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.folderupdate_files_body_data import FolderupdateFilesBodyData
+        from ..models.folderupdate_files_body_data import \
+            FolderupdateFilesBodyData
 
         d = dict(src_dict)
         data = FolderupdateFilesBodyData.from_dict(d.pop("data"))

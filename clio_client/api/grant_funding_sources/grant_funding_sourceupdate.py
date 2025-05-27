@@ -7,9 +7,12 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.error import Error
 from ...models.grant_funding_source_show import GrantFundingSourceShow
-from ...models.grant_funding_sourceupdate_data_body import GrantFundingSourceupdateDataBody
-from ...models.grant_funding_sourceupdate_files_body import GrantFundingSourceupdateFilesBody
-from ...models.grant_funding_sourceupdate_json_body import GrantFundingSourceupdateJsonBody
+from ...models.grant_funding_sourceupdate_data_body import \
+    GrantFundingSourceupdateDataBody
+from ...models.grant_funding_sourceupdate_files_body import \
+    GrantFundingSourceupdateFilesBody
+from ...models.grant_funding_sourceupdate_json_body import \
+    GrantFundingSourceupdateJsonBody
 from ...types import UNSET, Response, Unset
 
 

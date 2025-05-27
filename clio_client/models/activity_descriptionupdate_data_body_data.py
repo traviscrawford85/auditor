@@ -7,10 +7,10 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.activity_descriptionupdate_data_body_data_groups_item import (
-        ActivityDescriptionupdateDataBodyDataGroupsItem,
-    )
-    from ..models.activity_descriptionupdate_data_body_data_rate import ActivityDescriptionupdateDataBodyDataRate
+    from ..models.activity_descriptionupdate_data_body_data_groups_item import \
+        ActivityDescriptionupdateDataBodyDataGroupsItem
+    from ..models.activity_descriptionupdate_data_body_data_rate import \
+        ActivityDescriptionupdateDataBodyDataRate
 
 
 T = TypeVar("T", bound="ActivityDescriptionupdateDataBodyData")
@@ -71,10 +71,10 @@ class ActivityDescriptionupdateDataBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.activity_descriptionupdate_data_body_data_groups_item import (
-            ActivityDescriptionupdateDataBodyDataGroupsItem,
-        )
-        from ..models.activity_descriptionupdate_data_body_data_rate import ActivityDescriptionupdateDataBodyDataRate
+        from ..models.activity_descriptionupdate_data_body_data_groups_item import \
+            ActivityDescriptionupdateDataBodyDataGroupsItem
+        from ..models.activity_descriptionupdate_data_body_data_rate import \
+            ActivityDescriptionupdateDataBodyDataRate
 
         d = dict(src_dict)
         default = d.pop("default", UNSET)

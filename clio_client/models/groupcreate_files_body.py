@@ -52,7 +52,8 @@ class GroupcreateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.groupcreate_files_body_data import GroupcreateFilesBodyData
+        from ..models.groupcreate_files_body_data import \
+            GroupcreateFilesBodyData
 
         d = dict(src_dict)
         data = GroupcreateFilesBodyData.from_dict(d.pop("data"))

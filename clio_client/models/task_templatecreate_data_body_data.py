@@ -6,28 +6,22 @@ from attrs import field as _attrs_field
 
 from ..models.task_templatecreate_data_body_data_cascading_offset_polarity import (
     TaskTemplatecreateDataBodyDataCascadingOffsetPolarity,
-    check_task_templatecreate_data_body_data_cascading_offset_polarity,
-)
+    check_task_templatecreate_data_body_data_cascading_offset_polarity)
 from ..models.task_templatecreate_data_body_data_cascading_offset_type import (
     TaskTemplatecreateDataBodyDataCascadingOffsetType,
-    check_task_templatecreate_data_body_data_cascading_offset_type,
-)
+    check_task_templatecreate_data_body_data_cascading_offset_type)
 from ..models.task_templatecreate_data_body_data_priority import (
     TaskTemplatecreateDataBodyDataPriority,
-    check_task_templatecreate_data_body_data_priority,
-)
+    check_task_templatecreate_data_body_data_priority)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.task_templatecreate_data_body_data_cascading_source import (
-        TaskTemplatecreateDataBodyDataCascadingSource,
-    )
-    from ..models.task_templatecreate_data_body_data_reminder_templates_item import (
-        TaskTemplatecreateDataBodyDataReminderTemplatesItem,
-    )
-    from ..models.task_templatecreate_data_body_data_task_template_list import (
-        TaskTemplatecreateDataBodyDataTaskTemplateList,
-    )
+    from ..models.task_templatecreate_data_body_data_cascading_source import \
+        TaskTemplatecreateDataBodyDataCascadingSource
+    from ..models.task_templatecreate_data_body_data_reminder_templates_item import \
+        TaskTemplatecreateDataBodyDataReminderTemplatesItem
+    from ..models.task_templatecreate_data_body_data_task_template_list import \
+        TaskTemplatecreateDataBodyDataTaskTemplateList
 
 
 T = TypeVar("T", bound="TaskTemplatecreateDataBodyData")
@@ -137,15 +131,12 @@ class TaskTemplatecreateDataBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.task_templatecreate_data_body_data_cascading_source import (
-            TaskTemplatecreateDataBodyDataCascadingSource,
-        )
-        from ..models.task_templatecreate_data_body_data_reminder_templates_item import (
-            TaskTemplatecreateDataBodyDataReminderTemplatesItem,
-        )
-        from ..models.task_templatecreate_data_body_data_task_template_list import (
-            TaskTemplatecreateDataBodyDataTaskTemplateList,
-        )
+        from ..models.task_templatecreate_data_body_data_cascading_source import \
+            TaskTemplatecreateDataBodyDataCascadingSource
+        from ..models.task_templatecreate_data_body_data_reminder_templates_item import \
+            TaskTemplatecreateDataBodyDataReminderTemplatesItem
+        from ..models.task_templatecreate_data_body_data_task_template_list import \
+            TaskTemplatecreateDataBodyDataTaskTemplateList
 
         d = dict(src_dict)
         name = d.pop("name")

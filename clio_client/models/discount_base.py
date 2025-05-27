@@ -4,7 +4,8 @@ from typing import Any, TypeVar, Union
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
-from ..models.discount_base_type import DiscountBaseType, check_discount_base_type
+from ..models.discount_base_type import (DiscountBaseType,
+                                         check_discount_base_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="DiscountBase")

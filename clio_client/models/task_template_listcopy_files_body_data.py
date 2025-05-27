@@ -7,9 +7,8 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.task_template_listcopy_files_body_data_practice_area import (
-        TaskTemplateListcopyFilesBodyDataPracticeArea,
-    )
+    from ..models.task_template_listcopy_files_body_data_practice_area import \
+        TaskTemplateListcopyFilesBodyDataPracticeArea
 
 
 T = TypeVar("T", bound="TaskTemplateListcopyFilesBodyData")
@@ -52,9 +51,8 @@ class TaskTemplateListcopyFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.task_template_listcopy_files_body_data_practice_area import (
-            TaskTemplateListcopyFilesBodyDataPracticeArea,
-        )
+        from ..models.task_template_listcopy_files_body_data_practice_area import \
+            TaskTemplateListcopyFilesBodyDataPracticeArea
 
         d = dict(src_dict)
         description = d.pop("description", UNSET)

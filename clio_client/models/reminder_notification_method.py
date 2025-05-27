@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.notification_method_base_type import NotificationMethodBaseType, check_notification_method_base_type
+from ..models.notification_method_base_type import (
+    NotificationMethodBaseType, check_notification_method_base_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ReminderNotificationMethod")

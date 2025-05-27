@@ -5,7 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.expense_categoryupdate_json_body_data import ExpenseCategoryupdateJsonBodyData
+    from ..models.expense_categoryupdate_json_body_data import \
+        ExpenseCategoryupdateJsonBodyData
 
 
 T = TypeVar("T", bound="ExpenseCategoryupdateJsonBody")
@@ -36,7 +37,8 @@ class ExpenseCategoryupdateJsonBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.expense_categoryupdate_json_body_data import ExpenseCategoryupdateJsonBodyData
+        from ..models.expense_categoryupdate_json_body_data import \
+            ExpenseCategoryupdateJsonBodyData
 
         d = dict(src_dict)
         data = ExpenseCategoryupdateJsonBodyData.from_dict(d.pop("data"))

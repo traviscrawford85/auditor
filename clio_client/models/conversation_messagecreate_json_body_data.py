@@ -7,16 +7,14 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.conversation_messagecreate_json_body_data_attachment import (
-        ConversationMessagecreateJsonBodyDataAttachment,
-    )
-    from ..models.conversation_messagecreate_json_body_data_conversation import (
-        ConversationMessagecreateJsonBodyDataConversation,
-    )
-    from ..models.conversation_messagecreate_json_body_data_matter import ConversationMessagecreateJsonBodyDataMatter
-    from ..models.conversation_messagecreate_json_body_data_receivers_item import (
-        ConversationMessagecreateJsonBodyDataReceiversItem,
-    )
+    from ..models.conversation_messagecreate_json_body_data_attachment import \
+        ConversationMessagecreateJsonBodyDataAttachment
+    from ..models.conversation_messagecreate_json_body_data_conversation import \
+        ConversationMessagecreateJsonBodyDataConversation
+    from ..models.conversation_messagecreate_json_body_data_matter import \
+        ConversationMessagecreateJsonBodyDataMatter
+    from ..models.conversation_messagecreate_json_body_data_receivers_item import \
+        ConversationMessagecreateJsonBodyDataReceiversItem
 
 
 T = TypeVar("T", bound="ConversationMessagecreateJsonBodyData")
@@ -84,18 +82,14 @@ class ConversationMessagecreateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.conversation_messagecreate_json_body_data_attachment import (
-            ConversationMessagecreateJsonBodyDataAttachment,
-        )
-        from ..models.conversation_messagecreate_json_body_data_conversation import (
-            ConversationMessagecreateJsonBodyDataConversation,
-        )
-        from ..models.conversation_messagecreate_json_body_data_matter import (
-            ConversationMessagecreateJsonBodyDataMatter,
-        )
-        from ..models.conversation_messagecreate_json_body_data_receivers_item import (
-            ConversationMessagecreateJsonBodyDataReceiversItem,
-        )
+        from ..models.conversation_messagecreate_json_body_data_attachment import \
+            ConversationMessagecreateJsonBodyDataAttachment
+        from ..models.conversation_messagecreate_json_body_data_conversation import \
+            ConversationMessagecreateJsonBodyDataConversation
+        from ..models.conversation_messagecreate_json_body_data_matter import \
+            ConversationMessagecreateJsonBodyDataMatter
+        from ..models.conversation_messagecreate_json_body_data_receivers_item import \
+            ConversationMessagecreateJsonBodyDataReceiversItem
 
         d = dict(src_dict)
         body = d.pop("body")

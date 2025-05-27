@@ -1,5 +1,6 @@
 # Adapter stubs for Allocationbase
-from schemas.from_spec.allocationbase import AllocationBaseIn, AllocationBaseOut, AllocationBaseUpdate, AllocationBaseDb
+from schemas.from_spec.allocationbase import AllocationBaseOut
+
 
 def convert_sdk_to_allocationBaseOut(sdk_obj):
     # TODO

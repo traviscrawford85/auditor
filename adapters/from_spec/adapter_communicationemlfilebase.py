@@ -1,5 +1,7 @@
 # Adapter stubs for Communicationemlfilebase
-from schemas.from_spec.communicationemlfilebase import CommunicationemlfileBaseIn, CommunicationemlfileBaseOut, CommunicationemlfileBaseUpdate, CommunicationemlfileBaseDb
+from schemas.from_spec.communicationemlfilebase import \
+    CommunicationemlfileBaseOut
+
 
 def convert_sdk_to_communicationemlfileBaseOut(sdk_obj):
     # TODO

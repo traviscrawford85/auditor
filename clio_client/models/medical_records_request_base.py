@@ -8,12 +8,10 @@ from dateutil.parser import isoparse
 
 from ..models.medical_records_request_base_bills_status import (
     MedicalRecordsRequestBaseBillsStatus,
-    check_medical_records_request_base_bills_status,
-)
+    check_medical_records_request_base_bills_status)
 from ..models.medical_records_request_base_records_status import (
     MedicalRecordsRequestBaseRecordsStatus,
-    check_medical_records_request_base_records_status,
-)
+    check_medical_records_request_base_records_status)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="MedicalRecordsRequestBase")

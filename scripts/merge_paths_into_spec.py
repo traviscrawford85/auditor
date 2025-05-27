@@ -1,6 +1,8 @@
 import argparse
-import yaml
 from pathlib import Path
+
+import yaml
+
 
 def get_all_schemas(schemas_dir: Path) -> set:
     return {f.stem for f in schemas_dir.glob('*.yaml')}
@@ -23,7 +25,7 @@ def map_paths_to_schemas(schemas_dir: Path, paths_dir: Path, map_file: Path = No
             else:
                 print(f"⚠️ Warning: Schema '{schema}' not found in {schemas_dir}")
     else:
-        print(f"⚠️ No external map provided → auto-generating map")
+        print("⚠️ No external map provided → auto-generating map")
         for path_file in paths_dir.glob("*.yaml"):
             path_name = path_file.stem
             for schema in schema_names:

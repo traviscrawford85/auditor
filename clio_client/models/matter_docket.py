@@ -146,7 +146,8 @@ class MatterDocket:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.calendar_entry_base import CalendarEntryBase
-        from ..models.matter_docket_jurisdiction import MatterDocketJurisdiction
+        from ..models.matter_docket_jurisdiction import \
+            MatterDocketJurisdiction
         from ..models.matter_docket_matter import MatterDocketMatter
         from ..models.matter_docket_service_type import MatterDocketServiceType
         from ..models.matter_docket_trigger import MatterDocketTrigger

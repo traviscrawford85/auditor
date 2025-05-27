@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.document_base_type import DocumentBaseType, check_document_base_type
+from ..models.document_base_type import (DocumentBaseType,
+                                         check_document_base_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -14,7 +15,8 @@ if TYPE_CHECKING:
     from ..models.document_creator import DocumentCreator
     from ..models.document_document_category import DocumentDocumentCategory
     from ..models.document_group import DocumentGroup
-    from ..models.document_latest_document_version import DocumentLatestDocumentVersion
+    from ..models.document_latest_document_version import \
+        DocumentLatestDocumentVersion
     from ..models.document_matter import DocumentMatter
     from ..models.document_parent import DocumentParent
     from ..models.document_version_base import DocumentVersionBase
@@ -204,9 +206,11 @@ class Document:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.document_contact import DocumentContact
         from ..models.document_creator import DocumentCreator
-        from ..models.document_document_category import DocumentDocumentCategory
+        from ..models.document_document_category import \
+            DocumentDocumentCategory
         from ..models.document_group import DocumentGroup
-        from ..models.document_latest_document_version import DocumentLatestDocumentVersion
+        from ..models.document_latest_document_version import \
+            DocumentLatestDocumentVersion
         from ..models.document_matter import DocumentMatter
         from ..models.document_parent import DocumentParent
         from ..models.document_version_base import DocumentVersionBase

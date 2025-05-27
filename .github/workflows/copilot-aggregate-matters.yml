@@ -1,0 +1,64 @@
+name: Copilot Aggregate Matters
+
+on:
+  push:
+    paths:
+      - 'clio_client/**'
+      - 'clio_sdk/**'
+      - '.github/workflows/copilot-aggregate-matters.yml'
+  workflow_dispatch:
+
+jobs:
+  build-matter-interface:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Build index for matters
+        run: |
+          echo "## Copilot Index for SDK: Matters" > copilot_index_matters.md
+          find clio_client/models -iname 'matter*.py' -exec echo '- {}' \; >> copilot_index_matters.md
+          find clio_client/matters -iname 'matter*.py' -exec echo '- {}' \; >> copilot_index_matters.md
+          find clio_sdk/models -iname '*matter*.py' -exec echo '- {}' \; >> copilot_index_matters.md
+          find clio_sdk/queries -iname '*matter*.py' -exec echo '- {}' \; >> copilot_index_matters.md
+          find clio_sdk/commands -iname '*matter*.py' -exec echo '- {}' \; >> copilot_index_matters.md
+          echo "- clio_sdk/interfaces/aggregate_matters.py" >> copilot_index_matters.md
+
+      - name: Ensure interfaces directory exists
+        run: mkdir -p clio_sdk/interfaces
+
+      - name: Create aggregate_matters.py
+        run: |
+          cat <<EOF > clio_sdk/interfaces/aggregate_matters.py
+"""
+Aggregated Matter operations interface for Clio SDK.
+
+This file wraps all relevant low-level operations from the clio_client and clio_sdk into a unified interface.
+Only expose high-level, business-relevant operations (e.g., get_matter_by_id, list_open_matters, create_matter).
+
+Copilot should:
+- Explore clio_sdk/queries and clio_sdk/commands for matter-related logic.
+- Use clio_sdk.models.matter.Matter or related SDK models.
+- Expand __all__ as you aggregate functionality.
+
+Reference index: copilot_index_matters.md
+"""
+
+from clio_sdk.models.matter import Matter
+# from clio_sdk.queries.matters import ...
+# from clio_sdk.commands.matters import ...
+
+__all__ = [
+    "Matter",
+]
+EOF
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add clio_sdk/interfaces/aggregate_matters.py copilot_index_matters.md
+          git commit -m "Scaffold aggregate_matters interface" || echo "No changes"
+          git push

@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.commentupdate_files_body_data import CommentupdateFilesBodyData
+    from ..models.commentupdate_files_body_data import \
+        CommentupdateFilesBodyData
 
 
 T = TypeVar("T", bound="CommentupdateFilesBody")
@@ -52,7 +53,8 @@ class CommentupdateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.commentupdate_files_body_data import CommentupdateFilesBodyData
+        from ..models.commentupdate_files_body_data import \
+            CommentupdateFilesBodyData
 
         d = dict(src_dict)
         data = CommentupdateFilesBodyData.from_dict(d.pop("data"))

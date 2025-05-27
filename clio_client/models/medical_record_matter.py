@@ -6,8 +6,10 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.matter_base_billing_method import MatterBaseBillingMethod, check_matter_base_billing_method
-from ..models.matter_base_status import MatterBaseStatus, check_matter_base_status
+from ..models.matter_base_billing_method import (
+    MatterBaseBillingMethod, check_matter_base_billing_method)
+from ..models.matter_base_status import (MatterBaseStatus,
+                                         check_matter_base_status)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="MedicalRecordMatter")

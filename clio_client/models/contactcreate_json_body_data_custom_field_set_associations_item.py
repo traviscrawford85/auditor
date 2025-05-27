@@ -7,9 +7,8 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.contactcreate_json_body_data_custom_field_set_associations_item_custom_field_set import (
-        ContactcreateJsonBodyDataCustomFieldSetAssociationsItemCustomFieldSet,
-    )
+    from ..models.contactcreate_json_body_data_custom_field_set_associations_item_custom_field_set import \
+        ContactcreateJsonBodyDataCustomFieldSetAssociationsItemCustomFieldSet
 
 
 T = TypeVar("T", bound="ContactcreateJsonBodyDataCustomFieldSetAssociationsItem")
@@ -47,9 +46,8 @@ class ContactcreateJsonBodyDataCustomFieldSetAssociationsItem:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.contactcreate_json_body_data_custom_field_set_associations_item_custom_field_set import (
-            ContactcreateJsonBodyDataCustomFieldSetAssociationsItemCustomFieldSet,
-        )
+        from ..models.contactcreate_json_body_data_custom_field_set_associations_item_custom_field_set import \
+            ContactcreateJsonBodyDataCustomFieldSetAssociationsItemCustomFieldSet
 
         d = dict(src_dict)
         custom_field_set = ContactcreateJsonBodyDataCustomFieldSetAssociationsItemCustomFieldSet.from_dict(

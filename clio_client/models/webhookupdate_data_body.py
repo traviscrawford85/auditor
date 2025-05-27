@@ -36,7 +36,8 @@ class WebhookupdateDataBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.webhookupdate_data_body_data import WebhookupdateDataBodyData
+        from ..models.webhookupdate_data_body_data import \
+            WebhookupdateDataBodyData
 
         d = dict(src_dict)
         data = WebhookupdateDataBodyData.from_dict(d.pop("data"))

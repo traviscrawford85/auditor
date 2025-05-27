@@ -6,12 +6,10 @@ from attrs import field as _attrs_field
 
 from ..models.report_presetupdate_data_body_data_format import (
     ReportPresetupdateDataBodyDataFormat,
-    check_report_presetupdate_data_body_data_format,
-)
+    check_report_presetupdate_data_body_data_format)
 from ..models.report_presetupdate_data_body_data_kind import (
     ReportPresetupdateDataBodyDataKind,
-    check_report_presetupdate_data_body_data_kind,
-)
+    check_report_presetupdate_data_body_data_kind)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ReportPresetupdateDataBodyData")

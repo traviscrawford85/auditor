@@ -52,7 +52,8 @@ class ReportcreateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.reportcreate_files_body_data import ReportcreateFilesBodyData
+        from ..models.reportcreate_files_body_data import \
+            ReportcreateFilesBodyData
 
         d = dict(src_dict)
         data = ReportcreateFilesBodyData.from_dict(d.pop("data"))

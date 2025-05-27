@@ -5,7 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.calendar_entry_event_typecreate_json_body_data import CalendarEntryEventTypecreateJsonBodyData
+    from ..models.calendar_entry_event_typecreate_json_body_data import \
+        CalendarEntryEventTypecreateJsonBodyData
 
 
 T = TypeVar("T", bound="CalendarEntryEventTypecreateJsonBody")
@@ -36,7 +37,8 @@ class CalendarEntryEventTypecreateJsonBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.calendar_entry_event_typecreate_json_body_data import CalendarEntryEventTypecreateJsonBodyData
+        from ..models.calendar_entry_event_typecreate_json_body_data import \
+            CalendarEntryEventTypecreateJsonBodyData
 
         d = dict(src_dict)
         data = CalendarEntryEventTypecreateJsonBodyData.from_dict(d.pop("data"))

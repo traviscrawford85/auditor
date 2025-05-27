@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.task_templatecreate_json_body_data_reminder_templates_item_notification_type import (
     TaskTemplatecreateJsonBodyDataReminderTemplatesItemNotificationType,
-    check_task_templatecreate_json_body_data_reminder_templates_item_notification_type,
-)
+    check_task_templatecreate_json_body_data_reminder_templates_item_notification_type)
 
 T = TypeVar("T", bound="TaskTemplatecreateJsonBodyDataReminderTemplatesItem")
 

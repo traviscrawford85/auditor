@@ -1,5 +1,6 @@
 # Adapter stubs for Paymentprofilebase
-from schemas.from_spec.paymentprofilebase import PaymentprofileBaseIn, PaymentprofileBaseOut, PaymentprofileBaseUpdate, PaymentprofileBaseDb
+from schemas.from_spec.paymentprofilebase import PaymentprofileBaseOut
+
 
 def convert_sdk_to_paymentprofileBaseOut(sdk_obj):
     # TODO

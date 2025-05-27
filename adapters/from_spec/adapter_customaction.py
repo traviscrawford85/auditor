@@ -1,5 +1,6 @@
 # Adapter stubs for Customaction
-from schemas.from_spec.customaction import CustomactionIn, CustomactionOut, CustomactionUpdate, CustomactionDb
+from schemas.from_spec.customaction import CustomactionOut
+
 
 def convert_sdk_to_customactionout(sdk_obj):
     # TODO

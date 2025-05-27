@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.commentcreate_files_body_data import CommentcreateFilesBodyData
+    from ..models.commentcreate_files_body_data import \
+        CommentcreateFilesBodyData
 
 
 T = TypeVar("T", bound="CommentcreateFilesBody")
@@ -52,7 +53,8 @@ class CommentcreateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.commentcreate_files_body_data import CommentcreateFilesBodyData
+        from ..models.commentcreate_files_body_data import \
+            CommentcreateFilesBodyData
 
         d = dict(src_dict)
         data = CommentcreateFilesBodyData.from_dict(d.pop("data"))

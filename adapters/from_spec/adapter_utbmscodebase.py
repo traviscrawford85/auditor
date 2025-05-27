@@ -1,5 +1,6 @@
 # Adapter stubs for Utbmscodebase
-from schemas.from_spec.utbmscodebase import UtbmscodeBaseIn, UtbmscodeBaseOut, UtbmscodeBaseUpdate, UtbmscodeBaseDb
+from schemas.from_spec.utbmscodebase import UtbmscodeBaseOut
+
 
 def convert_sdk_to_utbmscodeBaseOut(sdk_obj):
     # TODO

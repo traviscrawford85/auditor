@@ -168,7 +168,8 @@ class Item:
         from ..models.item_creator import ItemCreator
         from ..models.item_document_category import ItemDocumentCategory
         from ..models.item_group import ItemGroup
-        from ..models.item_latest_document_version import ItemLatestDocumentVersion
+        from ..models.item_latest_document_version import \
+            ItemLatestDocumentVersion
         from ..models.item_matter import ItemMatter
         from ..models.item_parent import ItemParent
 

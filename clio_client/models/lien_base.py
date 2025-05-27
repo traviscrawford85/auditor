@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.lien_base_lien_type import LienBaseLienType, check_lien_base_lien_type
+from ..models.lien_base_lien_type import (LienBaseLienType,
+                                          check_lien_base_lien_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="LienBase")

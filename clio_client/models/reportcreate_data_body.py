@@ -36,7 +36,8 @@ class ReportcreateDataBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.reportcreate_data_body_data import ReportcreateDataBodyData
+        from ..models.reportcreate_data_body_data import \
+            ReportcreateDataBodyData
 
         d = dict(src_dict)
         data = ReportcreateDataBodyData.from_dict(d.pop("data"))

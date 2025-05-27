@@ -1,42 +1,42 @@
 Path,Method,OperationId,Summary,Description,Request Schema,Query Params
-/activities.json,GET,Activity#index,Return the data for all Activities,"Outlines the parameters, optional and required, used when requesting the data for all Activities",,
-/activities.json,POST,Activity#create,Create a new Activity,Outlines the parameters and data fields used when creating a new Activity,,
-/activities/{id}.json,GET,Activity#show,Return the data for a single Activity,"Outlines the parameters, optional and required, used when requesting the data for a single Activity",,
-/activities/{id}.json,PATCH,Activity#update,Update a single Activity,Outlines the parameters and data fields used when updating a single Activity,,
+/activities.json,GET,Activity#index,Return the data for all Activities,"Outlines the parameters, optional and required, used when requesting the data for all Activities",,"activity_description_id, calendar_entry_id, communication_id, contact_note_id, created_since, end_date, expense_category_id, fields, flat_rate, grant_transaction_id, ids[], limit, matter_id, matter_note_id, only_unaccounted_for, order, page_token, query, start_date, status, task_id, type, updated_since, user_id"
+/activities.json,POST,Activity#create,Create a new Activity,Outlines the parameters and data fields used when creating a new Activity,Request Body for Activities,fields
+/activities/{id}.json,GET,Activity#show,Return the data for a single Activity,"Outlines the parameters, optional and required, used when requesting the data for a single Activity",,fields
+/activities/{id}.json,PATCH,Activity#update,Update a single Activity,Outlines the parameters and data fields used when updating a single Activity,Request Body for Activities,fields
 /activities/{id}.json,DELETE,Activity#destroy,Delete a single Activity,"Outlines the parameters, optional and required, used when deleting the record for a single Activity",,
-/activity_rates.json,GET,ActivityRate#index,Return the data for all ActivityRates,"Outlines the parameters, optional and required, used when requesting the data for all ActivityRates",,
-/activity_rates.json,POST,ActivityRate#create,Create a new ActivityRate,Outlines the parameters and data fields used when creating a new ActivityRate,,
-/activity_rates/{id}.json,GET,ActivityRate#show,Return the data for a single ActivityRate,"Outlines the parameters, optional and required, used when requesting the data for a single ActivityRate",,
-/activity_rates/{id}.json,PATCH,ActivityRate#update,Update a single ActivityRate,Outlines the parameters and data fields used when updating a single ActivityRate,,
+/activity_rates.json,GET,ActivityRate#index,Return the data for all ActivityRates,"Outlines the parameters, optional and required, used when requesting the data for all ActivityRates",,"co_counsel_contact_id, contact_id, created_since, fields, ids[], limit, page_token, updated_since"
+/activity_rates.json,POST,ActivityRate#create,Create a new ActivityRate,Outlines the parameters and data fields used when creating a new ActivityRate,Request Body for Activity Rates,fields
+/activity_rates/{id}.json,GET,ActivityRate#show,Return the data for a single ActivityRate,"Outlines the parameters, optional and required, used when requesting the data for a single ActivityRate",,fields
+/activity_rates/{id}.json,PATCH,ActivityRate#update,Update a single ActivityRate,Outlines the parameters and data fields used when updating a single ActivityRate,Request Body for Activity Rates,fields
 /activity_rates/{id}.json,DELETE,ActivityRate#destroy,Delete a single ActivityRate,"Outlines the parameters, optional and required, used when deleting the record for a single ActivityRate",,
-/activity_descriptions.json,GET,ActivityDescription#index,Return the data for all ActivityDescriptions,"Outlines the parameters, optional and required, used when requesting the data for all ActivityDescriptions",,
-/activity_descriptions.json,POST,ActivityDescription#create,Create a new ActivityDescription,Outlines the parameters and data fields used when creating a new ActivityDescription,,
-/activity_descriptions/{id}.json,GET,ActivityDescription#show,Return the data for a single ActivityDescription,"Outlines the parameters, optional and required, used when requesting the data for a single ActivityDescription",,
-/activity_descriptions/{id}.json,PATCH,ActivityDescription#update,Update a single ActivityDescription,Outlines the parameters and data fields used when updating a single ActivityDescription,,
+/activity_descriptions.json,GET,ActivityDescription#index,Return the data for all ActivityDescriptions,"Outlines the parameters, optional and required, used when requesting the data for all ActivityDescriptions",,"created_since, fields, flat_rate, ids[], limit, page_token, rate_for[matter_id], rate_for[user_id], type, updated_since, user_id"
+/activity_descriptions.json,POST,ActivityDescription#create,Create a new ActivityDescription,Outlines the parameters and data fields used when creating a new ActivityDescription,Request Body for Activity Descriptions,fields
+/activity_descriptions/{id}.json,GET,ActivityDescription#show,Return the data for a single ActivityDescription,"Outlines the parameters, optional and required, used when requesting the data for a single ActivityDescription",,fields
+/activity_descriptions/{id}.json,PATCH,ActivityDescription#update,Update a single ActivityDescription,Outlines the parameters and data fields used when updating a single ActivityDescription,Request Body for Activity Descriptions,fields
 /activity_descriptions/{id}.json,DELETE,ActivityDescription#destroy,Delete a single ActivityDescription,"Outlines the parameters, optional and required, used when deleting the record for a single ActivityDescription",,
-/allocations.json,GET,Allocation#index,Return the data for all Allocations,"Outlines the parameters, optional and required, used when requesting the data for all Allocations",,
-/allocations/{id}.json,GET,Allocation#show,Return the data for a single Allocation,"Outlines the parameters, optional and required, used when requesting the data for a single Allocation",,
-/bank_accounts.json,GET,BankAccount#index,Return the data for all BankAccounts,"Outlines the parameters, optional and required, used when requesting the data for all BankAccounts",,
-/bank_accounts.json,POST,BankAccount#create,Create a new BankAccount,Outlines the parameters and data fields used when creating a new BankAccount,,
-/bank_accounts/{id}.json,GET,BankAccount#show,Return the data for a single BankAccount,"Outlines the parameters, optional and required, used when requesting the data for a single BankAccount",,
-/bank_accounts/{id}.json,PATCH,BankAccount#update,Update a single BankAccount,Outlines the parameters and data fields used when updating a single BankAccount,,
+/allocations.json,GET,Allocation#index,Return the data for all Allocations,"Outlines the parameters, optional and required, used when requesting the data for all Allocations",,"bill_id, contact_id, created_since, fields, ids[], limit, matter_id, order, page_token, parent_id, parent_type, status, updated_since"
+/allocations/{id}.json,GET,Allocation#show,Return the data for a single Allocation,"Outlines the parameters, optional and required, used when requesting the data for a single Allocation",,fields
+/bank_accounts.json,GET,BankAccount#index,Return the data for all BankAccounts,"Outlines the parameters, optional and required, used when requesting the data for all BankAccounts",,"created_since, fields, ids[], limit, order, page_token, show_empty_accounts, type, updated_since, user_id"
+/bank_accounts.json,POST,BankAccount#create,Create a new BankAccount,Outlines the parameters and data fields used when creating a new BankAccount,Request Body for Bank Accounts,fields
+/bank_accounts/{id}.json,GET,BankAccount#show,Return the data for a single BankAccount,"Outlines the parameters, optional and required, used when requesting the data for a single BankAccount",,fields
+/bank_accounts/{id}.json,PATCH,BankAccount#update,Update a single BankAccount,Outlines the parameters and data fields used when updating a single BankAccount,Request Body for Bank Accounts,fields
 /bank_accounts/{id}.json,DELETE,BankAccount#destroy,Delete a single BankAccount,"Outlines the parameters, optional and required, used when deleting the record for a single BankAccount",,
-/bank_transactions.json,GET,BankTransaction#index,Return the data for all BankTransactions,"Outlines the parameters, optional and required, used when requesting the data for all BankTransactions",,
-/bank_transactions/{id}.json,GET,BankTransaction#show,Return the data for a single BankTransaction,"Outlines the parameters, optional and required, used when requesting the data for a single BankTransaction",,
-/bank_transfers/{id}.json,GET,BankTransfer#show,Return the data for a single BankTransfer,"Outlines the parameters, optional and required, used when requesting the data for a single BankTransfer",,
-/bill_themes.json,GET,BillTheme#index,Return the data for all BillThemes,"Outlines the parameters, optional and required, used when requesting the data for all BillThemes",,
-/bill_themes/{id}.json,PATCH,BillTheme#update,Update a single BillTheme,Outlines the parameters and data fields used when updating a single BillTheme,,
-/billable_clients.json,GET,BillableClient#index,Return the data for all BillableClients,"Outlines the parameters, optional and required, used when requesting the data for all BillableClients",,
-/billable_matters/ids.json,GET,BillableMatter#ids,Returns the unique identifiers of all BillableMatter,This data is retrieved asynchronously,,
-/billable_matters.json,GET,BillableMatter#index,Return the data for all BillableMatters,"Outlines the parameters, optional and required, used when requesting the data for all BillableMatters",,
+/bank_transactions.json,GET,BankTransaction#index,Return the data for all BankTransactions,"Outlines the parameters, optional and required, used when requesting the data for all BankTransactions",,"bank_account_id, client_id, created_since, fields, ids[], limit, matter_id, order, page_token, type, updated_since"
+/bank_transactions/{id}.json,GET,BankTransaction#show,Return the data for a single BankTransaction,"Outlines the parameters, optional and required, used when requesting the data for a single BankTransaction",,fields
+/bank_transfers/{id}.json,GET,BankTransfer#show,Return the data for a single BankTransfer,"Outlines the parameters, optional and required, used when requesting the data for a single BankTransfer",,fields
+/bill_themes.json,GET,BillTheme#index,Return the data for all BillThemes,"Outlines the parameters, optional and required, used when requesting the data for all BillThemes",,"created_since, fields, ids[], limit, page_token, updated_since"
+/bill_themes/{id}.json,PATCH,BillTheme#update,Update a single BillTheme,Outlines the parameters and data fields used when updating a single BillTheme,Request Body for Bill Themes,fields
+/billable_clients.json,GET,BillableClient#index,Return the data for all BillableClients,"Outlines the parameters, optional and required, used when requesting the data for all BillableClients",,"client_id, custom_field_values, end_date, fields, limit, matter_id, originating_attorney_id, page_token, query, responsible_attorney_id, start_date"
+/billable_matters/ids.json,GET,BillableMatter#ids,Returns the unique identifiers of all BillableMatter,This data is retrieved asynchronously,,"client_id, custom_field_values, end_date, fields, limit, matter_id, originating_attorney_id, page_token, query, responsible_attorney_id, start_date"
+/billable_matters.json,GET,BillableMatter#index,Return the data for all BillableMatters,"Outlines the parameters, optional and required, used when requesting the data for all BillableMatters",,"client_id, custom_field_values, end_date, fields, limit, matter_id, originating_attorney_id, page_token, query, responsible_attorney_id, start_date"
 /bills/{id}/preview.json,GET,Bill#preview,Returns the pre-rendered html for the Bill,"This endpoint returns a pre-rendered HTML object that you can use to view a preview of your bills.
 The HTML provided contains all of the CSS rules it requires to show the bill correctly,
 as well as the DOCTYPE setting it requires.
 It's best to use an iframe, or similar object, to render the results of this endpoint.
 ",,
-/bills.json,GET,Bill#index,Return the data for all Bills,"Outlines the parameters, optional and required, used when requesting the data for all Bills",,
-/bills/{id}.json,GET,Bill#show,Return the data for a single Bill,"Outlines the parameters, optional and required, used when requesting the data for a single Bill",,
-/bills/{id}.json,PATCH,Bill#update,Update a single Bill,Outlines the parameters and data fields used when updating a single Bill,,
+/bills.json,GET,Bill#index,Return the data for all Bills,"Outlines the parameters, optional and required, used when requesting the data for all Bills",,"client_id, created_since, custom_field_values, due_after, due_at, due_before, fields, ids[], issued_after, issued_before, last_sent_end_date, last_sent_start_date, limit, matter_id, order, originating_attorney_id, overdue_only, page_token, query, responsible_attorney_id, state, status, type, updated_since"
+/bills/{id}.json,GET,Bill#show,Return the data for a single Bill,"Outlines the parameters, optional and required, used when requesting the data for a single Bill",,"fields, navigation.next, navigation.previous"
+/bills/{id}.json,PATCH,Bill#update,Update a single Bill,Outlines the parameters and data fields used when updating a single Bill,Request Body for Bills,fields
 /bills/{id}.json,DELETE,Bill#destroy,Delete or void a Bill,"This endpoint will transition a bill to either its deleted or voided state.
 A bill can only be deleted or voided if it has no payments recorded
 and its current state is one of the following:
@@ -50,267 +50,267 @@ The mappings for this are:
 * Pending Approval -> Deleted
 * Unpaid -> Void
 ",,
-/calendar_entries.json,GET,CalendarEntry#index,Return the data for all CalendarEntries,"Outlines the parameters, optional and required, used when requesting the data for all CalendarEntries",,
-/calendar_entries.json,POST,CalendarEntry#create,Create a new CalendarEntry,Outlines the parameters and data fields used when creating a new CalendarEntry,,
-/calendar_entries/{id}.json,GET,CalendarEntry#show,Return the data for a single CalendarEntry,"Outlines the parameters, optional and required, used when requesting the data for a single CalendarEntry",,
-/calendar_entries/{id}.json,PATCH,CalendarEntry#update,Update a single CalendarEntry,Outlines the parameters and data fields used when updating a single CalendarEntry,,
+/calendar_entries.json,GET,CalendarEntry#index,Return the data for all CalendarEntries,"Outlines the parameters, optional and required, used when requesting the data for all CalendarEntries",,"calendar_id, created_since, expanded, external_property_name, external_property_value, fields, from, has_court_rule, ids[], is_all_day, limit, matter_id, owner_entries_across_all_users, page_token, query, source, to, updated_since, visible"
+/calendar_entries.json,POST,CalendarEntry#create,Create a new CalendarEntry,Outlines the parameters and data fields used when creating a new CalendarEntry,Request Body for Calendar Entries,fields
+/calendar_entries/{id}.json,GET,CalendarEntry#show,Return the data for a single CalendarEntry,"Outlines the parameters, optional and required, used when requesting the data for a single CalendarEntry",,fields
+/calendar_entries/{id}.json,PATCH,CalendarEntry#update,Update a single CalendarEntry,Outlines the parameters and data fields used when updating a single CalendarEntry,Request Body for Calendar Entries,fields
 /calendar_entries/{id}.json,DELETE,CalendarEntry#destroy,Delete a single CalendarEntry,"Outlines the parameters, optional and required, used when deleting the record for a single CalendarEntry",,
-/calendar_entry_event_types.json,GET,CalendarEntryEventType#index,Return the data for all calendar entry event types,"Outlines the parameters, optional and required, used when requesting the data for all CalendarEntryEventTypes",,
-/calendar_entry_event_types.json,POST,CalendarEntryEventType#create,Create a new calendar entry event type,Outlines the parameters and data fields used when creating a new CalendarEntryEventType,,
-/calendar_entry_event_types/{id}.json,GET,CalendarEntryEventType#show,Return the data for a single calendar entry event type,"Outlines the parameters, optional and required, used when requesting the data for a single CalendarEntryEventType",,
-/calendar_entry_event_types/{id}.json,PATCH,CalendarEntryEventType#update,Update a single calendar entry event type,Outlines the parameters and data fields used when updating a single CalendarEntryEventType,,
+/calendar_entry_event_types.json,GET,CalendarEntryEventType#index,Return the data for all calendar entry event types,"Outlines the parameters, optional and required, used when requesting the data for all CalendarEntryEventTypes",,"created_since, fields, ids[], limit, page_token, updated_since"
+/calendar_entry_event_types.json,POST,CalendarEntryEventType#create,Create a new calendar entry event type,Outlines the parameters and data fields used when creating a new CalendarEntryEventType,Request Body for Calendar Entry Event Types,fields
+/calendar_entry_event_types/{id}.json,GET,CalendarEntryEventType#show,Return the data for a single calendar entry event type,"Outlines the parameters, optional and required, used when requesting the data for a single CalendarEntryEventType",,fields
+/calendar_entry_event_types/{id}.json,PATCH,CalendarEntryEventType#update,Update a single calendar entry event type,Outlines the parameters and data fields used when updating a single CalendarEntryEventType,Request Body for Calendar Entry Event Types,fields
 /calendar_entry_event_types/{id}.json,DELETE,CalendarEntryEventType#destroy,Delete a single calendar entry event type,"Outlines the parameters, optional and required, used when deleting the record for a single CalendarEntryEventType",,
-/calendars.json,GET,Calendar#index,Return the data for all Calendars,"Outlines the parameters, optional and required, used when requesting the data for all Calendars",,
-/calendars.json,POST,Calendar#create,Create a new Calendar,Outlines the parameters and data fields used when creating a new Calendar,,
-/calendars/{id}.json,GET,Calendar#show,Return the data for a single Calendar,"Outlines the parameters, optional and required, used when requesting the data for a single Calendar",,
-/calendars/{id}.json,PATCH,Calendar#update,Update a single Calendar,Outlines the parameters and data fields used when updating a single Calendar,,
+/calendars.json,GET,Calendar#index,Return the data for all Calendars,"Outlines the parameters, optional and required, used when requesting the data for all Calendars",,"created_since, fields, filter_inactive_users, ids[], limit, order, owner, page_token, source, type, updated_since, visible, writeable"
+/calendars.json,POST,Calendar#create,Create a new Calendar,Outlines the parameters and data fields used when creating a new Calendar,Request Body for Calendars,fields
+/calendars/{id}.json,GET,Calendar#show,Return the data for a single Calendar,"Outlines the parameters, optional and required, used when requesting the data for a single Calendar",,fields
+/calendars/{id}.json,PATCH,Calendar#update,Update a single Calendar,Outlines the parameters and data fields used when updating a single Calendar,Request Body for Calendars,fields
 /calendars/{id}.json,DELETE,Calendar#destroy,Delete a single Calendar,"Outlines the parameters, optional and required, used when deleting the record for a single Calendar",,
-/clio_payments/links.json,GET,ClioPaymentsLink#index,Return the data for all ClioPaymentsLinks,"Outlines the parameters, optional and required, used when requesting the data for all ClioPaymentsLinks",,
-/clio_payments/links.json,POST,ClioPaymentsLink#create,Create a new ClioPaymentsLink,Outlines the parameters and data fields used when creating a new ClioPaymentsLink,,
-/clio_payments/links/{id}.json,GET,ClioPaymentsLink#show,Return the data for a single ClioPaymentsLink,"Outlines the parameters, optional and required, used when requesting the data for a single ClioPaymentsLink",,
-/clio_payments/links/{id}.json,PATCH,ClioPaymentsLink#update,Update a single ClioPaymentsLink,Outlines the parameters and data fields used when updating a single ClioPaymentsLink,,
-/clio_payments/payments.json,GET,ClioPaymentsPayment#index,Return the data for all ClioPaymentsPayments,"Outlines the parameters, optional and required, used when requesting the data for all ClioPaymentsPayments",,
-/clio_payments/payments/{id}.json,GET,ClioPaymentsPayment#show,Return the data for a single ClioPaymentsPayment,"Outlines the parameters, optional and required, used when requesting the data for a single ClioPaymentsPayment",,
-/communications.json,GET,Communication#index,Return the data for all Communications,"Outlines the parameters, optional and required, used when requesting the data for all Communications",,
-/communications.json,POST,Communication#create,Create a new Communication,Outlines the parameters and data fields used when creating a new Communication,,
-/communications/{id}.json,GET,Communication#show,Return the data for a single Communication,"Outlines the parameters, optional and required, used when requesting the data for a single Communication",,
-/communications/{id}.json,PATCH,Communication#update,Update a single Communication,Outlines the parameters and data fields used when updating a single Communication,,
+/clio_payments/links.json,GET,ClioPaymentsLink#index,Return the data for all ClioPaymentsLinks,"Outlines the parameters, optional and required, used when requesting the data for all ClioPaymentsLinks",,"active, created_since, fields, ids[], limit, page_token, updated_since"
+/clio_payments/links.json,POST,ClioPaymentsLink#create,Create a new ClioPaymentsLink,Outlines the parameters and data fields used when creating a new ClioPaymentsLink,Request Body for Links,fields
+/clio_payments/links/{id}.json,GET,ClioPaymentsLink#show,Return the data for a single ClioPaymentsLink,"Outlines the parameters, optional and required, used when requesting the data for a single ClioPaymentsLink",,fields
+/clio_payments/links/{id}.json,PATCH,ClioPaymentsLink#update,Update a single ClioPaymentsLink,Outlines the parameters and data fields used when updating a single ClioPaymentsLink,Request Body for Links,fields
+/clio_payments/payments.json,GET,ClioPaymentsPayment#index,Return the data for all ClioPaymentsPayments,"Outlines the parameters, optional and required, used when requesting the data for all ClioPaymentsPayments",,"bill_id, contact_id, fields, ids[], limit, page_token, state"
+/clio_payments/payments/{id}.json,GET,ClioPaymentsPayment#show,Return the data for a single ClioPaymentsPayment,"Outlines the parameters, optional and required, used when requesting the data for a single ClioPaymentsPayment",,fields
+/communications.json,GET,Communication#index,Return the data for all Communications,"Outlines the parameters, optional and required, used when requesting the data for all Communications",,"contact_id, created_since, date, external_property_name, external_property_value, fields, having_time_entries, ids[], limit, matter_id, order, page_token, query, received_at, received_before, received_since, type, updated_since, user_id"
+/communications.json,POST,Communication#create,Create a new Communication,Outlines the parameters and data fields used when creating a new Communication,Request Body for Communications,fields
+/communications/{id}.json,GET,Communication#show,Return the data for a single Communication,"Outlines the parameters, optional and required, used when requesting the data for a single Communication",,fields
+/communications/{id}.json,PATCH,Communication#update,Update a single Communication,Outlines the parameters and data fields used when updating a single Communication,Request Body for Communications,fields
 /communications/{id}.json,DELETE,Communication#destroy,Delete a single Communication,"Outlines the parameters, optional and required, used when deleting the record for a single Communication",,
-/contacts.json,GET,Contact#index,Return the data for all Contacts,"Outlines the parameters, optional and required, used when requesting the data for all Contacts",,
-/contacts.json,POST,Contact#create,Create a new Contact,Outlines the parameters and data fields used when creating a new Contact,,
-/contacts/{id}.json,GET,Contact#show,Return the data for a single Contact,"Outlines the parameters, optional and required, used when requesting the data for a single Contact",,
-/contacts/{id}.json,PATCH,Contact#update,Update a single Contact,Outlines the parameters and data fields used when updating a single Contact,,
+/contacts.json,GET,Contact#index,Return the data for all Contacts,"Outlines the parameters, optional and required, used when requesting the data for all Contacts",,"client_only, clio_connect_only, created_since, custom_field_ids[], custom_field_values, email_only, exclude_ids[], fields, ids[], initial, limit, order, page_token, query, shared_resource_id, type, updated_since"
+/contacts.json,POST,Contact#create,Create a new Contact,Outlines the parameters and data fields used when creating a new Contact,Request Body for Contacts,"custom_field_ids[], fields"
+/contacts/{id}.json,GET,Contact#show,Return the data for a single Contact,"Outlines the parameters, optional and required, used when requesting the data for a single Contact",,"custom_field_ids[], fields"
+/contacts/{id}.json,PATCH,Contact#update,Update a single Contact,Outlines the parameters and data fields used when updating a single Contact,Request Body for Contacts,"custom_field_ids[], fields"
 /contacts/{id}.json,DELETE,Contact#destroy,Delete a single Contact,"Outlines the parameters, optional and required, used when deleting the record for a single Contact",,
-/conversation_messages.json,GET,ConversationMessage#index,Return the data for all ConversationMessages,"Outlines the parameters, optional and required, used when requesting the data for all ConversationMessages",,
-/conversation_messages.json,POST,ConversationMessage#create,Create a new ConversationMessage,Outlines the parameters and data fields used when creating a new ConversationMessage,,
-/conversation_messages/{id}.json,GET,ConversationMessage#show,Return the data for a single ConversationMessage,"Outlines the parameters, optional and required, used when requesting the data for a single ConversationMessage",,
-/conversations.json,GET,Conversation#index,Return the data for all Conversations,"Outlines the parameters, optional and required, used when requesting the data for all Conversations",,
-/conversations/{id}.json,GET,Conversation#show,Return the data for a single Conversation,"Outlines the parameters, optional and required, used when requesting the data for a single Conversation",,
-/conversations/{id}.json,PATCH,Conversation#update,Update a single Conversation,Outlines the parameters and data fields used when updating a single Conversation,,
-/court_rules/jurisdictions/{jurisdiction_id}/triggers.json,GET,JurisdictionsToTrigger#index,Return the data for all triggers,"Outlines the parameters, optional and required, used when requesting the data for all JurisdictionsToTriggers",,
-/court_rules/jurisdictions/{jurisdiction_id}/triggers/{id}.json,GET,JurisdictionsToTrigger#show,Return the data for the trigger,"Outlines the parameters, optional and required, used when requesting the data for a single JurisdictionsToTrigger",,
-/court_rules/jurisdictions.json,GET,Jurisdiction#index,Return the data for all jurisdictions,"Outlines the parameters, optional and required, used when requesting the data for all Jurisdictions",,
-/court_rules/jurisdictions/{id}.json,GET,Jurisdiction#show,Return the data for the jurisdiction,"Outlines the parameters, optional and required, used when requesting the data for a single Jurisdiction",,
-/court_rules/matter_dockets/preview.json,GET,MatterDocket#preview,Preview calendar dates for the docket,Preview calendar dates for the docket,,
-/court_rules/matter_dockets.json,GET,MatterDocket#index,Return the data for all matter dockets,"Outlines the parameters, optional and required, used when requesting the data for all MatterDockets",,
-/court_rules/matter_dockets.json,POST,MatterDocket#create,Creates a matter docket,Outlines the parameters and data fields used when creating a new MatterDocket,,
-/court_rules/matter_dockets/{id}.json,GET,MatterDocket#show,Return the data for the matter docket,"Outlines the parameters, optional and required, used when requesting the data for a single MatterDocket",,
+/conversation_messages.json,GET,ConversationMessage#index,Return the data for all ConversationMessages,"Outlines the parameters, optional and required, used when requesting the data for all ConversationMessages",,"conversation_id, created_since, fields, ids[], limit, order, page_token, query, updated_since"
+/conversation_messages.json,POST,ConversationMessage#create,Create a new ConversationMessage,Outlines the parameters and data fields used when creating a new ConversationMessage,Request Body for Conversation Messages,fields
+/conversation_messages/{id}.json,GET,ConversationMessage#show,Return the data for a single ConversationMessage,"Outlines the parameters, optional and required, used when requesting the data for a single ConversationMessage",,fields
+/conversations.json,GET,Conversation#index,Return the data for all Conversations,"Outlines the parameters, optional and required, used when requesting the data for all Conversations",,"archived, contact_id, created_since, date, fields, for_user, ids[], limit, matter_id, order, page_token, read_status, time_entries, updated_since"
+/conversations/{id}.json,GET,Conversation#show,Return the data for a single Conversation,"Outlines the parameters, optional and required, used when requesting the data for a single Conversation",,fields
+/conversations/{id}.json,PATCH,Conversation#update,Update a single Conversation,Outlines the parameters and data fields used when updating a single Conversation,Request Body for Conversations,fields
+/court_rules/jurisdictions/{jurisdiction_id}/triggers.json,GET,JurisdictionsToTrigger#index,Return the data for all triggers,"Outlines the parameters, optional and required, used when requesting the data for all JurisdictionsToTriggers",,"created_since, fields, ids[], is_requirements_required, is_served, limit, order, page_token, query, updated_since"
+/court_rules/jurisdictions/{jurisdiction_id}/triggers/{id}.json,GET,JurisdictionsToTrigger#show,Return the data for the trigger,"Outlines the parameters, optional and required, used when requesting the data for a single JurisdictionsToTrigger",,fields
+/court_rules/jurisdictions.json,GET,Jurisdiction#index,Return the data for all jurisdictions,"Outlines the parameters, optional and required, used when requesting the data for all Jurisdictions",,"created_since, fields, for_current_account, ids[], limit, order, page_token, query, updated_since"
+/court_rules/jurisdictions/{id}.json,GET,Jurisdiction#show,Return the data for the jurisdiction,"Outlines the parameters, optional and required, used when requesting the data for a single Jurisdiction",,fields
+/court_rules/matter_dockets/preview.json,GET,MatterDocket#preview,Preview calendar dates for the docket,Preview calendar dates for the docket,,"event_prefix, jurisdiction[id], service_type[id], start_date, start_time, trigger[id]"
+/court_rules/matter_dockets.json,GET,MatterDocket#index,Return the data for all matter dockets,"Outlines the parameters, optional and required, used when requesting the data for all MatterDockets",,"created_since, fields, ids[], limit, matter_id, matter_status, order, page_token, query, service_type_id, status, updated_since"
+/court_rules/matter_dockets.json,POST,MatterDocket#create,Creates a matter docket,Outlines the parameters and data fields used when creating a new MatterDocket,Request Body for Matter Dockets,fields
+/court_rules/matter_dockets/{id}.json,GET,MatterDocket#show,Return the data for the matter docket,"Outlines the parameters, optional and required, used when requesting the data for a single MatterDocket",,fields
 /court_rules/matter_dockets/{id}.json,DELETE,MatterDocket#destroy,Deletes the requested matter docket,"Outlines the parameters, optional and required, used when deleting the record for a single MatterDocket",,
-/court_rules/service_types.json,GET,ServiceType#index,Return the data for all service types,"Outlines the parameters, optional and required, used when requesting the data for all ServiceTypes",,
-/court_rules/service_types/{id}.json,GET,ServiceType#show,Return the data for the service type,"Outlines the parameters, optional and required, used when requesting the data for a single ServiceType",,
-/credit_memos.json,GET,CreditMemo#index,Return the data for all CreditMemos,"Outlines the parameters, optional and required, used when requesting the data for all CreditMemos",,
-/credit_memos/{id}.json,GET,CreditMemo#show,Return the data for a single CreditMemo,"Outlines the parameters, optional and required, used when requesting the data for a single CreditMemo",,
-/currencies.json,GET,Currency#index,Return the data for all Currencies,"Outlines the parameters, optional and required, used when requesting the data for all Currencies",,
-/custom_fields.json,GET,CustomField#index,Return the data for all CustomFields,"Outlines the parameters, optional and required, used when requesting the data for all CustomFields",,
-/custom_fields.json,POST,CustomField#create,Create a new CustomField,Outlines the parameters and data fields used when creating a new CustomField,,
-/custom_fields/{id}.json,GET,CustomField#show,Return the data for a single CustomField,"Outlines the parameters, optional and required, used when requesting the data for a single CustomField",,
-/custom_fields/{id}.json,PATCH,CustomField#update,Update a single CustomField,Outlines the parameters and data fields used when updating a single CustomField,,
+/court_rules/service_types.json,GET,ServiceType#index,Return the data for all service types,"Outlines the parameters, optional and required, used when requesting the data for all ServiceTypes",,"created_since, fields, ids[], limit, order, page_token, updated_since"
+/court_rules/service_types/{id}.json,GET,ServiceType#show,Return the data for the service type,"Outlines the parameters, optional and required, used when requesting the data for a single ServiceType",,fields
+/credit_memos.json,GET,CreditMemo#index,Return the data for all CreditMemos,"Outlines the parameters, optional and required, used when requesting the data for all CreditMemos",,"contact_id, created_since, fields, ids[], limit, order, page_token, updated_since"
+/credit_memos/{id}.json,GET,CreditMemo#show,Return the data for a single CreditMemo,"Outlines the parameters, optional and required, used when requesting the data for a single CreditMemo",,fields
+/currencies.json,GET,Currency#index,Return the data for all Currencies,"Outlines the parameters, optional and required, used when requesting the data for all Currencies",,"created_since, fields, ids[], limit, page_token, updated_since"
+/custom_fields.json,GET,CustomField#index,Return the data for all CustomFields,"Outlines the parameters, optional and required, used when requesting the data for all CustomFields",,"created_since, deleted, field_type, fields, ids[], limit, order, page_token, parent_type, query, updated_since, visible_and_required"
+/custom_fields.json,POST,CustomField#create,Create a new CustomField,Outlines the parameters and data fields used when creating a new CustomField,Request Body for Custom Fields,fields
+/custom_fields/{id}.json,GET,CustomField#show,Return the data for a single CustomField,"Outlines the parameters, optional and required, used when requesting the data for a single CustomField",,fields
+/custom_fields/{id}.json,PATCH,CustomField#update,Update a single CustomField,Outlines the parameters and data fields used when updating a single CustomField,Request Body for Custom Fields,fields
 /custom_fields/{id}.json,DELETE,CustomField#destroy,Delete a single CustomField,"Outlines the parameters, optional and required, used when deleting the record for a single CustomField",,
-/custom_field_sets.json,GET,CustomFieldSet#index,Return the data for all CustomFieldSets,"Outlines the parameters, optional and required, used when requesting the data for all CustomFieldSets",,
-/custom_field_sets.json,POST,CustomFieldSet#create,Create a new CustomFieldSet,Outlines the parameters and data fields used when creating a new CustomFieldSet,,
-/custom_field_sets/{id}.json,GET,CustomFieldSet#show,Return the data for a single CustomFieldSet,"Outlines the parameters, optional and required, used when requesting the data for a single CustomFieldSet",,
-/custom_field_sets/{id}.json,PATCH,CustomFieldSet#update,Update a single CustomFieldSet,Outlines the parameters and data fields used when updating a single CustomFieldSet,,
+/custom_field_sets.json,GET,CustomFieldSet#index,Return the data for all CustomFieldSets,"Outlines the parameters, optional and required, used when requesting the data for all CustomFieldSets",,"created_since, displayed, fields, ids[], limit, order, page_token, parent_type, query, updated_since"
+/custom_field_sets.json,POST,CustomFieldSet#create,Create a new CustomFieldSet,Outlines the parameters and data fields used when creating a new CustomFieldSet,Request Body for Custom Field Sets,fields
+/custom_field_sets/{id}.json,GET,CustomFieldSet#show,Return the data for a single CustomFieldSet,"Outlines the parameters, optional and required, used when requesting the data for a single CustomFieldSet",,fields
+/custom_field_sets/{id}.json,PATCH,CustomFieldSet#update,Update a single CustomFieldSet,Outlines the parameters and data fields used when updating a single CustomFieldSet,Request Body for Custom Field Sets,fields
 /custom_field_sets/{id}.json,DELETE,CustomFieldSet#destroy,Delete a single CustomFieldSet,"Outlines the parameters, optional and required, used when deleting the record for a single CustomFieldSet",,
-/custom_actions.json,GET,CustomAction#index,Return the data for all CustomActions,"Outlines the parameters, optional and required, used when requesting the data for all CustomActions",,
-/custom_actions.json,POST,CustomAction#create,Create a new CustomAction,Outlines the parameters and data fields used when creating a new CustomAction,,
-/custom_actions/{id}.json,GET,CustomAction#show,Return the data for a single CustomAction,"Outlines the parameters, optional and required, used when requesting the data for a single CustomAction",,
-/custom_actions/{id}.json,PATCH,CustomAction#update,Update a single CustomAction,Outlines the parameters and data fields used when updating a single CustomAction,,
+/custom_actions.json,GET,CustomAction#index,Return the data for all CustomActions,"Outlines the parameters, optional and required, used when requesting the data for all CustomActions",,"created_since, fields, ids[], limit, page_token, updated_since"
+/custom_actions.json,POST,CustomAction#create,Create a new CustomAction,Outlines the parameters and data fields used when creating a new CustomAction,Request Body for Custom Actions,fields
+/custom_actions/{id}.json,GET,CustomAction#show,Return the data for a single CustomAction,"Outlines the parameters, optional and required, used when requesting the data for a single CustomAction",,fields
+/custom_actions/{id}.json,PATCH,CustomAction#update,Update a single CustomAction,Outlines the parameters and data fields used when updating a single CustomAction,Request Body for Custom Actions,fields
 /custom_actions/{id}.json,DELETE,CustomAction#destroy,Delete a single CustomAction,"Outlines the parameters, optional and required, used when deleting the record for a single CustomAction",,
-/damages.json,GET,Damage#index,Return the data for all Damages,"Outlines the parameters, optional and required, used when requesting the data for all Damages",,
-/damages.json,POST,Damage#create,Creating a Damage,Outlines the parameters and data fields used when creating a new Damage,,
-/damages/{id}.json,GET,Damage#show,Return a specific Damage,"Outlines the parameters, optional and required, used when requesting the data for a single Damage",,
-/damages/{id}.json,PATCH,Damage#update,Updating a Damage,Outlines the parameters and data fields used when updating a single Damage,,
+/damages.json,GET,Damage#index,Return the data for all Damages,"Outlines the parameters, optional and required, used when requesting the data for all Damages",,"created_since, fields, ids[], limit, page_token, updated_since"
+/damages.json,POST,Damage#create,Creating a Damage,Outlines the parameters and data fields used when creating a new Damage,Request Body for Damages,fields
+/damages/{id}.json,GET,Damage#show,Return a specific Damage,"Outlines the parameters, optional and required, used when requesting the data for a single Damage",,fields
+/damages/{id}.json,PATCH,Damage#update,Updating a Damage,Outlines the parameters and data fields used when updating a single Damage,Request Body for Damages,fields
 /damages/{id}.json,DELETE,Damage#destroy,Deleting a Damage,"Outlines the parameters, optional and required, used when deleting the record for a single Damage",,
-/expense_categories.json,GET,ExpenseCategory#index,Return the data for all ExpenseCategories,"Outlines the parameters, optional and required, used when requesting the data for all ExpenseCategories",,
-/expense_categories.json,POST,ExpenseCategory#create,Create a new ExpenseCategory,Outlines the parameters and data fields used when creating a new ExpenseCategory,,
-/expense_categories/{id}.json,GET,ExpenseCategory#show,Return the data for a single ExpenseCategory,"Outlines the parameters, optional and required, used when requesting the data for a single ExpenseCategory",,
-/expense_categories/{id}.json,PATCH,ExpenseCategory#update,Update a single ExpenseCategory,Outlines the parameters and data fields used when updating a single ExpenseCategory,,
+/expense_categories.json,GET,ExpenseCategory#index,Return the data for all ExpenseCategories,"Outlines the parameters, optional and required, used when requesting the data for all ExpenseCategories",,"created_since, entry_type, fields, limit, order, page_token, query, updated_since"
+/expense_categories.json,POST,ExpenseCategory#create,Create a new ExpenseCategory,Outlines the parameters and data fields used when creating a new ExpenseCategory,Request Body for Expense Categories,fields
+/expense_categories/{id}.json,GET,ExpenseCategory#show,Return the data for a single ExpenseCategory,"Outlines the parameters, optional and required, used when requesting the data for a single ExpenseCategory",,fields
+/expense_categories/{id}.json,PATCH,ExpenseCategory#update,Update a single ExpenseCategory,Outlines the parameters and data fields used when updating a single ExpenseCategory,Request Body for Expense Categories,fields
 /expense_categories/{id}.json,DELETE,ExpenseCategory#destroy,Delete a single ExpenseCategory,"Outlines the parameters, optional and required, used when deleting the record for a single ExpenseCategory",,
-/grants.json,GET,Grant#index,Return the data for all grants,"Outlines the parameters, optional and required, used when requesting the data for all Grants",,
-/grants.json,POST,Grant#create,Create a new grant,Outlines the parameters and data fields used when creating a new Grant,,
-/grants/{id}.json,GET,Grant#show,Return the data for a single grant,"Outlines the parameters, optional and required, used when requesting the data for a single Grant",,
-/grants/{id}.json,PATCH,Grant#update,Update a single grant,Outlines the parameters and data fields used when updating a single Grant,,
+/grants.json,GET,Grant#index,Return the data for all grants,"Outlines the parameters, optional and required, used when requesting the data for all Grants",,"created_since, fields, ids[], limit, name, page_token, updated_since"
+/grants.json,POST,Grant#create,Create a new grant,Outlines the parameters and data fields used when creating a new Grant,Request Body for Grants,fields
+/grants/{id}.json,GET,Grant#show,Return the data for a single grant,"Outlines the parameters, optional and required, used when requesting the data for a single Grant",,fields
+/grants/{id}.json,PATCH,Grant#update,Update a single grant,Outlines the parameters and data fields used when updating a single Grant,Request Body for Grants,fields
 /grants/{id}.json,DELETE,Grant#destroy,Deletes a single grant,"Outlines the parameters, optional and required, used when deleting the record for a single Grant",,
-/grant_funding_sources.json,GET,GrantFundingSource#index,Return the data for all grant funding sources,"Outlines the parameters, optional and required, used when requesting the data for all GrantFundingSources",,
-/grant_funding_sources.json,POST,GrantFundingSource#create,Create a new grant funding source,Outlines the parameters and data fields used when creating a new GrantFundingSource,,
-/grant_funding_sources/{id}.json,PATCH,GrantFundingSource#update,Update a single grant funding source,Outlines the parameters and data fields used when updating a single GrantFundingSource,,
-/grant_funding_sources/{id}.json,DELETE,GrantFundingSource#destroy,Delete a single grant funding source,Outlines the parameters and data fields used when updating a single GrantFundingSource,,
-/groups.json,GET,Group#index,Return the data for all Groups,"Outlines the parameters, optional and required, used when requesting the data for all Groups",,
-/groups.json,POST,Group#create,Create a new Group,Outlines the parameters and data fields used when creating a new Group,,
-/groups/{id}.json,GET,Group#show,Return the data for a single Group,"Outlines the parameters, optional and required, used when requesting the data for a single Group",,
-/groups/{id}.json,PATCH,Group#update,Update a single Group,Outlines the parameters and data fields used when updating a single Group,,
+/grant_funding_sources.json,GET,GrantFundingSource#index,Return the data for all grant funding sources,"Outlines the parameters, optional and required, used when requesting the data for all GrantFundingSources",,"created_since, fields, ids[], limit, name, page_token, updated_since"
+/grant_funding_sources.json,POST,GrantFundingSource#create,Create a new grant funding source,Outlines the parameters and data fields used when creating a new GrantFundingSource,Request Body for Grant Funding Sources,fields
+/grant_funding_sources/{id}.json,PATCH,GrantFundingSource#update,Update a single grant funding source,Outlines the parameters and data fields used when updating a single GrantFundingSource,Request Body for Grant Funding Sources,fields
+/grant_funding_sources/{id}.json,DELETE,GrantFundingSource#destroy,Delete a single grant funding source,Outlines the parameters and data fields used when updating a single GrantFundingSource,Request Body for Grant Funding Sources,fields
+/groups.json,GET,Group#index,Return the data for all Groups,"Outlines the parameters, optional and required, used when requesting the data for all Groups",,"archived, created_since, fields, ids[], limit, name, order, page_token, query, type, updated_since, user_id"
+/groups.json,POST,Group#create,Create a new Group,Outlines the parameters and data fields used when creating a new Group,Request Body for Groups,fields
+/groups/{id}.json,GET,Group#show,Return the data for a single Group,"Outlines the parameters, optional and required, used when requesting the data for a single Group",,fields
+/groups/{id}.json,PATCH,Group#update,Update a single Group,Outlines the parameters and data fields used when updating a single Group,Request Body for Groups,fields
 /groups/{id}.json,DELETE,Group#destroy,Delete a single Group,"Outlines the parameters, optional and required, used when deleting the record for a single Group",,
-/internal_notifications/event_metrics.json,GET,EventMetrics#index,Unread in-app notification events,"Outlines the parameters, optional and required, used when requesting Event Metrics",,
-/internal_notifications/my_events.json,GET,MyEvent#index,Return the data for all of my in-app notification events,"Outlines the parameters, optional and required, used when requesting the data for all MyEvents",,
-/internal_notifications/my_events/{id}.json,PATCH,MyEvent#update,Mark a single in-app notification event as read/unread,Outlines the parameters and data fields used when updating a single MyEvent,,
+/internal_notifications/event_metrics.json,GET,EventMetrics#index,Unread in-app notification events,"Outlines the parameters, optional and required, used when requesting Event Metrics",,fields
+/internal_notifications/my_events.json,GET,MyEvent#index,Return the data for all of my in-app notification events,"Outlines the parameters, optional and required, used when requesting the data for all MyEvents",,"fields, limit, page_token"
+/internal_notifications/my_events/{id}.json,PATCH,MyEvent#update,Mark a single in-app notification event as read/unread,Outlines the parameters and data fields used when updating a single MyEvent,Request Body for My Events,fields
 /internal_notifications/my_events/{id}.json,DELETE,MyEvent#destroy,Clear (delete) a single in-app notification event,"Outlines the parameters, optional and required, used when deleting the record for a single MyEvent",,
-/interest_charges.json,GET,InterestCharge#index,Return the data for all InterestCharges,"Outlines the parameters, optional and required, used when requesting the data for all InterestCharges",,
+/interest_charges.json,GET,InterestCharge#index,Return the data for all InterestCharges,"Outlines the parameters, optional and required, used when requesting the data for all InterestCharges",,"bill_id, created_since, exclude_ids[], fields, ids[], limit, page_token, updated_since"
 /interest_charges/{id}.json,DELETE,InterestCharge#destroy,Delete a single InterestCharge,"Outlines the parameters, optional and required, used when deleting the record for a single InterestCharge",,
-/line_items.json,GET,LineItem#index,Return the data for all LineItems,"Outlines the parameters, optional and required, used when requesting the data for all LineItems",,
-/line_items/{id}.json,PATCH,LineItem#update,Update a single LineItem,Outlines the parameters and data fields used when updating a single LineItem,,
+/line_items.json,GET,LineItem#index,Return the data for all LineItems,"Outlines the parameters, optional and required, used when requesting the data for all LineItems",,"activity_id, bill_id, created_since, display, exclude_ids[], fields, group_ordering, ids[], kind, limit, matter_id, page_token, query, updated_since"
+/line_items/{id}.json,PATCH,LineItem#update,Update a single LineItem,Outlines the parameters and data fields used when updating a single LineItem,Request Body for Line Items,fields
 /line_items/{id}.json,DELETE,LineItem#destroy,Delete a single LineItem,A LineItem can not be deleted if it's Bill is not editable,,
-/log_entries.json,GET,LogEntry#index,Return the data for all LogEntries,"Outlines the parameters, optional and required, used when requesting the data for all LogEntries",,
-/matters/{matter_id}/client.json,GET,Client#show,Return the client data for a single matter,"Outlines the parameters, optional and required, used when requesting the data for a single Client",,
-/matters/{matter_id}/related_contacts.json,GET,RelatedContacts#index,Return the related contact data for a single matter,"Outlines the parameters, optional and required, used when requesting the data for all RelatedContacts",,
-/matters/{matter_id}/contacts.json,GET,MatterContacts#index,Return the related contact data for a single matter,"Outlines the parameters, optional and required, used when requesting the data for all MatterContacts",,
-/matters.json,GET,Matter#index,Return the data for all Matters,"Outlines the parameters, optional and required, used when requesting the data for all Matters",,
-/matters.json,POST,Matter#create,Create a new Matter,Outlines the parameters and data fields used when creating a new Matter,,
-/matters/{id}.json,GET,Matter#show,Return the data for a single Matter,"Outlines the parameters, optional and required, used when requesting the data for a single Matter",,
-/matters/{id}.json,PATCH,Matter#update,Update a single Matter,Outlines the parameters and data fields used when updating a single Matter,,
+/log_entries.json,GET,LogEntry#index,Return the data for all LogEntries,"Outlines the parameters, optional and required, used when requesting the data for all LogEntries",,"created_since, fields, ids[], limit, order, page_token, updated_since"
+/matters/{matter_id}/client.json,GET,Client#show,Return the client data for a single matter,"Outlines the parameters, optional and required, used when requesting the data for a single Client",,fields
+/matters/{matter_id}/related_contacts.json,GET,RelatedContacts#index,Return the related contact data for a single matter,"Outlines the parameters, optional and required, used when requesting the data for all RelatedContacts",,"fields, limit, order, page_token"
+/matters/{matter_id}/contacts.json,GET,MatterContacts#index,Return the related contact data for a single matter,"Outlines the parameters, optional and required, used when requesting the data for all MatterContacts",,"custom_field_ids[], fields, limit, order, page_token"
+/matters.json,GET,Matter#index,Return the data for all Matters,"Outlines the parameters, optional and required, used when requesting the data for all Matters",,"billable, client_id, close_date[], created_since, custom_field_ids[], custom_field_values, fields, grant_id, group_id, ids[], limit, open_date[], order, originating_attorney_id, page_token, pending_date[], practice_area_id, query, responsible_attorney_id, status, subscriber_user_id, updated_since"
+/matters.json,POST,Matter#create,Create a new Matter,Outlines the parameters and data fields used when creating a new Matter,Request Body for Matters,"custom_field_ids[], fields"
+/matters/{id}.json,GET,Matter#show,Return the data for a single Matter,"Outlines the parameters, optional and required, used when requesting the data for a single Matter",,"custom_field_ids[], fields"
+/matters/{id}.json,PATCH,Matter#update,Update a single Matter,Outlines the parameters and data fields used when updating a single Matter,Request Body for Matters,"custom_field_ids[], fields"
 /matters/{id}.json,DELETE,Matter#destroy,Delete a single Matter,"Outlines the parameters, optional and required, used when deleting the record for a single Matter",,
-/matter_stages.json,GET,MatterStage#index,Return the data for all MatterStages,"Outlines the parameters, optional and required, used when requesting the data for all MatterStages",,
-/medical_records/{id}.json,PATCH,MedicalRecord#update,Updating a Medical Record,Outlines the parameters and data fields used when updating a single MedicalRecord,,
+/matter_stages.json,GET,MatterStage#index,Return the data for all MatterStages,"Outlines the parameters, optional and required, used when requesting the data for all MatterStages",,"created_since, fields, ids[], limit, page_token, practice_area_id, updated_since"
+/medical_records/{id}.json,PATCH,MedicalRecord#update,Updating a Medical Record,Outlines the parameters and data fields used when updating a single MedicalRecord,Request Body for Medical Records,fields
 /medical_records/{id}.json,DELETE,MedicalRecord#destroy,Destroying a Medical Record,"Outlines the parameters, optional and required, used when deleting the record for a single MedicalRecord",,
 /medical_records_details.json,GET,MedicalRecordsRequest#index,Return the data for all Medical Records Details,"Outlines the parameters, optional and required, used when requesting the data for all Medical Records Details
-",,
+",,"created_since, fields, ids[], limit, page_token, treatment_end_date, treatment_start_date, updated_since"
 /medical_records_details.json,POST,MedicalRecordsRequest#create,"Creating a Medical Records Detail, Medical Records and Medical Bills","This endpoint allows a creation of a Medical Records Detail, multiple Medical Records and Medical Bills.
 Medical Liens can also be created as a property under Medical Bills.
 
 Reference the payload to see how the records are being passed in.
-",,
+",Request Body for Medical Records Details,fields
 /medical_records_details/{id}.json,GET,MedicalRecordsRequest#show,Return the data for a single Medical Records Detail,"Outlines the parameters, optional and required, used when requesting the data for a single Medical Records Details
-",,
+",,fields
 /medical_records_details/{id}.json,PATCH,MedicalRecordsRequest#update,Updating a Medical Records Detail,"If there are records being passed into the Medical Records or Medical Bills parameter they will be treated
 as new records and new Medical Records / Medical Bills will be created.
-",,
+",Request Body for Medical Records Details,fields
 /medical_records_details/{id}.json,DELETE,MedicalRecordsRequest#destroy,Destroying a Medical Records Detail,"When a Medical Records Detail is destroyed, the child records, such as Medical Records, Medical Bills and Liens
 will also be destroyed in the same transaction.
 ",,
 /medical_bills/{id}.json,PATCH,MedicalBill#update,Updating a Medical Bill,"Outlines the parameters and data fields used when updating a single Medical Bill
-",,
+",Request Body for Medical Bills,fields
 /medical_bills/{id}.json,DELETE,MedicalBill#destroy,Destroying a Medical Bill,"Outlines the parameters, optional and required, used when deleting the record for a single Medical Bill
 ",,
-/notes.json,GET,Note#index,Return the data for all Notes,"Outlines the parameters, optional and required, used when requesting the data for all Notes",,
-/notes.json,POST,Note#create,Create a new Note,Outlines the parameters and data fields used when creating a new Note,,
-/notes/{id}.json,GET,Note#show,Return the data for a single Note,"Outlines the parameters, optional and required, used when requesting the data for a single Note",,
-/notes/{id}.json,PATCH,Note#update,Update a single Note,Outlines the parameters and data fields used when updating a single Note,,
+/notes.json,GET,Note#index,Return the data for all Notes,"Outlines the parameters, optional and required, used when requesting the data for all Notes",,"contact_id, created_since, fields, has_time_entries, ids[], limit, matter_id, order, page_token, query, type, updated_since"
+/notes.json,POST,Note#create,Create a new Note,Outlines the parameters and data fields used when creating a new Note,Request Body for Notes,fields
+/notes/{id}.json,GET,Note#show,Return the data for a single Note,"Outlines the parameters, optional and required, used when requesting the data for a single Note",,fields
+/notes/{id}.json,PATCH,Note#update,Update a single Note,Outlines the parameters and data fields used when updating a single Note,Request Body for Notes,fields
 /notes/{id}.json,DELETE,Note#destroy,Delete a single Note,"Outlines the parameters, optional and required, used when deleting the record for a single Note",,
-/outstanding_client_balances.json,GET,OutstandingClientBalance#index,Return the data for all OutstandingClientBalances,"Outlines the parameters, optional and required, used when requesting the data for all OutstandingClientBalances",,
-/practice_areas.json,GET,PracticeArea#index,Return the data for all PracticeAreas,"Outlines the parameters, optional and required, used when requesting the data for all PracticeAreas",,
-/practice_areas.json,POST,PracticeArea#create,Create a new PracticeArea,Outlines the parameters and data fields used when creating a new PracticeArea,,
-/practice_areas/{id}.json,GET,PracticeArea#show,Return the data for a single PracticeArea,"Outlines the parameters, optional and required, used when requesting the data for a single PracticeArea",,
-/practice_areas/{id}.json,PATCH,PracticeArea#update,Update a single PracticeArea,Outlines the parameters and data fields used when updating a single PracticeArea,,
+/outstanding_client_balances.json,GET,OutstandingClientBalance#index,Return the data for all OutstandingClientBalances,"Outlines the parameters, optional and required, used when requesting the data for all OutstandingClientBalances",,"contact_id, fields, last_paid_end_date, last_paid_start_date, limit, newest_bill_due_end_date, newest_bill_due_start_date, originating_attorney_id, page_token, responsible_attorney_id"
+/practice_areas.json,GET,PracticeArea#index,Return the data for all PracticeAreas,"Outlines the parameters, optional and required, used when requesting the data for all PracticeAreas",,"code, created_since, fields, ids[], limit, matter_id, name, order, page_token, updated_since"
+/practice_areas.json,POST,PracticeArea#create,Create a new PracticeArea,Outlines the parameters and data fields used when creating a new PracticeArea,Request Body for Practice Areas,fields
+/practice_areas/{id}.json,GET,PracticeArea#show,Return the data for a single PracticeArea,"Outlines the parameters, optional and required, used when requesting the data for a single PracticeArea",,fields
+/practice_areas/{id}.json,PATCH,PracticeArea#update,Update a single PracticeArea,Outlines the parameters and data fields used when updating a single PracticeArea,Request Body for Practice Areas,fields
 /practice_areas/{id}.json,DELETE,PracticeArea#destroy,Delete a single PracticeArea,"Outlines the parameters, optional and required, used when deleting the record for a single PracticeArea",,
-/relationships.json,GET,Relationship#index,Return the data for all Relationships,"Outlines the parameters, optional and required, used when requesting the data for all Relationships",,
-/relationships.json,POST,Relationship#create,Create a new Relationship,Outlines the parameters and data fields used when creating a new Relationship,,
-/relationships/{id}.json,GET,Relationship#show,Return the data for a single Relationship,"Outlines the parameters, optional and required, used when requesting the data for a single Relationship",,
-/relationships/{id}.json,PATCH,Relationship#update,Update a single Relationship,Outlines the parameters and data fields used when updating a single Relationship,,
+/relationships.json,GET,Relationship#index,Return the data for all Relationships,"Outlines the parameters, optional and required, used when requesting the data for all Relationships",,"contact_id, created_since, fields, ids[], limit, matter_id, page_token, updated_since"
+/relationships.json,POST,Relationship#create,Create a new Relationship,Outlines the parameters and data fields used when creating a new Relationship,Request Body for Relationships,fields
+/relationships/{id}.json,GET,Relationship#show,Return the data for a single Relationship,"Outlines the parameters, optional and required, used when requesting the data for a single Relationship",,fields
+/relationships/{id}.json,PATCH,Relationship#update,Update a single Relationship,Outlines the parameters and data fields used when updating a single Relationship,Request Body for Relationships,fields
 /relationships/{id}.json,DELETE,Relationship#destroy,Delete a single Relationship,"Outlines the parameters, optional and required, used when deleting the record for a single Relationship",,
-/reminders.json,GET,Reminder#index,Return the data for all Reminders,"Outlines the parameters, optional and required, used when requesting the data for all Reminders",,
-/reminders.json,POST,Reminder#create,Create a new Reminder,Outlines the parameters and data fields used when creating a new Reminder,,
-/reminders/{id}.json,GET,Reminder#show,Return the data for a single Reminder,"Outlines the parameters, optional and required, used when requesting the data for a single Reminder",,
-/reminders/{id}.json,PATCH,Reminder#update,Update a single Reminder,Outlines the parameters and data fields used when updating a single Reminder,,
+/reminders.json,GET,Reminder#index,Return the data for all Reminders,"Outlines the parameters, optional and required, used when requesting the data for all Reminders",,"created_since, fields, ids[], limit, notification_method_id, order, page_token, state, subject_id, subject_type, updated_since, user_id"
+/reminders.json,POST,Reminder#create,Create a new Reminder,Outlines the parameters and data fields used when creating a new Reminder,Request Body for Reminders,fields
+/reminders/{id}.json,GET,Reminder#show,Return the data for a single Reminder,"Outlines the parameters, optional and required, used when requesting the data for a single Reminder",,fields
+/reminders/{id}.json,PATCH,Reminder#update,Update a single Reminder,Outlines the parameters and data fields used when updating a single Reminder,Request Body for Reminders,fields
 /reminders/{id}.json,DELETE,Reminder#destroy,Delete a single Reminder,"Outlines the parameters, optional and required, used when deleting the record for a single Reminder",,
 /reports/{id}/download.json,GET,Report#download,Download the completed Report,Download the completed Report,,
-/reports.json,GET,Report#index,Return the data for all Reports,"Outlines the parameters, optional and required, used when requesting the data for all Reports",,
-/reports.json,POST,Report#create,Create a new Report,Outlines the parameters and data fields used when creating a new Report,,
-/reports/{id}.json,GET,Report#show,Return the data for a single Report,"Outlines the parameters, optional and required, used when requesting the data for a single Report",,
+/reports.json,GET,Report#index,Return the data for all Reports,"Outlines the parameters, optional and required, used when requesting the data for all Reports",,"category, created_before, created_since, fields, ids[], kind, limit, output_format, page_token, query, source, state, updated_since"
+/reports.json,POST,Report#create,Create a new Report,Outlines the parameters and data fields used when creating a new Report,Request Body for Reports,fields
+/reports/{id}.json,GET,Report#show,Return the data for a single Report,"Outlines the parameters, optional and required, used when requesting the data for a single Report",,fields
 /report_presets/{id}/generate_report.json,POST,ReportPreset#generate_report,Generate a new report for a given preset,Generate a new report for a given preset,,
-/report_presets.json,GET,ReportPreset#index,Return the data for all ReportPresets,"Outlines the parameters, optional and required, used when requesting the data for all ReportPresets",,
-/report_presets.json,POST,ReportPreset#create,Create a new ReportPreset,Outlines the parameters and data fields used when creating a new ReportPreset,,
-/report_presets/{id}.json,GET,ReportPreset#show,Return the data for a single ReportPreset,"Outlines the parameters, optional and required, used when requesting the data for a single ReportPreset",,
-/report_presets/{id}.json,PATCH,ReportPreset#update,Update a single ReportPreset,Outlines the parameters and data fields used when updating a single ReportPreset,,
+/report_presets.json,GET,ReportPreset#index,Return the data for all ReportPresets,"Outlines the parameters, optional and required, used when requesting the data for all ReportPresets",,"category, created_since, fields, has_schedule, ids[], limit, order, output_format, page_token, query, schedule_frequency, updated_since"
+/report_presets.json,POST,ReportPreset#create,Create a new ReportPreset,Outlines the parameters and data fields used when creating a new ReportPreset,Request Body for Report Presets,fields
+/report_presets/{id}.json,GET,ReportPreset#show,Return the data for a single ReportPreset,"Outlines the parameters, optional and required, used when requesting the data for a single ReportPreset",,fields
+/report_presets/{id}.json,PATCH,ReportPreset#update,Update a single ReportPreset,Outlines the parameters and data fields used when updating a single ReportPreset,Request Body for Report Presets,fields
 /report_presets/{id}.json,DELETE,ReportPreset#destroy,Delete a single ReportPreset,"Outlines the parameters, optional and required, used when deleting the record for a single ReportPreset",,
-/report_schedules.json,GET,ReportSchedule#index,Return the data for all ReportSchedules,"Outlines the parameters, optional and required, used when requesting the data for all ReportSchedules",,
-/report_schedules.json,POST,ReportSchedule#create,Create a new ReportSchedule,Outlines the parameters and data fields used when creating a new ReportSchedule,,
-/report_schedules/{id}.json,GET,ReportSchedule#show,Return the data for a single ReportSchedule,"Outlines the parameters, optional and required, used when requesting the data for a single ReportSchedule",,
-/report_schedules/{id}.json,PATCH,ReportSchedule#update,Update a single ReportSchedule,Outlines the parameters and data fields used when updating a single ReportSchedule,,
+/report_schedules.json,GET,ReportSchedule#index,Return the data for all ReportSchedules,"Outlines the parameters, optional and required, used when requesting the data for all ReportSchedules",,"created_since, fields, ids[], limit, page_token, updated_since"
+/report_schedules.json,POST,ReportSchedule#create,Create a new ReportSchedule,Outlines the parameters and data fields used when creating a new ReportSchedule,Request Body for Report Schedules,fields
+/report_schedules/{id}.json,GET,ReportSchedule#show,Return the data for a single ReportSchedule,"Outlines the parameters, optional and required, used when requesting the data for a single ReportSchedule",,fields
+/report_schedules/{id}.json,PATCH,ReportSchedule#update,Update a single ReportSchedule,Outlines the parameters and data fields used when updating a single ReportSchedule,Request Body for Report Schedules,fields
 /report_schedules/{id}.json,DELETE,ReportSchedule#destroy,Delete a single ReportSchedule,"Outlines the parameters, optional and required, used when deleting the record for a single ReportSchedule",,
-/settings/billing.json,GET,BillingSetting#show,Return the billing settings,"Outlines the parameters, optional and required, used when requesting the data for a single BillingSetting",,
-/settings/text_snippets.json,GET,TextSnippet#index,Return all text snippets,"Outlines the parameters, optional and required, used when requesting the data for all TextSnippets",,
-/settings/text_snippets.json,POST,TextSnippet#create,Create a text snippet,Outlines the parameters and data fields used when creating a new TextSnippet,,
-/settings/text_snippets/{id}.json,GET,TextSnippet#show,Return the data for the text snippet,"Outlines the parameters, optional and required, used when requesting the data for a single TextSnippet",,
-/settings/text_snippets/{id}.json,PATCH,TextSnippet#update,Update a text snippet,Outlines the parameters and data fields used when updating a single TextSnippet,,
+/settings/billing.json,GET,BillingSetting#show,Return the billing settings,"Outlines the parameters, optional and required, used when requesting the data for a single BillingSetting",,"duration, fields"
+/settings/text_snippets.json,GET,TextSnippet#index,Return all text snippets,"Outlines the parameters, optional and required, used when requesting the data for all TextSnippets",,"created_since, fields, ids[], limit, order, page_token, query, updated_since"
+/settings/text_snippets.json,POST,TextSnippet#create,Create a text snippet,Outlines the parameters and data fields used when creating a new TextSnippet,Request Body for Text Snippets,fields
+/settings/text_snippets/{id}.json,GET,TextSnippet#show,Return the data for the text snippet,"Outlines the parameters, optional and required, used when requesting the data for a single TextSnippet",,fields
+/settings/text_snippets/{id}.json,PATCH,TextSnippet#update,Update a text snippet,Outlines the parameters and data fields used when updating a single TextSnippet,Request Body for Text Snippets,fields
 /settings/text_snippets/{id}.json,DELETE,TextSnippet#destroy,Destroy a text snippet,"Outlines the parameters, optional and required, used when deleting the record for a single TextSnippet",,
-/tasks.json,GET,Task#index,Return the data for all Tasks,"Outlines the parameters, optional and required, used when requesting the data for all Tasks",,
-/tasks.json,POST,Task#create,Create a new Task,Outlines the parameters and data fields used when creating a new Task,,
-/tasks/{id}.json,GET,Task#show,Return the data for a single Task,"Outlines the parameters, optional and required, used when requesting the data for a single Task",,
-/tasks/{id}.json,PATCH,Task#update,Update a single Task,Outlines the parameters and data fields used when updating a single Task,,
+/tasks.json,GET,Task#index,Return the data for all Tasks,"Outlines the parameters, optional and required, used when requesting the data for all Tasks",,"assignee_id, assignee_type, assigner_id, cascading_source_id, client_id, complete, created_since, due_at_from, due_at_present, due_at_to, fields, ids[], limit, matter_id, order, page_token, permission, priority, query, responsible_attorney_id, status, statuses[], statute_of_limitations, task_type_id, time_entries_present, updated_since"
+/tasks.json,POST,Task#create,Create a new Task,Outlines the parameters and data fields used when creating a new Task,Request Body for Tasks,fields
+/tasks/{id}.json,GET,Task#show,Return the data for a single Task,"Outlines the parameters, optional and required, used when requesting the data for a single Task",,fields
+/tasks/{id}.json,PATCH,Task#update,Update a single Task,Outlines the parameters and data fields used when updating a single Task,Request Body for Tasks,fields
 /tasks/{id}.json,DELETE,Task#destroy,Delete a single Task,"Outlines the parameters, optional and required, used when deleting the record for a single Task",,
-/task_calendars.json,GET,CalendarVisibility#index,Return the data for all CalendarVisibilities,"Outlines the parameters, optional and required, used when requesting the data for all CalendarVisibilities",,
-/task_calendars/{id}.json,GET,CalendarVisibility#show,Return the data for a single CalendarVisibility,"Outlines the parameters, optional and required, used when requesting the data for a single CalendarVisibility",,
-/task_calendars/{id}.json,PATCH,CalendarVisibility#update,Update a single CalendarVisibility,Outlines the parameters and data fields used when updating a single CalendarVisibility,,
-/task_templates.json,GET,TaskTemplate#index,Return the data for all TaskTemplates,"Outlines the parameters, optional and required, used when requesting the data for all TaskTemplates",,
-/task_templates.json,POST,TaskTemplate#create,Create a new TaskTemplate,Outlines the parameters and data fields used when creating a new TaskTemplate,,
-/task_templates/{id}.json,GET,TaskTemplate#show,Return the data for a single TaskTemplate,"Outlines the parameters, optional and required, used when requesting the data for a single TaskTemplate",,
-/task_templates/{id}.json,PATCH,TaskTemplate#update,Update a single TaskTemplate,Outlines the parameters and data fields used when updating a single TaskTemplate,,
+/task_calendars.json,GET,CalendarVisibility#index,Return the data for all CalendarVisibilities,"Outlines the parameters, optional and required, used when requesting the data for all CalendarVisibilities",,"created_since, fields, ids[], limit, page_token, updated_since"
+/task_calendars/{id}.json,GET,CalendarVisibility#show,Return the data for a single CalendarVisibility,"Outlines the parameters, optional and required, used when requesting the data for a single CalendarVisibility",,fields
+/task_calendars/{id}.json,PATCH,CalendarVisibility#update,Update a single CalendarVisibility,Outlines the parameters and data fields used when updating a single CalendarVisibility,Request Body for Task Calendars,fields
+/task_templates.json,GET,TaskTemplate#index,Return the data for all TaskTemplates,"Outlines the parameters, optional and required, used when requesting the data for all TaskTemplates",,"created_since, fields, ids[], limit, order, page_token, priority, query, task_template_list_id, updated_since"
+/task_templates.json,POST,TaskTemplate#create,Create a new TaskTemplate,Outlines the parameters and data fields used when creating a new TaskTemplate,Request Body for Task Templates,fields
+/task_templates/{id}.json,GET,TaskTemplate#show,Return the data for a single TaskTemplate,"Outlines the parameters, optional and required, used when requesting the data for a single TaskTemplate",,fields
+/task_templates/{id}.json,PATCH,TaskTemplate#update,Update a single TaskTemplate,Outlines the parameters and data fields used when updating a single TaskTemplate,Request Body for Task Templates,fields
 /task_templates/{id}.json,DELETE,TaskTemplate#destroy,Delete a single TaskTemplate,"Outlines the parameters, optional and required, used when deleting the record for a single TaskTemplate",,
 /task_template_lists/{id}/copy.json,POST,TaskTemplateList#copy,Copy a TaskTemplateList,"Creates a copy of the TaskTemplateList identified by the `id` path parameter.
-",,
-/task_template_lists.json,GET,TaskTemplateList#index,Return the data for all TaskTemplateLists,"Outlines the parameters, optional and required, used when requesting the data for all TaskTemplateLists",,
-/task_template_lists.json,POST,TaskTemplateList#create,Create a new TaskTemplateList,Outlines the parameters and data fields used when creating a new TaskTemplateList,,
-/task_template_lists/{id}.json,GET,TaskTemplateList#show,Return the data for a single TaskTemplateList,"Outlines the parameters, optional and required, used when requesting the data for a single TaskTemplateList",,
-/task_template_lists/{id}.json,PATCH,TaskTemplateList#update,Update a single TaskTemplateList,Outlines the parameters and data fields used when updating a single TaskTemplateList,,
+",Request Body for Task Template Lists,fields
+/task_template_lists.json,GET,TaskTemplateList#index,Return the data for all TaskTemplateLists,"Outlines the parameters, optional and required, used when requesting the data for all TaskTemplateLists",,"created_since, empty, fields, ids[], limit, order, page_token, practice_area_id, query, updated_since"
+/task_template_lists.json,POST,TaskTemplateList#create,Create a new TaskTemplateList,Outlines the parameters and data fields used when creating a new TaskTemplateList,Request Body for Task Template Lists,fields
+/task_template_lists/{id}.json,GET,TaskTemplateList#show,Return the data for a single TaskTemplateList,"Outlines the parameters, optional and required, used when requesting the data for a single TaskTemplateList",,fields
+/task_template_lists/{id}.json,PATCH,TaskTemplateList#update,Update a single TaskTemplateList,Outlines the parameters and data fields used when updating a single TaskTemplateList,Request Body for Task Template Lists,fields
 /task_template_lists/{id}.json,DELETE,TaskTemplateList#destroy,Delete a single TaskTemplateList,"Outlines the parameters, optional and required, used when deleting the record for a single TaskTemplateList",,
-/task_types.json,GET,TaskType#index,Return the data for all TaskTypes,"Outlines the parameters, optional and required, used when requesting the data for all TaskTypes",,
-/task_types.json,POST,TaskType#create,Create a new TaskType,Outlines the parameters and data fields used when creating a new TaskType,,
-/task_types/{id}.json,GET,TaskType#show,Return the data for a single TaskType,"Outlines the parameters, optional and required, used when requesting the data for a single TaskType",,
-/task_types/{id}.json,PATCH,TaskType#update,Update a single TaskType,Outlines the parameters and data fields used when updating a single TaskType,,
-/timer.json,GET,Timer#show,Return the data for a single Timer,"Outlines the parameters, optional and required, used when requesting the data for a single Timer",,
+/task_types.json,GET,TaskType#index,Return the data for all TaskTypes,"Outlines the parameters, optional and required, used when requesting the data for all TaskTypes",,"created_since, enabled, fields, ids[], limit, name, order, page_token, query, updated_since"
+/task_types.json,POST,TaskType#create,Create a new TaskType,Outlines the parameters and data fields used when creating a new TaskType,Request Body for Task Types,fields
+/task_types/{id}.json,GET,TaskType#show,Return the data for a single TaskType,"Outlines the parameters, optional and required, used when requesting the data for a single TaskType",,fields
+/task_types/{id}.json,PATCH,TaskType#update,Update a single TaskType,Outlines the parameters and data fields used when updating a single TaskType,Request Body for Task Types,fields
+/timer.json,GET,Timer#show,Return the data for a single Timer,"Outlines the parameters, optional and required, used when requesting the data for a single Timer",,fields
 /timer.json,DELETE,Timer#destroy,Delete a single Timer,"Outlines the parameters, optional and required, used when deleting the record for a single Timer",,
-/timer.json,POST,Timer#create,Create a new Timer,Outlines the parameters and data fields used when creating a new Timer,,
-/trust_line_items.json,GET,TrustLineItem#index,Return the data for all TrustLineItems,"Outlines the parameters, optional and required, used when requesting the data for all TrustLineItems",,
-/trust_line_items/{id}.json,PATCH,TrustLineItem#update,Update a single TrustLineItem,Outlines the parameters and data fields used when updating a single TrustLineItem,,
-/trust_requests.json,POST,TrustRequest#create,Create a new TrustRequest,Outlines the parameters and data fields used when creating a new TrustRequest,,
-/users/who_am_i.json,GET,User#who_am_i,Return the data for the current User,"Outlines the parameters, optional and required, used when requesting the data for a single User",,
-/users.json,GET,User#index,Return the data for all Users,"Outlines the parameters, optional and required, used when requesting the data for all Users",,
-/users/{id}.json,GET,User#show,Return the data for a single User,"Outlines the parameters, optional and required, used when requesting the data for a single User",,
-/utbms/sets.json,GET,UtbmsSet#index,Return the data for all the utbms sets,"Outlines the parameters, optional and required, used when requesting the data for all UtbmsSets",,
-/utbms/codes.json,GET,UtbmsCode#index,Return the data for all UtbmsCodes,"Outlines the parameters, optional and required, used when requesting the data for all UtbmsCodes",,
-/utbms/codes/{id}.json,GET,UtbmsCode#show,Return the data for a single UtbmsCode,"Outlines the parameters, optional and required, used when requesting the data for a single UtbmsCode",,
-/webhooks.json,GET,Webhook#index,Return the data for all Webhooks,"Outlines the parameters, optional and required, used when requesting the data for all Webhooks",,
-/webhooks.json,POST,Webhook#create,Create a new Webhook,Outlines the parameters and data fields used when creating a new Webhook,,
-/webhooks/{id}.json,GET,Webhook#show,Return the data for a single Webhook,"Outlines the parameters, optional and required, used when requesting the data for a single Webhook",,
-/webhooks/{id}.json,PATCH,Webhook#update,Update a single Webhook,Outlines the parameters and data fields used when updating a single Webhook,,
+/timer.json,POST,Timer#create,Create a new Timer,Outlines the parameters and data fields used when creating a new Timer,Request Body for Timers,fields
+/trust_line_items.json,GET,TrustLineItem#index,Return the data for all TrustLineItems,"Outlines the parameters, optional and required, used when requesting the data for all TrustLineItems",,"bill_id, created_since, fields, ids[], limit, matter_id, order, page_token, updated_since"
+/trust_line_items/{id}.json,PATCH,TrustLineItem#update,Update a single TrustLineItem,Outlines the parameters and data fields used when updating a single TrustLineItem,Request Body for Trust Line Items,fields
+/trust_requests.json,POST,TrustRequest#create,Create a new TrustRequest,Outlines the parameters and data fields used when creating a new TrustRequest,Request Body for Trust Requests,fields
+/users/who_am_i.json,GET,User#who_am_i,Return the data for the current User,"Outlines the parameters, optional and required, used when requesting the data for a single User",,fields
+/users.json,GET,User#index,Return the data for all Users,"Outlines the parameters, optional and required, used when requesting the data for all Users",,"created_since, enabled, fields, ids[], include_co_counsel, limit, name, order, page_token, pending_setup, role, subscription_type, updated_since"
+/users/{id}.json,GET,User#show,Return the data for a single User,"Outlines the parameters, optional and required, used when requesting the data for a single User",,fields
+/utbms/sets.json,GET,UtbmsSet#index,Return the data for all the utbms sets,"Outlines the parameters, optional and required, used when requesting the data for all UtbmsSets",,"created_since, fields, ids[], limit, order, page_token, updated_since"
+/utbms/codes.json,GET,UtbmsCode#index,Return the data for all UtbmsCodes,"Outlines the parameters, optional and required, used when requesting the data for all UtbmsCodes",,"created_since, fields, ids[], limit, order, page_token, type, updated_since, utbms_set_id"
+/utbms/codes/{id}.json,GET,UtbmsCode#show,Return the data for a single UtbmsCode,"Outlines the parameters, optional and required, used when requesting the data for a single UtbmsCode",,fields
+/webhooks.json,GET,Webhook#index,Return the data for all Webhooks,"Outlines the parameters, optional and required, used when requesting the data for all Webhooks",,"created_since, fields, ids[], limit, order, page_token, updated_since"
+/webhooks.json,POST,Webhook#create,Create a new Webhook,Outlines the parameters and data fields used when creating a new Webhook,Request Body for Webhooks,fields
+/webhooks/{id}.json,GET,Webhook#show,Return the data for a single Webhook,"Outlines the parameters, optional and required, used when requesting the data for a single Webhook",,fields
+/webhooks/{id}.json,PATCH,Webhook#update,Update a single Webhook,Outlines the parameters and data fields used when updating a single Webhook,Request Body for Webhooks,fields
 /webhooks/{id}.json,DELETE,Webhook#destroy,Delete a single Webhook,"Outlines the parameters, optional and required, used when deleting the record for a single Webhook",,
-/lauk_civil_certificated_rates.json,GET,LaukCivilCertificatedRate#index,List Civil Certificated Rates,"Outlines the parameters, optional and required, used when requesting the data for all LaukCivilCertificatedRates",,
-/lauk_civil_controlled_rates.json,GET,LaukCivilControlledRate#index,List Civil Controlled Rates,"Outlines the parameters, optional and required, used when requesting the data for all LaukCivilControlledRates",,
-/lauk_criminal_controlled_rates.json,GET,LaukCriminalControlledRate#index,List Criminal Controlled Rates,"Outlines the parameters, optional and required, used when requesting the data for all LaukCriminalControlledRates",,
-/lauk_expense_categories.json,GET,LaukExpenseCategory#index,List Expense Categories,"Outlines the parameters, optional and required, used when requesting the data for all LaukExpenseCategories",,
-/comments.json,GET,Comment#index,Return the data for all Comments,"Outlines the parameters, optional and required, used when requesting the data for all Comments",,
-/comments.json,POST,Comment#create,Create a new Comment,Outlines the parameters and data fields used when creating a new Comment,,
-/comments/{id}.json,GET,Comment#show,Return the data for a single Comment,"Outlines the parameters, optional and required, used when requesting the data for a single Comment",,
-/comments/{id}.json,PATCH,Comment#update,Update a single Comment,Outlines the parameters and data fields used when updating a single Comment,,
+/lauk_civil_certificated_rates.json,GET,LaukCivilCertificatedRate#index,List Civil Certificated Rates,"Outlines the parameters, optional and required, used when requesting the data for all LaukCivilCertificatedRates",,"activity, activity_sub_category, attended_several_hearings_for_multiple_clients, category_of_law, change_of_solicitor, court, eligible_for_sqm, fields, first_conducting_solicitor, key, limit, number_of_clients, page_token, party, post_transfer_clients_represented, rate_type, region, session_type, user_type"
+/lauk_civil_controlled_rates.json,GET,LaukCivilControlledRate#index,List Civil Controlled Rates,"Outlines the parameters, optional and required, used when requesting the data for all LaukCivilControlledRates",,"activity, category_of_law, fields, key, limit, page_token, rate_type, region"
+/lauk_criminal_controlled_rates.json,GET,LaukCriminalControlledRate#index,List Criminal Controlled Rates,"Outlines the parameters, optional and required, used when requesting the data for all LaukCriminalControlledRates",,"activity, category_of_law, counsel, court, fields, key, limit, page_token, rate_type, region, solicitor_type"
+/lauk_expense_categories.json,GET,LaukExpenseCategory#index,List Expense Categories,"Outlines the parameters, optional and required, used when requesting the data for all LaukExpenseCategories",,"fields, key, limit, name, page_token, practice_area, region"
+/comments.json,GET,Comment#index,Return the data for all Comments,"Outlines the parameters, optional and required, used when requesting the data for all Comments",,"created_since, fields, item_id, limit, page_token, updated_since"
+/comments.json,POST,Comment#create,Create a new Comment,Outlines the parameters and data fields used when creating a new Comment,Request Body for Comments,fields
+/comments/{id}.json,GET,Comment#show,Return the data for a single Comment,"Outlines the parameters, optional and required, used when requesting the data for a single Comment",,fields
+/comments/{id}.json,PATCH,Comment#update,Update a single Comment,Outlines the parameters and data fields used when updating a single Comment,Request Body for Comments,fields
 /comments/{id}.json,DELETE,Comment#destroy,Delete a single Comment,"Outlines the parameters, optional and required, used when deleting the record for a single Comment",,
 /document_archives/{id}/download.json,GET,DocumentArchive#download,Download the DocumentArchive,Download the DocumentArchive,,
-/document_archives.json,POST,DocumentArchive#create,Create a new DocumentArchive,Outlines the parameters and data fields used when creating a new DocumentArchive,,
-/document_archives/{id}.json,GET,DocumentArchive#show,Return the data for a single DocumentArchive,"Outlines the parameters, optional and required, used when requesting the data for a single DocumentArchive",,
-/documents/{id}/download.json,GET,Document#download,Download the Document,Download the Document,,
+/document_archives.json,POST,DocumentArchive#create,Create a new DocumentArchive,Outlines the parameters and data fields used when creating a new DocumentArchive,Request Body for Document Archives,fields
+/document_archives/{id}.json,GET,DocumentArchive#show,Return the data for a single DocumentArchive,"Outlines the parameters, optional and required, used when requesting the data for a single DocumentArchive",,fields
+/documents/{id}/download.json,GET,Document#download,Download the Document,Download the Document,,document_version_id
 /documents/{id}/copy.json,POST,Document#copy,Copy a Document,"Copies the latest document version of a Document into a new Document. The parameters `filename` and `name` will be copied from the source Document if none are provided.
-",,
-/documents/{id}/versions.json,GET,DocumentVersion#index,Return the data for all DocumentVersions,"Outlines the parameters, optional and required, used when requesting the data for all DocumentVersions",,
-/documents.json,GET,Document#index,Return the data for all Documents,"Outlines the parameters, optional and required, used when requesting the data for all Documents",,
+",Request Body for Documents,fields
+/documents/{id}/versions.json,GET,DocumentVersion#index,Return the data for all DocumentVersions,"Outlines the parameters, optional and required, used when requesting the data for all DocumentVersions",,"fields, fully_uploaded, id, limit, page_token"
+/documents.json,GET,Document#index,Return the data for all Documents,"Outlines the parameters, optional and required, used when requesting the data for all Documents",,"contact_id, created_since, document_category_id, external_property_name, external_property_value, fields, ids[], include_deleted, limit, matter_id, order, page_token, parent_id, query, scope, show_uncompleted, updated_since"
 /documents.json,POST,Document#create,Create a new Document,"Create a Document, or Create Document Version to an existing Document.
-",,
-/documents/{id}.json,GET,Document#show,Return the data for a single Document,"Outlines the parameters, optional and required, used when requesting the data for a single Document",,
+",Request Body for Documents,fields
+/documents/{id}.json,GET,Document#show,Return the data for a single Document,"Outlines the parameters, optional and required, used when requesting the data for a single Document",,fields
 /documents/{id}.json,PATCH,Document#update,Update a single Document,"Update Document, move Document to another Folder, and/or restore a trashed Document.
-",,
+",Request Body for Documents,fields
 /documents/{id}.json,DELETE,Document#destroy,Delete a single Document,"Deleting a Document using this method will move it to the trash instead of permanently deleting it. Trashed Documents are permanently deleted after 30 days. The following errors may be returned:
 
 - `409 Conflict`: The Document (or one of its ancestor folders) is currently being modified by another request, and cannot be trashed.
 ",,
-/document_automations.json,GET,DocumentAutomation#index,Return the data for all DocumentAutomations,"Outlines the parameters, optional and required, used when requesting the data for all DocumentAutomations",,
-/document_automations.json,POST,DocumentAutomation#create,Create a new DocumentAutomation,Outlines the parameters and data fields used when creating a new DocumentAutomation,,
-/document_automations/{id}.json,GET,DocumentAutomation#show,Return the data for a single DocumentAutomation,"Outlines the parameters, optional and required, used when requesting the data for a single DocumentAutomation",,
-/document_categories.json,GET,DocumentCategory#index,Return the data for all DocumentCategories,"Outlines the parameters, optional and required, used when requesting the data for all DocumentCategories",,
-/document_categories.json,POST,DocumentCategory#create,Create a new DocumentCategory,Outlines the parameters and data fields used when creating a new DocumentCategory,,
-/document_categories/{id}.json,GET,DocumentCategory#show,Return the data for a single DocumentCategory,"Outlines the parameters, optional and required, used when requesting the data for a single DocumentCategory",,
-/document_categories/{id}.json,PATCH,DocumentCategory#update,Update a single DocumentCategory,Outlines the parameters and data fields used when updating a single DocumentCategory,,
+/document_automations.json,GET,DocumentAutomation#index,Return the data for all DocumentAutomations,"Outlines the parameters, optional and required, used when requesting the data for all DocumentAutomations",,"created_since, fields, ids[], limit, order, page_token, updated_since"
+/document_automations.json,POST,DocumentAutomation#create,Create a new DocumentAutomation,Outlines the parameters and data fields used when creating a new DocumentAutomation,Request Body for Document Automations,fields
+/document_automations/{id}.json,GET,DocumentAutomation#show,Return the data for a single DocumentAutomation,"Outlines the parameters, optional and required, used when requesting the data for a single DocumentAutomation",,fields
+/document_categories.json,GET,DocumentCategory#index,Return the data for all DocumentCategories,"Outlines the parameters, optional and required, used when requesting the data for all DocumentCategories",,"created_since, fields, ids[], limit, order, page_token, query, updated_since"
+/document_categories.json,POST,DocumentCategory#create,Create a new DocumentCategory,Outlines the parameters and data fields used when creating a new DocumentCategory,Request Body for Document Categories,fields
+/document_categories/{id}.json,GET,DocumentCategory#show,Return the data for a single DocumentCategory,"Outlines the parameters, optional and required, used when requesting the data for a single DocumentCategory",,fields
+/document_categories/{id}.json,PATCH,DocumentCategory#update,Update a single DocumentCategory,Outlines the parameters and data fields used when updating a single DocumentCategory,Request Body for Document Categories,fields
 /document_categories/{id}.json,DELETE,DocumentCategory#destroy,Delete a single DocumentCategory,"Outlines the parameters, optional and required, used when deleting the record for a single DocumentCategory",,
 /document_templates/{id}/download.json,GET,DocumentTemplate#download,Get the contents of the DocumentTemplate,Get the contents of the DocumentTemplate,,
-/document_templates.json,GET,DocumentTemplate#index,Return the data for all DocumentTemplates,"Outlines the parameters, optional and required, used when requesting the data for all DocumentTemplates",,
-/document_templates.json,POST,DocumentTemplate#create,Create a new DocumentTemplate,Outlines the parameters and data fields used when creating a new DocumentTemplate,,
-/document_templates/{id}.json,GET,DocumentTemplate#show,Return the data for a single DocumentTemplate,"Outlines the parameters, optional and required, used when requesting the data for a single DocumentTemplate",,
-/document_templates/{id}.json,PATCH,DocumentTemplate#update,Update a single DocumentTemplate,Outlines the parameters and data fields used when updating a single DocumentTemplate,,
+/document_templates.json,GET,DocumentTemplate#index,Return the data for all DocumentTemplates,"Outlines the parameters, optional and required, used when requesting the data for all DocumentTemplates",,"created_since, fields, ids[], limit, order, page_token, updated_since"
+/document_templates.json,POST,DocumentTemplate#create,Create a new DocumentTemplate,Outlines the parameters and data fields used when creating a new DocumentTemplate,Request Body for Document Templates,fields
+/document_templates/{id}.json,GET,DocumentTemplate#show,Return the data for a single DocumentTemplate,"Outlines the parameters, optional and required, used when requesting the data for a single DocumentTemplate",,fields
+/document_templates/{id}.json,PATCH,DocumentTemplate#update,Update a single DocumentTemplate,Outlines the parameters and data fields used when updating a single DocumentTemplate,Request Body for Document Templates,fields
 /document_templates/{id}.json,DELETE,DocumentTemplate#destroy,Delete a single DocumentTemplate,"Outlines the parameters, optional and required, used when deleting the record for a single DocumentTemplate",,
 /folders/list.json,GET,Folder#list,Return the data of the contents of a Folder,"Return the data of the contents of a Folder.
-",,
-/folders.json,GET,Folder#index,Return the data for all Folders,"Outlines the parameters, optional and required, used when requesting the data for all Folders",,
+",,"contact_id, created_since, document_category_id, external_property_name, external_property_value, fields, ids[], include_deleted, limit, matter_id, order, page_token, parent_id, query, scope, show_uncompleted, updated_since"
+/folders.json,GET,Folder#index,Return the data for all Folders,"Outlines the parameters, optional and required, used when requesting the data for all Folders",,"contact_id, created_since, document_category_id, external_property_name, external_property_value, fields, ids[], include_deleted, limit, matter_id, order, page_token, parent_id, query, scope, updated_since"
 /folders.json,POST,Folder#create,Create a new Folder,"Create a Folder to an existing folder.
-",,
-/folders/{id}.json,GET,Folder#show,Return the data for a single Folder,"Outlines the parameters, optional and required, used when requesting the data for a single Folder",,
+",Request Body for Folders,fields
+/folders/{id}.json,GET,Folder#show,Return the data for a single Folder,"Outlines the parameters, optional and required, used when requesting the data for a single Folder",,fields
 /folders/{id}.json,PATCH,Folder#update,Update a single Folder,"Update Folder, move Folder to another Folder, and/or restore a trashed Folder.
-",,
+",Request Body for Folders,fields
 /folders/{id}.json,DELETE,Folder#destroy,Delete a single Folder,"Deleting a Folder using this method will move it to the trash instead of permanently deleting it. Trashed Folders are permanently deleted after 30 days. The following errors may be returned:
 
 - `400 Bad Request`: The Folder cannot be trashed. The `type` of the error will be `DeleteFailed` and the `message` of the error will be one of the following:
@@ -319,5 +319,5 @@ will also be destroyed in the same transaction.
   - `Delete failed: The root folder cannot be trashed`
 - `409 Conflict`: The Folder (or one of its descendants) is currently being modified by another request, and cannot be trashed.
 ",,
-/statutes-of-limitations/compute,POST,computeStatuteOfLimitations,Compute the statute of limitations due date,"Computes the due date based on a provided incident date (e.g., for Auto Accident matters).",,
-/webhooks/matter-created,POST,handleMatterCreatedWebhook,Matter created event webhook,Webhook for when a new matter is created.,,
+/statutes-of-limitations/compute,POST,computeStatuteOfLimitations,Compute the statute of limitations due date,"Computes the due date based on a provided incident date (e.g., for Auto Accident matters).",Incident date to calculate due date from,
+/webhooks/matter-created,POST,handleMatterCreatedWebhook,Matter created event webhook,Webhook for when a new matter is created.,Inline body,

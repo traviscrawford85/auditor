@@ -10,7 +10,8 @@ from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.bank_transfer_client import BankTransferClient
-    from ..models.bank_transfer_destination_account import BankTransferDestinationAccount
+    from ..models.bank_transfer_destination_account import \
+        BankTransferDestinationAccount
     from ..models.bank_transfer_matter import BankTransferMatter
     from ..models.bank_transfer_source_account import BankTransferSourceAccount
 
@@ -129,9 +130,11 @@ class BankTransfer:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.bank_transfer_client import BankTransferClient
-        from ..models.bank_transfer_destination_account import BankTransferDestinationAccount
+        from ..models.bank_transfer_destination_account import \
+            BankTransferDestinationAccount
         from ..models.bank_transfer_matter import BankTransferMatter
-        from ..models.bank_transfer_source_account import BankTransferSourceAccount
+        from ..models.bank_transfer_source_account import \
+            BankTransferSourceAccount
 
         d = dict(src_dict)
         id = d.pop("id", UNSET)

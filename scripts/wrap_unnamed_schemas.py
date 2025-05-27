@@ -1,4 +1,5 @@
 import os
+
 import yaml
 
 OPENAPI_ROOT = "./openapi/components/schemas"

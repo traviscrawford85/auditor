@@ -5,7 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.task_template_listcopy_json_body_data import TaskTemplateListcopyJsonBodyData
+    from ..models.task_template_listcopy_json_body_data import \
+        TaskTemplateListcopyJsonBodyData
 
 
 T = TypeVar("T", bound="TaskTemplateListcopyJsonBody")
@@ -36,7 +37,8 @@ class TaskTemplateListcopyJsonBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.task_template_listcopy_json_body_data import TaskTemplateListcopyJsonBodyData
+        from ..models.task_template_listcopy_json_body_data import \
+            TaskTemplateListcopyJsonBodyData
 
         d = dict(src_dict)
         data = TaskTemplateListcopyJsonBodyData.from_dict(d.pop("data"))

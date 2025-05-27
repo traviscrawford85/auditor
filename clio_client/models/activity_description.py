@@ -10,8 +10,10 @@ from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.activity_description_rate import ActivityDescriptionRate
-    from ..models.activity_description_utbms_activity import ActivityDescriptionUtbmsActivity
-    from ..models.activity_description_utbms_task import ActivityDescriptionUtbmsTask
+    from ..models.activity_description_utbms_activity import \
+        ActivityDescriptionUtbmsActivity
+    from ..models.activity_description_utbms_task import \
+        ActivityDescriptionUtbmsTask
     from ..models.group_base import GroupBase
 
 
@@ -163,8 +165,10 @@ class ActivityDescription:
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.activity_description_rate import ActivityDescriptionRate
-        from ..models.activity_description_utbms_activity import ActivityDescriptionUtbmsActivity
-        from ..models.activity_description_utbms_task import ActivityDescriptionUtbmsTask
+        from ..models.activity_description_utbms_activity import \
+            ActivityDescriptionUtbmsActivity
+        from ..models.activity_description_utbms_task import \
+            ActivityDescriptionUtbmsTask
         from ..models.group_base import GroupBase
 
         d = dict(src_dict)

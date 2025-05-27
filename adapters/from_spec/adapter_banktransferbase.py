@@ -1,5 +1,6 @@
 # Adapter stubs for Banktransferbase
-from schemas.from_spec.banktransferbase import BanktransferBaseIn, BanktransferBaseOut, BanktransferBaseUpdate, BanktransferBaseDb
+from schemas.from_spec.banktransferbase import BanktransferBaseOut
+
 
 def convert_sdk_to_banktransferBaseOut(sdk_obj):
     # TODO

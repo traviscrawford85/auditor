@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.contactcreate_files_body_data import ContactcreateFilesBodyData
+    from ..models.contactcreate_files_body_data import \
+        ContactcreateFilesBodyData
 
 
 T = TypeVar("T", bound="ContactcreateFilesBody")
@@ -52,7 +53,8 @@ class ContactcreateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.contactcreate_files_body_data import ContactcreateFilesBodyData
+        from ..models.contactcreate_files_body_data import \
+            ContactcreateFilesBodyData
 
         d = dict(src_dict)
         data = ContactcreateFilesBodyData.from_dict(d.pop("data"))

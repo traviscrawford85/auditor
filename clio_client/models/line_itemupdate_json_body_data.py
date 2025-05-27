@@ -7,16 +7,18 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.line_itemupdate_json_body_data_kind import (
-    LineItemupdateJsonBodyDataKind,
-    check_line_itemupdate_json_body_data_kind,
-)
+    LineItemupdateJsonBodyDataKind, check_line_itemupdate_json_body_data_kind)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.line_itemupdate_json_body_data_activity import LineItemupdateJsonBodyDataActivity
-    from ..models.line_itemupdate_json_body_data_bill import LineItemupdateJsonBodyDataBill
-    from ..models.line_itemupdate_json_body_data_discount import LineItemupdateJsonBodyDataDiscount
-    from ..models.line_itemupdate_json_body_data_matter import LineItemupdateJsonBodyDataMatter
+    from ..models.line_itemupdate_json_body_data_activity import \
+        LineItemupdateJsonBodyDataActivity
+    from ..models.line_itemupdate_json_body_data_bill import \
+        LineItemupdateJsonBodyDataBill
+    from ..models.line_itemupdate_json_body_data_discount import \
+        LineItemupdateJsonBodyDataDiscount
+    from ..models.line_itemupdate_json_body_data_matter import \
+        LineItemupdateJsonBodyDataMatter
 
 
 T = TypeVar("T", bound="LineItemupdateJsonBodyData")
@@ -136,10 +138,14 @@ class LineItemupdateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.line_itemupdate_json_body_data_activity import LineItemupdateJsonBodyDataActivity
-        from ..models.line_itemupdate_json_body_data_bill import LineItemupdateJsonBodyDataBill
-        from ..models.line_itemupdate_json_body_data_discount import LineItemupdateJsonBodyDataDiscount
-        from ..models.line_itemupdate_json_body_data_matter import LineItemupdateJsonBodyDataMatter
+        from ..models.line_itemupdate_json_body_data_activity import \
+            LineItemupdateJsonBodyDataActivity
+        from ..models.line_itemupdate_json_body_data_bill import \
+            LineItemupdateJsonBodyDataBill
+        from ..models.line_itemupdate_json_body_data_discount import \
+            LineItemupdateJsonBodyDataDiscount
+        from ..models.line_itemupdate_json_body_data_matter import \
+            LineItemupdateJsonBodyDataMatter
 
         d = dict(src_dict)
         _activity = d.pop("activity", UNSET)

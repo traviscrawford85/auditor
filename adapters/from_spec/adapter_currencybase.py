@@ -1,5 +1,6 @@
 # Adapter stubs for Currencybase
-from schemas.from_spec.currencybase import CurrencyBaseIn, CurrencyBaseOut, CurrencyBaseUpdate, CurrencyBaseDb
+from schemas.from_spec.currencybase import CurrencyBaseOut
+
 
 def convert_sdk_to_currencyBaseOut(sdk_obj):
     # TODO

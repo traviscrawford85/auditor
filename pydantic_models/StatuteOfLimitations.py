@@ -1,7 +1,9 @@
 from datetime import timedelta
 from typing import Optional
 
-from models import MatterUpdateRequestDataStatuteOfLimitations  # generated model
+from models import \
+    MatterUpdateRequestDataStatuteOfLimitations  # generated model
+
 
 class StatuteOfLimitationsService:
     """

@@ -1,5 +1,7 @@
 # Adapter stubs for Taskcreaterequestdataassignee
-from schemas.from_spec.taskcreaterequestdataassignee import TaskcreaterequestdataassigneeIn, TaskcreaterequestdataassigneeOut, TaskcreaterequestdataassigneeUpdate, TaskcreaterequestdataassigneeDb
+from schemas.from_spec.taskcreaterequestdataassignee import \
+    TaskcreaterequestdataassigneeOut
+
 
 def convert_sdk_to_taskcreaterequestdataassigneeout(sdk_obj):
     # TODO

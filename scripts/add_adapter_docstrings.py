@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 
 ADAPTER_DIR = Path("clio_sdk/adapters")

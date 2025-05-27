@@ -1,5 +1,7 @@
 # Adapter stubs for Mattercreaterequestdatagroup
-from schemas.from_spec.mattercreaterequestdatagroup import MattercreaterequestdatagroupIn, MattercreaterequestdatagroupOut, MattercreaterequestdatagroupUpdate, MattercreaterequestdatagroupDb
+from schemas.from_spec.mattercreaterequestdatagroup import \
+    MattercreaterequestdatagroupOut
+
 
 def convert_sdk_to_mattercreaterequestdatagroupout(sdk_obj):
     # TODO

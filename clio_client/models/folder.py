@@ -15,7 +15,8 @@ if TYPE_CHECKING:
     from ..models.folder_creator import FolderCreator
     from ..models.folder_document_category import FolderDocumentCategory
     from ..models.folder_group import FolderGroup
-    from ..models.folder_latest_document_version import FolderLatestDocumentVersion
+    from ..models.folder_latest_document_version import \
+        FolderLatestDocumentVersion
     from ..models.folder_matter import FolderMatter
     from ..models.folder_parent import FolderParent
 
@@ -175,7 +176,8 @@ class Folder:
         from ..models.folder_creator import FolderCreator
         from ..models.folder_document_category import FolderDocumentCategory
         from ..models.folder_group import FolderGroup
-        from ..models.folder_latest_document_version import FolderLatestDocumentVersion
+        from ..models.folder_latest_document_version import \
+            FolderLatestDocumentVersion
         from ..models.folder_matter import FolderMatter
         from ..models.folder_parent import FolderParent
 

@@ -6,14 +6,13 @@ from attrs import field as _attrs_field
 
 from ..models.document_automationcreate_data_body_data_formats_item import (
     DocumentAutomationcreateDataBodyDataFormatsItem,
-    check_document_automationcreate_data_body_data_formats_item,
-)
+    check_document_automationcreate_data_body_data_formats_item)
 
 if TYPE_CHECKING:
-    from ..models.document_automationcreate_data_body_data_document_template import (
-        DocumentAutomationcreateDataBodyDataDocumentTemplate,
-    )
-    from ..models.document_automationcreate_data_body_data_matter import DocumentAutomationcreateDataBodyDataMatter
+    from ..models.document_automationcreate_data_body_data_document_template import \
+        DocumentAutomationcreateDataBodyDataDocumentTemplate
+    from ..models.document_automationcreate_data_body_data_matter import \
+        DocumentAutomationcreateDataBodyDataMatter
 
 
 T = TypeVar("T", bound="DocumentAutomationcreateDataBodyData")
@@ -63,10 +62,10 @@ class DocumentAutomationcreateDataBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.document_automationcreate_data_body_data_document_template import (
-            DocumentAutomationcreateDataBodyDataDocumentTemplate,
-        )
-        from ..models.document_automationcreate_data_body_data_matter import DocumentAutomationcreateDataBodyDataMatter
+        from ..models.document_automationcreate_data_body_data_document_template import \
+            DocumentAutomationcreateDataBodyDataDocumentTemplate
+        from ..models.document_automationcreate_data_body_data_matter import \
+            DocumentAutomationcreateDataBodyDataMatter
 
         d = dict(src_dict)
         document_template = DocumentAutomationcreateDataBodyDataDocumentTemplate.from_dict(d.pop("document_template"))

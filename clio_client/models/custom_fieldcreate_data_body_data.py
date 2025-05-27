@@ -6,18 +6,15 @@ from attrs import field as _attrs_field
 
 from ..models.custom_fieldcreate_data_body_data_field_type import (
     CustomFieldcreateDataBodyDataFieldType,
-    check_custom_fieldcreate_data_body_data_field_type,
-)
+    check_custom_fieldcreate_data_body_data_field_type)
 from ..models.custom_fieldcreate_data_body_data_parent_type import (
     CustomFieldcreateDataBodyDataParentType,
-    check_custom_fieldcreate_data_body_data_parent_type,
-)
+    check_custom_fieldcreate_data_body_data_parent_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.custom_fieldcreate_data_body_data_picklist_options_item import (
-        CustomFieldcreateDataBodyDataPicklistOptionsItem,
-    )
+    from ..models.custom_fieldcreate_data_body_data_picklist_options_item import \
+        CustomFieldcreateDataBodyDataPicklistOptionsItem
 
 
 T = TypeVar("T", bound="CustomFieldcreateDataBodyData")
@@ -87,9 +84,8 @@ class CustomFieldcreateDataBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.custom_fieldcreate_data_body_data_picklist_options_item import (
-            CustomFieldcreateDataBodyDataPicklistOptionsItem,
-        )
+        from ..models.custom_fieldcreate_data_body_data_picklist_options_item import \
+            CustomFieldcreateDataBodyDataPicklistOptionsItem
 
         d = dict(src_dict)
         field_type = check_custom_fieldcreate_data_body_data_field_type(d.pop("field_type"))

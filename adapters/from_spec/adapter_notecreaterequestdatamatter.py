@@ -1,5 +1,7 @@
 # Adapter stubs for Notecreaterequestdatamatter
-from schemas.from_spec.notecreaterequestdatamatter import NotecreaterequestdatamatterIn, NotecreaterequestdatamatterOut, NotecreaterequestdatamatterUpdate, NotecreaterequestdatamatterDb
+from schemas.from_spec.notecreaterequestdatamatter import \
+    NotecreaterequestdatamatterOut
+
 
 def convert_sdk_to_notecreaterequestdatamatterout(sdk_obj):
     # TODO

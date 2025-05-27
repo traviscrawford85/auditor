@@ -1,5 +1,6 @@
 # Adapter stubs for Errordetail
-from schemas.from_spec.errordetail import ErrordetailIn, ErrordetailOut, ErrordetailUpdate, ErrordetailDb
+from schemas.from_spec.errordetail import ErrordetailOut
+
 
 def convert_sdk_to_errordetailout(sdk_obj):
     # TODO

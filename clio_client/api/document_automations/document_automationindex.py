@@ -7,7 +7,8 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.document_automation_list import DocumentAutomationList
-from ...models.document_automationindex_order import DocumentAutomationindexOrder
+from ...models.document_automationindex_order import \
+    DocumentAutomationindexOrder
 from ...models.error import Error
 from ...types import UNSET, Response, Unset
 

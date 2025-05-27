@@ -7,22 +7,24 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.reportcreate_data_body_data_format import (
-    ReportcreateDataBodyDataFormat,
-    check_reportcreate_data_body_data_format,
-)
+    ReportcreateDataBodyDataFormat, check_reportcreate_data_body_data_format)
 from ..models.reportcreate_data_body_data_kind import (
-    ReportcreateDataBodyDataKind,
-    check_reportcreate_data_body_data_kind,
-)
+    ReportcreateDataBodyDataKind, check_reportcreate_data_body_data_kind)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.reportcreate_data_body_data_client import ReportcreateDataBodyDataClient
-    from ..models.reportcreate_data_body_data_matter import ReportcreateDataBodyDataMatter
-    from ..models.reportcreate_data_body_data_originating_attorney import ReportcreateDataBodyDataOriginatingAttorney
-    from ..models.reportcreate_data_body_data_practice_area import ReportcreateDataBodyDataPracticeArea
-    from ..models.reportcreate_data_body_data_responsible_attorney import ReportcreateDataBodyDataResponsibleAttorney
-    from ..models.reportcreate_data_body_data_user import ReportcreateDataBodyDataUser
+    from ..models.reportcreate_data_body_data_client import \
+        ReportcreateDataBodyDataClient
+    from ..models.reportcreate_data_body_data_matter import \
+        ReportcreateDataBodyDataMatter
+    from ..models.reportcreate_data_body_data_originating_attorney import \
+        ReportcreateDataBodyDataOriginatingAttorney
+    from ..models.reportcreate_data_body_data_practice_area import \
+        ReportcreateDataBodyDataPracticeArea
+    from ..models.reportcreate_data_body_data_responsible_attorney import \
+        ReportcreateDataBodyDataResponsibleAttorney
+    from ..models.reportcreate_data_body_data_user import \
+        ReportcreateDataBodyDataUser
 
 
 T = TypeVar("T", bound="ReportcreateDataBodyData")
@@ -128,16 +130,18 @@ class ReportcreateDataBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.reportcreate_data_body_data_client import ReportcreateDataBodyDataClient
-        from ..models.reportcreate_data_body_data_matter import ReportcreateDataBodyDataMatter
-        from ..models.reportcreate_data_body_data_originating_attorney import (
-            ReportcreateDataBodyDataOriginatingAttorney,
-        )
-        from ..models.reportcreate_data_body_data_practice_area import ReportcreateDataBodyDataPracticeArea
-        from ..models.reportcreate_data_body_data_responsible_attorney import (
-            ReportcreateDataBodyDataResponsibleAttorney,
-        )
-        from ..models.reportcreate_data_body_data_user import ReportcreateDataBodyDataUser
+        from ..models.reportcreate_data_body_data_client import \
+            ReportcreateDataBodyDataClient
+        from ..models.reportcreate_data_body_data_matter import \
+            ReportcreateDataBodyDataMatter
+        from ..models.reportcreate_data_body_data_originating_attorney import \
+            ReportcreateDataBodyDataOriginatingAttorney
+        from ..models.reportcreate_data_body_data_practice_area import \
+            ReportcreateDataBodyDataPracticeArea
+        from ..models.reportcreate_data_body_data_responsible_attorney import \
+            ReportcreateDataBodyDataResponsibleAttorney
+        from ..models.reportcreate_data_body_data_user import \
+            ReportcreateDataBodyDataUser
 
         d = dict(src_dict)
         format_ = check_reportcreate_data_body_data_format(d.pop("format"))

@@ -1,5 +1,7 @@
 # Adapter stubs for Documentautomationcreaterequestdatamatter
-from schemas.from_spec.documentautomationcreaterequestdatamatter import DocumentautomationcreaterequestdatamatterIn, DocumentautomationcreaterequestdatamatterOut, DocumentautomationcreaterequestdatamatterUpdate, DocumentautomationcreaterequestdatamatterDb
+from schemas.from_spec.documentautomationcreaterequestdatamatter import \
+    DocumentautomationcreaterequestdatamatterOut
+
 
 def convert_sdk_to_documentautomationcreaterequestdatamatterout(sdk_obj):
     # TODO

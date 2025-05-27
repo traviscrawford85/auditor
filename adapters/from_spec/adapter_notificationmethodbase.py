@@ -1,5 +1,6 @@
 # Adapter stubs for Notificationmethodbase
-from schemas.from_spec.notificationmethodbase import NotificationmethodBaseIn, NotificationmethodBaseOut, NotificationmethodBaseUpdate, NotificationmethodBaseDb
+from schemas.from_spec.notificationmethodbase import NotificationmethodBaseOut
+
 
 def convert_sdk_to_notificationmethodBaseOut(sdk_obj):
     # TODO

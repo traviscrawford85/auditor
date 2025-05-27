@@ -1,6 +1,7 @@
+from typing import Optional
+
 from pydantic import BaseModel
-from typing import Optional, Any, List
-from datetime import datetime
+
 
 class EventmetricsIn(BaseModel):
     unread_mobile_events: Optional[str] = None

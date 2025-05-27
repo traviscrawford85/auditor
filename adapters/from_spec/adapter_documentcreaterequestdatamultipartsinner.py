@@ -1,5 +1,7 @@
 # Adapter stubs for Documentcreaterequestdatamultipartsinner
-from schemas.from_spec.documentcreaterequestdatamultipartsinner import DocumentcreaterequestdatamultipartsinnerIn, DocumentcreaterequestdatamultipartsinnerOut, DocumentcreaterequestdatamultipartsinnerUpdate, DocumentcreaterequestdatamultipartsinnerDb
+from schemas.from_spec.documentcreaterequestdatamultipartsinner import \
+    DocumentcreaterequestdatamultipartsinnerOut
+
 
 def convert_sdk_to_documentcreaterequestdatamultipartsinnerout(sdk_obj):
     # TODO

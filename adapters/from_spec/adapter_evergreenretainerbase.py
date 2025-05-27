@@ -1,5 +1,6 @@
 # Adapter stubs for Evergreenretainerbase
-from schemas.from_spec.evergreenretainerbase import EvergreenretainerBaseIn, EvergreenretainerBaseOut, EvergreenretainerBaseUpdate, EvergreenretainerBaseDb
+from schemas.from_spec.evergreenretainerbase import EvergreenretainerBaseOut
+
 
 def convert_sdk_to_evergreenretainerBaseOut(sdk_obj):
     # TODO

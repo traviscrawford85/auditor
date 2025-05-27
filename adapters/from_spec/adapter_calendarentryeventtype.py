@@ -1,5 +1,6 @@
 # Adapter stubs for Calendarentryeventtype
-from schemas.from_spec.calendarentryeventtype import CalendarentryeventtypeIn, CalendarentryeventtypeOut, CalendarentryeventtypeUpdate, CalendarentryeventtypeDb
+from schemas.from_spec.calendarentryeventtype import CalendarentryeventtypeOut
+
 
 def convert_sdk_to_calendarentryeventtypeout(sdk_obj):
     # TODO

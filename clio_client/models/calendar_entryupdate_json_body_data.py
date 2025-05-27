@@ -8,23 +8,22 @@ from dateutil.parser import isoparse
 
 from ..models.calendar_entryupdate_json_body_data_deleted import (
     CalendarEntryupdateJsonBodyDataDeleted,
-    check_calendar_entryupdate_json_body_data_deleted,
-)
+    check_calendar_entryupdate_json_body_data_deleted)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.calendar_entryupdate_json_body_data_attendees_item import CalendarEntryupdateJsonBodyDataAttendeesItem
-    from ..models.calendar_entryupdate_json_body_data_calendar_entry_event_type import (
-        CalendarEntryupdateJsonBodyDataCalendarEntryEventType,
-    )
-    from ..models.calendar_entryupdate_json_body_data_calendar_owner import CalendarEntryupdateJsonBodyDataCalendarOwner
-    from ..models.calendar_entryupdate_json_body_data_conference_meeting import (
-        CalendarEntryupdateJsonBodyDataConferenceMeeting,
-    )
-    from ..models.calendar_entryupdate_json_body_data_external_properties_item import (
-        CalendarEntryupdateJsonBodyDataExternalPropertiesItem,
-    )
-    from ..models.calendar_entryupdate_json_body_data_matter import CalendarEntryupdateJsonBodyDataMatter
+    from ..models.calendar_entryupdate_json_body_data_attendees_item import \
+        CalendarEntryupdateJsonBodyDataAttendeesItem
+    from ..models.calendar_entryupdate_json_body_data_calendar_entry_event_type import \
+        CalendarEntryupdateJsonBodyDataCalendarEntryEventType
+    from ..models.calendar_entryupdate_json_body_data_calendar_owner import \
+        CalendarEntryupdateJsonBodyDataCalendarOwner
+    from ..models.calendar_entryupdate_json_body_data_conference_meeting import \
+        CalendarEntryupdateJsonBodyDataConferenceMeeting
+    from ..models.calendar_entryupdate_json_body_data_external_properties_item import \
+        CalendarEntryupdateJsonBodyDataExternalPropertiesItem
+    from ..models.calendar_entryupdate_json_body_data_matter import \
+        CalendarEntryupdateJsonBodyDataMatter
 
 
 T = TypeVar("T", bound="CalendarEntryupdateJsonBodyData")
@@ -164,22 +163,18 @@ class CalendarEntryupdateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.calendar_entryupdate_json_body_data_attendees_item import (
-            CalendarEntryupdateJsonBodyDataAttendeesItem,
-        )
-        from ..models.calendar_entryupdate_json_body_data_calendar_entry_event_type import (
-            CalendarEntryupdateJsonBodyDataCalendarEntryEventType,
-        )
-        from ..models.calendar_entryupdate_json_body_data_calendar_owner import (
-            CalendarEntryupdateJsonBodyDataCalendarOwner,
-        )
-        from ..models.calendar_entryupdate_json_body_data_conference_meeting import (
-            CalendarEntryupdateJsonBodyDataConferenceMeeting,
-        )
-        from ..models.calendar_entryupdate_json_body_data_external_properties_item import (
-            CalendarEntryupdateJsonBodyDataExternalPropertiesItem,
-        )
-        from ..models.calendar_entryupdate_json_body_data_matter import CalendarEntryupdateJsonBodyDataMatter
+        from ..models.calendar_entryupdate_json_body_data_attendees_item import \
+            CalendarEntryupdateJsonBodyDataAttendeesItem
+        from ..models.calendar_entryupdate_json_body_data_calendar_entry_event_type import \
+            CalendarEntryupdateJsonBodyDataCalendarEntryEventType
+        from ..models.calendar_entryupdate_json_body_data_calendar_owner import \
+            CalendarEntryupdateJsonBodyDataCalendarOwner
+        from ..models.calendar_entryupdate_json_body_data_conference_meeting import \
+            CalendarEntryupdateJsonBodyDataConferenceMeeting
+        from ..models.calendar_entryupdate_json_body_data_external_properties_item import \
+            CalendarEntryupdateJsonBodyDataExternalPropertiesItem
+        from ..models.calendar_entryupdate_json_body_data_matter import \
+            CalendarEntryupdateJsonBodyDataMatter
 
         d = dict(src_dict)
         _deleted = d.pop("_deleted", UNSET)

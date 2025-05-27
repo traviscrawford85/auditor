@@ -7,7 +7,8 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.conversationupdate_json_body_data_matter import ConversationupdateJsonBodyDataMatter
+    from ..models.conversationupdate_json_body_data_matter import \
+        ConversationupdateJsonBodyDataMatter
 
 
 T = TypeVar("T", bound="ConversationupdateJsonBodyData")
@@ -50,7 +51,8 @@ class ConversationupdateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.conversationupdate_json_body_data_matter import ConversationupdateJsonBodyDataMatter
+        from ..models.conversationupdate_json_body_data_matter import \
+            ConversationupdateJsonBodyDataMatter
 
         d = dict(src_dict)
         archived = d.pop("archived", UNSET)

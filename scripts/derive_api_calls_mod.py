@@ -1,7 +1,7 @@
-import os
-import yaml
 from pathlib import Path
+
 import pandas as pd
+import yaml
 
 OPENAPI_DIR = Path("openapi")
 PATHS_DIR = OPENAPI_DIR / "paths"

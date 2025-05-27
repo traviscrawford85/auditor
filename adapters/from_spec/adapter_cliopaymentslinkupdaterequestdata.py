@@ -1,5 +1,7 @@
 # Adapter stubs for Cliopaymentslinkupdaterequestdata
-from schemas.from_spec.cliopaymentslinkupdaterequestdata import CliopaymentslinkupdaterequestdataIn, CliopaymentslinkupdaterequestdataOut, CliopaymentslinkupdaterequestdataUpdate, CliopaymentslinkupdaterequestdataDb
+from schemas.from_spec.cliopaymentslinkupdaterequestdata import \
+    CliopaymentslinkupdaterequestdataOut
+
 
 def convert_sdk_to_cliopaymentslinkupdaterequestdataout(sdk_obj):
     # TODO

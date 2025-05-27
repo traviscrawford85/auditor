@@ -9,7 +9,8 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.conversation_membership_member import ConversationMembershipMember
+    from ..models.conversation_membership_member import \
+        ConversationMembershipMember
 
 
 T = TypeVar("T", bound="ConversationMembership")
@@ -82,7 +83,8 @@ class ConversationMembership:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.conversation_membership_member import ConversationMembershipMember
+        from ..models.conversation_membership_member import \
+            ConversationMembershipMember
 
         d = dict(src_dict)
         id = d.pop("id", UNSET)

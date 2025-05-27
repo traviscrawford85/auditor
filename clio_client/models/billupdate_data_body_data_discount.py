@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.billupdate_data_body_data_discount_type import (
     BillupdateDataBodyDataDiscountType,
-    check_billupdate_data_body_data_discount_type,
-)
+    check_billupdate_data_body_data_discount_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="BillupdateDataBodyDataDiscount")

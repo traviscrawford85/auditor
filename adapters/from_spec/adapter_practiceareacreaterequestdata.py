@@ -1,5 +1,7 @@
 # Adapter stubs for Practiceareacreaterequestdata
-from schemas.from_spec.practiceareacreaterequestdata import PracticeareacreaterequestdataIn, PracticeareacreaterequestdataOut, PracticeareacreaterequestdataUpdate, PracticeareacreaterequestdataDb
+from schemas.from_spec.practiceareacreaterequestdata import \
+    PracticeareacreaterequestdataOut
+
 
 def convert_sdk_to_practiceareacreaterequestdataout(sdk_obj):
     # TODO

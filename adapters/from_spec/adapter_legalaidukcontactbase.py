@@ -1,5 +1,6 @@
 # Adapter stubs for Legalaidukcontactbase
-from schemas.from_spec.legalaidukcontactbase import LegalaidukcontactBaseIn, LegalaidukcontactBaseOut, LegalaidukcontactBaseUpdate, LegalaidukcontactBaseDb
+from schemas.from_spec.legalaidukcontactbase import LegalaidukcontactBaseOut
+
 
 def convert_sdk_to_legalaidukcontactBaseOut(sdk_obj):
     # TODO

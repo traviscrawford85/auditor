@@ -8,14 +8,12 @@ from dateutil.parser import isoparse
 
 from ..models.mattercreate_data_body_data_statute_of_limitations_status import (
     MattercreateDataBodyDataStatuteOfLimitationsStatus,
-    check_mattercreate_data_body_data_statute_of_limitations_status,
-)
+    check_mattercreate_data_body_data_statute_of_limitations_status)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.mattercreate_data_body_data_statute_of_limitations_reminders_item import (
-        MattercreateDataBodyDataStatuteOfLimitationsRemindersItem,
-    )
+    from ..models.mattercreate_data_body_data_statute_of_limitations_reminders_item import \
+        MattercreateDataBodyDataStatuteOfLimitationsRemindersItem
 
 
 T = TypeVar("T", bound="MattercreateDataBodyDataStatuteOfLimitations")
@@ -66,9 +64,8 @@ class MattercreateDataBodyDataStatuteOfLimitations:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.mattercreate_data_body_data_statute_of_limitations_reminders_item import (
-            MattercreateDataBodyDataStatuteOfLimitationsRemindersItem,
-        )
+        from ..models.mattercreate_data_body_data_statute_of_limitations_reminders_item import \
+            MattercreateDataBodyDataStatuteOfLimitationsRemindersItem
 
         d = dict(src_dict)
         _status = d.pop("status", UNSET)

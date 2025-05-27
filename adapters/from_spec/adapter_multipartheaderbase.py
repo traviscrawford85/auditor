@@ -1,5 +1,6 @@
 # Adapter stubs for Multipartheaderbase
-from schemas.from_spec.multipartheaderbase import MultipartheaderBaseIn, MultipartheaderBaseOut, MultipartheaderBaseUpdate, MultipartheaderBaseDb
+from schemas.from_spec.multipartheaderbase import MultipartheaderBaseOut
+
 
 def convert_sdk_to_multipartheaderBaseOut(sdk_obj):
     # TODO

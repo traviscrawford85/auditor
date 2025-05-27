@@ -7,9 +7,12 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.error import Error
 from ...models.report_schedule_show import ReportScheduleShow
-from ...models.report_schedulecreate_data_body import ReportSchedulecreateDataBody
-from ...models.report_schedulecreate_files_body import ReportSchedulecreateFilesBody
-from ...models.report_schedulecreate_json_body import ReportSchedulecreateJsonBody
+from ...models.report_schedulecreate_data_body import \
+    ReportSchedulecreateDataBody
+from ...models.report_schedulecreate_files_body import \
+    ReportSchedulecreateFilesBody
+from ...models.report_schedulecreate_json_body import \
+    ReportSchedulecreateJsonBody
 from ...types import UNSET, Response, Unset
 
 

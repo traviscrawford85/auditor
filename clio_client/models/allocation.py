@@ -11,10 +11,12 @@ from ..types import UNSET, Unset
 if TYPE_CHECKING:
     from ..models.allocation_bill import AllocationBill
     from ..models.allocation_contact import AllocationContact
-    from ..models.allocation_destination_bank_account import AllocationDestinationBankAccount
+    from ..models.allocation_destination_bank_account import \
+        AllocationDestinationBankAccount
     from ..models.allocation_matter import AllocationMatter
     from ..models.allocation_parent import AllocationParent
-    from ..models.allocation_source_bank_account import AllocationSourceBankAccount
+    from ..models.allocation_source_bank_account import \
+        AllocationSourceBankAccount
 
 
 T = TypeVar("T", bound="Allocation")
@@ -168,10 +170,12 @@ class Allocation:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.allocation_bill import AllocationBill
         from ..models.allocation_contact import AllocationContact
-        from ..models.allocation_destination_bank_account import AllocationDestinationBankAccount
+        from ..models.allocation_destination_bank_account import \
+            AllocationDestinationBankAccount
         from ..models.allocation_matter import AllocationMatter
         from ..models.allocation_parent import AllocationParent
-        from ..models.allocation_source_bank_account import AllocationSourceBankAccount
+        from ..models.allocation_source_bank_account import \
+            AllocationSourceBankAccount
 
         d = dict(src_dict)
         id = d.pop("id", UNSET)

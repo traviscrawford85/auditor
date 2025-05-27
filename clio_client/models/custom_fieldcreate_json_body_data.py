@@ -6,18 +6,15 @@ from attrs import field as _attrs_field
 
 from ..models.custom_fieldcreate_json_body_data_field_type import (
     CustomFieldcreateJsonBodyDataFieldType,
-    check_custom_fieldcreate_json_body_data_field_type,
-)
+    check_custom_fieldcreate_json_body_data_field_type)
 from ..models.custom_fieldcreate_json_body_data_parent_type import (
     CustomFieldcreateJsonBodyDataParentType,
-    check_custom_fieldcreate_json_body_data_parent_type,
-)
+    check_custom_fieldcreate_json_body_data_parent_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.custom_fieldcreate_json_body_data_picklist_options_item import (
-        CustomFieldcreateJsonBodyDataPicklistOptionsItem,
-    )
+    from ..models.custom_fieldcreate_json_body_data_picklist_options_item import \
+        CustomFieldcreateJsonBodyDataPicklistOptionsItem
 
 
 T = TypeVar("T", bound="CustomFieldcreateJsonBodyData")
@@ -87,9 +84,8 @@ class CustomFieldcreateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.custom_fieldcreate_json_body_data_picklist_options_item import (
-            CustomFieldcreateJsonBodyDataPicklistOptionsItem,
-        )
+        from ..models.custom_fieldcreate_json_body_data_picklist_options_item import \
+            CustomFieldcreateJsonBodyDataPicklistOptionsItem
 
         d = dict(src_dict)
         field_type = check_custom_fieldcreate_json_body_data_field_type(d.pop("field_type"))

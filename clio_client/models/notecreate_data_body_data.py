@@ -6,15 +6,17 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.notecreate_data_body_data_type import NotecreateDataBodyDataType, check_notecreate_data_body_data_type
+from ..models.notecreate_data_body_data_type import (
+    NotecreateDataBodyDataType, check_notecreate_data_body_data_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.notecreate_data_body_data_contact import NotecreateDataBodyDataContact
-    from ..models.notecreate_data_body_data_matter import NotecreateDataBodyDataMatter
-    from ..models.notecreate_data_body_data_notification_event_subscribers_item import (
-        NotecreateDataBodyDataNotificationEventSubscribersItem,
-    )
+    from ..models.notecreate_data_body_data_contact import \
+        NotecreateDataBodyDataContact
+    from ..models.notecreate_data_body_data_matter import \
+        NotecreateDataBodyDataMatter
+    from ..models.notecreate_data_body_data_notification_event_subscribers_item import \
+        NotecreateDataBodyDataNotificationEventSubscribersItem
 
 
 T = TypeVar("T", bound="NotecreateDataBodyData")
@@ -86,11 +88,12 @@ class NotecreateDataBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.notecreate_data_body_data_contact import NotecreateDataBodyDataContact
-        from ..models.notecreate_data_body_data_matter import NotecreateDataBodyDataMatter
-        from ..models.notecreate_data_body_data_notification_event_subscribers_item import (
-            NotecreateDataBodyDataNotificationEventSubscribersItem,
-        )
+        from ..models.notecreate_data_body_data_contact import \
+            NotecreateDataBodyDataContact
+        from ..models.notecreate_data_body_data_matter import \
+            NotecreateDataBodyDataMatter
+        from ..models.notecreate_data_body_data_notification_event_subscribers_item import \
+            NotecreateDataBodyDataNotificationEventSubscribersItem
 
         d = dict(src_dict)
         contact = NotecreateDataBodyDataContact.from_dict(d.pop("contact"))

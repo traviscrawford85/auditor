@@ -8,9 +8,8 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.error import Error
 from ...models.expense_category_list import ExpenseCategoryList
-from ...models.expense_categoryindex_entry_type import (
-    ExpenseCategoryindexEntryType,
-)
+from ...models.expense_categoryindex_entry_type import \
+    ExpenseCategoryindexEntryType
 from ...models.expense_categoryindex_order import ExpenseCategoryindexOrder
 from ...types import UNSET, Response, Unset
 

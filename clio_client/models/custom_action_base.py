@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.custom_action_base_ui_reference import CustomActionBaseUiReference, check_custom_action_base_ui_reference
+from ..models.custom_action_base_ui_reference import (
+    CustomActionBaseUiReference, check_custom_action_base_ui_reference)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="CustomActionBase")

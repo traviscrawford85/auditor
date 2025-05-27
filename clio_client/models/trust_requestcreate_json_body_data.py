@@ -8,12 +8,12 @@ from dateutil.parser import isoparse
 
 from ..models.trust_requestcreate_json_body_data_trust_type import (
     TrustRequestcreateJsonBodyDataTrustType,
-    check_trust_requestcreate_json_body_data_trust_type,
-)
+    check_trust_requestcreate_json_body_data_trust_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.trust_requestcreate_json_body_data_matter_item import TrustRequestcreateJsonBodyDataMatterItem
+    from ..models.trust_requestcreate_json_body_data_matter_item import \
+        TrustRequestcreateJsonBodyDataMatterItem
 
 
 T = TypeVar("T", bound="TrustRequestcreateJsonBodyData")
@@ -86,7 +86,8 @@ class TrustRequestcreateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.trust_requestcreate_json_body_data_matter_item import TrustRequestcreateJsonBodyDataMatterItem
+        from ..models.trust_requestcreate_json_body_data_matter_item import \
+            TrustRequestcreateJsonBodyDataMatterItem
 
         d = dict(src_dict)
         approved = d.pop("approved")

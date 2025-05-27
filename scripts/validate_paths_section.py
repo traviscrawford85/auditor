@@ -1,4 +1,5 @@
 import sys
+
 import yaml
 
 spec_path = "openapi/expanded_full.yaml"

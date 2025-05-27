@@ -1,5 +1,7 @@
 # Adapter stubs for Reportpresetcreaterequestdata
-from schemas.from_spec.reportpresetcreaterequestdata import ReportpresetcreaterequestdataIn, ReportpresetcreaterequestdataOut, ReportpresetcreaterequestdataUpdate, ReportpresetcreaterequestdataDb
+from schemas.from_spec.reportpresetcreaterequestdata import \
+    ReportpresetcreaterequestdataOut
+
 
 def convert_sdk_to_reportpresetcreaterequestdataout(sdk_obj):
     # TODO

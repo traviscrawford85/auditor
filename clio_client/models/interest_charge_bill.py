@@ -8,8 +8,7 @@ from dateutil.parser import isoparse
 
 from ..models.bill_base_available_state_transitions import (
     BillBaseAvailableStateTransitions,
-    check_bill_base_available_state_transitions,
-)
+    check_bill_base_available_state_transitions)
 from ..models.bill_base_kind import BillBaseKind, check_bill_base_kind
 from ..models.bill_base_state import BillBaseState, check_bill_base_state
 from ..models.bill_base_type import BillBaseType, check_bill_base_type

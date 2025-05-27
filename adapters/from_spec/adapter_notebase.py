@@ -1,5 +1,6 @@
 # Adapter stubs for Notebase
-from schemas.from_spec.notebase import NoteBaseIn, NoteBaseOut, NoteBaseUpdate, NoteBaseDb
+from schemas.from_spec.notebase import NoteBaseOut
+
 
 def convert_sdk_to_noteBaseOut(sdk_obj):
     # TODO

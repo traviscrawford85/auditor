@@ -9,8 +9,10 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.matter_docketcreate_data_body_data_jurisdiction import MatterDocketcreateDataBodyDataJurisdiction
-    from ..models.matter_docketcreate_data_body_data_trigger import MatterDocketcreateDataBodyDataTrigger
+    from ..models.matter_docketcreate_data_body_data_jurisdiction import \
+        MatterDocketcreateDataBodyDataJurisdiction
+    from ..models.matter_docketcreate_data_body_data_trigger import \
+        MatterDocketcreateDataBodyDataTrigger
 
 
 T = TypeVar("T", bound="MatterDocketcreateDataBodyData")
@@ -65,8 +67,10 @@ class MatterDocketcreateDataBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.matter_docketcreate_data_body_data_jurisdiction import MatterDocketcreateDataBodyDataJurisdiction
-        from ..models.matter_docketcreate_data_body_data_trigger import MatterDocketcreateDataBodyDataTrigger
+        from ..models.matter_docketcreate_data_body_data_jurisdiction import \
+            MatterDocketcreateDataBodyDataJurisdiction
+        from ..models.matter_docketcreate_data_body_data_trigger import \
+            MatterDocketcreateDataBodyDataTrigger
 
         d = dict(src_dict)
         jurisdiction = MatterDocketcreateDataBodyDataJurisdiction.from_dict(d.pop("jurisdiction"))

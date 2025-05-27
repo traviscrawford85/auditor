@@ -8,32 +8,38 @@ from dateutil.parser import isoparse
 
 from ..models.activityupdate_files_body_data_tax_setting import (
     ActivityupdateFilesBodyDataTaxSetting,
-    check_activityupdate_files_body_data_tax_setting,
-)
+    check_activityupdate_files_body_data_tax_setting)
 from ..models.activityupdate_files_body_data_type import (
-    ActivityupdateFilesBodyDataType,
-    check_activityupdate_files_body_data_type,
-)
+    ActivityupdateFilesBodyDataType, check_activityupdate_files_body_data_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.activityupdate_files_body_data_activity_description import (
-        ActivityupdateFilesBodyDataActivityDescription,
-    )
-    from ..models.activityupdate_files_body_data_calendar_entry import ActivityupdateFilesBodyDataCalendarEntry
-    from ..models.activityupdate_files_body_data_client_portal import ActivityupdateFilesBodyDataClientPortal
-    from ..models.activityupdate_files_body_data_communication import ActivityupdateFilesBodyDataCommunication
-    from ..models.activityupdate_files_body_data_contact_note import ActivityupdateFilesBodyDataContactNote
-    from ..models.activityupdate_files_body_data_expense_category import ActivityupdateFilesBodyDataExpenseCategory
-    from ..models.activityupdate_files_body_data_matter import ActivityupdateFilesBodyDataMatter
-    from ..models.activityupdate_files_body_data_matter_note import ActivityupdateFilesBodyDataMatterNote
-    from ..models.activityupdate_files_body_data_task import ActivityupdateFilesBodyDataTask
-    from ..models.activityupdate_files_body_data_text_message_conversation import (
-        ActivityupdateFilesBodyDataTextMessageConversation,
-    )
-    from ..models.activityupdate_files_body_data_user import ActivityupdateFilesBodyDataUser
-    from ..models.activityupdate_files_body_data_utbms_expense import ActivityupdateFilesBodyDataUtbmsExpense
-    from ..models.activityupdate_files_body_data_vendor import ActivityupdateFilesBodyDataVendor
+    from ..models.activityupdate_files_body_data_activity_description import \
+        ActivityupdateFilesBodyDataActivityDescription
+    from ..models.activityupdate_files_body_data_calendar_entry import \
+        ActivityupdateFilesBodyDataCalendarEntry
+    from ..models.activityupdate_files_body_data_client_portal import \
+        ActivityupdateFilesBodyDataClientPortal
+    from ..models.activityupdate_files_body_data_communication import \
+        ActivityupdateFilesBodyDataCommunication
+    from ..models.activityupdate_files_body_data_contact_note import \
+        ActivityupdateFilesBodyDataContactNote
+    from ..models.activityupdate_files_body_data_expense_category import \
+        ActivityupdateFilesBodyDataExpenseCategory
+    from ..models.activityupdate_files_body_data_matter import \
+        ActivityupdateFilesBodyDataMatter
+    from ..models.activityupdate_files_body_data_matter_note import \
+        ActivityupdateFilesBodyDataMatterNote
+    from ..models.activityupdate_files_body_data_task import \
+        ActivityupdateFilesBodyDataTask
+    from ..models.activityupdate_files_body_data_text_message_conversation import \
+        ActivityupdateFilesBodyDataTextMessageConversation
+    from ..models.activityupdate_files_body_data_user import \
+        ActivityupdateFilesBodyDataUser
+    from ..models.activityupdate_files_body_data_utbms_expense import \
+        ActivityupdateFilesBodyDataUtbmsExpense
+    from ..models.activityupdate_files_body_data_vendor import \
+        ActivityupdateFilesBodyDataVendor
 
 
 T = TypeVar("T", bound="ActivityupdateFilesBodyData")
@@ -252,23 +258,32 @@ class ActivityupdateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.activityupdate_files_body_data_activity_description import (
-            ActivityupdateFilesBodyDataActivityDescription,
-        )
-        from ..models.activityupdate_files_body_data_calendar_entry import ActivityupdateFilesBodyDataCalendarEntry
-        from ..models.activityupdate_files_body_data_client_portal import ActivityupdateFilesBodyDataClientPortal
-        from ..models.activityupdate_files_body_data_communication import ActivityupdateFilesBodyDataCommunication
-        from ..models.activityupdate_files_body_data_contact_note import ActivityupdateFilesBodyDataContactNote
-        from ..models.activityupdate_files_body_data_expense_category import ActivityupdateFilesBodyDataExpenseCategory
-        from ..models.activityupdate_files_body_data_matter import ActivityupdateFilesBodyDataMatter
-        from ..models.activityupdate_files_body_data_matter_note import ActivityupdateFilesBodyDataMatterNote
-        from ..models.activityupdate_files_body_data_task import ActivityupdateFilesBodyDataTask
-        from ..models.activityupdate_files_body_data_text_message_conversation import (
-            ActivityupdateFilesBodyDataTextMessageConversation,
-        )
-        from ..models.activityupdate_files_body_data_user import ActivityupdateFilesBodyDataUser
-        from ..models.activityupdate_files_body_data_utbms_expense import ActivityupdateFilesBodyDataUtbmsExpense
-        from ..models.activityupdate_files_body_data_vendor import ActivityupdateFilesBodyDataVendor
+        from ..models.activityupdate_files_body_data_activity_description import \
+            ActivityupdateFilesBodyDataActivityDescription
+        from ..models.activityupdate_files_body_data_calendar_entry import \
+            ActivityupdateFilesBodyDataCalendarEntry
+        from ..models.activityupdate_files_body_data_client_portal import \
+            ActivityupdateFilesBodyDataClientPortal
+        from ..models.activityupdate_files_body_data_communication import \
+            ActivityupdateFilesBodyDataCommunication
+        from ..models.activityupdate_files_body_data_contact_note import \
+            ActivityupdateFilesBodyDataContactNote
+        from ..models.activityupdate_files_body_data_expense_category import \
+            ActivityupdateFilesBodyDataExpenseCategory
+        from ..models.activityupdate_files_body_data_matter import \
+            ActivityupdateFilesBodyDataMatter
+        from ..models.activityupdate_files_body_data_matter_note import \
+            ActivityupdateFilesBodyDataMatterNote
+        from ..models.activityupdate_files_body_data_task import \
+            ActivityupdateFilesBodyDataTask
+        from ..models.activityupdate_files_body_data_text_message_conversation import \
+            ActivityupdateFilesBodyDataTextMessageConversation
+        from ..models.activityupdate_files_body_data_user import \
+            ActivityupdateFilesBodyDataUser
+        from ..models.activityupdate_files_body_data_utbms_expense import \
+            ActivityupdateFilesBodyDataUtbmsExpense
+        from ..models.activityupdate_files_body_data_vendor import \
+            ActivityupdateFilesBodyDataVendor
 
         d = dict(src_dict)
         _activity_description = d.pop("activity_description", UNSET)

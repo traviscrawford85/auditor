@@ -6,9 +6,12 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.document_template_show import DocumentTemplateShow
-from ...models.document_templateupdate_data_body import DocumentTemplateupdateDataBody
-from ...models.document_templateupdate_files_body import DocumentTemplateupdateFilesBody
-from ...models.document_templateupdate_json_body import DocumentTemplateupdateJsonBody
+from ...models.document_templateupdate_data_body import \
+    DocumentTemplateupdateDataBody
+from ...models.document_templateupdate_files_body import \
+    DocumentTemplateupdateFilesBody
+from ...models.document_templateupdate_json_body import \
+    DocumentTemplateupdateJsonBody
 from ...models.error import Error
 from ...types import UNSET, Response, Unset
 

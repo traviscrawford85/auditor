@@ -9,8 +9,10 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.conversation_message_conversation import ConversationMessageConversation
-    from ..models.conversation_message_document import ConversationMessageDocument
+    from ..models.conversation_message_conversation import \
+        ConversationMessageConversation
+    from ..models.conversation_message_document import \
+        ConversationMessageDocument
     from ..models.conversation_message_sender import ConversationMessageSender
     from ..models.unredacted_participant_base import UnredactedParticipantBase
 
@@ -112,10 +114,14 @@ class ConversationMessage:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.conversation_message_conversation import ConversationMessageConversation
-        from ..models.conversation_message_document import ConversationMessageDocument
-        from ..models.conversation_message_sender import ConversationMessageSender
-        from ..models.unredacted_participant_base import UnredactedParticipantBase
+        from ..models.conversation_message_conversation import \
+            ConversationMessageConversation
+        from ..models.conversation_message_document import \
+            ConversationMessageDocument
+        from ..models.conversation_message_sender import \
+            ConversationMessageSender
+        from ..models.unredacted_participant_base import \
+            UnredactedParticipantBase
 
         d = dict(src_dict)
         id = d.pop("id", UNSET)

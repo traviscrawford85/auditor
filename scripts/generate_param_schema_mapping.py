@@ -1,6 +1,7 @@
-from pathlib import Path
-import yaml
 import json
+from pathlib import Path
+
+import yaml
 
 PARAMS_FILE = Path("openapi/components/parameters.yaml")
 SCHEMAS_DIR = Path("openapi/components/schemas")

@@ -36,7 +36,8 @@ class DocumentcopyJsonBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.documentcopy_json_body_data import DocumentcopyJsonBodyData
+        from ..models.documentcopy_json_body_data import \
+            DocumentcopyJsonBodyData
 
         d = dict(src_dict)
         data = DocumentcopyJsonBodyData.from_dict(d.pop("data"))

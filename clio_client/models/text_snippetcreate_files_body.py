@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.text_snippetcreate_files_body_data import TextSnippetcreateFilesBodyData
+    from ..models.text_snippetcreate_files_body_data import \
+        TextSnippetcreateFilesBodyData
 
 
 T = TypeVar("T", bound="TextSnippetcreateFilesBody")
@@ -52,7 +53,8 @@ class TextSnippetcreateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.text_snippetcreate_files_body_data import TextSnippetcreateFilesBodyData
+        from ..models.text_snippetcreate_files_body_data import \
+            TextSnippetcreateFilesBodyData
 
         d = dict(src_dict)
         data = TextSnippetcreateFilesBodyData.from_dict(d.pop("data"))

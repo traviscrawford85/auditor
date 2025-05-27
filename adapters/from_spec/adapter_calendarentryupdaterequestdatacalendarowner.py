@@ -1,5 +1,7 @@
 # Adapter stubs for Calendarentryupdaterequestdatacalendarowner
-from schemas.from_spec.calendarentryupdaterequestdatacalendarowner import CalendarentryupdaterequestdatacalendarownerIn, CalendarentryupdaterequestdatacalendarownerOut, CalendarentryupdaterequestdatacalendarownerUpdate, CalendarentryupdaterequestdatacalendarownerDb
+from schemas.from_spec.calendarentryupdaterequestdatacalendarowner import \
+    CalendarentryupdaterequestdatacalendarownerOut
+
 
 def convert_sdk_to_calendarentryupdaterequestdatacalendarownerout(sdk_obj):
     # TODO

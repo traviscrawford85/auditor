@@ -6,9 +6,12 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.activity_description_show import ActivityDescriptionShow
-from ...models.activity_descriptionupdate_data_body import ActivityDescriptionupdateDataBody
-from ...models.activity_descriptionupdate_files_body import ActivityDescriptionupdateFilesBody
-from ...models.activity_descriptionupdate_json_body import ActivityDescriptionupdateJsonBody
+from ...models.activity_descriptionupdate_data_body import \
+    ActivityDescriptionupdateDataBody
+from ...models.activity_descriptionupdate_files_body import \
+    ActivityDescriptionupdateFilesBody
+from ...models.activity_descriptionupdate_json_body import \
+    ActivityDescriptionupdateJsonBody
 from ...models.error import Error
 from ...types import UNSET, Response, Unset
 

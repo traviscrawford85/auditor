@@ -1,5 +1,7 @@
 # Adapter stubs for Mattercreaterequestdataoriginatingattorney
-from schemas.from_spec.mattercreaterequestdataoriginatingattorney import MattercreaterequestdataoriginatingattorneyIn, MattercreaterequestdataoriginatingattorneyOut, MattercreaterequestdataoriginatingattorneyUpdate, MattercreaterequestdataoriginatingattorneyDb
+from schemas.from_spec.mattercreaterequestdataoriginatingattorney import \
+    MattercreaterequestdataoriginatingattorneyOut
+
 
 def convert_sdk_to_mattercreaterequestdataoriginatingattorneyout(sdk_obj):
     # TODO

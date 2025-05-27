@@ -1,5 +1,7 @@
 # Adapter stubs for Textsnippetcreaterequestdata
-from schemas.from_spec.textsnippetcreaterequestdata import TextsnippetcreaterequestdataIn, TextsnippetcreaterequestdataOut, TextsnippetcreaterequestdataUpdate, TextsnippetcreaterequestdataDb
+from schemas.from_spec.textsnippetcreaterequestdata import \
+    TextsnippetcreaterequestdataOut
+
 
 def convert_sdk_to_textsnippetcreaterequestdataout(sdk_obj):
     # TODO

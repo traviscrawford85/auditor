@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.custom_actionupdate_files_body_data_ui_reference import (
     CustomActionupdateFilesBodyDataUiReference,
-    check_custom_actionupdate_files_body_data_ui_reference,
-)
+    check_custom_actionupdate_files_body_data_ui_reference)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="CustomActionupdateFilesBodyData")

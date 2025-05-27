@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.clio_payments_linkcreate_files_body_data_subject_type import (
     ClioPaymentsLinkcreateFilesBodyDataSubjectType,
-    check_clio_payments_linkcreate_files_body_data_subject_type,
-)
+    check_clio_payments_linkcreate_files_body_data_subject_type)
 
 T = TypeVar("T", bound="ClioPaymentsLinkcreateFilesBodyDataSubject")
 

@@ -6,14 +6,13 @@ from attrs import field as _attrs_field
 
 from ..models.document_automationcreate_json_body_data_formats_item import (
     DocumentAutomationcreateJsonBodyDataFormatsItem,
-    check_document_automationcreate_json_body_data_formats_item,
-)
+    check_document_automationcreate_json_body_data_formats_item)
 
 if TYPE_CHECKING:
-    from ..models.document_automationcreate_json_body_data_document_template import (
-        DocumentAutomationcreateJsonBodyDataDocumentTemplate,
-    )
-    from ..models.document_automationcreate_json_body_data_matter import DocumentAutomationcreateJsonBodyDataMatter
+    from ..models.document_automationcreate_json_body_data_document_template import \
+        DocumentAutomationcreateJsonBodyDataDocumentTemplate
+    from ..models.document_automationcreate_json_body_data_matter import \
+        DocumentAutomationcreateJsonBodyDataMatter
 
 
 T = TypeVar("T", bound="DocumentAutomationcreateJsonBodyData")
@@ -63,10 +62,10 @@ class DocumentAutomationcreateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.document_automationcreate_json_body_data_document_template import (
-            DocumentAutomationcreateJsonBodyDataDocumentTemplate,
-        )
-        from ..models.document_automationcreate_json_body_data_matter import DocumentAutomationcreateJsonBodyDataMatter
+        from ..models.document_automationcreate_json_body_data_document_template import \
+            DocumentAutomationcreateJsonBodyDataDocumentTemplate
+        from ..models.document_automationcreate_json_body_data_matter import \
+            DocumentAutomationcreateJsonBodyDataMatter
 
         d = dict(src_dict)
         document_template = DocumentAutomationcreateJsonBodyDataDocumentTemplate.from_dict(d.pop("document_template"))

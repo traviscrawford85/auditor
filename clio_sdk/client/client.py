@@ -1,5 +1,6 @@
 from httpx import AsyncClient
 
+
 class ClioClient:
     def __init__(self, token: str, base_url: str = "https://app.clio.com/api/v4"):
         self.token = token

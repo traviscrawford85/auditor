@@ -1,5 +1,7 @@
 # Adapter stubs for Timercreaterequestdataactivity
-from schemas.from_spec.timercreaterequestdataactivity import TimercreaterequestdataactivityIn, TimercreaterequestdataactivityOut, TimercreaterequestdataactivityUpdate, TimercreaterequestdataactivityDb
+from schemas.from_spec.timercreaterequestdataactivity import \
+    TimercreaterequestdataactivityOut
+
 
 def convert_sdk_to_timercreaterequestdataactivityout(sdk_obj):
     # TODO

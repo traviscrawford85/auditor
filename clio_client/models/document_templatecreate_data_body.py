@@ -5,7 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.document_templatecreate_data_body_data import DocumentTemplatecreateDataBodyData
+    from ..models.document_templatecreate_data_body_data import \
+        DocumentTemplatecreateDataBodyData
 
 
 T = TypeVar("T", bound="DocumentTemplatecreateDataBody")
@@ -36,7 +37,8 @@ class DocumentTemplatecreateDataBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.document_templatecreate_data_body_data import DocumentTemplatecreateDataBodyData
+        from ..models.document_templatecreate_data_body_data import \
+            DocumentTemplatecreateDataBodyData
 
         d = dict(src_dict)
         data = DocumentTemplatecreateDataBodyData.from_dict(d.pop("data"))

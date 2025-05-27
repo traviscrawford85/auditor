@@ -1,5 +1,5 @@
-import yaml
 import pandas as pd
+import yaml
 
 OPENAPI_FILE = "openapi/openapi_final_cleaned.yaml"
 
@@ -8,6 +8,8 @@ def load_openapi(file_path):
         return yaml.safe_load(f)
 
 def resolve_ref(ref, components):
+    if not ref:
+        return {}
     try:
         if ref.startswith("#/components/parameters/"):
             name = ref.split("/")[-1]
@@ -19,6 +21,26 @@ def resolve_ref(ref, components):
         return {}
     return {}
 
+def extract_request_schema(request_body, components):
+    if not request_body:
+        return None
+    if "$ref" in request_body:
+        resolved = resolve_ref(request_body["$ref"], components)
+        return resolved.get("description", "Ref only")
+    if "content" in request_body:
+        return request_body.get("description", "Inline body")
+    return None
+
+def extract_query_params(params, components):
+    summaries = []
+    for param in params:
+        if "$ref" in param:
+            resolved = resolve_ref(param["$ref"], components)
+            summaries.append(resolved.get("name", ""))
+        elif param.get("in") == "query":
+            summaries.append(param.get("name", ""))
+    return ", ".join(summaries)
+
 def parse_paths(openapi):
     components = openapi.get("components", {})
     data = []
@@ -29,14 +51,10 @@ def parse_paths(openapi):
             summary = details.get("summary", "")
             desc = details.get("description", "")
             op_id = details.get("operationId", "")
-            request_body_ref = details.get("requestBody", {}).get("$ref")
-            request_schema = resolve_ref(request_body_ref, components).get("description") if request_body_ref else None
-            param_summaries = []
-            for param in details.get("parameters", []):
-                if isinstance(param, dict) and "$ref" in param:
-                    resolved = resolve_ref(param["$ref"], components)
-                    if resolved:
-                        param_summaries.append(resolved.get("name", ""))
+            request_body = details.get("requestBody")
+            request_schema = extract_request_schema(request_body, components)
+            param_list = details.get("parameters", [])
+            query_params = extract_query_params(param_list, components)
             data.append({
                 "Path": path,
                 "Method": method.upper(),
@@ -44,7 +62,7 @@ def parse_paths(openapi):
                 "Summary": summary,
                 "Description": desc,
                 "Request Schema": request_schema,
-                "Query Params": ", ".join(param_summaries)
+                "Query Params": query_params
             })
     return pd.DataFrame(data)
 

@@ -8,7 +8,8 @@ from ...client import AuthenticatedClient, Client
 from ...models.error import Error
 from ...models.report_preset_show import ReportPresetShow
 from ...models.report_presetupdate_data_body import ReportPresetupdateDataBody
-from ...models.report_presetupdate_files_body import ReportPresetupdateFilesBody
+from ...models.report_presetupdate_files_body import \
+    ReportPresetupdateFilesBody
 from ...models.report_presetupdate_json_body import ReportPresetupdateJsonBody
 from ...types import UNSET, Response, Unset
 

@@ -9,9 +9,8 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.noteupdate_files_body_data_notification_event_subscribers_item import (
-        NoteupdateFilesBodyDataNotificationEventSubscribersItem,
-    )
+    from ..models.noteupdate_files_body_data_notification_event_subscribers_item import \
+        NoteupdateFilesBodyDataNotificationEventSubscribersItem
 
 
 T = TypeVar("T", bound="NoteupdateFilesBodyData")
@@ -67,9 +66,8 @@ class NoteupdateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.noteupdate_files_body_data_notification_event_subscribers_item import (
-            NoteupdateFilesBodyDataNotificationEventSubscribersItem,
-        )
+        from ..models.noteupdate_files_body_data_notification_event_subscribers_item import \
+            NoteupdateFilesBodyDataNotificationEventSubscribersItem
 
         d = dict(src_dict)
         _date = d.pop("date", UNSET)

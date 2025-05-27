@@ -1,5 +1,7 @@
 # Adapter stubs for Contactcreaterequestdatawebsitesinner
-from schemas.from_spec.contactcreaterequestdatawebsitesinner import ContactcreaterequestdatawebsitesinnerIn, ContactcreaterequestdatawebsitesinnerOut, ContactcreaterequestdatawebsitesinnerUpdate, ContactcreaterequestdatawebsitesinnerDb
+from schemas.from_spec.contactcreaterequestdatawebsitesinner import \
+    ContactcreaterequestdatawebsitesinnerOut
+
 
 def convert_sdk_to_contactcreaterequestdatawebsitesinnerout(sdk_obj):
     # TODO

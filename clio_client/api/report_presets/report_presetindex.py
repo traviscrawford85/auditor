@@ -10,9 +10,8 @@ from ...models.error import Error
 from ...models.report_preset_list import ReportPresetList
 from ...models.report_presetindex_category import ReportPresetindexCategory
 from ...models.report_presetindex_order import ReportPresetindexOrder
-from ...models.report_presetindex_schedule_frequency import (
-    ReportPresetindexScheduleFrequency,
-)
+from ...models.report_presetindex_schedule_frequency import \
+    ReportPresetindexScheduleFrequency
 from ...types import UNSET, Response, Unset
 
 

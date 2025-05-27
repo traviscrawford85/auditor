@@ -1,5 +1,6 @@
 # Updated model generator for expanded_full.yaml (inlined OpenAPI spec)
 import os
+
 import yaml
 
 INPUT_FILE = "openapi/expanded_full.yaml"

@@ -9,9 +9,8 @@ from ...client import AuthenticatedClient, Client
 from ...models.error import Error
 from ...models.matter_list import MatterList
 from ...models.matterindex_close_date import MatterindexCloseDate
-from ...models.matterindex_custom_field_values import (
-    MatterindexCustomFieldValues,
-)
+from ...models.matterindex_custom_field_values import \
+    MatterindexCustomFieldValues
 from ...models.matterindex_open_date import MatterindexOpenDate
 from ...models.matterindex_order import MatterindexOrder
 from ...models.matterindex_pending_date import MatterindexPendingDate

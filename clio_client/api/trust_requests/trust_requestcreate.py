@@ -8,7 +8,8 @@ from ...client import AuthenticatedClient, Client
 from ...models.error import Error
 from ...models.trust_request_show import TrustRequestShow
 from ...models.trust_requestcreate_data_body import TrustRequestcreateDataBody
-from ...models.trust_requestcreate_files_body import TrustRequestcreateFilesBody
+from ...models.trust_requestcreate_files_body import \
+    TrustRequestcreateFilesBody
 from ...models.trust_requestcreate_json_body import TrustRequestcreateJsonBody
 from ...types import UNSET, Response, Unset
 

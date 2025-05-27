@@ -8,23 +8,22 @@ from dateutil.parser import isoparse
 
 from ..models.calendar_entrycreate_json_body_data_deleted import (
     CalendarEntrycreateJsonBodyDataDeleted,
-    check_calendar_entrycreate_json_body_data_deleted,
-)
+    check_calendar_entrycreate_json_body_data_deleted)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.calendar_entrycreate_json_body_data_attendees_item import CalendarEntrycreateJsonBodyDataAttendeesItem
-    from ..models.calendar_entrycreate_json_body_data_calendar_entry_event_type import (
-        CalendarEntrycreateJsonBodyDataCalendarEntryEventType,
-    )
-    from ..models.calendar_entrycreate_json_body_data_calendar_owner import CalendarEntrycreateJsonBodyDataCalendarOwner
-    from ..models.calendar_entrycreate_json_body_data_conference_meeting import (
-        CalendarEntrycreateJsonBodyDataConferenceMeeting,
-    )
-    from ..models.calendar_entrycreate_json_body_data_external_properties_item import (
-        CalendarEntrycreateJsonBodyDataExternalPropertiesItem,
-    )
-    from ..models.calendar_entrycreate_json_body_data_matter import CalendarEntrycreateJsonBodyDataMatter
+    from ..models.calendar_entrycreate_json_body_data_attendees_item import \
+        CalendarEntrycreateJsonBodyDataAttendeesItem
+    from ..models.calendar_entrycreate_json_body_data_calendar_entry_event_type import \
+        CalendarEntrycreateJsonBodyDataCalendarEntryEventType
+    from ..models.calendar_entrycreate_json_body_data_calendar_owner import \
+        CalendarEntrycreateJsonBodyDataCalendarOwner
+    from ..models.calendar_entrycreate_json_body_data_conference_meeting import \
+        CalendarEntrycreateJsonBodyDataConferenceMeeting
+    from ..models.calendar_entrycreate_json_body_data_external_properties_item import \
+        CalendarEntrycreateJsonBodyDataExternalPropertiesItem
+    from ..models.calendar_entrycreate_json_body_data_matter import \
+        CalendarEntrycreateJsonBodyDataMatter
 
 
 T = TypeVar("T", bound="CalendarEntrycreateJsonBodyData")
@@ -157,22 +156,18 @@ class CalendarEntrycreateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.calendar_entrycreate_json_body_data_attendees_item import (
-            CalendarEntrycreateJsonBodyDataAttendeesItem,
-        )
-        from ..models.calendar_entrycreate_json_body_data_calendar_entry_event_type import (
-            CalendarEntrycreateJsonBodyDataCalendarEntryEventType,
-        )
-        from ..models.calendar_entrycreate_json_body_data_calendar_owner import (
-            CalendarEntrycreateJsonBodyDataCalendarOwner,
-        )
-        from ..models.calendar_entrycreate_json_body_data_conference_meeting import (
-            CalendarEntrycreateJsonBodyDataConferenceMeeting,
-        )
-        from ..models.calendar_entrycreate_json_body_data_external_properties_item import (
-            CalendarEntrycreateJsonBodyDataExternalPropertiesItem,
-        )
-        from ..models.calendar_entrycreate_json_body_data_matter import CalendarEntrycreateJsonBodyDataMatter
+        from ..models.calendar_entrycreate_json_body_data_attendees_item import \
+            CalendarEntrycreateJsonBodyDataAttendeesItem
+        from ..models.calendar_entrycreate_json_body_data_calendar_entry_event_type import \
+            CalendarEntrycreateJsonBodyDataCalendarEntryEventType
+        from ..models.calendar_entrycreate_json_body_data_calendar_owner import \
+            CalendarEntrycreateJsonBodyDataCalendarOwner
+        from ..models.calendar_entrycreate_json_body_data_conference_meeting import \
+            CalendarEntrycreateJsonBodyDataConferenceMeeting
+        from ..models.calendar_entrycreate_json_body_data_external_properties_item import \
+            CalendarEntrycreateJsonBodyDataExternalPropertiesItem
+        from ..models.calendar_entrycreate_json_body_data_matter import \
+            CalendarEntrycreateJsonBodyDataMatter
 
         d = dict(src_dict)
         calendar_owner = CalendarEntrycreateJsonBodyDataCalendarOwner.from_dict(d.pop("calendar_owner"))

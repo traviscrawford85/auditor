@@ -6,9 +6,8 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.clio_payments_payment_list import ClioPaymentsPaymentList
-from ...models.clio_payments_paymentindex_state import (
-    ClioPaymentsPaymentindexState,
-)
+from ...models.clio_payments_paymentindex_state import \
+    ClioPaymentsPaymentindexState
 from ...models.error import Error
 from ...types import UNSET, Response, Unset
 

@@ -7,13 +7,12 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.matter_created_webhook_event_event import (
-    MatterCreatedWebhookEventEvent,
-    check_matter_created_webhook_event_event,
-)
+    MatterCreatedWebhookEventEvent, check_matter_created_webhook_event_event)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.matter_created_webhook_event_payload import MatterCreatedWebhookEventPayload
+    from ..models.matter_created_webhook_event_payload import \
+        MatterCreatedWebhookEventPayload
 
 
 T = TypeVar("T", bound="MatterCreatedWebhookEvent")
@@ -60,7 +59,8 @@ class MatterCreatedWebhookEvent:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.matter_created_webhook_event_payload import MatterCreatedWebhookEventPayload
+        from ..models.matter_created_webhook_event_payload import \
+            MatterCreatedWebhookEventPayload
 
         d = dict(src_dict)
         _event = d.pop("event", UNSET)

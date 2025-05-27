@@ -1,7 +1,8 @@
 import os
 import re
-import yaml
 from shutil import move
+
+import yaml
 
 OPENAPI_ROOT = "./openapi"
 LOG_FILE = "rename_log.txt"

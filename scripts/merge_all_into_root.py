@@ -1,6 +1,7 @@
-import yaml
-from pathlib import Path
 import re
+from pathlib import Path
+
+import yaml
 
 ROOT_PATH = Path("openapi/final_bundle.yaml")
 PATHS_DIR = Path("openapi/paths")

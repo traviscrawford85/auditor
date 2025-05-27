@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.trust_requestcreate_files_body_data import TrustRequestcreateFilesBodyData
+    from ..models.trust_requestcreate_files_body_data import \
+        TrustRequestcreateFilesBodyData
 
 
 T = TypeVar("T", bound="TrustRequestcreateFilesBody")
@@ -52,7 +53,8 @@ class TrustRequestcreateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.trust_requestcreate_files_body_data import TrustRequestcreateFilesBodyData
+        from ..models.trust_requestcreate_files_body_data import \
+            TrustRequestcreateFilesBodyData
 
         d = dict(src_dict)
         data = TrustRequestcreateFilesBodyData.from_dict(d.pop("data"))

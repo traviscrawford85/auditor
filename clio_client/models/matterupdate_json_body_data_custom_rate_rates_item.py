@@ -9,15 +9,12 @@ from dateutil.parser import isoparse
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.matterupdate_json_body_data_custom_rate_rates_item_activity_description import (
-        MatterupdateJsonBodyDataCustomRateRatesItemActivityDescription,
-    )
-    from ..models.matterupdate_json_body_data_custom_rate_rates_item_group import (
-        MatterupdateJsonBodyDataCustomRateRatesItemGroup,
-    )
-    from ..models.matterupdate_json_body_data_custom_rate_rates_item_user import (
-        MatterupdateJsonBodyDataCustomRateRatesItemUser,
-    )
+    from ..models.matterupdate_json_body_data_custom_rate_rates_item_activity_description import \
+        MatterupdateJsonBodyDataCustomRateRatesItemActivityDescription
+    from ..models.matterupdate_json_body_data_custom_rate_rates_item_group import \
+        MatterupdateJsonBodyDataCustomRateRatesItemGroup
+    from ..models.matterupdate_json_body_data_custom_rate_rates_item_user import \
+        MatterupdateJsonBodyDataCustomRateRatesItemUser
 
 
 T = TypeVar("T", bound="MatterupdateJsonBodyDataCustomRateRatesItem")
@@ -111,15 +108,12 @@ class MatterupdateJsonBodyDataCustomRateRatesItem:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.matterupdate_json_body_data_custom_rate_rates_item_activity_description import (
-            MatterupdateJsonBodyDataCustomRateRatesItemActivityDescription,
-        )
-        from ..models.matterupdate_json_body_data_custom_rate_rates_item_group import (
-            MatterupdateJsonBodyDataCustomRateRatesItemGroup,
-        )
-        from ..models.matterupdate_json_body_data_custom_rate_rates_item_user import (
-            MatterupdateJsonBodyDataCustomRateRatesItemUser,
-        )
+        from ..models.matterupdate_json_body_data_custom_rate_rates_item_activity_description import \
+            MatterupdateJsonBodyDataCustomRateRatesItemActivityDescription
+        from ..models.matterupdate_json_body_data_custom_rate_rates_item_group import \
+            MatterupdateJsonBodyDataCustomRateRatesItemGroup
+        from ..models.matterupdate_json_body_data_custom_rate_rates_item_user import \
+            MatterupdateJsonBodyDataCustomRateRatesItemUser
 
         d = dict(src_dict)
         _user = d.pop("user", UNSET)

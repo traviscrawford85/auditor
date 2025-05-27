@@ -6,12 +6,15 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.activity_base_tax_setting import ActivityBaseTaxSetting, check_activity_base_tax_setting
-from ..models.activity_base_type import ActivityBaseType, check_activity_base_type
+from ..models.activity_base_tax_setting import (
+    ActivityBaseTaxSetting, check_activity_base_tax_setting)
+from ..models.activity_base_type import (ActivityBaseType,
+                                         check_activity_base_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.activity_activity_description import ActivityActivityDescription
+    from ..models.activity_activity_description import \
+        ActivityActivityDescription
     from ..models.activity_bill import ActivityBill
     from ..models.activity_calendar_entry import ActivityCalendarEntry
     from ..models.activity_client_portal import ActivityClientPortal
@@ -19,12 +22,14 @@ if TYPE_CHECKING:
     from ..models.activity_contact_note import ActivityContactNote
     from ..models.activity_document_version import ActivityDocumentVersion
     from ..models.activity_expense_category import ActivityExpenseCategory
-    from ..models.activity_legal_aid_uk_activity import ActivityLegalAidUkActivity
+    from ..models.activity_legal_aid_uk_activity import \
+        ActivityLegalAidUkActivity
     from ..models.activity_matter import ActivityMatter
     from ..models.activity_matter_note import ActivityMatterNote
     from ..models.activity_subject import ActivitySubject
     from ..models.activity_task import ActivityTask
-    from ..models.activity_text_message_conversation import ActivityTextMessageConversation
+    from ..models.activity_text_message_conversation import \
+        ActivityTextMessageConversation
     from ..models.activity_timer import ActivityTimer
     from ..models.activity_user import ActivityUser
     from ..models.activity_utbms_expense import ActivityUtbmsExpense
@@ -363,7 +368,8 @@ class Activity:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.activity_activity_description import ActivityActivityDescription
+        from ..models.activity_activity_description import \
+            ActivityActivityDescription
         from ..models.activity_bill import ActivityBill
         from ..models.activity_calendar_entry import ActivityCalendarEntry
         from ..models.activity_client_portal import ActivityClientPortal
@@ -371,12 +377,14 @@ class Activity:
         from ..models.activity_contact_note import ActivityContactNote
         from ..models.activity_document_version import ActivityDocumentVersion
         from ..models.activity_expense_category import ActivityExpenseCategory
-        from ..models.activity_legal_aid_uk_activity import ActivityLegalAidUkActivity
+        from ..models.activity_legal_aid_uk_activity import \
+            ActivityLegalAidUkActivity
         from ..models.activity_matter import ActivityMatter
         from ..models.activity_matter_note import ActivityMatterNote
         from ..models.activity_subject import ActivitySubject
         from ..models.activity_task import ActivityTask
-        from ..models.activity_text_message_conversation import ActivityTextMessageConversation
+        from ..models.activity_text_message_conversation import \
+            ActivityTextMessageConversation
         from ..models.activity_timer import ActivityTimer
         from ..models.activity_user import ActivityUser
         from ..models.activity_utbms_expense import ActivityUtbmsExpense

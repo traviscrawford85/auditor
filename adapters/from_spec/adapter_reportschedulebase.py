@@ -1,5 +1,6 @@
 # Adapter stubs for Reportschedulebase
-from schemas.from_spec.reportschedulebase import ReportscheduleBaseIn, ReportscheduleBaseOut, ReportscheduleBaseUpdate, ReportscheduleBaseDb
+from schemas.from_spec.reportschedulebase import ReportscheduleBaseOut
+
 
 def convert_sdk_to_reportscheduleBaseOut(sdk_obj):
     # TODO

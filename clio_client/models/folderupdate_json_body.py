@@ -36,7 +36,8 @@ class FolderupdateJsonBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.folderupdate_json_body_data import FolderupdateJsonBodyData
+        from ..models.folderupdate_json_body_data import \
+            FolderupdateJsonBodyData
 
         d = dict(src_dict)
         data = FolderupdateJsonBodyData.from_dict(d.pop("data"))

@@ -119,7 +119,8 @@ class ExpenseCategory:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.expense_category_utbms_code import ExpenseCategoryUtbmsCode
+        from ..models.expense_category_utbms_code import \
+            ExpenseCategoryUtbmsCode
         from ..models.group_base import GroupBase
 
         d = dict(src_dict)

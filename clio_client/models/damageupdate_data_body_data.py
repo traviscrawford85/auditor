@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.damageupdate_data_body_data_damage_type import (
     DamageupdateDataBodyDataDamageType,
-    check_damageupdate_data_body_data_damage_type,
-)
+    check_damageupdate_data_body_data_damage_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="DamageupdateDataBodyData")

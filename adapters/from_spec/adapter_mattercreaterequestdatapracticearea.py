@@ -1,5 +1,7 @@
 # Adapter stubs for Mattercreaterequestdatapracticearea
-from schemas.from_spec.mattercreaterequestdatapracticearea import MattercreaterequestdatapracticeareaIn, MattercreaterequestdatapracticeareaOut, MattercreaterequestdatapracticeareaUpdate, MattercreaterequestdatapracticeareaDb
+from schemas.from_spec.mattercreaterequestdatapracticearea import \
+    MattercreaterequestdatapracticeareaOut
+
 
 def convert_sdk_to_mattercreaterequestdatapracticeareaout(sdk_obj):
     # TODO

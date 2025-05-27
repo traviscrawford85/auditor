@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.taskcreate_data_body_data_assignee_type import (
     TaskcreateDataBodyDataAssigneeType,
-    check_taskcreate_data_body_data_assignee_type,
-)
+    check_taskcreate_data_body_data_assignee_type)
 
 T = TypeVar("T", bound="TaskcreateDataBodyDataAssignee")
 

@@ -7,18 +7,20 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.clio_payments_payment_base_state import (
-    ClioPaymentsPaymentBaseState,
-    check_clio_payments_payment_base_state,
-)
+    ClioPaymentsPaymentBaseState, check_clio_payments_payment_base_state)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.allocation_base import AllocationBase
     from ..models.bill_base import BillBase
-    from ..models.clio_payments_payment_bank_transaction import ClioPaymentsPaymentBankTransaction
-    from ..models.clio_payments_payment_clio_payments_link import ClioPaymentsPaymentClioPaymentsLink
-    from ..models.clio_payments_payment_contact import ClioPaymentsPaymentContact
-    from ..models.clio_payments_payment_destination_account import ClioPaymentsPaymentDestinationAccount
+    from ..models.clio_payments_payment_bank_transaction import \
+        ClioPaymentsPaymentBankTransaction
+    from ..models.clio_payments_payment_clio_payments_link import \
+        ClioPaymentsPaymentClioPaymentsLink
+    from ..models.clio_payments_payment_contact import \
+        ClioPaymentsPaymentContact
+    from ..models.clio_payments_payment_destination_account import \
+        ClioPaymentsPaymentDestinationAccount
     from ..models.clio_payments_payment_user import ClioPaymentsPaymentUser
     from ..models.matter_base import MatterBase
 
@@ -187,10 +189,14 @@ class ClioPaymentsPayment:
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.allocation_base import AllocationBase
         from ..models.bill_base import BillBase
-        from ..models.clio_payments_payment_bank_transaction import ClioPaymentsPaymentBankTransaction
-        from ..models.clio_payments_payment_clio_payments_link import ClioPaymentsPaymentClioPaymentsLink
-        from ..models.clio_payments_payment_contact import ClioPaymentsPaymentContact
-        from ..models.clio_payments_payment_destination_account import ClioPaymentsPaymentDestinationAccount
+        from ..models.clio_payments_payment_bank_transaction import \
+            ClioPaymentsPaymentBankTransaction
+        from ..models.clio_payments_payment_clio_payments_link import \
+            ClioPaymentsPaymentClioPaymentsLink
+        from ..models.clio_payments_payment_contact import \
+            ClioPaymentsPaymentContact
+        from ..models.clio_payments_payment_destination_account import \
+            ClioPaymentsPaymentDestinationAccount
         from ..models.clio_payments_payment_user import ClioPaymentsPaymentUser
         from ..models.matter_base import MatterBase
 

@@ -1,5 +1,7 @@
 # Adapter stubs for Billupdaterequestdatainterest
-from schemas.from_spec.billupdaterequestdatainterest import BillupdaterequestdatainterestIn, BillupdaterequestdatainterestOut, BillupdaterequestdatainterestUpdate, BillupdaterequestdatainterestDb
+from schemas.from_spec.billupdaterequestdatainterest import \
+    BillupdaterequestdatainterestOut
+
 
 def convert_sdk_to_billupdaterequestdatainterestout(sdk_obj):
     # TODO

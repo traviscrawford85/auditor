@@ -1,5 +1,7 @@
 # Adapter stubs for Contactcreaterequestdatainstantmessengersinner
-from schemas.from_spec.contactcreaterequestdatainstantmessengersinner import ContactcreaterequestdatainstantmessengersinnerIn, ContactcreaterequestdatainstantmessengersinnerOut, ContactcreaterequestdatainstantmessengersinnerUpdate, ContactcreaterequestdatainstantmessengersinnerDb
+from schemas.from_spec.contactcreaterequestdatainstantmessengersinner import \
+    ContactcreaterequestdatainstantmessengersinnerOut
+
 
 def convert_sdk_to_contactcreaterequestdatainstantmessengersinnerout(sdk_obj):
     # TODO

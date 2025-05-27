@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.custom_actioncreate_data_body_data_ui_reference import (
     CustomActioncreateDataBodyDataUiReference,
-    check_custom_actioncreate_data_body_data_ui_reference,
-)
+    check_custom_actioncreate_data_body_data_ui_reference)
 
 T = TypeVar("T", bound="CustomActioncreateDataBodyData")
 

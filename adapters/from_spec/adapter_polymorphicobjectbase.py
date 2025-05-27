@@ -1,5 +1,6 @@
 # Adapter stubs for Polymorphicobjectbase
-from schemas.from_spec.polymorphicobjectbase import PolymorphicobjectBaseIn, PolymorphicobjectBaseOut, PolymorphicobjectBaseUpdate, PolymorphicobjectBaseDb
+from schemas.from_spec.polymorphicobjectbase import PolymorphicobjectBaseOut
+
 
 def convert_sdk_to_polymorphicobjectBaseOut(sdk_obj):
     # TODO

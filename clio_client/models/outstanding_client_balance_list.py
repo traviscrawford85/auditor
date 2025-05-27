@@ -39,7 +39,8 @@ class OutstandingClientBalanceList:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.outstanding_client_balance import OutstandingClientBalance
+        from ..models.outstanding_client_balance import \
+            OutstandingClientBalance
 
         d = dict(src_dict)
         data = []

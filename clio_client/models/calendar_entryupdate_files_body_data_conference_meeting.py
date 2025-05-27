@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.calendar_entryupdate_files_body_data_conference_meeting_type import (
     CalendarEntryupdateFilesBodyDataConferenceMeetingType,
-    check_calendar_entryupdate_files_body_data_conference_meeting_type,
-)
+    check_calendar_entryupdate_files_body_data_conference_meeting_type)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="CalendarEntryupdateFilesBodyDataConferenceMeeting")

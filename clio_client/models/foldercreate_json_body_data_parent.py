@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.foldercreate_json_body_data_parent_type import (
     FoldercreateJsonBodyDataParentType,
-    check_foldercreate_json_body_data_parent_type,
-)
+    check_foldercreate_json_body_data_parent_type)
 
 T = TypeVar("T", bound="FoldercreateJsonBodyDataParent")
 

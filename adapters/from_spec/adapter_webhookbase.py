@@ -1,5 +1,6 @@
 # Adapter stubs for Webhookbase
-from schemas.from_spec.webhookbase import WebhookBaseIn, WebhookBaseOut, WebhookBaseUpdate, WebhookBaseDb
+from schemas.from_spec.webhookbase import WebhookBaseOut
+
 
 def convert_sdk_to_webhookBaseOut(sdk_obj):
     # TODO

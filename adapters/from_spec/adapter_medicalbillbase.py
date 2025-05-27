@@ -1,5 +1,6 @@
 # Adapter stubs for Medicalbillbase
-from schemas.from_spec.medicalbillbase import MedicalbillBaseIn, MedicalbillBaseOut, MedicalbillBaseUpdate, MedicalbillBaseDb
+from schemas.from_spec.medicalbillbase import MedicalbillBaseOut
+
 
 def convert_sdk_to_medicalbillBaseOut(sdk_obj):
     # TODO

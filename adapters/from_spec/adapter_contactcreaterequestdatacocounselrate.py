@@ -1,5 +1,7 @@
 # Adapter stubs for Contactcreaterequestdatacocounselrate
-from schemas.from_spec.contactcreaterequestdatacocounselrate import ContactcreaterequestdatacocounselrateIn, ContactcreaterequestdatacocounselrateOut, ContactcreaterequestdatacocounselrateUpdate, ContactcreaterequestdatacocounselrateDb
+from schemas.from_spec.contactcreaterequestdatacocounselrate import \
+    ContactcreaterequestdatacocounselrateOut
+
 
 def convert_sdk_to_contactcreaterequestdatacocounselrateout(sdk_obj):
     # TODO

@@ -1,5 +1,7 @@
 # Adapter stubs for Reportcreaterequestdataoriginatingattorney
-from schemas.from_spec.reportcreaterequestdataoriginatingattorney import ReportcreaterequestdataoriginatingattorneyIn, ReportcreaterequestdataoriginatingattorneyOut, ReportcreaterequestdataoriginatingattorneyUpdate, ReportcreaterequestdataoriginatingattorneyDb
+from schemas.from_spec.reportcreaterequestdataoriginatingattorney import \
+    ReportcreaterequestdataoriginatingattorneyOut
+
 
 def convert_sdk_to_reportcreaterequestdataoriginatingattorneyout(sdk_obj):
     # TODO

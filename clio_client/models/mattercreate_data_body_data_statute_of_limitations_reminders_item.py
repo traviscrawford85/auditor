@@ -5,9 +5,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.mattercreate_data_body_data_statute_of_limitations_reminders_item_notification_method import (
-        MattercreateDataBodyDataStatuteOfLimitationsRemindersItemNotificationMethod,
-    )
+    from ..models.mattercreate_data_body_data_statute_of_limitations_reminders_item_notification_method import \
+        MattercreateDataBodyDataStatuteOfLimitationsRemindersItemNotificationMethod
 
 
 T = TypeVar("T", bound="MattercreateDataBodyDataStatuteOfLimitationsRemindersItem")
@@ -48,9 +47,8 @@ class MattercreateDataBodyDataStatuteOfLimitationsRemindersItem:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.mattercreate_data_body_data_statute_of_limitations_reminders_item_notification_method import (
-            MattercreateDataBodyDataStatuteOfLimitationsRemindersItemNotificationMethod,
-        )
+        from ..models.mattercreate_data_body_data_statute_of_limitations_reminders_item_notification_method import \
+            MattercreateDataBodyDataStatuteOfLimitationsRemindersItemNotificationMethod
 
         d = dict(src_dict)
         duration_value = d.pop("duration_value")

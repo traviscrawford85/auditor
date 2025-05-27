@@ -1,5 +1,6 @@
 # Adapter stubs for Picklistoptionbase
-from schemas.from_spec.picklistoptionbase import PicklistoptionBaseIn, PicklistoptionBaseOut, PicklistoptionBaseUpdate, PicklistoptionBaseDb
+from schemas.from_spec.picklistoptionbase import PicklistoptionBaseOut
+
 
 def convert_sdk_to_picklistoptionBaseOut(sdk_obj):
     # TODO

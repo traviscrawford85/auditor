@@ -52,7 +52,8 @@ class DamageupdateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.damageupdate_files_body_data import DamageupdateFilesBodyData
+        from ..models.damageupdate_files_body_data import \
+            DamageupdateFilesBodyData
 
         d = dict(src_dict)
         data = DamageupdateFilesBodyData.from_dict(d.pop("data"))

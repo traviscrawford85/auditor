@@ -1,6 +1,7 @@
-from pathlib import Path
-import yaml
 import re
+from pathlib import Path
+
+import yaml
 
 # Paths
 INPUT_SPEC = Path("openapi/final.merged.yaml")

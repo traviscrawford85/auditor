@@ -1,5 +1,7 @@
 # Adapter stubs for Folderupdaterequestdataexternalpropertiesinner
-from schemas.from_spec.folderupdaterequestdataexternalpropertiesinner import FolderupdaterequestdataexternalpropertiesinnerIn, FolderupdaterequestdataexternalpropertiesinnerOut, FolderupdaterequestdataexternalpropertiesinnerUpdate, FolderupdaterequestdataexternalpropertiesinnerDb
+from schemas.from_spec.folderupdaterequestdataexternalpropertiesinner import \
+    FolderupdaterequestdataexternalpropertiesinnerOut
+
 
 def convert_sdk_to_folderupdaterequestdataexternalpropertiesinnerout(sdk_obj):
     # TODO

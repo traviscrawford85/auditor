@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.user_base_subscription_type import UserBaseSubscriptionType, check_user_base_subscription_type
+from ..models.user_base_subscription_type import (
+    UserBaseSubscriptionType, check_user_base_subscription_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
@@ -15,7 +16,8 @@ if TYPE_CHECKING:
     from ..models.user_account import UserAccount
     from ..models.user_avatar import UserAvatar
     from ..models.user_contact import UserContact
-    from ..models.user_default_activity_description import UserDefaultActivityDescription
+    from ..models.user_default_activity_description import \
+        UserDefaultActivityDescription
     from ..models.user_job_title import UserJobTitle
 
 
@@ -229,7 +231,8 @@ class User:
         from ..models.user_account import UserAccount
         from ..models.user_avatar import UserAvatar
         from ..models.user_contact import UserContact
-        from ..models.user_default_activity_description import UserDefaultActivityDescription
+        from ..models.user_default_activity_description import \
+            UserDefaultActivityDescription
         from ..models.user_job_title import UserJobTitle
 
         d = dict(src_dict)

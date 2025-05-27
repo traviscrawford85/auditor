@@ -1,5 +1,6 @@
 # Adapter stubs for Currency
-from schemas.from_spec.currency import CurrencyIn, CurrencyOut, CurrencyUpdate, CurrencyDb
+from schemas.from_spec.currency import CurrencyOut
+
 
 def convert_sdk_to_currencyout(sdk_obj):
     # TODO

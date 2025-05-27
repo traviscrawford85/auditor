@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.calendar_entry_event_typecreate_json_body_data_color import (
     CalendarEntryEventTypecreateJsonBodyDataColor,
-    check_calendar_entry_event_typecreate_json_body_data_color,
-)
+    check_calendar_entry_event_typecreate_json_body_data_color)
 
 T = TypeVar("T", bound="CalendarEntryEventTypecreateJsonBodyData")
 

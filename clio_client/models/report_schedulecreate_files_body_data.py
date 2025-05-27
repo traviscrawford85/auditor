@@ -8,12 +8,10 @@ from dateutil.parser import isoparse
 
 from ..models.report_schedulecreate_files_body_data_frequency import (
     ReportSchedulecreateFilesBodyDataFrequency,
-    check_report_schedulecreate_files_body_data_frequency,
-)
+    check_report_schedulecreate_files_body_data_frequency)
 from ..models.report_schedulecreate_files_body_data_time_zone import (
     ReportSchedulecreateFilesBodyDataTimeZone,
-    check_report_schedulecreate_files_body_data_time_zone,
-)
+    check_report_schedulecreate_files_body_data_time_zone)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ReportSchedulecreateFilesBodyData")

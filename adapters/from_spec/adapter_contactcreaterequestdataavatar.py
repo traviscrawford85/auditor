@@ -1,5 +1,7 @@
 # Adapter stubs for Contactcreaterequestdataavatar
-from schemas.from_spec.contactcreaterequestdataavatar import ContactcreaterequestdataavatarIn, ContactcreaterequestdataavatarOut, ContactcreaterequestdataavatarUpdate, ContactcreaterequestdataavatarDb
+from schemas.from_spec.contactcreaterequestdataavatar import \
+    ContactcreaterequestdataavatarOut
+
 
 def convert_sdk_to_contactcreaterequestdataavatarout(sdk_obj):
     # TODO

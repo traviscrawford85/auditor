@@ -6,10 +6,13 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
-from ..models.report_base_category import ReportBaseCategory, check_report_base_category
-from ..models.report_base_format import ReportBaseFormat, check_report_base_format
+from ..models.report_base_category import (ReportBaseCategory,
+                                           check_report_base_category)
+from ..models.report_base_format import (ReportBaseFormat,
+                                         check_report_base_format)
 from ..models.report_base_kind import ReportBaseKind, check_report_base_kind
-from ..models.report_base_source import ReportBaseSource, check_report_base_source
+from ..models.report_base_source import (ReportBaseSource,
+                                         check_report_base_source)
 from ..models.report_base_state import ReportBaseState, check_report_base_state
 from ..types import UNSET, Unset
 

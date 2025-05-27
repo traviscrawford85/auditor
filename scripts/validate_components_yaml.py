@@ -6,8 +6,9 @@ Validate openapi/components.yaml to ensure:
 """
 
 import sys
-import yaml
 from pathlib import Path
+
+import yaml
 
 REQUIRED_SECTIONS = ["schemas", "parameters", "responses", "requestBodies"]
 

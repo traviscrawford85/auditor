@@ -1,5 +1,6 @@
 # Adapter stubs for Activityratebase
-from schemas.from_spec.activityratebase import ActivityrateBaseIn, ActivityrateBaseOut, ActivityrateBaseUpdate, ActivityrateBaseDb
+from schemas.from_spec.activityratebase import ActivityrateBaseOut
+
 
 def convert_sdk_to_activityrateBaseOut(sdk_obj):
     # TODO

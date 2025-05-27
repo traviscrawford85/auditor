@@ -8,9 +8,8 @@ from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.error import Error
 from ...models.matter_docket_list import MatterDocketList
-from ...models.matter_docketindex_matter_status import (
-    MatterDocketindexMatterStatus,
-)
+from ...models.matter_docketindex_matter_status import \
+    MatterDocketindexMatterStatus
 from ...models.matter_docketindex_order import MatterDocketindexOrder
 from ...models.matter_docketindex_status import MatterDocketindexStatus
 from ...types import UNSET, Response, Unset

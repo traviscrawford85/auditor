@@ -7,16 +7,18 @@ from attrs import field as _attrs_field
 from dateutil.parser import isoparse
 
 from ..models.line_itemupdate_data_body_data_kind import (
-    LineItemupdateDataBodyDataKind,
-    check_line_itemupdate_data_body_data_kind,
-)
+    LineItemupdateDataBodyDataKind, check_line_itemupdate_data_body_data_kind)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.line_itemupdate_data_body_data_activity import LineItemupdateDataBodyDataActivity
-    from ..models.line_itemupdate_data_body_data_bill import LineItemupdateDataBodyDataBill
-    from ..models.line_itemupdate_data_body_data_discount import LineItemupdateDataBodyDataDiscount
-    from ..models.line_itemupdate_data_body_data_matter import LineItemupdateDataBodyDataMatter
+    from ..models.line_itemupdate_data_body_data_activity import \
+        LineItemupdateDataBodyDataActivity
+    from ..models.line_itemupdate_data_body_data_bill import \
+        LineItemupdateDataBodyDataBill
+    from ..models.line_itemupdate_data_body_data_discount import \
+        LineItemupdateDataBodyDataDiscount
+    from ..models.line_itemupdate_data_body_data_matter import \
+        LineItemupdateDataBodyDataMatter
 
 
 T = TypeVar("T", bound="LineItemupdateDataBodyData")
@@ -136,10 +138,14 @@ class LineItemupdateDataBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.line_itemupdate_data_body_data_activity import LineItemupdateDataBodyDataActivity
-        from ..models.line_itemupdate_data_body_data_bill import LineItemupdateDataBodyDataBill
-        from ..models.line_itemupdate_data_body_data_discount import LineItemupdateDataBodyDataDiscount
-        from ..models.line_itemupdate_data_body_data_matter import LineItemupdateDataBodyDataMatter
+        from ..models.line_itemupdate_data_body_data_activity import \
+            LineItemupdateDataBodyDataActivity
+        from ..models.line_itemupdate_data_body_data_bill import \
+            LineItemupdateDataBodyDataBill
+        from ..models.line_itemupdate_data_body_data_discount import \
+            LineItemupdateDataBodyDataDiscount
+        from ..models.line_itemupdate_data_body_data_matter import \
+            LineItemupdateDataBodyDataMatter
 
         d = dict(src_dict)
         _activity = d.pop("activity", UNSET)

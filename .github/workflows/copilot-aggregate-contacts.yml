@@ -1,0 +1,64 @@
+name: Copilot Aggregate Contacts
+
+on:
+  push:
+    paths:
+      - 'clio_client/**'
+      - 'clio_sdk/**'
+      - '.github/workflows/copilot-aggregate-contacts.yml'
+  workflow_dispatch:
+
+jobs:
+  build-contact-interface:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build index for contacts
+        run: |
+          echo "## Copilot Index for SDK: Contacts" > copilot_index_contacts.md
+          find clio_client/models -iname 'contact*.py' -exec echo '- {}' \; >> copilot_index_contacts.md
+          find clio_client/contacts -iname 'contact*.py' -exec echo '- {}' \; >> copilot_index_contacts.md
+          find clio_sdk/models -iname '*contact*.py' -exec echo '- {}' \; >> copilot_index_contacts.md
+          find clio_sdk/queries -iname '*contact*.py' -exec echo '- {}' \; >> copilot_index_contacts.md
+          find clio_sdk/commands -iname '*contact*.py' -exec echo '- {}' \; >> copilot_index_contacts.md
+          echo "- clio_sdk/interfaces/aggregate_contacts.py" >> copilot_index_contacts.md
+
+      - name: Ensure interfaces directory exists
+        run: mkdir -p clio_sdk/interfaces
+
+      - name: Create aggregate_contacts.py
+        run: |
+          cat <<EOF > clio_sdk/interfaces/aggregate_contacts.py
+"""
+Aggregated Contact operations interface for Clio SDK.
+
+This file wraps relevant low-level operations from clio_client and clio_sdk for contact management.
+Aggregate and expose intuitive methods (e.g., get_contact_by_id, list_clients).
+
+Copilot should:
+- Reference SDK queries/commands for contact logic.
+- Rely on clio_sdk.models.contact.Contact as the main model.
+- Add to __all__ as functions are added.
+
+Reference index: copilot_index_contacts.md
+"""
+
+from clio_sdk.models.contact import Contact
+# from clio_sdk.queries.contacts import ...
+# from clio_sdk.commands.contacts import ...
+
+__all__ = [
+    "Contact",
+]
+EOF
+
+      - name: Commit interface file
+        run: |
+          git config user.name "github-actions"
+          git config user.email github-actions@github.com
+          git add clio_sdk/interfaces/aggregate_contacts.py copilot_index_contacts.md
+          git commit -m "Scaffold aggregate_contacts interface" || echo "No changes"
+          git push

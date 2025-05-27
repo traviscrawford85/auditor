@@ -1,7 +1,9 @@
 import argparse
-import yaml
-from pathlib import Path
 import re
+from pathlib import Path
+
+import yaml
+
 
 def fix_id_parameters(spec: dict) -> dict:
     """Ensure {id} path parameters are defined in operations."""

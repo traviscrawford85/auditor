@@ -1,5 +1,6 @@
 # Adapter stubs for Addressbase
-from schemas.from_spec.addressbase import AddressBaseIn, AddressBaseOut, AddressBaseUpdate, AddressBaseDb
+from schemas.from_spec.addressbase import AddressBaseOut
+
 
 def convert_sdk_to_addressBaseOut(sdk_obj):
     # TODO

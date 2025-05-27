@@ -1,6 +1,7 @@
-from typing import Dict, Any
-import yaml
 from pathlib import Path
+from typing import Any, Dict
+
+import yaml
 
 # Define the base directory structure
 input_file = Path("openapi/root.patched.yaml")

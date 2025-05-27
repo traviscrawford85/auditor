@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.foldercreate_files_body_data_parent_type import (
     FoldercreateFilesBodyDataParentType,
-    check_foldercreate_files_body_data_parent_type,
-)
+    check_foldercreate_files_body_data_parent_type)
 
 T = TypeVar("T", bound="FoldercreateFilesBodyDataParent")
 

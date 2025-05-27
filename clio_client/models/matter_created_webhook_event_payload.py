@@ -7,7 +7,8 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.matter_created_webhook_event_payload_custom_fields import MatterCreatedWebhookEventPayloadCustomFields
+    from ..models.matter_created_webhook_event_payload_custom_fields import \
+        MatterCreatedWebhookEventPayloadCustomFields
 
 
 T = TypeVar("T", bound="MatterCreatedWebhookEventPayload")
@@ -57,9 +58,8 @@ class MatterCreatedWebhookEventPayload:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.matter_created_webhook_event_payload_custom_fields import (
-            MatterCreatedWebhookEventPayloadCustomFields,
-        )
+        from ..models.matter_created_webhook_event_payload_custom_fields import \
+            MatterCreatedWebhookEventPayloadCustomFields
 
         d = dict(src_dict)
         id = d.pop("id", UNSET)

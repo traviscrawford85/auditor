@@ -1,5 +1,6 @@
-import yaml
 import os
+
+import yaml
 
 ROOT_FILE = "./openapi/root.yaml"
 

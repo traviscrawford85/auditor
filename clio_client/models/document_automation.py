@@ -8,13 +8,14 @@ from dateutil.parser import isoparse
 
 from ..models.document_automation_base_export_formats import (
     DocumentAutomationBaseExportFormats,
-    check_document_automation_base_export_formats,
-)
-from ..models.document_automation_base_state import DocumentAutomationBaseState, check_document_automation_base_state
+    check_document_automation_base_export_formats)
+from ..models.document_automation_base_state import (
+    DocumentAutomationBaseState, check_document_automation_base_state)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.document_automation_document_template import DocumentAutomationDocumentTemplate
+    from ..models.document_automation_document_template import \
+        DocumentAutomationDocumentTemplate
     from ..models.document_automation_matter import DocumentAutomationMatter
     from ..models.document_base import DocumentBase
 
@@ -118,8 +119,10 @@ class DocumentAutomation:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.document_automation_document_template import DocumentAutomationDocumentTemplate
-        from ..models.document_automation_matter import DocumentAutomationMatter
+        from ..models.document_automation_document_template import \
+            DocumentAutomationDocumentTemplate
+        from ..models.document_automation_matter import \
+            DocumentAutomationMatter
         from ..models.document_base import DocumentBase
 
         d = dict(src_dict)

@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.conversation_messagecreate_json_body_data_receivers_item_type import (
     ConversationMessagecreateJsonBodyDataReceiversItemType,
-    check_conversation_messagecreate_json_body_data_receivers_item_type,
-)
+    check_conversation_messagecreate_json_body_data_receivers_item_type)
 
 T = TypeVar("T", bound="ConversationMessagecreateJsonBodyDataReceiversItem")
 

@@ -1,5 +1,7 @@
 # Adapter stubs for Damageupdaterequestdata
-from schemas.from_spec.damageupdaterequestdata import DamageupdaterequestdataIn, DamageupdaterequestdataOut, DamageupdaterequestdataUpdate, DamageupdaterequestdataDb
+from schemas.from_spec.damageupdaterequestdata import \
+    DamageupdaterequestdataOut
+
 
 def convert_sdk_to_damageupdaterequestdataout(sdk_obj):
     # TODO

@@ -1,5 +1,6 @@
 # Adapter stubs for Timerbase
-from schemas.from_spec.timerbase import TimerBaseIn, TimerBaseOut, TimerBaseUpdate, TimerBaseDb
+from schemas.from_spec.timerbase import TimerBaseOut
+
 
 def convert_sdk_to_timerBaseOut(sdk_obj):
     # TODO

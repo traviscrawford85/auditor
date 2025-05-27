@@ -6,25 +6,20 @@ from attrs import field as _attrs_field
 
 from ..models.task_templateupdate_data_body_data_cascading_offset_polarity import (
     TaskTemplateupdateDataBodyDataCascadingOffsetPolarity,
-    check_task_templateupdate_data_body_data_cascading_offset_polarity,
-)
+    check_task_templateupdate_data_body_data_cascading_offset_polarity)
 from ..models.task_templateupdate_data_body_data_cascading_offset_type import (
     TaskTemplateupdateDataBodyDataCascadingOffsetType,
-    check_task_templateupdate_data_body_data_cascading_offset_type,
-)
+    check_task_templateupdate_data_body_data_cascading_offset_type)
 from ..models.task_templateupdate_data_body_data_priority import (
     TaskTemplateupdateDataBodyDataPriority,
-    check_task_templateupdate_data_body_data_priority,
-)
+    check_task_templateupdate_data_body_data_priority)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.task_templateupdate_data_body_data_cascading_source import (
-        TaskTemplateupdateDataBodyDataCascadingSource,
-    )
-    from ..models.task_templateupdate_data_body_data_reminder_templates_item import (
-        TaskTemplateupdateDataBodyDataReminderTemplatesItem,
-    )
+    from ..models.task_templateupdate_data_body_data_cascading_source import \
+        TaskTemplateupdateDataBodyDataCascadingSource
+    from ..models.task_templateupdate_data_body_data_reminder_templates_item import \
+        TaskTemplateupdateDataBodyDataReminderTemplatesItem
 
 
 T = TypeVar("T", bound="TaskTemplateupdateDataBodyData")
@@ -124,12 +119,10 @@ class TaskTemplateupdateDataBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.task_templateupdate_data_body_data_cascading_source import (
-            TaskTemplateupdateDataBodyDataCascadingSource,
-        )
-        from ..models.task_templateupdate_data_body_data_reminder_templates_item import (
-            TaskTemplateupdateDataBodyDataReminderTemplatesItem,
-        )
+        from ..models.task_templateupdate_data_body_data_cascading_source import \
+            TaskTemplateupdateDataBodyDataCascadingSource
+        from ..models.task_templateupdate_data_body_data_reminder_templates_item import \
+            TaskTemplateupdateDataBodyDataReminderTemplatesItem
 
         d = dict(src_dict)
         cascading = d.pop("cascading", UNSET)

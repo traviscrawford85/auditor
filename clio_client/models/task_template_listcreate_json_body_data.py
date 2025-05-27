@@ -7,9 +7,8 @@ from attrs import field as _attrs_field
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.task_template_listcreate_json_body_data_practice_area import (
-        TaskTemplateListcreateJsonBodyDataPracticeArea,
-    )
+    from ..models.task_template_listcreate_json_body_data_practice_area import \
+        TaskTemplateListcreateJsonBodyDataPracticeArea
 
 
 T = TypeVar("T", bound="TaskTemplateListcreateJsonBodyData")
@@ -53,9 +52,8 @@ class TaskTemplateListcreateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.task_template_listcreate_json_body_data_practice_area import (
-            TaskTemplateListcreateJsonBodyDataPracticeArea,
-        )
+        from ..models.task_template_listcreate_json_body_data_practice_area import \
+            TaskTemplateListcreateJsonBodyDataPracticeArea
 
         d = dict(src_dict)
         description = d.pop("description")

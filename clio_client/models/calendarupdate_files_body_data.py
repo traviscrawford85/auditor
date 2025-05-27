@@ -6,12 +6,10 @@ from attrs import field as _attrs_field
 
 from ..models.calendarupdate_files_body_data_color import (
     CalendarupdateFilesBodyDataColor,
-    check_calendarupdate_files_body_data_color,
-)
+    check_calendarupdate_files_body_data_color)
 from ..models.calendarupdate_files_body_data_source import (
     CalendarupdateFilesBodyDataSource,
-    check_calendarupdate_files_body_data_source,
-)
+    check_calendarupdate_files_body_data_source)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="CalendarupdateFilesBodyData")

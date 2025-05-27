@@ -1,5 +1,6 @@
 # Adapter stubs for Attendeebase
-from schemas.from_spec.attendeebase import AttendeeBaseIn, AttendeeBaseOut, AttendeeBaseUpdate, AttendeeBaseDb
+from schemas.from_spec.attendeebase import AttendeeBaseOut
+
 
 def convert_sdk_to_attendeeBaseOut(sdk_obj):
     # TODO

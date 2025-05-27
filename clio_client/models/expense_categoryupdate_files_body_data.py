@@ -6,13 +6,14 @@ from attrs import field as _attrs_field
 
 from ..models.expense_categoryupdate_files_body_data_entry_type import (
     ExpenseCategoryupdateFilesBodyDataEntryType,
-    check_expense_categoryupdate_files_body_data_entry_type,
-)
+    check_expense_categoryupdate_files_body_data_entry_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.expense_categoryupdate_files_body_data_groups_item import ExpenseCategoryupdateFilesBodyDataGroupsItem
-    from ..models.expense_categoryupdate_files_body_data_utbms_code import ExpenseCategoryupdateFilesBodyDataUtbmsCode
+    from ..models.expense_categoryupdate_files_body_data_groups_item import \
+        ExpenseCategoryupdateFilesBodyDataGroupsItem
+    from ..models.expense_categoryupdate_files_body_data_utbms_code import \
+        ExpenseCategoryupdateFilesBodyDataUtbmsCode
 
 
 T = TypeVar("T", bound="ExpenseCategoryupdateFilesBodyData")
@@ -74,12 +75,10 @@ class ExpenseCategoryupdateFilesBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.expense_categoryupdate_files_body_data_groups_item import (
-            ExpenseCategoryupdateFilesBodyDataGroupsItem,
-        )
-        from ..models.expense_categoryupdate_files_body_data_utbms_code import (
-            ExpenseCategoryupdateFilesBodyDataUtbmsCode,
-        )
+        from ..models.expense_categoryupdate_files_body_data_groups_item import \
+            ExpenseCategoryupdateFilesBodyDataGroupsItem
+        from ..models.expense_categoryupdate_files_body_data_utbms_code import \
+            ExpenseCategoryupdateFilesBodyDataUtbmsCode
 
         d = dict(src_dict)
         _entry_type = d.pop("entry_type", UNSET)

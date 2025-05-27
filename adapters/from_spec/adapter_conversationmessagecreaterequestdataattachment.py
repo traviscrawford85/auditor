@@ -1,5 +1,7 @@
 # Adapter stubs for Conversationmessagecreaterequestdataattachment
-from schemas.from_spec.conversationmessagecreaterequestdataattachment import ConversationmessagecreaterequestdataattachmentIn, ConversationmessagecreaterequestdataattachmentOut, ConversationmessagecreaterequestdataattachmentUpdate, ConversationmessagecreaterequestdataattachmentDb
+from schemas.from_spec.conversationmessagecreaterequestdataattachment import \
+    ConversationmessagecreaterequestdataattachmentOut
+
 
 def convert_sdk_to_conversationmessagecreaterequestdataattachmentout(sdk_obj):
     # TODO

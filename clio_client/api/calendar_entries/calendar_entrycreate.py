@@ -6,9 +6,12 @@ import httpx
 from ... import errors
 from ...client import AuthenticatedClient, Client
 from ...models.calendar_entry_show import CalendarEntryShow
-from ...models.calendar_entrycreate_data_body import CalendarEntrycreateDataBody
-from ...models.calendar_entrycreate_files_body import CalendarEntrycreateFilesBody
-from ...models.calendar_entrycreate_json_body import CalendarEntrycreateJsonBody
+from ...models.calendar_entrycreate_data_body import \
+    CalendarEntrycreateDataBody
+from ...models.calendar_entrycreate_files_body import \
+    CalendarEntrycreateFilesBody
+from ...models.calendar_entrycreate_json_body import \
+    CalendarEntrycreateJsonBody
 from ...models.error import Error
 from ...types import UNSET, Response, Unset
 

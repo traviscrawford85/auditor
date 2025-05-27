@@ -1,7 +1,9 @@
 import argparse
-import yaml
 import json
 from pathlib import Path
+
+import yaml
+
 
 def get_all_schemas(schemas_dir: Path) -> set:
     return {f.stem for f in schemas_dir.glob('*.yaml')}
@@ -18,6 +20,7 @@ def load_external_map(map_path: Path) -> dict:
 
 from pathlib import Path
 
+
 def map_paths_to_schemas(schemas_dir, paths_dir, map_file):
     schema_names = get_all_schemas(schemas_dir)
     path_mappings = {}
@@ -31,7 +34,7 @@ def map_paths_to_schemas(schemas_dir, paths_dir, map_file):
             else:
                 print(f"⚠️ Warning: Schema '{schema}' not found in {schemas_dir}")
     else:
-        print(f"⚠️ No external map provided → auto-generating map")
+        print("⚠️ No external map provided → auto-generating map")
         for filename in os.listdir(paths_dir):
             if filename.endswith('.yaml'):
                 path_name = filename.replace('.json.yaml', '').replace('.yaml', '')

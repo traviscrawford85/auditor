@@ -1,5 +1,6 @@
-import yaml
 import re
+
+import yaml
 
 with open("openapi/components/requestBodies/ReqBody_23c25a8a.yaml") as f:
     doc = yaml.safe_load(f)

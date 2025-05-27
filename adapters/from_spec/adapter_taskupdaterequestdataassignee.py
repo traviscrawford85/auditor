@@ -1,5 +1,7 @@
 # Adapter stubs for Taskupdaterequestdataassignee
-from schemas.from_spec.taskupdaterequestdataassignee import TaskupdaterequestdataassigneeIn, TaskupdaterequestdataassigneeOut, TaskupdaterequestdataassigneeUpdate, TaskupdaterequestdataassigneeDb
+from schemas.from_spec.taskupdaterequestdataassignee import \
+    TaskupdaterequestdataassigneeOut
+
 
 def convert_sdk_to_taskupdaterequestdataassigneeout(sdk_obj):
     # TODO

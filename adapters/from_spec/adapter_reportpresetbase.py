@@ -1,5 +1,6 @@
 # Adapter stubs for Reportpresetbase
-from schemas.from_spec.reportpresetbase import ReportpresetBaseIn, ReportpresetBaseOut, ReportpresetBaseUpdate, ReportpresetBaseDb
+from schemas.from_spec.reportpresetbase import ReportpresetBaseOut
+
 
 def convert_sdk_to_reportpresetBaseOut(sdk_obj):
     # TODO

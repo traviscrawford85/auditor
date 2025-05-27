@@ -6,7 +6,8 @@ from attrs import define as _attrs_define
 from attrs import field as _attrs_field
 
 if TYPE_CHECKING:
-    from ..models.report_schedulecreate_files_body_data import ReportSchedulecreateFilesBodyData
+    from ..models.report_schedulecreate_files_body_data import \
+        ReportSchedulecreateFilesBodyData
 
 
 T = TypeVar("T", bound="ReportSchedulecreateFilesBody")
@@ -52,7 +53,8 @@ class ReportSchedulecreateFilesBody:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.report_schedulecreate_files_body_data import ReportSchedulecreateFilesBodyData
+        from ..models.report_schedulecreate_files_body_data import \
+            ReportSchedulecreateFilesBodyData
 
         d = dict(src_dict)
         data = ReportSchedulecreateFilesBodyData.from_dict(d.pop("data"))

@@ -6,28 +6,22 @@ from attrs import field as _attrs_field
 
 from ..models.task_templatecreate_json_body_data_cascading_offset_polarity import (
     TaskTemplatecreateJsonBodyDataCascadingOffsetPolarity,
-    check_task_templatecreate_json_body_data_cascading_offset_polarity,
-)
+    check_task_templatecreate_json_body_data_cascading_offset_polarity)
 from ..models.task_templatecreate_json_body_data_cascading_offset_type import (
     TaskTemplatecreateJsonBodyDataCascadingOffsetType,
-    check_task_templatecreate_json_body_data_cascading_offset_type,
-)
+    check_task_templatecreate_json_body_data_cascading_offset_type)
 from ..models.task_templatecreate_json_body_data_priority import (
     TaskTemplatecreateJsonBodyDataPriority,
-    check_task_templatecreate_json_body_data_priority,
-)
+    check_task_templatecreate_json_body_data_priority)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.task_templatecreate_json_body_data_cascading_source import (
-        TaskTemplatecreateJsonBodyDataCascadingSource,
-    )
-    from ..models.task_templatecreate_json_body_data_reminder_templates_item import (
-        TaskTemplatecreateJsonBodyDataReminderTemplatesItem,
-    )
-    from ..models.task_templatecreate_json_body_data_task_template_list import (
-        TaskTemplatecreateJsonBodyDataTaskTemplateList,
-    )
+    from ..models.task_templatecreate_json_body_data_cascading_source import \
+        TaskTemplatecreateJsonBodyDataCascadingSource
+    from ..models.task_templatecreate_json_body_data_reminder_templates_item import \
+        TaskTemplatecreateJsonBodyDataReminderTemplatesItem
+    from ..models.task_templatecreate_json_body_data_task_template_list import \
+        TaskTemplatecreateJsonBodyDataTaskTemplateList
 
 
 T = TypeVar("T", bound="TaskTemplatecreateJsonBodyData")
@@ -137,15 +131,12 @@ class TaskTemplatecreateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.task_templatecreate_json_body_data_cascading_source import (
-            TaskTemplatecreateJsonBodyDataCascadingSource,
-        )
-        from ..models.task_templatecreate_json_body_data_reminder_templates_item import (
-            TaskTemplatecreateJsonBodyDataReminderTemplatesItem,
-        )
-        from ..models.task_templatecreate_json_body_data_task_template_list import (
-            TaskTemplatecreateJsonBodyDataTaskTemplateList,
-        )
+        from ..models.task_templatecreate_json_body_data_cascading_source import \
+            TaskTemplatecreateJsonBodyDataCascadingSource
+        from ..models.task_templatecreate_json_body_data_reminder_templates_item import \
+            TaskTemplatecreateJsonBodyDataReminderTemplatesItem
+        from ..models.task_templatecreate_json_body_data_task_template_list import \
+            TaskTemplatecreateJsonBodyDataTaskTemplateList
 
         d = dict(src_dict)
         name = d.pop("name")

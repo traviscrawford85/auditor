@@ -6,8 +6,7 @@ from attrs import field as _attrs_field
 
 from ..models.contactcreate_files_body_data_web_sites_item_name import (
     ContactcreateFilesBodyDataWebSitesItemName,
-    check_contactcreate_files_body_data_web_sites_item_name,
-)
+    check_contactcreate_files_body_data_web_sites_item_name)
 from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="ContactcreateFilesBodyDataWebSitesItem")

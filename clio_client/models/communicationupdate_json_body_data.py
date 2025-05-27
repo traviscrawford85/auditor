@@ -6,20 +6,20 @@ from attrs import field as _attrs_field
 
 from ..models.communicationupdate_json_body_data_type import (
     CommunicationupdateJsonBodyDataType,
-    check_communicationupdate_json_body_data_type,
-)
+    check_communicationupdate_json_body_data_type)
 from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
-    from ..models.communicationupdate_json_body_data_external_properties_item import (
-        CommunicationupdateJsonBodyDataExternalPropertiesItem,
-    )
-    from ..models.communicationupdate_json_body_data_matter import CommunicationupdateJsonBodyDataMatter
-    from ..models.communicationupdate_json_body_data_notification_event_subscribers_item import (
-        CommunicationupdateJsonBodyDataNotificationEventSubscribersItem,
-    )
-    from ..models.communicationupdate_json_body_data_receivers_item import CommunicationupdateJsonBodyDataReceiversItem
-    from ..models.communicationupdate_json_body_data_senders_item import CommunicationupdateJsonBodyDataSendersItem
+    from ..models.communicationupdate_json_body_data_external_properties_item import \
+        CommunicationupdateJsonBodyDataExternalPropertiesItem
+    from ..models.communicationupdate_json_body_data_matter import \
+        CommunicationupdateJsonBodyDataMatter
+    from ..models.communicationupdate_json_body_data_notification_event_subscribers_item import \
+        CommunicationupdateJsonBodyDataNotificationEventSubscribersItem
+    from ..models.communicationupdate_json_body_data_receivers_item import \
+        CommunicationupdateJsonBodyDataReceiversItem
+    from ..models.communicationupdate_json_body_data_senders_item import \
+        CommunicationupdateJsonBodyDataSendersItem
 
 
 T = TypeVar("T", bound="CommunicationupdateJsonBodyData")
@@ -129,17 +129,16 @@ class CommunicationupdateJsonBodyData:
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
-        from ..models.communicationupdate_json_body_data_external_properties_item import (
-            CommunicationupdateJsonBodyDataExternalPropertiesItem,
-        )
-        from ..models.communicationupdate_json_body_data_matter import CommunicationupdateJsonBodyDataMatter
-        from ..models.communicationupdate_json_body_data_notification_event_subscribers_item import (
-            CommunicationupdateJsonBodyDataNotificationEventSubscribersItem,
-        )
-        from ..models.communicationupdate_json_body_data_receivers_item import (
-            CommunicationupdateJsonBodyDataReceiversItem,
-        )
-        from ..models.communicationupdate_json_body_data_senders_item import CommunicationupdateJsonBodyDataSendersItem
+        from ..models.communicationupdate_json_body_data_external_properties_item import \
+            CommunicationupdateJsonBodyDataExternalPropertiesItem
+        from ..models.communicationupdate_json_body_data_matter import \
+            CommunicationupdateJsonBodyDataMatter
+        from ..models.communicationupdate_json_body_data_notification_event_subscribers_item import \
+            CommunicationupdateJsonBodyDataNotificationEventSubscribersItem
+        from ..models.communicationupdate_json_body_data_receivers_item import \
+            CommunicationupdateJsonBodyDataReceiversItem
+        from ..models.communicationupdate_json_body_data_senders_item import \
+            CommunicationupdateJsonBodyDataSendersItem
 
         d = dict(src_dict)
         body = d.pop("body", UNSET)

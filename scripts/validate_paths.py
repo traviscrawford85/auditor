@@ -6,8 +6,9 @@ Validate each file in openapi/paths/*.yaml to ensure:
 """
 
 import sys
-import yaml
 from pathlib import Path
+
+import yaml
 
 VALID_METHODS = {"get", "post", "put", "patch", "delete", "options", "head"}
 

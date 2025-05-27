@@ -1,5 +1,6 @@
 # Adapter stubs for Textsnippet
-from schemas.from_spec.textsnippet import TextsnippetIn, TextsnippetOut, TextsnippetUpdate, TextsnippetDb
+from schemas.from_spec.textsnippet import TextsnippetOut
+
 
 def convert_sdk_to_textsnippetout(sdk_obj):
     # TODO
