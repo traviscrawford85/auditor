@@ -83,7 +83,7 @@ markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 matplotlib==3.10.1
 mccabe==0.7.0
-mcp==1.8.1
+mcp==1.10.0
 mdit-py-plugins==0.4.2
 mdurl==0.1.2
 miniKanren==1.0.3
